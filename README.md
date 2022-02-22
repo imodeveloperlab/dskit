@@ -9,7 +9,7 @@
     <a href="https://swift.org/package-manager">
         <img src="https://img.shields.io/badge/spm-compatible-brightgreen.svg?style=flat" alt="Swift Package Manager" />
     </a>
-    <img src="https://img.shields.io/badge/platforms-mac+linux-brightgreen.svg?style=flat" alt="iOS"/>
+    <img src="https://img.shields.io/badge/platforms-iOS-brightgreen.svg?style=flat" alt="iOS"/>
 </p>
 
 [![CircleCI](https://circleci.com/gh/imodeveloperlab/dskit/tree/main.svg?style=svg)](https://circleci.com/gh/imodeveloperlab/dskit/tree/main)

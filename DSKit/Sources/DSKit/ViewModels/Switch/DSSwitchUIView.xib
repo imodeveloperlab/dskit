@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DSSwitchUIView" customModule="DSKit">
+            <rect key="frame" x="0.0" y="0.0" width="53" height="33"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xqg-xD-Pj0">
+                    <rect key="frame" x="0.0" y="0.0" width="55" height="33"/>
+                    <connections>
+                        <action selector="didUpdate:" destination="iN0-l3-epB" eventType="valueChanged" id="XI2-eD-w2A"/>
+                    </connections>
+                </switch>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="xqg-xD-Pj0" secondAttribute="trailing" id="5aO-P7-qxy"/>
+                <constraint firstItem="xqg-xD-Pj0" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Ep4-zM-6J6"/>
+                <constraint firstAttribute="bottom" secondItem="xqg-xD-Pj0" secondAttribute="bottom" id="UcE-St-9L2"/>
+                <constraint firstItem="xqg-xD-Pj0" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="hnN-dI-htb"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="switchView" destination="xqg-xD-Pj0" id="DtQ-xY-12v"/>
+            </connections>
+            <point key="canvasLocation" x="-290.39999999999998" y="13.943028485757123"/>
+        </view>
+    </objects>
+</document>

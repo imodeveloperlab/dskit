@@ -248,7 +248,6 @@
 		603ACAC327BFD99600AC0C45 /* TypographyTextGridVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypographyTextGridVC.swift; sourceTree = "<group>"; };
 		603ACAC427BFD99600AC0C45 /* TypographyActiveTextVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypographyActiveTextVC.swift; sourceTree = "<group>"; };
 		603ACAC527BFD99600AC0C45 /* TypographyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypographyViewController.swift; sourceTree = "<group>"; };
-		603ACB3727BFDAFE00AC0C45 /* DSKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = DSKit; path = ../DSKit; sourceTree = "<group>"; };
 		603ACB4827BFDBC600AC0C45 /* DSViewController+PoweredBy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DSViewController+PoweredBy.swift"; sourceTree = "<group>"; };
 		603ACB4927BFDBC600AC0C45 /* DSViewController+ViewModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DSViewController+ViewModels.swift"; sourceTree = "<group>"; };
 		603ACB4A27BFDBC600AC0C45 /* DSTextVM+Description.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DSTextVM+Description.swift"; sourceTree = "<group>"; };
@@ -265,6 +264,7 @@
 		60B570B127B279AE001B23D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		60B570B427B279AE001B23D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		60B570B627B279AE001B23D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		60ED5DF727C50EB8008D9382 /* dskit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = dskit; path = ..; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -627,7 +627,7 @@
 		60B570BE27B27A66001B23D2 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				603ACB3727BFDAFE00AC0C45 /* DSKit */,
+				60ED5DF727C50EB8008D9382 /* dskit */,
 			);
 			name = Packages;
 			sourceTree = "<group>";

@@ -35,7 +35,7 @@ class TextFieldBuiltInValidationVC: DSViewController {
         
         // Handle textfield update, this closure is called every time user type a character in textfield
         fullName.didUpdate = { textField in
-            print(textField.text)
+            print(textField.text ?? "")
         }
         
         // Show

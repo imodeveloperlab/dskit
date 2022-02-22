@@ -11,12 +11,9 @@ import DSKit
 class ViewController: DSViewController {
 
     override func viewDidLoad() {
-        
         super.viewDidLoad()
         title = "Components"
-        
         let groups = DocumentsGroups()
-    
         self.show(content: groups.sections(presenter: self))
     }
 }

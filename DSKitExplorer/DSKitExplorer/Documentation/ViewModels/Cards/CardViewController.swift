@@ -113,7 +113,7 @@ struct CardViewControllerPreview: PreviewProvider {
     
     static var previews: some View {
         Group {
-            PreviewContainer(VC: CardViewController(), PeachAppearance()).edgesIgnoringSafeArea(.all)
+            PreviewContainer(VC: CardViewController(), DSKitAppearance()).edgesIgnoringSafeArea(.all)
         }
     }
 }

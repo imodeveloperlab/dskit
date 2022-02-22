@@ -27,8 +27,7 @@ public extension DSViewController {
             
             var codeViewModel = DSCodeVM(code: code)
             
-            
-            codeViewModel.didTap { [unowned self] (_: DSCodeVM) in
+            codeViewModel.didTap { (_: DSCodeVM) in
                 let activityViewController = UIActivityViewController(activityItems: [code], applicationActivities: nil)
                 UIApplication.shared.windows.first?.rootViewController?.present(activityViewController, animated: true, completion: nil)
             }

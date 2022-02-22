@@ -99,7 +99,7 @@ struct PageControlViewControllerPreview: PreviewProvider {
     
     static var previews: some View {
         Group {
-            PreviewContainer(VC: PageControlViewController(), PeachAppearance()).edgesIgnoringSafeArea(.all)
+            PreviewContainer(VC: PageControlViewController(), DSKitAppearance()).edgesIgnoringSafeArea(.all)
         }
     }
 }

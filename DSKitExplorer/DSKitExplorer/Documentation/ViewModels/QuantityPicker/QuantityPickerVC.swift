@@ -93,7 +93,7 @@ struct QuantityPickerVCPreview: PreviewProvider {
     
     static var previews: some View {
         Group {
-            PreviewContainer(VC: QuantityPickerVC(), PeachAppearance()).edgesIgnoringSafeArea(.all)
+            PreviewContainer(VC: QuantityPickerVC(), DSKitAppearance()).edgesIgnoringSafeArea(.all)
         }
     }
 }

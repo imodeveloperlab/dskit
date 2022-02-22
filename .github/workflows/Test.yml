@@ -1,0 +1,14 @@
+name: Run DSKit Tests
+on:
+  push:
+    paths:
+      - 'DSKit/**'
+      - 'fastlane/**'
+jobs:
+  test:
+    runs-on: self-hosted
+    if: "!contains(github.event.head_commit.message, 'skip ci')"
+    steps:
+      - uses: actions/checkout@v1
+      - name: Test
+        run: cd 'DSKit' && fastlane scan --device "iPhone 8" --scheme "DSKit Explorer" --clean

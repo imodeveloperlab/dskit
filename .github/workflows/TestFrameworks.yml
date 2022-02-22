@@ -1,0 +1,16 @@
+name: Run Frameworks Tests
+on:
+  push:
+    paths:
+      - 'DSKit/**'
+      - 'DSKitFramework/**'
+      - 'fastlane/**'
+jobs:
+  test:
+    runs-on: self-hosted
+    if: "!contains(github.event.head_commit.message, 'skip ci')"
+    steps:
+      - uses: actions/checkout@v1
+      - name: Build all frameworks for simulator and copy to DSKit Framework folder
+        run: fastlane buildAllFrameworksForSimulatorAndCopyToDSKitFrameworkTestDSKitFrameworks
+        

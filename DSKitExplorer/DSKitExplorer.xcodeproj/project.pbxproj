@@ -135,7 +135,18 @@
 		60B570B027B279AC001B23D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60B570AE27B279AC001B23D2 /* Main.storyboard */; };
 		60B570B227B279AE001B23D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60B570B127B279AE001B23D2 /* Assets.xcassets */; };
 		60B570B527B279AE001B23D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60B570B327B279AE001B23D2 /* LaunchScreen.storyboard */; };
+		60E3A3AC27C52181007A4597 /* DSKitExplorerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E3A3AB27C52181007A4597 /* DSKitExplorerTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		60E3A3AD27C52181007A4597 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 60B5709D27B279AB001B23D2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 60B570A427B279AC001B23D2;
+			remoteInfo = DSKitExplorer;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		603ACA4127BFD99500AC0C45 /* Documentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Documentable.swift; sourceTree = "<group>"; };
@@ -264,6 +275,8 @@
 		60B570B127B279AE001B23D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		60B570B427B279AE001B23D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		60B570B627B279AE001B23D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		60E3A3A927C52181007A4597 /* DSKitExplorerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DSKitExplorerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		60E3A3AB27C52181007A4597 /* DSKitExplorerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSKitExplorerTests.swift; sourceTree = "<group>"; };
 		60ED5DF727C50EB8008D9382 /* dskit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = dskit; path = ..; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -276,6 +289,13 @@
 				603ACB3927BFDB1800AC0C45 /* DSKit in Frameworks */,
 				603ACB3E27BFDB8C00AC0C45 /* Splash in Frameworks */,
 				603ACB5C27BFDCC400AC0C45 /* Cartography in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60E3A3A627C52181007A4597 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -594,6 +614,7 @@
 			children = (
 				60B570A727B279AC001B23D2 /* DSKitExplorer */,
 				60B570BE27B27A66001B23D2 /* Packages */,
+				60E3A3AA27C52181007A4597 /* DSKitExplorerTests */,
 				60B570A627B279AC001B23D2 /* Products */,
 				60B570C027B27B04001B23D2 /* Frameworks */,
 			);
@@ -603,6 +624,7 @@
 			isa = PBXGroup;
 			children = (
 				60B570A527B279AC001B23D2 /* DSKitExplorer.app */,
+				60E3A3A927C52181007A4597 /* DSKitExplorerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -639,6 +661,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		60E3A3AA27C52181007A4597 /* DSKitExplorerTests */ = {
+			isa = PBXGroup;
+			children = (
+				60E3A3AB27C52181007A4597 /* DSKitExplorerTests.swift */,
+			);
+			path = DSKitExplorerTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -665,6 +695,24 @@
 			productReference = 60B570A527B279AC001B23D2 /* DSKitExplorer.app */;
 			productType = "com.apple.product-type.application";
 		};
+		60E3A3A827C52181007A4597 /* DSKitExplorerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 60E3A3B127C52181007A4597 /* Build configuration list for PBXNativeTarget "DSKitExplorerTests" */;
+			buildPhases = (
+				60E3A3A527C52181007A4597 /* Sources */,
+				60E3A3A627C52181007A4597 /* Frameworks */,
+				60E3A3A727C52181007A4597 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				60E3A3AE27C52181007A4597 /* PBXTargetDependency */,
+			);
+			name = DSKitExplorerTests;
+			productName = DSKitExplorerTests;
+			productReference = 60E3A3A927C52181007A4597 /* DSKitExplorerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -677,6 +725,10 @@
 				TargetAttributes = {
 					60B570A427B279AC001B23D2 = {
 						CreatedOnToolsVersion = 13.2.1;
+					};
+					60E3A3A827C52181007A4597 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 60B570A427B279AC001B23D2;
 					};
 				};
 			};
@@ -698,6 +750,7 @@
 			projectRoot = "";
 			targets = (
 				60B570A427B279AC001B23D2 /* DSKitExplorer */,
+				60E3A3A827C52181007A4597 /* DSKitExplorerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -729,6 +782,13 @@
 				603ACADF27BFD99600AC0C45 /* TextFieldBuiltInValidationVC.md in Resources */,
 				60B570B027B279AC001B23D2 /* Main.storyboard in Resources */,
 				603ACB3127BFD99700AC0C45 /* TypographyHtmlVC.md in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60E3A3A727C52181007A4597 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -844,7 +904,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		60E3A3A527C52181007A4597 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60E3A3AC27C52181007A4597 /* DSKitExplorerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		60E3A3AE27C52181007A4597 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 60B570A427B279AC001B23D2 /* DSKitExplorer */;
+			targetProxy = 60E3A3AD27C52181007A4597 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		60B570AE27B279AC001B23D2 /* Main.storyboard */ = {
@@ -1038,6 +1114,40 @@
 			};
 			name = Release;
 		};
+		60E3A3AF27C52181007A4597 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Imodeveloperlab.DSKitExplorerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DSKitExplorer.app/DSKitExplorer";
+			};
+			name = Debug;
+		};
+		60E3A3B027C52181007A4597 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Imodeveloperlab.DSKitExplorerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DSKitExplorer.app/DSKitExplorer";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1055,6 +1165,15 @@
 			buildConfigurations = (
 				60B570BA27B279AE001B23D2 /* Debug */,
 				60B570BB27B279AE001B23D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		60E3A3B127C52181007A4597 /* Build configuration list for PBXNativeTarget "DSKitExplorerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60E3A3AF27C52181007A4597 /* Debug */,
+				60E3A3B027C52181007A4597 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

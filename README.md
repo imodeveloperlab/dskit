@@ -32,17 +32,6 @@ DSKit will not cover everything, but if it fits your needs it will deliver flawl
 * Define colors, spacings, fonts, and further you don't care about spaces, layout, dimensions, etc.
 * DSKit will take care of the rest.
 
-## DSKit Features
-
-Working with DSKit will help you create the best simple iOS App on the market.
-
-* **Complex layouts easy:** Using DSKit, list, grid, and gallery sections you can achieve almost any [layout](https://dskit.app/layout) you need for your apps.
-* **Components:** A [collection of simple view models](https://dskit.app/components) will help you to quickly create new screens.
-* **Themes:** Design System Kit contains a collection of ready-to-use [themes](https://dskit.app/appearance) you can choose from for your next app.
-* **Light / Dark mode support:** Easy to implement [Light / Dark mode](https://dskit.app/appearance) themes for a great viewing experience in low-light environments.
-* **App gallery:** You can start your next app by exploring the Design System Kit [demo applications](https://dskit.app), where you can look at the code and copy-paste the desired implementation.
-* **Documentation:** We put a lot of effort into making the simplest API for your next apps and [documenting](https://dskit.app/components) all the aspects of DSKit API.
-
 ## DSKit Projects
 
 To get you started Design System Kit provides app demonstration code where you can see all the possibilities. You can even use this ready-made code for your next project.

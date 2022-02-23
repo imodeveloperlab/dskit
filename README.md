@@ -36,29 +36,13 @@ DSKit will take care of the rest.
 
 Working with Design System Kit will help you create the best simple iOS App on the market.
 
-#### Complex layouts easy
+1. **Complex layouts easy:** Using Design System Kit, list, grid, and gallery sections you can achieve almost any layout you need for your apps.
+2. **Components:** A collection of simple view models will help you to quickly create new screens.
+3. **Themes:** Design System Kit contains a collection of ready-to-use themes you can choose from for your next app.
+4. **Light / Dark mode support:** Easy to implement Light / Dark mode themes for a great viewing experience in low-light environments.
+5. **App gallery:** You can start your next app by exploring the Design System Kit demo applications, where you can look at the code and copy-paste the desired implementation.
 
-Using Design System Kit, list, grid, and gallery sections you can achieve almost any layout you need for your apps.
-
-#### Components
-
-A collection of simple view models will help you to quickly create new screens.
-
-#### Themes
-
-Design System Kit contains a collection of ready-to-use themes you can choose from for your next app.
-
-#### Light / Dark mode support
-
-Easy to implement Light / Dark mode themes for a great viewing experience in low-light environments.
-
-#### App gallery
-
-You can start your next app by exploring the Design System Kit demo applications, where you can look at the code and copy-paste the desired implementation.
-
-#### Documentation
-
-We put a lot of effort into making the simplest API for your next apps and documenting all the aspects of DSKit API.
+**Documentation:** We put a lot of effort into making the simplest API for your next apps and documenting all the aspects of DSKit API.
 
 # DSKit Projects
 

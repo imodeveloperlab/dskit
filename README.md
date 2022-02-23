@@ -36,9 +36,9 @@ DSKit will not cover everything, but if it fits your needs it will deliver flawl
 
 To get you started Design System Kit provides app demonstration code where you can see all the possibilities. You can even use this ready-made code for your next project.
 
-1. https://dskit.app/demo-ecommerce
-2. https://dskit.app/demo-barbershop
-3. https://dskit.app/demo-food-delivery
+* https://dskit.app/demo-ecommerce
+* https://dskit.app/demo-barbershop
+* https://dskit.app/demo-food-delivery
 
 ## Get Started !
 

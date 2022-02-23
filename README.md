@@ -51,6 +51,7 @@ To get you started Design System Kit provides app demonstration code where you c
 * [E-commerce](https://dskit.app/demo-ecommerce)
 * [Barbershop](https://dskit.app/demo-barbershop)
 * [Food Delivery](https://dskit.app/demo-food-delivery)
+* [Flowers Store](https://github.com/imodeveloperlab/Flower-Store)
 
 ## Installation
 

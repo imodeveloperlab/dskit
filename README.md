@@ -33,14 +33,6 @@ DSKit will not cover everything, but if it fits your needs it will deliver flawl
 * Define colors, spacings, fonts, and further you don't care about spaces, layout, dimensions, etc.
 * DSKit will take care of the rest.
 
-## DSKit Projects
-
-To get you started Design System Kit provides app demonstration code where you can see all the possibilities. You can even use this ready-made code for your next project.
-
-* https://dskit.app/demo-ecommerce
-* https://dskit.app/demo-barbershop
-* https://dskit.app/demo-food-delivery
-
 ## Get Started !
 
 Start working with DSKit which will help you quickly build your app user interface
@@ -60,3 +52,17 @@ import DSKit
 
 For more information on how to use the Swift Package Manager, check out [this article](https://www.swiftbysundell.com/articles/managing-dependencies-using-the-swift-package-manager), or [its official documentation](https://swift.org/package-manager).
 
+## Ducumentation
+
+* [Code Example](https://dskit.app/home-code-example)
+* [Components](https://dskit.app/components)
+* [Layout](https://dskit.app/layout)
+* [Appearance](https://dskit.app/appearance)
+
+## Demo Projects
+
+To get you started Design System Kit provides app demonstration code where you can see all the possibilities. You can even use this ready-made code for your next project.
+
+* [E-commerce](https://dskit.app/demo-ecommerce)
+* [Barbershop](https://dskit.app/demo-barbershop)
+* [Food Delivery](https://dskit.app/demo-food-delivery)

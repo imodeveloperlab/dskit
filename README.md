@@ -73,3 +73,17 @@ To get you started Design System Kit provides app demonstration code where you c
 Start working with DSKit which will help you quickly build your app user interface
 https://dskit.app/components
 
+## Installation
+
+DSKit is distributed using the [Swift Package Manager](https://swift.org/package-manager). 
+
+To use DSKit within an iOS, then use Xcode’s `File > Add Packages...` menu command to add it to your project.
+
+Then import DSKit wherever you’d like to use it:
+
+```swift
+import DSKit
+```
+
+For more information on how to use the Swift Package Manager, check out [this article](https://www.swiftbysundell.com/articles/managing-dependencies-using-the-swift-package-manager), or [its official documentation](https://swift.org/package-manager).
+

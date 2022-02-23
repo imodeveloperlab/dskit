@@ -32,7 +32,7 @@ Define the application flow
 Define colors, spacings, fonts, and further you don't care about spaces, layout, dimensions, etc.
 DSKit will take care of the rest.
 
-# DSKit Features
+## DSKit Features
 
 Working with Design System Kit will help you create the best simple iOS App on the market.
 
@@ -43,7 +43,7 @@ Working with Design System Kit will help you create the best simple iOS App on t
 * **App gallery:** You can start your next app by exploring the Design System Kit demo applications, where you can look at the code and copy-paste the desired implementation.
 * **Documentation:** We put a lot of effort into making the simplest API for your next apps and documenting all the aspects of DSKit API.
 
-# DSKit Projects
+## DSKit Projects
 
 To get you started Design System Kit provides app demonstration code where you can see all the possibilities. You can even use this ready-made code for your next project.
 
@@ -51,7 +51,7 @@ To get you started Design System Kit provides app demonstration code where you c
 2. https://dskit.app/demo-barbershop
 3. https://dskit.app/demo-food-delivery
 
-# Get Started !
+## Get Started !
 
 Start working with DSKit which will help you quickly build your app user interface
 https://dskit.app/components

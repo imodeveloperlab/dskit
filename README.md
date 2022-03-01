@@ -64,7 +64,7 @@ For more information on how to use the Swift Package Manager, check out [this ar
 
 To get you started Design System Kit provides app demonstration code where you can see all the possibilities. You can even use this ready-made code for your next project.
 
-* [E-commerce](https://dskit.app/demo-ecommerce)
-* [Barbershop](https://dskit.app/demo-barbershop)
-* [Food Delivery](https://dskit.app/demo-food-delivery)
+* [E-commerce](https://github.com/imodeveloperlab/E-commerce)
+* [Barbershop](https://github.com/imodeveloperlab/Barbershop)
+* [Food Delivery](https://github.com/imodeveloperlab/Food-Delivery)
 * [Flowers Store](https://github.com/imodeveloperlab/Flower-Store)

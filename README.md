@@ -22,8 +22,6 @@ Welcome to **DSKit** a Design System Kit for iOS 13+ is an iOS SDK written in Sw
 
 We can find a lot of design systems that can help you build any app you want. The problem is that they all are overwhelmingly complicated; this means there is a big learning curve from starting a new project to delivering it to the store.
 
-DSKit is focused on fast delivery, with the most useful elements carefully selected for you.
-
 DSKit will not cover everything, but if it fits your needs it will deliver flawless functionality. It’s the easiest way to make simple iOS Applications and business white labels with great design and Pixel Perfect UI.
 
 #### All you have to do is:

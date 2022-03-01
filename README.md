@@ -33,6 +33,10 @@ DSKit will not cover everything, but if it fits your needs it will deliver flawl
 * Define colors, spacings, fonts, and further you don't care about spaces, layout, dimensions, etc.
 * DSKit will take care of the rest.
 
+<p align="center">
+    <img src="Content/Images/ListGridGallery.png" max-width="100%" alt="DSKit"/>
+</p>
+
 ## Get Started !
 
 Start working with DSKit which will help you quickly build your app user interface

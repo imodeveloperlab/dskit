@@ -35,6 +35,22 @@ DSKit will not cover everything, but if it fits your needs it will deliver flawl
     <img src="Content/Images/ListGridGallery.png" max-width="100%" alt="DSKit"/>
 </p>
 
+## Demo Projects
+
+To get you started Design System Kit provides app demonstration code where you can see all the possibilities. You can even use this ready-made code for your next project.
+
+* [E-commerce](https://github.com/imodeveloperlab/E-commerce)
+* [Barbershop](https://github.com/imodeveloperlab/Barbershop)
+* [Food Delivery](https://github.com/imodeveloperlab/Food-Delivery)
+* [Flowers Store](https://github.com/imodeveloperlab/Flower-Store)
+
+## Ducumentation
+
+* [Code Example](https://dskit.app/home-code-example)
+* [Components](https://dskit.app/components)
+* [Layout](https://dskit.app/layout)
+* [Appearance](https://dskit.app/appearance)
+
 ## Get Started !
 
 Start working with DSKit which will help you quickly build your app user interface
@@ -118,18 +134,3 @@ let viewModels = [1,2,3,4,5,6,7,8,9,10,11,12].map { (index) -> DSViewModel in
 show(content: viewModels.gallery())
 ```
 
-## Demo Projects
-
-To get you started Design System Kit provides app demonstration code where you can see all the possibilities. You can even use this ready-made code for your next project.
-
-* [E-commerce](https://github.com/imodeveloperlab/E-commerce)
-* [Barbershop](https://github.com/imodeveloperlab/Barbershop)
-* [Food Delivery](https://github.com/imodeveloperlab/Food-Delivery)
-* [Flowers Store](https://github.com/imodeveloperlab/Flower-Store)
-
-## Ducumentation
-
-* [Code Example](https://dskit.app/home-code-example)
-* [Components](https://dskit.app/components)
-* [Layout](https://dskit.app/layout)
-* [Appearance](https://dskit.app/appearance)

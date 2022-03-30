@@ -39,13 +39,6 @@ DSKit will not cover everything, but if it fits your needs it will deliver flawl
 
 Start working with DSKit which will help you quickly build your app user interface
 
-## Ducumentation
-
-* [Code Example](https://dskit.app/home-code-example)
-* [Components](https://dskit.app/components)
-* [Layout](https://dskit.app/layout)
-* [Appearance](https://dskit.app/appearance)
-
 ## Installation
 
 DSKit is distributed using the [Swift Package Manager](https://swift.org/package-manager). 
@@ -60,6 +53,71 @@ import DSKit
 
 For more information on how to use the Swift Package Manager, check out [this article](https://www.swiftbysundell.com/articles/managing-dependencies-using-the-swift-package-manager), or [its official documentation](https://swift.org/package-manager).
 
+## Show Content
+
+Displaying content in DSKit is easy, all you have to do is just call one function with content you want to display or want to update.
+
+```swift
+show(content: [YOUR_SECTION])
+```
+
+Content is composed of two data structures **DSSection** and **DSViewModel**
+
+**DSSection** - is used to describe how content will be displayed on the screen, in one word: Layout **DSViewModel** - is used to describe your content on the screen, labels, texts, images, actions, and so on.
+
+You can display your view models in **Lists**, **Grids**, and **Galleries**.
+
+To easily transform an array of **DSViewModel**'s in a section just call .list() .grid() .gallery() method on your view models array.
+
+Every time your need to update content on the screen, add, delete, change position, just change your content structure and call show(content: [YOUR_SECTION]) DSKit will automatically update the changes, remove non-existent content, or switch position, and it will be animated.
+
+```swift
+let texts = ["Petrichor","Sumptuous","Angst","Aesthete","Nadir"]
+
+let viewModels = texts.map { (text) -> DSViewModel in
+    DSLabelVM(.body, text: text)
+}
+
+show(content: viewModels.list())
+```
+### List
+
+```swift
+let texts = ["Petrichor","Sumptuous","Angst","Aesthete","Nadir"]
+
+let viewModels = texts.map { (text) -> DSViewModel in
+    DSLabelVM(.body, text: text)
+}
+
+show(content: viewModels.list())
+```
+
+### Grid
+
+```swift
+let viewModels = [1,2,3,4,5].map { (index) -> DSViewModel in
+    var viewModel = DSImageVM(image: UIImage(named: "picture-\(index)"))
+    viewModel.height = .absolute(150)
+    return viewModel
+}
+
+show(content: viewModels.grid())
+```
+
+### Gallery
+
+```swift
+let viewModels = [1,2,3,4,5,6,7,8,9,10,11,12].map { (index) -> DSViewModel in
+
+    var viewModel = DSImageVM(image: UIImage(named: "picture-\(index)"))
+    viewModel.height = .absolute(150)
+    viewModel.width = .absolute(150)
+    return viewModel
+}
+
+show(content: viewModels.gallery())
+```
+
 ## Demo Projects
 
 To get you started Design System Kit provides app demonstration code where you can see all the possibilities. You can even use this ready-made code for your next project.
@@ -68,3 +126,10 @@ To get you started Design System Kit provides app demonstration code where you c
 * [Barbershop](https://github.com/imodeveloperlab/Barbershop)
 * [Food Delivery](https://github.com/imodeveloperlab/Food-Delivery)
 * [Flowers Store](https://github.com/imodeveloperlab/Flower-Store)
+
+## Ducumentation
+
+* [Code Example](https://dskit.app/home-code-example)
+* [Components](https://dskit.app/components)
+* [Layout](https://dskit.app/layout)
+* [Appearance](https://dskit.app/appearance)

@@ -69,7 +69,7 @@ import DSKit
 
 For more information on how to use the Swift Package Manager, check out [this article](https://www.swiftbysundell.com/articles/managing-dependencies-using-the-swift-package-manager), or [its official documentation](https://swift.org/package-manager).
 
-## Show Content
+## Show content
 
 Displaying content in DSKit is easy, all you have to do is just call one function with content you want to display or want to update.
 
@@ -96,41 +96,4 @@ let viewModels = texts.map { (text) -> DSViewModel in
 
 show(content: viewModels.list())
 ```
-### List
-
-```swift
-let texts = ["Petrichor","Sumptuous","Angst","Aesthete","Nadir"]
-
-let viewModels = texts.map { (text) -> DSViewModel in
-    DSLabelVM(.body, text: text)
-}
-
-show(content: viewModels.list())
-```
-
-### Grid
-
-```swift
-let viewModels = [1,2,3,4,5].map { (index) -> DSViewModel in
-    var viewModel = DSImageVM(image: UIImage(named: "picture-\(index)"))
-    viewModel.height = .absolute(150)
-    return viewModel
-}
-
-show(content: viewModels.grid())
-```
-
-### Gallery
-
-```swift
-let viewModels = [1,2,3,4,5,6,7,8,9,10,11,12].map { (index) -> DSViewModel in
-
-    var viewModel = DSImageVM(image: UIImage(named: "picture-\(index)"))
-    viewModel.height = .absolute(150)
-    viewModel.width = .absolute(150)
-    return viewModel
-}
-
-show(content: viewModels.gallery())
-```
-
+[Read more](https://dskit.app/components)

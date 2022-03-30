@@ -55,7 +55,7 @@ To get you started Design System Kit provides app demonstration code where you c
 
 Start working with DSKit which will help you quickly build your app user interface
 
-## Installation
+### Installation
 
 DSKit is distributed using the [Swift Package Manager](https://swift.org/package-manager). 
 
@@ -69,7 +69,7 @@ import DSKit
 
 For more information on how to use the Swift Package Manager, check out [this article](https://www.swiftbysundell.com/articles/managing-dependencies-using-the-swift-package-manager), or [its official documentation](https://swift.org/package-manager).
 
-## Show content
+### Show content
 
 Displaying content in DSKit is easy, all you have to do is just call one function with content you want to display or want to update.
 

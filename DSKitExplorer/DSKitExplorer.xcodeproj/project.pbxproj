@@ -305,6 +305,7 @@
 		603ACA3F27BFD99500AC0C45 /* Documentation */ = {
 			isa = PBXGroup;
 			children = (
+				603ACA7B27BFD99500AC0C45 /* SourceCodeViewController.swift */,
 				603ACA4027BFD99500AC0C45 /* WebsiteGenerator */,
 				603ACA4927BFD99500AC0C45 /* ViewModels */,
 				603ACA9227BFD99600AC0C45 /* Layout */,
@@ -336,7 +337,6 @@
 				603ACA5627BFD99500AC0C45 /* Buttons */,
 				603ACA5C27BFD99500AC0C45 /* TextFields */,
 				603ACA7427BFD99500AC0C45 /* Images */,
-				603ACA7B27BFD99500AC0C45 /* SourceCodeViewController.swift */,
 				603ACA7C27BFD99500AC0C45 /* Cards */,
 				603ACA7E27BFD99500AC0C45 /* Actions */,
 				603ACA8E27BFD99600AC0C45 /* PageControl */,

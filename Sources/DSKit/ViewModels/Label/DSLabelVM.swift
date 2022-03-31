@@ -19,7 +19,7 @@ public struct DSLabelVM: DSViewModel, Equatable, Hashable {
     ///   - type: DSTextType
     ///   - text: String
     ///   - alignment: NSTextAlignment
-    public init(_ type: DSTextType = .body, text: String, alignment: NSTextAlignment = .left) {
+    public init(_ type: DSTextType = .body, text: String, alignment: NSTextAlignment = .natural) {
         self.textComposer = DSTextComposer(alignment: alignment)
         self.textComposer.add(type: type, text: text)
     }

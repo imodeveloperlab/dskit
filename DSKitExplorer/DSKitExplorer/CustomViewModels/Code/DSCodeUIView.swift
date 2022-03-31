@@ -33,6 +33,7 @@ final class DSCodeUIView: UIView, DSReusableUIView {
         let attributedText = highlighter.highlight(viewModel.code)
         
         label.attributedText = attributedText
+        label.textAlignment = .left
         label.numberOfLines = 0
     }
     

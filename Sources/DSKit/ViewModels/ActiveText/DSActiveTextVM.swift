@@ -31,7 +31,7 @@ public struct DSActiveTextVM: DSViewModel, Equatable, Hashable {
     ///   - type: DSTextType
     ///   - text: String
     ///   - alignment: NSTextAlignment
-    public init(_ type: DSTextType = .body, text: String, alignment: NSTextAlignment = .left) {
+    public init(_ type: DSTextType = .body, text: String, alignment: NSTextAlignment = .natural) {
         self.text = text
         self.alignment = alignment
         self.textType = type

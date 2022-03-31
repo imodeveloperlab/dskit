@@ -16,7 +16,7 @@ public class DSTextComposer: Equatable, Hashable {
     
     /// Init text composer with alignment
     /// - Parameter alignment: NSTextAlignment
-    public init(alignment: NSTextAlignment = .left) {
+    public init(alignment: NSTextAlignment = .natural) {
         self.alignment = alignment
     }
     

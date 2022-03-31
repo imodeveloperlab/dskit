@@ -48,7 +48,7 @@ class ButtonsVC: DSViewController {
         let linkButtonWithIcon = DSButtonVM(title: "Link", icon: UIImage(systemName: "flame.fill"), type: .link)
         
         // Default left
-        let defaultButtonLeftAlignment = DSButtonVM(title: "Default left", textAlignment: .left)
+        let defaultButtonLeftAlignment = DSButtonVM(title: "Default left", textAlignment: .natural)
         
         // Light right
         let lightButtonRightAlignment = DSButtonVM(title: "Light right", type: .light, textAlignment: .right)

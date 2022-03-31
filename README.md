@@ -53,7 +53,11 @@ To get you started Design System Kit provides app demonstration code where you c
 
 ## Get Started !
 
-Start working with DSKit which will help you quickly build your app user interface
+To get started using DSKit you can download this git repo and build and explore the DSKit Explorer app, which will show all available components and guide you on how to get DSKit in your project.
+
+<p align="center">
+    <img src="Content/Images/Project.png" max-width="100%" alt="DSKit"/>
+</p>
 
 ### Installation
 

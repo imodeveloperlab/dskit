@@ -71,9 +71,18 @@ open class DSViewController: DSCollectionViewController {
     }
     
     public func reloadAllContent() {
-        topCollectionView.reload()
-        collectionView.reload()
-        bottomCollectionView.reload()
+        
+        if topCollectionView !== nil {
+            topCollectionView.reload()
+        }
+        
+        if topCollectionView !== nil {
+            topCollectionView.reload()
+        }
+        
+        if topCollectionView !== nil {
+            topCollectionView.reload()
+        }
     }
     
     func applyCurrentContentQueueIfPossible() {

@@ -81,15 +81,15 @@ Displaying content in DSKit is easy, all you have to do is just call one functio
 show(content: [YOUR_SECTION])
 ```
 
-Content is composed of two data structures **DSSection** and **DSViewModel**
+Content is composed of two data structures DSSection and DSViewModel
 
-**DSSection** - is used to describe how content will be displayed on the screen, in one word: Layout
+DSSection - is used to describe how content will be displayed on the screen, in one word: Layout
 
-**DSViewModel** - is used to describe your content on the screen, labels, texts, images, actions, and so on.
+DSViewModel - is used to describe your content on the screen, labels, texts, images, actions, and so on.
 
-You can display your view models in **Lists**, **Grids**, and **Galleries**.
+You can display your view models in Lists, Grids, and Galleries.
 
-To easily transform an array of **DSViewModel**'s in a section just call **.list()** **.grid()** **.gallery()** method on your view models array.
+To easily transform an array of DSViewModel's in a section just call .list() .grid() .gallery() method on your view models array.
 
 Every time your need to update content on the screen, add, delete, change position, just change your content structure and call `show(content: [YOUR_SECTION])` DSKit will automatically update the changes, remove non-existent content, or switch position, and it will be animated.
 
@@ -103,3 +103,31 @@ let viewModels = texts.map { (text) -> DSViewModel in
 show(content: viewModels.list())
 ```
 [Read more](https://dskit.app/components)
+
+## Idea
+
+My idea revolves around the design problem for mobile applications, in the company I worked for, there has always been the design problem, namely that designers make beautiful interfaces, only that they are not practical, difficult to implement.
+
+In the business segment, small business, not all the time, there are enough resources, time and knowledge to generate content exclusively for mobile applications, pictures, illustrations, icons and perfect texts. The design that looks perfect at first, become problematic, the real content does not fit, the images are not so perfect, the buttons are not in place, and so on.
+
+This is the first reason, I started working on DSKit, it is a tool, with the help of which it is possible to quickly create new interfaces, in which the typography, spaces, colors will be consistent in all the application screens.
+
+The second reason is that there are a lot of applications, for online appointments, shopping, delivery, that work, but have an ugly design (in my opinion), and all because the business does not have the resources to hire a company or a designer to develop a special design. for their business.
+
+Unlike Material Design, Flutter and other, design systems, that are overwhelmingly complicated, DSKit should be focused on fast delivery, with the most useful and simple components, and a lot of code examples, for different use cases.
+
+DSKit will not, (and should not) cover everything, but if it fits the business requirements it should deliver flawless functionality. It should be the easiest way to make simple iOS applications and business white labels with a great, clean design and pixel-perfect UI.
+
+## Contributions and support
+
+DSKit is developed completely in the open, and your contributions are more than welcome.
+
+Before you start using DSKit in any of your projects, it’s highly recommended that you spend a few minutes familiarizing yourself with its documentation and internal implementation, so that you’ll be ready to tackle any issues or edge cases that you might encounter.
+
+Since this is a very young project, it’s likely to have many limitations and missing features, which is something that can really only be discovered and addressed as more people start using it.
+
+This project does not come with GitHub Issues-based support, and users are instead encouraged to become active participants in its continued development — by fixing any bugs that they encounter, or by improving the documentation wherever it’s found to be lacking.
+
+If you wish to make a change, open a Pull Request — even if it just contains a draft of the changes you’re planning, or a test that reproduces an issue — and we can discuss it further from there.
+
+Hope you’ll enjoy using DSKit!

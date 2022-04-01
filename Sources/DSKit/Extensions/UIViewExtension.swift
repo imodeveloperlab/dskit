@@ -112,4 +112,8 @@ extension UIView {
             view.top == superView.top + insets.top
         }
     }
+    
+    var isRTL: Bool {
+        effectiveUserInterfaceLayoutDirection == .rightToLeft
+    }
 }

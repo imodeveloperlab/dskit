@@ -376,7 +376,14 @@ open class ImoUIButton: UIView {
         
         // Image position
         switch model.imagePosition {
-        case .left: break
+        case .left:
+            
+            let imageWidth = button.imageView?.bounds.width ?? CGFloat(0)
+            
+            if UIApplication.shared.isRTL {
+                button.imageEdgeInsets = UIEdgeInsets(top: 0, left: imageWidth, bottom: 0, right: 0)
+                button.titleEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+            }
             
         case .right:
             
@@ -384,8 +391,13 @@ open class ImoUIButton: UIView {
             let imageWidth = button.imageView?.bounds.width ?? CGFloat(0)
             let space = titleWidth + imageWidth + appearance.margins
             
-            button.imageEdgeInsets = UIEdgeInsets(top: 0, left: imageWidth, bottom: 0, right: -space)
-            button.titleEdgeInsets = UIEdgeInsets(top: 0, left: -titleWidth, bottom: 0, right: 0)
+            if UIApplication.shared.isRTL {
+                button.imageEdgeInsets = UIEdgeInsets(top: 0, left: -space, bottom: 0, right: 0)
+                button.titleEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+            } else {
+                button.imageEdgeInsets = UIEdgeInsets(top: 0, left: imageWidth, bottom: 0, right: -space)
+                button.titleEdgeInsets = UIEdgeInsets(top: 0, left: -titleWidth, bottom: 0, right: 0)
+            }
             
         case .rightMargin:
             

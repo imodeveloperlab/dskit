@@ -6,6 +6,7 @@
 //
 
 import XCTest
+@testable import DSKitExplorer
 
 class DSKitExplorerTests: XCTestCase {
 

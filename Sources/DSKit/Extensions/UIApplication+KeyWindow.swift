@@ -19,4 +19,8 @@ public extension UIApplication {
                 .first?.windows
                 .filter({$0.isKeyWindow}).first
     }
+    
+    var isRTL: Bool {
+        UIApplication.shared.getKeyWindow()?.effectiveUserInterfaceLayoutDirection == .rightToLeft
+    }
 }

@@ -87,6 +87,7 @@ Dependencies/
 **/DSKitFramework/Frameworks/
 **/fastlane/*.zip
 **/DSKitFramework/*.zip
+**/test_output/
 
 # Code Injection
 #

@@ -37,14 +37,6 @@ DSKit will not cover everything, but if it fits your needs it will deliver flawl
     <img src="Content/Images/ListGridGallery.png" max-width="100%" alt="DSKit"/>
 </p>
 
-## Demo Projects
-
-To get you started Design System Kit provides app demonstration code where you can see all the possibilities. You can even use this ready-made code for your next project.
-
-* [E-commerce](https://github.com/imodeveloperlab/E-commerce)
-* [Barbershop](https://github.com/imodeveloperlab/Barbershop)
-* [Food Delivery](https://github.com/imodeveloperlab/Food-Delivery)
-* [Flowers Store](https://github.com/imodeveloperlab/Flower-Store)
 
 ## Ducumentation
 
@@ -74,6 +66,24 @@ import DSKit
 ```
 
 For more information on how to use the Swift Package Manager, check out [this article](https://www.swiftbysundell.com/articles/managing-dependencies-using-the-swift-package-manager), or [its official documentation](https://swift.org/package-manager).
+
+## Demo Projects
+
+To get you started Design System Kit provides app demonstration code where you can see all the possibilities. You can even use this ready-made code for your next project.
+
+* [E-commerce](https://github.com/imodeveloperlab/E-commerce)
+
+<table>
+    <tr>
+      <td><img src="https://d33wubrfki0l68.cloudfront.net/7fc5a774ae091677f957c45ae14fc2aae34c1523/21740/images/demo/ecommerce/ecommerce-design20.png" class="img-fluid rounded work-image" alt="barber-shop, ui, ux, ios design, design system, apple"></td>
+      <td><img src="https://d33wubrfki0l68.cloudfront.net/9ae63d9147c4c91fd773f66864eb1a6d221f2ffa/98067/images/demo/ecommerce/ecommerce-design21.png" class="img-fluid rounded work-image" alt="barber-shop, ui, ux, ios design, design system, apple"></td> 
+      <td><img src="https://d33wubrfki0l68.cloudfront.net/611e902665cf10dc26fa0a2c7288f9cadc3df09d/9de90/images/demo/ecommerce/ecommerce-design43.png" class="img-fluid rounded work-image" alt="barber-shop, ui, ux, ios design, design system, apple"></td>
+    </tr>
+</table>
+
+* [Barbershop](https://github.com/imodeveloperlab/Barbershop)
+* [Food Delivery](https://github.com/imodeveloperlab/Food-Delivery)
+* [Flowers Store](https://github.com/imodeveloperlab/Flower-Store)
 
 
 ## Idea

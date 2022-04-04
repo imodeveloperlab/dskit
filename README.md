@@ -96,7 +96,7 @@ To get you started Design System Kit provides app demonstration code where you c
     </tr>
 </table>
 
-[GitHub Project](https://github.com/imodeveloperlab/E-commerce) [View more](https://dskit.app/demo-ecommerce)
+[GitHub Project](https://github.com/imodeveloperlab/E-commerce) | [View more](https://dskit.app/demo-ecommerce)
 
 ### Food Delivery
 
@@ -109,7 +109,7 @@ To get you started Design System Kit provides app demonstration code where you c
     </tr>
 </table>
 
-[GitHub Project](https://github.com/imodeveloperlab/Food-Delivery) [View more](https://dskit.app/demo-food-delivery)
+[GitHub Project](https://github.com/imodeveloperlab/Food-Delivery) | [View more](https://dskit.app/demo-food-delivery)
 
 ### Flowers Store
 
@@ -122,7 +122,7 @@ To get you started Design System Kit provides app demonstration code where you c
     </tr>
 </table>
 
-[GitHub Project](https://github.com/imodeveloperlab/Flower-Store) [View more](https://dskit.app/demo-flowersstore)
+[GitHub Project](https://github.com/imodeveloperlab/Flower-Store) | [View more](https://dskit.app/demo-flowersstore)
 
 ### Barbershop
 
@@ -136,7 +136,7 @@ To get you started Design System Kit provides app demonstration code where you c
     </tr>
 </table>
 
-[GitHub Project](https://github.com/imodeveloperlab/Barbershop) [View more](https://dskit.app/demo-barbershop)
+[GitHub Project](https://github.com/imodeveloperlab/Barbershop) | [View more](https://dskit.app/demo-barbershop)
 
 
 

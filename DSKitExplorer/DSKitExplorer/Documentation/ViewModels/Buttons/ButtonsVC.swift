@@ -87,23 +87,20 @@ class ButtonsVC: DSViewController {
         
         defaultButtonRightWithLeftMarginImage.imagePosition = .leftMargin
         
-//        show(content: defaultButton,
-//             lightButton,
-//             linkButton,
-//             defaultWithIcon,
-//             lightButtonWithIcon,
-//             linkButtonWithIcon,
-//             defaultButtonLeftAlignment,
-//             lightButtonRightAlignment,
-//             linkButtonLeft,
-//             linkButtonRight,
-//             defaultButtonLeftWithRightImage,
-//             defaultButtonRightWithLeftImage,
-//             defaultButtonLeftWithRightMarginImage,
-//             defaultButtonRightWithLeftMarginImage)
-        
-        show(content:
-             defaultWithIcon, lightButtonWithIcon, linkButtonWithIcon)
+        show(content: defaultButton,
+             lightButton,
+             linkButton,
+             defaultWithIcon,
+             lightButtonWithIcon,
+             linkButtonWithIcon,
+             defaultButtonLeftAlignment,
+             lightButtonRightAlignment,
+             linkButtonLeft,
+             linkButtonRight,
+             defaultButtonLeftWithRightImage,
+             defaultButtonRightWithLeftImage,
+             defaultButtonLeftWithRightMarginImage,
+             defaultButtonRightWithLeftMarginImage)
         
         // Demo end
     }

@@ -67,25 +67,6 @@ import DSKit
 
 For more information on how to use the Swift Package Manager, check out [this article](https://www.swiftbysundell.com/articles/managing-dependencies-using-the-swift-package-manager), or [its official documentation](https://swift.org/package-manager).
 
-## Demo Projects
-
-To get you started Design System Kit provides app demonstration code where you can see all the possibilities. You can even use this ready-made code for your next project.
-
-* [E-commerce](https://github.com/imodeveloperlab/E-commerce)
-
-<table>
-    <tr>
-      <td><img src="https://d33wubrfki0l68.cloudfront.net/7fc5a774ae091677f957c45ae14fc2aae34c1523/21740/images/demo/ecommerce/ecommerce-design20.png" class="img-fluid rounded work-image" alt="barber-shop, ui, ux, ios design, design system, apple"></td>
-      <td><img src="https://d33wubrfki0l68.cloudfront.net/9ae63d9147c4c91fd773f66864eb1a6d221f2ffa/98067/images/demo/ecommerce/ecommerce-design21.png" class="img-fluid rounded work-image" alt="barber-shop, ui, ux, ios design, design system, apple"></td> 
-      <td><img src="https://d33wubrfki0l68.cloudfront.net/611e902665cf10dc26fa0a2c7288f9cadc3df09d/9de90/images/demo/ecommerce/ecommerce-design43.png" class="img-fluid rounded work-image" alt="barber-shop, ui, ux, ios design, design system, apple"></td>
-    </tr>
-</table>
-
-* [Barbershop](https://github.com/imodeveloperlab/Barbershop)
-* [Food Delivery](https://github.com/imodeveloperlab/Food-Delivery)
-* [Flowers Store](https://github.com/imodeveloperlab/Flower-Store)
-
-
 ## Idea
 
 My idea revolves around the design problem for mobile applications, in the company I worked for, there has always been the design problem, namely that designers make beautiful interfaces, only that they are not practical, difficult to implement.
@@ -99,6 +80,68 @@ The second reason is that there are a lot of applications, for online appointmen
 Unlike Material Design, Flutter and other, design systems, that are overwhelmingly complicated, DSKit should be focused on fast delivery, with the most useful and simple components, and a lot of code examples, for different use cases.
 
 DSKit will not, (and should not) cover everything, but if it fits the business requirements it should deliver flawless functionality. It should be the easiest way to make simple iOS applications and business white labels with a great, clean design and pixel-perfect UI.
+
+## Demo Projects
+
+To get you started Design System Kit provides app demonstration code where you can see all the possibilities. You can even use this ready-made code for your next project.
+
+
+### E-commerce
+
+<table>
+    <tr>
+      <td><img src="https://d33wubrfki0l68.cloudfront.net/7fc5a774ae091677f957c45ae14fc2aae34c1523/21740/images/demo/ecommerce/ecommerce-design20.png" class="img-fluid rounded work-image" alt="barber-shop, ui, ux, ios design, design system, apple"></td>
+      <td><img src="https://d33wubrfki0l68.cloudfront.net/9ae63d9147c4c91fd773f66864eb1a6d221f2ffa/98067/images/demo/ecommerce/ecommerce-design21.png" class="img-fluid rounded work-image" alt="barber-shop, ui, ux, ios design, design system, apple"></td> 
+      <td><img src="https://d33wubrfki0l68.cloudfront.net/611e902665cf10dc26fa0a2c7288f9cadc3df09d/9de90/images/demo/ecommerce/ecommerce-design43.png" class="img-fluid rounded work-image" alt="barber-shop, ui, ux, ios design, design system, apple"></td>
+      <td><img src="https://d33wubrfki0l68.cloudfront.net/a37f93e66cb180ab1c0bd8beb15d37e43ecf4aac/a31b1/images/demo/ecommerce/ecommerce-design60.png" class="img-fluid rounded work-image" alt="barber-shop, ui, ux, ios design, design system, apple"></td>
+    </tr>
+</table>
+
+[View more](https://github.com/imodeveloperlab/E-commerce)
+
+### Food Delivery
+
+<table>
+    <tr>
+      <td><img src="https://d33wubrfki0l68.cloudfront.net/2af56f1ce489897f343a01168040dab7ad4c3096/0831f/images/demo/fooddelivery/food-delivery16.png" class="img-fluid rounded work-image" alt="barber-shop, ui, ux, ios design, design system, apple"></td>
+      <td><img src="https://d33wubrfki0l68.cloudfront.net/0d5ef3aa6963fb876e285e45a3b80486bc413418/72d3f/images/demo/fooddelivery/food-delivery19.png" class="img-fluid rounded work-image" alt="barber-shop, ui, ux, ios design, design system, apple"></td> 
+      <td><img src="https://d33wubrfki0l68.cloudfront.net/88f5af944b0abfe957cec095f80ea20761899553/77718/images/demo/fooddelivery/food-delivery21.png" class="img-fluid rounded work-image" alt="barber-shop, ui, ux, ios design, design system, apple"></td>
+      <td><img src="https://d33wubrfki0l68.cloudfront.net/1dfddb72887272fd743dc39d103c66e2c976d79b/aac5b/images/demo/fooddelivery/food-delivery23.png" class="img-fluid rounded work-image" alt="barber-shop, ui, ux, ios design, design system, apple"></td>
+    </tr>
+</table>
+
+[View more](https://github.com/imodeveloperlab/Food-Delivery)
+
+### Flowers Store
+
+<table>
+    <tr>
+      <td><img src="https://d33wubrfki0l68.cloudfront.net/9b5cd1a44eaff6bc864cb9914672b48825a3e817/e030a/images/demo/flowersstore/flowers-store-design15.png" class="img-fluid rounded work-image" alt="barber-shop, ui, ux, ios design, design system, apple"></td>
+      <td><img src="https://d33wubrfki0l68.cloudfront.net/f03a3b3b8d268a4d4629a49ce93c771ec824201d/b3add/images/demo/flowersstore/flowers-store-design1.png" class="img-fluid rounded work-image" alt="barber-shop, ui, ux, ios design, design system, apple"></td> 
+      <td><img src="https://d33wubrfki0l68.cloudfront.net/052dac15e878e5e3660df5f3541d0fd8d8dd557a/99352/images/demo/flowersstore/flowers-store-design17.png" class="img-fluid rounded work-image" alt="barber-shop, ui, ux, ios design, design system, apple"></td>
+      <td><img src="https://d33wubrfki0l68.cloudfront.net/81186fcb4b245c84aec41b52aaa758bc4880e53e/e8865/images/demo/flowersstore/flowers-store-design12.png" class="img-fluid rounded work-image" alt="barber-shop, ui, ux, ios design, design system, apple"></td>
+    </tr>
+</table>
+
+[View more](https://github.com/imodeveloperlab/Flower-Store)
+
+### Barbershop
+
+
+<table>
+    <tr>
+      <td><img src="https://d33wubrfki0l68.cloudfront.net/972da119cefb9fdb17e4fa3bb0dc420e6e44eede/6eef7/images/demo/barbershop-dark/barbershop-ios-design1.png" class="img-fluid rounded work-image" alt="barber-shop, ui, ux, ios design, design system, apple"></td>
+      <td><img src="https://d33wubrfki0l68.cloudfront.net/bba9483eab087362cb3307dfcfd38b5ee5ba5008/dce76/images/demo/barbershop-dark/barbershop-ios-design2.png" class="img-fluid rounded work-image" alt="barber-shop, ui, ux, ios design, design system, apple"></td> 
+      <td><img src="https://d33wubrfki0l68.cloudfront.net/314ac3a92fd54847d1abf980d3c5a6d94c755732/7191d/images/demo/barbershop-dark/barbershop-ios-design3.png" class="img-fluid rounded work-image" alt="barber-shop, ui, ux, ios design, design system, apple"></td>
+      <td><img src="https://d33wubrfki0l68.cloudfront.net/215b9a3676ddf905127c91f4073748c6640a253a/a7781/images/demo/barbershop-dark/barbershop-ios-design4.png" class="img-fluid rounded work-image" alt="barber-shop, ui, ux, ios design, design system, apple"></td>
+    </tr>
+</table>
+
+[View more](https://github.com/imodeveloperlab/Barbershop)
+
+
+
+
 
 ## Contributions and support
 

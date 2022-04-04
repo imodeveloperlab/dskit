@@ -17,7 +17,7 @@ jobs:
     # See: https://circleci.com/docs/2.0/configuration-reference/#steps
     steps:
       - checkout
-      - run: fastlane scan --project "DSKitExplorer/DSKitExplorer.xcodeproj" --device "iPhone 12"  # Run tests using Fastlane
+      - run: fastlane scan --project "DSKitExplorer/DSKitExplorer.xcodeproj" --device "C502DEDC-8719-4EA7-A60E-991AE9CA1994"  # Run tests using Fastlane
       # Collect XML test results data to show in the UI, and save the same XML
       # files under test-results folder in the Artifacts tab
       - store_test_results:

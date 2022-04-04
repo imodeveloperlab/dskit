@@ -87,7 +87,6 @@ To get you started Design System Kit provides app demonstration code where you c
 
 
 ### E-commerce
-
 <table>
     <tr>
       <td><img src="https://d33wubrfki0l68.cloudfront.net/7fc5a774ae091677f957c45ae14fc2aae34c1523/21740/images/demo/ecommerce/ecommerce-design20.png" class="img-fluid rounded work-image" alt="barber-shop, ui, ux, ios design, design system, apple"></td>
@@ -97,7 +96,7 @@ To get you started Design System Kit provides app demonstration code where you c
     </tr>
 </table>
 
-[View more](https://github.com/imodeveloperlab/E-commerce)
+[GitHub Project](https://github.com/imodeveloperlab/E-commerce) [View more](https://dskit.app/demo-ecommerce)
 
 ### Food Delivery
 
@@ -110,7 +109,7 @@ To get you started Design System Kit provides app demonstration code where you c
     </tr>
 </table>
 
-[View more](https://github.com/imodeveloperlab/Food-Delivery)
+[GitHub Project](https://github.com/imodeveloperlab/Food-Delivery) [View more](https://dskit.app/demo-food-delivery)
 
 ### Flowers Store
 
@@ -123,7 +122,7 @@ To get you started Design System Kit provides app demonstration code where you c
     </tr>
 </table>
 
-[View more](https://github.com/imodeveloperlab/Flower-Store)
+[GitHub Project](https://github.com/imodeveloperlab/Flower-Store) [View more](https://dskit.app/demo-flowersstore)
 
 ### Barbershop
 
@@ -137,9 +136,7 @@ To get you started Design System Kit provides app demonstration code where you c
     </tr>
 </table>
 
-[View more](https://github.com/imodeveloperlab/Barbershop)
-
-
+[GitHub Project](https://github.com/imodeveloperlab/Barbershop) [View more](https://dskit.app/demo-barbershop)
 
 
 

@@ -45,6 +45,10 @@ DSKit will not cover everything, but if it fits your needs it will deliver flawl
 * [Layout](https://dskit.app/layout)
 * [Appearance](https://dskit.app/appearance)
 
+<p align="center">
+   <a href="https://www.youtube.com/watch?v=EeZZqMMsjNw"> <img src="Content/Images/LiveCoding.png" max-width="100%" alt="DSKit"/></a>
+</p>
+
 ## Get Started !
 
 To get started using DSKit you can download this git repo and build and explore the DSKit Explorer app, which will show all available components and guide you on how to get DSKit in your project.

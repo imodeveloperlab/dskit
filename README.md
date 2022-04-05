@@ -79,6 +79,7 @@ To get you started Design System Kit provides app demonstration code where you c
 
 
 ### E-commerce
+[GitHub Project](https://github.com/imodeveloperlab/E-commerce) | [View more](https://dskit.app/demo-ecommerce)
 <table>
     <tr>
       <td><img src="https://d33wubrfki0l68.cloudfront.net/7fc5a774ae091677f957c45ae14fc2aae34c1523/21740/images/demo/ecommerce/ecommerce-design20.png" class="img-fluid rounded work-image" alt="barber-shop, ui, ux, ios design, design system, apple"></td>
@@ -88,10 +89,8 @@ To get you started Design System Kit provides app demonstration code where you c
     </tr>
 </table>
 
-[GitHub Project](https://github.com/imodeveloperlab/E-commerce) | [View more](https://dskit.app/demo-ecommerce)
-
 ### Food Delivery
-
+[GitHub Project](https://github.com/imodeveloperlab/Food-Delivery) | [View more](https://dskit.app/demo-food-delivery)
 <table>
     <tr>
       <td><img src="https://d33wubrfki0l68.cloudfront.net/2af56f1ce489897f343a01168040dab7ad4c3096/0831f/images/demo/fooddelivery/food-delivery16.png" class="img-fluid rounded work-image" alt="barber-shop, ui, ux, ios design, design system, apple"></td>
@@ -101,10 +100,8 @@ To get you started Design System Kit provides app demonstration code where you c
     </tr>
 </table>
 
-[GitHub Project](https://github.com/imodeveloperlab/Food-Delivery) | [View more](https://dskit.app/demo-food-delivery)
-
 ### Flowers Store
-
+[GitHub Project](https://github.com/imodeveloperlab/Flower-Store) | [View more](https://dskit.app/demo-flowersstore)
 <table>
     <tr>
       <td><img src="https://d33wubrfki0l68.cloudfront.net/9b5cd1a44eaff6bc864cb9914672b48825a3e817/e030a/images/demo/flowersstore/flowers-store-design15.png" class="img-fluid rounded work-image" alt="barber-shop, ui, ux, ios design, design system, apple"></td>
@@ -114,11 +111,8 @@ To get you started Design System Kit provides app demonstration code where you c
     </tr>
 </table>
 
-[GitHub Project](https://github.com/imodeveloperlab/Flower-Store) | [View more](https://dskit.app/demo-flowersstore)
-
 ### Barbershop
-
-
+[GitHub Project](https://github.com/imodeveloperlab/Barbershop) | [View more](https://dskit.app/demo-barbershop)
 <table>
     <tr>
       <td><img src="https://d33wubrfki0l68.cloudfront.net/972da119cefb9fdb17e4fa3bb0dc420e6e44eede/6eef7/images/demo/barbershop-dark/barbershop-ios-design1.png" class="img-fluid rounded work-image" alt="barber-shop, ui, ux, ios design, design system, apple"></td>
@@ -127,8 +121,6 @@ To get you started Design System Kit provides app demonstration code where you c
       <td><img src="https://d33wubrfki0l68.cloudfront.net/215b9a3676ddf905127c91f4073748c6640a253a/a7781/images/demo/barbershop-dark/barbershop-ios-design4.png" class="img-fluid rounded work-image" alt="barber-shop, ui, ux, ios design, design system, apple"></td>
     </tr>
 </table>
-
-[GitHub Project](https://github.com/imodeveloperlab/Barbershop) | [View more](https://dskit.app/demo-barbershop)
 
 ## Idea
 
@@ -143,7 +135,6 @@ The second reason is that there are a lot of applications, for online appointmen
 Unlike Material Design, Flutter and other, design systems, that are overwhelmingly complicated, DSKit should be focused on fast delivery, with the most useful and simple components, and a lot of code examples, for different use cases.
 
 DSKit will not, (and should not) cover everything, but if it fits the business requirements it should deliver flawless functionality. It should be the easiest way to make simple iOS applications and business white labels with a great, clean design and pixel-perfect UI.
-
 
 
 ## Contributions and support

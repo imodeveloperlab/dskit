@@ -79,6 +79,7 @@ To get you started Design System Kit provides app demonstration code where you c
 
 
 ### E-commerce
+Over 60 UI/UX Interfaces for E-Commerce Apps
 [GitHub Project](https://github.com/imodeveloperlab/E-commerce) | [View more](https://dskit.app/demo-ecommerce)
 <table>
     <tr>
@@ -90,6 +91,7 @@ To get you started Design System Kit provides app demonstration code where you c
 </table>
 
 ### Food Delivery
+Over 30 UI/UX Interfaces for Food Delivery
 [GitHub Project](https://github.com/imodeveloperlab/Food-Delivery) | [View more](https://dskit.app/demo-food-delivery)
 <table>
     <tr>
@@ -101,6 +103,7 @@ To get you started Design System Kit provides app demonstration code where you c
 </table>
 
 ### Flowers Store
+Over 15 UI/UX Interfaces for Flowers Store Apps
 [GitHub Project](https://github.com/imodeveloperlab/Flower-Store) | [View more](https://dskit.app/demo-flowersstore)
 <table>
     <tr>
@@ -112,6 +115,7 @@ To get you started Design System Kit provides app demonstration code where you c
 </table>
 
 ### Barbershop
+Over 20 UI/UX Interfaces for Barbershop Apps
 [GitHub Project](https://github.com/imodeveloperlab/Barbershop) | [View more](https://dskit.app/demo-barbershop)
 <table>
     <tr>

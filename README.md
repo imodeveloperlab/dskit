@@ -22,6 +22,11 @@ Welcome to **DSKit** a Design System Kit for iOS 13+ is an iOS SDK written in Sw
 
 # Why DSKit?
 
+<p align="center">
+    <img src="Content/Images/ListGridGallery.png" max-width="100%" alt="DSKit"/>
+</p>
+
+
 We can find a lot of design systems that can help you build any app you want. The problem is that they all are overwhelmingly complicated; this means there is a big learning curve from starting a new project to delivering it to the store.
 
 DSKit will not cover everything, but if it fits your needs it will deliver flawless functionality. It’s the easiest way to make simple iOS Applications and business white labels with great design and Pixel Perfect UI.
@@ -33,21 +38,12 @@ DSKit will not cover everything, but if it fits your needs it will deliver flawl
 * Define colors, spacings, fonts, and further you don't care about spaces, layout, dimensions, etc.
 * DSKit will take care of the rest.
 
-<p align="center">
-    <img src="Content/Images/ListGridGallery.png" max-width="100%" alt="DSKit"/>
-</p>
-
-
 ## Ducumentation
 
 * [Code Example](https://dskit.app/home-code-example)
 * [Components](https://dskit.app/components)
 * [Layout](https://dskit.app/layout)
 * [Appearance](https://dskit.app/appearance)
-
-<p align="center">
-   <a href="https://www.youtube.com/watch?v=EeZZqMMsjNw"> <img src="Content/Images/LiveCoding.png" max-width="100%" alt="DSKit"/></a>
-</p>
 
 ## Get Started !
 
@@ -70,6 +66,12 @@ import DSKit
 ```
 
 For more information on how to use the Swift Package Manager, check out [this article](https://www.swiftbysundell.com/articles/managing-dependencies-using-the-swift-package-manager), or [its official documentation](https://swift.org/package-manager).
+
+### Live coding demo
+
+<p align="center">
+   <a href="https://www.youtube.com/watch?v=EeZZqMMsjNw"> <img src="Content/Images/LiveCoding.png" max-width="100%" alt="DSKit"/></a>
+</p>
 
 ## Idea
 

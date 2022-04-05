@@ -41,7 +41,7 @@ DSKit is trying to do everithing simplier, it will not cover everything, but if 
 ## Ducumentation
 
 * [Code Example](https://dskit.app/home-code-example)
-* [Components](https://dskit.app/components)
+* [Documentation](https://dskit.app/components)
 * [Layout](https://dskit.app/layout)
 * [Appearance](https://dskit.app/appearance)
 

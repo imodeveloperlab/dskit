@@ -46,7 +46,7 @@ DSKit will not cover everything, but if it fits your needs it will deliver flawl
 * [Appearance](https://dskit.app/appearance)
 
 <p align="center">
-   <a href="https://www.youtube.com/watch?v=EeZZqMMsjNw"> <img src="Content/Images/LiveCoding_2.png" max-width="100%" alt="DSKit"/></a>
+   <a href="https://www.youtube.com/watch?v=EeZZqMMsjNw"> <img src="Content/Images/LiveCoding.png" max-width="100%" alt="DSKit"/></a>
 </p>
 
 ## Get Started !

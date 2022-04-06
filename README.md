@@ -38,6 +38,24 @@ DSKit is trying to do everithing simplier, it will not cover everything, but if 
 * Define colors, spacings, fonts, and further you don't care about spaces, layout, dimensions, etc.
 * DSKit will take care of the rest.
 
+## Complex things simple
+
+DSKit provides the easiest way to design, build complex and pixel-perfect user interfaces.
+
+Working with DSKit, you will work with three base layout sections List, Grids, and Galleries, each section will manage and display your view models
+
+```swift
+let texts = ["Petrichor", "Sumptuous", "Angst", "Aesthete","Nadir"]
+
+let viewModels = texts.map { (text) -> DSViewModel in
+    DSTextVM(.body, text: text)
+}
+
+show(content: viewModels.list())
+```
+
+[Read more](https://dskit.app/layout). 
+
 ## Ducumentation
 
 * [Code Example](https://dskit.app/home-code-example)

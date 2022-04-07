@@ -92,6 +92,17 @@ For more information on how to use the Swift Package Manager, check out [this ar
 
 To get you started Design System Kit provides app demonstration code where you can see all the possibilities. You can even use this ready-made code for your next project.
 
+### RSS-Feed App Template
+App template for RSS Feeds
+[GitHub Project](https://github.com/imodeveloperlab/RSS-Feed)
+<table>
+  <tr>
+    <td><img src="https://github.com/imodeveloperlab/RSS-Feed/blob/main/Content/Images/2.png"/></td>
+    <td><img src="https://github.com/imodeveloperlab/RSS-Feed/blob/main/Content/Images/6.png"/></td>
+    <td><img src="https://github.com/imodeveloperlab/RSS-Feed/blob/main/Content/Images/3.png"/></td>
+    <td><img src="https://github.com/imodeveloperlab/RSS-Feed/blob/main/Content/Images/5.png"/></td>  
+  <tr>   
+</table>
 
 ### E-commerce
 Over 60 UI/UX Interfaces for E-Commerce Apps
@@ -140,6 +151,8 @@ Over 20 UI/UX Interfaces for Barbershop Apps
       <td><img src="https://d33wubrfki0l68.cloudfront.net/215b9a3676ddf905127c91f4073748c6640a253a/a7781/images/demo/barbershop-dark/barbershop-ios-design4.png" class="img-fluid rounded work-image" alt="barber-shop, ui, ux, ios design, design system, apple"></td>
     </tr>
 </table>
+
+
 
 ## Idea
 

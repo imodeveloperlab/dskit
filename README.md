@@ -56,7 +56,7 @@ show(content: viewModels.list())
 ```
 
 * [Code Example](https://dskit.app/home-code-example)
-* [Custom View Model](dskit/blob/main/Content/CustomViewModels.md)
+* [Custom View Model](https://github.com/imodeveloperlab/dskit/blob/main/Content/CustomViewModels.md)
 * [Documentation](https://dskit.app/components)
 * [Layout](https://dskit.app/layout)
 * [Appearance](https://dskit.app/appearance)

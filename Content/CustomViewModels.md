@@ -10,3 +10,7 @@ The easiest way to create new view models with everything you need to be configu
 It can be installed in two ways:
 1. Manually copy `ViewModel.xctemplate`from `dskit/Templates/ViewModelTemplates` to `Xcode.app/Contents/Developer/Library/Xcode/Templates/File Templates`
 2. Run script from terminal, open `/dskit/Templates/ViewModelTemplates`in terminal and run `sudo sh install.sh`
+
+<p align="center">
+    <img src="Images/XCodeTemplate.png" width="100%" alt="DSKit"/>
+</p>

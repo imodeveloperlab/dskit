@@ -41,6 +41,26 @@ DSKit is trying to do everithing simplier, it will not cover everything, but if 
 * Define colors, spacings, fonts, and further you don't care about spaces, layout, dimensions, etc.
 * DSKit will take care of the rest.
 
+## DSKit Features
+
+**Complex layouts easy:**
+Using Design System Kit, list, grid, and gallery sections you can achieve almost any layout you need for your apps.
+
+**Themes:**
+Design System Kit contains a collection of ready-to-use themes you can choose from for your next app.
+
+**App gallery:**
+You can start your next app by exploring the Design System Kit demo applications, where you can look at the code and copy-paste the desired implementation.
+
+**Component:**
+A collection of simple view models will help you to quickly create new screens.
+
+**Light / Dark mode suppor:**
+Easy to implement Light / Dark mode themes for a great viewing experience in low-light environments.
+
+**Documentation:**
+We put a lot of effort into making the simplest API for your next apps and documenting all the aspects of DSKit API.
+
 ## Ducumentation
 
 DSKit provides the easiest way to design, build complex and pixel-perfect user interfaces.

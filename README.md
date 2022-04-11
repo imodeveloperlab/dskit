@@ -106,6 +106,19 @@ For more information on how to use the Swift Package Manager, check out [this ar
 
 To get you started Design System Kit provides app demonstration code where you can see all the possibilities. You can even use this ready-made code for your next project.
 
+### Shopify App Template
+App template for RSS Feeds
+[GitHub Project](https://github.com/imodeveloperlab/Shopify)
+<table>
+  <tr>
+    <td><img src="https://d33wubrfki0l68.cloudfront.net/603ffd90688eae7f4858fab286665cf4e3a8aa0b/0ef14/images/demo/shopify/shopify-1.png"/></td>
+    <td><img src="https://d33wubrfki0l68.cloudfront.net/971485223b6132c52606ff82e7a102dae6a197fb/00bb0/images/demo/shopify/shopify-2.png"/></td>
+    <td><img src="https://d33wubrfki0l68.cloudfront.net/bdb6c4d4e0e508aa9f4886d373dc701f453dcf27/26a28/images/demo/shopify/shopify-5.png"/></td>
+    <td><img src="https://d33wubrfki0l68.cloudfront.net/3174789f714fcdb788215c87fceb2c47061a936e/9d18b/images/demo/shopify/shopify-9.png"/></td>
+  <tr>   
+</table>
+
+
 ### RSS-Feed App Template
 App template for RSS Feeds
 [GitHub Project](https://github.com/imodeveloperlab/RSS-Feed)

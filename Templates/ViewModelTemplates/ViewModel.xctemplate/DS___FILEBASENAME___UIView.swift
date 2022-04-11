@@ -15,7 +15,7 @@ final class DS___VARIABLE_moduleName___UIView: UIView, DSReusableUIView {
     public var view: UIView { self }
     
     /// Set up with view model is called each time when a copy of
-    /// this uiview is prepared to be displayed on the screen
+    /// this UI View is prepared to be displayed on the screen
     /// - Parameter viewModel: DSViewModel
     public func setUpWith(viewModel: DSViewModel) {
         

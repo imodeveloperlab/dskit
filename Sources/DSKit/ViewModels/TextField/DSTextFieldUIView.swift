@@ -12,7 +12,7 @@ final class DSTextFieldUIView: UIView, DSReusableUIView {
     
     // Textfield components
     @IBOutlet weak var messageLabel: UILabel!
-    @IBOutlet weak var textFiled: UITextField!
+    @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var textFieldHolder: UIView!
     
     // Constraints
@@ -46,14 +46,14 @@ final class DSTextFieldUIView: UIView, DSReusableUIView {
         handleTextFieldValidation()
         
         // Set textfield values
-        textFiled.placeholder = viewModel.placeholder
-        textFiled.text = viewModel.text
-        textFiled.isSecureTextEntry = viewModel.isSecured
+        textField.placeholder = viewModel.placeholder
+        textField.text = viewModel.text
+        textField.isSecureTextEntry = viewModel.isSecured
         
         if viewModel.didTap != nil {
-            textFiled.isUserInteractionEnabled = false
+            textField.isUserInteractionEnabled = false
         } else {
-            textFiled.isUserInteractionEnabled = true
+            textField.isUserInteractionEnabled = true
         }
         
         // Validate
@@ -71,16 +71,17 @@ final class DSTextFieldUIView: UIView, DSReusableUIView {
         textFieldHolder.layer.cornerRadius = colors.cornerRadius
         
         // Textfield colors
-        textFiled.font = appearance.fonts.body.withSize(14)
-        textFiled.textColor = colors.textField.text
-        textFiled.keyboardType = viewModel.keyboardType
-        textFiled.textContentType = viewModel.textContentType
-        textFiled.autocapitalizationType = viewModel.autocapitalizationType
-        textFiled.autocorrectionType = .no
+        textField.font = appearance.fonts.body.withSize(14)
+        textField.textColor = colors.textField.text
+        textField.keyboardType = viewModel.keyboardType
+        textField.textContentType = viewModel.textContentType
+        textField.returnKeyType = viewModel.returnKeyType
+        textField.autocapitalizationType = viewModel.autocapitalizationType
+        textField.autocorrectionType = .no
         
         // Placeholder colors
-        let placeholderText = textFiled.placeholder != nil ? textFiled.placeholder! : viewModel.placeholder
-        textFiled.attributedPlaceholder = NSAttributedString(string: placeholderText,
+        let placeholderText = textField.placeholder != nil ? textField.placeholder! : viewModel.placeholder
+        textField.attributedPlaceholder = NSAttributedString(string: placeholderText,
                                                              attributes: [NSAttributedString.Key.foregroundColor: colors.textField.placeHolder])
         
         // Clear button colors
@@ -107,8 +108,8 @@ final class DSTextFieldUIView: UIView, DSReusableUIView {
                                  tintColor: viewModel.text?.count ?? 0 > 0 ? .text(.headline) : .text(.subheadline),
                                  contentMode: .scaleAspectFit)
             
-            textFiled.leftView = symbol.view(colors).subViewWith(insets: .init(top: 0, left: 0, bottom: 0, right: 8))
-            textFiled.leftViewMode = .always
+            textField.leftView = symbol.view(colors).subViewWith(insets: .init(top: 0, left: 0, bottom: 0, right: 8))
+            textField.leftViewMode = .always
             textFieldLeftSpace.constant = appearance.groupMargins
             
         } else {
@@ -125,7 +126,7 @@ final class DSTextFieldUIView: UIView, DSReusableUIView {
         }
         
         // Update view model text
-        let text = textFiled.text
+        let text = textField.text
         viewModel.text = text
         viewModel.didUpdate?(viewModel)
         
@@ -152,7 +153,7 @@ final class DSTextFieldUIView: UIView, DSReusableUIView {
         // to initiate this textfield validation
         viewModel.validateTextField = {
             
-            let text = self.textFiled.text
+            let text = self.textField.text
             
             // Check is textfield is valid and show proper textfield style
             viewModel.isValid(text: text, validateEmptyTextField: false) { [self] isValid in
@@ -193,7 +194,7 @@ final class DSTextFieldUIView: UIView, DSReusableUIView {
         }
         
         DispatchQueue.main.after(0.5) {
-            viewModel.isValid(text: self.textFiled.text,
+            viewModel.isValid(text: self.textField.text,
                               validateEmptyTextField: viewModel.validateEmptyTextField) { [self] isValid in
                 if !isValid {
                     invalidMessageStyle()
@@ -262,15 +263,15 @@ final class DSTextFieldUIView: UIView, DSReusableUIView {
         button.addTarget(self, action: #selector(clear(_:)), for: .touchUpInside)
         
         // Textfield
-        textFiled.rightView = button.subViewWith(insets: UIEdgeInsets(top: 0, left: 0, bottom: 0, right: appearance.interItemSpacing))
-        textFiled.rightViewMode = .whileEditing
+        textField.rightView = button.subViewWith(insets: UIEdgeInsets(top: 0, left: 0, bottom: 0, right: appearance.interItemSpacing))
+        textField.rightViewMode = .whileEditing
     }
     
     /// Clear action
     /// - Parameter sender: AnyObject
     @objc func clear(_ sender : AnyObject) {
-        textFiled.text = ""
-        textFiled.sendActions(for: .editingChanged)
+        textField.text = ""
+        textField.sendActions(for: .editingChanged)
     }
     
     class func instanceFromNib() -> DSTextFieldUIView {

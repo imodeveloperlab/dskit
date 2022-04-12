@@ -23,8 +23,13 @@ class TextFieldsVC: DSViewController {
         
         // Text fields
         let fullName = DSTextFieldVM(placeholder: "Full Name")
+        fullName.returnKeyType = .next
+        
         let email = DSTextFieldVM(placeholder: "Email")
+        email.returnKeyType = .next
+        
         let password = DSTextFieldVM(placeholder: "Password")
+        password.returnKeyType = .done
         
         // Show
         show(content: fullName, email, password)
@@ -55,8 +60,13 @@ extension TextFieldsVC: Documentable {
         """
         // Text fields
         let fullName = DSTextFieldVM(placeholder: "Full Name")
+        fullName.returnKeyType = .next
+        
         let email = DSTextFieldVM(placeholder: "Email")
+        email.returnKeyType = .next
+        
         let password = DSTextFieldVM(placeholder: "Password")
+        password.returnKeyType = .done
         
         // Show
         show(content: fullName, email, password)

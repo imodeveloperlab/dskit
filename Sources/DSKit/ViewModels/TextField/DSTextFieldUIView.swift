@@ -75,6 +75,7 @@ final class DSTextFieldUIView: UIView, DSReusableUIView {
         textFiled.textColor = colors.textField.text
         textFiled.keyboardType = viewModel.keyboardType
         textFiled.textContentType = viewModel.textContentType
+        textFiled.returnKeyType = viewModel.returnKeyType
         textFiled.autocapitalizationType = viewModel.autocapitalizationType
         textFiled.autocorrectionType = .no
         

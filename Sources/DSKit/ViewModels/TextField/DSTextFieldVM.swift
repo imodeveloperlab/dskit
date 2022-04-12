@@ -57,6 +57,9 @@ public class DSTextFieldVM: DSViewModel, Equatable, Hashable {
     // Text content type
     public var textContentType: UITextContentType? = nil
     
+    // Controls the display of the return key
+    public var returnKeyType: UIReturnKeyType = .default
+    
     // Autocapitalization Type
     public var autocapitalizationType: UITextAutocapitalizationType = .none
     
@@ -98,6 +101,7 @@ public class DSTextFieldVM: DSViewModel, Equatable, Hashable {
             lhs.type == rhs.type &&
             lhs.keyboardType == rhs.keyboardType &&
             lhs.textContentType == rhs.textContentType &&
+            lhs.returnKeyType == rhs.returnKeyType &&
             lhs._didTap == rhs._didTap &&
             lhs._didUpdate == rhs._didUpdate &&
             lhs._handleValidation == rhs._handleValidation
@@ -109,6 +113,7 @@ public class DSTextFieldVM: DSViewModel, Equatable, Hashable {
         hasher.combine(text)
         hasher.combine(keyboardType)
         hasher.combine(textContentType)
+        hasher.combine(returnKeyType)
         hasher.combine(accessibilityIdentifier)
         hasher.combine(errorPlaceHolderText)
         hasher.combine(validateMinimumLength)

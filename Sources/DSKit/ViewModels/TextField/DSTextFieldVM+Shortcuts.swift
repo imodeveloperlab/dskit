@@ -1,5 +1,5 @@
 //
-//  DSTextFiledVM+Shortcuts.swift
+//  DSTextFieldVM+Shortcuts.swift
 //  DSKit
 //
 //  Created by Borinschi Ivan on 04.02.2021.

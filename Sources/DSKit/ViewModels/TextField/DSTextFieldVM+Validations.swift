@@ -1,5 +1,5 @@
 //
-//  DSTextFiledVM+Validations.swift
+//  DSTextFieldVM+Validations.swift
 //  DSKit
 //
 //  Created by Borinschi Ivan on 04.02.2021.

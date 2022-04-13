@@ -128,7 +128,7 @@ App template for RSS Feeds
     <td><img src="https://github.com/imodeveloperlab/RSS-Feed/blob/main/Content/Images/6.png"/></td>
     <td><img src="https://github.com/imodeveloperlab/RSS-Feed/blob/main/Content/Images/3.png"/></td>
     <td><img src="https://github.com/imodeveloperlab/RSS-Feed/blob/main/Content/Images/5.png"/></td>  
-  <tr>   
+  </tr>   
 </table>
 
 ### E-commerce

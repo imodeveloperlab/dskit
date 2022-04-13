@@ -45,6 +45,7 @@ public class DSSegmentVM: DSViewModel, Equatable, Hashable {
     
     public static func == (lhs: DSSegmentVM, rhs: DSSegmentVM) -> Bool {
         return lhs.segments == rhs.segments &&
+            lhs.selectedSegmentIndex == rhs.selectedSegmentIndex &&
             lhs.insets == rhs.insets &&
             lhs.type == rhs.type &&
             lhs.accessibilityIdentifier == rhs.accessibilityIdentifier &&

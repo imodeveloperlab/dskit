@@ -19,7 +19,7 @@
 </p>
 
 
-Welcome to **DSKit** a Design System Kit for iOS 13+ is an iOS SDK written in Swift with a collection of reusable components, guided by clear standards, that can be assembled to build any number of applications.
+Welcome to **DSKit** a Design System for iOS 13+ is an iOS SDK written in Swift with a collection of reusable components, guided by clear standards, that can be assembled to build any number of applications.
 
 
 
@@ -115,7 +115,7 @@ App template for Shopify Store
     <td><img src="https://d33wubrfki0l68.cloudfront.net/971485223b6132c52606ff82e7a102dae6a197fb/00bb0/images/demo/shopify/shopify-2.png"/></td>
     <td><img src="https://d33wubrfki0l68.cloudfront.net/bdb6c4d4e0e508aa9f4886d373dc701f453dcf27/26a28/images/demo/shopify/shopify-5.png"/></td>
     <td><img src="https://d33wubrfki0l68.cloudfront.net/3174789f714fcdb788215c87fceb2c47061a936e/9d18b/images/demo/shopify/shopify-9.png"/></td>
-  <tr>   
+  </tr>   
 </table>
 
 

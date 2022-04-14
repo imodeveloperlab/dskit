@@ -19,7 +19,7 @@
 </p>
 
 
-Welcome to **DSKit** a Design System Kit for iOS 13+ is an iOS SDK written in Swift with a collection of reusable components, guided by clear standards, that can be assembled to build any number of applications.
+Welcome to **DSKit** a Design System for iOS 13+ is an iOS SDK written in Swift with a collection of reusable components, guided by clear standards, that can be assembled to build any number of applications.
 
 
 
@@ -58,16 +58,6 @@ DSKit provides the easiest way to design, build complex and pixel-perfect user i
 
 Working with DSKit, you will work with three base layout sections List, Grids, and Galleries, each section will manage and display your view models.
 
-```swift
-let texts = ["Petrichor", "Sumptuous", "Angst", "Aesthete","Nadir"]
-
-let viewModels = texts.map { (text) -> DSViewModel in
-    DSTextVM(.body, text: text)
-}
-
-show(content: viewModels.list())
-```
-
 * [Code Example](https://dskit.app/home-code-example)
 * [Documentation](https://dskit.app/components)
 * [Layout](https://dskit.app/layout)
@@ -76,7 +66,7 @@ show(content: viewModels.list())
 
 ## Get Started !
 
-To get started using DSKit you can download this git repo and build and explore the DSKit Explorer app, which will show all available components and guide you on how to get DSKit in your project.
+To get started using DSKit you can download this git repo and build and explore the **DSKit Explorer app**, which will show all available components and guide you on how to get DSKit in your project.
 
 <p align="center">
     <img src="Content/Images/Project.png" max-width="100%" alt="DSKit"/>
@@ -92,6 +82,28 @@ Then import DSKit wherever you’d like to use it:
 
 ```swift
 import DSKit
+```
+
+Extend your view controller from DSViewController 
+
+```swift 
+open class ViewController: DSViewController {
+```
+
+and here you have a small exaple of using DSKit
+
+```swift
+open override func viewDidLoad() {    
+    super.viewDidLoad()
+
+    let texts = ["Hello", "World", "To", "DSKit"]
+
+    let viewModels = texts.map { (text) -> DSViewModel in
+        DSTextVM(.body, text: text)
+    }
+
+    show(content: viewModels.list())
+}
 ```
 
 For more information on how to use the Swift Package Manager, check out [this article](https://www.swiftbysundell.com/articles/managing-dependencies-using-the-swift-package-manager), or [its official documentation](https://swift.org/package-manager).
@@ -115,7 +127,7 @@ App template for Shopify Store
     <td><img src="https://d33wubrfki0l68.cloudfront.net/971485223b6132c52606ff82e7a102dae6a197fb/00bb0/images/demo/shopify/shopify-2.png"/></td>
     <td><img src="https://d33wubrfki0l68.cloudfront.net/bdb6c4d4e0e508aa9f4886d373dc701f453dcf27/26a28/images/demo/shopify/shopify-5.png"/></td>
     <td><img src="https://d33wubrfki0l68.cloudfront.net/3174789f714fcdb788215c87fceb2c47061a936e/9d18b/images/demo/shopify/shopify-9.png"/></td>
-  <tr>   
+  </tr>   
 </table>
 
 
@@ -128,7 +140,7 @@ App template for RSS Feeds
     <td><img src="https://github.com/imodeveloperlab/RSS-Feed/blob/main/Content/Images/6.png"/></td>
     <td><img src="https://github.com/imodeveloperlab/RSS-Feed/blob/main/Content/Images/3.png"/></td>
     <td><img src="https://github.com/imodeveloperlab/RSS-Feed/blob/main/Content/Images/5.png"/></td>  
-  <tr>   
+  </tr>   
 </table>
 
 ### E-commerce

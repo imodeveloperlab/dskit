@@ -66,7 +66,7 @@ Working with DSKit, you will work with three base layout sections List, Grids, a
 
 ## Get Started !
 
-To get started using DSKit you can download this git repo and build and explore the DSKit Explorer app, which will show all available components and guide you on how to get DSKit in your project.
+To get started using DSKit you can download this git repo and build and explore the **DSKit Explorer app**, which will show all available components and guide you on how to get DSKit in your project.
 
 <p align="center">
     <img src="Content/Images/Project.png" max-width="100%" alt="DSKit"/>

@@ -39,8 +39,16 @@ public class DSTextFieldVM: DSViewModel, Equatable, Hashable {
     // Accessibility identifier
     public var accessibilityIdentifier: String = "TextField"
     
+    // Style of the border
+    public var borderStyle: DSViewModelBorderStyle = .none
+    
     /// Style
-    public var style: DSViewModelStyle = DSViewModelStyle()
+    public var style: DSViewModelStyle = DSViewModelStyle() {
+        didSet {
+            borderStyle = style.borderStyle
+            style.borderStyle = .none
+        }
+    }
     
     // Show an message when user type non valid text in textfield
     public var errorPlaceHolderText: String?

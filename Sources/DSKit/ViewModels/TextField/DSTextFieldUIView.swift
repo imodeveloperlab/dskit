@@ -69,6 +69,7 @@ final class DSTextFieldUIView: UIView, DSReusableUIView {
         // Textfield holder
         textFieldHolder.backgroundColor = colors.textField.background
         textFieldHolder.layer.cornerRadius = colors.cornerRadius
+        updateTextFieldHolderBorder()
         
         // Textfield colors
         textField.font = appearance.fonts.body.withSize(14)
@@ -169,14 +170,25 @@ final class DSTextFieldUIView: UIView, DSReusableUIView {
     
     /// Textfield valid style
     func validStyle() {
-        textFieldHolder.layer.borderWidth = 0
-        textFieldHolder.layer.borderColor = UIColor.clear.cgColor
+        updateTextFieldHolderBorder()
     }
     
     /// Textfield invalid style
     @objc func invalidStyle() {
-        textFieldHolder.layer.borderWidth = 1.0
-        textFieldHolder.layer.borderColor = UIColor.systemRed.cgColor
+        updateTextFieldHolderBorder(customColor: UIColor.systemRed)
+    }
+    
+    func updateTextFieldHolderBorder(customColor: UIColor? = nil) {
+        guard let viewModel = viewModel else {
+            return
+        }
+        
+        textFieldHolder.configureBorder(viewModel.borderStyle, viewColors: viewModel.viewColors())
+        
+        if let customColor = customColor {
+            textFieldHolder.layer.borderWidth = max(textFieldHolder.layer.borderWidth, 1.0)
+            textFieldHolder.layer.borderColor = customColor.cgColor
+        }
     }
     
     /// Hide invalid message

@@ -58,16 +58,6 @@ DSKit provides the easiest way to design, build complex and pixel-perfect user i
 
 Working with DSKit, you will work with three base layout sections List, Grids, and Galleries, each section will manage and display your view models.
 
-```swift
-let texts = ["Petrichor", "Sumptuous", "Angst", "Aesthete","Nadir"]
-
-let viewModels = texts.map { (text) -> DSViewModel in
-    DSTextVM(.body, text: text)
-}
-
-show(content: viewModels.list())
-```
-
 * [Code Example](https://dskit.app/home-code-example)
 * [Documentation](https://dskit.app/components)
 * [Layout](https://dskit.app/layout)
@@ -92,6 +82,28 @@ Then import DSKit wherever you’d like to use it:
 
 ```swift
 import DSKit
+```
+
+Extend your view controller from DSViewController 
+
+```swift 
+open class ViewController: DSViewController {
+```
+
+and here you have a small exaple of using DSKit
+
+```swift
+open override func viewDidLoad() {    
+    super.viewDidLoad()
+
+    let texts = ["Hello", "World", "To", "DSKit"]
+
+    let viewModels = texts.map { (text) -> DSViewModel in
+        DSTextVM(.body, text: text)
+    }
+
+    show(content: viewModels.list())
+}
 ```
 
 For more information on how to use the Swift Package Manager, check out [this article](https://www.swiftbysundell.com/articles/managing-dependencies-using-the-swift-package-manager), or [its official documentation](https://swift.org/package-manager).

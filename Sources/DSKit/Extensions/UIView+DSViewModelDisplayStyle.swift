@@ -43,20 +43,7 @@ extension UIView {
         }
         
         // Border style
-        switch model.style.borderStyle {
-        case .none:
-            layer.borderWidth = 0
-            layer.borderColor = UIColor.clear.cgColor
-        case .buttonColor:
-            layer.borderWidth = 2.0
-            layer.borderColor = model.viewColors().button.background.cgColor
-        case .brandColor:
-            layer.borderWidth = 2.0
-            layer.borderColor = DSAppearance.shared.main.brandColor.cgColor
-        case .custom(width: let width, color: let color):
-            layer.borderWidth = width
-            layer.borderColor = color.cgColor
-        }
+        configureBorder(model.style.borderStyle, viewColors: model.viewColors())
         
         // Shadow style
         switch model.style.shadowStyle {

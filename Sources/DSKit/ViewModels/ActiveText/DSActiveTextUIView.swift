@@ -88,6 +88,9 @@ final class DSActiveTextUIView: UIView, DSReusableUIView {
             viewModel.didTapOnPhone?(phone)
         }
         
+        textView.highlightFontName = viewModel.linksFont?.getFont().fontName
+        textView.highlightFontSize = viewModel.linksFont?.getFont().pointSize
+        
         addLinksToText(viewModel: viewModel)
     }
     

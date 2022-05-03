@@ -43,8 +43,6 @@ class TypographyActiveTextVC: DSViewController {
             self.show(message: "Did tap on mention: @\(mention)")
         }
         
-        activeText.linksFont = .headline
-        
         show(content: activeText)
         
         // Demo end
@@ -87,8 +85,6 @@ extension TypographyActiveTextVC: Documentable {
         activeText.didTapOnMention = { mention in
             self.show(message: "Did tap on mention: @\\(mention)")
         }
-        
-        activeText.linksFont = .headline
 
         show(content: activeText)
         """

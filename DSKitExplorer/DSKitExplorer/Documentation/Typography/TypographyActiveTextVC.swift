@@ -24,7 +24,6 @@ class TypographyActiveTextVC: DSViewController {
         // Demo begin
         
         var activeText = DSActiveTextVM(.body, text: "An astronomical term that's been coopted for colloquial #usage, nadir means the lowest point, as in the \"nadir of her popularity.\" Its @opposite term, noreply@dskit.com zenith, has a similar appeal.")
-        
         activeText.links = ["astronomical": "https://dskit.app"]
         
         activeText.didTapOnHashTag = { tag in
@@ -43,7 +42,16 @@ class TypographyActiveTextVC: DSViewController {
             self.show(message: "Did tap on mention: @\(mention)")
         }
         
-        show(content: activeText)
+        var activeText2 = DSActiveTextVM(.body, text: "By creating your account you agree to our Terms of Use and Privacy Policy.")
+        activeText2.links = ["Terms of Use": "https://dskit.app", "Privacy Policy": "https://dskit.app"]
+        activeText2.linksFont = .headline
+        activeText2.alignment = .center
+
+        activeText2.didTapOnUrl = { url in
+            self.show(message: "Did tap on url:\(url.absoluteString)")
+        }
+
+        show(content: activeText, activeText2)
         
         // Demo end
     }
@@ -67,7 +75,6 @@ extension TypographyActiveTextVC: Documentable {
     var documentCode: String {
         """
         var activeText = DSActiveTextVM(.body, text: "An astronomical term that's been coopted for colloquial #usage, nadir means the lowest point, as in the \"nadir of her popularity.\" Its @opposite term, noreply@dskit.com zenith, has a similar appeal.")
-
         activeText.links = ["astronomical": "https://dskit.app"]
 
         activeText.didTapOnHashTag = { tag in
@@ -86,7 +93,16 @@ extension TypographyActiveTextVC: Documentable {
             self.show(message: "Did tap on mention: @\\(mention)")
         }
 
-        show(content: activeText)
+        var activeText2 = DSActiveTextVM(.body, text: "By creating your account you agree to our Terms of Use and Privacy Policy.")
+        activeText2.links = ["Terms of Use": "https://dskit.app", "Privacy Policy": "https://dskit.app"]
+        activeText2.linksFont = .headline
+        activeText2.alignment = .center
+
+        activeText2.didTapOnUrl = { url in
+            self.show(message: "Did tap on url:\\(url.absoluteString)")
+        }
+
+        show(content: activeText, activeText2)
         """
     }
     

@@ -16,7 +16,7 @@ let package = Package(
     dependencies: [
         // Dependencies declare other packages that this package depends on.
         .package(url: "https://github.com/robb/Cartography", from: "4.0.0"),
-        .package(url: "https://github.com/optonaut/ActiveLabel.swift", from: "1.1.5"),
+        .package(url: "https://github.com/imodeveloperlab/ActiveLabel.swift", from: "1.1.7"),
         .package(url: "https://github.com/onevcat/Kingfisher", from: "7.1.2"),
         .package(url: "https://github.com/vadymmarkov/Fakery", from: "5.1.0"),
         .package(url: "https://github.com/airbnb/HorizonCalendar.git", from: "1.13.3"),

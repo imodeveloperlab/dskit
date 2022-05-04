@@ -23,6 +23,10 @@ public struct DSActiveTextVM: DSViewModel, Equatable, Hashable {
     // Links to be displayed in text
     public var links = [String: String]()
     
+    // Font of the links
+    // Changes only the font of the links
+    public var linksFont: DSTextFont?
+    
     // Text height, default is nil and will be dynamically calculated
     public var height: DSViewModelHeight?
     

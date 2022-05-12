@@ -59,7 +59,6 @@
             <connections>
                 <outlet property="messageLabel" destination="wNQ-D5-kZ9" id="6bN-wE-pZI"/>
                 <outlet property="textField" destination="lCU-CR-E8Y" id="sIF-RR-2ZE"/>
-                <outlet property="textFieldBottomSpace" destination="SMN-cu-wf8" id="nMp-Hb-Cru"/>
                 <outlet property="textFieldHolder" destination="slI-iz-GfW" id="cUV-U5-u2P"/>
                 <outlet property="textFieldLeftSpace" destination="ntS-v2-aRP" id="5S1-CH-kSp"/>
             </connections>

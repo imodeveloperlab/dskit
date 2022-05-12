@@ -11,6 +11,8 @@ import UIKit
 final class DSTextFieldUIView: UIView, DSReusableUIView {
     
     // Textfield components
+    @IBOutlet weak var messageLabelContainerView: UIView!
+    @IBOutlet weak var messageLabelGradientView: UIView!
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var textFieldHolder: UIView!
@@ -19,6 +21,14 @@ final class DSTextFieldUIView: UIView, DSReusableUIView {
     @IBOutlet weak var textFieldLeftSpace: NSLayoutConstraint!
     
     private var showHideButton: UIButton?
+    
+    private lazy var messageLabelGradient: CAGradientLayer = {
+        let gradient = CAGradientLayer()
+        gradient.startPoint = CGPoint(x: 0, y: 0.5)
+        gradient.endPoint = CGPoint(x: 1, y: 0.5)
+        
+        return gradient
+    }()
     
     // View model
     var viewModel: DSTextFieldVM?
@@ -95,6 +105,10 @@ final class DSTextFieldUIView: UIView, DSReusableUIView {
         
         // Update left view
         updateLeftView()
+        
+        // Message label colors
+        messageLabelContainerView.backgroundColor = colors.textField.background
+        messageLabelGradient.colors = [colors.textField.background.withAlphaComponent(0.0).cgColor, colors.textField.background.withAlphaComponent(1.0).cgColor]
     }
     
     func updateLeftView() {
@@ -198,7 +212,7 @@ final class DSTextFieldUIView: UIView, DSReusableUIView {
     /// Hide invalid message
     func hideInvalidMessage() {
         UIView.animate(withDuration: 0.4) {
-            self.messageLabel.alpha = 0.0
+            self.messageLabelContainerView.alpha = 0.0
         }
     }
     
@@ -235,7 +249,7 @@ final class DSTextFieldUIView: UIView, DSReusableUIView {
             messageLabel.font = appearance.fonts.caption2.withSize(14)
             
             UIView.animate(withDuration: 0.4) {
-                self.messageLabel.alpha = 1.0
+                self.messageLabelContainerView.alpha = 1.0
             }
         }
         
@@ -255,9 +269,19 @@ final class DSTextFieldUIView: UIView, DSReusableUIView {
         updateLeftView()
     }
     
+    @IBAction func messageLabelContainerViewTapped(_ sender: Any) {
+        textField.becomeFirstResponder()
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         backgroundColor = .clear
+        messageLabelGradientView.layer.addSublayer(messageLabelGradient)
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        messageLabelGradient.frame = messageLabelGradientView.bounds
     }
     
     /// Set show/hide button image and color

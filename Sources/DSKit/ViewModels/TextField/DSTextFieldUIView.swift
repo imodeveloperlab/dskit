@@ -33,6 +33,8 @@ final class DSTextFieldUIView: UIView, DSReusableUIView {
         guard let viewModel = viewModel as? DSTextFieldVM else {
             return
         }
+        viewModel.textField = textField
+        
         self.viewModel = viewModel
         update(viewModel: viewModel)
         updateLayout(viewModel: viewModel)
@@ -289,5 +291,16 @@ final class DSTextFieldUIView: UIView, DSReusableUIView {
     class func instanceFromNib() -> DSTextFieldUIView {
         let view: DSTextFieldUIView = initFromNib()
         return view
+    }
+}
+
+// MARK: - UITextFieldDelegate
+extension DSTextFieldUIView: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        guard let viewModel = viewModel else {
+            return true
+        }
+        
+        return viewModel.shouldReturn?(viewModel) ?? true
     }
 }

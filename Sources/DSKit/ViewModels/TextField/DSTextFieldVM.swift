@@ -15,6 +15,8 @@ public class DSTextFieldVM: DSViewModel, Equatable, Hashable {
     public var placeholder: String
     public var text: String?
     
+    internal weak var textField: UITextField?
+    
     // Validator
     let validator = DSStringValidator()
     
@@ -83,11 +85,28 @@ public class DSTextFieldVM: DSViewModel, Equatable, Hashable {
     // Textfield type
     public var type: TextFieldViewModelType = .default
     
+    // First responder
+    public var isFirstResponder: Bool {
+        get {
+            return textField?.isFirstResponder ?? false
+        }
+        set {
+            if newValue {
+                textField?.becomeFirstResponder()
+            } else {
+                textField?.resignFirstResponder()
+            }
+        }
+    }
+    
     // Handle did tap
     @NonEquatable public var didTap: ((DSViewModel) -> Void)?
     
     // Handle did update
     @NonEquatable public var didUpdate: ((DSTextFieldVM) -> Void)?
+    
+    // Handle 'return' key press. Return 'false' to ignore.
+    @NonEquatable public var shouldReturn: ((DSTextFieldVM) -> Bool)?
     
     // Handle validation
     @NonEquatable public var handleValidation: ((String?) -> Bool)?

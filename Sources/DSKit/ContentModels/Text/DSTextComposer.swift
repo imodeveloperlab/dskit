@@ -32,7 +32,7 @@ public class DSTextComposer: Equatable, Hashable {
     }
 }
 
-extension DSTextComposer {
+public extension DSTextComposer {
     
     /// Estimated height for text in section
     /// - Parameters:

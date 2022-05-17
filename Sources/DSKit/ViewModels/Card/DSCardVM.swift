@@ -29,6 +29,7 @@ public struct DSCardVM: DSViewModel, Equatable, Hashable {
     public var gradientBottomColor: UIColor = .clear
     public var decorationImage: UIImage? = nil
     public var height: DSViewModelHeight?
+    public var width: DSViewModelWidth?
     
     public init(composer: DSTextComposer,
                 textPosition: DSCardTextPosition = .bottom,
@@ -74,6 +75,10 @@ public extension DSCardVM {
     
     func height(_ layoutEnvironment: NSCollectionLayoutEnvironment?, section: DSSection) -> DSViewModelHeight {
         return height ?? .absolute(200)
+    }
+    
+    func width(_ layoutEnvironment: NSCollectionLayoutEnvironment?, section: DSSection) -> DSViewModelWidth {
+        return width ?? .fractional(1.0)
     }
     
     func viewRepresentation() -> DSReusableUIView {

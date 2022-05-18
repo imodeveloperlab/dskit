@@ -63,7 +63,9 @@ final class DSPageControlUIView: UIView, DSReusableUIView {
             // optional: cancel task
             updatePageTask?.cancel()
 
-            updatePageTask = DispatchWorkItem {
+            updatePageTask = DispatchWorkItem { [weak self] in
+                
+                guard let self = self else { return }
 
                 guard let itemsWidth = items.first?.bounds.width else {
                     return
@@ -71,8 +73,8 @@ final class DSPageControlUIView: UIView, DSReusableUIView {
 
                 let page = Int((position.x + (itemsWidth / 2)) / itemsWidth)
 
-                if pageControl.currentPage != page {
-                    pageControl.currentPage = page
+                if self.pageControl.currentPage != page {
+                    self.pageControl.currentPage = page
                 }
             }
 

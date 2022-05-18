@@ -28,7 +28,11 @@ let package = Package(
             name: "DSKit",
             dependencies: ["Cartography",
                            "Kingfisher",
-                            .product(name: "ActiveLabel", package: "ActiveLabel.swift")]
+                            .product(name: "ActiveLabel", package: "ActiveLabel.swift")],
+            resources: [
+                  .process("Appearance/Fonts/Noteworthy.plist"),
+                  .process("Appearance/Fonts/HoeflerText.plist")
+            ]
         ),
         .target(
             name: "DSKitFakery",

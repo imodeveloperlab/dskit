@@ -31,6 +31,24 @@ class TextFieldsVC: DSViewController {
         let password = DSTextFieldVM(placeholder: "Password")
         password.returnKeyType = .done
         
+        fullName.shouldReturn = { _ in
+            email.isFirstResponder = true
+            
+            return true
+        }
+        
+        email.shouldReturn = { _ in
+            password.isFirstResponder = true
+            
+            return true
+        }
+        
+        password.shouldReturn = { textFieldVM in
+            textFieldVM.isFirstResponder = false
+            
+            return true
+        }
+        
         // Show
         show(content: fullName, email, password)
         
@@ -67,6 +85,24 @@ extension TextFieldsVC: Documentable {
         
         let password = DSTextFieldVM(placeholder: "Password")
         password.returnKeyType = .done
+        
+        fullName.shouldReturn = { _ in
+            email.isFirstResponder = true
+            
+            return true
+        }
+        
+        email.shouldReturn = { _ in
+            password.isFirstResponder = true
+            
+            return true
+        }
+        
+        password.shouldReturn = { textFieldVM in
+            textFieldVM.isFirstResponder = false
+            
+            return true
+        }
         
         // Show
         show(content: fullName, email, password)

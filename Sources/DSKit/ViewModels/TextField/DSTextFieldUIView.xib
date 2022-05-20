@@ -25,6 +25,7 @@
                                 <action selector="editingBegin:" destination="iN0-l3-epB" eventType="editingDidBegin" id="UQQ-UR-CYs"/>
                                 <action selector="editingChange:" destination="iN0-l3-epB" eventType="editingChanged" id="TRL-7l-8p6"/>
                                 <action selector="editingEnd:" destination="iN0-l3-epB" eventType="editingDidEnd" id="NOH-aQ-r4c"/>
+                                <outlet property="delegate" destination="iN0-l3-epB" id="Siy-Sp-CGW"/>
                             </connections>
                         </textField>
                         <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wNQ-D5-kZ9">

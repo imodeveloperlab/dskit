@@ -361,7 +361,7 @@ open class ImoUIButton: UIView {
         }
         
         button.titleLabel?.adjustsFontSizeToFitWidth = true
-        button.layer.cornerRadius = appearance.primaryView.cornerRadius
+        button.layer.cornerRadius = model.viewColors().cornerRadius
         
         if button.frame.height / 2 < button.layer.cornerRadius {
             button.layer.cornerRadius = button.frame.height / 2

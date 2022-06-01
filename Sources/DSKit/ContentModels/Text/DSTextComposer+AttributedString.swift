@@ -90,7 +90,7 @@ extension DSTextComposer {
                 
                 let config = DSSFSymbolConfig.symbolConfig(style: style)
                 
-                guard let image = UIImage(systemName: name, withConfiguration: config) else {
+                guard let image = UIImage.symbolImage(with: name, configuration: config) else {
                     continue
                 }
                 
@@ -107,7 +107,7 @@ extension DSTextComposer {
                 
                 for name in names {
                     
-                    guard let image = UIImage(systemName: name, withConfiguration: config) else {
+                    guard let image = UIImage.symbolImage(with: name, configuration: config) else {
                         continue
                     }
                     

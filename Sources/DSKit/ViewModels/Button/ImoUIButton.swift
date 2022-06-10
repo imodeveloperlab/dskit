@@ -344,6 +344,10 @@ open class ImoUIButton: UIView {
             button.titleLabel?.font = appearance.fonts.headline.withSize(15)
         }
         
+        if let customFont = model.customFont {
+            button.titleLabel?.font = customFont.getFont()
+        }
+        
         button.titleLabel?.numberOfLines = 0
         button.titleLabel?.textAlignment = model.textAlignment
         button.isEnabled = model.isEnabled

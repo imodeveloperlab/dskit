@@ -22,6 +22,7 @@ public struct DSButtonVM: DSViewModel, Equatable, Hashable {
     public var icon: UIImage?
     public var imagePosition: DSButtonVMImagePosition = .left
     public var isEnabled: Bool = true
+    public var customFont: DSTextFont?
     
     /// Init button view model
     /// - Parameters:

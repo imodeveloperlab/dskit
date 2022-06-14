@@ -374,50 +374,54 @@ open class ImoUIButton: UIView {
             let spacing: CGFloat = imageTitlePadding / 2
             let isRTL = UIApplication.shared.isRTL
             
-            button.contentEdgeInsets = UIEdgeInsets(top: 2, left: appearance.margins + spacing, bottom: 2, right: appearance.margins + spacing)
-            
-            // Image position
-            switch model.imagePosition {
-            case .left:
-                button.moveImageEdgeInset(by: isRTL ? spacing : -spacing)
-                button.moveTitleEdgeInset(by: isRTL ? -spacing : spacing)
+            if model.text == nil {
+                button.contentEdgeInsets = UIEdgeInsets(top: 2, left: 2, bottom: 2, right: 2)
+            } else {
+                button.contentEdgeInsets = UIEdgeInsets(top: 2, left: appearance.margins + spacing, bottom: 2, right: appearance.margins + spacing)
                 
-            case .right:
-                button.moveImageEdgeInset(by: isRTL ? (-titleWidth - spacing) : (titleWidth + spacing))
-                button.moveTitleEdgeInset(by: isRTL ? (imageWidth + spacing) : (-imageWidth - spacing))
-                
-            case .rightMargin:
-                let additionalSpace = buttonWidth - (2 * appearance.margins) - imageTitlePadding - imageWidth - titleWidth
-                
-                switch model.textAlignment {
-                case .left:
-                    button.moveImageEdgeInset(by: isRTL ? (-titleWidth - spacing) : (titleWidth + spacing + additionalSpace))
-                    button.moveTitleEdgeInset(by: isRTL ? (imageWidth + spacing) : (-imageWidth - spacing))
-                    
-                case .right:
-                    button.moveImageEdgeInset(by: isRTL ? (-titleWidth - spacing - additionalSpace) : (titleWidth + spacing))
-                    button.moveTitleEdgeInset(by: isRTL ? (imageWidth + spacing) : (-imageWidth - spacing))
-                    
-                default:
-                    button.moveImageEdgeInset(by: isRTL ? (-titleWidth - (additionalSpace / 2) - spacing) : (titleWidth + additionalSpace / 2 + spacing))
-                    button.moveTitleEdgeInset(by: isRTL ? (imageWidth / 2) : -(imageWidth / 2))
-                }
-                
-            case .leftMargin:
-                let additionalSpace = buttonWidth - (2 * appearance.margins) - imageTitlePadding - imageWidth - titleWidth
-                
-                switch model.textAlignment {
+                // Image position
+                switch model.imagePosition {
                 case .left:
                     button.moveImageEdgeInset(by: isRTL ? spacing : -spacing)
                     button.moveTitleEdgeInset(by: isRTL ? -spacing : spacing)
-                
+                    
                 case .right:
-                    button.moveImageEdgeInset(by: isRTL ? spacing : (-additionalSpace - spacing))
-                    button.moveTitleEdgeInset(by: isRTL ? -spacing : spacing)
-                
-                default:
-                    button.moveImageEdgeInset(by: isRTL ? (additionalSpace / 2 + spacing) : -(additionalSpace / 2) - spacing)
-                    button.moveTitleEdgeInset(by: isRTL ? imageWidth / 2 : -(imageWidth / 2))
+                    button.moveImageEdgeInset(by: isRTL ? (-titleWidth - spacing) : (titleWidth + spacing))
+                    button.moveTitleEdgeInset(by: isRTL ? (imageWidth + spacing) : (-imageWidth - spacing))
+                    
+                case .rightMargin:
+                    let additionalSpace = buttonWidth - (2 * appearance.margins) - imageTitlePadding - imageWidth - titleWidth
+                    
+                    switch model.textAlignment {
+                    case .left:
+                        button.moveImageEdgeInset(by: isRTL ? (-titleWidth - spacing) : (titleWidth + spacing + additionalSpace))
+                        button.moveTitleEdgeInset(by: isRTL ? (imageWidth + spacing) : (-imageWidth - spacing))
+                        
+                    case .right:
+                        button.moveImageEdgeInset(by: isRTL ? (-titleWidth - spacing - additionalSpace) : (titleWidth + spacing))
+                        button.moveTitleEdgeInset(by: isRTL ? (imageWidth + spacing) : (-imageWidth - spacing))
+                        
+                    default:
+                        button.moveImageEdgeInset(by: isRTL ? (-titleWidth - (additionalSpace / 2) - spacing) : (titleWidth + additionalSpace / 2 + spacing))
+                        button.moveTitleEdgeInset(by: isRTL ? (imageWidth / 2) : -(imageWidth / 2))
+                    }
+                    
+                case .leftMargin:
+                    let additionalSpace = buttonWidth - (2 * appearance.margins) - imageTitlePadding - imageWidth - titleWidth
+                    
+                    switch model.textAlignment {
+                    case .left:
+                        button.moveImageEdgeInset(by: isRTL ? spacing : -spacing)
+                        button.moveTitleEdgeInset(by: isRTL ? -spacing : spacing)
+                    
+                    case .right:
+                        button.moveImageEdgeInset(by: isRTL ? spacing : (-additionalSpace - spacing))
+                        button.moveTitleEdgeInset(by: isRTL ? -spacing : spacing)
+                    
+                    default:
+                        button.moveImageEdgeInset(by: isRTL ? (additionalSpace / 2 + spacing) : -(additionalSpace / 2) - spacing)
+                        button.moveTitleEdgeInset(by: isRTL ? imageWidth / 2 : -(imageWidth / 2))
+                    }
                 }
             }
         }

@@ -15,11 +15,15 @@ public extension UIDevice {
     
     enum ScreenType: String {
         case iPhone4
-        case iPhone5
-        case iPhone6
-        case iPhone6Plus
-        case iPhoneX
+        case iPhone5_SE
+        case iPhone6_7_8_SE2
+        case iPhone6Plus_7Plus_8Plus
+        case iPhoneX_XS_11Pro
         case iPhoneXR_11
+        case iPhoneXSMax_11ProMax
+        case iPhone12_12Pro_13_13Pro
+        case iPhone12ProMax_13ProMax
+        case iPhone12Mini_13Mini
         case unknown
     }
     
@@ -28,11 +32,15 @@ public extension UIDevice {
         guard iPhone else { return .unknown }
         switch UIScreen.main.nativeBounds.height {
         case 960:  return .iPhone4
-        case 1136: return .iPhone5
-        case 1334: return .iPhone6
-        case 2208, 1920: return .iPhone6Plus
-        case 2436: return .iPhoneX
+        case 1136: return .iPhone5_SE
+        case 1334: return .iPhone6_7_8_SE2
+        case 2208, 1920: return .iPhone6Plus_7Plus_8Plus
+        case 2436: return .iPhoneX_XS_11Pro
+        case 2688: return .iPhoneXSMax_11ProMax
         case 1792: return .iPhoneXR_11
+        case 2532: return .iPhone12_12Pro_13_13Pro
+        case 2778: return .iPhone12ProMax_13ProMax
+        case 2340: return .iPhone12Mini_13Mini
         default:   return .unknown
         }
     }
@@ -40,7 +48,7 @@ public extension UIDevice {
     /// Tell if it is small device(iPhone4, iPhone5) or no.
     var isSmallDevice: Bool {
         switch self.screenType {
-        case .iPhone4, .iPhone5: return true
+        case .iPhone4, .iPhone5_SE: return true
         default: return false
         }
     }
@@ -54,14 +62,14 @@ public extension UIDevice {
     
     var isIPhone5: Bool {
         switch self.screenType {
-        case .iPhone5: return true
+        case .iPhone5_SE: return true
         default: return false
         }
     }
     
     var isIPhoneX: Bool {
         switch self.screenType {
-        case .iPhoneX: return true
+        case .iPhoneX_XS_11Pro: return true
         default: return false
         }
     }
@@ -75,7 +83,7 @@ public extension UIDevice {
     
     var isIPhonePlus: Bool {
         switch self.screenType {
-        case .iPhone6Plus: return true
+        case .iPhone6Plus_7Plus_8Plus: return true
         default: return false
         }
     }
@@ -83,11 +91,19 @@ public extension UIDevice {
     /// Tell if it is small device(iPhone4, iPhone5) or no.
     var isMediumDevice: Bool {
         switch self.screenType {
-        case .iPhone6: return true
+        case .iPhone6_7_8_SE2: return true
         default: return false
         }
     }
     
+    var isMaxDevice: Bool {
+        switch self.screenType {
+        case .iPhoneXSMax_11ProMax,
+             .iPhone12ProMax_13ProMax:
+            return true
+        default: return false
+        }
+    }
 }
 
 public extension UIDevice {

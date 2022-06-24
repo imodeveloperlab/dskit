@@ -69,13 +69,14 @@ public class DSSFSymbolConfig {
     /// - Returns: UIImage?
     public static func buttonIcon(_ name: String) -> UIImage? {
         let config = DSSFSymbolConfig.symbolConfig(style: .custom(size: 16, weight: .bold))
-        return UIImage(systemName: name, withConfiguration: config)
+        
+        return UIImage.symbolImage(with: name, configuration: config)
     }
     
     /// Get icon with configuration
     /// - Parameter name: String
     /// - Returns: UIImage?
     public static func icon(_ name: String, config: UIImage.SymbolConfiguration) -> UIImage? {
-        return UIImage(systemName: name, withConfiguration: config)
+        return UIImage.symbolImage(with: name, configuration: config)
     }
 }

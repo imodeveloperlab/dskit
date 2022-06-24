@@ -62,7 +62,7 @@ public struct DSButtonVM: DSViewModel, Equatable, Hashable {
         self.type = type
         
         let config = DSSFSymbolConfig.symbolConfig(style: style)
-        self.icon = UIImage(systemName: sfSymbol, withConfiguration: config)
+        self.icon = UIImage.symbolImage(with: sfSymbol, configuration: config)
         self.textAlignment = textAlignment
         
         self.didTap = { tap in

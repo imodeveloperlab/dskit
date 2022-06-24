@@ -11,13 +11,24 @@ import UIKit
 final class DSTextFieldUIView: UIView, DSReusableUIView {
     
     // Textfield components
+    @IBOutlet weak var messageLabelContainerView: UIView!
+    @IBOutlet weak var messageLabelGradientView: UIView!
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var textFieldHolder: UIView!
     
     // Constraints
     @IBOutlet weak var textFieldLeftSpace: NSLayoutConstraint!
-    @IBOutlet var textFieldBottomSpace: NSLayoutConstraint!
+    
+    private var showHideButton: UIButton?
+    
+    private lazy var messageLabelGradient: CAGradientLayer = {
+        let gradient = CAGradientLayer()
+        gradient.startPoint = CGPoint(x: 0, y: 0.5)
+        gradient.endPoint = CGPoint(x: 1, y: 0.5)
+        
+        return gradient
+    }()
     
     // View model
     var viewModel: DSTextFieldVM?
@@ -88,10 +99,18 @@ final class DSTextFieldUIView: UIView, DSReusableUIView {
                                                              attributes: [NSAttributedString.Key.foregroundColor: colors.textField.placeHolder])
         
         // Clear button colors
-        setClearButtonImage(with: UIImage(systemName: "xmark.circle.fill"))
+        if viewModel.isSecured {
+            setupShowHideButton()
+        } else {
+            setupClearButton()
+        }
         
         // Update left view
         updateLeftView()
+        
+        // Message label colors
+        messageLabelContainerView.backgroundColor = colors.textField.background
+        messageLabelGradient.colors = [colors.textField.background.withAlphaComponent(0.0).cgColor, colors.textField.background.withAlphaComponent(1.0).cgColor]
     }
     
     func updateLeftView() {
@@ -114,7 +133,6 @@ final class DSTextFieldUIView: UIView, DSReusableUIView {
             textField.leftView = symbol.view(colors).subViewWith(insets: .init(top: 0, left: 0, bottom: 0, right: 8))
             textField.leftViewMode = .always
             textFieldLeftSpace.constant = appearance.groupMargins
-            
         } else {
             textFieldLeftSpace.constant = appearance.groupMargins
         }
@@ -196,7 +214,7 @@ final class DSTextFieldUIView: UIView, DSReusableUIView {
     /// Hide invalid message
     func hideInvalidMessage() {
         UIView.animate(withDuration: 0.4) {
-            self.messageLabel.alpha = 0.0
+            self.messageLabelContainerView.alpha = 0.0
         }
     }
     
@@ -233,7 +251,7 @@ final class DSTextFieldUIView: UIView, DSReusableUIView {
             messageLabel.font = appearance.fonts.caption2.withSize(14)
             
             UIView.animate(withDuration: 0.4) {
-                self.messageLabel.alpha = 1.0
+                self.messageLabelContainerView.alpha = 1.0
             }
         }
         
@@ -253,14 +271,23 @@ final class DSTextFieldUIView: UIView, DSReusableUIView {
         updateLeftView()
     }
     
+    @IBAction func messageLabelContainerViewTapped(_ sender: Any) {
+        textField.becomeFirstResponder()
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         backgroundColor = .clear
+        messageLabelGradientView.layer.addSublayer(messageLabelGradient)
     }
     
-    /// Set clear button image
-    /// - Parameter image: UIImage
-    @objc func setClearButtonImage(with image : UIImage?) {
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        messageLabelGradient.frame = messageLabelGradientView.bounds
+    }
+    
+    /// Set show/hide button image and color
+    func setupShowHideButton() {
         
         guard let viewModel = viewModel else {
             return
@@ -270,7 +297,31 @@ final class DSTextFieldUIView: UIView, DSReusableUIView {
         
         // Button
         let button = UIButton(type: .custom)
-        button.setImage(image, for: .normal)
+        button.setImage(UIImage(systemName: "eye"), for: .normal)
+        button.tintColor = colors.button.background
+        button.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+        button.contentMode = .scaleAspectFit
+        button.addTarget(self, action: #selector(showHideText(_:)), for: .touchUpInside)
+        
+        showHideButton = button
+        
+        // Textfield
+        textField.rightView = showHideButton?.subViewWith(insets: UIEdgeInsets(top: 0, left: 0, bottom: 0, right: appearance.interItemSpacing))
+        textField.rightViewMode = .always
+    }
+    
+    /// Set clear button image and color
+    func setupClearButton() {
+        
+        guard let viewModel = viewModel else {
+            return
+        }
+        
+        let colors = viewModel.viewColors()
+        
+        // Button
+        let button = UIButton(type: .custom)
+        button.setImage(UIImage(systemName: "xmark.circle.fill"), for: .normal)
         button.tintColor = colors.button.background
         button.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
         button.contentMode = .scaleAspectFit
@@ -286,6 +337,16 @@ final class DSTextFieldUIView: UIView, DSReusableUIView {
     @objc func clear(_ sender : AnyObject) {
         textField.text = ""
         textField.sendActions(for: .editingChanged)
+    }
+    
+    @objc func showHideText(_ sender : AnyObject) {
+        if textField.isSecureTextEntry {
+            textField.isSecureTextEntry = false
+            showHideButton?.setImage(UIImage(systemName: "eye.slash"), for: .normal)
+        } else {
+            textField.isSecureTextEntry = true
+            showHideButton?.setImage(UIImage(systemName: "eye"), for: .normal)
+        }
     }
     
     class func instanceFromNib() -> DSTextFieldUIView {

@@ -1,17 +1,14 @@
 //
-//  ButtonExtension.swift
-//  DSKit
+//  UIButton+EdgeInsets.swift
+//  
 //
-//  Created by Borinschi Ivan on 13.12.2020.
-//  Copyright © 2021 Borinschi Ivan. All rights reserved.
+//  Created by Zalan Mergl on 2022. 06. 10..
 //
 
 import UIKit
 
 public extension UIButton {
-    
     func centerVertically(padding: CGFloat = 3.0) {
-        
         if  let imageViewSize = self.imageView?.frame.size,
             let titleLabelSize = self.titleLabel?.frame.size {
             
@@ -41,6 +38,12 @@ public extension UIButton {
             )
         }
     }
+    
+    func moveImageEdgeInset(by delta: CGFloat) {
+        imageEdgeInsets = UIEdgeInsets(top: 0, left: delta, bottom: 0, right: -delta)
+    }
+    
+    func moveTitleEdgeInset(by delta: CGFloat) {
+        titleEdgeInsets = UIEdgeInsets(top: 0, left: delta, bottom: 0, right: -delta)
+    }
 }
-
-

@@ -82,31 +82,11 @@ extension UIButton {
         titleLabel?.transform = CGAffineTransform(scaleX: -1.0, y: 1.0)
         imageView?.transform = CGAffineTransform(scaleX: -1.0, y: 1.0)
         
-        setInsets(forContentPadding: self.contentEdgeInsets, imageTitlePadding: 3)
-        
         let buttonColor = designableViewColors.button.background
         setTitleColor(buttonColor, for: .normal)
         setTitleColor(buttonColor.shade(.C500), for: .disabled)
         setTitleColor(buttonColor.tint(.C500), for: .highlighted)
         titleLabel?.font = font
         tintColor = buttonColor
-    }
-}
-
-extension UIButton {
-    
-    func setInsets(forContentPadding contentPadding: UIEdgeInsets, imageTitlePadding: CGFloat) {
-        self.contentEdgeInsets = UIEdgeInsets(
-            top: contentPadding.top,
-            left: contentPadding.left,
-            bottom: contentPadding.bottom,
-            right: contentPadding.right + imageTitlePadding
-        )
-        self.titleEdgeInsets = UIEdgeInsets(
-            top: 0,
-            left: imageTitlePadding,
-            bottom: 0,
-            right: -imageTitlePadding
-        )
     }
 }

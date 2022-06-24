@@ -46,10 +46,7 @@ class ButtonsVC: DSViewController {
         
         // Link with icon
         let linkButtonWithIcon = DSButtonVM(title: "Link", icon: UIImage(systemName: "flame.fill"), type: .link)
-        
-        // Default left
-        let defaultButtonLeftAlignment = DSButtonVM(title: "Default left", textAlignment: .natural)
-        
+                
         // Light right
         let lightButtonRightAlignment = DSButtonVM(title: "Light right", type: .light, textAlignment: .right)
         
@@ -59,54 +56,54 @@ class ButtonsVC: DSViewController {
         // Link right
         let linkButtonRight = DSButtonVM(title: "Link right", type: .link, textAlignment: .right)
         
-        // Default button - right image
-        var defaultButtonLeftWithRightImage = DSButtonVM(title: "Left text right image",
-                                                         icon: UIImage(systemName: "message.fill"),
-                                                         textAlignment: .center)
-
-        defaultButtonLeftWithRightImage.imagePosition = .right
+        // Default buttons
+        let defaultButtonWithLeftText = DSButtonVM(title: "Default left", textAlignment: .left)
+        let defaultButtonWithCenterText = DSButtonVM(title: "Default center", textAlignment: .center)
+        let defaultButtonWithRightText = DSButtonVM(title: "Default right", textAlignment: .right)
         
-        // Default button - left image
-        var defaultButtonRightWithLeftImage = DSButtonVM(title: "Left image right text",
-                                                         icon: UIImage(systemName: "message.fill"),
-                                                         textAlignment: .right)
-        
-        defaultButtonRightWithLeftImage.imagePosition = .left
-        
-        // Default button - right margin image
-        var defaultButtonLeftWithRightMarginImage = DSButtonVM(title: "Left text right margin image",
-                                                               icon: UIImage(systemName: "message.fill"),
-                                                               textAlignment: .left)
-        
-        defaultButtonLeftWithRightMarginImage.imagePosition = .rightMargin
-        
-        // Default button - left margin image
-        var defaultButtonRightWithLeftMarginImage = DSButtonVM(title: "Left image right text",
-                                                               icon: UIImage(systemName: "message.fill"),
-                                                               textAlignment: .right)
-        
-        defaultButtonRightWithLeftMarginImage.imagePosition = .leftMargin
-        
-        show(content: defaultButton,
+        show(content:
+             defaultButton,
              lightButton,
              linkButton,
              defaultWithIcon,
              lightButtonWithIcon,
              linkButtonWithIcon,
-             defaultButtonLeftAlignment,
              lightButtonRightAlignment,
              linkButtonLeft,
              linkButtonRight,
-             defaultButtonLeftWithRightImage,
-             defaultButtonRightWithLeftImage,
-             defaultButtonLeftWithRightMarginImage,
-             defaultButtonRightWithLeftMarginImage)
+             defaultButtonWithLeftText,
+             defaultButtonWithCenterText,
+             defaultButtonWithRightText,
+             defaultButtonItem("Left text right image", textAlignment: .left, imagePosition: .right),
+             defaultButtonItem("Left text right margin image", textAlignment: .left, imagePosition: .rightMargin),
+             defaultButtonItem("Center text right image", textAlignment: .center, imagePosition: .right),
+             defaultButtonItem("Center text right margin image", textAlignment: .center, imagePosition: .rightMargin),
+             defaultButtonItem("Right text right image", textAlignment: .right, imagePosition: .right),
+             defaultButtonItem("Right text right margin image", textAlignment: .right, imagePosition: .rightMargin),
+             defaultButtonItem("Right text left image", textAlignment: .right, imagePosition: .left),
+             defaultButtonItem("Right text left margin image", textAlignment: .right, imagePosition: .leftMargin),
+             defaultButtonItem("Center text left image", textAlignment: .center, imagePosition: .left),
+             defaultButtonItem("Center text left margin image", textAlignment: .center, imagePosition: .leftMargin),
+             defaultButtonItem("Left text left image", textAlignment: .left, imagePosition: .left),
+             defaultButtonItem("Left text left margin image", textAlignment: .left, imagePosition: .leftMargin))
         
         // Demo end
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+    }
+}
+
+extension ButtonsVC {
+    func defaultButtonItem(_ title: String, textAlignment: NSTextAlignment, imagePosition: DSButtonVM.DSButtonVMImagePosition) -> DSButtonVM {
+        var button = DSButtonVM(title: title,
+                                icon: UIImage(systemName: "message.fill"),
+                                textAlignment: textAlignment)
+        
+        button.imagePosition = imagePosition
+        
+        return button
     }
 }
 
@@ -147,25 +144,51 @@ extension ButtonsVC: Documentable {
         
         // Buttons with icons
         let defaultWithIcon = DSButtonVM(title: "Default", icon: UIImage(systemName: "message.fill"))
-        let lightButtonWithIcon = DSButtonVM(title: "Light", icon: UIImage(systemName: "figure.wave"), type: .light)
+        var lightButtonWithIcon = DSButtonVM(title: "Light", icon: UIImage(systemName: "figure.wave"), type: .light)
+        lightButtonWithIcon.imagePosition = .right
+        
+        // Link with icon
         let linkButtonWithIcon = DSButtonVM(title: "Link", icon: UIImage(systemName: "flame.fill"), type: .link)
         
-        // Left / Right alignment
-        let defaultButtonLeftAlignment = DSButtonVM(title: "Default left", textAlignment: .left)
+        // Light right
         let lightButtonRightAlignment = DSButtonVM(title: "Light right", type: .light, textAlignment: .right)
+        
+        // Link left
         let linkButtonLeft = DSButtonVM(title: "Link left", type: .link, textAlignment: .left)
+        
+        // Link right
         let linkButtonRight = DSButtonVM(title: "Link right", type: .link, textAlignment: .right)
         
-        show(content: defaultButton,
-             lightButton,
-             linkButton,
-             defaultWithIcon,
-             lightButtonWithIcon,
-             linkButtonWithIcon,
-             defaultButtonLeftAlignment,
-             lightButtonRightAlignment,
-             linkButtonLeft,
-             linkButtonRight)
+        // Default buttons
+        let defaultButtonWithLeftText = DSButtonVM(title: "Default left", textAlignment: .left)
+        let defaultButtonWithCenterText = DSButtonVM(title: "Default center", textAlignment: .center)
+        let defaultButtonWithRightText = DSButtonVM(title: "Default right", textAlignment: .right)
+                
+        show(content:
+            defaultButton,
+            lightButton,
+            linkButton,
+            defaultWithIcon,
+            lightButtonWithIcon,
+            linkButtonWithIcon,
+            lightButtonRightAlignment,
+            linkButtonLeft,
+            linkButtonRight,
+            defaultButtonWithLeftText,
+            defaultButtonWithCenterText,
+            defaultButtonWithRightText,
+            defaultButtonItem("Left text right image", textAlignment: .left, imagePosition: .right),
+            defaultButtonItem("Left text right margin image", textAlignment: .left, imagePosition: .rightMargin),
+            defaultButtonItem("Center text right image", textAlignment: .center, imagePosition: .right),
+            defaultButtonItem("Center text right margin image", textAlignment: .center, imagePosition: .rightMargin),
+            defaultButtonItem("Right text right image", textAlignment: .right, imagePosition: .right),
+            defaultButtonItem("Right text right margin image", textAlignment: .right, imagePosition: .rightMargin),
+            defaultButtonItem("Right text left image", textAlignment: .right, imagePosition: .left),
+            defaultButtonItem("Right text left margin image", textAlignment: .right, imagePosition: .leftMargin),
+            defaultButtonItem("Center text left image", textAlignment: .center, imagePosition: .left),
+            defaultButtonItem("Center text left margin image", textAlignment: .center, imagePosition: .leftMargin),
+            defaultButtonItem("Left text left image", textAlignment: .left, imagePosition: .left),
+            defaultButtonItem("Left text left margin image", textAlignment: .left, imagePosition: .leftMargin))
         """
     }
     

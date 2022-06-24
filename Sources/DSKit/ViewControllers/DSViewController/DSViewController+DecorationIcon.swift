@@ -64,7 +64,7 @@ extension DSViewController {
             return
         }
         
-        self.decorationIconView = UIImageView(image: UIImage(systemName: decorationIconName))
+        self.decorationIconView = UIImageView(image: UIImage.symbolImage(with: decorationIconName))
         self.decorationIconView?.tintColor = decorationIcon.color
         self.decorationIconView?.alpha = decorationIcon.alpha
         self.decorationIconView?.contentMode = .scaleAspectFit

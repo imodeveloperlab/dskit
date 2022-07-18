@@ -29,7 +29,7 @@ public enum DSTextColor: Equatable, Hashable {
     /// Get text color
     /// - Parameter designableTextColor: DSDesignableTextColor
     /// - Returns: UIColor
-    func getColor(designableTextColor: DSDesignableTextColor) -> UIColor {        
+    public func getColor(designableTextColor: DSDesignableTextColor) -> UIColor {        
         
         switch self {
         case .largeTitle:

@@ -115,7 +115,7 @@ public extension UIDevice {
         return false
     }
     
-    var contentAreaHeigh: CGFloat {
+    var contentAreaHeight: CGFloat {
         
         let window = UIApplication.shared.windows[0]
         let topPadding = window.safeAreaInsets.top

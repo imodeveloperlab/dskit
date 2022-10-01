@@ -39,7 +39,7 @@ class PageSimplePageWithInsetsVC: DSViewController {
         var page = DSPageVM(viewModels: [image, space, composer.textViewModel()])
         page.contentInsets = appearance.margins.edgeInsets
         var pageControl = DSPageControlVM(type: .pages([page]))
-        pageControl.height = .absolute(UIDevice.current.contentAreaHeigh - 80)
+        pageControl.height = .absolute(UIDevice.current.contentAreaHeight - 80)
         
         // Show page
         self.show(content: pageControl.list().zeroLeftRightInset())
@@ -82,7 +82,7 @@ extension PageSimplePageWithInsetsVC: Documentable {
         var page = DSPageVM(viewModels: [image, space, composer.textViewModel()])
         page.contentInsets = appearance.margins.edgeInsets
         var pageControl = DSPageControlVM(type: .pages([page]))
-        pageControl.height = .absolute(UIDevice.current.contentAreaHeigh - 80)
+        pageControl.height = .absolute(UIDevice.current.contentAreaHeight - 80)
         
         // Show page
         self.show(content: pageControl.list().zeroLeftRightInset())

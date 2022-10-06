@@ -17,7 +17,7 @@ jobs:
     # See: https://circleci.com/docs/2.0/configuration-reference/#steps
     steps:
       - checkout
-      - run: xcrun simctl list
+      - run: xcrun simctl create 'iPhone 12 (15.4)' com.apple.CoreSimulator.SimDeviceType.iPhone-12 com.apple.CoreSimulator.SimRuntime.iOS-15-4
       - run: fastlane scan --project "DSKitExplorer/DSKitExplorer.xcodeproj" --device "iPhone 12 (15.4)"  # Run tests using Fastlane
       # Collect XML test results data to show in the UI, and save the same XML
       # files under test-results folder in the Artifacts tab

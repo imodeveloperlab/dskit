@@ -14,6 +14,7 @@ public class DSTextFieldVM: DSViewModel, Equatable, Hashable {
     // Properties
     public var placeholder: String
     public var text: String?
+    public var textAlignment: NSTextAlignment = .left
     
     internal weak var textField: UITextField?
     

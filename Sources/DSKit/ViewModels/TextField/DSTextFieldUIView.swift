@@ -62,6 +62,7 @@ final class DSTextFieldUIView: UIView, DSReusableUIView {
         textField.placeholder = viewModel.placeholder
         textField.text = viewModel.text
         textField.isSecureTextEntry = viewModel.isSecured
+        textField.textAlignment = viewModel.textAlignment
         
         if viewModel.didTap != nil {
             textField.isUserInteractionEnabled = false

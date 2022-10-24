@@ -104,7 +104,7 @@ open class DSViewController: DSCollectionViewController {
     // Top content
     func showTopContentIfNeed() {
         
-        guard let topCollectionView, let display = topContentQueue.last else {
+        guard let topCollectionView = topCollectionView, let display = topContentQueue.last else {
             return
         }
         
@@ -118,7 +118,7 @@ open class DSViewController: DSCollectionViewController {
     // Center content
     func showCenterContentIfNeed() {
         
-        guard let collectionView, let display = centerContentQueue.last else {
+        guard let collectionView = collectionView, let display = centerContentQueue.last else {
             return
         }
         
@@ -132,7 +132,7 @@ open class DSViewController: DSCollectionViewController {
     // Bottom content
     func showBottomContentIfNeed() {
         
-        guard let bottomCollectionView, let display = bottomContentQueue.last else {
+        guard let bottomCollectionView = bottomCollectionView, let display = bottomContentQueue.last else {
             return
         }
         

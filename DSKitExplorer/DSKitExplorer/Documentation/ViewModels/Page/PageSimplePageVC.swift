@@ -38,7 +38,7 @@ class PageSimplePageVC: DSViewController {
         // Page with view models
         let page = DSPageVM(viewModels: [image, space, composer.textViewModel()])
         var pageControl = DSPageControlVM(type: .pages([page]))
-        pageControl.height = .absolute(UIDevice.current.contentAreaHeigh - 80)
+        pageControl.height = .absolute(UIDevice.current.contentAreaHeight - 80)
         
         // Show page
         self.show(content: pageControl)
@@ -79,7 +79,7 @@ extension PageSimplePageVC: Documentable {
         // Page with view models
         let page = DSPageVM(viewModels: [image, space, composer.textViewModel()])
         var pageControl = DSPageControlVM(type: .pages([page]))
-        pageControl.height = .absolute(UIDevice.current.contentAreaHeigh - 80)
+        pageControl.height = .absolute(UIDevice.current.contentAreaHeight - 80)
         
         // Show page
         self.show(content: pageControl)

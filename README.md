@@ -6,7 +6,6 @@
 </p>
 
 
-
 <p align="center">
     <img src="https://img.shields.io/badge/Swift-5.5-brightgreen.svg" />
     <a href="https://swift.org/package-manager">
@@ -15,12 +14,10 @@
     <img src="https://img.shields.io/badge/iOS-13+-brightgreen.svg?style=flat" alt="iOS"/>
     <img src="https://circleci.com/gh/imodeveloperlab/dskit/tree/main.svg?style=shield" alt="iOS"/>
     <img src="https://img.shields.io/github/issues/imodeveloperlab/dskit"/>
-    
 </p>
 
 
 Welcome to **DSKit** a Design System for iOS 13+ is an iOS SDK written in Swift with a collection of reusable components, guided by clear standards, that can be assembled to build any number of applications.
-
 
 
 # Why DSKit?

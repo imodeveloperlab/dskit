@@ -31,8 +31,7 @@ public enum DSImageContent: Equatable, Hashable {
             return image
         case .sfSymbol(name: let name, style: let style):
             let configuration = DSSFSymbolConfig.symbolConfig(style: style)
-            let image = UIImage(systemName: name, withConfiguration: configuration)
-            return image?.imageFlippedForRightToLeftLayoutDirection()
+            return UIImage.symbolImage(with: name, configuration: configuration)?.imageFlippedForRightToLeftLayoutDirection()
         case .imageURL(url: _):
             return nil
         }
@@ -45,8 +44,7 @@ extension UIImageView {
         
         switch image {
         case .sfSymbol(name: let sfSymbolName, style: let style):
-            let image = UIImage(systemName: sfSymbolName, withConfiguration: DSSFSymbolConfig.symbolConfig(style: style))
-            self.image = image?.imageFlippedForRightToLeftLayoutDirection()
+            self.image = UIImage.symbolImage(with: sfSymbolName, configuration: DSSFSymbolConfig.symbolConfig(style: style))?.imageFlippedForRightToLeftLayoutDirection()
         case .image(image: let image):
             self.image = image
         case .imageURL(url: let url):

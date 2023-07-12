@@ -18,13 +18,11 @@ final class DSCodeUIView: UIView, DSReusableUIView {
     public var view: UIView { self }
     
     public func setUpWith(viewModel: DSViewModel) {
-        
         guard let viewModel = viewModel as? DSCodeVM else { return }
         update(viewModel: viewModel)
     }
     
     func update(viewModel: DSCodeVM) {
-        
         let isLightColor = DSAppearance.shared.main.secondaryView.background.isLight()
         let theme: Theme = (isLightColor ?? false) ? .sunset(withFont: Font(size: 10)) : .midnight(withFont: Font(size: 10))
         let output = AttributedStringOutputFormat(theme: theme)

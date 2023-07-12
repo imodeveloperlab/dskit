@@ -14,6 +14,9 @@ public class DSTextFieldVM: DSViewModel, Equatable, Hashable {
     // Properties
     public var placeholder: String
     public var text: String?
+    public var textAlignment: NSTextAlignment = .left
+    
+    internal weak var textField: UITextField?
     
     // Validator
     let validator = DSStringValidator()
@@ -39,8 +42,16 @@ public class DSTextFieldVM: DSViewModel, Equatable, Hashable {
     // Accessibility identifier
     public var accessibilityIdentifier: String = "TextField"
     
+    // Style of the border
+    public var borderStyle: DSViewModelBorderStyle = .none
+    
     /// Style
-    public var style: DSViewModelStyle = DSViewModelStyle()
+    public var style: DSViewModelStyle = DSViewModelStyle() {
+        didSet {
+            borderStyle = style.borderStyle
+            style.borderStyle = .none
+        }
+    }
     
     // Show an message when user type non valid text in textfield
     public var errorPlaceHolderText: String?
@@ -75,11 +86,28 @@ public class DSTextFieldVM: DSViewModel, Equatable, Hashable {
     // Textfield type
     public var type: TextFieldViewModelType = .default
     
+    // First responder
+    public var isFirstResponder: Bool {
+        get {
+            return textField?.isFirstResponder ?? false
+        }
+        set {
+            if newValue {
+                textField?.becomeFirstResponder()
+            } else {
+                textField?.resignFirstResponder()
+            }
+        }
+    }
+    
     // Handle did tap
     @NonEquatable public var didTap: ((DSViewModel) -> Void)?
     
     // Handle did update
     @NonEquatable public var didUpdate: ((DSTextFieldVM) -> Void)?
+    
+    // Handle 'return' key press. Return 'false' to ignore.
+    @NonEquatable public var shouldReturn: ((DSTextFieldVM) -> Bool)?
     
     // Handle validation
     @NonEquatable public var handleValidation: ((String?) -> Bool)?

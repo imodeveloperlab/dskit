@@ -95,15 +95,10 @@ final class DSActionUIView: UIView, DSReusableUIView {
     /// Update top image layout
     /// - Parameter viewModel: DSActionVM
     func updateTopImageLayout(viewModel: DSActionVM) {
-        
         topImageView.backgroundColor = viewModel.viewColors().background
-        
         if let topImage = viewModel.topImage {
-            
             setTopImage(image: topImage, viewModel: viewModel)
-            
         } else {
-            
             topImageViewToLabelSpaceConstraint.constant = 0
             topImageViewEqualHeightConstraint.constant = 0
         }

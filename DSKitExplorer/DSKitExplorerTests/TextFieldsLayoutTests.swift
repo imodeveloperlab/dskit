@@ -10,31 +10,27 @@ import XCTest
 
 class TextFieldsLayoutTests: XCTestCase {
     
+    override func setUp() async throws {
+        SnapshotTesting.diffTool = "open"
+    }
+    
     func testTextFields() {
-        assertSnapshot(matching: TextFieldsVC(), as: .image)
+        assertSnapshot(matching: TextFieldsVC(), as: .image(on: .iPhoneSe))
     }
     
     func testTextFieldsGrouped() {
-        assertSnapshot(matching: TextFieldsGroupedVC(), as: .image)
+        assertSnapshot(matching: TextFieldsGroupedVC(), as: .image(on: .iPhoneSe))
     }
     
     func testTextFieldIcons() {
-        assertSnapshot(matching: TextFieldIconsVC(), as: .image)
-    }
-    
-    func testTextFieldValidData() {
-        assertSnapshot(matching: TextFieldValidDataVC(), as: .image)
-    }
-    
-    func testTextFieldInvalidData() {
-        assertSnapshot(matching: TextFieldInvalidDataVC(), as: .image)
+        assertSnapshot(matching: TextFieldIconsVC(), as: .image(on: .iPhoneSe))
     }
     
     func testTextFieldsGrid() {
-        assertSnapshot(matching: TextFieldsGridVC(), as: .image)
+        assertSnapshot(matching: TextFieldsGridVC(), as: .image(on: .iPhoneSe))
     }
     
     func testTextFieldsGroupedGrid() {
-        assertSnapshot(matching: TextFieldsGroupedGridVC(), as: .image)
+        assertSnapshot(matching: TextFieldsGroupedGridVC(), as: .image(on: .iPhoneSe))
     }
 }

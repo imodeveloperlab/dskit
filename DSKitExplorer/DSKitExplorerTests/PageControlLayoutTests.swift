@@ -10,7 +10,11 @@ import XCTest
 
 class PageControlLayoutTests: XCTestCase {
     
+    override func setUp() async throws {
+        SnapshotTesting.diffTool = "open"
+    }
+    
     func testPageControl() {
-        assertSnapshot(matching: PageControlViewController(), as: .image)
+        assertSnapshot(matching: PageControlViewController(), as: .image(on: .iPhoneSe))
     }
 }

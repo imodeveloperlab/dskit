@@ -15,30 +15,30 @@ class GalleryLayoutTests: XCTestCase {
     }
     
     func testGalleryAbsoluteWidthLayout() {
-        assertSnapshot(matching: GalleryAbsoluteWidthLayoutVC(), as: .image(on: .iPhoneX))
+        assertSnapshot(matching: GalleryAbsoluteWidthLayoutVC(), as: .image(on: .iPhoneSe))
     }
     
     func testGalleryFractionalWidthLayout() {
-        assertSnapshot(matching: GalleryFractionalWidthLayoutVC(), as: .image(on: .iPhoneX))
+        assertSnapshot(matching: GalleryFractionalWidthLayoutVC(), as: .image(on: .iPhoneSe))
     }
     
     func testGalleryFractional1GroupedLayout() {
-        assertSnapshot(matching: GalleryFractional1GroupedLayoutVC(), as: .image(on: .iPhoneX))
+        assertSnapshot(matching: GalleryFractional1GroupedLayoutVC(), as: .image(on: .iPhoneSe))
     }
     
     func testGalleryFractional1Layout() {
-        assertSnapshot(matching: GalleryFractional1LayoutVC(), as: .image(on: .iPhoneX))
+        assertSnapshot(matching: GalleryFractional1LayoutVC(), as: .image(on: .iPhoneSe))
     }
     
     func testGalleryFullWidthLayout() {
-        assertSnapshot(matching: GalleryFullWidthLayoutVC(), as: .image(on: .iPhoneX))
+        assertSnapshot(matching: GalleryFullWidthLayoutVC(), as: .image(on: .iPhoneSe))
     }
     
     func testGalleryPageControlFractional1Layout() {
-        assertSnapshot(matching: GalleryPageControlFractional1LayoutVC(), as: .image(on: .iPhoneX))
+        assertSnapshot(matching: GalleryPageControlFractional1LayoutVC(), as: .image(on: .iPhoneSe))
     }
     
     func testGalleryPageControlLayout() {
-        assertSnapshot(matching: GalleryPageControlLayoutVC(), as: .image(on: .iPhoneX))
+        assertSnapshot(matching: GalleryPageControlLayoutVC(), as: .image(on: .iPhoneSe))
     }
 }

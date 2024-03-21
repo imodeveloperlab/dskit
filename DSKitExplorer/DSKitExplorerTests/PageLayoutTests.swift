@@ -15,10 +15,10 @@ class PageSimplePageLayoutTests: XCTestCase {
     }
     
     func testSimplePage() {
-        assertSnapshot(matching: PageSimplePageVC(), as: .image(on: .iPhoneX))
+        assertSnapshot(matching: PageSimplePageVC(), as: .image(on: .iPhoneSe))
     }
     
     func testSimplePageWithInsets() {
-        assertSnapshot(matching: PageSimplePageWithInsetsVC(), as: .image(on: .iPhoneX))
+        assertSnapshot(matching: PageSimplePageWithInsetsVC(), as: .image(on: .iPhoneSe))
     }
 }

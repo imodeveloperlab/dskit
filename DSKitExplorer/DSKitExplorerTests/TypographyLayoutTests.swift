@@ -15,30 +15,30 @@ class TypographyLayoutTests: XCTestCase {
     }
     
     func testTypographyTextTypes() {
-        assertSnapshot(matching: TypographyTextTypesVC(), as: .image(on: .iPhoneX))
+        assertSnapshot(matching: TypographyTextTypesVC(), as: .image(on: .iPhoneSe))
     }
     
     func testTypographyTextList() {
-        assertSnapshot(matching: TypographyTextListVC(), as: .image(on: .iPhoneX))
+        assertSnapshot(matching: TypographyTextListVC(), as: .image(on: .iPhoneSe))
     }
     
     func testTypographyTextGrid() {
-        assertSnapshot(matching: TypographyTextGridVC(), as: .image(on: .iPhoneX))
+        assertSnapshot(matching: TypographyTextGridVC(), as: .image(on: .iPhoneSe))
     }
     
     func testTypographyTextGallery() {
-        assertSnapshot(matching: TypographyTextGalleryVC(), as: .image(on: .iPhoneX))
+        assertSnapshot(matching: TypographyTextGalleryVC(), as: .image(on: .iPhoneSe))
     }
     
     func testTypographyTextComposerText() {
-        assertSnapshot(matching: TypographyTextComposerTextVC(), as: .image(on: .iPhoneX))
+        assertSnapshot(matching: TypographyTextComposerTextVC(), as: .image(on: .iPhoneSe))
     }
     
     func testTypographyTextComposerAction() {
-        assertSnapshot(matching: TypographyTextComposerActionVC(), as: .image(on: .iPhoneX))
+        assertSnapshot(matching: TypographyTextComposerActionVC(), as: .image(on: .iPhoneSe))
     }
     
     func testTypographyActiveText() {
-        assertSnapshot(matching: TypographyActiveTextVC(), as: .image(on: .iPhoneX))
+        assertSnapshot(matching: TypographyActiveTextVC(), as: .image(on: .iPhoneSe))
     }
 }

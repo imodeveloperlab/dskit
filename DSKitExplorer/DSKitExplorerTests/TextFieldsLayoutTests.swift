@@ -15,30 +15,30 @@ class TextFieldsLayoutTests: XCTestCase {
     }
     
     func testTextFields() {
-        assertSnapshot(matching: TextFieldsVC(), as: .image(on: .iPhoneX))
+        assertSnapshot(matching: TextFieldsVC(), as: .image(on: .iPhoneSe))
     }
     
     func testTextFieldsGrouped() {
-        assertSnapshot(matching: TextFieldsGroupedVC(), as: .image(on: .iPhoneX))
+        assertSnapshot(matching: TextFieldsGroupedVC(), as: .image(on: .iPhoneSe))
     }
     
     func testTextFieldIcons() {
-        assertSnapshot(matching: TextFieldIconsVC(), as: .image(on: .iPhoneX))
+        assertSnapshot(matching: TextFieldIconsVC(), as: .image(on: .iPhoneSe))
     }
     
     func testTextFieldValidData() {
-        assertSnapshot(matching: TextFieldValidDataVC(), as: .image(on: .iPhoneX))
+        assertSnapshot(matching: TextFieldValidDataVC(), as: .image(on: .iPhoneSe))
     }
     
     func testTextFieldInvalidData() {
-        assertSnapshot(matching: TextFieldInvalidDataVC(), as: .image(on: .iPhoneX))
+        assertSnapshot(matching: TextFieldInvalidDataVC(), as: .image(on: .iPhoneSe))
     }
     
     func testTextFieldsGrid() {
-        assertSnapshot(matching: TextFieldsGridVC(), as: .image(on: .iPhoneX))
+        assertSnapshot(matching: TextFieldsGridVC(), as: .image(on: .iPhoneSe))
     }
     
     func testTextFieldsGroupedGrid() {
-        assertSnapshot(matching: TextFieldsGroupedGridVC(), as: .image(on: .iPhoneX))
+        assertSnapshot(matching: TextFieldsGroupedGridVC(), as: .image(on: .iPhoneSe))
     }
 }

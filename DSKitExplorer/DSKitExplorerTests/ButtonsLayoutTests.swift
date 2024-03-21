@@ -15,18 +15,18 @@ class ButtonsLayoutTests: XCTestCase {
     }
     
     func testButtons() {
-        assertSnapshot(matching: ButtonsVC(), as: .image(on: .iPhoneX))
+        assertSnapshot(matching: ButtonsVC(), as: .image(on: .iPhoneSe))
     }
     
     func testButtonGrid() {
-        assertSnapshot(matching: ButtonGridVC(), as: .image(on: .iPhoneX))
+        assertSnapshot(matching: ButtonGridVC(), as: .image(on: .iPhoneSe))
     }
     
     func testButtonList() {
-        assertSnapshot(matching: ButtonListVC(), as: .image(on: .iPhoneX))
+        assertSnapshot(matching: ButtonListVC(), as: .image(on: .iPhoneSe))
     }
     
     func testButtonGallery() {
-        assertSnapshot(matching: ButtonGalleryVC(), as: .image(on: .iPhoneX))
+        assertSnapshot(matching: ButtonGalleryVC(), as: .image(on: .iPhoneSe))
     }
 }

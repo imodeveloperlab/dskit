@@ -15,18 +15,18 @@ class GridLayoutTests: XCTestCase {
     }
     
     func testGridSimpleLayout() {
-        assertSnapshot(matching: GridSimpleLayoutVC(), as: .image(on: .iPhoneX))
+        assertSnapshot(matching: GridSimpleLayoutVC(), as: .image(on: .iPhoneSe))
     }
     
     func testGridSimpleHeaderFooterLayout() {
-        assertSnapshot(matching: GridSimpleHeaderFooterLayoutVC(), as: .image(on: .iPhoneX))
+        assertSnapshot(matching: GridSimpleHeaderFooterLayoutVC(), as: .image(on: .iPhoneSe))
     }
     
     func testGridGrouped3RowsLayoutVC() {
-        assertSnapshot(matching: GridGrouped3RowsLayoutVC(), as: .image(on: .iPhoneX))
+        assertSnapshot(matching: GridGrouped3RowsLayoutVC(), as: .image(on: .iPhoneSe))
     }
     
     func testGridGrouped5RowsHeaderFooterLayout() {
-        assertSnapshot(matching: GridGrouped5RowsHeaderFooterLayoutVC(), as: .image(on: .iPhoneX))
+        assertSnapshot(matching: GridGrouped5RowsHeaderFooterLayoutVC(), as: .image(on: .iPhoneSe))
     }
 }

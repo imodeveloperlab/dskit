@@ -15,6 +15,6 @@ class MapsLayoutTests: XCTestCase {
     }
     
     func testMap() {
-        assertSnapshot(matching: MapViewController(), as: .image(on: .iPhoneX))
+        assertSnapshot(matching: MapViewController(), as: .image(on: .iPhoneSe))
     }
 }

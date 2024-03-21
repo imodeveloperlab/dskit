@@ -15,22 +15,22 @@ class ListLayoutTests: XCTestCase {
     }
     
     func testListSimpleLayout() {
-        assertSnapshot(matching: ListSimpleLayoutVC(), as: .image(on: .iPhoneX))
+        assertSnapshot(matching: ListSimpleLayoutVC(), as: .image(on: .iPhoneSe))
     }
     
     func testListSeparatorLayout() {
-        assertSnapshot(matching: ListSeparatorLayoutVC(), as: .image(on: .iPhoneX))
+        assertSnapshot(matching: ListSeparatorLayoutVC(), as: .image(on: .iPhoneSe))
     }
     
     func testListGroupedLayout() {
-        assertSnapshot(matching: ListGroupedLayoutVC(), as: .image(on: .iPhoneX))
+        assertSnapshot(matching: ListGroupedLayoutVC(), as: .image(on: .iPhoneSe))
     }
     
     func testListGroupedAndSeparatorLayout() {
-        assertSnapshot(matching: ListGroupedAndSeparatorLayoutVC(), as: .image(on: .iPhoneX))
+        assertSnapshot(matching: ListGroupedAndSeparatorLayoutVC(), as: .image(on: .iPhoneSe))
     }
     
     func testListGroupedSeparatorHeaderFooterLayout() {
-        assertSnapshot(matching: ListGroupedSeparatorHeaderFooterLayoutVC(), as: .image(on: .iPhoneX))
+        assertSnapshot(matching: ListGroupedSeparatorHeaderFooterLayoutVC(), as: .image(on: .iPhoneSe))
     }
 }

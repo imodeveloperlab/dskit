@@ -15,6 +15,6 @@ class CardsLayoutTests: XCTestCase {
     }
     
     func testCards() {
-        assertSnapshot(matching: CardViewController(), as: .image(on: .iPhoneX))
+        assertSnapshot(matching: CardViewController(), as: .image(on: .iPhoneSe))
     }
 }

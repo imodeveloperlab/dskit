@@ -15,6 +15,6 @@ class PageControlLayoutTests: XCTestCase {
     }
     
     func testPageControl() {
-        assertSnapshot(matching: PageControlViewController(), as: .image(on: .iPhoneX))
+        assertSnapshot(matching: PageControlViewController(), as: .image(on: .iPhoneSe))
     }
 }

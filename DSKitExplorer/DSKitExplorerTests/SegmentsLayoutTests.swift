@@ -15,6 +15,6 @@ class SegmentsLayoutTests: XCTestCase {
     }
     
     func testSegment() {
-        assertSnapshot(matching: SegmentViewController(), as: .image(on: .iPhoneX))
+        assertSnapshot(matching: SegmentViewController(), as: .image(on: .iPhoneSe))
     }
 }

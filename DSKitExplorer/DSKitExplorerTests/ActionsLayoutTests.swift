@@ -15,58 +15,58 @@ class ActionsLayoutTests: XCTestCase {
     }
     
     func testActionList() {
-        assertSnapshot(matching: ActionListVC(), as: .image(on: .iPhoneX), timeout: 60)
+        assertSnapshot(matching: ActionListVC(), as: .image(on: .iPhoneSe), timeout: 60)
     }
     
     func testActionGrid() {
-        assertSnapshot(matching: ActionGridVC(), as: .image(on: .iPhoneX))
+        assertSnapshot(matching: ActionGridVC(), as: .image(on: .iPhoneSe))
     }
     
     func testActionGallery() {
-        assertSnapshot(matching: ActionGalleryVC(), as: .image(on: .iPhoneX))
+        assertSnapshot(matching: ActionGalleryVC(), as: .image(on: .iPhoneSe))
     }
     
     func testActionLeftIcon() {
-        assertSnapshot(matching: ActionLeftIconVC(), as: .image(on: .iPhoneX))
+        assertSnapshot(matching: ActionLeftIconVC(), as: .image(on: .iPhoneSe))
     }
     
     func testActionLeftRoundImage() {
-        assertSnapshot(matching: ActionLeftRoundImageVC(), as: .image(on: .iPhoneX))
+        assertSnapshot(matching: ActionLeftRoundImageVC(), as: .image(on: .iPhoneSe))
     }
     
     func testActionLeftRoundImageSize() {
-        assertSnapshot(matching: ActionLeftRoundImageSizeVC(), as: .image(on: .iPhoneX))
+        assertSnapshot(matching: ActionLeftRoundImageSizeVC(), as: .image(on: .iPhoneSe))
     }
     
     func testActionLeftImage() {
-        assertSnapshot(matching: ActionLeftImageVC(), as: .image(on: .iPhoneX))
+        assertSnapshot(matching: ActionLeftImageVC(), as: .image(on: .iPhoneSe))
     }
     
     func testActionRightIcon() {
-        assertSnapshot(matching: ActionRightIconVC(), as: .image(on: .iPhoneX))
+        assertSnapshot(matching: ActionRightIconVC(), as: .image(on: .iPhoneSe))
     }
     
     func testActionRightRoundImage() {
-        assertSnapshot(matching: ActionRightRoundImageVC(), as: .image(on: .iPhoneX))
+        assertSnapshot(matching: ActionRightRoundImageVC(), as: .image(on: .iPhoneSe))
     }
     
     func testActionRightRoundImageSize() {
-        assertSnapshot(matching: ActionRightRoundImageSizeVC(), as: .image(on: .iPhoneX))
+        assertSnapshot(matching: ActionRightRoundImageSizeVC(), as: .image(on: .iPhoneSe))
     }
     
     func testActionRightImage() {
-        assertSnapshot(matching: ActionRightImageVC(), as: .image(on: .iPhoneX))
+        assertSnapshot(matching: ActionRightImageVC(), as: .image(on: .iPhoneSe))
     }
     
     func testActionRightButton() {
-        assertSnapshot(matching: ActionRightButtonVC(), as: .image(on: .iPhoneX))
+        assertSnapshot(matching: ActionRightButtonVC(), as: .image(on: .iPhoneSe))
     }
     
     func testActionTopImage() {
-        assertSnapshot(matching: ActionTopImageVC(), as: .image(on: .iPhoneX))
+        assertSnapshot(matching: ActionTopImageVC(), as: .image(on: .iPhoneSe))
     }
     
     func testActionGroupedList() {
-        assertSnapshot(matching: ActionGroupedListVC(), as: .image(on: .iPhoneX))
+        assertSnapshot(matching: ActionGroupedListVC(), as: .image(on: .iPhoneSe))
     }
 }

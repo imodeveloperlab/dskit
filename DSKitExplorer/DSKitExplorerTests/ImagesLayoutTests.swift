@@ -15,18 +15,18 @@ class ImagesLayoutTests: XCTestCase {
     }
     
     func testImages() {
-        assertSnapshot(matching: ImagesVC(), as: .image(on: .iPhoneX))
+        assertSnapshot(matching: ImagesVC(), as: .image(on: .iPhoneSe))
     }
     
     func testImageGrid() {
-        assertSnapshot(matching: ImageGridVC(), as: .image(on: .iPhoneX))
+        assertSnapshot(matching: ImageGridVC(), as: .image(on: .iPhoneSe))
     }
     
     func testImageList() {
-        assertSnapshot(matching: ImageListVC(), as: .image(on: .iPhoneX))
+        assertSnapshot(matching: ImageListVC(), as: .image(on: .iPhoneSe))
     }
     
     func testImageGallery() {
-        assertSnapshot(matching: ImageGalleryVC(), as: .image(on: .iPhoneX))
+        assertSnapshot(matching: ImageGalleryVC(), as: .image(on: .iPhoneSe))
     }
 }

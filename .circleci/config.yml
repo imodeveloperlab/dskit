@@ -1,23 +1,26 @@
 # Use the latest 2.1 version of CircleCI pipeline process engine.
-# See: https://circleci.com/docs/2.0/configuration-reference
+# See: https://circleci.com/docs/configuration-reference
+
 # For a detailed guide to building and testing on iOS, read the docs:
-# https://circleci.com/docs/2.0/testing-ios/
+# https://circleci.com/docs/testing-ios/
 version: 2.1
 
 # Define a job to be invoked later in a workflow.
-# See: https://circleci.com/docs/2.0/configuration-reference/#jobs
+# See: https://circleci.com/docs/jobs-steps/#jobs-overview & https://circleci.com/docs/configuration-reference/#jobs
 jobs:
   build:
-    # Specify the execution environment. You can specify an image from Dockerhub or use one of our Convenience Images from CircleCI's Developer Hub.
-    # See: https://circleci.com/docs/2.0/configuration-reference/#docker-machine-macos-windows-executor
+    # Specify the execution environment. 
+    # See: https://circleci.com/docs/executor-intro/ & https://circleci.com/docs/configuration-reference/#executor-job
     macos:
-      xcode: 15.0.1 # Specify the Xcode version to use
+      # Specify the Xcode version you desire here
+      # See: https://circleci.com/docs/using-macos/
+      xcode: 15.2.0 
 
     # Add steps to the job
-    # See: https://circleci.com/docs/2.0/configuration-reference/#steps
+    # See: https://circleci.com/docs/jobs-steps/#steps-overview & https://circleci.com/docs/configuration-reference/#steps
     steps:
       - checkout
-      - run: fastlane scan --project "DSKitExplorer/DSKitExplorer.xcodeproj" --device "iPhone 12 (15.4)"  # Run tests using Fastlane
+      - run: fastlane scan --project "DSKitExplorer/DSKitExplorer.xcodeproj" --device "iPhone SE (3rd generation) (17.0)"  # Run tests using Fastlane
       # Collect XML test results data to show in the UI, and save the same XML
       # files under test-results folder in the Artifacts tab
       - store_test_results:
@@ -26,8 +29,8 @@ jobs:
           path: test_output
           destination: scan-output
 
-# Invoke jobs via workflows
-# See: https://circleci.com/docs/2.0/configuration-reference/#workflows
+# Orchestrate jobs using workflows
+# See: https://circleci.com/docs/workflows/ & https://circleci.com/docs/configuration-reference/#workflows
 workflows:
   sample: # This is the name of the workflow, feel free to change it to better match your workflow.
     # Inside the workflow, you define the jobs you want to run.

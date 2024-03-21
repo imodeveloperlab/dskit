@@ -10,7 +10,11 @@ import XCTest
 
 class SegmentsLayoutTests: XCTestCase {
     
+    override func setUp() async throws {
+        SnapshotTesting.diffTool = "open"
+    }
+    
     func testSegment() {
-        assertSnapshot(matching: SegmentViewController(), as: .image)
+        assertSnapshot(matching: SegmentViewController(), as: .image(on: .iPhoneX))
     }
 }

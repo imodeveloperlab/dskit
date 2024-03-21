@@ -10,19 +10,23 @@ import XCTest
 
 class ButtonsLayoutTests: XCTestCase {
     
+    override func setUp() async throws {
+        SnapshotTesting.diffTool = "open"
+    }
+    
     func testButtons() {
-        assertSnapshot(matching: ButtonsVC(), as: .image)
+        assertSnapshot(matching: ButtonsVC(), as: .image(on: .iPhoneX))
     }
     
     func testButtonGrid() {
-        assertSnapshot(matching: ButtonGridVC(), as: .image)
+        assertSnapshot(matching: ButtonGridVC(), as: .image(on: .iPhoneX))
     }
     
     func testButtonList() {
-        assertSnapshot(matching: ButtonListVC(), as: .image)
+        assertSnapshot(matching: ButtonListVC(), as: .image(on: .iPhoneX))
     }
     
     func testButtonGallery() {
-        assertSnapshot(matching: ButtonGalleryVC(), as: .image)
+        assertSnapshot(matching: ButtonGalleryVC(), as: .image(on: .iPhoneX))
     }
 }

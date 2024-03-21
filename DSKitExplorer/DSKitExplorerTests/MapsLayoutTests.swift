@@ -10,7 +10,11 @@ import XCTest
 
 class MapsLayoutTests: XCTestCase {
     
+    override func setUp() async throws {
+        SnapshotTesting.diffTool = "open"
+    }
+    
     func testMap() {
-        assertSnapshot(matching: MapViewController(), as: .image)
+        assertSnapshot(matching: MapViewController(), as: .image(on: .iPhoneX))
     }
 }

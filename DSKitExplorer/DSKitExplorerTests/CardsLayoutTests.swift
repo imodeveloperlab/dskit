@@ -10,7 +10,11 @@ import XCTest
 
 class CardsLayoutTests: XCTestCase {
     
+    override func setUp() async throws {
+        SnapshotTesting.diffTool = "open"
+    }
+    
     func testCards() {
-        assertSnapshot(matching: CardViewController(), as: .image)
+        assertSnapshot(matching: CardViewController(), as: .image(on: .iPhoneX))
     }
 }

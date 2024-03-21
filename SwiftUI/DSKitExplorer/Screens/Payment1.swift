@@ -1,0 +1,137 @@
+//
+//  Payment1.swift
+//  DSKitCore
+//
+//  Created by Ivan Borinschi on 21.12.2022.
+//
+
+import SwiftUI
+import DSKit
+
+struct Payment1: View {
+    
+    @Environment(\.dismiss) var dismiss
+    @ObservedObject var viewModel = Payment1Model()
+    
+    var body: some View {
+        ScrollView {
+            DSVStack {
+                
+                RadioPickerView(
+                    data: viewModel.paymentMethods,
+                    id: \.id,
+                    selected: $viewModel.selected
+                ) { method in
+                    PaymentMethod(method: method)
+                }
+                
+                DSButton(
+                    title: "Add new credit card",
+                    rightSFSymbolName: "plus.circle",
+                    style: .light,
+                    action: { dismiss() }
+                )
+                
+            }.dsPadding(.horizontal)
+            
+        }.safeAreaInset(edge: .bottom) {
+            DSVStack {
+                DSHStack {
+                    DSText("Next Step:", .smallTitle)
+                    DSText("Shipping address", .subheadlineWithSize(14))
+                }
+                DSButton(
+                    title: "Continue",
+                    rightSFSymbolName: "arrow.right",
+                    pushContentToSides: true,
+                    style: .default,
+                    action: { }
+                )
+            }.dsPadding()
+        }.dsBackground()
+    }
+}
+
+extension Payment1 {
+    
+    // MARK: - Payment Method
+    
+    struct PaymentMethod: View {
+        let method: Data
+        var body: some View {
+            DSVStack(spacing: .smaller) {
+                DSHStack(spacing: .regular) {
+                    DSImageView(
+                        uiImageName: method.type.replacingOccurrences(of: " ", with: ""),
+                        size: .size(width: 50, height: 30)
+                    ).dsCornerRadius()
+                    DSVStack(spacing: .zero) {
+                        DSText("\(method.type) **** \(method.end)", .smallTitle)
+                        DSText("\(method.holder) \(method.expire)", .smallSubtitle)
+                    }
+                }.frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
+            }
+        }
+        
+        struct Data: Identifiable, Equatable {
+            let id = UUID()
+            let holder: String
+            let type: String
+            let expire: String
+            let end: String
+            var selected: Bool = false
+        }
+    }
+}
+
+// MARK: - View Model
+
+final class Payment1Model: ObservableObject {
+    
+    let paymentMethods: [Payment1.PaymentMethod.Data] = [
+        .init(
+            holder: "John Doe",
+            type: "Visa",
+            expire: "04/23",
+            end: "5110"
+        ),
+        .init(
+            holder: "Jane Doe",
+            type: "American Express",
+            expire: "04/23",
+            end: "324",
+            selected: true
+        ),
+        .init(
+            holder: "John Doe",
+            type: "Master Card",
+            expire: "04/23",
+            end: "1246"
+        ),
+        .init(
+            holder: "Jane Doe",
+            type: "Visa",
+            expire: "04/23",
+            end: "3481"
+        )
+    ]
+    
+    @Published var selected: Payment1.PaymentMethod.Data
+    
+    init() {
+        self.selected = paymentMethods.first!
+    }
+}
+
+// MARK: - Preview
+
+struct Payment1_Previews: PreviewProvider {
+    static var previews: some View {
+        PreviewForEach {
+            NavigationView {
+                Payment1()
+                    .navigationTitle("Payment")
+            }
+        }
+    }
+}

@@ -1,0 +1,137 @@
+//
+//  ItemDetails1.swift
+//  DSKitCore
+//
+//  Created by Ivan Borinschi on 21.12.2022.
+//
+
+import SwiftUI
+import DSKit
+
+struct ItemDetails1: View {
+    
+    @Environment(\.dismiss) var dismiss
+    let viewModel = ItemDetails1Model()
+    
+    var body: some View {
+        ScrollView {
+            DSVStack(spacing: .regular) {
+                
+                DSGallery(height: 290, data: viewModel.imageGallery, id: \.self) { imageUrl in
+                    DSImageView(url: imageUrl).dsCornerRadius()
+                }
+                
+                Group {
+                    DSVStack(spacing: .zero) {
+                        DSText(viewModel.title, .title2)
+                        DSText(viewModel.subtitle, .subheadline)
+                    }
+                    
+                    DSPriceView(price: viewModel.price, size: .large)
+                    
+                    QuantityPicker()
+                    
+                    DSHStack {
+                        SelectView(title: "Size", selection: "US 14").onTap { }
+                        SelectColorView(title: "Color", selection: .yellow, label: "Yellow").onTap { }
+                    }
+                    
+                    DSText(viewModel.description, .caption1)
+                    
+                }.dsPadding(.horizontal)
+            }
+        }
+        .safeAreaInset(edge: .bottom) {
+            BottomContainerView {
+                DSButton(title: "Add to cart", rightSFSymbolName: "cart.fill") {
+                    dismiss()
+                }
+                DSText(viewModel.priceDisclaimer, .caption2, multilineTextAlignment: .center).dsPadding(.horizontal)
+            }
+        }
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                ToolbarSFSymbolButton(name: "square.and.arrow.up.fill").onTap { dismiss() }
+            }
+            ToolbarItem(placement: .navigationBarTrailing) {
+                ToolbarSFSymbolButton(name: "heart").onTap { dismiss() }
+            }
+        }
+        .dsBackground()
+    }
+}
+
+extension ItemDetails1 {
+    
+    // MARK: - Select View
+    
+    struct SelectView: View {
+        let title: String
+        let selection: String
+        var body: some View {
+            DSHStack {
+                DSText(title, .smallTitle)
+                Spacer()
+                DSText(selection, .smallSubtitle)
+                ChevronView()
+            }
+            .dsHeight(40)
+            .dsPadding(.horizontal)
+            .dsSecondaryBackground()
+            .dsCornerRadius()
+        }
+    }
+    
+    struct SelectColorView: View {
+        let title: String
+        let selection: Color
+        let label: String
+        var body: some View {
+            DSHStack {
+                DSText(title, .smallTitle)
+                Spacer()
+                DSText(label, .smallSubtitle)
+                selection
+                    .dsSize(20)
+                    .dsCornerRadius()
+                ChevronView()
+            }
+            .dsHeight(40)
+            .dsPadding(.horizontal)
+            .dsSecondaryBackground()
+            .dsCornerRadius()
+        }
+    }
+}
+
+// MARK: - Model
+
+final class ItemDetails1Model: ObservableObject {
+    let imageGallery = [p1Image, p3Image, p2Image]
+    let price = DSPrice(amount: "200.0", regularAmount: "200", currency: "$", discountBadge: "80$ OFF")
+    let title = "Women's Running Shoe"
+    let subtitle = "Nike Revolution 5"
+    let description = "The Nike Revolution 5 cushions your stride with soft foam to keep you running in comfort. Lightweight knit material wraps your foot in breathable support, while a minimalist design fits in anywhere your day takes you."
+    let priceDisclaimer = "The price listed here is subject to change. The final amount will be displayed on the checkout screen."
+}
+
+// MARK: - Preview
+
+struct ItemDetails1_Previews: PreviewProvider {
+    
+    static var previews: some View {
+        PreviewForEach {
+            NavigationView {
+                ItemDetails1()
+                    .navigationTitle("Details")
+                    .navigationBarTitleDisplayMode(.inline)
+            }
+        }
+    }
+}
+
+// MARK: - Image Links
+
+fileprivate let p1Image = URL(string: "https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg?cs=srgb&dl=pexels-melvin-buezo-2529148.jpg&fm=jpg")
+fileprivate let p2Image = URL(string: "https://images.pexels.com/photos/3261069/pexels-photo-3261069.jpeg?cs=srgb&dl=pexels-wallace-chuck-3261069.jpg&fm=jpg")
+fileprivate let p3Image = URL(string: "https://images.pexels.com/photos/5710082/pexels-photo-5710082.jpeg?cs=srgb&dl=pexels-ox-street-5710082.jpg&fm=jpg")

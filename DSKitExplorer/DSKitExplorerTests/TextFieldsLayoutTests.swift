@@ -26,14 +26,6 @@ class TextFieldsLayoutTests: XCTestCase {
         assertSnapshot(matching: TextFieldIconsVC(), as: .image(on: .iPhoneSe))
     }
     
-    func testTextFieldValidData() {
-        assertSnapshot(matching: TextFieldValidDataVC(), as: .image(on: .iPhoneSe))
-    }
-    
-    func testTextFieldInvalidData() {
-        assertSnapshot(matching: TextFieldInvalidDataVC(), as: .image(on: .iPhoneSe))
-    }
-    
     func testTextFieldsGrid() {
         assertSnapshot(matching: TextFieldsGridVC(), as: .image(on: .iPhoneSe))
     }

@@ -11,50 +11,60 @@ import DSKit
 struct Categories4: View {
     
     @Environment(\.dismiss) var dismiss
-    private let categories: [Category] = [
-        Category(title: "Shorts", description: "2.5k items", image: personInWhite),
-        Category(title: "Jackets", description: "20K items", image: personOnOrangeBg),
-        Category(title: "Blazers", description: "915 items", image: blazers),
-        Category(title: "Track Pants", description: "600 items", image: pantsTrack),
-        Category(title: "Shirts", description: "1.4K items", image: shirtsThreePairs),
-        Category(title: "Jeans", description: "345 items", image: jeansOnBlackBg),
-        Category(title: "Shoes", description: "812 items", image: shoesThreePairs),
-        Category(title: "Watches", description: "20K items", image: watchesOnYellowBg)
-    ]
+    let viewModel = Categories4Model()
     
     var body: some View {
         ScrollView {
-            DSGrid(data: categories, id: \.id) { category in
+            DSGrid(data: viewModel.categories, id: \.id) { category in
                 CategoryView(category: category).onTap { dismiss() }
             }.dsPadding(.horizontal)
         }.dsBackground()
     }
 }
 
-fileprivate struct CategoryView: View {
-        
-    let category: Category
+extension Categories4 {
     
-    var body: some View {
-        DSVStack(alignment: .center, spacing: .zero) {
-            DSImageView(url: category.image)
-            DSVStack(alignment: .center, spacing: .extraSmall) {
-                DSText(category.title, .smallTitle)
-                DSText(category.description, .subheadline)
-            }.dsPadding(.small)
+    // MARK: - Category View
+    
+    struct CategoryView: View {
+        let category: Data
+        var body: some View {
+            DSVStack(alignment: .center, spacing: .zero) {
+                DSImageView(url: category.image)
+                DSVStack(alignment: .center, spacing: .extraSmall) {
+                    DSText(category.title, .smallTitle)
+                    DSText(category.description, .subheadline)
+                }.dsPadding(.small)
+            }
+            .dsSecondaryBackground()
+            .dsCornerRadius()
+            .dsHeight(250)
         }
-        .dsSecondaryBackground()
-        .dsCornerRadius()
-        .dsHeight(250)
+        struct Data: Identifiable {
+            var id = UUID()
+            let title: String
+            let description: String
+            let image: URL?
+        }
     }
 }
 
-fileprivate struct Category: Identifiable {
-    var id = UUID()
-    let title: String
-    let description: String
-    let image: URL?
+// MARK: - View Model
+
+final class Categories4Model {
+    let categories: [Categories4.CategoryView.Data] = [
+        .init(title: "Shorts", description: "2.5k items", image: personInWhite),
+        .init(title: "Jackets", description: "20K items", image: personOnOrangeBg),
+        .init(title: "Blazers", description: "915 items", image: blazers),
+        .init(title: "Track Pants", description: "600 items", image: pantsTrack),
+        .init(title: "Shirts", description: "1.4K items", image: shirtsThreePairs),
+        .init(title: "Jeans", description: "345 items", image: jeansOnBlackBg),
+        .init(title: "Shoes", description: "812 items", image: shoesThreePairs),
+        .init(title: "Watches", description: "20K items", image: watchesOnYellowBg)
+    ]
 }
+
+// MARK: - Preview
 
 struct Categories4_Previews: PreviewProvider {
     static var previews: some View {
@@ -66,6 +76,8 @@ struct Categories4_Previews: PreviewProvider {
         }
     }
 }
+
+// MARK: - Image Links
 
 fileprivate let personInWhite = URL(string: "https://images.pexels.com/photos/3622624/pexels-photo-3622624.jpeg?cs=srgb&dl=pexels-wesley-carvalho-3622624.jpg&fm=jpg")
 fileprivate let personOnOrangeBg = URL(string: "https://images.pexels.com/photos/3641363/pexels-photo-3641363.jpeg?cs=srgb&dl=pexels-mikotoraw-3641363.jpg&fm=jpg")

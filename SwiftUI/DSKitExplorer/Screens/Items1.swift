@@ -22,31 +22,38 @@ struct Items1: View {
         .dsBackground()
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
-                DSImageView(
-                    sfSymbol: "square.and.arrow.up",
-                    size: .mediumLarge,
-                    tint: .color(.primaryViewButtonBackground)
-                ).onTap { dismiss() }
+                ToolbarSFSymbolButton(name: "square.and.arrow.up")
+                    .onTap { dismiss() }
             }
             ToolbarItem(placement: .navigationBarTrailing) {
-                DSImageView(
-                    sfSymbol: "heart",
-                    size: .mediumLarge,
-                    tint: .color(.primaryViewButtonBackground)
-                ).onTap { dismiss() }
+                ToolbarSFSymbolButton(name: "heart")
+                    .onTap { dismiss() }
             }
         }
     }
+}
+
+extension Items1 {
+    
+    // MARK: - Product View
     
     struct ProductView: View {
-        let product: Product
+        let product: Data
         var body: some View {
             ZStack(alignment: .bottom) {
                 ZStack {
                     DSImageView(url: product.image)
-                    LinearGradient(gradient: Gradient(colors: [Color.black.opacity(0.0), Color.black.opacity(0.2), Color.black.opacity(1)]),
-                                   startPoint: .top,
-                                   endPoint: .bottom)
+                    LinearGradient(
+                        gradient: Gradient(
+                            colors: [
+                                Color.black.opacity(0.0),
+                                Color.black.opacity(0.2),
+                                Color.black.opacity(1)
+                            ]
+                        ),
+                        startPoint: .top,
+                        endPoint: .bottom
+                    )
                 }.overlay(alignment: .topLeading) {
                     if let tag = product.tag {
                         DSText(tag, .headlineWithSize(9))
@@ -78,34 +85,24 @@ struct Items1: View {
             .dsCornerRadius()
             .dsHeight(250)
         }
-    }
-    
-    struct Product: Identifiable {
-        var id = UUID()
-        let title: String
-        let description: String
-        var tag: String? = nil
-        let price: DSPrice
-        var favourite: Bool = false
-        let image: URL?
-    }
-}
-
-struct Items1_Previews: PreviewProvider {
-    static var previews: some View {
-        PreviewForEach {
-            NavigationView {
-                Items1()
-                    .navigationTitle("Items")
-                    .navigationBarTitleDisplayMode(.inline)
-            }
+        
+        struct Data: Identifiable {
+            var id = UUID()
+            let title: String
+            let description: String
+            var tag: String? = nil
+            let price: DSPrice
+            var favourite: Bool = false
+            let image: URL?
         }
     }
 }
 
+// MARK: - View Model
+
 final class Items1Model {
     
-    let products: [Items1.Product] = [
+    let products: [Items1.ProductView.Data] = [
         .init(
             title: "Suede Chuck-a Boots",
             description: "River Island",
@@ -148,13 +145,27 @@ final class Items1Model {
             image: jodhpurBootsImage
         )
     ]
-    
-    static let bootsImage = URL(string: "https://images.pexels.com/photos/267242/pexels-photo-267242.jpeg?cs=srgb&dl=pexels-pixabay-267242.jpg&fm=jpg")
-    static let shoesImage = URL(string: "https://images.pexels.com/photos/1904769/pexels-photo-1904769.jpeg?cs=srgb&dl=pexels-sebastian-palomino-1904769.jpg&fm=jpg")
-    static let hikingBootsImage = URL(string: "https://images.pexels.com/photos/755871/pexels-photo-755871.jpeg?cs=srgb&dl=pexels-simon-migaj-755871.jpg&fm=jpg")
-    static let motocrossBootsImage = URL(string: "https://images.pexels.com/photos/718981/pexels-photo-718981.jpeg?cs=srgb&dl=pexels-aidan-jarrett-718981.jpg&fm=jpg")
-    static let ridingBootsImage = URL(string: "https://images.pexels.com/photos/6410600/pexels-photo-6410600.jpeg?cs=srgb&dl=pexels-jessica-jochheim-6410600.jpg&fm=jpg")
-    static let jodhpurBootsImage = URL(string: "https://images.pexels.com/photos/2682289/pexels-photo-2682289.jpeg?cs=srgb&dl=pexels-andrew-neel-2682289.jpg&fm=jpg")
 }
 
+// MARK: - Preview
 
+struct Items1_Previews: PreviewProvider {
+    static var previews: some View {
+        PreviewForEach {
+            NavigationView {
+                Items1()
+                    .navigationTitle("Items")
+                    .navigationBarTitleDisplayMode(.inline)
+            }
+        }
+    }
+}
+
+// MARK: - Image Links
+
+fileprivate let bootsImage = URL(string: "https://images.pexels.com/photos/267242/pexels-photo-267242.jpeg?cs=srgb&dl=pexels-pixabay-267242.jpg&fm=jpg")
+fileprivate let shoesImage = URL(string: "https://images.pexels.com/photos/1904769/pexels-photo-1904769.jpeg?cs=srgb&dl=pexels-sebastian-palomino-1904769.jpg&fm=jpg")
+fileprivate let hikingBootsImage = URL(string: "https://images.pexels.com/photos/755871/pexels-photo-755871.jpeg?cs=srgb&dl=pexels-simon-migaj-755871.jpg&fm=jpg")
+fileprivate let motocrossBootsImage = URL(string: "https://images.pexels.com/photos/718981/pexels-photo-718981.jpeg?cs=srgb&dl=pexels-aidan-jarrett-718981.jpg&fm=jpg")
+fileprivate let ridingBootsImage = URL(string: "https://images.pexels.com/photos/6410600/pexels-photo-6410600.jpeg?cs=srgb&dl=pexels-jessica-jochheim-6410600.jpg&fm=jpg")
+fileprivate let jodhpurBootsImage = URL(string: "https://images.pexels.com/photos/2682289/pexels-photo-2682289.jpeg?cs=srgb&dl=pexels-andrew-neel-2682289.jpg&fm=jpg")

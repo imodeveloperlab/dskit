@@ -11,42 +11,41 @@ import DSKit
 struct Filters3: View {
     
     @Environment(\.dismiss) var dismiss
-    let sizes = ["8", "9", "10", "11", "12", "13", "14", "15", "16"]
-    let colors = [UIColor(0xFFC6A3),
-                  UIColor(0xF88F6F),
-                  UIColor(0x5CB946),
-                  UIColor(0x006A7A),
-                  UIColor(0xC3FCF1),
-                  UIColor(0x28527a),
-                  UIColor(0x8ac4d0),
-                  UIColor(0xfbeeac)]
+    @ObservedObject var viewModel = Filters3Model()
     
     var body: some View {
         ScrollView {
             DSVStack {
-                DSVStack(spacing: .smaller) {
-                    DSText("Sort by", .subheadline)
-                    DSVStack {
-                        OptionView(title: "Brand", option: "Adidas, Puma, HRX")
-                        OptionToggleView(title: "Free shipping")
-                        OptionView(title: "Shipping to", option: "London UK")
-                        OptionRangeView(title: "Range")                    }
-                }.dsPadding(.horizontal)
                 
-                DSVStack(spacing: .smaller) {
-                    DSText("Size, UK", .subheadline).dsPadding(.horizontal)
-                    DSHScroll(data: sizes, id: \.self) { size in
-                            SizeView(size: size, selected: size == "10")
-                    }
+                DSVStack {
+                    OptionView(title: "Brand", option: "Adidas, Puma, HRX")
+                    OptionToggleView(title: "Free shipping")
+                    OptionView(title: "Shipping to", option: "London UK")
+                    OptionRangeView(title: "Range")
                 }
                 
-                DSVStack(spacing: .smaller) {
-                    DSText("Color", .subheadline).dsPadding(.horizontal)
-                    DSHScroll(data: colors, id: \.self) { color in
-                        ColorView(color: color, selected: color == UIColor(0xFFC6A3))
-                    }
+                PickerView(
+                    data: viewModel.sizes,
+                    id: \.self,
+                    selected: $viewModel.selectedSize
+                ) { size in
+                    DSText(size, .smallTitle)
+                        .frame(maxWidth: .infinity)
+                        .dsSize(50)
+                        .dsSecondaryBackground()
                 }
-            }
+                .dsSectionStyle(title: "Size")
+                
+                PickerView(
+                    data: viewModel.colors,
+                    id: \.self,
+                    selected: $viewModel.selectedColor
+                ) { color in
+                    Color(uiColor: color).dsSize(50)
+                }
+                .dsSectionStyle(title: "Color")
+                
+            }.dsPadding(.horizontal)
             
         }.safeAreaInset(edge: .bottom) {
             DSButton(
@@ -64,103 +63,82 @@ struct Filters3: View {
     }
 }
 
-fileprivate struct OptionView: View {
-    let title: String
-    let option: String
-    var body: some View {
-        DSHStack {
-            DSText(title, .smallTitle)
-            Spacer()
-            DSText(option, .subheadlineWithSize(14))
-            ChevronView()
+extension Filters3 {
+    
+    // MARK: - Option View
+    
+    struct OptionView: View {
+        let title: String
+        let option: String
+        var body: some View {
+            DSHStack {
+                DSText(title, .smallTitle)
+                Spacer()
+                DSText(option, .subheadlineWithSize(14))
+                ChevronView()
+            }.dsCardStyle()
         }
-        .dsPadding(.horizontal)
-        .dsSecondaryBackground()
-        .dsCornerRadius()
-        .onTap { }
     }
-}
+    
+    // MARK: - Toggle View
+    
+    struct OptionToggleView: View {
+        let title: String
+        @State private var isSwitchOn = true
+        @Environment(\.appearance) var appearance: DSAppearance
 
-fileprivate struct OptionToggleView: View {
-    let title: String
-    @State private var isSwitchOn = true
-    @Environment(\.appearance) var appearance: DSAppearance
-
-    var body: some View {
-        DSHStack {
-            DSText(title, .smallTitle)
-            Spacer()
-            Toggle("Show welcome message", isOn: $isSwitchOn)
-                .tint(appearance.brandColor.semanticGreenColor.color)
-                .labelsHidden()
+        var body: some View {
+            DSHStack {
+                DSText(title, .smallTitle)
+                Spacer()
+                Toggle("Show welcome message", isOn: $isSwitchOn)
+                    .tint(appearance.brandColor.semanticGreenColor.color)
+                    .labelsHidden()
+            }.dsCardStyle()
         }
-        .dsPadding(.horizontal)
-        .dsSecondaryBackground()
-        .dsCornerRadius()
     }
-}
+    
+    // MARK: - Range View
+    
+    struct OptionRangeView: View {
+        let title: String
+        @State private var value: Double = 20
+        @Environment(\.appearance) var appearance: DSAppearance
 
-fileprivate struct OptionRangeView: View {
-    let title: String
-    @State private var value: Double = 20
-    @Environment(\.appearance) var appearance: DSAppearance
-
-    var body: some View {
-        DSHStack {
-            DSText(title, .smallTitle)
-            Spacer()
-            Slider(value: $value, in: 0...100).tint(appearance.brandColor.semanticGreenColor.color)
-            DSText("\(round(value))", .subheadline)
-                .dsWidth(40)
+        var body: some View {
+            DSHStack {
+                DSText(title, .smallTitle)
+                Spacer()
+                Slider(value: $value, in: 0...100).tint(appearance.brandColor.semanticGreenColor.color)
+                DSText("\(round(value))", .subheadline)
+                    .dsWidth(40)
+            }.dsCardStyle()
         }
-        .dsPadding(.horizontal)
-        .dsSecondaryBackground()
-        .dsCornerRadius()
     }
 }
 
-fileprivate struct SizeView: View {
+// MARK: - View Model
+
+final class Filters3Model: ObservableObject {
     
-    @Environment(\.appearance) var appearance: DSAppearance
-    @Environment(\.colorGroup) var colorGroup: DSColorGroup
+    @Published var selectedSize: String = "10"
+    let sizes = ["8", "9", "10", "11", "12", "13", "14", "15", "16"]
     
-    let size: String
-    var selected: Bool = false
+    @Published var selectedColor: UIColor = UIColor(0xF88F6F)
+    let colors = [UIColor(0xFFC6A3),
+                  UIColor(0xF88F6F),
+                  UIColor(0x5CB946),
+                  UIColor(0x006A7A),
+                  UIColor(0x28527a),
+                  UIColor(0x8ac4d0),
+                  UIColor(0xfbeeac)]
     
-    var body: some View {
-        DSText(size, .smallTitle)
-        .dsSize(40)
-        .dsSecondaryBackground()
-        .dsCornerRadius()
-        .overlay(
-            RoundedRectangle(cornerRadius: colorGroup.colors(from: appearance).cornerRadius)
-                .stroke(appearance.primaryView.button.background.color, lineWidth: selected ? 2 : 0)
-        )
-        .padding(1)
-        .onTap { }
-    }
+    
+    @Published var selectedSortByOption = "Chelsea Boots"
+    let sortByOptions = ["Boots", "Chelsea Boots", "Casual Sneakers", "Casual Shoes"]
 }
 
-fileprivate struct ColorView: View {
-    
-    @Environment(\.appearance) var appearance: DSAppearance
-    @Environment(\.colorGroup) var colorGroup: DSColorGroup
-    
-    let color: UIColor
-    var selected: Bool = false
-    
-    var body: some View {
-        Color(uiColor: color)
-            .dsSize(40)
-            .dsCornerRadius()
-            .overlay(
-                RoundedRectangle(cornerRadius: colorGroup.colors(from: appearance).cornerRadius)
-                    .stroke(appearance.primaryView.button.background.color, lineWidth: selected ? 2 : 0)
-            )
-            .padding(1)
-    }
-}
-
+// MARK: - Preview
 
 struct Filters3_Previews: PreviewProvider {
     static var previews: some View {

@@ -69,7 +69,6 @@ struct Filters2: View {
             }
         }.dsBackground()
     }
-   
 }
 
 extension Filters2 {
@@ -91,88 +90,6 @@ extension Filters2 {
             let title: String
             let option: String
         }
-    }
-}
-
-
-
-fileprivate struct RadioOptionView: View {
-    let title: String
-    var selected: Bool = false
-    
-    var body: some View {
-        DSHStack {
-            DSText(title, selected ?  .smallTitle : .subheadlineWithSize(14))
-            Spacer()
-            if selected {
-                DSImageView(sfSymbol: "checkmark.circle.fill", size: .medium, tint: .customColor(.green))
-            } else {
-                DSImageView(sfSymbol: "circle", size: .medium, tint: .text(.subheadline))
-            }
-        }
-        .dsPadding()
-        .dsSecondaryBackground()
-        .dsCornerRadius()
-        .onTap { }
-    }
-}
-
-fileprivate struct OptionView: View {
-    let title: String
-    let option: String
-    var body: some View {
-        DSHStack {
-            DSText(title, .smallTitle)
-            Spacer()
-            DSText(option, .subheadlineWithSize(14))
-            ChevronView()
-        }
-        .dsPadding()
-        .dsSecondaryBackground()
-        .dsCornerRadius()
-        .onTap { }
-    }
-}
-
-fileprivate struct SizeView: View {
-    
-    @Environment(\.appearance) var appearance: DSAppearance
-    @Environment(\.colorGroup) var colorGroup: DSColorGroup
-    
-    let size: String
-    var selected: Bool = false
-    
-    var body: some View {
-        DSText(size, .smallTitle)
-        .dsSize(40)
-        .dsSecondaryBackground()
-        .dsCornerRadius()
-        .overlay(
-            RoundedRectangle(cornerRadius: colorGroup.colors(from: appearance).cornerRadius)
-                .stroke(appearance.primaryView.button.background.color, lineWidth: selected ? 2 : 0)
-        )
-        .padding(1)
-        .onTap { }
-    }
-}
-
-fileprivate struct ColorView: View {
-    
-    @Environment(\.appearance) var appearance: DSAppearance
-    @Environment(\.colorGroup) var colorGroup: DSColorGroup
-    
-    let color: UIColor
-    var selected: Bool = false
-    
-    var body: some View {
-        Color(uiColor: color)
-            .dsSize(40)
-            .dsCornerRadius()
-            .overlay(
-                RoundedRectangle(cornerRadius: colorGroup.colors(from: appearance).cornerRadius)
-                    .stroke(appearance.primaryView.button.background.color, lineWidth: selected ? 2 : 0)
-            )
-            .padding(1)
     }
 }
 

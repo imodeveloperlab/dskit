@@ -11,95 +11,111 @@ import DSKit
 struct Categories1: View {
     
     @Environment(\.dismiss) var dismiss
+    let viewModel = Categories1Model()
         
     var body: some View {
         ScrollView {
-            DSVStack {
-                DSVStack {
-                    CategoryView(
-                        title: "Shoes",
-                        description: "812 items",
-                        image: URL.purpleShoes
-                    )
-                     CategoryView(
-                         title: "Shirts",
-                         description: "1.4K items"
-                     )
-                     CategoryView(
-                         title: "Jeans",
-                         description: "345 items",
-                         image: URL.jeansPairs
-                     )
-                     CategoryView(
-                         title: "Watches",
-                         description: "20K items",
-                         image: URL.watchesOnYellowBg
-                     )
-                     CategoryView(
-                         title: "Shorts",
-                         description: "2.5k items"
-                     )
-                    CategoryView(
-                        title: "Track Pants",
-                        description: "600 items",
-                        image: URL.pantsTrack
-                    )
-                    CategoryView(
-                        title: "Jackets",
-                        description: "20K items"
-                    )
-                    CategoryView(
-                        title: "Blazers",
-                        description: "915 items",
-                        image: URL.blazers
-                    )
-                    CategoryView(
-                        title: "Socks",
-                        description: "75.1K items"
-                    )
+            DSVStack(spacing: .smaller) {
+                ForEach(viewModel.categories) { category in
+                    CategoryView(category: category)
+                        .onTap { }
                 }
             }.dsPadding(.horizontal)
-        }
-        .dsBackground()
+        }.dsBackground()
     }
 }
 
-fileprivate struct CategoryView: View {
+extension Categories1 {
     
-    @Environment(\.appearance) var appearance: DSAppearance
+    // MARK: - Category View
     
-    let title: String
-    let description: String
-    var image: URL? = nil
-    
-    var body: some View {
-        DSHStack(spacing: .regular) {
-            if image != nil {
-                DSImageView(url: image,  size: .size(width: 60, height: 60))
-                    .dsCornerRadius()
-                    .dsPadding(.leading, .small)
-                    .dsPadding(.top, .small)
-                    .dsPadding(.bottom, .small)
-            }
-            
-            DSVStack {
-                DSVStack(spacing: .extraSmall) {
-                    DSText(title, .smallTitle)
-                    DSText(description, .smallSubtitle)
+    struct CategoryView: View {
+        let category: Data
+        var body: some View {
+            DSHStack(spacing: .regular) {
+                if category.image != nil {
+                    DSImageView(url: category.image,  size: .size(width: 60, height: 60))
+                        .dsCornerRadius()
+                        .dsPadding(.leading, .small)
+                        .dsPadding(.top, .small)
+                        .dsPadding(.bottom, .small)
                 }
+                
+                DSVStack {
+                    DSVStack(spacing: .extraSmall) {
+                        DSText(category.title, .smallTitle)
+                        DSText(category.description, .smallSubtitle)
+                    }
+                }
+                .dsPadding(category.image != nil ? .zero : .regular)
+                .frame(maxWidth: .infinity, alignment: .leading)
             }
-            .dsPadding(image != nil ? .zero : .regular)
-            .frame(maxWidth: .infinity, alignment: .leading)
+            .overlay(alignment: .trailing) {
+                ChevronView()
+                    .dsPadding()
+            }
+            .dsSecondaryBackground()
+            .dsCornerRadius()
         }
-        .overlay(alignment: .trailing) {
-            ChevronView()
-                .dsPadding()
+        
+        struct Data: Identifiable {
+            let id = UUID()
+            let title: String
+            let description: String
+            var image: URL? = nil
         }
-        .dsSecondaryBackground()
-        .dsCornerRadius()
-        .onTap { }
     }
 }
+
+// MARK: - View Model
+
+final class Categories1Model {
+    let categories: [Categories1.CategoryView.Data] = [
+        .init(
+            title: "Shoes",
+            description: "812 items",
+            image: URL.purpleShoes
+        ),
+        .init(
+             title: "Shirts",
+             description: "1.4K items"
+         ),
+        .init(
+             title: "Jeans",
+             description: "345 items",
+             image: URL.jeansPairs
+         ),
+        .init(
+             title: "Watches",
+             description: "20K items",
+             image: URL.watchesOnYellowBg
+         ),
+        .init(
+             title: "Shorts",
+             description: "2.5k items"
+         ),
+        .init(
+            title: "Track Pants",
+            description: "600 items",
+            image: URL.pantsTrack
+        ),
+        .init(
+            title: "Jackets",
+            description: "20K items"
+        ),
+        .init(
+            title: "Blazers",
+            description: "915 items",
+            image: URL.blazers
+        ),
+        .init(
+            title: "Socks",
+            description: "75.1K items"
+        )
+    ]
+}
+
+// MARK: - Preview
 
 struct Categories1_Previews: PreviewProvider {
     static var previews: some View {

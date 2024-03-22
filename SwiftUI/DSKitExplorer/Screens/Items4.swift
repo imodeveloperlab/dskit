@@ -15,50 +15,38 @@ struct Items4: View {
     
     var body: some View {
         ScrollView {
-            DSVStack {
-                categoriesView
-                productsView.dsPadding(.horizontal)
-            }
+            DSVStack(spacing: .regular) {
+                DSHScroll(data: viewModel.filters, id: \.self) { title in
+                    DSText(title, .headlineWithSize(12))
+                        .dsPadding(.horizontal, .extraLarge)
+                        .dsCardStyle()
+                        .onTap { self.dismiss() }
+                }
+                DSGrid(data: viewModel.products, id: \.id) { product in
+                    ProductView(product: product)
+                }
+            }.dsPadding()
         }
         .dsBackground()
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
-                DSImageView(
-                    sfSymbol: "arrow.up.arrow.down.circle.fill",
-                    size: .mediumLarge,
-                    tint: .color(.primaryViewButtonBackground)
-                ).onTap { dismiss() }
+                ToolbarSFSymbolButton(name: "arrow.up.arrow.down.circle.fill")
+                    .onTap { dismiss() }
             }
             ToolbarItem(placement: .navigationBarTrailing) {
-                DSImageView(
-                    sfSymbol: "line.horizontal.3.decrease.circle.fill",
-                    size: .mediumLarge,
-                    tint: .color(.primaryViewButtonBackground)
-                ).onTap { dismiss() }
+                ToolbarSFSymbolButton(name: "line.horizontal.3.decrease.circle.fill")
+                    .onTap { dismiss() }
             }
         }
     }
+}
+
+extension Items4 {
     
-    var productsView: some View {
-        DSGrid(data: viewModel.products, id: \.id) { product in
-            ProductView(product: product)
-        }
-    }
-    
-    var categoriesView: some View {
-        DSHScroll(data: viewModel.filters, id: \.self) { title in
-            DSText(title, .headlineWithSize(12))
-                .dsHeight(20)
-                .dsPadding(.small)
-                .dsPadding(.horizontal, .extraLarge)
-                .dsSecondaryBackground()
-                .dsCornerRadius()
-                .onTap { self.dismiss() }
-        }
-    }
+    // MARK: - Product View
     
     struct ProductView: View {
-        let product: Product
+        let product: Data
         var body: some View {
             Group {
                 DSVStack(spacing: .zero) {
@@ -85,36 +73,26 @@ struct Items4: View {
                 .onTap { }
             }.dsCornerRadius()
         }
-    }
-    
-    struct Product: Identifiable {
-        var id = UUID()
-        let title: String
-        let description: String
-        var tag: String? = nil
-        let price: DSPrice
-        var favourite: Bool = false
-        let image: URL?
-    }
-}
-
-struct Items4_Previews: PreviewProvider {
-    static var previews: some View {
-        PreviewForEach {
-            NavigationView {
-                Items4()
-                .navigationTitle("Items")
-                .navigationBarTitleDisplayMode(.inline)
-            }
+        
+        struct Data: Identifiable {
+            var id = UUID()
+            let title: String
+            let description: String
+            var tag: String? = nil
+            let price: DSPrice
+            var favourite: Bool = false
+            let image: URL?
         }
     }
 }
+
+// MARK: - View Model
 
 final class Items4Model {
     
     let filters = ["Polo", "Denim", "Jackets", "Shirts", "Shorts", "Sweaters"]
 
-    let products: [Items4.Product] = [
+    let products: [Items4.ProductView.Data] = [
         .init(
             title: "The Iconic Mesh Polo Shirt - All Fits",
             description: "Polo Ralph Lauren",
@@ -164,12 +142,34 @@ final class Items4Model {
             image: p3Image
         )
     ]
-    
-    static let p1Image = URL(string: "https://images.pexels.com/photos/1816643/pexels-photo-1816643.jpeg?cs=srgb&dl=pexels-atef-khaled-1816643.jpg&fm=jpg")
-    static let p2Image = URL(string: "https://images.pexels.com/photos/5325554/pexels-photo-5325554.jpeg?cs=srgb&dl=pexels-anna-shvets-5325554.jpg&fm=jpg")
-    static let p3Image = URL(string: "https://images.pexels.com/photos/2909735/pexels-photo-2909735.jpeg?cs=srgb&dl=pexels-lad-fury-2909735.jpg&fm=jpg")
-    static let p4Image = URL(string: "https://images.pexels.com/photos/2755165/pexels-photo-2755165.jpeg?cs=srgb&dl=pexels-matt-hardy-2755165.jpg&fm=jpg")
-    static let p5Image = URL(string: "https://images.pexels.com/photos/3289663/pexels-photo-3289663.jpeg?cs=srgb&dl=pexels-tnarg-3289663.jpg&fm=jpg")
-    static let p6Image = URL(string: "https://images.pexels.com/photos/3608205/pexels-photo-3608205.jpeg?cs=srgb&dl=pexels-the-happiest-face-%29-3608205.jpg&fm=jpg")
-    static let p7Image = URL(string: "https://images.pexels.com/photos/5999891/pexels-photo-5999891.jpeg?cs=srgb&dl=pexels-ono-kosuki-5999891.jpg&fm=jpg")
 }
+
+// MARK: - Preview
+
+struct Items4_Previews: PreviewProvider {
+    static var previews: some View {
+        PreviewForEach {
+            NavigationView {
+                Items4()
+                .navigationTitle("Items")
+                .navigationBarTitleDisplayMode(.inline)
+            }
+        }
+    }
+}
+
+// MARK: - Image Links
+
+fileprivate let p1Image = URL(string: "https://images.pexels.com/photos/1816643/pexels-photo-1816643.jpeg?cs=srgb&dl=pexels-atef-khaled-1816643.jpg&fm=jpg")
+
+fileprivate let p2Image = URL(string: "https://images.pexels.com/photos/5325554/pexels-photo-5325554.jpeg?cs=srgb&dl=pexels-anna-shvets-5325554.jpg&fm=jpg")
+
+fileprivate let p3Image = URL(string: "https://images.pexels.com/photos/2909735/pexels-photo-2909735.jpeg?cs=srgb&dl=pexels-lad-fury-2909735.jpg&fm=jpg")
+
+fileprivate let p4Image = URL(string: "https://images.pexels.com/photos/2755165/pexels-photo-2755165.jpeg?cs=srgb&dl=pexels-matt-hardy-2755165.jpg&fm=jpg")
+
+fileprivate let p5Image = URL(string: "https://images.pexels.com/photos/3289663/pexels-photo-3289663.jpeg?cs=srgb&dl=pexels-tnarg-3289663.jpg&fm=jpg")
+
+fileprivate let p6Image = URL(string: "https://images.pexels.com/photos/3608205/pexels-photo-3608205.jpeg?cs=srgb&dl=pexels-the-happiest-face-%29-3608205.jpg&fm=jpg")
+
+fileprivate let p7Image = URL(string: "https://images.pexels.com/photos/5999891/pexels-photo-5999891.jpeg?cs=srgb&dl=pexels-ono-kosuki-5999891.jpg&fm=jpg")

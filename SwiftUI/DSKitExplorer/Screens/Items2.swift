@@ -10,147 +10,163 @@ import DSKit
 
 struct Items2: View {
     
-    @Environment(\.appearance) var appearance: DSAppearance
-    @Environment(\.colorGroup) var colorGroup: DSColorGroup
     @Environment(\.dismiss) var dismiss
+    let viewModel = Items2Model()
     
     var body: some View {
         ScrollView {
-            productsView.dsPadding()
+            DSVStack {
+                ForEach(viewModel.products) { product in
+                    ProductView(product: product)
+                }
+            }.dsPadding(.horizontal)
         }
         .dsBackground()
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
-                DSImageView(
-                    sfSymbol: "arrow.up.arrow.down.circle.fill",
-                    size: .mediumLarge,
-                    tint: .color(.primaryViewButtonBackground)
-                ).onTap { dismiss() }
+                ToolbarSFSymbolButton(name: "arrow.up.arrow.down.circle.fill")
+                    .onTap { dismiss() }
             }
             ToolbarItem(placement: .navigationBarTrailing) {
-                DSImageView(
-                    sfSymbol: "line.horizontal.3.decrease.circle.fill",
-                    size: .mediumLarge,
-                    tint: .color(.primaryViewButtonBackground)
-                ).onTap { dismiss() }
+                ToolbarSFSymbolButton(name: "line.horizontal.3.decrease.circle.fill")
+                    .onTap { dismiss() }
             }
-        }
-    }
-    
-    var productsView: some View {
-        DSVStack {
-            ProductView(
-                title: "Jodhpur Boots",
-                description: "House & Versace",
-                price: DSPrice(amount: "84", regularAmount: "94", currency: "$"),
-                favorite: true,
-                image: jodhpurBootsImage
-            )
-            ProductView(
-                title: "Platform derby shoes",
-                description: "Stella McCarthney",
-                price: DSPrice(amount: "92", currency: "$"),
-                favorite: false,
-                image: shoesImage
-            )
-            ProductView(
-                title: "Motocross Boots",
-                description: "Hermes",
-                price: DSPrice(amount: "13", regularAmount: "82", currency: "$", discountBadge: "-69$"),
-                favorite: true,
-                image: motocrossBootsImage
-            )
-            ProductView(
-                title: "Hiking Boots",
-                description: "Dolce & Gabbana",
-                price: DSPrice(amount: "84", currency: "$"),
-                favorite: false,
-                image: hikingBootsImage
-            )
-            ProductView(
-                title: "Suede Chuck-a Boots",
-                description: "River Island",
-                tag: "SALES",
-                price: DSPrice(amount: "22", regularAmount: "89", currency: "$"),
-                favorite: true,
-                image: bootsImage
-            )
-             ProductView(
-                 title: "Riding Boots",
-                 description: "Arrmani",
-                 tag: "50% OFF",
-                 price: DSPrice(amount: "57", regularAmount: "85", currency: "$"),
-                 favorite: false,
-                 image: ridingBootsImage
-             )
         }
     }
 }
 
-fileprivate struct ProductView: View {
+extension Items2 {
     
-    @Environment(\.appearance) var appearance: DSAppearance
+    // MARK: - Product View
     
-    let title: String
-    let description: String
-    var tag: String?
-    let price: DSPrice
-    let favorite: Bool
-    let image: URL?
-    
-    var body: some View {
-        ZStack(alignment: .bottom) {
-            ZStack {
-                DSImageView(url: image)
-                LinearGradient(gradient: Gradient(colors: [Color.black.opacity(0.0), Color.black.opacity(0.2), Color.black.opacity(1)]),
-                               startPoint: .top,
-                               endPoint: .bottom)
-            }.overlay(alignment: .topLeading) {
-                if let tag {
-                    DSText(tag, .headlineWithSize(9))
-                        .dsPadding(.smaller)
-                        .dsBackground()
-                        .dsCornerRadius()
-                        .dsPadding(.small)
+    struct ProductView: View {
+        let product: Data
+        var body: some View {
+            ZStack(alignment: .bottom) {
+                ZStack {
+                    DSImageView(url: product.image)
+                    LinearGradient(
+                        gradient:
+                            Gradient(
+                                colors: [
+                                    Color.black.opacity(0.0),
+                                    Color.black.opacity(0.2),
+                                    Color.black.opacity(1)
+                                ]
+                            ),
+                        startPoint: .top,
+                        endPoint: .bottom
+                    )
+                }.overlay(alignment: .topLeading) {
+                    if let tag = product.tag {
+                        DSText(tag, .headlineWithSize(9))
+                            .dsPadding(.smaller)
+                            .dsBackground()
+                            .dsCornerRadius()
+                            .dsPadding(.small)
+                    }
+                }.overlay(alignment: .topTrailing) {
+                    DSImageView(
+                        sfSymbol: "heart.fill",
+                        size: .regular,
+                        tint: .customColor(product.favorite ? .red : .white)
+                    )
+                    .dsPadding(.small)
+                    .dsBlurBackground(style: .light)
+                    .dsCornerRadius()
+                    .dsPadding(.small)
                 }
-            }.overlay(alignment: .topTrailing) {
-                DSImageView(
-                    sfSymbol: "heart.fill",
-                    size: .regular,
-                    tint: .customColor(favorite ? .red : .white)
-                )
-                .dsPadding(.small)
-                .dsBlurBackground(style: .light)
-                .dsCornerRadius()
-                .dsPadding(.small)
+                
+                DSVStack(alignment: .center, spacing: .extraSmall) {
+                    DSText(product.title, .headlineWithSize(13), color: .customColor(.white))
+                    DSText(product.description, .smallSubtitle, color: .customColor(.white.opacity(0.8)))
+                    DSPriceView(price: product.price, size: .mediumLarge, color: .custom(Color.white))
+                }
+                .dsPadding(.bottom)
             }
-            
-            DSVStack(alignment: .center, spacing: .extraSmall) {
-                DSText(title, .headlineWithSize(13), color: .customColor(.white))
-                DSText(description, .smallSubtitle, color: .customColor(.white.opacity(0.8)))
-                DSPriceView(price: price, size: .mediumLarge, color: .custom(Color.white))
-            }
-            .dsPadding(.bottom)
+            .dsSecondaryBackground()
+            .dsCornerRadius()
+            .dsHeight(280)
         }
-        .dsSecondaryBackground()
-        .dsCornerRadius()
-        .dsHeight(280)
-        .onTap { }
+        
+        struct Data: Identifiable {
+            let id = UUID()
+            let title: String
+            let description: String
+            var tag: String?
+            let price: DSPrice
+            let favorite: Bool
+            let image: URL?
+        }
     }
 }
+
+// MARK: - Model
+
+final class Items2Model {
+    
+    let products: [Items2.ProductView.Data] = [
+        .init(
+            title: "Jodhpur Boots",
+            description: "House & Versace",
+            price: DSPrice(amount: "84", regularAmount: "94", currency: "$"),
+            favorite: true,
+            image: jodhpurBootsImage
+        ),
+        .init(
+            title: "Platform derby shoes",
+            description: "Stella McCarthney",
+            price: DSPrice(amount: "92", currency: "$"),
+            favorite: false,
+            image: shoesImage
+        ),
+        .init(
+            title: "Motocross Boots",
+            description: "Hermes",
+            price: DSPrice(amount: "13", regularAmount: "82", currency: "$", discountBadge: "-69$"),
+            favorite: true,
+            image: motocrossBootsImage
+        ),
+        .init(
+            title: "Hiking Boots",
+            description: "Dolce & Gabbana",
+            price: DSPrice(amount: "84", currency: "$"),
+            favorite: false,
+            image: hikingBootsImage
+        ),
+        .init(
+            title: "Suede Chuck-a Boots",
+            description: "River Island",
+            tag: "SALES",
+            price: DSPrice(amount: "22", regularAmount: "89", currency: "$"),
+            favorite: true,
+            image: bootsImage
+        ),
+        .init(
+             title: "Riding Boots",
+             description: "Arrmani",
+             tag: "50% OFF",
+             price: DSPrice(amount: "57", regularAmount: "85", currency: "$"),
+             favorite: false,
+             image: ridingBootsImage
+         )
+    ]
+}
+
+// MARK: - Preview
 
 struct Items2_Previews: PreviewProvider {
-    
     static var previews: some View {
         PreviewForEach {
             NavigationView {
                 Items2()
-                    .navigationTitle("Items")
-                    .navigationBarTitleDisplayMode(.inline)
+                    .navigationTitle("Products")
             }
         }
     }
 }
+
+// MARK: - Image Links
 
 fileprivate let bootsImage = URL(string: "https://images.pexels.com/photos/267242/pexels-photo-267242.jpeg?cs=srgb&dl=pexels-pixabay-267242.jpg&fm=jpg")
 fileprivate let shoesImage = URL(string: "https://images.pexels.com/photos/1904769/pexels-photo-1904769.jpeg?cs=srgb&dl=pexels-sebastian-palomino-1904769.jpg&fm=jpg")

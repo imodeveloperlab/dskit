@@ -20,10 +20,9 @@ struct Order2: View {
                 
                 DSGrid(spacing: .small, data: viewModel.checkoutInfo, id: \.id) { card in
                     CardView(card: card).onTap {}
-                }.dsPadding(.horizontal)
+                }
                 
-                section(with: "Promo Codes") {
-                    
+                DSVStack {
                     DSList(data: viewModel.promoCodes, id: \.id) { code in
                         PromoCodeView(code: code)
                     }
@@ -33,13 +32,14 @@ struct Order2: View {
                         rightImage: DSImage(sfSymbolName: "tag.fill", size: .regular),
                         style: .light
                     ) {}
-                }
+                }.dsSectionStyle(title: "Promo Codes")
                 
-                section(with: "Order Info") {
-                    OrderInfo(orderTotals: viewModel.orderTotals)
-                }
-                
-            }.dsPadding(.bottom)
+                OrderInfo(orderTotals: viewModel.orderTotals)
+                    .dsSectionStyle(title: "Order Info")
+            }
+            .dsPadding(.bottom)
+            .dsPadding(.horizontal)
+            
         }.safeAreaInset(edge: .bottom) {
             BottomContainerView {
                 DSButton(

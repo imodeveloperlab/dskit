@@ -10,7 +10,6 @@ import DSKit
 
 public struct PickerView<Data, ID, Content>: View where Data: RandomAccessCollection, Data.Element: Equatable, ID: Hashable, Content: View {
     
-    let title: String?
     let style: PickerView.Style
     let data: Data
     let content: (Data.Element) -> Content
@@ -23,14 +22,12 @@ public struct PickerView<Data, ID, Content>: View where Data: RandomAccessCollec
     }
     
     public init(
-        title: String? = nil,
         style: PickerView.Style = .horizontalScroll,
         data: Data,
         id: KeyPath<Data.Element, ID>,
         selected: Binding<Data.Element>,
         @ViewBuilder content: @escaping (Data.Element) -> Content
     ) {
-        self.title = title
         self.data = data
         self.id = id
         self.content = content
@@ -40,14 +37,11 @@ public struct PickerView<Data, ID, Content>: View where Data: RandomAccessCollec
     
     public var body: some View {
         DSVStack(spacing: .smaller) {
-            if let title {
-                DSText(title, .smallTitle).dsPadding(.horizontal)
-            }
             switch style {
             case .horizontalScroll:
                 horizontalScrollStyle
             case .grid(let columns):
-                gridStyle(columns: columns).dsPadding(.horizontal)
+                gridStyle(columns: columns)
             }
         }
     }
@@ -81,7 +75,7 @@ public struct PickerViewHorizontal: View {
     @State var selected = "A"
     
     public var body: some View {
-        PickerView(title: "Horizontal", data: data, id: \.self, selected: $selected, content: { element in
+        PickerView(data: data, id: \.self, selected: $selected, content: { element in
             DSText(element)
                 .dsSize(20)
                 .dsCardStyle()
@@ -95,7 +89,7 @@ public struct PickerViewGrid: View {
     @State var selected = "A"
     
     public var body: some View {
-        PickerView(title: "Grid", style: .grid(columns: 5), data: data, id: \.self, selected: $selected, content: { element in
+        PickerView(style: .grid(columns: 5), data: data, id: \.self, selected: $selected, content: { element in
             DSText(element)
                 .frame(maxWidth: .infinity)
                 .dsCardStyle()
@@ -105,9 +99,15 @@ public struct PickerViewGrid: View {
 
 struct PickerView_Previews: PreviewProvider {
     static var previews: some View {
-        DSVStack {
-            PickerViewHorizontal()
-            PickerViewGrid()
+        PreviewForEach {
+            DSFullScreen {
+                DSVStack {
+                    PickerViewHorizontal()
+                        .dsSectionStyle(title: "Horizontal")
+                    PickerViewGrid()
+                        .dsSectionStyle(title: "Grid")
+                }.dsPadding()
+            }
         }
     }
 }

@@ -11,85 +11,87 @@ import DSKit
 struct Filters1: View {
     
     @Environment(\.dismiss) var dismiss
+    @ObservedObject var viewModel = Filters1Model()
     
     var body: some View {
         ScrollView {
             DSVStack {
-                DSVStack(spacing: .smaller) {
-                    DSText("Sort by", .subheadline)
-                    DSVStack {
-                        RadioOptionView(title: "Featured")
-                        RadioOptionView(title: "New Items", selected: true)
-                        RadioOptionView(title: "Price (Hight First)")
-                        RadioOptionView(title: "Price (Low First)")
-                        RadioOptionView(title: "Range")
+                section(with: "Sort By") {
+                    RadioPickerView(data: viewModel.sortByOptions, id: \.self, selected: $viewModel.selectedSortByOption) { option, selected in
+                        DSText(option, selected ?  .smallTitle : .subheadlineWithSize(14))
                     }
                 }
-                DSVStack(spacing: .smaller) {
-                    DSText("Filters", .subheadline)
-                    DSVStack {
-                        OptionView(title: "Size", option: "All")
-                        OptionView(title: "Brand", option: "Adidas, Puma, HRX")
-                        OptionView(title: "Color", option: "Black")
-                        OptionView(title: "Price", option: "$0-$999")
-                        OptionView(title: "Range", option: "All")
+                
+                section(with: "Options") {
+                    DSVStack(spacing: .smaller) {
+                        ForEach(viewModel.filters) { filter in
+                            OptionView(option: filter)
+                        }
                     }
                 }
+                
             }.dsPadding(.horizontal)
             
         }.safeAreaInset(edge: .bottom) {
-            DSButton(
-                title: "View (235) Items",
-                action: { dismiss() }
-            )
-            .dsPadding(.horizontal)
-            .topShadow(padding: .regular)
-            .dsBackground()
+            BottomContainerView {
+                DSButton(
+                    title: "View (235) Items",
+                    action: { dismiss() }
+                )
+            }
         }.toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 DSButton(title: "Reset", style: .clear, action: {})
             }
         }.dsBackground()
     }
-}
-
-fileprivate struct RadioOptionView: View {
-    let title: String
-    var selected: Bool = false
     
-    var body: some View {
-        DSHStack {
-            DSText(title, selected ?  .smallTitle : .subheadlineWithSize(14))
-            Spacer()
-            if selected {
-                DSImageView(sfSymbol: "checkmark.circle.fill", size: .medium, tint: .customColor(.green))
-            } else {
-                DSImageView(sfSymbol: "circle", size: .medium, tint: .text(.subheadline))
-            }
+    func section<Content: View>(with title: String, @ViewBuilder content: @escaping () -> Content) -> some View {
+        DSVStack(spacing: .smaller) {
+            DSText(title, .smallTitle)
+            content()
         }
-        .dsPadding()
-        .dsSecondaryBackground()
-        .dsCornerRadius()
-        .onTap { }
+        .dsPadding(.top)
     }
 }
 
-fileprivate struct OptionView: View {
-    let title: String
-    let option: String
-    var body: some View {
-        DSHStack {
-            DSText(title, .smallTitle)
-            Spacer()
-            DSText(option, .subheadlineWithSize(14))
-            ChevronView()
+extension Filters1 {
+    
+    // MARK: - Option View
+    
+    struct OptionView: View {
+        let option: Data
+        var body: some View {
+            DSHStack {
+                DSText(option.title, .smallTitle)
+                Spacer()
+                DSText(option.option, .subheadlineWithSize(14))
+                ChevronView()
+            }.dsCardStyle()
         }
-        .dsPadding()
-        .dsSecondaryBackground()
-        .dsCornerRadius()
-        .onTap { }
+        struct Data: Identifiable {
+            let id = UUID()
+            let title: String
+            let option: String
+        }
     }
 }
+
+// MARK: - View Model
+
+final class Filters1Model: ObservableObject {
+    @Published var selectedSortByOption = "New Items"
+    let sortByOptions = ["Featured", "New Items", "Price (Hight First)", "Price (Low First)", "Range"]
+    let filters:[Filters1.OptionView.Data] = [
+        .init(title: "Size", option: "All"),
+        .init(title: "Brand", option: "Adidas, Puma, HRX"),
+        .init(title: "Color", option: "Black"),
+        .init(title: "Price", option: "$0-$999"),
+        .init(title: "Range", option: "All")
+    ]
+}
+
+// MARK: - Preview
 
 struct Filters1_Previews: PreviewProvider {
     static var previews: some View {

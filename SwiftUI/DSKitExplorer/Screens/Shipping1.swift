@@ -16,7 +16,7 @@ struct Shipping1: View {
     var body: some View {
         ScrollView {
             DSVStack {
-                RadioPickerView(data: viewModel.deliveryAddresses, id: \.id, selected: $viewModel.selected) { address in
+                RadioPickerView(data: viewModel.deliveryAddresses, id: \.id, selected: $viewModel.selected) { address, _ in
                     DeliveryAddressView(address: address)
                 }
                 DSButton(

@@ -17,12 +17,12 @@ public struct DSGallery<Data, ID, Content>: View where Data: RandomAccessCollect
     let data: Data
     let content: (Data.Element) -> Content
     let id: KeyPath<Data.Element, ID>
-
-    @State private var currentElementID: ID
-
+    
+    @State private var currentElementID: ID?
+    
     public init(
         height: DSDimension,
-        spacing: DSDimension = .regular,
+        spacing: DSDimension = .small,
         showPaginationView: Bool = true,
         data: Data,
         id: KeyPath<Data.Element, ID>,
@@ -36,26 +36,34 @@ public struct DSGallery<Data, ID, Content>: View where Data: RandomAccessCollect
         self.content = content
         _currentElementID = State(initialValue: data.first![keyPath: id])
     }
-
+    
     public var body: some View {
         DSVStack(alignment: .center, spacing: .zero) {
-            TabView(selection: $currentElementID) {
-                ForEach(data, id: id) { element in
-                    self.content(element)
-                        .tag(element[keyPath: id])
-                        .dsPadding(.horizontal, spacing)
-                }
+            
+            ScrollView(.horizontal, showsIndicators: false) {
+                LazyHStack(spacing: appearance.size.number(for: spacing)) {
+                    ForEach(data, id: id) { element in
+                        self.content(element)
+                            .containerRelativeFrame(.horizontal)
+                            .tag(element[keyPath: id])
+                            .scrollTransition(.animated, axis: .horizontal) { content, phase in
+                                content.opacity(phase.isIdentity ? 1.0 : 0.8)
+                            }
+                    }
+                }.scrollTargetLayout()
             }
-            .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
-            .dsHeight(height)
-
+            .scrollPosition(id: $currentElementID)
+            .scrollClipDisabled(true)
+            .scrollTargetBehavior(.viewAligned)
+            
             if showPaginationView {
                 defaultPaginationIndicator()
                     .dsPadding(.top)
             }
         }
+        .dsHeight(height)
     }
-
+    
     private func defaultPaginationIndicator() -> some View {
         DSHStack {
             ForEach(data, id: id) { element in
@@ -69,17 +77,15 @@ public struct DSGallery<Data, ID, Content>: View where Data: RandomAccessCollect
     }
 }
 
-
 struct DSGallery_Previews: PreviewProvider {
     static var previews: some View {
-        
         let colors = [Color.red, Color.green, Color.yellow]
         PreviewForEach {
             DSFullScreen {
                 DSGallery(height: 200, spacing: .regular, data: colors, id: \.self) { color in
                     color
                 }
-                .dsPadding(.vertical)
+                .dsPadding(.horizontal)
                 .dsLayoutGuideLines(divider: 1)
             }
         }

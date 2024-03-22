@@ -16,6 +16,8 @@ public struct DSImageView: View {
     let image: DSImage
     @State private var imageLoaded = false
     
+    @State var imageSize: CGSize = .zero
+    
     public init(dsImage: DSImage) {
         self.image = dsImage
     }
@@ -112,18 +114,23 @@ public struct DSImageView: View {
             GeometryReader(content: { geometry in
                 Group {
                     if imageManager.image != nil {
-                        Image(uiImage: imageManager.image!)
-                            .resizable()
-                            .setContentMode(mode: image.contentMode)
-                            .setDisplayShape(shape: image.displayShape)
-                            .opacity(imageLoaded ? 1 : 0)
-                            .onAppear {
-                                if imageManager.cacheType == .none {
-                                    withAnimation { imageLoaded = true }
-                                } else {
-                                    imageLoaded = true
-                                }
+                        
+                        Color.gray.opacity(0.1)
+                            .overlay(alignment: .center) {
+                                Image(uiImage: imageManager.image!)
+                                    .resizable()
+                                    .setContentMode(mode: image.contentMode)
+                                    .opacity(imageLoaded ? 1 : 0)
+                                    .onAppear {
+                                        if imageManager.cacheType == .none {
+                                            withAnimation { imageLoaded = true }
+                                        } else {
+                                            imageLoaded = true
+                                        }
+                                    }
                             }
+                            .setDisplayShape(shape: image.displayShape)
+                        
                     } else {
                         Color.gray.opacity(0.1)
                             .setDisplayShape(shape: image.displayShape)

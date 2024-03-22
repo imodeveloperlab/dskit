@@ -19,7 +19,6 @@ public struct DSGrid<Data, ID, Content>: View where Data: RandomAccessCollection
     let content: (Data.Element) -> Content
     let id: KeyPath<Data.Element, ID>
     
-    
     public init(
         viewHeight: DSDimension? = nil,
         numberOfColumns: Int = 2,

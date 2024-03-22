@@ -21,26 +21,29 @@ struct Order1: View {
                     DSList(data: viewModel.products, id: \.id) { product in
                         ProductView(product: product)
                     }
-                    DSButton(title: "Search for more products", rightSFSymbolName: "magnifyingglass", style: .light) {}
-                }.dsPadding(.horizontal)
-                
-                section(with: "Delivery") {
-                    DSVStack {
-                        DeliveryAddress(address: viewModel.address)
-                        DSDivider()
-                        ShippingMethod(shipping: viewModel.shipping)
-                    }.dsCardStyle()
+                    DSButton(
+                        title: "Search for more products",
+                        rightSFSymbolName: "magnifyingglass",
+                        style: .light
+                    ) {}
                 }
                 
-                section(with: "Payment") {
-                    PaymentMethod(method: viewModel.paymentMethod)
+                DSVStack {
+                    DeliveryAddress(address: viewModel.address)
+                    DSDivider()
+                    ShippingMethod(shipping: viewModel.shipping)
                 }
+                .dsCardStyle()
+                .dsSectionStyle(title: "Delivery")
                 
-                section(with: "Order Info") {
-                    OrderInfo(orderTotals: viewModel.orderTotals)
-                }
+                PaymentMethod(method: viewModel.paymentMethod)
+                    .dsSectionStyle(title: "Payment")
                 
-            }.dsPadding(.bottom)
+                OrderInfo(orderTotals: viewModel.orderTotals)
+                    .dsSectionStyle(title: "Order Info")
+            }
+            .dsPadding(.horizontal)
+            .dsPadding(.bottom)
         }
         .safeAreaInset(edge: .bottom) {
             BottomContainerView {
@@ -54,15 +57,6 @@ struct Order1: View {
             }
         }
         .dsBackground()
-    }
-    
-    func section<Content: View>(with title: String, @ViewBuilder content: @escaping () -> Content) -> some View {
-        DSVStack(spacing: .smaller) {
-            DSText(title, .smallTitle)
-            content()
-        }
-        .dsPadding(.horizontal)
-        .dsPadding(.top)
     }
 }
 

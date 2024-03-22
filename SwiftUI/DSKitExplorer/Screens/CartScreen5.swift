@@ -22,22 +22,16 @@ struct CartScreen5: View {
             }.dsPadding(.horizontal)
         }
         .safeAreaInset(edge: .bottom) {
-            BottomContainerView(horizontalPadding: false) {
-                DSVStack {
-                    DSText("You may also like", .smallSubtitle)
-                        .dsPadding(.horizontal)
-                    DSHScroll(data: viewModel.suggestedProducts, id: \.id) { product in
-                        SuggestedProductView(product: product)
-                    }
+            BottomContainerView {
+                DSText("You may also like", .smallSubtitle)
+                DSHScroll(data: viewModel.suggestedProducts, id: \.id) { product in
+                    SuggestedProductView(product: product)
                 }
-                
-                Group {
-                    TotalView(itemsCount: "4", price: DSPrice(amount: "1049.00", currency: "$"))
-                    DSButton(title: "Checkout", rightImage: DSImage(sfSymbolName: "creditcard", size: .medium)) {
-                        dismiss()
-                    }
-                    TermsAndConditionsView(message: "By pressing on Checkout you agree to our")
-                }.dsPadding(.horizontal)
+                TotalView(itemsCount: "4", price: DSPrice(amount: "1049.00", currency: "$"))
+                DSButton(title: "Checkout", rightImage: DSImage(sfSymbolName: "creditcard", size: .medium)) {
+                    dismiss()
+                }
+                TermsAndConditionsView(message: "By pressing on Checkout you agree to our")
             }
         }
         .toolbar {

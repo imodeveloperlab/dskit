@@ -37,7 +37,24 @@ public struct DSHScroll<Data, ID, Content>: View where Data: RandomAccessCollect
                 ForEach(data, id: id) { element in
                     self.content(element)
                 }
-            }.dsPadding(.horizontal, padding)
+            }
+        }.scrollClipDisabled(true)
+    }
+}
+
+struct DSHScroll_Previews: PreviewProvider {
+    static var previews: some View {
+        
+        let colors = [Color.red, Color.green, Color.yellow, Color.red, Color.green, Color.yellow]
+        PreviewForEach {
+            DSFullScreen {
+                DSHScroll(spacing: .regular, data: colors, id: \.self) { color in
+                    color.dsSize(60)
+                }
+                .dsPadding(.horizontal)
+                .dsLayoutGuideLines(divider: 1)
+            }
         }
     }
 }
+

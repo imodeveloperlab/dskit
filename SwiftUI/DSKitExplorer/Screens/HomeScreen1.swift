@@ -17,19 +17,16 @@ struct HomeScreen1: View {
         ScrollView() {
             DSVStack {
                 ProfileView(title: "Your Shop", profileUrl: profile)
-                    .dsPadding(.horizontal)
-                
-                DSGallery(height: 180, data: viewModel.topProducts, id: \.self) { imageUrl in
+                DSGallery(height: 200, data: viewModel.topProducts, id: \.self) { imageUrl in
                     DSImageView(url: imageUrl, style: .capsule).onTap { self.dismiss() }
                 }
-                
                 DSVStack {
                     SectionHeaderView(title: "New arrivals", actionTitle: "View All", action: { dismiss() })
                     DSGrid(viewHeight: 180, data: viewModel.newArrivals, id: \.id) { arrival in
                         ProductView(product: arrival).onTap { dismiss() }
                     }
-                }.dsPadding(.horizontal)
-            }
+                }
+            }.dsPadding()
         }.dsBackground()
     }
 }
@@ -65,6 +62,7 @@ extension HomeScreen1 {
                 DSText(title, .bigTitle)
                 Spacer()
                 DSImageView(url: profileUrl, style: .circle, size: .extraLarge)
+                    .dsSize(50)
             }
         }
     }

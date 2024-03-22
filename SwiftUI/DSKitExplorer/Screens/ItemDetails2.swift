@@ -29,10 +29,8 @@ struct ItemDetails2: View {
                     DSPriceView(price: viewModel.price, size: .large)
                     QuantityPicker()
                 }
-                .dsPadding(.horizontal)
                 
                 PickerView(
-                    title: "Size",
                     style: .grid(columns: 4),
                     data: viewModel.sizes,
                     id: \.self, selected: $viewModel.selectedSize
@@ -42,24 +40,23 @@ struct ItemDetails2: View {
                         .dsPadding(.horizontal)
                         .dsHeight(35)
                         .dsSecondaryBackground()
-                }
+                }.dsSectionStyle(title: "Size")
                 
                 PickerView(
-                    title: "Model",
                     data: viewModel.colors,
                     id: \.self,
                     selected: $viewModel.selectedColor
                 ) { color in
                     DSImageView(uiImageName: color, size: .size(width: 80, height: 60))
-                }
+                }.dsSectionStyle(title: "Model")
 
                 DSText(
                     viewModel.description,
                     .callout
                 )
                 .dsPadding(.bottom, .regular)
-                .dsPadding(.horizontal)
             }
+            .dsPadding(.horizontal)
         }
         .safeAreaInset(edge: .bottom) {
             BottomContainerView {

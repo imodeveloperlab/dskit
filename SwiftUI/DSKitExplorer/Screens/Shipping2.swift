@@ -16,7 +16,7 @@ struct Shipping2: View {
     var body: some View {
         ScrollView {
             DSVStack {
-                RadioPickerView(data: viewModel.shippingMethods, id: \.id, selected: $viewModel.selected) { method in
+                RadioPickerView(data: viewModel.shippingMethods, id: \.id, selected: $viewModel.selected) { method, _ in
                     ShippingMethodView(method: method)
                 }
                 section(with: "Order Info") {

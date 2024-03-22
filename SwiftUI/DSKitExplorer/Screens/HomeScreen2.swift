@@ -21,9 +21,9 @@ struct HomeScreen2: View {
                     title: "Shop",
                     subtitle: "Over 45k items available for you",
                     profileImageUrl: profileImageUrl
-                ).dsPadding(.horizontal)
+                )
                 
-                DSGallery(height: 180, data: viewModel.topProducts, id: \.self) { imageUrl in
+                DSGallery(height: 200, data: viewModel.topProducts, id: \.self) { imageUrl in
                     DSImageView(url: imageUrl, style: .capsule).onTap { self.dismiss() }
                 }
                 
@@ -32,7 +32,7 @@ struct HomeScreen2: View {
                     DSGrid(data: viewModel.categories, id: \.id) { category in
                         CategoryView(title: category.title, action: { self.dismiss() })
                     }
-                }.dsPadding(.horizontal)
+                }
                 
                 DSVStack {
                     SectionHeaderView(title: "Discounts", actionTitle: "View all", action: { self.dismiss() })
@@ -40,9 +40,9 @@ struct HomeScreen2: View {
                         ProductView(product: arrival)
                             .onTap { self.dismiss() }
                     }
-                }.dsPadding(.horizontal)
+                }
                 
-            }
+            }.dsPadding(.horizontal)
         }.dsBackground()
     }
 }

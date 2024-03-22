@@ -25,15 +25,15 @@ struct Order4: View {
             Spacer()
             DSVStack {
                 DSText("You may also like", .subheadline)
-                    .dsPadding(.horizontal)
                 DSHScroll(data: viewModel.suggestedProducts, id: \.id) { product in
                     SuggestedProductView(product: product)
                 }
             }
             DSButton(title: "Continue Shopping", rightSFSymbolName: "bag.fill", action: {
                 dismiss()
-            }).dsPadding(.horizontal)
+            })
         }
+        .dsPadding(.horizontal)
         .dsPadding(.vertical)
         .dsBackground()
     }

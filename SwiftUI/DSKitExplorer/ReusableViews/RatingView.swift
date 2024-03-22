@@ -23,7 +23,7 @@ struct RatingView: View {
     }
     
     var body: some View {
-        HStack(spacing: 3) { // Adjust spacing as needed
+        HStack(spacing: 3) {
             ForEach(1...maximumRating, id: \.self) { index in
                 Image(systemName: symbolName(for: index))
                     .resizable()

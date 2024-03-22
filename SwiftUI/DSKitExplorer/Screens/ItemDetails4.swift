@@ -21,25 +21,25 @@ struct ItemDetails4: View {
                     DSImageView(url: imageUrl).dsCornerRadius()
                 }
                 
-                Group {
-                    DSVStack(spacing: .extraSmall) {
-                        DSText(viewModel.title, .title2)
-                        DSText(viewModel.subtitle, .subheadline)
-                    }
-                    
-                    DSHStack(alignment: .center, spacing: .small) {
-                        DSText("New", .headlineWithSize(12), color: .customColor(Color.white))
-                            .dsPadding(.vertical, .smaller)
-                            .dsPadding(.horizontal, .small)
-                            .dsBackground(.customColor(.green))
-                            .dsCornerRadius()
-                        RatingView(rating: 4.5, size: 16)
-                        DSText("24K Ratings", .callout)
-                    }
-                }.dsPadding(.horizontal)
+                DSVStack(spacing: .extraSmall) {
+                    DSText(viewModel.title, .title2)
+                    DSText(viewModel.subtitle, .subheadline)
+                }
+                
+                DSHStack(alignment: .center, spacing: .small) {
+                    DSText("New", .headlineWithSize(12), color: .customColor(Color.white))
+                        .dsPadding(.vertical, .smaller)
+                        .dsPadding(.horizontal, .small)
+                        .dsBackground(.customColor(.green))
+                        .dsCornerRadius()
+                    RatingView(rating: 4.5, size: 16)
+                    DSText("24K Ratings", .callout)
+                }
+                
+                DSText(viewModel.description, .caption1)
+                    .dsSectionStyle(title: "Description")
                 
                 PickerView(
-                    title: "Size",
                     data: viewModel.sizes,
                     id: \.self,
                     selected: $viewModel.selectedSize
@@ -48,25 +48,21 @@ struct ItemDetails4: View {
                         .frame(maxWidth: .infinity)
                         .dsSize(40)
                         .dsSecondaryBackground()
-                }
+                }.dsSectionStyle(title: "Size")
                 
                 PickerView(
-                    title: "Color",
                     data: viewModel.colors,
                     id: \.self,
                     selected: $viewModel.selectedColor
                 ) { color in
                     Color(uiColor: color).dsSize(40)
-                }
-                                
-                DSText(viewModel.description, .caption1)
-                    .dsPadding(.horizontal)
+                }.dsSectionStyle(title: "Color")
                 
                 DSVStack(spacing: .smaller) {
                     ActionView(title: "Size Guides")
                     ActionView(title: "Return Policy")
                 }.dsPadding(.bottom)
-            }
+            }.dsPadding(.horizontal)
         }
         .safeAreaInset(edge: .bottom) {
             BottomContainerView {
@@ -108,7 +104,6 @@ extension ItemDetails4 {
             .dsHeight(.custom(appearance.actionElementHeight))
             .dsSecondaryBackground()
             .dsCornerRadius()
-            .dsPadding(.horizontal)
         }
     }
 }

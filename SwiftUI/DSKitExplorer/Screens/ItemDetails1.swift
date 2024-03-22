@@ -21,25 +21,23 @@ struct ItemDetails1: View {
                     DSImageView(url: imageUrl).dsCornerRadius()
                 }
                 
-                Group {
-                    DSVStack(spacing: .zero) {
-                        DSText(viewModel.title, .title2)
-                        DSText(viewModel.subtitle, .subheadline)
-                    }
-                    
-                    DSPriceView(price: viewModel.price, size: .large)
-                    
-                    QuantityPicker()
-                    
-                    DSHStack {
-                        SelectView(title: "Size", selection: "US 14").onTap { }
-                        SelectColorView(title: "Color", selection: .yellow, label: "Yellow").onTap { }
-                    }
-                    
-                    DSText(viewModel.description, .caption1)
-                    
-                }.dsPadding(.horizontal)
-            }
+                DSVStack(spacing: .zero) {
+                    DSText(viewModel.title, .title2)
+                    DSText(viewModel.subtitle, .subheadline)
+                }
+                
+                DSPriceView(price: viewModel.price, size: .large)
+                
+                QuantityPicker()
+                
+                DSHStack {
+                    SelectView(title: "Size", selection: "US 14").onTap { }
+                    SelectColorView(title: "Color", selection: .yellow, label: "Yellow").onTap { }
+                }
+                
+                DSText(viewModel.description, .caption1)
+                
+            }.dsPadding(.horizontal)
         }
         .safeAreaInset(edge: .bottom) {
             BottomContainerView {

@@ -7,7 +7,7 @@
 
 import DSKit
 
-extension DSTextType {
+public extension DSTextType {
 
     static var smallTitle: DSTextType {
         .headlineWithSize(14)

@@ -21,7 +21,7 @@ struct Payment1: View {
                     data: viewModel.paymentMethods,
                     id: \.id,
                     selected: $viewModel.selected
-                ) { method in
+                ) { method, _ in
                     PaymentMethod(method: method)
                 }
                 

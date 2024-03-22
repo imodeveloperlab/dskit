@@ -36,7 +36,6 @@ struct ItemDetails5: View {
                         }.frame(maxWidth: .infinity, alignment: .leading)
                     }
                 }
-                .dsPadding(.horizontal)
                 
                 PickerView(
                     style: .grid(columns: 4),
@@ -51,9 +50,9 @@ struct ItemDetails5: View {
                 }
 
                 DSText(viewModel.description, .caption1)
-                .dsPadding(.bottom, .regular)
-                .dsPadding(.horizontal)
-            }
+                    .dsPadding(.bottom, .regular)
+                
+            }.dsPadding(.horizontal)
         }
         .safeAreaInset(edge: .bottom) {
             BottomContainerView {

@@ -50,20 +50,17 @@ struct ItemDetails3: View {
                         DSImageView(sfSymbol: "info.circle.fill", size: .regular, tint: .customColor(.yellow))
                         DSText(viewModel.priceDisclaimer, .caption2, multilineTextAlignment: .leading)
                     }
-                }
-                .dsPadding(.horizontal)
+                }.dsPadding(.horizontal)
                 
                 PickerView(
-                    title: "Model",
                     data: viewModel.colors,
                     id: \.self,
                     selected: $viewModel.selectedColor
                 ) { color in
                     DSImageView(uiImageName: color, size: .size(width: 70, height: 50))
-                }
+                }.dsSectionStyle(title: "Model")
                 
                 PickerView(
-                    title: "Size",
                     data: viewModel.sizes,
                     id: \.self, selected: $viewModel.selectedSize
                 ) { size in
@@ -72,7 +69,7 @@ struct ItemDetails3: View {
                         .dsPadding(.horizontal)
                         .dsHeight(35)
                         .dsSecondaryBackground()
-                }
+                }.dsSectionStyle(title: "Size")
 
                 DSText(viewModel.description, .caption1)
                 .dsPadding(.bottom, .regular)

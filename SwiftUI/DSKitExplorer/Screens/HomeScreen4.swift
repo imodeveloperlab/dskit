@@ -38,9 +38,9 @@ struct HomeScreen4: View {
                 DSVStack {
                     DSGrid(viewHeight: 190, data: viewModel.products, id: \.id) { product in
                         ProductView(product: product).onTap { self.dismiss() }
-                    }.dsPadding(.horizontal)
+                    }
                 }
-            }
+            }.dsPadding()
         }.dsBackground()
     }
 }
@@ -125,8 +125,7 @@ extension HomeScreen4 {
                     style: .circle,
                     size: 50
                 )
-                
-            }.dsPadding(.horizontal)
+            }
         }
     }
     

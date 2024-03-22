@@ -17,11 +17,9 @@ struct HomeScreen3: View {
     var body: some View {
         ScrollView() {
             DSVStack(spacing: .regular) {
-                
                 ProfileView(title: "Jane Doe", subtitle: "4 Items in cart", profileImageUrl: profileOnRedBg)
-                    .dsPadding(.horizontal)
                 
-                DSGallery(height: 180, data: viewModel.topProducts, id: \.self) { imageUrl in
+                DSGallery(height: 200, data: viewModel.topProducts, id: \.self) { imageUrl in
                     DSImageView(url: imageUrl, style: .capsule).onTap { self.dismiss() }
                 }
                 
@@ -34,8 +32,8 @@ struct HomeScreen3: View {
                     DSGrid(viewHeight: 200, data: viewModel.products, id: \.id) { product in
                         ProductView(product: product).onTap { self.dismiss() }
                     }
-                }.dsPadding(.horizontal)
-            }
+                }
+            }.dsPadding()
         }.dsBackground()
     }
 }

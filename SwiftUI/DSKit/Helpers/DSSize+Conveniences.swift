@@ -7,7 +7,7 @@
 
 import DSKit
 
-extension DSSize {
+public extension DSSize {
     static var smallIcon: DSSize {
         15
     }

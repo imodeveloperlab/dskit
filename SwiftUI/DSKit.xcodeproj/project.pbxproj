@@ -12,7 +12,7 @@
 		600601102B31D6A300F2C616 /* DSSizeModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6006010F2B31D6A300F2C616 /* DSSizeModifier.swift */; };
 		600601122B31E02500F2C616 /* DSTintColorModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600601112B31E02500F2C616 /* DSTintColorModifier.swift */; };
 		600601952B33152900F2C616 /* CGSize+Hashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600601942B33152900F2C616 /* CGSize+Hashable.swift */; };
-		600601AE2B34792500F2C616 /* DSGallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600601AD2B34792500F2C616 /* DSGallery.swift */; };
+		600601AE2B34792500F2C616 /* DSCoverFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600601AD2B34792500F2C616 /* DSCoverFlow.swift */; };
 		600601B02B347F0D00F2C616 /* DSGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600601AF2B347F0D00F2C616 /* DSGrid.swift */; };
 		600601BA2B3597A700F2C616 /* DSHStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600601B92B3597A700F2C616 /* DSHStack.swift */; };
 		600601BC2B35B0D900F2C616 /* DSVStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600601BB2B35B0D900F2C616 /* DSVStack.swift */; };
@@ -250,7 +250,7 @@
 		600601112B31E02500F2C616 /* DSTintColorModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSTintColorModifier.swift; sourceTree = "<group>"; };
 		600601942B33152900F2C616 /* CGSize+Hashable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGSize+Hashable.swift"; sourceTree = "<group>"; };
 		600601A72B346EBD00F2C616 /* DSKitFakery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DSKitFakery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		600601AD2B34792500F2C616 /* DSGallery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSGallery.swift; sourceTree = "<group>"; };
+		600601AD2B34792500F2C616 /* DSCoverFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSCoverFlow.swift; sourceTree = "<group>"; };
 		600601AF2B347F0D00F2C616 /* DSGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSGrid.swift; sourceTree = "<group>"; };
 		600601B92B3597A700F2C616 /* DSHStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSHStack.swift; sourceTree = "<group>"; };
 		600601BB2B35B0D900F2C616 /* DSVStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSVStack.swift; sourceTree = "<group>"; };
@@ -812,7 +812,7 @@
 				604B4B352B8DC85200EC6CCE /* Content */,
 				60306B6F2B2C53500020EBFF /* Image */,
 				60EB99B42B2B74F700528039 /* Text */,
-				600601AD2B34792500F2C616 /* DSGallery.swift */,
+				600601AD2B34792500F2C616 /* DSCoverFlow.swift */,
 				600601CD2B35D0E300F2C616 /* DSHScroll.swift */,
 				600601AF2B347F0D00F2C616 /* DSGrid.swift */,
 				600601B92B3597A700F2C616 /* DSHStack.swift */,
@@ -1077,7 +1077,7 @@
 				6026D45C2B8494E50062846A /* PreviewForEachAppearance.swift in Sources */,
 				60EB99A32B2B4EF500528039 /* UIColorExtension.swift in Sources */,
 				60C1F79D2B3EF81C0067B21C /* DSTextfieldValidator.swift in Sources */,
-				600601AE2B34792500F2C616 /* DSGallery.swift in Sources */,
+				600601AE2B34792500F2C616 /* DSCoverFlow.swift in Sources */,
 				60EB99C32B2B750200528039 /* DSTextFont.swift in Sources */,
 				60EB99902B2B4D3A00528039 /* DSAppearance.swift in Sources */,
 				604B4B282B8CC0C400EC6CCE /* DSDefaultDesignableSize.swift in Sources */,

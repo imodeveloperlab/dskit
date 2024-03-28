@@ -23,7 +23,7 @@ struct AboutUsScreen1: View {
                     DSText("Start working with DSKit that can provide everything you need to generate any interface you need. Dummy text is text that is used in the publishing industry or by web designers to occupy the space which will later be filled with 'real' content.", .body)
                 }
                 
-                DSGallery(height: 250, data: imageGallery, id: \.self) { image in
+                DSCoverFlow(height: 250, data: imageGallery, id: \.self) { image in
                     DSImageView(url: image).dsCornerRadius()
                 }
                 

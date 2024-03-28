@@ -22,7 +22,7 @@ struct HomeScreen2: View {
                     profileImageUrl: profileImageUrl
                 )
                 
-                DSGallery(height: 200, data: viewModel.topProducts, id: \.self) { imageUrl in
+                DSCoverFlow(height: 200, data: viewModel.topProducts, id: \.self) { imageUrl in
                     DSImageView(url: imageUrl, style: .capsule).onTap { self.dismiss() }
                 }
                 

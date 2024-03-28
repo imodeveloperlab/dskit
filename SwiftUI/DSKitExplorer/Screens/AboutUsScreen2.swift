@@ -51,7 +51,7 @@ struct AboutUsScreen2: View {
                     DSText("Here you will feel the attitude, here you will receive quality, here you will see the atmosphere of an authentic store", .body).frame(maxWidth: .infinity, alignment: .leading)
                 }
                 
-                DSGallery(height: .designSize(28), data: infoImageGallery, id: \.self) { image in
+                DSCoverFlow(height: .designSize(28), data: infoImageGallery, id: \.self) { image in
                     DSImageView(url: image).dsCornerRadius()
                 }
                 

@@ -19,7 +19,7 @@ struct HomeScreen3: View {
             DSVStack(spacing: .regular) {
                 ProfileView(title: "Jane Doe", subtitle: "4 Items in cart", profileImageUrl: profileOnRedBg)
                 
-                DSGallery(height: 200, data: viewModel.topProducts, id: \.self) { imageUrl in
+                DSCoverFlow(height: 200, data: viewModel.topProducts, id: \.self) { imageUrl in
                     DSImageView(url: imageUrl, style: .capsule).onTap { self.dismiss() }
                 }
                 

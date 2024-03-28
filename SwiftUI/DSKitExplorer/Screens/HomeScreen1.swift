@@ -17,7 +17,7 @@ struct HomeScreen1: View {
         ScrollView() {
             DSVStack {
                 ProfileView(title: "Your Shop", profileUrl: profile)
-                DSGallery(height: 200, data: viewModel.topProducts, id: \.self) { imageUrl in
+                DSCoverFlow(height: 200, data: viewModel.topProducts, id: \.self) { imageUrl in
                     DSImageView(url: imageUrl, style: .capsule).onTap { self.dismiss() }
                 }
                 DSVStack {

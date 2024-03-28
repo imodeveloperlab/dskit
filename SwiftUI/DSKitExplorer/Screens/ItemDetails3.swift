@@ -16,7 +16,7 @@ struct ItemDetails3: View {
     var body: some View {
         ScrollView {
             DSVStack(spacing: .regular) {
-                DSGallery(height: 260, data: viewModel.imageGallery, id: \.self) { imageUrl in
+                DSCoverFlow(height: 260, data: viewModel.imageGallery, id: \.self) { imageUrl in
                     DSImageView(url: imageUrl).dsCornerRadius()
                 }
                 DSVStack(spacing: .regular) {

@@ -1,5 +1,5 @@
 //
-//  DSGallery.swift
+//  DSCoverFlow.swift
 //  DSKitCore
 //
 //  Created by Ivan Borinschi on 21.12.2022.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-public struct DSGallery<Data, ID, Content>: View where Data: RandomAccessCollection, ID: Hashable, Data.Element: Equatable, Content: View {
+public struct DSCoverFlow<Data, ID, Content>: View where Data: RandomAccessCollection, ID: Hashable, Data.Element: Equatable, Content: View {
     
     @Environment(\.appearance) var appearance: DSAppearance
     let height: DSDimension
@@ -69,16 +69,16 @@ public struct DSGallery<Data, ID, Content>: View where Data: RandomAccessCollect
     }
 }
 
-struct DSGallery_Previews: PreviewProvider {
+struct DSCoverFlow_Previews: PreviewProvider {
     static var previews: some View {
         let colors = [Color.red, Color.green, Color.yellow]
         PreviewForEach {
             DSFullScreen {
-                DSGallery(height: 200, spacing: .regular, data: colors, id: \.self) { color in
+                DSCoverFlow(height: 200, spacing: .regular, data: colors, id: \.self) { color in
                     color
                 }
                 .dsLayoutGuideLines(divider: 1)
-            }.dsContentMargins(margin: 100)
+            }.dsScreen()
         }
     }
 }
@@ -128,10 +128,12 @@ fileprivate struct DSPaginatedScrollView<Data, ID, Content>: UIViewRepresentable
         scrollView.clipsToBounds = false
         scrollView.delegate = context.coordinator
         scrollView.decelerationRate = .fast
+        scrollView.backgroundColor = .clear
     }
 
     private func addContentView(to scrollView: UIScrollView) {
         let contentView = createContentView()
+        contentView.view.backgroundColor = .clear
         contentView.view.translatesAutoresizingMaskIntoConstraints = false
         scrollView.addSubview(contentView.view)
         

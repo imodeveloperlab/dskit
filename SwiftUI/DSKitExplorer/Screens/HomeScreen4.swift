@@ -25,7 +25,7 @@ struct HomeScreen4: View {
                     profileImageUrl: profileOnYellowBg
                 )
                 
-                DSGallery(height: 190, data: viewModel.topProducts, id: \.imageUrl) { product in
+                DSCoverFlow(height: 190, data: viewModel.topProducts, id: \.imageUrl) { product in
                     TopProductView(product: product)
                         .onTap { self.dismiss() }
                 }

@@ -44,7 +44,7 @@ struct AboutUsScreen1: View {
                     }
                 }.dsCardStyle()
             }
-        }.dsBackground()
+        }.dsScreen()
     }
 }
 

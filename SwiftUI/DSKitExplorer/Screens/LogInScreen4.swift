@@ -44,8 +44,7 @@ struct LogInScreen4: View {
                     self.dismiss()
                 })
             }
-        }
-        .dsBackground()
+        }.dsScreen()
     }
 }
 

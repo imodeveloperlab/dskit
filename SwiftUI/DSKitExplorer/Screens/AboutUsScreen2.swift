@@ -40,8 +40,7 @@ struct AboutUsScreen2: View {
             default:
                 infoView
             }
-        }
-        .dsBackground()
+        }.dsScreen()
     }
     
     var infoView: some View {

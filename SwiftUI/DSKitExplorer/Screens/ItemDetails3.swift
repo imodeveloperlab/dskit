@@ -87,8 +87,7 @@ struct ItemDetails3: View {
             ToolbarItem(placement: .navigationBarTrailing) {
                 ToolbarSFSymbolButton(name: "heart").onTap { dismiss() }
             }
-        }
-        .dsBackground()
+        }.dsScreen()
     }
 }
 

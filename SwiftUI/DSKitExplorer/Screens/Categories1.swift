@@ -21,7 +21,7 @@ struct Categories1: View {
                         .onTap { }
                 }
             }
-        }.dsBackground()
+        }.dsScreen()
     }
 }
 

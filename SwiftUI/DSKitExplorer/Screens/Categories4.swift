@@ -18,7 +18,7 @@ struct Categories4: View {
             DSGrid(data: viewModel.categories, id: \.id) { category in
                 CategoryView(category: category).onTap { dismiss() }
             }
-        }.dsBackground()
+        }.dsScreen()
     }
 }
 

@@ -45,8 +45,7 @@ struct ProfileScreen1: View {
                     self.dismiss()
                 }
             }
-        }
-        .dsBackground()
+        }.dsScreen()
     }
 }
 

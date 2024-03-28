@@ -40,7 +40,7 @@ struct Shipping1: View {
                     action: { }
                 )
             }
-        }.dsBackground()
+        }.dsScreen()
     }
 }
 

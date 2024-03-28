@@ -19,7 +19,7 @@ struct Items6: View {
                 ProductView(product: product).onTap { }
             }
         }
-        .dsBackground()
+        .dsScreen()
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 ToolbarSFSymbolButton(name: "arrow.up.arrow.down.circle.fill")

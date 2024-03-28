@@ -370,7 +370,7 @@ struct ScreensView: View {
                     }
                 }
             }
-            .dsBackground()
+            .dsScreen()
             .navigationTitle(appearance.title)
             .toolbar {
                 // Placement in a Navigation Bar

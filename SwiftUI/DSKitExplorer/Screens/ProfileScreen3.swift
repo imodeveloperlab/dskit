@@ -44,7 +44,7 @@ struct ProfileScreen3: View {
             }
         }
         .navigationTitle("Password")
-        .dsBackground()
+        .dsScreen()
     }
 }
 

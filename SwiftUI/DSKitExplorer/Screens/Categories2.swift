@@ -18,7 +18,7 @@ struct Categories2: View {
             DSGrid(data: viewModel.categories, id: \.id) { category in
                 CategoryView(category: category)
             }
-        }.dsBackground()
+        }.dsScreen()
     }
 }
 

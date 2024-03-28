@@ -27,7 +27,7 @@ struct HomeScreen1: View {
                     }
                 }
             }
-        }.dsBackground()
+        }.dsScreen()
     }
 }
 

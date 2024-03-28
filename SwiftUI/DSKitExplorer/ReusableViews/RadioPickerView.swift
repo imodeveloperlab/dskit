@@ -33,6 +33,7 @@ public struct RadioPickerView<Data, ID, Content>: View where Data: RandomAccessC
                 DSVStack(alignment: .leading) {
                     self.content(element, selected == element)
                 }
+                .dsCornerRadius(onlyForEnvironment: true)
                 .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
                 .overlay(alignment: .trailing) {
                     if selected == element  {

@@ -39,7 +39,7 @@ struct CartScreen1: View {
                 ToolbarSFSymbolButton(name: "trash.fill")
                     .onTap { dismiss() }
             }
-        }.dsBackground()
+        }.dsScreen()
     }
 }
 

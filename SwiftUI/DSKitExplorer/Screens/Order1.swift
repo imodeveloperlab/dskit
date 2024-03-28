@@ -53,7 +53,7 @@ struct Order1: View {
                 }
                 TermsAndConditionsView(message: "By pressing confirm order, you agree to our")
             }
-        }.dsBackground()
+        }.dsScreen()
     }
 }
 

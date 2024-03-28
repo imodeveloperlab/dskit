@@ -14,13 +14,21 @@ public struct DSCornerRadiusModifier: ViewModifier {
     @Environment(\.colorGroup) var colorGroup: DSColorGroup
     @Environment(\.parentPadding) var parentPadding: CGFloat
     @Environment(\.parentCornerRadius) var parentCornerRadius: CGFloat
+    let onlyForEnvironment: Bool
     
-    public init() { }
+    public init(onlyForEnvironment: Bool) {
+        self.onlyForEnvironment = onlyForEnvironment
+    }
     
     public func body(content: Content) -> some View {
-        content
-            .cornerRadius(resolveCornerRadius())
-            .environment(\.parentCornerRadius,  resolveCornerRadius())
+        if onlyForEnvironment {
+            content
+                .environment(\.parentCornerRadius,  resolveCornerRadius())
+        } else {
+            content
+                .cornerRadius(resolveCornerRadius())
+                .environment(\.parentCornerRadius,  resolveCornerRadius())
+        }
     }
     
     func resolveCornerRadius() -> CGFloat {
@@ -33,8 +41,8 @@ public struct DSCornerRadiusModifier: ViewModifier {
 }
 
 public extension View {
-    func dsCornerRadius() -> some View {
-        let modifier = DSCornerRadiusModifier()
+    func dsCornerRadius(onlyForEnvironment: Bool = false) -> some View {
+        let modifier = DSCornerRadiusModifier(onlyForEnvironment: onlyForEnvironment)
         return self.modifier(modifier)
     }
 }

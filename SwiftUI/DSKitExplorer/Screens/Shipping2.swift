@@ -37,7 +37,7 @@ struct Shipping2: View {
                     action: { }
                 )
             }
-        }.dsBackground()
+        }.dsScreen()
     }
     
     func section<Content: View>(with title: String, @ViewBuilder content: @escaping () -> Content) -> some View {

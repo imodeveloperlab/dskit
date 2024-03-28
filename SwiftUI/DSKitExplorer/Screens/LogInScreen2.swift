@@ -40,7 +40,7 @@ struct LogInScreen2: View {
                 self.dismiss()
             }
         }
-        .dsBackground()
+        .dsScreen()
     }
 }
 

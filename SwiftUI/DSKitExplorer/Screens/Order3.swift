@@ -23,8 +23,7 @@ struct Order3: View {
             Spacer()
             Spacer()
             DSButton(title: "Continue Shopping", rightSFSymbolName: "bag.fill", action: { dismiss() })
-        }
-        .dsBackground()
+        }.dsScreen()
     }
 }
 

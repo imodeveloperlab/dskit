@@ -40,6 +40,14 @@ public extension EnvironmentValues {
 }
 
 public extension View {
+    
+    func dsScreen(contentMargins: DSDimension = .regular) -> some View {
+        return self
+            .dsBackground()
+            .environment(\.dsContentMarginKey, contentMargins)
+            .environment(\.dsScrollableContentMarginKey, contentMargins)
+    }
+    
     func dsContentMargins(margin: DSDimension = .regular) -> some View {
         return self
             .environment(\.dsContentMarginKey, margin)
@@ -50,3 +58,5 @@ public extension View {
         return self.environment(\.dsContentMarginKey, .zero)
     }
 }
+
+

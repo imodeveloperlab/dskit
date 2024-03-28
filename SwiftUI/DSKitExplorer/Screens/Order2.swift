@@ -48,8 +48,7 @@ struct Order2: View {
                 }
                 TermsAndConditionsView(message: "By pressing confirm order, you agree to our")
             }
-        }
-        .dsBackground()
+        }.dsScreen()
     }
     
     func section<Content: View>(with title: String, @ViewBuilder content: @escaping () -> Content) -> some View {

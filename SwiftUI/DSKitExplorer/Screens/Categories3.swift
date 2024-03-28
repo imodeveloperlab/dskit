@@ -20,7 +20,7 @@ struct Categories3: View {
                     CategoryView(category: category)
                 }
             }
-        }.dsBackground()
+        }.dsScreen()
     }
 }
 

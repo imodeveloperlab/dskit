@@ -27,7 +27,7 @@ struct Items4: View {
                 }
             }
         }
-        .dsBackground()
+        .dsScreen()
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 ToolbarSFSymbolButton(name: "arrow.up.arrow.down.circle.fill")

@@ -34,7 +34,7 @@ struct ProfileScreen2: View {
             }
         }.onAppear {
             viewModel.onApear()
-        }.dsBackground()
+        }.dsScreen()
     }
 }
 

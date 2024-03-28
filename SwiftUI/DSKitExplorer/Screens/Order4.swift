@@ -32,8 +32,7 @@ struct Order4: View {
             DSButton(title: "Continue Shopping", rightSFSymbolName: "bag.fill", action: {
                 dismiss()
             })
-        }
-        .dsBackground()
+        }.dsScreen()
     }
 }
 

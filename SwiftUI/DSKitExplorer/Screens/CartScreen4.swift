@@ -34,8 +34,7 @@ struct CartScreen4: View {
             ToolbarItem(placement: .navigationBarTrailing) {
                 ToolbarSFSymbolButton(name: "trash.fill").onTap { dismiss() }
             }
-        }
-        .dsBackground()
+        }.dsScreen()
     }
 }
 

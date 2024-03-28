@@ -51,7 +51,7 @@ struct SignUpScreen1: View {
             }.hideWhenKeyboardIsDisplayed()
         }
         .navigationTitle("Sign Up")
-        .dsBackground()
+        .dsScreen()
     }
 }
 

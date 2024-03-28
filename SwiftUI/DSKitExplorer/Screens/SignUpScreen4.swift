@@ -38,7 +38,7 @@ struct SignUpScreen4: View {
             Spacer()
             Spacer()
         }
-        .dsBackground()
+        .dsScreen()
         .navigationTitle("Sign Up")
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {

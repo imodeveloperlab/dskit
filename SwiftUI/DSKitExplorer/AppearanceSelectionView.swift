@@ -35,14 +35,11 @@ struct AppearanceSelectionView: View {
                     }
                 }
             }
-            
             .fullScreenCover(item: $selectedAppearance) { identifiableDesignable in
                 ScreensView(appearance: identifiableDesignable.appearance)
             }
             PoweredByDSKitView()
-        }
-        .dsPadding(.horizontal)
-        .dsBackground()
+        }.dsScreen()
     }
 }
 

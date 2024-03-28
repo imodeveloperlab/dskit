@@ -28,7 +28,7 @@ struct Payment2: View {
                     action: { dismiss() }
                 )
             }
-        }.dsBackground()
+        }.dsScreen()
     }
 }
 

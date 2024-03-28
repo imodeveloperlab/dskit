@@ -45,7 +45,7 @@ struct Payment1: View {
                     action: { }
                 )
             }
-        }.dsBackground()
+        }.dsScreen()
     }
 }
 

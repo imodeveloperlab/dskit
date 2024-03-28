@@ -19,7 +19,7 @@ struct Items1: View {
                 ProductView(product: product).onTap { dismiss() }
             }
         }
-        .dsBackground()
+        .dsScreen()
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 ToolbarSFSymbolButton(name: "square.and.arrow.up")

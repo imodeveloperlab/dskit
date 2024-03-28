@@ -29,7 +29,7 @@ struct CartScreen2: View {
                 PoweredByDSKitView()
             }
         }
-        .dsBackground()
+        .dsScreen()
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 ToolbarSFSymbolButton(name: "square.and.arrow.up.fill").onTap { dismiss() }

@@ -54,7 +54,7 @@ struct Filters3: View {
             ToolbarItem(placement: .navigationBarTrailing) {
                 DSButton(title: "Reset", style: .clear, action: {})
             }
-        }.dsBackground()
+        }.dsScreen()
     }
 }
 

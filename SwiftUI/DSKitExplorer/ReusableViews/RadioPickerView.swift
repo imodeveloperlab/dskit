@@ -34,7 +34,7 @@ public struct RadioPickerView<Data, ID, Content>: View where Data: RandomAccessC
                     self.content(element, selected == element)
                 }
                 .dsCornerRadius(onlyForEnvironment: true)
-                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
+                .frame(maxWidth: .infinity, alignment: .leading)
                 .overlay(alignment: .trailing) {
                     if selected == element  {
                         DSImageView(sfSymbol: "checkmark.circle.fill", size: 17, tint: .customColor(.green))
@@ -43,12 +43,13 @@ public struct RadioPickerView<Data, ID, Content>: View where Data: RandomAccessC
                             .opacity(0.3)
                     }
                 }
-                .dsCardStyle()
+                
                 .onTap {
                     UIImpactFeedbackGenerator(style: .medium).impactOccurred()
                     selected = element
                 }
             }
+            
         }
     }
 }

@@ -67,7 +67,7 @@ extension Payment1 {
                         DSText("\(method.holder) \(method.expire)", .smallSubtitle)
                     }
                 }.frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
-            }
+            }.dsCardStyle()
         }
         
         struct Data: Identifiable, Equatable {

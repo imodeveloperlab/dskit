@@ -51,11 +51,8 @@ extension Categories1 {
                 .frame(maxWidth: .infinity, alignment: .leading)
             }
             .overlay(alignment: .trailing) {
-                ChevronView()
-                    .dsPadding()
-            }
-            .dsSecondaryBackground()
-            .dsCornerRadius()
+                ChevronView().dsPadding()
+            }.dsCardStyle(padding: 0)
         }
         
         struct Data: Identifiable {

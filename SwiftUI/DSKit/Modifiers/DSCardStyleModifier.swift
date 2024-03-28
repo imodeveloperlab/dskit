@@ -17,6 +17,7 @@ public struct DSCardStyleModifier: ViewModifier {
     
     public func body(content: Content) -> some View {
         content
+            .dsCornerRadius(onlyForEnvironment: true)
             .dsPadding(padding)
             .dsSecondaryBackground()
             .dsCornerRadius()
@@ -25,7 +26,6 @@ public struct DSCardStyleModifier: ViewModifier {
 
 public extension View {
     func dsCardStyle(padding: DSDimension = .regular) -> some View {
-        let modifier = DSCardStyleModifier(padding: padding)
-        return self.modifier(modifier)
+        return self.modifier(DSCardStyleModifier(padding: padding))
     }
 }

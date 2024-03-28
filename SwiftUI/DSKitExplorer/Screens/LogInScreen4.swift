@@ -45,7 +45,6 @@ struct LogInScreen4: View {
                 })
             }
         }
-        .dsPadding(.mediumLarge)
         .dsBackground()
     }
 }

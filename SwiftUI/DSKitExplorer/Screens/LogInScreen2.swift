@@ -40,7 +40,6 @@ struct LogInScreen2: View {
                 self.dismiss()
             }
         }
-        .dsPadding()
         .dsBackground()
     }
 }

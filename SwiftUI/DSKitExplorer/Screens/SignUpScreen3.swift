@@ -36,7 +36,6 @@ struct SignUpScreen3: View {
             Spacer()
             Spacer()
         }
-        .dsPadding()
         .dsBackground()
         .navigationTitle("Sign Up")
         .toolbar {

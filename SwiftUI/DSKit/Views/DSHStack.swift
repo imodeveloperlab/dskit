@@ -10,6 +10,7 @@ import SwiftUI
 public struct DSHStack<Content: View>: View {
 
     @Environment(\.appearance) var appearance: DSAppearance
+    
     let spacing: DSDimension
     let content: () -> Content
     let alignment: VerticalAlignment
@@ -26,8 +27,10 @@ public struct DSHStack<Content: View>: View {
 
     public var body: some View {
         HStack(alignment: alignment, spacing: appearance.size.number(for: spacing)) {
-            content().dsDebuggable(debugColor: Color.purple)
-        }
+            content()
+                .dsDebuggable(debugColor: Color.purple)
+                .dsResetContentMargins()
+        }.dsContentMargins()
     }
 }
 

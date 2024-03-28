@@ -17,7 +17,7 @@ struct Items1: View {
         ScrollView {
             DSGrid(data: viewModel.products, id: \.id) { product in
                 ProductView(product: product).onTap { dismiss() }
-            }.dsPadding()
+            }
         }
         .dsBackground()
         .toolbar {

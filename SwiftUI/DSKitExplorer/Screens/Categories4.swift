@@ -17,7 +17,7 @@ struct Categories4: View {
         ScrollView {
             DSGrid(data: viewModel.categories, id: \.id) { category in
                 CategoryView(category: category).onTap { dismiss() }
-            }.dsPadding(.horizontal)
+            }
         }.dsBackground()
     }
 }

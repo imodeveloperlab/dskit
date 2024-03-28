@@ -19,7 +19,7 @@ struct Categories3: View {
                 ForEach(viewModel.categories) { category in
                     CategoryView(category: category)
                 }
-            }.dsPadding(.horizontal)
+            }
         }.dsBackground()
     }
 }

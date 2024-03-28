@@ -19,7 +19,7 @@ struct CartScreen1: View {
                 ForEach(viewModel.products) { product in
                     ProductView(product: product)
                 }
-            }.dsPadding(.horizontal)
+            }
         }
         .safeAreaInset(edge: .bottom) {
             BottomContainerView {
@@ -39,8 +39,7 @@ struct CartScreen1: View {
                 ToolbarSFSymbolButton(name: "trash.fill")
                     .onTap { dismiss() }
             }
-        }
-        .dsBackground()
+        }.dsBackground()
     }
 }
 

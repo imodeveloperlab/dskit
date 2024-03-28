@@ -16,7 +16,6 @@ struct Payment1: View {
     var body: some View {
         ScrollView {
             DSVStack {
-                
                 RadioPickerView(
                     data: viewModel.paymentMethods,
                     id: \.id,
@@ -31,11 +30,9 @@ struct Payment1: View {
                     style: .light,
                     action: { dismiss() }
                 )
-                
-            }.dsPadding(.horizontal)
-            
+            }
         }.safeAreaInset(edge: .bottom) {
-            DSVStack {
+            BottomContainerView {
                 DSHStack {
                     DSText("Next Step:", .smallTitle)
                     DSText("Shipping address", .subheadlineWithSize(14))
@@ -47,7 +44,7 @@ struct Payment1: View {
                     style: .default,
                     action: { }
                 )
-            }.dsPadding()
+            }
         }.dsBackground()
     }
 }

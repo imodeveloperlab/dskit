@@ -36,24 +36,26 @@ public extension View {
 }
 
 #Preview {
-    DSVStack {
-        
-        Spacer()
-        
+    DSFullScreen {
         DSVStack {
-            DSText("Secondary background")
+            
+            Spacer()
+            
+            DSVStack {
+                DSText("Secondary background")
+            }
+            .dsPadding()
+            .dsBackground(.secondaryViewBackground)
+            
+            DSVStack {
+                DSText("Primary background")
+            }
+            .dsPadding()
+            .dsBackground(.primaryViewBackground)
+            
+            Spacer()
         }
         .dsPadding()
-        .dsBackground(.secondaryViewBackground)
-        
-        DSVStack {
-            DSText("Primary background")
-        }
-        .dsPadding()
-        .dsBackground(.primaryViewBackground)
-        
-        Spacer()
+        .dsBackground()
     }
-    .dsPadding()
-    .dsBackground()
 }

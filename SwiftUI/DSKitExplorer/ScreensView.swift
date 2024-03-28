@@ -369,7 +369,6 @@ struct ScreensView: View {
                         }
                     }
                 }
-                .dsPadding(.horizontal)
             }
             .dsBackground()
             .navigationTitle(appearance.title)
@@ -395,10 +394,7 @@ fileprivate struct CustomActionView: View {
             DSText(title, .smallTitle)
             Spacer()
             ChevronView()
-        }
-        .dsPadding()
-        .dsSecondaryBackground()
-        .dsCornerRadius()
+        }.dsCardStyle()
     }
 }
 

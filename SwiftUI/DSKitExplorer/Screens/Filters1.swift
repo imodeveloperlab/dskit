@@ -16,21 +16,17 @@ struct Filters1: View {
     var body: some View {
         ScrollView {
             DSVStack {
-                section(with: "Sort By") {
-                    RadioPickerView(data: viewModel.sortByOptions, id: \.self, selected: $viewModel.selectedSortByOption) { option, selected in
-                        DSText(option, selected ?  .smallTitle : .subheadlineWithSize(14))
-                    }
-                }
                 
-                section(with: "Options") {
-                    DSVStack(spacing: .smaller) {
-                        ForEach(viewModel.filters) { filter in
-                            OptionView(option: filter)
-                        }
-                    }
-                }
+                RadioPickerView(data: viewModel.sortByOptions, id: \.self, selected: $viewModel.selectedSortByOption) { option, selected in
+                    DSText(option, selected ?  .smallTitle : .subheadlineWithSize(14))
+                }.dsSectionStyle(title: "Sort By")
                 
-            }.dsPadding(.horizontal)
+                DSVStack(spacing: .smaller) {
+                    ForEach(viewModel.filters) { filter in
+                        OptionView(option: filter)
+                    }
+                }.dsSectionStyle(title: "Options")
+            }
             
         }.safeAreaInset(edge: .bottom) {
             BottomContainerView {
@@ -44,14 +40,6 @@ struct Filters1: View {
                 DSButton(title: "Reset", style: .clear, action: {})
             }
         }.dsBackground()
-    }
-    
-    func section<Content: View>(with title: String, @ViewBuilder content: @escaping () -> Content) -> some View {
-        DSVStack(spacing: .smaller) {
-            DSText(title, .smallTitle)
-            content()
-        }
-        .dsPadding(.top)
     }
 }
 

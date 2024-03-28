@@ -24,10 +24,10 @@ struct Shipping1: View {
                     rightSFSymbolName: "plus.circle",
                     style: .light, action: { dismiss() }
                 )
-            }.dsPadding(.horizontal)
+            }
             
         }.safeAreaInset(edge: .bottom) {
-            DSVStack {
+            BottomContainerView {
                 DSHStack {
                     DSText("Next Step:", .smallTitle)
                     DSText("Checkout", .subheadlineWithSize(14))
@@ -39,7 +39,7 @@ struct Shipping1: View {
                     style: .default,
                     action: { }
                 )
-            }.dsPadding()
+            }
         }.dsBackground()
     }
 }

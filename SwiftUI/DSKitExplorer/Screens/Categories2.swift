@@ -17,7 +17,7 @@ struct Categories2: View {
         ScrollView {
             DSGrid(data: viewModel.categories, id: \.id) { category in
                 CategoryView(category: category)
-            }.dsPadding(.horizontal)
+            }
         }.dsBackground()
     }
 }

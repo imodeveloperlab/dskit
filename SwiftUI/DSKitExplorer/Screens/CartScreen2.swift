@@ -19,7 +19,7 @@ struct CartScreen2: View {
                 ForEach(viewModel.products) { product in
                     ProductView(product: product)
                 }
-            }.dsPadding(.horizontal)
+            }
         }.safeAreaInset(edge: .bottom) {
             BottomContainerView {
                 TotalView(itemsCount: "2", price: DSPrice(amount: "349.00", currency: "$"))

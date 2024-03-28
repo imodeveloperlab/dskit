@@ -29,7 +29,6 @@ struct AboutUsScreen2: View {
                 Text("Contacts").tag(2)
             }
             .pickerStyle(.segmented)
-            .dsPadding(.horizontal)
             
             switch favoriteColor {
             case 0:
@@ -51,7 +50,7 @@ struct AboutUsScreen2: View {
                 DSVStack {
                     DSText("Best Store in town", .title2).frame(maxWidth: .infinity, alignment: .leading)
                     DSText("Here you will feel the attitude, here you will receive quality, here you will see the atmosphere of an authentic store", .body).frame(maxWidth: .infinity, alignment: .leading)
-                }.dsPadding(.horizontal)
+                }
                 
                 DSGallery(height: .designSize(28), data: infoImageGallery, id: \.self) { image in
                     DSImageView(url: image).dsCornerRadius()
@@ -61,7 +60,7 @@ struct AboutUsScreen2: View {
                     DSText(DSFaker().text, .body).frame(maxWidth: .infinity, alignment: .leading)
                     DSText(DSFaker().text, .subheadline).frame(maxWidth: .infinity, alignment: .leading)
                     DSText(DSFaker().text, .body).frame(maxWidth: .infinity, alignment: .leading)
-                }.dsPadding(.horizontal)
+                }
             }
         }
     }
@@ -98,13 +97,11 @@ struct AboutUsScreen2: View {
                         .dsCornerRadius()
                     }
                 }
-                .dsPadding(.horizontal)
                 Spacer()
             }
             
             DSButton(title: "Leave feedback", rightSFSymbolName: "message.fill", action: { })
                 .topShadow(padding: .small)
-                .dsPadding(.horizontal)
         }
     }
     
@@ -144,11 +141,9 @@ struct AboutUsScreen2: View {
                     DSButton(title: "Get directions", rightSFSymbolName: "location.fill", action: { })
                     
                 }
-                .dsPadding(.horizontal)
                 Spacer()
             }
         }
-        //.dsLayoutDebug()
     }
 }
 
@@ -176,10 +171,7 @@ struct ContactView: View {
                 DSText(info, .subheadlineWithSize(14))
                     .frame(maxWidth: .infinity, alignment: .leading)
             }
-        }
-        .dsPadding()
-        .dsSecondaryBackground()
-        .dsCornerRadius()
+        }.dsCardStyle()
     }
 }
 

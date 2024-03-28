@@ -51,8 +51,8 @@ public struct DSGrid<Data, ID, Content>: View where Data: RandomAccessCollection
                 } else {
                     self.content(element)
                 }
-            }
-        }
+            }.dsResetContentMargins()
+        }.dsContentMargins()
     }
 }
 
@@ -65,7 +65,7 @@ struct DSGrid_Previews: PreviewProvider {
                     DSGrid(viewHeight: 50, numberOfColumns: 3, spacing: .small, data: 0...4, id: \.self) { element in
                         colors[element]
                     }
-                }.dsPadding()
+                }.dsContentMargins(margin: 100)
             }
         }
     }

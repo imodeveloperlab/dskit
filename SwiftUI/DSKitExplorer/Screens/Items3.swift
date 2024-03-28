@@ -19,7 +19,7 @@ struct Items3: View {
                 ForEach(viewModel.products) { product in
                     ProductView(product: product)
                 }
-            }.dsPadding(.horizontal)
+            }
         }
         .dsBackground()
         .toolbar {

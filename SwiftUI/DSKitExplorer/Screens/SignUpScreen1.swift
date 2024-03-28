@@ -42,7 +42,6 @@ struct SignUpScreen1: View {
                 
                 TermsAndConditionsView(message: "By signing up, you agree to our")
             }
-            .dsPadding(.horizontal)
             .hideKeyboardWhenTappedOutside()
         }
         .safeAreaInset(edge: .bottom) {

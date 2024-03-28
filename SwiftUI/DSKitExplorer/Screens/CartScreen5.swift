@@ -19,7 +19,7 @@ struct CartScreen5: View {
                 ForEach(viewModel.products) { product in
                     ProductView(product: product)
                 }
-            }.dsPadding(.horizontal)
+            }
         }
         .safeAreaInset(edge: .bottom) {
             BottomContainerView {

@@ -16,7 +16,6 @@ struct Filters2: View {
     var body: some View {
         ScrollView {
             DSVStack {
-                
                 RadioPickerView(
                     data: viewModel.sortByOptions,
                     id: \.self,
@@ -31,8 +30,7 @@ struct Filters2: View {
                     selected: $viewModel.selectedColor
                 ) { color in
                     Color(uiColor: color).dsSize(40)
-                }
-                .dsSectionStyle(title: "Color")
+                }.dsSectionStyle(title: "Color")
                 
                 PickerView(
                     data: viewModel.sizes,
@@ -43,26 +41,21 @@ struct Filters2: View {
                         .frame(maxWidth: .infinity)
                         .dsSize(40)
                         .dsSecondaryBackground()
-                }
-                .dsSectionStyle(title: "Size")
+                }.dsSectionStyle(title: "Size")
                 
                 DSVStack(spacing: .smaller) {
                     ForEach(viewModel.filters) { filter in
                         OptionView(option: filter)
                     }
-                }
-                .dsSectionStyle(title: "Options")
-
-            }.dsPadding(.horizontal)
-            
+                }.dsSectionStyle(title: "Options")
+            }
         }.safeAreaInset(edge: .bottom) {
-            DSButton(
-                title: "View (235) Items",
-                action: { dismiss() }
-            )
-            .dsPadding(.horizontal)
-            .topShadow(padding: .regular)
-            .dsBackground()
+            BottomContainerView {
+                DSButton(
+                    title: "View (235) Items",
+                    action: { dismiss() }
+                )
+            }
         }.toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 DSButton(title: "Reset", style: .clear, action: {})

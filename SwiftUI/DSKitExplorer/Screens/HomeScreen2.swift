@@ -16,7 +16,6 @@ struct HomeScreen2: View {
     var body: some View {
         ScrollView() {
             DSVStack(spacing: .regular) {
-                
                 ProfileView(
                     title: "Shop",
                     subtitle: "Over 45k items available for you",
@@ -41,8 +40,7 @@ struct HomeScreen2: View {
                             .onTap { self.dismiss() }
                     }
                 }
-                
-            }.dsPadding(.horizontal)
+            }
         }.dsBackground()
     }
 }
@@ -103,9 +101,7 @@ extension HomeScreen2 {
         var body: some View {
             DSText(title, .smallTitle)
                 .frame(maxWidth: .infinity, alignment: .center)
-                .dsHeight(35)
-                .dsSecondaryBackground()
-                .dsCornerRadius()
+                .dsCardStyle()
                 .onTap { action() }
         }
         struct Category: Identifiable {

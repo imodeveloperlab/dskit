@@ -27,8 +27,10 @@ public struct DSVStack<Content: View>: View {
     
     public var body: some View {
         VStack(alignment: alignment, spacing: appearance.size.number(for: spacing)) {
-            content().dsDebuggable(debugColor: Color.mint)
-        }
+            content()
+                .dsDebuggable(debugColor: Color.mint)
+                .dsResetContentMargins()
+        }.dsContentMargins()
     }
 }
 

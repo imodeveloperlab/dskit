@@ -50,9 +50,7 @@ struct ItemDetails5: View {
                 }
 
                 DSText(viewModel.description, .caption1)
-                    .dsPadding(.bottom, .regular)
-                
-            }.dsPadding(.horizontal)
+            }
         }
         .safeAreaInset(edge: .bottom) {
             BottomContainerView {

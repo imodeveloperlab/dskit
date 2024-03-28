@@ -37,8 +37,6 @@ struct Order2: View {
                 OrderInfo(orderTotals: viewModel.orderTotals)
                     .dsSectionStyle(title: "Order Info")
             }
-            .dsPadding(.bottom)
-            .dsPadding(.horizontal)
             
         }.safeAreaInset(edge: .bottom) {
             BottomContainerView {

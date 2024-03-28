@@ -24,7 +24,6 @@ struct Order3: View {
             Spacer()
             DSButton(title: "Continue Shopping", rightSFSymbolName: "bag.fill", action: { dismiss() })
         }
-        .dsPadding()
         .dsBackground()
     }
 }

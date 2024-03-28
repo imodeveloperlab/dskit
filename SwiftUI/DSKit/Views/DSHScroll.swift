@@ -10,8 +10,10 @@ import SwiftUI
 public struct DSHScroll<Data, ID, Content>: View where Data: RandomAccessCollection, ID: Hashable, Content: View{
     
     @Environment(\.appearance) var appearance: DSAppearance
+    @Environment(\.dsScrollableContentMarginKey) var scrollableContentMargin: DSDimension
+    @Environment(\.dsContentMarginKey) var contentMargin: DSDimension
+    
     let spacing: DSDimension
-    let padding: DSDimension
     
     let data: Data
     let content: (Data.Element) -> Content
@@ -19,13 +21,11 @@ public struct DSHScroll<Data, ID, Content>: View where Data: RandomAccessCollect
     
     public init(
         spacing: DSDimension = .small,
-        padding: DSDimension = .regular,
         data: Data,
         id: KeyPath<Data.Element, ID>,
         @ViewBuilder content: @escaping (Data.Element) -> Content
     ) {
         self.spacing = spacing
-        self.padding = padding
         self.data = data
         self.content = content
         self.id = id
@@ -37,23 +37,22 @@ public struct DSHScroll<Data, ID, Content>: View where Data: RandomAccessCollect
                 ForEach(data, id: id) { element in
                     self.content(element)
                 }
-            }
-        }.scrollClipDisabled(true)
+            }.dsPadding(.horizontal, .custom(appearance.size.number(for: scrollableContentMargin)))
+        }
+        .dsPadding(.horizontal, .custom(-appearance.size.number(for: scrollableContentMargin)))
+        .dsPadding(.horizontal, .custom(appearance.size.number(for: contentMargin)))
     }
 }
 
 struct DSHScroll_Previews: PreviewProvider {
     static var previews: some View {
-        
         let colors = [Color.red, Color.green, Color.yellow, Color.red, Color.green, Color.yellow]
         PreviewForEach {
             DSFullScreen {
                 DSHScroll(spacing: .regular, data: colors, id: \.self) { color in
                     color.dsSize(60)
                 }
-                .dsPadding(.horizontal)
-                .dsLayoutGuideLines(divider: 1)
-            }
+            }.dsContentMargins(margin: 100)
         }
     }
 }

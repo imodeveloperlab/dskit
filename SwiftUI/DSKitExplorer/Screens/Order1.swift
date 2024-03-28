@@ -42,8 +42,6 @@ struct Order1: View {
                 OrderInfo(orderTotals: viewModel.orderTotals)
                     .dsSectionStyle(title: "Order Info")
             }
-            .dsPadding(.horizontal)
-            .dsPadding(.bottom)
         }
         .safeAreaInset(edge: .bottom) {
             BottomContainerView {
@@ -55,8 +53,7 @@ struct Order1: View {
                 }
                 TermsAndConditionsView(message: "By pressing confirm order, you agree to our")
             }
-        }
-        .dsBackground()
+        }.dsBackground()
     }
 }
 

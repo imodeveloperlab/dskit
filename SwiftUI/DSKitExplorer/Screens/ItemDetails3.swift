@@ -50,7 +50,7 @@ struct ItemDetails3: View {
                         DSImageView(sfSymbol: "info.circle.fill", size: .regular, tint: .customColor(.yellow))
                         DSText(viewModel.priceDisclaimer, .caption2, multilineTextAlignment: .leading)
                     }
-                }.dsPadding(.horizontal)
+                }
                 
                 PickerView(
                     data: viewModel.colors,
@@ -72,8 +72,6 @@ struct ItemDetails3: View {
                 }.dsSectionStyle(title: "Size")
 
                 DSText(viewModel.description, .caption1)
-                .dsPadding(.bottom, .regular)
-                .dsPadding(.horizontal)
             }
         }
         .safeAreaInset(edge: .bottom) {

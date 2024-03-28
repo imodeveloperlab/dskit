@@ -61,8 +61,8 @@ struct ItemDetails4: View {
                 DSVStack(spacing: .smaller) {
                     ActionView(title: "Size Guides")
                     ActionView(title: "Return Policy")
-                }.dsPadding(.bottom)
-            }.dsPadding(.horizontal)
+                }
+            }
         }
         .safeAreaInset(edge: .bottom) {
             BottomContainerView {

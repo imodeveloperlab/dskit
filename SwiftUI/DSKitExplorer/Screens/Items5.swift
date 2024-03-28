@@ -33,7 +33,7 @@ struct Items5: View {
                 DSGrid(data: viewModel.products, id: \.id) { product in
                     ProductView(product: product)
                 }
-            }.dsPadding(.horizontal)
+            }
         }
         .dsBackground()
         .toolbar {

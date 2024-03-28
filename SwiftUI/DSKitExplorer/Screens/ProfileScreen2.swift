@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-
 import DSKit
 
 struct ProfileScreen2: View {
@@ -32,11 +31,10 @@ struct ProfileScreen2: View {
                         viewModel.submit()
                     }
                 }
-            }.dsPadding(.horizontal)
+            }
         }.onAppear {
             viewModel.onApear()
-        }
-        .dsBackground()
+        }.dsBackground()
     }
 }
 

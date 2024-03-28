@@ -16,18 +16,18 @@ struct Payment2: View {
     var body: some View {
         ScrollView {
             DSVStack {
-                DSVStack {
-                    ForEach(viewModel.creditCards) { card in
-                        CreditCard(card: card)
-                    }
+                ForEach(viewModel.creditCards) { card in
+                    CreditCard(card: card)
                 }
-            }.dsPadding(.horizontal)
+            }
         }.safeAreaInset(edge: .bottom) {
-            DSButton(
-                title: "Add new credit card",
-                rightSFSymbolName: "plus.circle",
-                action: { dismiss() }
-            ).dsPadding()
+            BottomContainerView {
+                DSButton(
+                    title: "Add new credit card",
+                    rightSFSymbolName: "plus.circle",
+                    action: { dismiss() }
+                )
+            }
         }.dsBackground()
     }
 }

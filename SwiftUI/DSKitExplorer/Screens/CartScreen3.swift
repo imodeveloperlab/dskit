@@ -18,7 +18,7 @@ struct CartScreen3: View {
             DSVStack() {
                 ForEach(viewModel.products) { product in
                     ProductView(product: product)
-                }.dsPadding(.horizontal)
+                }
             }
         }
         .safeAreaInset(edge: .bottom) {

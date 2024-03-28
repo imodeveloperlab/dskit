@@ -72,7 +72,6 @@ struct LogInScreen3: View {
                 })
             }
         }
-        .dsPadding()
         .dsBackground()
     }
 }

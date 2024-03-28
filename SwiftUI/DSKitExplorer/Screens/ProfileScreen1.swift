@@ -34,19 +34,17 @@ struct ProfileScreen1: View {
                         }
                     }
                 }
-                
-            }.dsPadding()
-        }.safeAreaInset(edge: .bottom) {
-            DSButton(
-                title: "Log out",
-                rightSFSymbolName: "rectangle.portrait.and.arrow.forward"
-            ) {
-                self.dismiss()
             }
-            .dsPadding(.horizontal)
-            .topShadow(padding: .regular)
-            .dsPadding(.bottom, .regular)
-            .dsBackground()
+            
+        }.safeAreaInset(edge: .bottom) {
+            BottomContainerView {
+                DSButton(
+                    title: "Log out",
+                    rightSFSymbolName: "rectangle.portrait.and.arrow.forward"
+                ) {
+                    self.dismiss()
+                }
+            }
         }
         .dsBackground()
     }

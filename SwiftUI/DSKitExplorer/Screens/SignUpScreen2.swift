@@ -51,13 +51,12 @@ struct SignUpScreen2: View {
                 Spacer()
             }.hideWhenKeyboardIsDisplayed()
             
-            DSButton(title: "I have an account", style: .clear, action: {
+            DSButton(title: "I have an account", style: .borderedLight, action: {
                 self.dismiss()
             })
         }
         .navigationTitle("Sign Up")
         .hideKeyboardWhenTappedOutside()
-        .dsPadding(.horizontal)
         .dsBackground()
     }
 }

@@ -21,9 +21,9 @@ struct AboutUsScreen1: View {
                 DSVStack {
                     DSText("Our Story", .title2)
                     DSText("Start working with DSKit that can provide everything you need to generate any interface you need. Dummy text is text that is used in the publishing industry or by web designers to occupy the space which will later be filled with 'real' content.", .body)
-                }.dsPadding(.horizontal)
+                }
                 
-                DSGallery(height: .designSize(28), data: imageGallery, id: \.self) { image in
+                DSGallery(height: 250, data: imageGallery, id: \.self) { image in
                     DSImageView(url: image).dsCornerRadius()
                 }
                 
@@ -42,12 +42,7 @@ struct AboutUsScreen1: View {
                         DSImageView(sfSymbol: "leaf.arrow.triangle.circlepath", size: .medium, tint: .text(.body))
                         DSText(DSFaker().text, .footnote).frame(maxWidth: .infinity, alignment: .leading)
                     }
-                }
-                .dsPadding()
-                .dsSecondaryBackground()
-                .dsCornerRadius()
-                .dsPadding(.horizontal)
-                
+                }.dsCardStyle()
             }
         }.dsBackground()
     }

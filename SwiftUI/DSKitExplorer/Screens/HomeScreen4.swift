@@ -40,7 +40,7 @@ struct HomeScreen4: View {
                         ProductView(product: product).onTap { self.dismiss() }
                     }
                 }
-            }.dsPadding()
+            }
         }.dsBackground()
     }
 }
@@ -90,7 +90,7 @@ extension HomeScreen4 {
                     }
             }.dsCornerRadius()
         }
-        struct TopProduct: Identifiable {
+        struct TopProduct: Identifiable, Equatable {
             let id = UUID()
             let title: String
             let subtitle: String

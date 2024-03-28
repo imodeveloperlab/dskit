@@ -22,10 +22,9 @@ struct Shipping2: View {
                 section(with: "Order Info") {
                     OrderInfo(orderTotals: viewModel.orderTotals)
                 }
-            }.dsPadding(.horizontal)
-            
+            }
         }.safeAreaInset(edge: .bottom) {
-            DSVStack {
+            BottomContainerView {
                 DSHStack {
                     DSText("Next Step:", .smallTitle)
                     DSText("Order Info", .subheadlineWithSize(14))
@@ -37,7 +36,7 @@ struct Shipping2: View {
                     style: .default,
                     action: { }
                 )
-            }.dsPadding()
+            }
         }.dsBackground()
     }
     

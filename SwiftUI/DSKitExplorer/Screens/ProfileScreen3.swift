@@ -42,7 +42,6 @@ struct ProfileScreen3: View {
                     viewModel.submit()
                 }
             }
-            .dsPadding(.horizontal)
         }
         .navigationTitle("Password")
         .dsBackground()

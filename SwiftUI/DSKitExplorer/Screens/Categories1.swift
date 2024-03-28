@@ -20,7 +20,7 @@ struct Categories1: View {
                     CategoryView(category: category)
                         .onTap { }
                 }
-            }.dsPadding(.horizontal)
+            }
         }.dsBackground()
     }
 }

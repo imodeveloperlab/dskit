@@ -16,7 +16,6 @@ struct Filters3: View {
     var body: some View {
         ScrollView {
             DSVStack {
-                
                 DSVStack {
                     OptionView(title: "Brand", option: "Adidas, Puma, HRX")
                     OptionToggleView(title: "Free shipping")
@@ -33,8 +32,7 @@ struct Filters3: View {
                         .frame(maxWidth: .infinity)
                         .dsSize(50)
                         .dsSecondaryBackground()
-                }
-                .dsSectionStyle(title: "Size")
+                }.dsSectionStyle(title: "Size")
                 
                 PickerView(
                     data: viewModel.colors,
@@ -42,19 +40,16 @@ struct Filters3: View {
                     selected: $viewModel.selectedColor
                 ) { color in
                     Color(uiColor: color).dsSize(50)
-                }
-                .dsSectionStyle(title: "Color")
-                
-            }.dsPadding(.horizontal)
+                }.dsSectionStyle(title: "Color")
+            }
             
         }.safeAreaInset(edge: .bottom) {
-            DSButton(
-                title: "View (235) Items",
-                action: { dismiss() }
-            )
-            .dsPadding(.horizontal)
-            .topShadow(padding: .regular)
-            .dsBackground()
+            BottomContainerView {
+                DSButton(
+                    title: "View (235) Items",
+                    action: { dismiss() }
+                )
+            }
         }.toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 DSButton(title: "Reset", style: .clear, action: {})

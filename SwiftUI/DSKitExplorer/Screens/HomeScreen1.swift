@@ -26,7 +26,7 @@ struct HomeScreen1: View {
                         ProductView(product: arrival).onTap { dismiss() }
                     }
                 }
-            }.dsPadding()
+            }
         }.dsBackground()
     }
 }

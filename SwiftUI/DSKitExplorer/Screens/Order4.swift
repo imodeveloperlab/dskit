@@ -33,8 +33,6 @@ struct Order4: View {
                 dismiss()
             })
         }
-        .dsPadding(.horizontal)
-        .dsPadding(.vertical)
         .dsBackground()
     }
 }

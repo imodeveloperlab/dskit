@@ -33,7 +33,7 @@ struct HomeScreen3: View {
                         ProductView(product: product).onTap { self.dismiss() }
                     }
                 }
-            }.dsPadding()
+            }
         }.dsBackground()
     }
 }

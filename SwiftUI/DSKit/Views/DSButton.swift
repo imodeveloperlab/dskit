@@ -162,7 +162,8 @@ public struct DSButton: View {
                     .dsSize(rightImage.size)
                     .font(.system(size: 20, weight: .medium))
             }
-        }.dsHeight(15)
+        }.dsResetContentMargins()
+        .dsHeight(15)
     }
     
     var backgroundColor: Color {
@@ -263,7 +264,6 @@ struct DSButton_Previews: PreviewProvider {
                         }
                     }
                 }
-                .dsPadding()
             }
         }
     }

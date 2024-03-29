@@ -17,7 +17,7 @@ struct Filters1: View {
         ScrollView {
             DSVStack {
                 
-                RadioPickerView(data: viewModel.sortByOptions, id: \.self, selected: $viewModel.selectedSortByOption) { option, selected in
+                DSRadioPickerView(data: viewModel.sortByOptions, id: \.self, selected: $viewModel.selectedSortByOption) { option, selected in
                     DSText(option, selected ?  .smallTitle : .subheadlineWithSize(14))
                 }.dsSectionStyle(title: "Sort By")
                 
@@ -29,7 +29,7 @@ struct Filters1: View {
             }
             
         }.safeAreaInset(edge: .bottom) {
-            BottomContainerView {
+            DSBottomContainer {
                 DSButton(
                     title: "View (235) Items",
                     action: { dismiss() }
@@ -54,7 +54,7 @@ extension Filters1 {
                 DSText(option.title, .smallTitle)
                 Spacer()
                 DSText(option.option, .subheadlineWithSize(14))
-                ChevronView()
+                DSChevronView()
             }.dsCardStyle()
         }
         struct Data: Identifiable {

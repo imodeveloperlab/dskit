@@ -1,14 +1,13 @@
 //
-//  RatingView.swift
+//  DSRatingView.swift
 //  DSKitExplorer
 //
 //  Created by Ivan Borinschi on 29.02.2023.
 //
 
 import SwiftUI
-import DSKit
 
-struct RatingView: View {
+public struct DSRatingView: View {
     
     let rating: Float
     let maximumRating = 5
@@ -17,12 +16,12 @@ struct RatingView: View {
     let halfStarSymbol = "star.leadinghalf.fill"
     let emptyStarSymbol = "star"
     
-    init(rating: Float, size: CGFloat = 14) {
+    public init(rating: Float, size: CGFloat = 14) {
         self.rating = rating
         self.size = size
     }
     
-    var body: some View {
+    public var body: some View {
         HStack(spacing: 3) {
             ForEach(1...maximumRating, id: \.self) { index in
                 Image(systemName: symbolName(for: index))
@@ -48,11 +47,11 @@ struct RatingView: View {
 struct RatingView_Previews: PreviewProvider {
     static var previews: some View {
         DSVStack {
-            RatingView(rating: 1)
-            RatingView(rating: 2, size: 20)
-            RatingView(rating: 3, size: 30)
-            RatingView(rating: 4.5, size: 40)
-            RatingView(rating: 5, size: 50)
+            DSRatingView(rating: 1)
+            DSRatingView(rating: 2, size: 20)
+            DSRatingView(rating: 3, size: 30)
+            DSRatingView(rating: 4.5, size: 40)
+            DSRatingView(rating: 5, size: 50)
         }
     }
 }

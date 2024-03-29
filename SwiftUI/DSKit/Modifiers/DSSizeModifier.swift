@@ -63,7 +63,7 @@ public extension View {
 struct DSSizeModifier_Previews: PreviewProvider {
     static var previews: some View {
         PreviewForEach {
-            DSFullScreen {
+            DSPreview {
                 Color.blue
                     .dsSize(.regular)
                 

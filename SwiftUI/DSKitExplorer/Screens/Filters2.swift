@@ -16,7 +16,7 @@ struct Filters2: View {
     var body: some View {
         ScrollView {
             DSVStack {
-                RadioPickerView(
+                DSRadioPickerView(
                     data: viewModel.sortByOptions,
                     id: \.self,
                     selected: $viewModel.selectedSortByOption
@@ -24,7 +24,7 @@ struct Filters2: View {
                     DSText(option, selected ?  .smallTitle : .subheadlineWithSize(14))
                 }.dsSectionStyle(title: "Style")
                 
-                PickerView(
+                DSPickerView(
                     data: viewModel.colors,
                     id: \.self,
                     selected: $viewModel.selectedColor
@@ -32,7 +32,7 @@ struct Filters2: View {
                     Color(uiColor: color).dsSize(40)
                 }.dsSectionStyle(title: "Color")
                 
-                PickerView(
+                DSPickerView(
                     data: viewModel.sizes,
                     id: \.self,
                     selected: $viewModel.selectedSize
@@ -50,7 +50,7 @@ struct Filters2: View {
                 }.dsSectionStyle(title: "Options")
             }
         }.safeAreaInset(edge: .bottom) {
-            BottomContainerView {
+            DSBottomContainer {
                 DSButton(
                     title: "View (235) Items",
                     action: { dismiss() }
@@ -75,7 +75,7 @@ extension Filters2 {
                 DSText(option.title, .smallTitle)
                 Spacer()
                 DSText(option.option, .subheadlineWithSize(14))
-                ChevronView()
+                DSChevronView()
             }.dsCardStyle()
         }
         struct Data: Identifiable {

@@ -9,9 +9,9 @@ import SwiftUI
 import DSKit
 
 enum Screen: CaseIterable, Identifiable {
-    
     case filters1
     case filters2
+    case filters3
     case payment1
     case payment2
     case shipping1
@@ -67,6 +67,7 @@ enum Screen: CaseIterable, Identifiable {
         switch self {
         case .filters1: return "Filters 1"
         case .filters2: return "Filters 2"
+        case .filters3: return "Filters 3"
         case .shipping1: return "Shipping 1"
         case .shipping2: return "Shipping 2"
         case .payment1: return "Payment 1"
@@ -363,6 +364,10 @@ struct ScreensView: View {
                                 Filters2()
                                     .navigationTitle("Filters")
                                     .environment(\.appearance, appearance)
+                            case .filters3:
+                                Filters3()
+                                    .navigationTitle("Filters")
+                                    .environment(\.appearance, appearance)
                             }
                         } label: {
                             CustomActionView(title: screen.displayName)
@@ -393,7 +398,7 @@ fileprivate struct CustomActionView: View {
         DSHStack {
             DSText(title, .smallTitle)
             Spacer()
-            ChevronView()
+            DSChevronView()
         }.dsCardStyle()
     }
 }

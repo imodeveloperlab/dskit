@@ -36,7 +36,7 @@ public struct DSVStack<Content: View>: View {
 
 public struct TestableDSVStack: View {
     public var body: some View {
-        DSFullScreen {
+        DSPreview {
             DSHStack {
                 DSVStack(spacing: .extraSmall) {
                     Color.yellow
@@ -96,7 +96,7 @@ public struct TestableDSVStack: View {
 struct DSVStack_Previews: PreviewProvider {
     static var previews: some View {
         PreviewForEach {
-            DSFullScreen {
+            DSPreview {
                 TestableDSVStack()
             }
         }

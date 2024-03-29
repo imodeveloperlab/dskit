@@ -51,7 +51,7 @@ extension Categories1 {
                 .frame(maxWidth: .infinity, alignment: .leading)
             }
             .overlay(alignment: .trailing) {
-                ChevronView().dsPadding()
+                DSChevronView().dsPadding()
             }.dsCardStyle(padding: 0)
         }
         

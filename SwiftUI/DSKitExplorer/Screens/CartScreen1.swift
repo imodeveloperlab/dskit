@@ -22,21 +22,21 @@ struct CartScreen1: View {
             }
         }
         .safeAreaInset(edge: .bottom) {
-            BottomContainerView {
+            DSBottomContainer {
                 TotalView(itemsCount: "4", price: DSPrice(amount: "1049.00", currency: "$"))
                 DSButton(title: "Continue to payment", rightSFSymbolName: "arrow.right") {
                     dismiss()
                 }
-                TermsAndConditionsView(message: "By pressing on Continue you agree to our")
+                DSTermsAndConditions(message: "By pressing on Continue you agree to our")
             }
         }
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
-                ToolbarSFSymbolButton(name: "square.and.arrow.up.fill")
+                DSToolbarSFSymbolButton(name: "square.and.arrow.up.fill")
                     .onTap { dismiss() }
             }
             ToolbarItem(placement: .navigationBarTrailing) {
-                ToolbarSFSymbolButton(name: "trash.fill")
+                DSToolbarSFSymbolButton(name: "trash.fill")
                     .onTap { dismiss() }
             }
         }.dsScreen()
@@ -58,11 +58,11 @@ extension CartScreen1 {
                 DSVStack(spacing: .smaller) {
                     DSText(product.title, .smallTitle)
                     DSText(product.description, .smallSubtitle)
-                    RatingView(rating: product.rating, size: 10)
+                    DSRatingView(rating: product.rating, size: 10)
                     DSPriceView(price: product.price, size: .regular).dsPadding(.top, .small)
                 }.frame(maxWidth: .infinity, alignment: .leading)
                 
-                SFSymbolButton(name: "pencil.circle", size: .mediumIcon)
+                DSSFSymbolButton(name: "pencil.circle", size: .mediumIcon)
                     .dsPadding(.trailing, .small)
             }
             .dsPadding(.small)

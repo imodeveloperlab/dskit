@@ -12,63 +12,65 @@ public struct DSCornerRadiusModifier: ViewModifier {
     
     @Environment(\.appearance) var appearance: DSAppearance
     @Environment(\.colorGroup) var colorGroup: DSColorGroup
+    
     @Environment(\.parentPadding) var parentPadding: CGFloat
     @Environment(\.parentCornerRadius) var parentCornerRadius: CGFloat
-    let onlyForEnvironment: Bool
-    
-    public init(onlyForEnvironment: Bool) {
-        self.onlyForEnvironment = onlyForEnvironment
-    }
     
     public func body(content: Content) -> some View {
-        if onlyForEnvironment {
-            content
-                .environment(\.parentCornerRadius,  resolveCornerRadius())
-        } else {
-            content
-                .cornerRadius(resolveCornerRadius())
-                .environment(\.parentCornerRadius,  resolveCornerRadius())
-        }
+        let newCornerRadius = resolveCornerRadius()
+        content
+            .cornerRadius(newCornerRadius)
+            .environment(\.parentCornerRadius, newCornerRadius)
     }
     
     func resolveCornerRadius() -> CGFloat {
         if parentCornerRadius == 0 {
+            print("parentCornerRadius == 0", "did set \(colorGroup.colors(from: appearance).cornerRadius)", "parentPadding \(parentPadding)")
             return colorGroup.colors(from: appearance).cornerRadius
         } else {
+            print("existing == \(parentCornerRadius)", "did set \(max(parentCornerRadius - parentPadding, 2))", "parentPadding \(parentPadding)")
             return max(parentCornerRadius - parentPadding, 2)
         }
     }
 }
 
 public extension View {
-    func dsCornerRadius(onlyForEnvironment: Bool = false) -> some View {
-        let modifier = DSCornerRadiusModifier(onlyForEnvironment: onlyForEnvironment)
+    func dsCornerRadius() -> some View {
+        let modifier = DSCornerRadiusModifier()
         return self.modifier(modifier)
     }
 }
 
-#Preview {
-    VStack {
+struct Testable_DSCornerRadiusModifier: View {
+    var body: some View {
         DSVStack {
-            DSText("Secondary")
             DSVStack {
-                DSText("Primary")
-                
                 DSVStack {
-                    DSText("Primary")
+                    DSVStack {
+                        DSVStack {
+                            DSText("Center")
+                        }
+                        .dsPadding(4)
+                        .dsBackground(.custom(.yellow))
+                        .dsCornerRadius()
+                    }
+                    .dsPadding(3)
+                    .dsBackground(.custom(.blue))
+                    .dsCornerRadius()
                 }
-                .dsPadding(.regular)
-                .dsSecondaryBackground()
+                .dsPadding(3)
+                .dsBackground(.custom(.green))
                 .dsCornerRadius()
-                
             }
-            .dsPadding(.extraSmall)
-            .dsBackground()
+            .dsPadding(2)
+            .dsBackground(.custom(.red))
             .dsCornerRadius()
         }
-        .dsPadding(.smaller)
-        .dsSecondaryBackground()
-        .dsCornerRadius()
-        
-    }.dsPadding()
+        .dsPadding()
+        .dsBackground()
+    }
+}
+
+#Preview {
+    Testable_DSCornerRadiusModifier()
 }

@@ -1,14 +1,13 @@
 //
-//  BottomContainerView.swift
+//  DSBottomContainer.swift
 //  DSKitExplorer
 //
 //  Created by Ivan Borinschi on 13.03.2023.
 //
 
 import SwiftUI
-import DSKit
 
-public struct BottomContainerView<Content: View>: View {
+public struct DSBottomContainer<Content: View>: View {
     
     let content: () -> Content
     

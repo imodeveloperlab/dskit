@@ -40,7 +40,7 @@ struct SignUpScreen3: View {
         .navigationTitle("Sign Up")
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
-                ToolbarSFSymbolButton(name: "xmark")
+                DSToolbarSFSymbolButton(name: "xmark")
                     .onTap { dismiss() }
             }
         }

@@ -22,7 +22,7 @@ struct CartScreen5: View {
             }
         }
         .safeAreaInset(edge: .bottom) {
-            BottomContainerView {
+            DSBottomContainer {
                 DSText("You may also like", .smallSubtitle)
                 DSHScroll(data: viewModel.suggestedProducts, id: \.id) { product in
                     SuggestedProductView(product: product)
@@ -31,12 +31,12 @@ struct CartScreen5: View {
                 DSButton(title: "Checkout", rightImage: DSImage(sfSymbolName: "creditcard", size: .medium)) {
                     dismiss()
                 }
-                TermsAndConditionsView(message: "By pressing on Checkout you agree to our")
+                DSTermsAndConditions(message: "By pressing on Checkout you agree to our")
             }
         }
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
-                ToolbarSFSymbolButton(name: "trash.fill").onTap { dismiss() }
+                DSToolbarSFSymbolButton(name: "trash.fill").onTap { dismiss() }
             }
         }.dsScreen()
     }
@@ -75,7 +75,7 @@ extension CartScreen5 {
                     
                 }.frame(maxWidth: .infinity, alignment: .leading)
                 
-                SFSymbolButton(name: "minus.circle", size: .mediumIcon)
+                DSSFSymbolButton(name: "minus.circle", size: .mediumIcon)
                     .dsPadding(.trailing, .small)
             }
             .dsPadding(.small)

@@ -22,17 +22,17 @@ struct CartScreen3: View {
             }
         }
         .safeAreaInset(edge: .bottom) {
-            BottomContainerView {
+            DSBottomContainer {
                 TotalView(itemsCount: "4", price: DSPrice(amount: "1049.00", currency: "$"))
                 DSButton(title: "Continue") {
                     dismiss()
                 }
-                TermsAndConditionsView(message: "By pressing on Continue you agree to our")
+                DSTermsAndConditions(message: "By pressing on Continue you agree to our")
             }
         }
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
-                ToolbarSFSymbolButton(name: "trash.fill").onTap { dismiss() }
+                DSToolbarSFSymbolButton(name: "trash.fill").onTap { dismiss() }
             }
         }.dsScreen()
     }
@@ -55,7 +55,7 @@ extension CartScreen3 {
                     DSPriceView(price: product.price, size: .regular)
                 }.frame(maxWidth: .infinity, alignment: .leading)
                 
-                SFSymbolButton(name: "minus.circle", size: .mediumIcon)
+                DSSFSymbolButton(name: "minus.circle", size: .mediumIcon)
                     .dsPadding(.trailing, .small)
             }
             .dsPadding(.small)

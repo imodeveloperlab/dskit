@@ -32,14 +32,14 @@ struct ItemDetails4: View {
                         .dsPadding(.horizontal, .small)
                         .dsBackground(.customColor(.green))
                         .dsCornerRadius()
-                    RatingView(rating: 4.5, size: 16)
+                    DSRatingView(rating: 4.5, size: 16)
                     DSText("24K Ratings", .callout)
                 }
                 
                 DSText(viewModel.description, .caption1)
                     .dsSectionStyle(title: "Description")
                 
-                PickerView(
+                DSPickerView(
                     data: viewModel.sizes,
                     id: \.self,
                     selected: $viewModel.selectedSize
@@ -50,7 +50,7 @@ struct ItemDetails4: View {
                         .dsSecondaryBackground()
                 }.dsSectionStyle(title: "Size")
                 
-                PickerView(
+                DSPickerView(
                     data: viewModel.colors,
                     id: \.self,
                     selected: $viewModel.selectedColor
@@ -65,7 +65,7 @@ struct ItemDetails4: View {
             }
         }
         .safeAreaInset(edge: .bottom) {
-            BottomContainerView {
+            DSBottomContainer {
                 DSHStack {
                     DSText("Total", .headline)
                     Spacer()
@@ -73,14 +73,14 @@ struct ItemDetails4: View {
                 }
                 DSButton(title: "Buy Now") { dismiss() }
                 
-                TermsAndConditionsView(message: "By continuing you agree to our")
+                DSTermsAndConditions(message: "By continuing you agree to our")
             }
         }.toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
-                ToolbarSFSymbolButton(name: "square.and.arrow.up.fill").onTap { dismiss() }
+                DSToolbarSFSymbolButton(name: "square.and.arrow.up.fill").onTap { dismiss() }
             }
             ToolbarItem(placement: .navigationBarTrailing) {
-                ToolbarSFSymbolButton(name: "heart").onTap { dismiss() }
+                DSToolbarSFSymbolButton(name: "heart").onTap { dismiss() }
             }
         }.dsScreen()
     }
@@ -97,7 +97,7 @@ extension ItemDetails4 {
             DSHStack {
                 DSText(title, .smallTitle)
                 Spacer()
-                ChevronView()
+                DSChevronView()
             }
             .dsPadding(.horizontal)
             .dsHeight(.custom(appearance.actionElementHeight))

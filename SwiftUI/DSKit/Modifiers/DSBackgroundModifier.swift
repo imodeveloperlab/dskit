@@ -13,49 +13,54 @@ public struct DSBackgroundModifier: ViewModifier {
     @Environment(\.appearance) var appearance: DSAppearance
     @Environment(\.colorGroup) var colorGroup: DSColorGroup
     
-    let color: DSColor?
+    let group: DSColorGroup?
     
-    public init(color: DSColor?) {
-        self.color = color
+    public init(group: DSColorGroup?) {
+        self.group = group
     }
     
     public func body(content: Content) -> some View {
-        if let color {
-            content.background(Color(uiColor: color.color(from: appearance)))
+        if let group {
+            content.background(Color(uiColor: group.colors(from: appearance).background))
         } else {
             content.background(Color(uiColor: colorGroup.colors(from: appearance).background))
+                .environment(\.colorGroup, colorGroup == .primary ? .secondary : .primary)
         }
     }
 }
 
 public extension View {
-    func dsBackground(_ color: DSColor? = nil) -> some View {
-        let modifier = DSBackgroundModifier(color: color)
+    func dsBackground(_ group: DSColorGroup? = nil) -> some View {
+        let modifier = DSBackgroundModifier(group: group)
         return self.modifier(modifier)
     }
 }
 
-#Preview {
-    DSFullScreen {
+struct Testable_DSBackgroundModifier: View {
+    var body: some View {
         DSVStack {
-            
-            Spacer()
-            
+            DSText("Primary Background")
             DSVStack {
-                DSText("Secondary background")
+                DSText("Secondary Background")
+                DSVStack {
+                    DSText("Primary Background")
+                    DSVStack {
+                        DSText("Decondary Background")
+                    }
+                    .dsPadding()
+                    .dsBackground()
+                }
+                .dsPadding()
+                .dsBackground()
             }
             .dsPadding()
-            .dsBackground(.secondaryViewBackground)
-            
-            DSVStack {
-                DSText("Primary background")
-            }
-            .dsPadding()
-            .dsBackground(.primaryViewBackground)
-            
-            Spacer()
+            .dsBackground()
         }
         .dsPadding()
         .dsBackground()
     }
+}
+
+#Preview {
+    Testable_DSBackgroundModifier()
 }

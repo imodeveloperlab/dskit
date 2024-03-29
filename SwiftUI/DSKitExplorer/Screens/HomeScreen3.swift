@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-
 import DSKit
 
 struct HomeScreen3: View {
@@ -28,7 +27,7 @@ struct HomeScreen3: View {
                 }
                 
                 DSVStack {
-                    SectionHeaderView(title: "Discounts", actionTitle: "View all", action: { self.dismiss() })
+                    DSSectionHeaderView(title: "Discounts", actionTitle: "View all", action: { self.dismiss() })
                     DSGrid(viewHeight: 200, data: viewModel.products, id: \.id) { product in
                         ProductView(product: product).onTap { self.dismiss() }
                     }

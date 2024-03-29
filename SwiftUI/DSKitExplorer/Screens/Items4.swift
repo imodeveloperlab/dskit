@@ -30,11 +30,11 @@ struct Items4: View {
         .dsScreen()
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
-                ToolbarSFSymbolButton(name: "arrow.up.arrow.down.circle.fill")
+                DSToolbarSFSymbolButton(name: "arrow.up.arrow.down.circle.fill")
                     .onTap { dismiss() }
             }
             ToolbarItem(placement: .navigationBarTrailing) {
-                ToolbarSFSymbolButton(name: "line.horizontal.3.decrease.circle.fill")
+                DSToolbarSFSymbolButton(name: "line.horizontal.3.decrease.circle.fill")
                     .onTap { dismiss() }
             }
         }

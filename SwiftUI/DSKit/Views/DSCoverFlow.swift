@@ -73,7 +73,7 @@ struct DSCoverFlow_Previews: PreviewProvider {
     static var previews: some View {
         let colors = [Color.red, Color.green, Color.yellow]
         PreviewForEach {
-            DSFullScreen {
+            DSPreview {
                 DSCoverFlow(height: 200, spacing: .regular, data: colors, id: \.self) { color in
                     color
                 }

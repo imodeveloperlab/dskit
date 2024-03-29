@@ -1,5 +1,5 @@
 //
-//  DSFullScreen.swift
+//  DSPreview.swift
 //  DSKitCore
 //
 //  Created by Ivan Borinschi on 21.12.2022.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-public struct DSFullScreen<Content: View>: View {
+public struct DSPreview<Content: View>: View {
 
     let content: () -> Content
     
@@ -27,7 +27,7 @@ public struct DSFullScreen<Content: View>: View {
 }
 
 #Preview {
-    DSFullScreen {
+    DSPreview {
         DSText("Example")
     }
 }

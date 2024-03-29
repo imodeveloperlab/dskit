@@ -16,7 +16,7 @@ struct Shipping2: View {
     var body: some View {
         ScrollView {
             DSVStack {
-                RadioPickerView(data: viewModel.shippingMethods, id: \.id, selected: $viewModel.selected) { method, _ in
+                DSRadioPickerView(data: viewModel.shippingMethods, id: \.id, selected: $viewModel.selected) { method, _ in
                     ShippingMethodView(method: method)
                 }
                 section(with: "Order Info") {
@@ -24,7 +24,7 @@ struct Shipping2: View {
                 }
             }
         }.safeAreaInset(edge: .bottom) {
-            BottomContainerView {
+            DSBottomContainer {
                 DSHStack {
                     DSText("Next Step:", .smallTitle)
                     DSText("Order Info", .subheadlineWithSize(14))
@@ -56,7 +56,7 @@ extension Shipping2 {
     struct OrderInfo: View {
         let orderTotals: [Data]
         var body: some View {
-            DSList(data: orderTotals, id: \.id) { total in
+            DSGroupedList(data: orderTotals, id: \.id) { total in
                 DSHStack {
                     DSText(total.title, total.bold ? .smallTitle : .smallSubtitle)
                     Spacer()

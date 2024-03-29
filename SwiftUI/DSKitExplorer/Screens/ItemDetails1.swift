@@ -28,7 +28,7 @@ struct ItemDetails1: View {
                 
                 DSPriceView(price: viewModel.price, size: .large)
                 
-                QuantityPicker()
+                DSQuantityPicker()
                 
                 DSHStack {
                     SelectView(title: "Size", selection: "US 14").onTap { }
@@ -39,7 +39,7 @@ struct ItemDetails1: View {
             }
         }
         .safeAreaInset(edge: .bottom) {
-            BottomContainerView {
+            DSBottomContainer {
                 DSButton(title: "Add to cart", rightSFSymbolName: "cart.fill") {
                     dismiss()
                 }
@@ -48,10 +48,10 @@ struct ItemDetails1: View {
         }
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
-                ToolbarSFSymbolButton(name: "square.and.arrow.up.fill").onTap { dismiss() }
+                DSToolbarSFSymbolButton(name: "square.and.arrow.up.fill").onTap { dismiss() }
             }
             ToolbarItem(placement: .navigationBarTrailing) {
-                ToolbarSFSymbolButton(name: "heart").onTap { dismiss() }
+                DSToolbarSFSymbolButton(name: "heart").onTap { dismiss() }
             }
         }.dsScreen()
     }
@@ -69,7 +69,7 @@ extension ItemDetails1 {
                 DSText(title, .smallTitle)
                 Spacer()
                 DSText(selection, .smallSubtitle)
-                ChevronView()
+                DSChevronView()
             }
             .dsHeight(40)
             .dsPadding(.horizontal)
@@ -90,7 +90,7 @@ extension ItemDetails1 {
                 selection
                     .dsSize(20)
                     .dsCornerRadius()
-                ChevronView()
+                DSChevronView()
             }
             .dsHeight(40)
             .dsPadding(.horizontal)

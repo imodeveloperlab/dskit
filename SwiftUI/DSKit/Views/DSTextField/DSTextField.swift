@@ -165,7 +165,7 @@ struct DSTextField_Previews: PreviewProvider {
     
     static var previews: some View {
         PreviewForEach {
-            DSFullScreen {
+            DSPreview {
                 DSTextFieldViewPreview()
             }
         }

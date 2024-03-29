@@ -12,13 +12,13 @@ public struct DSContentMarginModifier: ViewModifier {
     @Environment(\.dsContentMarginKey) var contentMargin: DSDimension
     public func body(content: Content) -> some View {
         content
-            .dsPadding(.horizontal, contentMargin)
-            .dsPadding(.bottom, contentMargin)
+            .padding(.horizontal, appearance.size.number(for: contentMargin))
+            .padding(.bottom, appearance.size.number(for: contentMargin))
     }
 }
 
 public struct DSContentMarginKey: EnvironmentKey {
-    public static let defaultValue: DSDimension = .regular
+    public static let defaultValue: DSDimension = .zero
 }
 
 public extension EnvironmentValues {

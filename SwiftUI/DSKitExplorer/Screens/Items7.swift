@@ -24,11 +24,11 @@ struct Items7: View {
         .dsScreen()
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
-                ToolbarSFSymbolButton(name: "arrow.up.arrow.down.circle.fill")
+                DSToolbarSFSymbolButton(name: "arrow.up.arrow.down.circle.fill")
                     .onTap { dismiss() }
             }
             ToolbarItem(placement: .navigationBarTrailing) {
-                ToolbarSFSymbolButton(name: "line.horizontal.3.decrease.circle.fill")
+                DSToolbarSFSymbolButton(name: "line.horizontal.3.decrease.circle.fill")
                     .onTap { dismiss() }
             }
         }
@@ -54,7 +54,7 @@ extension Items7 {
                     }
                     
                     DSHStack {
-                        RatingView(rating: 4.5, size: 12)
+                        DSRatingView(rating: 4.5, size: 12)
                         DSText("2.4k Reviews", .caption2)
                     }
                     
@@ -63,7 +63,7 @@ extension Items7 {
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .dsPadding(.small)
                 .overlay(alignment: .trailing) {
-                    ChevronView()
+                    DSChevronView()
                         .dsPadding(.trailing, .regular)
                 }
                 

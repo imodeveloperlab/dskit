@@ -37,7 +37,7 @@ struct ProfileScreen1: View {
             }
             
         }.safeAreaInset(edge: .bottom) {
-            BottomContainerView {
+            DSBottomContainer {
                 DSButton(
                     title: "Log out",
                     rightSFSymbolName: "rectangle.portrait.and.arrow.forward"
@@ -102,7 +102,7 @@ extension ProfileScreen1 {
                     DSText(option, .smallSubtitle)
                 }
                 
-                ChevronView()
+                DSChevronView()
             }
             .dsPadding(.horizontal)
             .dsHeight(.custom(appearance.actionElementHeight))

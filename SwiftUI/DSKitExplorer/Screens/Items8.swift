@@ -24,11 +24,11 @@ struct Items8: View {
         .dsScreen()
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
-                ToolbarSFSymbolButton(name: "arrow.up.arrow.down.circle.fill")
+                DSToolbarSFSymbolButton(name: "arrow.up.arrow.down.circle.fill")
                     .onTap { dismiss() }
             }
             ToolbarItem(placement: .navigationBarTrailing) {
-                ToolbarSFSymbolButton(name: "line.horizontal.3.decrease.circle.fill")
+                DSToolbarSFSymbolButton(name: "line.horizontal.3.decrease.circle.fill")
                     .onTap { dismiss() }
             }
         }
@@ -53,7 +53,7 @@ extension Items8 {
                         DSText(product.description, .smallSubtitle)
                     }
                     DSHStack {
-                        RatingView(rating: 4.5, size: 12)
+                        DSRatingView(rating: 4.5, size: 12)
                         DSText("2.4k Reviews", .caption2)
                     }
                     DSPriceView(price: product.price, size: .regular)

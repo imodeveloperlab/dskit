@@ -6,15 +6,19 @@
 //
 
 import SwiftUI
-import DSKit
 
-struct ToolbarSFSymbolButton: View, DSDesignable {
+public struct DSToolbarSFSymbolButton: View, DSDesignable {
     
-    @Environment(\.appearance) var appearance: DSAppearance
-    @Environment(\.colorGroup) var colorGroup: DSColorGroup
+    @Environment(\.appearance) public var appearance: DSAppearance
+    @Environment(\.colorGroup) public var colorGroup: DSColorGroup
     
     let name: String
-    var body: some View {
+    
+    public init(name: String) {
+        self.name = name
+    }
+    
+    public var body: some View {
         DSImageView(
             sfSymbol: name,
             size: .mediumIcon,

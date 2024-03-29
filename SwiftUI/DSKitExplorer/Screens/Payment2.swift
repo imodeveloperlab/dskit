@@ -21,7 +21,7 @@ struct Payment2: View {
                 }
             }
         }.safeAreaInset(edge: .bottom) {
-            BottomContainerView {
+            DSBottomContainer {
                 DSButton(
                     title: "Add new credit card",
                     rightSFSymbolName: "plus.circle",
@@ -45,7 +45,7 @@ extension Payment2 {
                     .overlay(alignment: .bottomTrailing) {
                         DSImageView(
                             uiImageName: card.type.replacingOccurrences(of: " ", with: ""),
-                            size: .size(width: 60, height: 40)
+                            size: .size(width: 50, height: 35)
                         )
                         .dsCornerRadius()
                         .dsPadding()
@@ -53,8 +53,9 @@ extension Payment2 {
                     .overlay(alignment: .topLeading) {
                         DSVStack(spacing: .smaller) {
                             DSText(card.holder, .title2, color: .customColor(.white))
-                            DSText("\(card.type) **** \(card.end)", .headline, color: .customColor(.white))
+                            DSText("\(card.type) **** \(card.end)", .headline, color: .customColor(.white)).opacity(0.9)
                             DSText(card.expire, .subheadline, color: .customColor(.white))
+                                .opacity(0.5)
                         }.dsPadding()
                     }
             }

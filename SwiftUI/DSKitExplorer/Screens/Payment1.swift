@@ -16,7 +16,7 @@ struct Payment1: View {
     var body: some View {
         ScrollView {
             DSVStack {
-                RadioPickerView(
+                DSRadioPickerView(
                     data: viewModel.paymentMethods,
                     id: \.id,
                     selected: $viewModel.selected
@@ -32,7 +32,7 @@ struct Payment1: View {
                 )
             }
         }.safeAreaInset(edge: .bottom) {
-            BottomContainerView {
+            DSBottomContainer {
                 DSHStack {
                     DSText("Next Step:", .smallTitle)
                     DSText("Shipping address", .subheadlineWithSize(14))
@@ -67,7 +67,7 @@ extension Payment1 {
                         DSText("\(method.holder) \(method.expire)", .smallSubtitle)
                     }
                 }.frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
-            }.dsCardStyle()
+            }
         }
         
         struct Data: Identifiable, Equatable {

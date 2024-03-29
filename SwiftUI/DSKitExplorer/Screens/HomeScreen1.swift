@@ -21,7 +21,7 @@ struct HomeScreen1: View {
                     DSImageView(url: imageUrl, style: .capsule).onTap { self.dismiss() }
                 }
                 DSVStack {
-                    SectionHeaderView(title: "New arrivals", actionTitle: "View All", action: { dismiss() })
+                    DSSectionHeaderView(title: "New arrivals", actionTitle: "View All", action: { dismiss() })
                     DSGrid(viewHeight: 180, data: viewModel.newArrivals, id: \.id) { arrival in
                         ProductView(product: arrival).onTap { dismiss() }
                     }

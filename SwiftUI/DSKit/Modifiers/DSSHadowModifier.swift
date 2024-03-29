@@ -52,7 +52,7 @@ public extension View {
 struct DSShadowModifier_Previews: PreviewProvider {
     static var previews: some View {
         PreviewForEach {
-            DSFullScreen {
+            DSPreview {
                 ScrollView {
                     DSText("Card")
                         .dsPadding()

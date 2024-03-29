@@ -16,7 +16,7 @@ struct Shipping1: View {
     var body: some View {
         ScrollView {
             DSVStack {
-                RadioPickerView(data: viewModel.deliveryAddresses, id: \.id, selected: $viewModel.selected) { address, _ in
+                DSRadioPickerView(data: viewModel.deliveryAddresses, id: \.id, selected: $viewModel.selected) { address, _ in
                     DeliveryAddressView(address: address)
                 }
                 DSButton(
@@ -27,7 +27,7 @@ struct Shipping1: View {
             }
             
         }.safeAreaInset(edge: .bottom) {
-            BottomContainerView {
+            DSBottomContainer {
                 DSHStack {
                     DSText("Next Step:", .smallTitle)
                     DSText("Checkout", .subheadlineWithSize(14))

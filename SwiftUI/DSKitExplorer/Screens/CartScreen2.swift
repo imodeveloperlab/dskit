@@ -21,7 +21,7 @@ struct CartScreen2: View {
                 }
             }
         }.safeAreaInset(edge: .bottom) {
-            BottomContainerView {
+            DSBottomContainer {
                 TotalView(itemsCount: "2", price: DSPrice(amount: "349.00", currency: "$"))
                 DSButton(title: "Continue") {
                     dismiss()
@@ -32,10 +32,10 @@ struct CartScreen2: View {
         .dsScreen()
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
-                ToolbarSFSymbolButton(name: "square.and.arrow.up.fill").onTap { dismiss() }
+                DSToolbarSFSymbolButton(name: "square.and.arrow.up.fill").onTap { dismiss() }
             }
             ToolbarItem(placement: .navigationBarTrailing) {
-                ToolbarSFSymbolButton(name: "trash.fill").onTap { dismiss() }
+                DSToolbarSFSymbolButton(name: "trash.fill").onTap { dismiss() }
             }
         }
     }
@@ -54,7 +54,7 @@ extension CartScreen2 {
                     DSText(product.title, .headline)
                     DSHStack() {
                         DSText(product.description, .smallSubtitle)
-                        RatingView(rating: product.rating, size: 13)
+                        DSRatingView(rating: product.rating, size: 13)
                     }
                     DSPriceView(price: product.price, size: .regular)
                     

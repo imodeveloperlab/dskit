@@ -1,16 +1,21 @@
 //
-//  TermsAndConditionsView.swift
+//  DSTermsAndConditions.swift
 //  DSKitExplorer
 //
 //  Created by Ivan Borinschi on 04.03.2023.
 //
 
-import DSKit
 import SwiftUI
 
-struct TermsAndConditionsView: View {
+public struct DSTermsAndConditions: View {
+    
     let message: String
-    var body: some View {
+    
+    public  init(message: String) {
+        self.message = message
+    }
+    
+    public var body: some View {
         DSVStack(spacing: .smaller) {
             DSText(message, .smallSubtitle).frame(maxWidth: .infinity, alignment: .center)
             DSHStack(spacing: .smaller) {
@@ -26,7 +31,7 @@ struct TermsAndConditionsView: View {
 struct TermsAndConditionsView_Previews: PreviewProvider {
     static var previews: some View {
         DSVStack {
-            TermsAndConditionsView(
+            DSTermsAndConditions(
                 message: "By pressing confirm order, you agree to our"
             )
         }.dsPadding()

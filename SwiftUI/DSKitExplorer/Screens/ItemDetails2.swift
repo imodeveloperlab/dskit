@@ -27,10 +27,10 @@ struct ItemDetails2: View {
                     }
                     
                     DSPriceView(price: viewModel.price, size: .large)
-                    QuantityPicker()
+                    DSQuantityPicker()
                 }
                 
-                PickerView(
+                DSPickerView(
                     style: .grid(columns: 4),
                     data: viewModel.sizes,
                     id: \.self, selected: $viewModel.selectedSize
@@ -42,7 +42,7 @@ struct ItemDetails2: View {
                         .dsSecondaryBackground()
                 }.dsSectionStyle(title: "Size")
                 
-                PickerView(
+                DSPickerView(
                     data: viewModel.colors,
                     id: \.self,
                     selected: $viewModel.selectedColor
@@ -57,7 +57,7 @@ struct ItemDetails2: View {
             }
         }
         .safeAreaInset(edge: .bottom) {
-            BottomContainerView {
+            DSBottomContainer {
                 DSButton(title: "Add to cart", rightSFSymbolName: "cart") {
                     dismiss()
                 }
@@ -67,10 +67,10 @@ struct ItemDetails2: View {
         }
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
-                ToolbarSFSymbolButton(name: "square.and.arrow.up.fill").onTap { dismiss() }
+                DSToolbarSFSymbolButton(name: "square.and.arrow.up.fill").onTap { dismiss() }
             }
             ToolbarItem(placement: .navigationBarTrailing) {
-                ToolbarSFSymbolButton(name: "heart").onTap { dismiss() }
+                DSToolbarSFSymbolButton(name: "heart").onTap { dismiss() }
             }
         }.dsScreen()
     }

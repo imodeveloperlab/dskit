@@ -29,7 +29,7 @@ struct ItemDetails3: View {
                     }
                     
                     DSHStack(alignment: .center, spacing: .small) {
-                        RatingView(rating: 4.5, size: 16)
+                        DSRatingView(rating: 4.5, size: 16)
                         DSText("24K Ratings", .callout)
                     }
                     
@@ -52,7 +52,7 @@ struct ItemDetails3: View {
                     }
                 }
                 
-                PickerView(
+                DSPickerView(
                     data: viewModel.colors,
                     id: \.self,
                     selected: $viewModel.selectedColor
@@ -60,7 +60,7 @@ struct ItemDetails3: View {
                     DSImageView(uiImageName: color, size: .size(width: 70, height: 50))
                 }.dsSectionStyle(title: "Model")
                 
-                PickerView(
+                DSPickerView(
                     data: viewModel.sizes,
                     id: \.self, selected: $viewModel.selectedSize
                 ) { size in
@@ -75,17 +75,17 @@ struct ItemDetails3: View {
             }
         }
         .safeAreaInset(edge: .bottom) {
-            BottomContainerView {
+            DSBottomContainer {
                 DSButton(title: "Add to cart", style: .borderedLight) { dismiss() }
                 DSButton(title: "Buy Now") { dismiss() }
             }
         }
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
-                ToolbarSFSymbolButton(name: "square.and.arrow.up.fill").onTap { dismiss() }
+                DSToolbarSFSymbolButton(name: "square.and.arrow.up.fill").onTap { dismiss() }
             }
             ToolbarItem(placement: .navigationBarTrailing) {
-                ToolbarSFSymbolButton(name: "heart").onTap { dismiss() }
+                DSToolbarSFSymbolButton(name: "heart").onTap { dismiss() }
             }
         }.dsScreen()
     }
@@ -108,7 +108,7 @@ extension ItemDetails3 {
                         .dsSecondaryBackground()
                         .dsSelectedStyle(isSelected: viewModel.selectedSize == size)
                         .onTap {
-                            UIImpactFeedbackGenerator(style: .medium).impactOccurred()
+                            UIImpactFeedbackGenerator(style: .light).impactOccurred()
                             viewModel.selectedSize = size
                         }
                 }
@@ -127,7 +127,7 @@ extension ItemDetails3 {
                     DSImageView(uiImageName: color, size: .size(width: 70, height: 50))
                         .dsSelectedStyle(isSelected: viewModel.selectedColor == color)
                         .onTap {
-                            UIImpactFeedbackGenerator(style: .medium).impactOccurred()
+                            UIImpactFeedbackGenerator(style: .light).impactOccurred()
                             viewModel.selectedColor = color
                         }
                 }

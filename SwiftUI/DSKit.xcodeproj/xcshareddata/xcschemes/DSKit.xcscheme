@@ -34,7 +34,7 @@
             parallelizable = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "60EB99462B2AFFF000528039"
+               BlueprintIdentifier = "600E3C3D2BB6C28E00FA33EC"
                BuildableName = "DSKitTests.xctest"
                BlueprintName = "DSKitTests"
                ReferencedContainer = "container:DSKit.xcodeproj">

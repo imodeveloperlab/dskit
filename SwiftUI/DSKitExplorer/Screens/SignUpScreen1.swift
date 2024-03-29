@@ -40,7 +40,7 @@ struct SignUpScreen1: View {
                     self.dismiss()
                 }
                 
-                TermsAndConditionsView(message: "By signing up, you agree to our")
+                DSTermsAndConditions(message: "By signing up, you agree to our")
             }
             .hideKeyboardWhenTappedOutside()
         }

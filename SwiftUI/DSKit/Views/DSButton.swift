@@ -204,7 +204,6 @@ public extension DSButton {
     static func callToActionLink(title: String, action: @escaping () -> Void) -> DSButton {
         DSButton(
             title: title,
-            rightImage: DSImage(sfSymbolName: "chevron.right", size: .unspecified),
             pushContentToSides: false,
             style: .clear,
             maxWidth: false,
@@ -233,7 +232,7 @@ struct DSButton_Previews: PreviewProvider {
     
     static var previews: some View {
         PreviewForEach {
-            DSFullScreen {
+            DSPreview {
                 DSVStack {
                     
                     DSVStack {

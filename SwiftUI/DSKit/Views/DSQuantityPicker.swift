@@ -1,18 +1,21 @@
 //
-//  QuantityPicker.swift
+//  DSQuantityPicker.swift
 //  DSKitExplorer
 //
 //  Created by Ivan Borinschi on 29.02.2023.
 //
 
 import SwiftUI
-import DSKit
 
-struct QuantityPicker: View {
+public struct DSQuantityPicker: View {
     
-    @State var quantity: Int = 1
+    @State var quantity: Int
     
-    var body: some View {
+    public init(quantity: Int = 1) {
+        self.quantity = quantity
+    }
+    
+    public var body: some View {
         
         DSHStack(spacing: .zero) {
 
@@ -22,24 +25,24 @@ struct QuantityPicker: View {
             
             DSHStack(alignment: .center, spacing: .small) {
 
-                SFSymbolButton(name: "minus", size: .smallIcon)
+                DSSFSymbolButton(name: "minus", size: .smallIcon)
                     .saturation(quantity > 1 ? 1 : 0)
                     .opacity(quantity > 1 ? 1 : 0.2)
                     .dsPadding(.horizontal, .small)
                     .onTap {
                         if quantity > 1 {
                             quantity = quantity - 1
-                            UIImpactFeedbackGenerator(style: .medium).impactOccurred()
+                            UIImpactFeedbackGenerator(style: .light).impactOccurred()
                         }
                     }
                 DSDivider()
                 DSText("\(quantity)", .body).dsWidth(25)
                 DSDivider()
-                SFSymbolButton(name: "plus", size: .smallIcon)
+                DSSFSymbolButton(name: "plus", size: .smallIcon)
                     .dsPadding(.horizontal, .small)
                     .onTap {
                         quantity = quantity + 1
-                        UIImpactFeedbackGenerator(style: .medium).impactOccurred()
+                        UIImpactFeedbackGenerator(style: .light).impactOccurred()
                     }
             }
             .dsHeight(20)
@@ -53,7 +56,7 @@ struct QuantityPicker: View {
 struct QuantityPicker_Previews: PreviewProvider {
     static var previews: some View {
         DSVStack {
-            QuantityPicker()
+            DSQuantityPicker()
         }
         .dsPadding()
     }

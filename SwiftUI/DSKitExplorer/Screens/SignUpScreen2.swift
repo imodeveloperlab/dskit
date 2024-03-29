@@ -41,7 +41,7 @@ struct SignUpScreen2: View {
                 viewModel.submit()
             }
             
-            TermsAndConditionsView(message: "By signing up, you agree to our")
+            DSTermsAndConditions(message: "By signing up, you agree to our")
             
             Spacer()
             

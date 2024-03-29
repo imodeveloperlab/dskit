@@ -19,18 +19,22 @@ public struct DSPaddingModifier: ViewModifier {
     }
     
     public func body(content: Content) -> some View {
+        
+        let padding = getPadding()
+        
         content
-            .padding(edge, getPadding())
-            .environment(\.parentPadding,  getPadding())
+            .padding(edge, padding)
+            .environment(\.parentPadding, padding)
     }
     
     func getPadding() -> CGFloat {
-        appearance.size.number(for: padding)
+        print("set padding \(padding)")
+        return appearance.size.number(for: padding)
     }
 }
 
 public extension View {
-    func dsPadding(_ edge: Edge.Set = .all, _ padding: DSDimension = .regular) -> some View {
+    func dsPadding(_ edge: Edge.Set = .all, _ padding: DSDimension = .regular) -> some View {        
         let modifier = DSPaddingModifier(
             edge: edge,
             padding: padding
@@ -50,50 +54,57 @@ public extension View {
 #Preview {
     
     VStack {
-        Text("Extra Small")
+        
+        Text("Just Padding")
             .frame(width: 200)
             .background(Color.white)
-            .dsPadding(.all, .extraSmall)
+            .dsPadding()
             .background(Color.red)
-        Text("Smaller")
-            .frame(width: 200)
-            .background(Color.white)
-            .dsPadding(.all, .smaller)
-            .background(Color.red)
-        Text("Small")
-            .frame(width: 200)
-            .background(Color.white)
-            .dsPadding(.all, .small)
-            .background(Color.red)
-        Text("Medium")
-            .frame(width: 200)
-            .background(Color.white)
-            .dsPadding(.all, .medium)
-            .background(Color.red)
-        Text("Medium Large")
-            .frame(width: 200)
-            .background(Color.white)
-            .dsPadding(.all, .mediumLarge)
-            .background(Color.red)
-        Text("Large")
-            .frame(width: 200)
-            .background(Color.white)
-            .dsPadding(.all, .large)
-            .background(Color.red)
-        Text("Extra Large")
-            .frame(width: 200)
-            .background(Color.white)
-            .dsPadding(.all, .extraLarge)
-            .background(Color.red)
-        Text("Larger")
-            .frame(width: 200)
-            .background(Color.white)
-            .dsPadding(.all, .larger)
-            .background(Color.red)
-        Text("Largest")
-            .frame(width: 200)
-            .background(Color.white)
-            .dsPadding(.all, .largest)
-            .background(Color.red)
+        
+//        Text("Extra Small")
+//            .frame(width: 200)
+//            .background(Color.white)
+//            .dsPadding(.all, .extraSmall)
+//            .background(Color.red)
+//        Text("Smaller")
+//            .frame(width: 200)
+//            .background(Color.white)
+//            .dsPadding(.all, .smaller)
+//            .background(Color.red)
+//        Text("Small")
+//            .frame(width: 200)
+//            .background(Color.white)
+//            .dsPadding(.all, .small)
+//            .background(Color.red)
+//        Text("Medium")
+//            .frame(width: 200)
+//            .background(Color.white)
+//            .dsPadding(.all, .medium)
+//            .background(Color.red)
+//        Text("Medium Large")
+//            .frame(width: 200)
+//            .background(Color.white)
+//            .dsPadding(.all, .mediumLarge)
+//            .background(Color.red)
+//        Text("Large")
+//            .frame(width: 200)
+//            .background(Color.white)
+//            .dsPadding(.all, .large)
+//            .background(Color.red)
+//        Text("Extra Large")
+//            .frame(width: 200)
+//            .background(Color.white)
+//            .dsPadding(.all, .extraLarge)
+//            .background(Color.red)
+//        Text("Larger")
+//            .frame(width: 200)
+//            .background(Color.white)
+//            .dsPadding(.all, .larger)
+//            .background(Color.red)
+//        Text("Largest")
+//            .frame(width: 200)
+//            .background(Color.white)
+//            .dsPadding(.all, .largest)
+//            .background(Color.red)
     }
 }

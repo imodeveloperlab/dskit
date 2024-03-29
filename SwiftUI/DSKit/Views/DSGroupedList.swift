@@ -1,5 +1,5 @@
 //
-//  DSList.swift
+//  DSGroupedList.swift
 //  DSKitExplorer
 //
 //  Created by Ivan Borinschi on 13.03.2023.
@@ -8,7 +8,7 @@
 import SwiftUI
 import DSKit
 
-public struct DSList<Data, ID, Content>: View where Data: RandomAccessCollection, ID: Hashable, Content: View, Data.Index == Int {
+public struct DSGroupedList<Data, ID, Content>: View where Data: RandomAccessCollection, ID: Hashable, Content: View, Data.Index == Int {
     
     let data: Data
     let content: (Data.Element) -> Content

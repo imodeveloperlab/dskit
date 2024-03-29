@@ -27,14 +27,14 @@ struct HomeScreen2: View {
                 }
                 
                 DSVStack {
-                    SectionHeaderView(title: "Categories", actionTitle: "View all", action: { self.dismiss() })
+                    DSSectionHeaderView(title: "Categories", actionTitle: "View all", action: { self.dismiss() })
                     DSGrid(data: viewModel.categories, id: \.id) { category in
                         CategoryView(title: category.title, action: { self.dismiss() })
                     }
                 }
                 
                 DSVStack {
-                    SectionHeaderView(title: "Discounts", actionTitle: "View all", action: { self.dismiss() })
+                    DSSectionHeaderView(title: "Discounts", actionTitle: "View all", action: { self.dismiss() })
                     DSGrid(viewHeight: 180, data: viewModel.products, id: \.id) { arrival in
                         ProductView(product: arrival)
                             .onTap { self.dismiss() }

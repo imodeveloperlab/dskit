@@ -17,7 +17,6 @@ public struct DSCardStyleModifier: ViewModifier {
     
     public func body(content: Content) -> some View {
         content
-            .dsCornerRadius(onlyForEnvironment: true)
             .dsPadding(padding)
             .dsSecondaryBackground()
             .dsCornerRadius()

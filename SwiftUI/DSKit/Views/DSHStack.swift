@@ -36,7 +36,7 @@ public struct DSHStack<Content: View>: View {
 
 public struct TestableDSHStack: View {
     public var body: some View {
-        DSFullScreen {
+        DSPreview {
             DSVStack {
                 DSHStack(spacing: .extraSmall) {
                     Color.yellow

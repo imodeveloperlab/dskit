@@ -20,7 +20,7 @@ struct ItemDetails5: View {
                     DSImageView(url: imageUrl).dsCornerRadius()
                 }
                 
-                PickerView(
+                DSPickerView(
                     data: viewModel.colors,
                     id: \.self,
                     selected: $viewModel.selectedColor
@@ -37,7 +37,7 @@ struct ItemDetails5: View {
                     }
                 }
                 
-                PickerView(
+                DSPickerView(
                     style: .grid(columns: 4),
                     data: viewModel.sizes,
                     id: \.self, selected: $viewModel.selectedSize
@@ -53,7 +53,7 @@ struct ItemDetails5: View {
             }
         }
         .safeAreaInset(edge: .bottom) {
-            BottomContainerView {
+            DSBottomContainer {
                 
                 DSHStack {
                     DSText("Total", .headline)
@@ -64,15 +64,15 @@ struct ItemDetails5: View {
                 DSButton(title: "Add to cart", style: .borderedLight) { dismiss() }
                 DSButton(title: "Buy Now") { dismiss() }
                 
-                TermsAndConditionsView(message: "By continuing you agree to our")
+                DSTermsAndConditions(message: "By continuing you agree to our")
             }
         }
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
-                ToolbarSFSymbolButton(name: "square.and.arrow.up.fill").onTap { dismiss() }
+                DSToolbarSFSymbolButton(name: "square.and.arrow.up.fill").onTap { dismiss() }
             }
             ToolbarItem(placement: .navigationBarTrailing) {
-                ToolbarSFSymbolButton(name: "heart").onTap { dismiss() }
+                DSToolbarSFSymbolButton(name: "heart").onTap { dismiss() }
             }
         }.dsScreen()
     }

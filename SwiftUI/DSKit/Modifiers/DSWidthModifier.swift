@@ -27,7 +27,7 @@ public extension View {
 struct DSWidthModifier_Previews: PreviewProvider {
     static var previews: some View {
         PreviewForEach {
-            DSFullScreen {
+            DSPreview {
                 Color.blue
                     .dsWidth(.regular)
                 

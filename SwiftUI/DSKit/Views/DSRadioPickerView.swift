@@ -1,14 +1,13 @@
 //
-//  RadioPickerView.swift
+//  DSRadioPickerView.swift
 //  DSKitExplorer
 //
 //  Created by Ivan Borinschi on 13.03.2023.
 //
 
 import SwiftUI
-import DSKit
 
-public struct RadioPickerView<Data, ID, Content>: View where Data: RandomAccessCollection, Data.Element: Equatable, ID: Hashable, Content: View {
+public struct DSRadioPickerView<Data, ID, Content>: View where Data: RandomAccessCollection, Data.Element: Equatable, ID: Hashable, Content: View {
     
     let data: Data
     let content: (Data.Element, Bool) -> Content
@@ -33,7 +32,6 @@ public struct RadioPickerView<Data, ID, Content>: View where Data: RandomAccessC
                 DSVStack(alignment: .leading) {
                     self.content(element, selected == element)
                 }
-                .dsCornerRadius(onlyForEnvironment: true)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .overlay(alignment: .trailing) {
                     if selected == element  {
@@ -43,13 +41,12 @@ public struct RadioPickerView<Data, ID, Content>: View where Data: RandomAccessC
                             .opacity(0.3)
                     }
                 }
-                
                 .onTap {
-                    UIImpactFeedbackGenerator(style: .medium).impactOccurred()
+                    UIImpactFeedbackGenerator(style: .light).impactOccurred()
                     selected = element
                 }
+                .dsCardStyle()
             }
-            
         }
     }
 }
@@ -60,7 +57,7 @@ public struct RadioPickerViewDemo: View {
     @State var selected = "Purple"
     
     public var body: some View {
-        RadioPickerView(data: data, id: \.self, selected: $selected, content: { element, _ in
+        DSRadioPickerView(data: data, id: \.self, selected: $selected, content: { element, _ in
             DSText(element, .smallTitle)
         })
     }
@@ -69,10 +66,10 @@ public struct RadioPickerViewDemo: View {
 struct RadioPickerView_Previews: PreviewProvider {
     static var previews: some View {
         PreviewForEach {
-            DSFullScreen {
+            DSPreview {
                 DSVStack {
                     RadioPickerViewDemo()
-                }.dsPadding()
+                }
             }
         }
     }

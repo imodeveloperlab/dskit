@@ -6,15 +6,20 @@
 //
 
 import SwiftUI
-import DSKit
 
-struct SectionHeaderView: View {
+public struct DSSectionHeaderView: View {
     @Environment(\.dismiss) var dismiss
     let title: String
     let actionTitle: String
     let action: () -> Void
     
-    var body: some View {
+    public init(title: String, actionTitle: String, action: @escaping () -> Void) {
+        self.title = title
+        self.actionTitle = actionTitle
+        self.action = action
+    }
+    
+    public var body: some View {
         DSHStack {
             DSText(title, .headline)
             Spacer()

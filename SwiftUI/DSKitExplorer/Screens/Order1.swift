@@ -18,7 +18,7 @@ struct Order1: View {
             DSVStack {
                 
                 DSVStack(spacing: .small) {
-                    DSList(data: viewModel.products, id: \.id) { product in
+                    DSGroupedList(data: viewModel.products, id: \.id) { product in
                         ProductView(product: product)
                     }
                     DSButton(
@@ -44,14 +44,14 @@ struct Order1: View {
             }
         }
         .safeAreaInset(edge: .bottom) {
-            BottomContainerView {
+            DSBottomContainer {
                 DSButton(
                     title: "Confirm Order",
                     rightImage: DSImage(sfSymbolName: "checkmark.circle.fill", size: .medium)
                 ) {
                     dismiss()
                 }
-                TermsAndConditionsView(message: "By pressing confirm order, you agree to our")
+                DSTermsAndConditions(message: "By pressing confirm order, you agree to our")
             }
         }.dsScreen()
     }
@@ -64,7 +64,7 @@ extension Order1 {
     struct OrderInfo: View {
         let orderTotals: [Data]
         var body: some View {
-            DSList(data: orderTotals, id: \.id) { total in
+            DSGroupedList(data: orderTotals, id: \.id) { total in
                 DSHStack {
                     DSText(total.title, total.bold ? .smallTitle : .smallSubtitle)
                     Spacer()

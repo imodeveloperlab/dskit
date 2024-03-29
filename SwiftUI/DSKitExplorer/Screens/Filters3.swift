@@ -16,35 +16,35 @@ struct Filters3: View {
     var body: some View {
         ScrollView {
             DSVStack {
-                DSVStack {
+                DSVStack(spacing: .smaller) {
                     OptionView(title: "Brand", option: "Adidas, Puma, HRX")
                     OptionToggleView(title: "Free shipping")
                     OptionView(title: "Shipping to", option: "London UK")
                     OptionRangeView(title: "Range")
                 }
                 
-                PickerView(
+                DSPickerView(
                     data: viewModel.sizes,
                     id: \.self,
                     selected: $viewModel.selectedSize
                 ) { size in
                     DSText(size, .smallTitle)
                         .frame(maxWidth: .infinity)
-                        .dsSize(50)
+                        .dsSize(44)
                         .dsSecondaryBackground()
                 }.dsSectionStyle(title: "Size")
                 
-                PickerView(
+                DSPickerView(
                     data: viewModel.colors,
                     id: \.self,
                     selected: $viewModel.selectedColor
                 ) { color in
-                    Color(uiColor: color).dsSize(50)
+                    Color(uiColor: color).dsSize(44)
                 }.dsSectionStyle(title: "Color")
             }
             
         }.safeAreaInset(edge: .bottom) {
-            BottomContainerView {
+            DSBottomContainer {
                 DSButton(
                     title: "View (235) Items",
                     action: { dismiss() }
@@ -70,7 +70,7 @@ extension Filters3 {
                 DSText(title, .smallTitle)
                 Spacer()
                 DSText(option, .subheadlineWithSize(14))
-                ChevronView()
+                DSChevronView()
             }.dsCardStyle()
         }
     }

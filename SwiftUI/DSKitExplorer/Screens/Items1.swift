@@ -22,11 +22,11 @@ struct Items1: View {
         .dsScreen()
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
-                ToolbarSFSymbolButton(name: "square.and.arrow.up")
+                DSToolbarSFSymbolButton(name: "square.and.arrow.up")
                     .onTap { dismiss() }
             }
             ToolbarItem(placement: .navigationBarTrailing) {
-                ToolbarSFSymbolButton(name: "heart")
+                DSToolbarSFSymbolButton(name: "heart")
                     .onTap { dismiss() }
             }
         }

@@ -255,16 +255,22 @@ final class Order1Model: ObservableObject {
     ]
 }
 
+// MARK: - Testable
+
+struct Testable_Order1: View {
+    var body: some View {
+        NavigationView {
+            Order1()
+                .navigationTitle("Order details")
+        }
+    }
+}
+
 // MARK: - Preview
 
 struct Order1_Previews: PreviewProvider {
     static var previews: some View {
-        PreviewForEach {
-            NavigationView {
-                Order1()
-                    .navigationTitle("Order details")
-            }
-        }
+        PreviewForEach { Testable_Order1() }
     }
 }
 

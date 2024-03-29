@@ -152,8 +152,7 @@ public struct DSPriceView: View {
 
 struct DSPrice_Previews: PreviewProvider {
     static var previews: some View {
-        PreviewForEach {
-            DSPreview {
+        PreviewForEach { DSPreview {
                 DSPriceView(amount: "1.50", regularAmount: "2.00", currency: "$", discountBadge: "10% OFF", size: .extraSmall)
                 DSPriceView(amount: "1.50", regularAmount: "2.00", currency: "$", discountBadge: "10% OFF", size: .smaller)
                 DSPriceView(amount: "1.50", regularAmount: "2.00", currency: "$", discountBadge: "10% OFF", size: .small)

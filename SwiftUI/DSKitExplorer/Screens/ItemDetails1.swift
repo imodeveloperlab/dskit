@@ -111,18 +111,24 @@ final class ItemDetails1Model: ObservableObject {
     let priceDisclaimer = "The price listed here is subject to change. The final amount will be displayed on the checkout screen."
 }
 
+// MARK: - Testable
+
+struct Testable_ItemDetails1: View {
+    var body: some View {
+        NavigationView {
+            ItemDetails1()
+                .navigationTitle("Details")
+                .navigationBarTitleDisplayMode(.inline)
+        }
+    }
+}
+
 // MARK: - Preview
 
 struct ItemDetails1_Previews: PreviewProvider {
     
     static var previews: some View {
-        PreviewForEach {
-            NavigationView {
-                ItemDetails1()
-                    .navigationTitle("Details")
-                    .navigationBarTitleDisplayMode(.inline)
-            }
-        }
+        PreviewForEach { Testable_ItemDetails1() }
     }
 }
 

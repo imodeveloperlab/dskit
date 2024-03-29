@@ -75,14 +75,20 @@ final class SignUpScreen1Model: ObservableObject {
     }
 }
 
+// MARK: - Testable
+
+struct Testable_SignUpScreen1: View {
+    var body: some View {
+        NavigationView {
+            SignUpScreen1()
+        }
+    }
+}
+
 // MARK: - Preview
 
 struct SignUpScreen1_Previews: PreviewProvider {
     static var previews: some View {
-        PreviewForEach {
-            NavigationView {
-                SignUpScreen1()
-            }
-        }
+        PreviewForEach { Testable_SignUpScreen1() }
     }
 }

@@ -207,18 +207,24 @@ final class CartScreen5Model: ObservableObject {
     ]
 }
 
+// MARK: - Testable
+
+struct Testable_CartScreen5: View {
+    var body: some View {
+        NavigationView {
+            CartScreen5()
+                .navigationTitle("Cart")
+                .navigationBarTitleDisplayMode(.inline)
+        }
+    }
+}
+
 // MARK: - Preview
 
 struct CartScreen5_Previews: PreviewProvider {
     
     static var previews: some View {
-        PreviewForEach {
-            NavigationView {
-                CartScreen5()
-                    .navigationTitle("Cart")
-                    .navigationBarTitleDisplayMode(.inline)
-            }
-        }
+        PreviewForEach { Testable_CartScreen5() }
     }
 }
 

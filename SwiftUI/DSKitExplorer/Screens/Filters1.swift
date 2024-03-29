@@ -79,15 +79,21 @@ final class Filters1Model: ObservableObject {
     ]
 }
 
+// MARK: - Testable
+
+struct Testable_Filters1: View {
+    var body: some View {
+        NavigationView {
+            Filters1()
+                .navigationTitle("Filters")
+        }
+    }
+}
+
 // MARK: - Preview
 
 struct Filters1_Previews: PreviewProvider {
     static var previews: some View {
-        PreviewForEach {
-            NavigationView {
-                Filters1()
-                    .navigationTitle("Filters")
-            }
-        }
+        PreviewForEach { Testable_Filters1() }
     }
 }

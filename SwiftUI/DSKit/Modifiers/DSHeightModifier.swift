@@ -26,8 +26,7 @@ public extension View {
 
 struct DSHeightModifier_Previews: PreviewProvider {
     static var previews: some View {
-        PreviewForEach {
-            DSPreview {
+        PreviewForEach { DSPreview {
                 Color.blue
                     .dsHeight(.regular)
                 

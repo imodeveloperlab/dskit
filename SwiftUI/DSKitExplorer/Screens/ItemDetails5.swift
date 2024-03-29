@@ -97,18 +97,23 @@ final class ItemDetails5Model: ObservableObject {
     )
 }
 
+// MARK: - Testable
+
+struct Testable_ItemDetails5: View {
+    var body: some View {
+        NavigationView {
+            ItemDetails5()
+                .navigationTitle("Details")
+                .navigationBarTitleDisplayMode(.inline)
+        }
+    }
+}
+
 // MARK: - Preview
 
 struct ItemDetails5_Previews: PreviewProvider {
-    
     static var previews: some View {
-        PreviewForEach {
-            NavigationView {
-                ItemDetails5()
-                    .navigationTitle("Details")
-                    .navigationBarTitleDisplayMode(.inline)
-            }
-        }
+        PreviewForEach { Testable_ItemDetails5() }
     }
 }
 

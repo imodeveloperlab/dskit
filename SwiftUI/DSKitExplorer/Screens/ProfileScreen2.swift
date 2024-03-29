@@ -89,11 +89,19 @@ final class ProfileScreen2Model: ObservableObject {
     }
 }
 
+// MARK: - Testable
+
+struct Testable_ProfileScreen2: View {
+    var body: some View {
+        ProfileScreen2()
+    }
+}
+
 // MARK: - Preview
 
 struct ProfileScreen2_Previews: PreviewProvider {
     static var previews: some View {
-        PreviewForEach { ProfileScreen2() }
+        PreviewForEach { Testable_ProfileScreen2() }
     }
 }
 

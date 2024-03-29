@@ -151,16 +151,22 @@ final class Items8Model {
     ]
 }
 
+// MARK: - Testable
+
+struct Testable_Items8: View {
+    var body: some View {
+        NavigationView {
+            Items8()
+                .navigationTitle("Products")
+        }
+    }
+}
+
 // MARK: - Preview
 
 struct Items8_Previews: PreviewProvider {
     static var previews: some View {
-        PreviewForEach {
-            NavigationView {
-                Items8()
-                    .navigationTitle("Products")
-            }
-        }
+        PreviewForEach { Testable_Items8() }
     }
 }
 

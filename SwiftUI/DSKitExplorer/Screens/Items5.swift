@@ -149,17 +149,23 @@ final class Items5Model {
     let filters = ["Polo", "Denim", "Jackets", "Shirts", "Shorts", "Sweaters"]
 }
 
+// MARK: - Testable
+
+struct Testable_Items5: View {
+    var body: some View {
+        NavigationView {
+            Items5()
+                .navigationTitle("Items")
+                .navigationBarTitleDisplayMode(.inline)
+        }
+    }
+}
+
 // MARK: - Preview
 
 struct Items5_Previews: PreviewProvider {
     static var previews: some View {
-        PreviewForEach {
-            NavigationView {
-                Items5()
-                    .navigationTitle("Items")
-                    .navigationBarTitleDisplayMode(.inline)
-            }
-        }
+        PreviewForEach { Testable_Items5() }
     }
 }
 

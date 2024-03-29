@@ -144,17 +144,23 @@ final class Items4Model {
     ]
 }
 
+// MARK: - Testable
+
+struct Testable_Items4: View {
+    var body: some View {
+        NavigationView {
+            Items4()
+            .navigationTitle("Items")
+            .navigationBarTitleDisplayMode(.inline)
+        }
+    }
+}
+
 // MARK: - Preview
 
 struct Items4_Previews: PreviewProvider {
     static var previews: some View {
-        PreviewForEach {
-            NavigationView {
-                Items4()
-                .navigationTitle("Items")
-                .navigationBarTitleDisplayMode(.inline)
-            }
-        }
+        PreviewForEach { Testable_Items4() }
     }
 }
 

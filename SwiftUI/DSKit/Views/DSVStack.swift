@@ -95,8 +95,7 @@ public struct TestableDSVStack: View {
 
 struct DSVStack_Previews: PreviewProvider {
     static var previews: some View {
-        PreviewForEach {
-            DSPreview {
+        PreviewForEach { DSPreview {
                 TestableDSVStack()
             }
         }

@@ -48,9 +48,17 @@ struct AboutUsScreen1: View {
     }
 }
 
+// MARK: - Testable
+
+struct Testable_AboutUsScreen1: View {
+    var body: some View {
+        AboutUsScreen1()
+    }
+}
+
 struct AboutUsScreen1_Previews: PreviewProvider {
     static var previews: some View {
-        PreviewForEach { AboutUsScreen1() }
+        PreviewForEach { Testable_AboutUsScreen1() }
     }
 }
 

@@ -65,8 +65,7 @@ public struct RadioPickerViewDemo: View {
 
 struct RadioPickerView_Previews: PreviewProvider {
     static var previews: some View {
-        PreviewForEach {
-            DSPreview {
+        PreviewForEach { DSPreview {
                 DSVStack {
                     RadioPickerViewDemo()
                 }

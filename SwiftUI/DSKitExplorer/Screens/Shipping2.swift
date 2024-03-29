@@ -143,15 +143,21 @@ final class Shipping2Model: ObservableObject {
     }
 }
 
+// MARK: - Testable
+
+struct Testable_Shipping2: View {
+    var body: some View {
+        NavigationView {
+            Shipping2()
+                .navigationTitle("Shipping")
+        }
+    }
+}
+
 // MARK: - Preview
 
 struct Shipping2_Previews: PreviewProvider {
     static var previews: some View {
-        PreviewForEach {
-            NavigationView {
-                Shipping2()
-                    .navigationTitle("Shipping")
-            }
-        }
+        PreviewForEach { Testable_Shipping2() }
     }
 }

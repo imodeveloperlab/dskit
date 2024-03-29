@@ -27,10 +27,18 @@ struct Order3: View {
     }
 }
 
+// MARK: - Testable
+
+struct Testable_Order3: View {
+    var body: some View {
+        Order3()
+    }
+}
+
+// MARK: - Preview
+
 struct Order3_Previews: PreviewProvider {
     static var previews: some View {
-        PreviewForEach {
-            Order3()
-        }
+        PreviewForEach { Testable_Order3() }
     }
 }

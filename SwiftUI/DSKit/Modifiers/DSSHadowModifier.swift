@@ -51,8 +51,7 @@ public extension View {
 
 struct DSShadowModifier_Previews: PreviewProvider {
     static var previews: some View {
-        PreviewForEach {
-            DSPreview {
+        PreviewForEach { DSPreview {
                 ScrollView {
                     DSText("Card")
                         .dsPadding()

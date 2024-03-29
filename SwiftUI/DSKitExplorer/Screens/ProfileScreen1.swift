@@ -148,11 +148,19 @@ final class ProfileScreen1Model: ObservableObject {
     ]
 }
 
+// MARK: - Testable
+
+struct Testable_ProfileScreen1: View {
+    var body: some View {
+        ProfileScreen1()
+    }
+}
+
 // MARK: - Preview
 
 struct ProfileScreen1_Previews: PreviewProvider {
     static var previews: some View {
-        PreviewForEach { ProfileScreen1() }
+        PreviewForEach { Testable_ProfileScreen1() }
     }
 }
 

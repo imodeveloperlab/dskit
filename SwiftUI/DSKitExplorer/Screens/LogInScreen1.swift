@@ -67,10 +67,18 @@ final class LogInScreen1Model: ObservableObject {
     }
 }
 
+// MARK: - Testable
+
+struct Testable_LogInScreen1: View {
+    var body: some View {
+        LogInScreen1()
+    }
+}
+
 // MARK: - Preview
 
 struct LogInScreen1_Previews: PreviewProvider {
     static var previews: some View {
-        PreviewForEach { LogInScreen1() }
+        PreviewForEach { Testable_LogInScreen1() }
     }
 }

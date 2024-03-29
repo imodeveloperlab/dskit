@@ -156,17 +156,23 @@ final class ItemDetails3Model: ObservableObject {
     )
 }
 
+// MARK: - Testable
+
+struct Testable_ItemDetails3: View {
+    var body: some View {
+        NavigationView {
+            ItemDetails3()
+                .navigationTitle("Details")
+                .navigationBarTitleDisplayMode(.inline)
+        }
+    }
+}
+
 // MARK: - Preview
 
 struct ItemDetails3_Previews: PreviewProvider {
     static var previews: some View {
-        PreviewForEach {
-            NavigationView {
-                ItemDetails3()
-                    .navigationTitle("Details")
-                    .navigationBarTitleDisplayMode(.inline)
-            }
-        }
+        PreviewForEach { Testable_ItemDetails3() }
     }
 }
 

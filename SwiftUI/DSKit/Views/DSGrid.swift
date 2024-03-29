@@ -59,8 +59,7 @@ public struct DSGrid<Data, ID, Content>: View where Data: RandomAccessCollection
 struct DSGrid_Previews: PreviewProvider {
     static var previews: some View {
         let colors = [Color.red, Color.green, Color.yellow, Color.purple, Color.red]
-        PreviewForEach {
-            DSPreview {
+        PreviewForEach { DSPreview {
                 DSVStack {
                     DSGrid(viewHeight: 50, numberOfColumns: 3, spacing: .small, data: 0...4, id: \.self) { element in
                         colors[element]

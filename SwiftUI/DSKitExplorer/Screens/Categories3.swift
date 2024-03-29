@@ -114,16 +114,22 @@ final class Categories3Model {
     ]
 }
 
+// MARK: - Testable
+
+struct Testable_Categories3: View {
+    var body: some View {
+        NavigationView {
+            Categories3()
+                .navigationTitle("Categories")
+        }
+    }
+}
+
 // MARK: - Preview
 
 struct Categories3_Previews: PreviewProvider {
     static var previews: some View {
-        PreviewForEach {
-            NavigationView {
-                Categories3()
-                    .navigationTitle("Categories")
-            }
-        }
+        PreviewForEach { Testable_Categories3() }
     }
 }
 

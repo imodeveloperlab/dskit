@@ -174,9 +174,19 @@ struct ContactView: View {
     }
 }
 
+// MARK: - Testable
+
+struct Testable_AboutUsScreen2: View {
+    var body: some View {
+        AboutUsScreen2()
+    }
+}
+
+// MARK: - Preview
+
 struct AboutUsScreen2_Previews: PreviewProvider {
     static var previews: some View {
-        PreviewForEach { AboutUsScreen2() }
+        PreviewForEach { Testable_AboutUsScreen2() }
     }
 }
 

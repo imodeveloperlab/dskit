@@ -133,15 +133,21 @@ final class Filters3Model: ObservableObject {
     let sortByOptions = ["Boots", "Chelsea Boots", "Casual Sneakers", "Casual Shoes"]
 }
 
+// MARK: - Testable
+
+struct Testable_Filters3: View {
+    var body: some View {
+        NavigationView {
+            Filters3()
+                .navigationTitle("Filters")
+        }
+    }
+}
+
 // MARK: - Preview
 
 struct Filters3_Previews: PreviewProvider {
     static var previews: some View {
-        PreviewForEach {
-            NavigationView {
-                Filters3()
-                    .navigationTitle("Filters")
-            }
-        }
+        PreviewForEach { Testable_Filters3() }
     }
 }

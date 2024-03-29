@@ -139,17 +139,22 @@ final class Items3Model {
     ]
 }
 
+// MARK: - Testable
+
+struct Testable_Items3: View {
+    var body: some View {
+        NavigationView {
+            Items3()
+                .navigationTitle("Products")
+        }
+    }
+}
+
 // MARK: - Preview
 
 struct Items3_Previews: PreviewProvider {
-    
     static var previews: some View {
-        PreviewForEach {
-            NavigationView {
-                Items3()
-                    .navigationTitle("Products")
-            }
-        }
+        PreviewForEach { Testable_Items3() }
     }
 }
 

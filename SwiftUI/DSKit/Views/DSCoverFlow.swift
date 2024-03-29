@@ -72,8 +72,7 @@ public struct DSCoverFlow<Data, ID, Content>: View where Data: RandomAccessColle
 struct DSCoverFlow_Previews: PreviewProvider {
     static var previews: some View {
         let colors = [Color.red, Color.green, Color.yellow]
-        PreviewForEach {
-            DSPreview {
+        PreviewForEach { DSPreview {
                 DSCoverFlow(height: 200, spacing: .regular, data: colors, id: \.self) { color in
                     color
                 }

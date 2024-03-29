@@ -120,15 +120,21 @@ final class Payment1Model: ObservableObject {
     }
 }
 
+// MARK: - Testable
+
+struct Testable_Payment1: View {
+    var body: some View {
+        NavigationView {
+            Payment1()
+                .navigationTitle("Payment")
+        }
+    }
+}
+
 // MARK: - Preview
 
 struct Payment1_Previews: PreviewProvider {
     static var previews: some View {
-        PreviewForEach {
-            NavigationView {
-                Payment1()
-                    .navigationTitle("Payment")
-            }
-        }
+        PreviewForEach { Testable_Payment1() }
     }
 }

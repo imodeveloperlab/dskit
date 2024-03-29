@@ -138,18 +138,24 @@ final class ItemDetails4Model: ObservableObject {
     let sizes = ["8", "9", "10", "11", "12", "13", "14", "15", "16"]
 }
 
-// MARK: - Model
+// MARK: - Testable
+
+struct Testable_ItemDetails4: View {
+    var body: some View {
+        NavigationView {
+            ItemDetails4()
+                .navigationTitle("Details")
+                .navigationBarTitleDisplayMode(.inline)
+        }
+    }
+}
+
+// MARK: - Preview
 
 struct ItemDetails4_Previews: PreviewProvider {
     
     static var previews: some View {
-        PreviewForEach {
-            NavigationView {
-                ItemDetails4()
-                    .navigationTitle("Details")
-                    .navigationBarTitleDisplayMode(.inline)
-            }
-        }
+        PreviewForEach { Testable_ItemDetails4() }
     }
 }
 

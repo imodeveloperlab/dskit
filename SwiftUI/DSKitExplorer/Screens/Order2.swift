@@ -169,15 +169,21 @@ final class Order2Model {
     ]
 }
 
+// MARK: - Testable
+
+struct Testable_Order2: View {
+    var body: some View {
+        NavigationView {
+            Order2()
+                .navigationTitle("Order details")
+        }
+    }
+}
+
 // MARK: - Preview
 
 struct Order2_Previews: PreviewProvider {
     static var previews: some View {
-        PreviewForEach {
-            NavigationView {
-                Order2()
-                    .navigationTitle("Order details")
-            }
-        }
+        PreviewForEach { Testable_Order2() }
     }
 }

@@ -155,15 +155,21 @@ final class Items7Model {
     ]
 }
 
+// MARK: - Testable
+
+struct Testable_Items7: View {
+    var body: some View {
+        NavigationView {
+            Items7()
+                .navigationTitle("Products")
+        }
+    }
+}
+
 // MARK: - Preview
 struct Items7_Previews: PreviewProvider {
     static var previews: some View {
-        PreviewForEach {
-            NavigationView {
-                Items7()
-                    .navigationTitle("Products")
-            }
-        }
+        PreviewForEach { Testable_Items7() }
     }
 }
 

@@ -45,9 +45,19 @@ struct NotificationsScreen1: View {
     }
 }
 
+// MARK: - Testable
+
+struct Testable_NotificationsScreen1: View {
+    var body: some View {
+        NotificationsScreen1()
+    }
+}
+
+// MARK: - Preview
+
 struct NotificationsScreen1_Previews: PreviewProvider {
     static var previews: some View {
-        PreviewForEach { NotificationsScreen1() }
+        PreviewForEach { Testable_NotificationsScreen1() }
     }
 }
 

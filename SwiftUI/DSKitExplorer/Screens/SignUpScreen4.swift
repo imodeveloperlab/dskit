@@ -63,15 +63,21 @@ final class SignUpScreen4Model: ObservableObject {
     }
 }
 
+// MARK: - Testable
+
+struct Testable_SignUpScreen4: View {
+    var body: some View {
+        NavigationView {
+            SignUpScreen4()
+                .navigationBarTitleDisplayMode(.inline)
+        }
+    }
+}
+
 // MARK: - Preview
 
 struct SignUpScreen4_Previews: PreviewProvider {
     static var previews: some View {
-        PreviewForEach {
-            NavigationView {
-                SignUpScreen4()
-                    .navigationBarTitleDisplayMode(.inline)
-            }
-        }
+        PreviewForEach { Testable_SignUpScreen4() }
     }
 }

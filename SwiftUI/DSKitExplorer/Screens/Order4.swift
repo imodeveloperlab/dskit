@@ -89,13 +89,19 @@ final class Order4Model {
     ]
 }
 
+// MARK: - Testable
+
+struct Testable_Order4: View {
+    var body: some View {
+        Order4()
+    }
+}
+
 // MARK: - Preview
 
 struct Order4_Previews: PreviewProvider {
     static var previews: some View {
-        PreviewForEach {
-            Order4()
-        }
+        PreviewForEach { Testable_Order4() }
     }
 }
 

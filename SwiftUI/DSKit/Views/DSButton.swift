@@ -231,8 +231,7 @@ public extension DSButton {
 struct DSButton_Previews: PreviewProvider {
     
     static var previews: some View {
-        PreviewForEach {
-            DSPreview {
+        PreviewForEach { DSPreview {
                 DSVStack {
                     
                     DSVStack {

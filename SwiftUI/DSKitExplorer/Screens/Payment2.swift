@@ -96,15 +96,21 @@ final class Payment2Model {
     ]
 }
 
+// MARK: - Testable
+
+struct Testable_Payment2: View {
+    var body: some View {
+        NavigationView {
+            Payment2()
+                .navigationTitle("My Cards")
+        }
+    }
+}
+
 // MARK: - Preview
 
 struct Payment2_Previews: PreviewProvider {
     static var previews: some View {
-        PreviewForEach {
-            NavigationView {
-                Payment2()
-                    .navigationTitle("My Cards")
-            }
-        }
+        PreviewForEach { Testable_Payment2() }
     }
 }

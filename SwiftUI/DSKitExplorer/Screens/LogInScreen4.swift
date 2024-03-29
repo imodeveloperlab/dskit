@@ -48,11 +48,19 @@ struct LogInScreen4: View {
     }
 }
 
+// MARK: - Testable
+
+struct Testable_LogInScreen4: View {
+    var body: some View {
+        LogInScreen4()
+    }
+}
+
 // MARK: - Preview
 
 struct LogInScreen4_Previews: PreviewProvider {
     static var previews: some View {
-        PreviewForEach { LogInScreen4() }
+        PreviewForEach { Testable_LogInScreen4() }
     }
 }
 

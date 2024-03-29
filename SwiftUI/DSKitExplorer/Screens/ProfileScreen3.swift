@@ -22,10 +22,10 @@ struct ProfileScreen3: View {
                         size: 50,
                         tint: .custom(UIColor.systemYellow)
                     )
-                        
+                    
                     DSText(
                         "Changing your password regularly reduces your risk of exposure and avoids a number of dangers.",
-                            .subheadline
+                        .subheadline
                     ).frame(maxWidth: .infinity, alignment: .leading)
                 }
                 .dsPadding()
@@ -66,14 +66,20 @@ final class ProfileScreen3Model: ObservableObject {
     }
 }
 
+// MARK: - Testable
+
+struct Testable_ProfileScreen3: View {
+    var body: some View {
+        NavigationView {
+            ProfileScreen3()
+        }
+    }
+}
+
 // MARK: - Preview
 
 struct ProfileScreen3_Previews: PreviewProvider {
     static var previews: some View {
-        PreviewForEach {
-            NavigationView {
-                ProfileScreen3()
-            }
-        }
+        PreviewForEach { Testable_ProfileScreen3() }
     }
 }

@@ -222,6 +222,14 @@ final class HomeScreen4Model: ObservableObject {
     ]
 }
 
+// MARK: - Testable
+
+struct Testable_HomeScreen4: View {
+    var body: some View {
+        HomeScreen4()
+    }
+}
+
 // MARK: - Preview
 
 struct HomeScreen4_Previews: PreviewProvider {

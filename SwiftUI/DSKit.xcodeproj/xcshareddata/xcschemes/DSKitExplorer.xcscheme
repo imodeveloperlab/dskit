@@ -29,10 +29,26 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <TestPlans>
          <TestPlanReference
-            reference = "container:DSKitExplorer.xctestplan"
+            reference = "container:DSKitExplorer.xctestplan">
+         </TestPlanReference>
+         <TestPlanReference
+            reference = "container:DSKitExplorerTestPlan.xctestplan"
             default = "YES">
          </TestPlanReference>
       </TestPlans>
+      <Testables>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6007428C2BB6F55500B7EE75"
+               BuildableName = "DSKitExplorerTests.xctest"
+               BlueprintName = "DSKitExplorerTests"
+               ReferencedContainer = "container:DSKit.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+      </Testables>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"

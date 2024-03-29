@@ -1,0 +1,31 @@
+{
+  "configurations" : [
+    {
+      "id" : "D16049EE-A906-4A35-BB8D-0D3BD55FAF6B",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:DSKit.xcodeproj",
+        "identifier" : "6007428C2BB6F55500B7EE75",
+        "name" : "DSKitExplorerTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:DSKit.xcodeproj",
+        "identifier" : "600E3C3D2BB6C28E00FA33EC",
+        "name" : "DSKitTests"
+      }
+    }
+  ],
+  "version" : 1
+}

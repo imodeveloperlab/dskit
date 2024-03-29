@@ -28,7 +28,6 @@ public struct DSPaddingModifier: ViewModifier {
     }
     
     func getPadding() -> CGFloat {
-        print("set padding \(padding)")
         return appearance.size.number(for: padding)
     }
 }

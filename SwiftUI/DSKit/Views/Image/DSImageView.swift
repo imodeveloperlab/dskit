@@ -10,6 +10,9 @@ import SDWebImageSwiftUI
 
 public struct DSImageView: View {
     
+    static let unitTestMode = ProcessInfo.processInfo.environment["XCTestConfigurationFilePath"] != nil
+
+    
     @Environment(\.appearance) var appearance: DSAppearance
     @Environment(\.colorGroup) var colorGroup: DSColorGroup
     @StateObject var imageManager = ImageManager()
@@ -93,7 +96,12 @@ public struct DSImageView: View {
                 .setContentMode(mode: image.contentMode)
                 .dsSize(image.size)
         case .image(image: let uiImage):
-            if let uiImage {
+            
+            if DSImageView.unitTestMode {
+                Color.gray.opacity(0.1)
+                    .dsSize(image.size)
+                    .setDisplayShape(shape: image.displayShape)
+            } else if let uiImage {
                 Image(uiImage: uiImage)
                     .resizable()
                     .setImageTint(tint: image.tintColor)
@@ -101,13 +109,9 @@ public struct DSImageView: View {
                     .dsSize(image.size)
                     .setDisplayShape(shape: image.displayShape)
             } else {
-                Image(systemName: "photo.fill")
-                    .resizable()
-                    .setContentMode(mode: .scaleAspectFit)
-                    .setTint(tint: .text(.headline))
-                    .dsPadding(.large)
-                    .opacity(0.1)
+                Color.gray.opacity(0.1)
                     .dsSize(image.size)
+                    .setDisplayShape(shape: image.displayShape)
             }
         case .imageURL(url: let url):
             
@@ -137,6 +141,10 @@ public struct DSImageView: View {
                     }
                 }
                 .onAppear {
+                    if DSImageView.unitTestMode {
+                        return
+                    }
+                    
                     let transformer = SDImageResizingTransformer(size: CGSize(width: geometry.size.width * 3, height:  geometry.size.height * 3), scaleMode: .aspectFill)
                     self.imageManager.load(url: url, context: [.imageTransformer: transformer])
                 }

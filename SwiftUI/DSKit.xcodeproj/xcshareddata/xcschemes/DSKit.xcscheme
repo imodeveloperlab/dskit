@@ -40,6 +40,17 @@
                ReferencedContainer = "container:DSKit.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6007428C2BB6F55500B7EE75"
+               BuildableName = "DSKitExplorerTests.xctest"
+               BlueprintName = "DSKitExplorerTests"
+               ReferencedContainer = "container:DSKit.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

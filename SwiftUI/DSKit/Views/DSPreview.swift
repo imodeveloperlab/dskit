@@ -22,7 +22,7 @@ public struct DSPreview<Content: View>: View {
             Spacer()
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .dsBackground()
+        .dsScreen()
     }
 }
 

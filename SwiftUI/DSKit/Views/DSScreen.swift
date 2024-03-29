@@ -22,7 +22,7 @@ public struct DSScreen<Content: View>: View {
             Spacer()
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .dsBackground()
+        .dsBackground(.primary)
     }
 }
 

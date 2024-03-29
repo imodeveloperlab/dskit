@@ -66,7 +66,7 @@ extension Items4 {
                         tint: .customColor(product.favourite ? .red : .gray.opacity(0.5))
                     )
                     .dsPadding(.small)
-                    .dsBackground()
+                    .dsBackground(.primary)
                     .dsCornerRadius()
                     .dsPadding(.small)
                 }

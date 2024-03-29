@@ -44,16 +44,16 @@ struct Testable_DSCustomBackgroundModifier: View {
                             DSText("Primary Background")
                         }
                         .dsPadding()
-                        .dsBackground()
+                        dsBackground(.primary)
                     }
                     .dsPadding()
-                    .dsBackground()
+                    .dsBackground(.secondary)
                 }
                 .dsPadding()
-                .dsBackground()
+                .dsBackground(.primary)
             }
             .dsPadding()
-            .dsBackground()
+            .dsBackground(.secondary)
         }.dsScreen()
     }
 }

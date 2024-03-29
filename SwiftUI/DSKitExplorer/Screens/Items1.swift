@@ -58,7 +58,7 @@ extension Items1 {
                     if let tag = product.tag {
                         DSText(tag, .headlineWithSize(9))
                             .dsPadding(.smaller)
-                            .dsBackground()
+                            .dsBackground(.primary)
                             .dsCornerRadius()
                             .dsPadding(.small)
                     }

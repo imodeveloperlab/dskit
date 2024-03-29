@@ -59,7 +59,7 @@ extension Items3 {
                     tint: .customColor(product.favorite ? .red : .gray.opacity(0.5))
                 )
                 .dsPadding(.small)
-                .dsBackground()
+                .dsBackground(.primary)
                 .dsCornerRadius()
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topTrailing)
             }

@@ -123,7 +123,7 @@ extension CartScreen5 {
             DSText(tag, .headlineWithSize(9))
                 .dsPadding(.horizontal, .small)
                 .dsPadding(.vertical, .smaller)
-                .dsBackground()
+                .dsBackground(.primary)
                 .dsCornerRadius()
                 .dsPadding(.smaller)
         }

@@ -43,7 +43,7 @@ public extension View {
     
     func dsScreen(contentMargins: DSDimension = .regular) -> some View {
         return self
-            .dsBackground()
+            .dsBackground(.primary)
             .environment(\.dsContentMarginKey, contentMargins)
             .environment(\.dsScrollableContentMarginKey, contentMargins)
     }

@@ -45,17 +45,15 @@ public extension View {
             DSText("Secondary")
             DSVStack {
                 DSText("Primary")
-                
                 DSVStack {
                     DSText("Primary")
                 }
                 .dsPadding(.regular)
-                .dsSecondaryBackground()
+                .dsBackground(.secondary)
                 .dsCornerRadius()
-                
             }
             .dsPadding(.extraSmall)
-            .dsBackground()
+            .dsBackground(.primary)
             .dsCornerRadius()
         }
         .dsPadding(.smaller)

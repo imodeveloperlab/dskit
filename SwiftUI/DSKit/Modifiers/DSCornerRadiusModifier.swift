@@ -25,10 +25,8 @@ public struct DSCornerRadiusModifier: ViewModifier {
     
     func resolveCornerRadius() -> CGFloat {
         if parentCornerRadius == 0 {
-            print("parentCornerRadius == 0", "did set \(colorGroup.colors(from: appearance).cornerRadius)", "parentPadding \(parentPadding)")
             return colorGroup.colors(from: appearance).cornerRadius
         } else {
-            print("existing == \(parentCornerRadius)", "did set \(max(parentCornerRadius - parentPadding, 2))", "parentPadding \(parentPadding)")
             return max(parentCornerRadius - parentPadding, 2)
         }
     }
@@ -67,7 +65,7 @@ struct Testable_DSCornerRadiusModifier: View {
             .dsCornerRadius()
         }
         .dsPadding()
-        .dsBackground()
+        .dsBackground(.primary)
     }
 }
 

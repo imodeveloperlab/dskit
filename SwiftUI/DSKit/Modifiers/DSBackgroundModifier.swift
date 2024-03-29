@@ -13,24 +13,20 @@ public struct DSBackgroundModifier: ViewModifier {
     @Environment(\.appearance) var appearance: DSAppearance
     @Environment(\.colorGroup) var colorGroup: DSColorGroup
     
-    let group: DSColorGroup?
+    let group: DSColorGroup
     
-    public init(group: DSColorGroup?) {
+    public init(group: DSColorGroup) {
         self.group = group
     }
     
     public func body(content: Content) -> some View {
-        if let group {
-            content.background(Color(uiColor: group.colors(from: appearance).background))
-        } else {
-            content.background(Color(uiColor: colorGroup.colors(from: appearance).background))
-                .environment(\.colorGroup, colorGroup == .primary ? .secondary : .primary)
-        }
+        content.background(Color(uiColor: group.colors(from: appearance).background))
+            .environment(\.colorGroup, colorGroup)
     }
 }
 
 public extension View {
-    func dsBackground(_ group: DSColorGroup? = nil) -> some View {
+    func dsBackground(_ group: DSColorGroup) -> some View {
         let modifier = DSBackgroundModifier(group: group)
         return self.modifier(modifier)
     }
@@ -48,16 +44,16 @@ struct Testable_DSBackgroundModifier: View {
                         DSText("Decondary Background")
                     }
                     .dsPadding()
-                    .dsBackground()
+                    .dsBackground(.secondary)
                 }
                 .dsPadding()
-                .dsBackground()
+                .dsBackground(.primary)
             }
             .dsPadding()
-            .dsBackground()
+            .dsBackground(.secondary)
         }
         .dsPadding()
-        .dsBackground()
+        .dsBackground(.primary)
     }
 }
 

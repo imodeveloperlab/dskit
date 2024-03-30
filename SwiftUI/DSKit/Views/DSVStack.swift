@@ -17,7 +17,7 @@ public struct DSVStack<Content: View>: View {
     
     public init(
         alignment: HorizontalAlignment = .leading,
-        spacing: DSDimension = .small,
+        spacing: DSDimension = .regular,
         @ViewBuilder content: @escaping () -> Content
     ) {
         self.content = content
@@ -38,22 +38,17 @@ public struct TestableDSVStack: View {
     public var body: some View {
         DSPreview {
             DSHStack {
-                DSVStack(spacing: .extraSmall) {
-                    Color.yellow
-                    Color.green
-                    Color.blue
-                }.overlay(alignment: .center, content: { Text("1") })
-                DSVStack(spacing: .smaller) {
-                    Color.yellow
-                    Color.green
-                    Color.blue
-                }.overlay(alignment: .center, content: { Text("2") })
                 DSVStack(spacing: .small) {
                     Color.yellow
                     Color.green
                     Color.blue
-                }.overlay(alignment: .center, content: { Text("3") })
+                }.overlay(alignment: .center, content: { Text("2") })
                 DSVStack(spacing: .regular) {
+                    Color.yellow
+                    Color.green
+                    Color.blue
+                }.overlay(alignment: .center, content: { Text("3") })
+                DSVStack(spacing: .regularMedium) {
                     Color.yellow
                     Color.green
                     Color.blue

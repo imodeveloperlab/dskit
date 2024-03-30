@@ -22,7 +22,7 @@ public struct DSGrid<Data, ID, Content>: View where Data: RandomAccessCollection
     public init(
         viewHeight: DSDimension? = nil,
         numberOfColumns: Int = 2,
-        spacing: DSDimension = .small,
+        spacing: DSDimension = .regular,
         data: Data,
         id: KeyPath<Data.Element, ID>,
         @ViewBuilder content: @escaping (Data.Element) -> Content
@@ -61,7 +61,7 @@ struct DSGrid_Previews: PreviewProvider {
         let colors = [Color.red, Color.green, Color.yellow, Color.purple, Color.red]
         PreviewForEach { DSPreview {
                 DSVStack {
-                    DSGrid(viewHeight: 50, numberOfColumns: 3, spacing: .small, data: 0...4, id: \.self) { element in
+                    DSGrid(viewHeight: 50, numberOfColumns: 3, spacing: .regular, data: 0...4, id: \.self) { element in
                         colors[element]
                     }
                 }.dsContentMargins(margin: 100)

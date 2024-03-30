@@ -15,21 +15,21 @@ struct ItemDetails4: View {
     
     var body: some View {
         ScrollView {
-            DSVStack(spacing: .regular) {
+            DSVStack(spacing: .regularMedium) {
 
                 DSCoverFlow(height: 200, data: viewModel.imageGallery, id: \.self) { imageUrl in
                     DSImageView(url: imageUrl).dsCornerRadius()
                 }
                 
-                DSVStack(spacing: .extraSmall) {
+                DSVStack(spacing: .zero) {
                     DSText(viewModel.title, .title2)
                     DSText(viewModel.subtitle, .subheadline)
                 }
                 
-                DSHStack(alignment: .center, spacing: .small) {
+                DSHStack(alignment: .center, spacing: .regular) {
                     DSText("New", .headlineWithSize(12), color: .customColor(Color.white))
-                        .dsPadding(.vertical, .smaller)
-                        .dsPadding(.horizontal, .small)
+                        .dsPadding(.vertical, .small)
+                        .dsPadding(.horizontal, .regular)
                         .dsBackground(.customColor(.green))
                         .dsCornerRadius()
                     DSRatingView(rating: 4.5, size: 16)
@@ -58,7 +58,7 @@ struct ItemDetails4: View {
                     Color(uiColor: color).dsSize(40)
                 }.dsSectionStyle(title: "Color")
                 
-                DSVStack(spacing: .smaller) {
+                DSVStack(spacing: .small) {
                     ActionView(title: "Size Guides")
                     ActionView(title: "Return Policy")
                 }

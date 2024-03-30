@@ -18,6 +18,8 @@ extension XCTestCase {
         file: StaticString = #file,
         line: UInt = #line
     ) {
+        SnapshotTesting.diffTool = "open"
+        isRecording = false
         let view = UIHostingController(rootView: testView)
         SnapshotTesting.assertSnapshot(
             matching: view, as: .image(on: .iPhoneX),

@@ -43,15 +43,15 @@ extension Order4 {
     struct SuggestedProductView: View {
         let product: Data
         var body: some View {
-            DSHStack(alignment: .center, spacing: .small) {
+            DSHStack(alignment: .center, spacing: .regular) {
                 DSImageView(url: product.image, size: .size(width: 80, height: 60))
                     .dsCornerRadius()
-                DSVStack(alignment: .leading, spacing: .smaller) {
+                DSVStack(alignment: .leading, spacing: .small) {
                     DSText(product.title, .headlineWithSize(12), multilineTextAlignment: .leading)
                     DSText(product.subtitle, .smallSubtitle, multilineTextAlignment: .leading)
-                    DSPriceView(price: product.price, size: .regular)
+                    DSPriceView(price: product.price, size: .regularMedium)
                 }.frame(maxWidth: 160, alignment: .leading)
-            }.dsCardStyle(padding: .small)
+            }.dsCardStyle(padding: .regular)
         }
         struct Data: Identifiable {
             let id = UUID()

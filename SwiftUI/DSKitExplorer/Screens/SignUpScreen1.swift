@@ -28,7 +28,7 @@ struct SignUpScreen1: View {
                     
                 }.hideWhenKeyboardIsDisplayed()
                 
-                DSVStack(spacing: .smaller) {
+                DSVStack(spacing: .small) {
                     DSTextField.name(value: viewModel.fullName)
                     DSTextField.email(value: viewModel.email)
                     DSTextField.phone(value: viewModel.phone)

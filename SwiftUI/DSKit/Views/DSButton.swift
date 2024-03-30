@@ -37,7 +37,7 @@ public struct DSButton: View {
         pushContentToSides: Bool = false,
         style: Style = .default,
         maxWidth: Bool = true,
-        spacing: DSDimension = .small,
+        spacing: DSDimension = .regular,
         action: @escaping () -> Void
     ) {
         self.title = title
@@ -55,7 +55,7 @@ public struct DSButton: View {
         pushContentToSides: Bool = false,
         style: Style = .default,
         maxWidth: Bool = true,
-        spacing: DSDimension = .small,
+        spacing: DSDimension = .regular,
         action: @escaping () -> Void
     ) {
         self.init(
@@ -76,7 +76,7 @@ public struct DSButton: View {
         pushContentToSides: Bool = false,
         style: Style = .default,
         maxWidth: Bool = true,
-        spacing: DSDimension = .small,
+        spacing: DSDimension = .regular,
         action: @escaping () -> Void
     ) {
         var leftImage: DSImage?
@@ -115,7 +115,7 @@ public struct DSButton: View {
             case .default, .light, .custom(color: _):
                 buttonView
                     .frame(maxWidth: maxWidth ? .infinity : .none)
-                    .dsPadding(.horizontal, .regular)
+                    .dsPadding(.horizontal, .regularMedium)
                     .dsHeight(.custom(appearance.actionElementHeight))
                     .background(backgroundColor)
                     .dsCornerRadius()
@@ -241,11 +241,11 @@ struct DSButton_Previews: PreviewProvider {
                         DSButton(title: "Light", rightSFSymbolName: "message.fill", style: .light, maxWidth: false, action: { })
                     }
                     
-                    DSVStack(spacing: .smaller) {
+                    DSVStack(spacing: .small) {
                         DSButton(title: "Default", action: { })
                         DSButton(title: "Light", style: .light, action: { })
                     }
-                    .dsPadding(.smaller)
+                    .dsPadding(.small)
                     .dsSecondaryBackground()
                     .dsCornerRadius()
                     

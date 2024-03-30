@@ -21,7 +21,7 @@ struct AppearanceSelectionView: View {
                 DSVStack {
                     
                     DSVStack(spacing: .zero) {
-                        DSHStack(spacing: .smaller) {
+                        DSHStack(spacing: .small) {
                             DSText("Welcome to", .bigTitle)
                             DSText("DSKit", .bigTitle, color: .brandColor)
                         }
@@ -63,7 +63,7 @@ fileprivate struct AppearanceView: View {
             .dsHeight(40)
             .dsCornerRadius()
         }
-        .dsPadding(.small)
+        .dsPadding(.regular)
         .dsSecondaryBackground()
         .dsCornerRadius()
     }

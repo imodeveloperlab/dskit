@@ -39,10 +39,9 @@ public struct DSSize: Equatable, ExpressibleByFloatLiteral, ExpressibleByInteger
         DSSize(width: .designSize(number), height: .designSize(number))
     }
     
-    public static let extraSmall = DSSize(width: .extraSmall, height: .extraSmall)
-    public static let smaller = DSSize(width: .smaller, height: .smaller)
-    public static let small = DSSize(width: .small, height: .small)
-    public static let regular = DSSize(width: .regular, height: .regular)
+    public static let smaller = DSSize(width: .small, height: .small)
+    public static let small = DSSize(width: .regular, height: .regular)
+    public static let regular = DSSize(width: .regularMedium, height: .regularMedium)
     public static let unspecified = DSSize(width: .none, height: .none)
     public static let medium = DSSize(width: .medium, height: .medium)
     public static let mediumLarge = DSSize(width: .mediumLarge, height: .mediumLarge)

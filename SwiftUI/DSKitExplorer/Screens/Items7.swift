@@ -48,7 +48,7 @@ extension Items7 {
                 
                 DSVStack {
                     
-                    DSVStack(spacing: .extraSmall) {
+                    DSVStack(spacing: .zero) {
                         DSText(product.title, .headlineWithSize(13))
                         DSText(product.description, .smallSubtitle)
                     }
@@ -58,13 +58,13 @@ extension Items7 {
                         DSText("2.4k Reviews", .caption2)
                     }
                     
-                    DSPriceView(price: product.price, size: .regular)
+                    DSPriceView(price: product.price, size: .regularMedium)
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
-                .dsPadding(.small)
+                .dsPadding(.regular)
                 .overlay(alignment: .trailing) {
                     DSChevronView()
-                        .dsPadding(.trailing, .regular)
+                        .dsPadding(.trailing, .regularMedium)
                 }
                 
             }.overlay(alignment: .topTrailing, content: {
@@ -73,10 +73,10 @@ extension Items7 {
                     size: .regular,
                     tint: .customColor(product.favorite ? .red : .white)
                 )
-                .dsPadding(.small)
+                .dsPadding(.regular)
                 .dsBlurBackground(style: .light)
                 .dsCornerRadius()
-                .dsPadding(.small)
+                .dsPadding(.regular)
             })
             .dsSecondaryBackground()
             .dsCornerRadius()

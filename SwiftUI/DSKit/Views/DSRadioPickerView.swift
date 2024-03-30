@@ -27,7 +27,7 @@ public struct DSRadioPickerView<Data, ID, Content>: View where Data: RandomAcces
     }
     
     public var body: some View {
-        DSVStack(spacing: .smaller) {
+        DSVStack(spacing: .small) {
             ForEach(data, id: id) { element in
                 DSVStack(alignment: .leading) {
                     self.content(element, selected == element)

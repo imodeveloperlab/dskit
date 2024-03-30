@@ -135,7 +135,7 @@ struct ScreensView: View {
     var body: some View {
         NavigationView {
             ScrollView {
-                DSVStack(spacing: .smaller) {
+                DSVStack(spacing: .small) {
                     ForEach(Screen.allCases) { screen in
                         NavigationLink {
                             switch screen {

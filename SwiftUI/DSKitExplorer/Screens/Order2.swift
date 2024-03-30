@@ -18,7 +18,7 @@ struct Order2: View {
         ScrollView {
             DSVStack {
                 
-                DSGrid(spacing: .small, data: viewModel.checkoutInfo, id: \.id) { card in
+                DSGrid(spacing: .regular, data: viewModel.checkoutInfo, id: \.id) { card in
                     CardView(card: card).onTap {}
                 }
                 
@@ -52,7 +52,7 @@ struct Order2: View {
     }
     
     func section<Content: View>(with title: String, @ViewBuilder content: @escaping () -> Content) -> some View {
-        DSVStack(spacing: .smaller) {
+        DSVStack(spacing: .small) {
             DSText(title, .smallTitle)
             content()
         }
@@ -76,7 +76,7 @@ extension Order2 {
                 DSImageView(sfSymbol: card.icon, size: 28, tint: .custom(viewColors.button.background))
                 DSVStack(alignment: .center) {
                     DSText(card.title, .text(font: .headline, color: .custom(viewColors.button.background)))
-                    DSVStack(alignment: .center, spacing: .smaller) {
+                    DSVStack(alignment: .center, spacing: .small) {
                         DSText(card.subtitle, .smallSubtitle)
                         DSText(card.description, .smallSubtitle)
                     }
@@ -106,7 +106,7 @@ extension Order2 {
                 DSHStack {
                     DSText(total.title, total.bold ? .smallTitle : .smallSubtitle)
                     Spacer()
-                    DSPriceView(price: total.price, size: total.bold ? .medium : .regular)
+                    DSPriceView(price: total.price, size: total.bold ? .medium : .regularMedium)
                 }.dsHeight(25)
             }
         }
@@ -132,7 +132,7 @@ extension Order2 {
                 Spacer()
                 DSPriceView(price: code.price)
                 DSSFSymbolButton(name: "minus.circle", size: .mediumIcon)
-                    .dsPadding(.leading, .small)
+                    .dsPadding(.leading, .regular)
             }.dsHeight(25)
         }
         

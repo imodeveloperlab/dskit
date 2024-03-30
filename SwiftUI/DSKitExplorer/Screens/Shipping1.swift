@@ -51,9 +51,9 @@ extension Shipping1 {
     struct DeliveryAddressView: View {
         let address: Data
         var body: some View {
-            DSVStack(spacing: .smaller) {
+            DSVStack(spacing: .small) {
                 DSText(address.address, .smallTitle)
-                DSHStack(spacing: .smaller) {
+                DSHStack(spacing: .small) {
                     DSImageView(sfSymbol: "phone", size: 12, tint: .text(.subheadline))
                     DSText(address.phone, .smallSubtitle)
                 }

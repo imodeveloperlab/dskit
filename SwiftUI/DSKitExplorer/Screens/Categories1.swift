@@ -15,7 +15,7 @@ struct Categories1: View {
         
     var body: some View {
         ScrollView {
-            DSVStack(spacing: .smaller) {
+            DSVStack(spacing: .small) {
                 ForEach(viewModel.categories) { category in
                     CategoryView(category: category)
                         .onTap { }
@@ -32,22 +32,22 @@ extension Categories1 {
     struct CategoryView: View {
         let category: Data
         var body: some View {
-            DSHStack(spacing: .regular) {
+            DSHStack(spacing: .regularMedium) {
                 if category.image != nil {
                     DSImageView(url: category.image,  size: .size(width: 60, height: 60))
                         .dsCornerRadius()
-                        .dsPadding(.leading, .small)
-                        .dsPadding(.top, .small)
-                        .dsPadding(.bottom, .small)
+                        .dsPadding(.leading, .regular)
+                        .dsPadding(.top, .regular)
+                        .dsPadding(.bottom, .regular)
                 }
                 
                 DSVStack {
-                    DSVStack(spacing: .extraSmall) {
+                    DSVStack(spacing: .zero) {
                         DSText(category.title, .smallTitle)
                         DSText(category.description, .smallSubtitle)
                     }
                 }
-                .dsPadding(category.image != nil ? .zero : .regular)
+                .dsPadding(category.image != nil ? .zero : .regularMedium)
                 .frame(maxWidth: .infinity, alignment: .leading)
             }
             .overlay(alignment: .trailing) {

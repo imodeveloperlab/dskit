@@ -18,7 +18,7 @@ public struct DSPriceView: View {
     var size: DSDimension
     var color: DisplayColor
     
-    public init(amount: String, regularAmount: String? = nil, currency: String, discountBadge: String? = nil, size: DSDimension = .regular, color: DisplayColor = .default) {
+    public init(amount: String, regularAmount: String? = nil, currency: String, discountBadge: String? = nil, size: DSDimension = .regularMedium, color: DisplayColor = .default) {
         self.amount = amount
         self.currency = currency
         self.regularAmount = regularAmount
@@ -27,7 +27,7 @@ public struct DSPriceView: View {
         self.color = color
     }
     
-    public init(price: DSPrice, size: DSDimension = .regular, color: DisplayColor = .default) {
+    public init(price: DSPrice, size: DSDimension = .regularMedium, color: DisplayColor = .default) {
         self.amount = price.amount
         self.currency = price.currency
         self.regularAmount = price.regularAmount
@@ -44,7 +44,7 @@ public struct DSPriceView: View {
     public var body: some View {
         switch color {
         case .custom(let customColor):
-            DSHStack(spacing: .smaller) {
+            DSHStack(spacing: .small) {
                 
                 DSHStack(spacing: .zero) {
                     DSText(currency.currencySymbol, .headlineWithSize(scaledFontSize(for: size)), color: .customColor(customColor))
@@ -60,14 +60,14 @@ public struct DSPriceView: View {
                 
                 if let discountBadge = discountBadge {
                     DSText(discountBadge, .headlineWithSize(scaledFontSize(for: size) * 0.75), color: .priceBadgeText)
-                        .dsPadding(.horizontal, .smaller)
-                        .dsPadding(.vertical, .extraSmall)
+                        .dsPadding(.horizontal, .small)
+                        .dsPadding(.vertical, .custom(2))
                         .background(appearance.price.badgeBackground.color)
                         .dsCornerRadius()
                 }
             }
         default:
-            DSHStack(spacing: .smaller) {
+            DSHStack(spacing: .small) {
                 
                 DSHStack(spacing: .zero) {
                     DSText(currency.currencySymbol, .headlineWithSize(scaledFontSize(for: size)), color: .priceAmount)
@@ -83,8 +83,8 @@ public struct DSPriceView: View {
                 
                 if let discountBadge = discountBadge {
                     DSText(discountBadge, .headlineWithSize(scaledFontSize(for: size) * 0.75), color: .priceBadgeText)
-                        .dsPadding(.horizontal, .small)
-                        .dsPadding(.vertical, .extraSmall)
+                        .dsPadding(.horizontal, .regular)
+                        .dsPadding(.vertical, .custom(2))
                         .background(appearance.price.badgeBackground.color)
                         .cornerRadius(4)
                 }
@@ -97,13 +97,11 @@ public struct DSPriceView: View {
         let regularSize: CGFloat = 12
         
         switch size {
-        case .extraSmall:
-            return regularSize * 0.7
-        case .smaller:
-            return regularSize * 0.8
         case .small:
-            return regularSize * 0.9
+            return regularSize * 0.8
         case .regular:
+            return regularSize * 0.9
+        case .regularMedium:
             return regularSize
         case .medium:
             return regularSize * 1.2
@@ -153,18 +151,17 @@ public struct DSPriceView: View {
 struct DSPrice_Previews: PreviewProvider {
     static var previews: some View {
         PreviewForEach { DSPreview {
-                DSPriceView(amount: "1.50", regularAmount: "2.00", currency: "$", discountBadge: "10% OFF", size: .extraSmall)
-                DSPriceView(amount: "1.50", regularAmount: "2.00", currency: "$", discountBadge: "10% OFF", size: .smaller)
                 DSPriceView(amount: "1.50", regularAmount: "2.00", currency: "$", discountBadge: "10% OFF", size: .small)
                 DSPriceView(amount: "1.50", regularAmount: "2.00", currency: "$", discountBadge: "10% OFF", size: .regular)
-                    .dsPadding(.smaller)
+                DSPriceView(amount: "1.50", regularAmount: "2.00", currency: "$", discountBadge: "10% OFF", size: .regularMedium)
+                    .dsPadding(.small)
                     .dsSecondaryBackground()
                     .dsCornerRadius()
-                DSPriceView(amount: "1.50", regularAmount: "2.00", currency: "$", discountBadge: "10% OFF", size: .regular)
-                    .dsPadding(.regular)
+                DSPriceView(amount: "1.50", regularAmount: "2.00", currency: "$", discountBadge: "10% OFF", size: .regularMedium)
+                    .dsPadding(.regularMedium)
                     .dsSecondaryBackground()
                     .dsCornerRadius()
-                DSPriceView(amount: "1.50", regularAmount: "2.00", currency: "$", discountBadge: "10% OFF", size: .regular)
+                DSPriceView(amount: "1.50", regularAmount: "2.00", currency: "$", discountBadge: "10% OFF", size: .regularMedium)
                     .dsPadding(.medium)
                     .dsSecondaryBackground()
                     .dsCornerRadius()

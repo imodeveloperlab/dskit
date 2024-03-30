@@ -24,7 +24,7 @@ public struct DSCardStyleModifier: ViewModifier {
 }
 
 public extension View {
-    func dsCardStyle(padding: DSDimension = .regular) -> some View {
+    func dsCardStyle(padding: DSDimension = .regularMedium) -> some View {
         return self.modifier(DSCardStyleModifier(padding: padding))
     }
 }

@@ -50,22 +50,22 @@ extension CartScreen1 {
     struct ProductView: View {
         let product: Product
         var body: some View {
-            DSHStack(alignment: .center, spacing: .regular) {
+            DSHStack(alignment: .center, spacing: .regularMedium) {
                 
                 DSImageView(url: product.image, size: .size(width: 80, height: 100))
                     .dsCornerRadius()
                 
-                DSVStack(spacing: .smaller) {
+                DSVStack(spacing: .small) {
                     DSText(product.title, .smallTitle)
                     DSText(product.description, .smallSubtitle)
                     DSRatingView(rating: product.rating, size: 10)
-                    DSPriceView(price: product.price, size: .regular).dsPadding(.top, .small)
+                    DSPriceView(price: product.price, size: .regularMedium).dsPadding(.top, .regular)
                 }.frame(maxWidth: .infinity, alignment: .leading)
                 
                 DSSFSymbolButton(name: "pencil.circle", size: .mediumIcon)
-                    .dsPadding(.trailing, .small)
+                    .dsPadding(.trailing, .regular)
             }
-            .dsPadding(.small)
+            .dsPadding(.regular)
             .dsSecondaryBackground()
             .dsCornerRadius()
         }
@@ -89,7 +89,7 @@ extension CartScreen1 {
             DSHStack() {
                 DSText("Total",.headline)
                 Spacer()
-                DSHStack(alignment: .firstTextBaseline, spacing: .smaller) {
+                DSHStack(alignment: .firstTextBaseline, spacing: .small) {
                     DSText("for",.subheadline)
                     DSText(itemsCount,.smallTitle)
                     DSText("items",.subheadline)

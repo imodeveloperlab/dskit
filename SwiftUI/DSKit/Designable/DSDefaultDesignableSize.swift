@@ -17,13 +17,11 @@ public struct DSDefaultDesignableSize: DSDesignableSize {
     
     public func number(for space: DSDimension) -> CGFloat {
         switch space {
-        case .extraSmall:
-            spatialSystem.multiply(by: 0.25)
-        case .smaller:
-            spatialSystem.multiply(by: 0.5)
         case .small:
-            spatialSystem.multiply(by: 1.0)
+            spatialSystem.multiply(by: 0.5)
         case .regular:
+            spatialSystem.multiply(by: 1.0)
+        case .regularMedium:
             spatialSystem.multiply(by: 2.0)
         case .medium:
             spatialSystem.multiply(by: 2.5)

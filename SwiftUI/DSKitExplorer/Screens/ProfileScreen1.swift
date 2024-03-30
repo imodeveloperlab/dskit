@@ -24,7 +24,7 @@ struct ProfileScreen1: View {
                 )
                 
                 ForEach(viewModel.groups, id: \.self) { (group: ActionView.Group) in
-                    DSVStack(spacing: .smaller) {
+                    DSVStack(spacing: .small) {
                         if let title = group.title {
                             DSText(title, .smallSubtitle)
                                 .dsPadding(.top)

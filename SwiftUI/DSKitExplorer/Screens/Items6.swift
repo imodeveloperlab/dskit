@@ -44,7 +44,7 @@ extension Items6 {
                 DSImageView(url: product.image)
                     .dsSecondaryBackground()
                 DSVStack {
-                    DSVStack(spacing: .extraSmall) {
+                    DSVStack(spacing: .zero) {
                         DSText(product.title, .headlineWithSize(13))
                         DSText(product.description, .smallSubtitle)
                     }
@@ -52,18 +52,18 @@ extension Items6 {
                         DSRatingView(rating: 4.5, size: 12)
                         DSText("2.4k Reviews", .caption2)
                     }
-                    DSPriceView(price: product.price, size: .regular)
-                }.dsPadding(.small)
+                    DSPriceView(price: product.price, size: .regularMedium)
+                }.dsPadding(.regular)
             }.overlay(alignment: .topTrailing, content: {
                 DSImageView(
                     sfSymbol: "heart.fill",
                     size: .regular,
                     tint: .customColor(product.favourite ? .red : .white)
                 )
-                .dsPadding(.small)
+                .dsPadding(.regular)
                 .dsBlurBackground(style: .light)
                 .dsCornerRadius()
-                .dsPadding(.small)
+                .dsPadding(.regular)
             })
             .dsSecondaryBackground()
             .dsCornerRadius()

@@ -45,20 +45,20 @@ extension CartScreen3 {
     struct ProductView: View {
         let product: Product
         var body: some View {
-            DSHStack(alignment: .center, spacing: .regular) {
+            DSHStack(alignment: .center, spacing: .regularMedium) {
                 DSImageView(url: product.image, size: .size(width: 90, height: 100))
                     .dsCornerRadius()
                 DSVStack(alignment: .leading) {
                     DSText(product.title, .smallTitle)
                         .frame(maxWidth: .infinity, alignment: .leading)
                     DSText(product.description, .caption2)
-                    DSPriceView(price: product.price, size: .regular)
+                    DSPriceView(price: product.price, size: .regularMedium)
                 }.frame(maxWidth: .infinity, alignment: .leading)
                 
                 DSSFSymbolButton(name: "minus.circle", size: .mediumIcon)
-                    .dsPadding(.trailing, .small)
+                    .dsPadding(.trailing, .regular)
             }
-            .dsPadding(.small)
+            .dsPadding(.regular)
             .dsSecondaryBackground()
             .dsCornerRadius()
         }
@@ -82,7 +82,7 @@ extension CartScreen3 {
             DSHStack() {
                 DSText("Total",.headline)
                 Spacer()
-                DSHStack(alignment: .firstTextBaseline, spacing: .smaller) {
+                DSHStack(alignment: .firstTextBaseline, spacing: .small) {
                     DSText("for",.subheadline)
                     DSText(itemsCount,.smallTitle)
                     DSText("items",.subheadline)

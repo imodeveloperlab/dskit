@@ -33,7 +33,7 @@ public struct DSPaddingModifier: ViewModifier {
 }
 
 public extension View {
-    func dsPadding(_ edge: Edge.Set = .all, _ padding: DSDimension = .regular) -> some View {        
+    func dsPadding(_ edge: Edge.Set = .all, _ padding: DSDimension = .regularMedium) -> some View {        
         let modifier = DSPaddingModifier(
             edge: edge,
             padding: padding
@@ -41,7 +41,7 @@ public extension View {
         return self.modifier(modifier)
     }
     
-    func dsPadding(_ padding: DSDimension = .regular) -> some View {
+    func dsPadding(_ padding: DSDimension = .regularMedium) -> some View {
         let modifier = DSPaddingModifier(
             edge: .all,
             padding: padding

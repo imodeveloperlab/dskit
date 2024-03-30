@@ -21,7 +21,7 @@ struct Filters1: View {
                     DSText(option, selected ?  .smallTitle : .subheadlineWithSize(14))
                 }.dsSectionStyle(title: "Sort By")
                 
-                DSVStack(spacing: .smaller) {
+                DSVStack(spacing: .small) {
                     ForEach(viewModel.filters) { filter in
                         OptionView(option: filter)
                     }

@@ -17,7 +17,7 @@ struct AboutUsScreen1: View {
     
     var body: some View {
         ScrollView {
-            DSVStack(spacing: .regular) {
+            DSVStack(spacing: .regularMedium) {
                 DSVStack {
                     DSText("Our Story", .title2)
                     DSText("Start working with DSKit that can provide everything you need to generate any interface you need. Dummy text is text that is used in the publishing industry or by web designers to occupy the space which will later be filled with 'real' content.", .body)

@@ -28,7 +28,7 @@ struct DSHeightModifier_Previews: PreviewProvider {
     static var previews: some View {
         PreviewForEach { DSPreview {
                 Color.blue
-                    .dsHeight(.regular)
+                    .dsHeight(.regularMedium)
                 
                 Color.blue
                     .dsHeight(.medium)

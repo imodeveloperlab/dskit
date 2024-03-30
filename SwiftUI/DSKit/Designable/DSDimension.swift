@@ -8,10 +8,9 @@
 import Foundation
 
 public enum DSDimension: ExpressibleByFloatLiteral, ExpressibleByIntegerLiteral, Equatable {
-    case extraSmall
-    case smaller
     case small
     case regular
+    case regularMedium
     case medium
     case mediumLarge
     case large

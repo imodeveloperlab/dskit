@@ -22,7 +22,7 @@ public struct DSCoverFlow<Data, ID, Content>: View where Data: RandomAccessColle
     
     public init(
         height: DSDimension,
-        spacing: DSDimension = .small,
+        spacing: DSDimension = .regular,
         showPaginationView: Bool = true,
         data: Data,
         id: KeyPath<Data.Element, ID>,
@@ -65,7 +65,7 @@ public struct DSCoverFlow<Data, ID, Content>: View where Data: RandomAccessColle
                     .dsSize(7)
                     .opacity(currentElementID == element ? 1 : 0.1)
             }
-        }.dsHeight(.small)
+        }.dsHeight(.regular)
     }
 }
 
@@ -73,7 +73,7 @@ struct DSCoverFlow_Previews: PreviewProvider {
     static var previews: some View {
         let colors = [Color.red, Color.green, Color.yellow]
         PreviewForEach { DSPreview {
-                DSCoverFlow(height: 200, spacing: .regular, data: colors, id: \.self) { color in
+                DSCoverFlow(height: 200, spacing: .regularMedium, data: colors, id: \.self) { color in
                     color
                 }
                 .dsLayoutGuideLines(divider: 1)

@@ -65,7 +65,7 @@ struct DSShadowModifier_Previews: PreviewProvider {
                         .dsCornerRadius()
                         .dsPadding(.horizontal)
                     .dsPadding(.horizontal)
-                    .topShadow(padding: .small)
+                    .topShadow(padding: .regular)
                 }
             }
         }

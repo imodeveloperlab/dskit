@@ -16,7 +16,7 @@ struct Filters3: View {
     var body: some View {
         ScrollView {
             DSVStack {
-                DSVStack(spacing: .smaller) {
+                DSVStack(spacing: .small) {
                     OptionView(title: "Brand", option: "Adidas, Puma, HRX")
                     OptionToggleView(title: "Free shipping")
                     OptionView(title: "Shipping to", option: "London UK")

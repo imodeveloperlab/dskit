@@ -15,7 +15,7 @@ struct HomeScreen4: View {
     
     var body: some View {
         ScrollView() {
-            DSVStack(spacing: .regular) {
+            DSVStack(spacing: .regularMedium) {
                 
                 ProfileView(
                     title: "Shoes Shop",
@@ -56,8 +56,8 @@ extension HomeScreen4 {
                 DSVStack(spacing: .zero) {
                     DSText(product.title, .smallTitle)
                     DSText(product.description, .smallSubtitle)
-                    DSPriceView(price: product.price, size: .small, color: .default)
-                        .dsPadding(.top, .small)
+                    DSPriceView(price: product.price, size: .regular, color: .default)
+                        .dsPadding(.top, .regular)
                 }.dsPadding()
             }
             .dsSecondaryBackground()
@@ -83,10 +83,10 @@ extension HomeScreen4 {
                             DSText(product.title, .smallTitle)
                             DSText(product.subtitle, .smallSubtitle)
                         }
-                        .dsPadding(.small)
+                        .dsPadding(.regular)
                         .dsBackground(.secondaryViewBackground)
                         .dsCornerRadius()
-                        .dsPadding(.small)
+                        .dsPadding(.regular)
                     }
             }.dsCornerRadius()
         }
@@ -109,7 +109,7 @@ extension HomeScreen4 {
             DSHStack {
                 DSVStack(spacing: .zero) {
                     DSText(title, .headlineWithSize(28))
-                    DSHStack(spacing: .smaller) {
+                    DSHStack(spacing: .small) {
                         DSText(youHave, .subheadline)
                         DSText(numberOfItemsInCart, .headlineWithSize(12), color: .primaryViewBackground)
                             .dsSize(.medium)

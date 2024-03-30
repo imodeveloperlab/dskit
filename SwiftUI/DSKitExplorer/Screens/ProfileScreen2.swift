@@ -18,7 +18,7 @@ struct ProfileScreen2: View {
             DSVStack {
                 ProfileView(title: "Jane Doe", subtitle: "12 April 200", profileImageUrl: personOnOrangeBg)
                 DSVStack() {
-                    DSVStack(spacing: .smaller) {
+                    DSVStack(spacing: .small) {
                         DSTextField.name(value: viewModel.fullName)
                         DSTextField.email(value: viewModel.email)
                         DSTextField.phone(value: viewModel.phone)

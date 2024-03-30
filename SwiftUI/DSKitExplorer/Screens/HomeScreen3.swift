@@ -15,7 +15,7 @@ struct HomeScreen3: View {
     
     var body: some View {
         ScrollView() {
-            DSVStack(spacing: .regular) {
+            DSVStack(spacing: .regularMedium) {
                 ProfileView(title: "Jane Doe", subtitle: "4 Items in cart", profileImageUrl: profileOnRedBg)
                 
                 DSCoverFlow(height: 200, data: viewModel.topProducts, id: \.self) { imageUrl in
@@ -48,8 +48,8 @@ extension HomeScreen3 {
                 DSVStack(spacing: .zero) {
                     DSText(product.title, .smallTitle)
                     DSText(product.description, .smallSubtitle)
-                    DSPriceView(price: product.price, size: .small, color: .default)
-                        .dsPadding(.top, .small)
+                    DSPriceView(price: product.price, size: .regular, color: .default)
+                        .dsPadding(.top, .regular)
                 }.dsPadding()
             }
             .dsSecondaryBackground()

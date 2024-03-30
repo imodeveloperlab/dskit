@@ -46,16 +46,16 @@ extension CartScreen4 {
         let product: Product
         var body: some View {
             DSVStack {
-                DSHStack(alignment: .center, spacing: .regular) {
+                DSHStack(alignment: .center, spacing: .regularMedium) {
                     Group {
                         DSImageView(url: product.image, size: .size(width: 100, height: 100))
                             .overlay(alignment: .bottomLeading) {
                                 if let tag = product.tag {
                                     DSText(tag, .headlineWithSize(9))
-                                        .dsPadding(.smaller)
+                                        .dsPadding(.small)
                                         .dsBackground(.primary)
                                         .dsCornerRadius()
-                                        .dsPadding(.smaller)
+                                        .dsPadding(.small)
                                 }
                             }
                     }.dsCornerRadius()
@@ -68,14 +68,14 @@ extension CartScreen4 {
                             DSText("Size:", .subheadline)
                             DSText(product.size, .smallTitle)
                         }
-                        DSPriceView(price: product.price, size: .regular)
+                        DSPriceView(price: product.price, size: .regularMedium)
                     }.frame(maxWidth: .infinity, alignment: .leading)
                     
                     DSSFSymbolButton(name: "minus.circle", size: .mediumIcon)
-                        .dsPadding(.trailing, .small)
+                        .dsPadding(.trailing, .regular)
                 }
             }
-            .dsPadding(.small)
+            .dsPadding(.regular)
             .dsSecondaryBackground()
             .dsCornerRadius()
             .onTap { }
@@ -102,7 +102,7 @@ extension CartScreen4 {
             DSHStack() {
                 DSText("Total",.headline)
                 Spacer()
-                DSHStack(alignment: .firstTextBaseline, spacing: .smaller) {
+                DSHStack(alignment: .firstTextBaseline, spacing: .small) {
                     DSText("for",.subheadline)
                     DSText(itemsCount,.smallTitle)
                     DSText("items",.subheadline)

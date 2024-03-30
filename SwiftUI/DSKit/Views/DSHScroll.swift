@@ -20,7 +20,7 @@ public struct DSHScroll<Data, ID, Content>: View where Data: RandomAccessCollect
     let id: KeyPath<Data.Element, ID>
     
     public init(
-        spacing: DSDimension = .small,
+        spacing: DSDimension = .regular,
         data: Data,
         id: KeyPath<Data.Element, ID>,
         @ViewBuilder content: @escaping (Data.Element) -> Content
@@ -48,7 +48,7 @@ struct DSHScroll_Previews: PreviewProvider {
     static var previews: some View {
         let colors = [Color.red, Color.green, Color.yellow, Color.red, Color.green, Color.yellow]
         PreviewForEach { DSPreview {
-                DSHScroll(spacing: .regular, data: colors, id: \.self) { color in
+                DSHScroll(spacing: .regularMedium, data: colors, id: \.self) { color in
                     color.dsSize(60)
                 }
             }.dsContentMargins(margin: 100)

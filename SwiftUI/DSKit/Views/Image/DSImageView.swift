@@ -201,10 +201,9 @@ struct DSImageView_Previews: PreviewProvider {
                 }
                 
                 DSHStack {
-                    DSImageView(sfSymbol: "sun.rain.fill", size: .size(.extraSmall), tint: .custom(.red))
-                    DSImageView(sfSymbol: "sun.rain.fill", size: .size(.smaller), tint: .custom(.red))
                     DSImageView(sfSymbol: "sun.rain.fill", size: .size(.small), tint: .custom(.red))
                     DSImageView(sfSymbol: "sun.rain.fill", size: .size(.regular), tint: .custom(.red))
+                    DSImageView(sfSymbol: "sun.rain.fill", size: .size(.regularMedium), tint: .custom(.red))
                     DSImageView(sfSymbol: "sun.rain.fill", size: .size(.medium), tint: .custom(.red))
                     DSImageView(sfSymbol: "sun.rain.fill", size: .size(.mediumLarge), tint: .custom(.red))
                     DSImageView(sfSymbol: "sun.rain.fill", size: .size(.large), tint: .custom(.red))

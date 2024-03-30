@@ -15,7 +15,7 @@ struct Items4: View {
     
     var body: some View {
         ScrollView {
-            DSVStack(spacing: .regular) {
+            DSVStack(spacing: .regularMedium) {
                 DSHScroll(data: viewModel.filters, id: \.self) { title in
                     DSText(title, .headlineWithSize(12))
                         .dsPadding(.horizontal, .extraLarge)
@@ -51,11 +51,11 @@ extension Items4 {
             Group {
                 DSVStack(spacing: .zero) {
                     DSImageView(url: product.image)
-                    DSVStack(spacing: .smaller) {
+                    DSVStack(spacing: .small) {
                         DSText(product.title, .smallTitle)
                         DSText(product.description, .smallSubtitle)
                         DSPriceView(price: product.price, size: .medium)
-                    }.dsPadding(.small)
+                    }.dsPadding(.regular)
                 }
                 .dsSecondaryBackground()
                 .dsHeight(290)
@@ -65,10 +65,10 @@ extension Items4 {
                         size: .regular,
                         tint: .customColor(product.favourite ? .red : .gray.opacity(0.5))
                     )
-                    .dsPadding(.small)
+                    .dsPadding(.regular)
                     .dsBackground(.primary)
                     .dsCornerRadius()
-                    .dsPadding(.small)
+                    .dsPadding(.regular)
                 }
                 .onTap { }
             }.dsCornerRadius()

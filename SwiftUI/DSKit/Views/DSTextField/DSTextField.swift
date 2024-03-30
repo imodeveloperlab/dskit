@@ -72,7 +72,7 @@ public struct DSTextField: View {
             }
         }
         .dsHeight(.custom(appearance.actionElementHeight))
-        .dsPadding(.horizontal, .custom(appearance.size.number(for: .regular) - 1))
+        .dsPadding(.horizontal, .custom(appearance.size.number(for: .regularMedium) - 1))
         .dsBackground(.custom(colorGroup.colors(from: appearance).textField.background))
         .dsCornerRadius()
         .overlay(

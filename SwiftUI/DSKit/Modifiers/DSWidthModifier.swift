@@ -28,7 +28,7 @@ struct DSWidthModifier_Previews: PreviewProvider {
     static var previews: some View {
         PreviewForEach { DSPreview {
                 Color.blue
-                    .dsWidth(.regular)
+                    .dsWidth(.regularMedium)
                 
                 Color.blue
                     .dsWidth(.medium)

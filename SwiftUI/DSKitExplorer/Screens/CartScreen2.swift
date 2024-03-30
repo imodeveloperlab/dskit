@@ -56,7 +56,7 @@ extension CartScreen2 {
                         DSText(product.description, .smallSubtitle)
                         DSRatingView(rating: product.rating, size: 13)
                     }
-                    DSPriceView(price: product.price, size: .regular)
+                    DSPriceView(price: product.price, size: .regularMedium)
                     
                 }.frame(maxWidth: .infinity, alignment: .leading)
                     .overlay(alignment: .bottomTrailing, content: {
@@ -94,7 +94,7 @@ extension CartScreen2 {
             DSHStack() {
                 DSText("Total",.headline)
                 Spacer()
-                DSHStack(alignment: .firstTextBaseline, spacing: .smaller) {
+                DSHStack(alignment: .firstTextBaseline, spacing: .small) {
                     DSText("for",.subheadline)
                     DSText(itemsCount,.smallTitle)
                     DSText("items",.subheadline)

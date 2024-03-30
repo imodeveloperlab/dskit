@@ -43,7 +43,7 @@ extension HomeScreen1 {
                     DSText(product.title, .smallTitle)
                     DSText(product.description, .smallSubtitle)
                 }
-            }.dsPadding(.bottom, .small)
+            }.dsPadding(.bottom, .regular)
         }
         struct Product: Identifiable {
             let id = UUID()

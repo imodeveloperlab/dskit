@@ -43,7 +43,7 @@ struct Filters2: View {
                         .dsSecondaryBackground()
                 }.dsSectionStyle(title: "Size")
                 
-                DSVStack(spacing: .smaller) {
+                DSVStack(spacing: .small) {
                     ForEach(viewModel.filters) { filter in
                         OptionView(option: filter)
                     }

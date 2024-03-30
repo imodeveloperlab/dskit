@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DSCardVerticalPaddingKey: EnvironmentKey {
-    static let defaultValue: DSDimension = .regular
+    static let defaultValue: DSDimension = .regularMedium
 }
 
 extension EnvironmentValues {

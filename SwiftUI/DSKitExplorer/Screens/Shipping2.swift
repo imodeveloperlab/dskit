@@ -41,7 +41,7 @@ struct Shipping2: View {
     }
     
     func section<Content: View>(with title: String, @ViewBuilder content: @escaping () -> Content) -> some View {
-        DSVStack(spacing: .smaller) {
+        DSVStack(spacing: .small) {
             DSText(title, .smallTitle)
             content()
         }
@@ -60,7 +60,7 @@ extension Shipping2 {
                 DSHStack {
                     DSText(total.title, total.bold ? .smallTitle : .smallSubtitle)
                     Spacer()
-                    DSPriceView(price: total.price, size: total.bold ? .medium : .regular)
+                    DSPriceView(price: total.price, size: total.bold ? .medium : .regularMedium)
                 }.dsHeight(25)
             }
         }
@@ -79,21 +79,21 @@ extension Shipping2 {
         let method: Data
         var body: some View {
             DSText(method.title, .smallTitle)
-            DSVStack(spacing: .smaller) {
-                DSHStack(spacing: .smaller) {
+            DSVStack(spacing: .small) {
+                DSHStack(spacing: .small) {
                     DSImageView(sfSymbol: "calendar", size: 12, tint: .text(.subheadline))
                     DSText(method.description, .smallSubtitle)
                 }
                 if let price = method.price {
                     DSPriceView(amount: price, currency: "$", size: .medium)
-                        .dsPadding(.top, .small)
+                        .dsPadding(.top, .regular)
                 } else {
                     DSText("Free", .smallTitle, color: .customColor(.white))
-                        .dsPadding(.vertical, .small)
+                        .dsPadding(.vertical, .regular)
                         .dsPadding(.horizontal)
                         .dsBackground(.customColor(.green))
                         .dsCornerRadius()
-                        .dsPadding(.top, .small)
+                        .dsPadding(.top, .regular)
                 }
             }
         }

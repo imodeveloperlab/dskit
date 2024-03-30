@@ -43,7 +43,7 @@ extension Items3 {
         let product: Data
         var body: some View {
             ZStack {
-                DSHStack(alignment: .center, spacing: .regular) {
+                DSHStack(alignment: .center, spacing: .regularMedium) {
                     DSImageView(url: product.image, size: .size(width: 90, height: 120))
                         .dsCornerRadius()
                     DSVStack(alignment: .leading) {
@@ -58,12 +58,12 @@ extension Items3 {
                     size: .regular,
                     tint: .customColor(product.favorite ? .red : .gray.opacity(0.5))
                 )
-                .dsPadding(.small)
+                .dsPadding(.regular)
                 .dsBackground(.primary)
                 .dsCornerRadius()
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topTrailing)
             }
-            .dsPadding(.small)
+            .dsPadding(.regular)
             .dsSecondaryBackground()
             .dsCornerRadius()
         }

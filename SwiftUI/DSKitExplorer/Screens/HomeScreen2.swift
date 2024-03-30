@@ -15,7 +15,7 @@ struct HomeScreen2: View {
     
     var body: some View {
         ScrollView() {
-            DSVStack(spacing: .regular) {
+            DSVStack(spacing: .regularMedium) {
                 ProfileView(
                     title: "Shop",
                     subtitle: "Over 45k items available for you",
@@ -59,8 +59,8 @@ extension HomeScreen2 {
                 DSVStack(spacing: .zero) {
                     DSText(product.title, .smallTitle)
                     DSText(product.description, .smallSubtitle)
-                    DSPriceView(price: product.price, size: .small, color: .default)
-                        .dsPadding(.top, .small)
+                    DSPriceView(price: product.price, size: .regular, color: .default)
+                        .dsPadding(.top, .regular)
                 }
             }.dsPadding(.bottom)
         }

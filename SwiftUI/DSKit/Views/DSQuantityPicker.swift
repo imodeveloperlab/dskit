@@ -23,12 +23,12 @@ public struct DSQuantityPicker: View {
 
             Spacer()
             
-            DSHStack(alignment: .center, spacing: .small) {
+            DSHStack(alignment: .center, spacing: .regular) {
 
                 DSSFSymbolButton(name: "minus", size: .smallIcon)
                     .saturation(quantity > 1 ? 1 : 0)
                     .opacity(quantity > 1 ? 1 : 0.2)
-                    .dsPadding(.horizontal, .small)
+                    .dsPadding(.horizontal, .regular)
                     .onTap {
                         if quantity > 1 {
                             quantity = quantity - 1
@@ -39,14 +39,14 @@ public struct DSQuantityPicker: View {
                 DSText("\(quantity)", .body).dsWidth(25)
                 DSDivider()
                 DSSFSymbolButton(name: "plus", size: .smallIcon)
-                    .dsPadding(.horizontal, .small)
+                    .dsPadding(.horizontal, .regular)
                     .onTap {
                         quantity = quantity + 1
                         UIImpactFeedbackGenerator(style: .light).impactOccurred()
                     }
             }
             .dsHeight(20)
-            .dsPadding(.small)
+            .dsPadding(.regular)
             .dsSecondaryBackground()
             .dsCornerRadius()
         }

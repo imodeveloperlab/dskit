@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import DSKit
 
 public struct DSPickerView<Data, ID, Content>: View where Data: RandomAccessCollection, Data.Element: Equatable, ID: Hashable, Content: View {
     
@@ -36,7 +35,7 @@ public struct DSPickerView<Data, ID, Content>: View where Data: RandomAccessColl
     }
     
     public var body: some View {
-        DSVStack(spacing: .smaller) {
+        DSVStack(spacing: .small) {
             switch style {
             case .horizontalScroll:
                 horizontalScrollStyle
@@ -47,13 +46,13 @@ public struct DSPickerView<Data, ID, Content>: View where Data: RandomAccessColl
     }
     
     var horizontalScrollStyle: some View {
-        DSHScroll(spacing: .small, data: data, id: id) { element in
+        DSHScroll(spacing: .regular, data: data, id: id) { element in
             styledContent(element)
         }
     }
     
     func gridStyle(columns: Int) -> some View {
-        DSGrid(numberOfColumns: columns, spacing: .small, data: data, id: id) { element in
+        DSGrid(numberOfColumns: columns, spacing: .regular, data: data, id: id) { element in
             styledContent(element)
         }
     }

@@ -15,8 +15,8 @@ struct ProfileScreen3: View {
     
     var body: some View {
         ScrollView {
-            DSVStack(spacing: .regular) {
-                DSHStack(spacing: .regular) {
+            DSVStack(spacing: .regularMedium) {
+                DSHStack(spacing: .regularMedium) {
                     DSImageView(
                         sfSymbol: "exclamationmark.shield.fill",
                         size: 50,
@@ -32,7 +32,7 @@ struct ProfileScreen3: View {
                 .dsSecondaryBackground()
                 .dsCornerRadius()
                 
-                DSVStack(spacing: .smaller) {
+                DSVStack(spacing: .small) {
                     DSTextField.password(value: viewModel.currentPassword)
                     DSTextField.newPassword(value: viewModel.newPassword)
                     DSTextField.password(value: viewModel.repeatPassword, placeholder: "Repeat Password")

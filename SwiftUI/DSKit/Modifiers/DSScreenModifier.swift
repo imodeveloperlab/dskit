@@ -29,7 +29,7 @@ public extension EnvironmentValues {
 }
 
 public struct DSScrollableContentMarginKey: EnvironmentKey {
-    public static let defaultValue: DSDimension = .regular
+    public static let defaultValue: DSDimension = .regularMedium
 }
 
 public extension EnvironmentValues {
@@ -41,14 +41,14 @@ public extension EnvironmentValues {
 
 public extension View {
     
-    func dsScreen(contentMargins: DSDimension = .regular) -> some View {
+    func dsScreen(contentMargins: DSDimension = .regularMedium) -> some View {
         return self
             .dsBackground(.primary)
             .environment(\.dsContentMarginKey, contentMargins)
             .environment(\.dsScrollableContentMarginKey, contentMargins)
     }
     
-    func dsContentMargins(margin: DSDimension = .regular) -> some View {
+    func dsContentMargins(margin: DSDimension = .regularMedium) -> some View {
         return self
             .environment(\.dsContentMarginKey, margin)
             .environment(\.dsScrollableContentMarginKey, margin)

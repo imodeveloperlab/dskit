@@ -51,7 +51,7 @@ extension Payment2 {
                         .dsPadding()
                     }
                     .overlay(alignment: .topLeading) {
-                        DSVStack(spacing: .smaller) {
+                        DSVStack(spacing: .small) {
                             DSText(card.holder, .title2, color: .customColor(.white))
                             DSText("\(card.type) **** \(card.end)", .headline, color: .customColor(.white)).opacity(0.9)
                             DSText(card.expire, .subheadline, color: .customColor(.white))

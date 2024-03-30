@@ -20,18 +20,18 @@ struct SignUpScreen2: View {
                 .frame(maxWidth: .infinity, alignment: .center)
                 .overlay {
                     DSImageView(sfSymbol: "camera.fill", size: .medium, tint: .color(.primaryViewButtonBackground))
-                        .dsPadding(.regular)
+                        .dsPadding(.regularMedium)
                         .dsBlurBackground(style: .systemMaterialLight)
                         .clipShape(Circle())
                         .onTap { dismiss() }
                         .offset(x: 35, y: 35)
                 }
-                .dsPadding(.top, .regular)
+                .dsPadding(.top, .regularMedium)
                 .hideWhenKeyboardIsDisplayed()
             
             Spacer()
             
-            DSVStack(spacing: .smaller) {
+            DSVStack(spacing: .small) {
                 DSTextField.name(value: viewModel.fullName)
                 DSTextField.email(value: viewModel.email)
                 DSTextField.password(value: viewModel.password)

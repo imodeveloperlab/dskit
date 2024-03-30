@@ -48,15 +48,15 @@ public extension View {
                 DSVStack {
                     DSText("Primary")
                 }
-                .dsPadding(.regular)
+                .dsPadding(.regularMedium)
                 .dsBackground(.secondary)
                 .dsCornerRadius()
             }
-            .dsPadding(.extraSmall)
+            .dsPadding(.custom(1))
             .dsBackground(.primary)
             .dsCornerRadius()
         }
-        .dsPadding(.smaller)
+        .dsPadding(.small)
         .dsSecondaryBackground()
         .dsCornerRadius()
         

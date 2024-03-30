@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import DSKit
 
 public struct DSGroupedList<Data, ID, Content>: View where Data: RandomAccessCollection, ID: Hashable, Content: View, Data.Index == Int {
     

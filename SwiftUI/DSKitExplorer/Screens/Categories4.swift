@@ -31,10 +31,10 @@ extension Categories4 {
         var body: some View {
             DSVStack(alignment: .center, spacing: .zero) {
                 DSImageView(url: category.image)
-                DSVStack(alignment: .center, spacing: .extraSmall) {
+                DSVStack(alignment: .center, spacing: .zero) {
                     DSText(category.title, .smallTitle)
                     DSText(category.description, .subheadline)
-                }.dsPadding(.small)
+                }.dsPadding(.regular)
             }
             .dsSecondaryBackground()
             .dsCornerRadius()

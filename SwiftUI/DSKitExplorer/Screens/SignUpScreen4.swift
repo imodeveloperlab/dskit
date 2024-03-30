@@ -14,9 +14,9 @@ struct SignUpScreen4: View {
     let viewModel = SignUpScreen4Model()
     
     var body: some View {
-        DSVStack(spacing: .regular) {
+        DSVStack(spacing: .regularMedium) {
             Spacer()
-            DSVStack(spacing: .regular) {
+            DSVStack(spacing: .regularMedium) {
                 DSText("Enter secure\ncode to verify", .bigTitle)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .overlay(alignment: .trailing) {

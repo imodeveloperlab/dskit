@@ -15,7 +15,7 @@ struct Items5: View {
     
     var body: some View {
         ScrollView {
-            DSVStack(spacing: .regular) {
+            DSVStack(spacing: .regularMedium) {
                 DSImageView(url: p0Image, size: .size(width: .none, height: 180))
                     .dsCornerRadius()
                     .overlay(alignment: .center) {
@@ -59,7 +59,7 @@ extension Items5 {
             DSVStack(spacing: .zero) {
                 DSImageView(url: product.image)
                     .dsSecondaryBackground()
-                DSVStack(spacing: .smaller) {
+                DSVStack(spacing: .small) {
                     DSText(product.title, .smallTitle)
                     DSText(product.description, .smallSubtitle)
                     DSPriceView(price: product.price, size: .medium)
@@ -70,9 +70,9 @@ extension Items5 {
                     size: .regular,
                     tint: .customColor(product.favourite ? .red : .white)
                 )
-                .dsPadding(.small)
+                .dsPadding(.regular)
                 .dsCornerRadius()
-                .dsPadding(.small)
+                .dsPadding(.regular)
             })
             .dsSecondaryBackground()
             .dsCornerRadius()

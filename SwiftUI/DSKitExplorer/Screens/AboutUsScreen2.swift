@@ -21,7 +21,7 @@ struct AboutUsScreen2: View {
     
     var body: some View {
         
-        DSVStack(spacing: .regular) {
+        DSVStack(spacing: .regularMedium) {
             
             Picker("What is your favorite color?", selection: $favoriteColor) {
                 Text("Info").tag(0)
@@ -69,17 +69,17 @@ struct AboutUsScreen2: View {
             ScrollView {
                 DSVStack {
                     ForEach(0..<5) { index in
-                        DSHStack(spacing: .regular) {
+                        DSHStack(spacing: .regularMedium) {
                             DSImageView(url: URL.profileUrl(index: index), style: .circle)
                                 .dsSize(.designSize(9))
                             
-                            DSVStack(spacing: .smaller) {
+                            DSVStack(spacing: .small) {
                                 DSText(DSFaker().name, .headline)
                                    .frame(maxWidth: .infinity, alignment: .leading)
                                 DSHStack {
                                     DSImageView(sfSymbol: "calendar", size: .size(14), tint: .text(.caption1))
                                     DSText(Date().stringFormatted(dateStyle: .medium, timeStyle: .none), .subheadline)
-                                    DSHStack(spacing: .smaller) {
+                                    DSHStack(spacing: .small) {
                                         DSImageView(sfSymbol: "star.fill", size: .size(14), tint: .customColor(Color.yellow))
                                         DSImageView(sfSymbol: "star.fill", size: .size(14), tint: .customColor(Color.yellow))
                                         DSImageView(sfSymbol: "star.fill", size: .size(14), tint: .customColor(Color.yellow))
@@ -100,7 +100,7 @@ struct AboutUsScreen2: View {
             }
             
             DSButton(title: "Leave feedback", rightSFSymbolName: "message.fill", action: { })
-                .topShadow(padding: .small)
+                .topShadow(padding: .regular)
         }
     }
     
@@ -113,9 +113,9 @@ struct AboutUsScreen2: View {
                     ContactView(iconName: "map.fill", title: "Address:", info: DSFaker().streetAddress)
                     ContactView(iconName: "clock.fill", title: "Working Hours:", info: "Open ⋅ Closes 5PM")
                     
-                    DSHStack(alignment: .healthSafetyAlignment, spacing: .small) {
+                    DSHStack(alignment: .healthSafetyAlignment, spacing: .regular) {
                         
-                        DSVStack(spacing: .regular) {
+                        DSVStack(spacing: .regularMedium) {
                             DSImageView(sfSymbol: "info.circle.fill", size: .regular, tint: .text(.headline))
                                 .alignmentGuide(.healthSafetyAlignment) { d in d[VerticalAlignment.center] }
                         }

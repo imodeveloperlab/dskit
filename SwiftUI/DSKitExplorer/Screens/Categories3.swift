@@ -47,7 +47,7 @@ extension Categories3 {
                         endPoint: .bottom
                     )
                 }
-                DSVStack(alignment: .center, spacing: .extraSmall) {
+                DSVStack(alignment: .center, spacing: .zero) {
                     DSText(category.title, .headlineWithSize(25), color: .customColor(.white))
                     DSText(category.description, .subheadline, color: .customColor(.white.opacity(0.8)))
                 }

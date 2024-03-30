@@ -20,13 +20,13 @@ struct SignUpScreen2: View {
                 .frame(maxWidth: .infinity, alignment: .center)
                 .overlay {
                     DSImageView(sfSymbol: "camera.fill", size: .medium, tint: .color(.primaryViewButtonBackground))
-                        .dsPadding(.regularMedium)
+                        .dsPadding(.medium)
                         .dsBlurBackground(style: .systemMaterialLight)
                         .clipShape(Circle())
                         .onTap { dismiss() }
                         .offset(x: 35, y: 35)
                 }
-                .dsPadding(.top, .regularMedium)
+                .dsPadding(.top, .medium)
                 .hideWhenKeyboardIsDisplayed()
             
             Spacer()

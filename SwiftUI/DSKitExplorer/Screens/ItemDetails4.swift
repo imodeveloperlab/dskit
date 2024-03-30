@@ -15,7 +15,7 @@ struct ItemDetails4: View {
     
     var body: some View {
         ScrollView {
-            DSVStack(spacing: .regularMedium) {
+            DSVStack(spacing: .medium) {
 
                 DSCoverFlow(height: 200, data: viewModel.imageGallery, id: \.self) { imageUrl in
                     DSImageView(url: imageUrl).dsCornerRadius()

@@ -27,7 +27,7 @@ public struct DSButton: View {
     var pushContentToSides: Bool = false
     var style: Style = .default
     var maxWidth: Bool
-    var spacing: DSDimension
+    var spacing: DSSpacingDimension
     let action: () -> Void
     
     public init(
@@ -37,7 +37,7 @@ public struct DSButton: View {
         pushContentToSides: Bool = false,
         style: Style = .default,
         maxWidth: Bool = true,
-        spacing: DSDimension = .regular,
+        spacing: DSSpacingDimension = .regular,
         action: @escaping () -> Void
     ) {
         self.title = title
@@ -55,7 +55,7 @@ public struct DSButton: View {
         pushContentToSides: Bool = false,
         style: Style = .default,
         maxWidth: Bool = true,
-        spacing: DSDimension = .regular,
+        spacing: DSSpacingDimension = .regular,
         action: @escaping () -> Void
     ) {
         self.init(
@@ -76,7 +76,7 @@ public struct DSButton: View {
         pushContentToSides: Bool = false,
         style: Style = .default,
         maxWidth: Bool = true,
-        spacing: DSDimension = .regular,
+        spacing: DSSpacingDimension = .regular,
         action: @escaping () -> Void
     ) {
         var leftImage: DSImage?
@@ -115,7 +115,7 @@ public struct DSButton: View {
             case .default, .light, .custom(color: _):
                 buttonView
                     .frame(maxWidth: maxWidth ? .infinity : .none)
-                    .dsPadding(.horizontal, .regularMedium)
+                    .dsPadding(.horizontal, .medium)
                     .dsHeight(.custom(appearance.actionElementHeight))
                     .background(backgroundColor)
                     .dsCornerRadius()
@@ -151,7 +151,7 @@ public struct DSButton: View {
             
             if !title.isEmpty {
                 DSText(title, .headlineWithSize(15), color: .customColor(titleColor))
-                    .dsHeight(.medium)
+                    .dsHeight(.large)
             }
             
             if let rightImage {

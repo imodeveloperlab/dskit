@@ -19,7 +19,7 @@ public struct LogInScreen1: View {
         DSVStack(spacing: .zero) {
             Spacer()
             
-            DSVStack(spacing: .regularMedium) {
+            DSVStack(spacing: .medium) {
                 DSVStack(alignment: .leading, spacing: .small) {
                     DSText("DSKit", .headlineWithSize(38))
                         .showWhenKeyboardIsDisplayed()

@@ -11,9 +11,9 @@ public struct DSPaddingModifier: ViewModifier {
     
     @Environment(\.appearance) var appearance: DSAppearance
     let edge: Edge.Set
-    let padding: DSDimension
+    let padding: DSSpacingDimension
     
-    init(edge: Edge.Set, padding: DSDimension) {
+    init(edge: Edge.Set, padding: DSSpacingDimension) {
         self.edge = edge
         self.padding = padding
     }
@@ -33,7 +33,7 @@ public struct DSPaddingModifier: ViewModifier {
 }
 
 public extension View {
-    func dsPadding(_ edge: Edge.Set = .all, _ padding: DSDimension = .regularMedium) -> some View {        
+    func dsPadding(_ edge: Edge.Set = .all, _ padding: DSSpacingDimension = .medium) -> some View {        
         let modifier = DSPaddingModifier(
             edge: edge,
             padding: padding
@@ -41,7 +41,7 @@ public extension View {
         return self.modifier(modifier)
     }
     
-    func dsPadding(_ padding: DSDimension = .regularMedium) -> some View {
+    func dsPadding(_ padding: DSSpacingDimension = .medium) -> some View {
         let modifier = DSPaddingModifier(
             edge: .all,
             padding: padding

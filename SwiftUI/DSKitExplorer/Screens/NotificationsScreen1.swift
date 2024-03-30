@@ -14,7 +14,7 @@ struct NotificationsScreen1: View {
     @Environment(\.appearance) var appearance: DSAppearance
     
     var body: some View {
-        DSVStack(spacing: .regularMedium) {
+        DSVStack(spacing: .medium) {
             
             Spacer()
             

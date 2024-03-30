@@ -15,7 +15,7 @@ struct HomeScreen4: View {
     
     var body: some View {
         ScrollView() {
-            DSVStack(spacing: .regularMedium) {
+            DSVStack(spacing: .medium) {
                 
                 ProfileView(
                     title: "Shoes Shop",

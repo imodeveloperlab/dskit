@@ -60,7 +60,7 @@ extension Shipping2 {
                 DSHStack {
                     DSText(total.title, total.bold ? .smallTitle : .smallSubtitle)
                     Spacer()
-                    DSPriceView(price: total.price, size: total.bold ? .medium : .regularMedium)
+                    DSPriceView(price: total.price, size: total.bold ? .large : .medium)
                 }.dsHeight(25)
             }
         }
@@ -85,7 +85,7 @@ extension Shipping2 {
                     DSText(method.description, .smallSubtitle)
                 }
                 if let price = method.price {
-                    DSPriceView(amount: price, currency: "$", size: .medium)
+                    DSPriceView(amount: price, currency: "$", size: .large)
                         .dsPadding(.top, .regular)
                 } else {
                     DSText("Free", .smallTitle, color: .customColor(.white))

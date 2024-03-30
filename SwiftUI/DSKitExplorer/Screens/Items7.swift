@@ -58,13 +58,13 @@ extension Items7 {
                         DSText("2.4k Reviews", .caption2)
                     }
                     
-                    DSPriceView(price: product.price, size: .regularMedium)
+                    DSPriceView(price: product.price, size: .medium)
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .dsPadding(.regular)
                 .overlay(alignment: .trailing) {
                     DSChevronView()
-                        .dsPadding(.trailing, .regularMedium)
+                        .dsPadding(.trailing, .medium)
                 }
                 
             }.overlay(alignment: .topTrailing, content: {

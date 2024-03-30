@@ -57,7 +57,7 @@ extension Payment1 {
         let method: Data
         var body: some View {
             DSVStack(spacing: .small) {
-                DSHStack(spacing: .regularMedium) {
+                DSHStack(spacing: .medium) {
                     DSImageView(
                         uiImageName: method.type.replacingOccurrences(of: " ", with: ""),
                         size: .size(width: 50, height: 30)

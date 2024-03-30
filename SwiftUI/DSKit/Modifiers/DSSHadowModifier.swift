@@ -10,7 +10,7 @@ import SwiftUI
 public struct DSShadowModifier: ViewModifier {
     
     @Environment(\.appearance) var appearance: DSAppearance
-    let padding: DSDimension
+    let padding: DSSpacingDimension
     
     var color: Color
     var radius: CGFloat
@@ -18,7 +18,7 @@ public struct DSShadowModifier: ViewModifier {
     var yOffset: CGFloat
     
     
-    init(padding: DSDimension, color: Color = .black, radius: CGFloat = 10, xOffset: CGFloat = 0, yOffset: CGFloat = -5) {
+    init(padding: DSSpacingDimension, color: Color = .black, radius: CGFloat = 10, xOffset: CGFloat = 0, yOffset: CGFloat = -5) {
         self.padding = padding
         self.color = color
         self.radius = radius
@@ -44,7 +44,7 @@ public struct DSShadowModifier: ViewModifier {
 }
 
 public extension View {
-    func topShadow(padding: DSDimension, radius: CGFloat = 10, yOffset: CGFloat = -5) -> some View {
+    func topShadow(padding: DSSpacingDimension, radius: CGFloat = 10, yOffset: CGFloat = -5) -> some View {
         self.modifier(DSShadowModifier(padding: padding, radius: radius, yOffset: yOffset))
     }
 }

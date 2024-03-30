@@ -52,7 +52,7 @@ extension Items6 {
                         DSRatingView(rating: 4.5, size: 12)
                         DSText("2.4k Reviews", .caption2)
                     }
-                    DSPriceView(price: product.price, size: .regularMedium)
+                    DSPriceView(price: product.price, size: .medium)
                 }.dsPadding(.regular)
             }.overlay(alignment: .topTrailing, content: {
                 DSImageView(

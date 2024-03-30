@@ -32,7 +32,7 @@ extension Categories1 {
     struct CategoryView: View {
         let category: Data
         var body: some View {
-            DSHStack(spacing: .regularMedium) {
+            DSHStack(spacing: .medium) {
                 if category.image != nil {
                     DSImageView(url: category.image,  size: .size(width: 60, height: 60))
                         .dsCornerRadius()
@@ -47,7 +47,7 @@ extension Categories1 {
                         DSText(category.description, .smallSubtitle)
                     }
                 }
-                .dsPadding(category.image != nil ? .zero : .regularMedium)
+                .dsPadding(category.image != nil ? .zero : .medium)
                 .frame(maxWidth: .infinity, alignment: .leading)
             }
             .overlay(alignment: .trailing) {

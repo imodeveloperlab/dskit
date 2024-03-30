@@ -98,7 +98,7 @@
 		604AA6402B88E129009EE906 /* DSHeightModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604AA63F2B88E129009EE906 /* DSHeightModifier.swift */; };
 		604AA6422B88E4E6009EE906 /* DSWidthModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604AA6412B88E4E6009EE906 /* DSWidthModifier.swift */; };
 		604B4B242B8CC03400EC6CCE /* DSSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604B4B232B8CC03400EC6CCE /* DSSize.swift */; };
-		604B4B262B8CC0A600EC6CCE /* DSDimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604B4B252B8CC0A600EC6CCE /* DSDimension.swift */; };
+		604B4B262B8CC0A600EC6CCE /* DSSpacingDimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604B4B252B8CC0A600EC6CCE /* DSSpacingDimension.swift */; };
 		604B4B282B8CC0C400EC6CCE /* DSDefaultDesignableSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604B4B272B8CC0C400EC6CCE /* DSDefaultDesignableSize.swift */; };
 		604B4B2B2B8CC7D600EC6CCE /* DSCardVerticalPaddingKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604B4B2A2B8CC7D600EC6CCE /* DSCardVerticalPaddingKey.swift */; };
 		604B4B2D2B8CC81D00EC6CCE /* DSCardHorizontalPaddingKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604B4B2C2B8CC81D00EC6CCE /* DSCardHorizontalPaddingKey.swift */; };
@@ -353,7 +353,7 @@
 		604AA63F2B88E129009EE906 /* DSHeightModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSHeightModifier.swift; sourceTree = "<group>"; };
 		604AA6412B88E4E6009EE906 /* DSWidthModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSWidthModifier.swift; sourceTree = "<group>"; };
 		604B4B232B8CC03400EC6CCE /* DSSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSSize.swift; sourceTree = "<group>"; };
-		604B4B252B8CC0A600EC6CCE /* DSDimension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSDimension.swift; sourceTree = "<group>"; };
+		604B4B252B8CC0A600EC6CCE /* DSSpacingDimension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSSpacingDimension.swift; sourceTree = "<group>"; };
 		604B4B272B8CC0C400EC6CCE /* DSDefaultDesignableSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSDefaultDesignableSize.swift; sourceTree = "<group>"; };
 		604B4B2A2B8CC7D600EC6CCE /* DSCardVerticalPaddingKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSCardVerticalPaddingKey.swift; sourceTree = "<group>"; };
 		604B4B2C2B8CC81D00EC6CCE /* DSCardHorizontalPaddingKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSCardHorizontalPaddingKey.swift; sourceTree = "<group>"; };
@@ -767,7 +767,7 @@
 				60EB998A2B2B4D3900528039 /* DSDesignableTextColor.swift */,
 				60EB99852B2B4D3900528039 /* DSDesignableTextFieldColor.swift */,
 				60EB99862B2B4D3900528039 /* DSDesignableViewColors.swift */,
-				604B4B252B8CC0A600EC6CCE /* DSDimension.swift */,
+				604B4B252B8CC0A600EC6CCE /* DSSpacingDimension.swift */,
 				604B4B232B8CC03400EC6CCE /* DSSize.swift */,
 				60EB99952B2B4D8900528039 /* Fonts */,
 			);
@@ -1234,7 +1234,7 @@
 				600601B02B347F0D00F2C616 /* DSGrid.swift in Sources */,
 				604B4B432B8E269100EC6CCE /* OrangeAppearance.swift in Sources */,
 				60EB99C72B2B750200528039 /* DSTextType.swift in Sources */,
-				604B4B262B8CC0A600EC6CCE /* DSDimension.swift in Sources */,
+				604B4B262B8CC0A600EC6CCE /* DSSpacingDimension.swift in Sources */,
 				60EB99422B2AFFEF00528039 /* DSKitCore.docc in Sources */,
 				600E3C1B2BB604BF00FA33EC /* DSQuantityPicker.swift in Sources */,
 				60EB99D72B2B767900528039 /* String+Currency.swift in Sources */,

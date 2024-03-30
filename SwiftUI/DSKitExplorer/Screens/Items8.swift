@@ -42,7 +42,7 @@ extension Items8 {
     struct ProductView: View {
         let product: Data
         var body: some View {
-            DSHStack(spacing: .regularMedium) {
+            DSHStack(spacing: .medium) {
                 DSImageView(url: product.image)
                     .dsSecondaryBackground()
                     .dsSize(.size(width: 100, height: 120))
@@ -56,7 +56,7 @@ extension Items8 {
                         DSRatingView(rating: 4.5, size: 12)
                         DSText("2.4k Reviews", .caption2)
                     }
-                    DSPriceView(price: product.price, size: .regularMedium)
+                    DSPriceView(price: product.price, size: .medium)
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .dsPadding(.regular)
@@ -75,7 +75,7 @@ extension Items8 {
                     size: .regular,
                     tint: .text(.headline)
                 )
-                .dsPadding(.regularMedium)
+                .dsPadding(.medium)
             }
             .dsSecondaryBackground()
             .dsCornerRadius()

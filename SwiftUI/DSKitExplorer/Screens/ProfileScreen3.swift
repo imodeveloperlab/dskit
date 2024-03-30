@@ -15,8 +15,8 @@ struct ProfileScreen3: View {
     
     var body: some View {
         ScrollView {
-            DSVStack(spacing: .regularMedium) {
-                DSHStack(spacing: .regularMedium) {
+            DSVStack(spacing: .medium) {
+                DSHStack(spacing: .medium) {
                     DSImageView(
                         sfSymbol: "exclamationmark.shield.fill",
                         size: 50,

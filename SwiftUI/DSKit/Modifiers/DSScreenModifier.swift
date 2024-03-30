@@ -9,7 +9,7 @@ import SwiftUI
 
 public struct DSContentMarginModifier: ViewModifier {
     @Environment(\.appearance) var appearance: DSAppearance
-    @Environment(\.dsContentMarginKey) var contentMargin: DSDimension
+    @Environment(\.dsContentMarginKey) var contentMargin: DSSpacingDimension
     public func body(content: Content) -> some View {
         content
             .padding(.horizontal, appearance.size.number(for: contentMargin))
@@ -18,22 +18,22 @@ public struct DSContentMarginModifier: ViewModifier {
 }
 
 public struct DSContentMarginKey: EnvironmentKey {
-    public static let defaultValue: DSDimension = .zero
+    public static let defaultValue: DSSpacingDimension = .zero
 }
 
 public extension EnvironmentValues {
-    var dsContentMarginKey: DSDimension {
+    var dsContentMarginKey: DSSpacingDimension {
         get { self[DSContentMarginKey.self] }
         set { self[DSContentMarginKey.self] = newValue }
     }
 }
 
 public struct DSScrollableContentMarginKey: EnvironmentKey {
-    public static let defaultValue: DSDimension = .regularMedium
+    public static let defaultValue: DSSpacingDimension = .medium
 }
 
 public extension EnvironmentValues {
-    var dsScrollableContentMarginKey: DSDimension {
+    var dsScrollableContentMarginKey: DSSpacingDimension {
         get { self[DSScrollableContentMarginKey.self] }
         set { self[DSScrollableContentMarginKey.self] = newValue }
     }
@@ -41,14 +41,14 @@ public extension EnvironmentValues {
 
 public extension View {
     
-    func dsScreen(contentMargins: DSDimension = .regularMedium) -> some View {
+    func dsScreen(contentMargins: DSSpacingDimension = .medium) -> some View {
         return self
             .dsBackground(.primary)
             .environment(\.dsContentMarginKey, contentMargins)
             .environment(\.dsScrollableContentMarginKey, contentMargins)
     }
     
-    func dsContentMargins(margin: DSDimension = .regularMedium) -> some View {
+    func dsContentMargins(margin: DSSpacingDimension = .medium) -> some View {
         return self
             .environment(\.dsContentMarginKey, margin)
             .environment(\.dsScrollableContentMarginKey, margin)

@@ -15,7 +15,7 @@ struct HomeScreen3: View {
     
     var body: some View {
         ScrollView() {
-            DSVStack(spacing: .regularMedium) {
+            DSVStack(spacing: .medium) {
                 ProfileView(title: "Jane Doe", subtitle: "4 Items in cart", profileImageUrl: profileOnRedBg)
                 
                 DSCoverFlow(height: 200, data: viewModel.topProducts, id: \.self) { imageUrl in

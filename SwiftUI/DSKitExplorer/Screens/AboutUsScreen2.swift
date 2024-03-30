@@ -21,7 +21,7 @@ struct AboutUsScreen2: View {
     
     var body: some View {
         
-        DSVStack(spacing: .regularMedium) {
+        DSVStack(spacing: .medium) {
             
             Picker("What is your favorite color?", selection: $favoriteColor) {
                 Text("Info").tag(0)
@@ -69,7 +69,7 @@ struct AboutUsScreen2: View {
             ScrollView {
                 DSVStack {
                     ForEach(0..<5) { index in
-                        DSHStack(spacing: .regularMedium) {
+                        DSHStack(spacing: .medium) {
                             DSImageView(url: URL.profileUrl(index: index), style: .circle)
                                 .dsSize(.designSize(9))
                             
@@ -115,7 +115,7 @@ struct AboutUsScreen2: View {
                     
                     DSHStack(alignment: .healthSafetyAlignment, spacing: .regular) {
                         
-                        DSVStack(spacing: .regularMedium) {
+                        DSVStack(spacing: .medium) {
                             DSImageView(sfSymbol: "info.circle.fill", size: .regular, tint: .text(.headline))
                                 .alignmentGuide(.healthSafetyAlignment) { d in d[VerticalAlignment.center] }
                         }

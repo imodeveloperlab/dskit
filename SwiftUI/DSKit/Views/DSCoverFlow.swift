@@ -10,8 +10,8 @@ import SwiftUI
 public struct DSCoverFlow<Data, ID, Content>: View where Data: RandomAccessCollection, ID: Hashable, Data.Element: Equatable, Content: View {
     
     @Environment(\.appearance) var appearance: DSAppearance
-    let height: DSDimension
-    let spacing: DSDimension
+    let height: DSSpacingDimension
+    let spacing: DSSpacingDimension
     let showPaginationView: Bool
     
     let data: Data
@@ -21,8 +21,8 @@ public struct DSCoverFlow<Data, ID, Content>: View where Data: RandomAccessColle
     @State private var currentElementID: Data.Element
     
     public init(
-        height: DSDimension,
-        spacing: DSDimension = .regular,
+        height: DSSpacingDimension,
+        spacing: DSSpacingDimension = .regular,
         showPaginationView: Bool = true,
         data: Data,
         id: KeyPath<Data.Element, ID>,
@@ -73,7 +73,7 @@ struct DSCoverFlow_Previews: PreviewProvider {
     static var previews: some View {
         let colors = [Color.red, Color.green, Color.yellow]
         PreviewForEach { DSPreview {
-                DSCoverFlow(height: 200, spacing: .regularMedium, data: colors, id: \.self) { color in
+                DSCoverFlow(height: 200, spacing: .medium, data: colors, id: \.self) { color in
                     color
                 }
                 .dsLayoutGuideLines(divider: 1)

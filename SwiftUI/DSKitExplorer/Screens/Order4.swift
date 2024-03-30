@@ -49,7 +49,7 @@ extension Order4 {
                 DSVStack(alignment: .leading, spacing: .small) {
                     DSText(product.title, .headlineWithSize(12), multilineTextAlignment: .leading)
                     DSText(product.subtitle, .smallSubtitle, multilineTextAlignment: .leading)
-                    DSPriceView(price: product.price, size: .regularMedium)
+                    DSPriceView(price: product.price, size: .medium)
                 }.frame(maxWidth: 160, alignment: .leading)
             }.dsCardStyle(padding: .regular)
         }

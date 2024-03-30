@@ -106,7 +106,7 @@ extension Order2 {
                 DSHStack {
                     DSText(total.title, total.bold ? .smallTitle : .smallSubtitle)
                     Spacer()
-                    DSPriceView(price: total.price, size: total.bold ? .medium : .regularMedium)
+                    DSPriceView(price: total.price, size: total.bold ? .large : .medium)
                 }.dsHeight(25)
             }
         }

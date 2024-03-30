@@ -15,7 +15,7 @@ struct ItemDetails1: View {
     
     var body: some View {
         ScrollView {
-            DSVStack(spacing: .regularMedium) {
+            DSVStack(spacing: .medium) {
                 
                 DSCoverFlow(height: 290, data: viewModel.imageGallery, id: \.self) { imageUrl in
                     DSImageView(url: imageUrl).dsCornerRadius()
@@ -26,7 +26,7 @@ struct ItemDetails1: View {
                     DSText(viewModel.subtitle, .subheadline)
                 }
                 
-                DSPriceView(price: viewModel.price, size: .large)
+                DSPriceView(price: viewModel.price, size: .largexxxxx)
                 
                 DSQuantityPicker()
                 

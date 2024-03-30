@@ -14,11 +14,11 @@ struct SignUpScreen3: View {
     let viewModel = SignUpScreen3Model()
     
     var body: some View {
-        DSVStack(spacing: .regularMedium) {
+        DSVStack(spacing: .medium) {
             
             Spacer()
             
-            DSVStack(spacing: .regularMedium) {
+            DSVStack(spacing: .medium) {
                 
                 DSText("Start with \nphone number", .bigTitle)
                     .frame(maxWidth: .infinity, alignment: .leading)

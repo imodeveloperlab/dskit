@@ -68,7 +68,7 @@ extension Order1 {
                 DSHStack {
                     DSText(total.title, total.bold ? .smallTitle : .smallSubtitle)
                     Spacer()
-                    DSPriceView(price: total.price, size: total.bold ? .medium : .regularMedium)
+                    DSPriceView(price: total.price, size: total.bold ? .large : .medium)
                 }.dsHeight(25)
             }
         }
@@ -88,7 +88,7 @@ extension Order1 {
         let method: Data
         
         var body: some View {
-            DSHStack(spacing: .regularMedium) {
+            DSHStack(spacing: .medium) {
                 DSImageView(uiImageName: method.icon, size: .size(width: 50, height: 30))
                     .dsCornerRadius()
                 DSVStack(spacing: .zero) {
@@ -182,14 +182,14 @@ extension Order1 {
         let product: Data
         
         var body: some View {
-            DSHStack(alignment: .center, spacing: .regularMedium) {
+            DSHStack(alignment: .center, spacing: .medium) {
                 DSImageView(url: product.image, size: .size(width: 50, height: 60))
                     .dsCornerRadius()
                 
                 DSVStack(alignment: .leading, spacing: .small) {
                     DSText(product.title, .smallTitle)
                     DSText(product.subtitle, .smallSubtitle)
-                    DSPriceView(price: product.price, size: .regularMedium)
+                    DSPriceView(price: product.price, size: .medium)
                 }.frame(maxWidth: .infinity, alignment: .leading)
             }
             .onTap { }

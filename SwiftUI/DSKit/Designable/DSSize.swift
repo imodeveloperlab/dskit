@@ -9,10 +9,10 @@ import Foundation
 
 public struct DSSize: Equatable, ExpressibleByFloatLiteral, ExpressibleByIntegerLiteral {
     
-    public let width: DSDimension
-    public let height: DSDimension
+    public let width: DSSpacingDimension
+    public let height: DSSpacingDimension
     
-    public init(width: DSDimension, height: DSDimension) {
+    public init(width: DSSpacingDimension, height: DSSpacingDimension) {
         self.width = width
         self.height = height
     }
@@ -27,11 +27,11 @@ public struct DSSize: Equatable, ExpressibleByFloatLiteral, ExpressibleByInteger
         self.height = .custom(CGFloat(value))
     }
     
-    public static func size(_ number: DSDimension) -> DSSize {
+    public static func size(_ number: DSSpacingDimension) -> DSSize {
         DSSize(width: number, height: number)
     }
     
-    public static func size(width: DSDimension, height: DSDimension) -> DSSize {
+    public static func size(width: DSSpacingDimension, height: DSSpacingDimension) -> DSSize {
         DSSize(width: width, height: height)
     }
     
@@ -41,11 +41,11 @@ public struct DSSize: Equatable, ExpressibleByFloatLiteral, ExpressibleByInteger
     
     public static let smaller = DSSize(width: .small, height: .small)
     public static let small = DSSize(width: .regular, height: .regular)
-    public static let regular = DSSize(width: .regularMedium, height: .regularMedium)
+    public static let regular = DSSize(width: .medium, height: .medium)
     public static let unspecified = DSSize(width: .none, height: .none)
-    public static let medium = DSSize(width: .medium, height: .medium)
+    public static let medium = DSSize(width: .large, height: .large)
     public static let mediumLarge = DSSize(width: .mediumLarge, height: .mediumLarge)
-    public static let large = DSSize(width: .large, height: .large)
+    public static let large = DSSize(width: .largexxxxx, height: .largexxxxx)
     public static let extraLarge = DSSize(width: .extraLarge, height: .extraLarge)
     public static let larger = DSSize(width: .larger, height: .larger)
     public static let largest = DSSize(width: .largest, height: .largest)

@@ -10,7 +10,7 @@ import SwiftUI
 
 public struct DSHeightModifier: ViewModifier {
     
-    let height: DSDimension
+    let height: DSSpacingDimension
     @Environment(\.appearance) var appearance: DSAppearance
     
     public func body(content: Content) -> some View {
@@ -19,7 +19,7 @@ public struct DSHeightModifier: ViewModifier {
 }
 
 public extension View {
-    func dsHeight(_ height: DSDimension) -> some View {
+    func dsHeight(_ height: DSSpacingDimension) -> some View {
         self.modifier(DSHeightModifier(height: height))
     }
 }
@@ -28,10 +28,10 @@ struct DSHeightModifier_Previews: PreviewProvider {
     static var previews: some View {
         PreviewForEach { DSPreview {
                 Color.blue
-                    .dsHeight(.regularMedium)
+                    .dsHeight(.medium)
                 
                 Color.blue
-                    .dsHeight(.medium)
+                    .dsHeight(.large)
                 
                 Color.blue
                     .dsHeight(.mediumLarge)

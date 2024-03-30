@@ -9,5 +9,5 @@ import Foundation
 import UIKit
 
 public protocol DSDesignableSize {    
-    func number(for: DSDimension) -> CGFloat
+    func number(for: DSSpacingDimension) -> CGFloat
 }

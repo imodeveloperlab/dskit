@@ -11,8 +11,8 @@ public struct DSGrid<Data, ID, Content>: View where Data: RandomAccessCollection
     
     @Environment(\.appearance) var appearance: DSAppearance
 
-    let viewHeight: DSDimension?
-    let spacing: DSDimension
+    let viewHeight: DSSpacingDimension?
+    let spacing: DSSpacingDimension
     let numberOfColumns: Int
     
     let data: Data
@@ -20,9 +20,9 @@ public struct DSGrid<Data, ID, Content>: View where Data: RandomAccessCollection
     let id: KeyPath<Data.Element, ID>
     
     public init(
-        viewHeight: DSDimension? = nil,
+        viewHeight: DSSpacingDimension? = nil,
         numberOfColumns: Int = 2,
-        spacing: DSDimension = .regular,
+        spacing: DSSpacingDimension = .regular,
         data: Data,
         id: KeyPath<Data.Element, ID>,
         @ViewBuilder content: @escaping (Data.Element) -> Content

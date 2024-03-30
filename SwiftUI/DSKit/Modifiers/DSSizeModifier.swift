@@ -32,7 +32,7 @@ public struct DSSizeModifier: ViewModifier {
         return content.frame(width: width, height: height)
     }
     
-    private func calculateDimension(dimension: DSDimension, totalSize: CGFloat) -> CGFloat? {
+    private func calculateDimension(dimension: DSSpacingDimension, totalSize: CGFloat) -> CGFloat? {
         switch dimension {
         case .fillUpTheSpace:
             return totalSize
@@ -41,7 +41,7 @@ public struct DSSizeModifier: ViewModifier {
         }
     }
     
-    private func calculateFixedDimension(dimension: DSDimension) -> CGFloat? {
+    private func calculateFixedDimension(dimension: DSSpacingDimension) -> CGFloat? {
         switch dimension {
         case .none:
             return nil // No size set

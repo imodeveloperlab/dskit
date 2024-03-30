@@ -11,13 +11,13 @@ public struct DSHStack<Content: View>: View {
 
     @Environment(\.appearance) var appearance: DSAppearance
     
-    let spacing: DSDimension
+    let spacing: DSSpacingDimension
     let content: () -> Content
     let alignment: VerticalAlignment
     
     public init(
         alignment: VerticalAlignment = .center,
-        spacing: DSDimension = .regular,
+        spacing: DSSpacingDimension = .regular,
         @ViewBuilder content: @escaping () -> Content
     ) {
         self.content = content
@@ -48,12 +48,12 @@ public struct TestableDSHStack: View {
                     Color.green
                     Color.blue
                 }.overlay(alignment: .center, content: { Text("3") })
-                DSHStack(spacing: .regularMedium) {
+                DSHStack(spacing: .medium) {
                     Color.yellow
                     Color.green
                     Color.blue
                 }.overlay(alignment: .center, content: { Text("4") })
-                DSHStack(spacing: .medium) {
+                DSHStack(spacing: .large) {
                     Color.yellow
                     Color.green
                     Color.blue
@@ -63,7 +63,7 @@ public struct TestableDSHStack: View {
                     Color.green
                     Color.blue
                 }.overlay(alignment: .center, content: { Text("6") })
-                DSHStack(spacing: .large) {
+                DSHStack(spacing: .largexxxxx) {
                     Color.yellow
                     Color.green
                     Color.blue

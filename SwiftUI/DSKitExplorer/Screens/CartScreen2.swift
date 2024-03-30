@@ -56,7 +56,7 @@ extension CartScreen2 {
                         DSText(product.description, .smallSubtitle)
                         DSRatingView(rating: product.rating, size: 13)
                     }
-                    DSPriceView(price: product.price, size: .regularMedium)
+                    DSPriceView(price: product.price, size: .medium)
                     
                 }.frame(maxWidth: .infinity, alignment: .leading)
                     .overlay(alignment: .bottomTrailing, content: {
@@ -66,7 +66,7 @@ extension CartScreen2 {
                             style: .clear,
                             maxWidth: false,
                             action: { }
-                        ).dsHeight(.medium)
+                        ).dsHeight(.large)
                     })
                     .frame(maxWidth: .infinity)
                     .dsPadding()
@@ -98,7 +98,7 @@ extension CartScreen2 {
                     DSText("for",.subheadline)
                     DSText(itemsCount,.smallTitle)
                     DSText("items",.subheadline)
-                    DSPriceView(price: price, size: .large)
+                    DSPriceView(price: price, size: .largexxxxx)
                 }
             }
         }

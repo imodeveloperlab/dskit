@@ -10,17 +10,17 @@ import SwiftUI
 public struct DSHScroll<Data, ID, Content>: View where Data: RandomAccessCollection, ID: Hashable, Content: View{
     
     @Environment(\.appearance) var appearance: DSAppearance
-    @Environment(\.dsScrollableContentMarginKey) var scrollableContentMargin: DSDimension
-    @Environment(\.dsContentMarginKey) var contentMargin: DSDimension
+    @Environment(\.dsScrollableContentMarginKey) var scrollableContentMargin: DSSpacingDimension
+    @Environment(\.dsContentMarginKey) var contentMargin: DSSpacingDimension
     
-    let spacing: DSDimension
+    let spacing: DSSpacingDimension
     
     let data: Data
     let content: (Data.Element) -> Content
     let id: KeyPath<Data.Element, ID>
     
     public init(
-        spacing: DSDimension = .regular,
+        spacing: DSSpacingDimension = .regular,
         data: Data,
         id: KeyPath<Data.Element, ID>,
         @ViewBuilder content: @escaping (Data.Element) -> Content
@@ -48,7 +48,7 @@ struct DSHScroll_Previews: PreviewProvider {
     static var previews: some View {
         let colors = [Color.red, Color.green, Color.yellow, Color.red, Color.green, Color.yellow]
         PreviewForEach { DSPreview {
-                DSHScroll(spacing: .regularMedium, data: colors, id: \.self) { color in
+                DSHScroll(spacing: .medium, data: colors, id: \.self) { color in
                     color.dsSize(60)
                 }
             }.dsContentMargins(margin: 100)

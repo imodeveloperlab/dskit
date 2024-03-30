@@ -17,7 +17,7 @@ struct LogInScreen3: View {
             
             Spacer()
             
-            DSVStack(alignment: .center, spacing: .regularMedium) {
+            DSVStack(alignment: .center, spacing: .medium) {
                 DSImageView(
                     sfSymbol: "square.3.layers.3d.top.filled",
                     size: 50,

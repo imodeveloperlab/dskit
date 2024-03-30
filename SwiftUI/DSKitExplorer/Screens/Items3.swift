@@ -43,13 +43,13 @@ extension Items3 {
         let product: Data
         var body: some View {
             ZStack {
-                DSHStack(alignment: .center, spacing: .regularMedium) {
+                DSHStack(alignment: .center, spacing: .medium) {
                     DSImageView(url: product.image, size: .size(width: 90, height: 120))
                         .dsCornerRadius()
                     DSVStack(alignment: .leading) {
                         DSText(product.title, .smallTitle)
                         DSText(product.description, .caption2)
-                        DSPriceView(price: product.price, size: .medium)
+                        DSPriceView(price: product.price, size: .large)
                     }.frame(maxWidth: .infinity, alignment: .leading)
                 }
                 

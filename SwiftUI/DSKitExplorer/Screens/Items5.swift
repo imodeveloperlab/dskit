@@ -15,7 +15,7 @@ struct Items5: View {
     
     var body: some View {
         ScrollView {
-            DSVStack(spacing: .regularMedium) {
+            DSVStack(spacing: .medium) {
                 DSImageView(url: p0Image, size: .size(width: .none, height: 180))
                     .dsCornerRadius()
                     .overlay(alignment: .center) {
@@ -62,7 +62,7 @@ extension Items5 {
                 DSVStack(spacing: .small) {
                     DSText(product.title, .smallTitle)
                     DSText(product.description, .smallSubtitle)
-                    DSPriceView(price: product.price, size: .medium)
+                    DSPriceView(price: product.price, size: .large)
                 }.dsPadding()
             }.overlay(alignment: .topTrailing, content: {
                 DSImageView(

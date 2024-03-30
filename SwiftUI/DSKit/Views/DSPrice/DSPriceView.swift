@@ -15,10 +15,10 @@ public struct DSPriceView: View {
     let regularAmount: String?
     let currency: String
     var discountBadge: String?
-    var size: DSDimension
+    var size: DSSpacingDimension
     var color: DisplayColor
     
-    public init(amount: String, regularAmount: String? = nil, currency: String, discountBadge: String? = nil, size: DSDimension = .regularMedium, color: DisplayColor = .default) {
+    public init(amount: String, regularAmount: String? = nil, currency: String, discountBadge: String? = nil, size: DSSpacingDimension = .medium, color: DisplayColor = .default) {
         self.amount = amount
         self.currency = currency
         self.regularAmount = regularAmount
@@ -27,7 +27,7 @@ public struct DSPriceView: View {
         self.color = color
     }
     
-    public init(price: DSPrice, size: DSDimension = .regularMedium, color: DisplayColor = .default) {
+    public init(price: DSPrice, size: DSSpacingDimension = .medium, color: DisplayColor = .default) {
         self.amount = price.amount
         self.currency = price.currency
         self.regularAmount = price.regularAmount
@@ -92,7 +92,7 @@ public struct DSPriceView: View {
         }
     }
     
-    private func scaledFontSize(for size: DSDimension) -> CGFloat {
+    private func scaledFontSize(for size: DSSpacingDimension) -> CGFloat {
         
         let regularSize: CGFloat = 12
         
@@ -101,13 +101,13 @@ public struct DSPriceView: View {
             return regularSize * 0.8
         case .regular:
             return regularSize * 0.9
-        case .regularMedium:
-            return regularSize
         case .medium:
+            return regularSize
+        case .large:
             return regularSize * 1.2
         case .mediumLarge:
             return regularSize * 1.4
-        case .large:
+        case .largexxxxx:
             return regularSize * 1.6
         case .extraLarge:
             return regularSize * 1.8
@@ -153,19 +153,19 @@ struct DSPrice_Previews: PreviewProvider {
         PreviewForEach { DSPreview {
                 DSPriceView(amount: "1.50", regularAmount: "2.00", currency: "$", discountBadge: "10% OFF", size: .small)
                 DSPriceView(amount: "1.50", regularAmount: "2.00", currency: "$", discountBadge: "10% OFF", size: .regular)
-                DSPriceView(amount: "1.50", regularAmount: "2.00", currency: "$", discountBadge: "10% OFF", size: .regularMedium)
+                DSPriceView(amount: "1.50", regularAmount: "2.00", currency: "$", discountBadge: "10% OFF", size: .medium)
                     .dsPadding(.small)
                     .dsSecondaryBackground()
                     .dsCornerRadius()
-                DSPriceView(amount: "1.50", regularAmount: "2.00", currency: "$", discountBadge: "10% OFF", size: .regularMedium)
-                    .dsPadding(.regularMedium)
-                    .dsSecondaryBackground()
-                    .dsCornerRadius()
-                DSPriceView(amount: "1.50", regularAmount: "2.00", currency: "$", discountBadge: "10% OFF", size: .regularMedium)
+                DSPriceView(amount: "1.50", regularAmount: "2.00", currency: "$", discountBadge: "10% OFF", size: .medium)
                     .dsPadding(.medium)
                     .dsSecondaryBackground()
                     .dsCornerRadius()
                 DSPriceView(amount: "1.50", regularAmount: "2.00", currency: "$", discountBadge: "10% OFF", size: .medium)
+                    .dsPadding(.large)
+                    .dsSecondaryBackground()
+                    .dsCornerRadius()
+                DSPriceView(amount: "1.50", regularAmount: "2.00", currency: "$", discountBadge: "10% OFF", size: .large)
                 DSPriceView(amount: "1.50", regularAmount: "2.00", currency: "$", discountBadge: "10% OFF", size: .mediumLarge)
                 DSPriceView(amount: "1.50", regularAmount: "2.00", currency: "$", discountBadge: "10% OFF", size: .extraLarge)
                 DSPriceView(amount: "1.50", regularAmount: "2.00", currency: "$", discountBadge: "10% OFF", size: .larger)

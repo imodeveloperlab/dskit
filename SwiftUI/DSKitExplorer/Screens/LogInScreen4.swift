@@ -14,7 +14,7 @@ struct LogInScreen4: View {
     
     var body: some View {
         
-        DSVStack(spacing: .regularMedium) {
+        DSVStack(spacing: .medium) {
             
             Spacer()
             

@@ -46,7 +46,7 @@ extension CartScreen4 {
         let product: Product
         var body: some View {
             DSVStack {
-                DSHStack(alignment: .center, spacing: .regularMedium) {
+                DSHStack(alignment: .center, spacing: .medium) {
                     Group {
                         DSImageView(url: product.image, size: .size(width: 100, height: 100))
                             .overlay(alignment: .bottomLeading) {
@@ -68,7 +68,7 @@ extension CartScreen4 {
                             DSText("Size:", .subheadline)
                             DSText(product.size, .smallTitle)
                         }
-                        DSPriceView(price: product.price, size: .regularMedium)
+                        DSPriceView(price: product.price, size: .medium)
                     }.frame(maxWidth: .infinity, alignment: .leading)
                     
                     DSSFSymbolButton(name: "minus.circle", size: .mediumIcon)
@@ -106,7 +106,7 @@ extension CartScreen4 {
                     DSText("for",.subheadline)
                     DSText(itemsCount,.smallTitle)
                     DSText("items",.subheadline)
-                    DSPriceView(price: price, size: .large)
+                    DSPriceView(price: price, size: .largexxxxx)
                 }
             }
         }

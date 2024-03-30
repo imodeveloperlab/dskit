@@ -15,11 +15,11 @@ struct ItemDetails3: View {
     
     var body: some View {
         ScrollView {
-            DSVStack(spacing: .regularMedium) {
+            DSVStack(spacing: .medium) {
                 DSCoverFlow(height: 260, data: viewModel.imageGallery, id: \.self) { imageUrl in
                     DSImageView(url: imageUrl).dsCornerRadius()
                 }
-                DSVStack(spacing: .regularMedium) {
+                DSVStack(spacing: .medium) {
                     
                     DSHStack {
                         DSVStack(spacing: .zero) {
@@ -44,7 +44,7 @@ struct ItemDetails3: View {
                         }
                     }
                     
-                    DSPriceView(price: viewModel.price, size: .large)
+                    DSPriceView(price: viewModel.price, size: .largexxxxx)
                     
                     DSHStack(alignment: .center) {
                         DSImageView(sfSymbol: "info.circle.fill", size: .regular, tint: .customColor(.yellow))

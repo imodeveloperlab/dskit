@@ -21,7 +21,7 @@ public struct DSBottomContainer<Content: View>: View {
         DSVStack{
             content()
         }
-        .topShadow(padding: .regularMedium)
+        .topShadow(padding: .medium)
         .dsBackground(.primary)
     }
 }

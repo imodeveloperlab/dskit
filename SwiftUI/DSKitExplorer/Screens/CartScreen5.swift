@@ -49,7 +49,7 @@ extension CartScreen5 {
     struct ProductView: View {
         let product: Product
         var body: some View {
-            DSHStack(alignment: .center, spacing: .regularMedium) {
+            DSHStack(alignment: .center, spacing: .medium) {
                 Group {
                     DSImageView(url: product.image, size: .size(width: 80, height: 100))
                         .overlay(alignment: .bottomLeading) {
@@ -71,7 +71,7 @@ extension CartScreen5 {
                         DSImageView(sfSymbol: "star.fill", size: .smallIcon, tint: .customColor(Color.yellow))
                         DSText("3k Reviews", .caption1)
                     }
-                    DSPriceView(price: product.price, size: .regularMedium)
+                    DSPriceView(price: product.price, size: .medium)
                     
                 }.frame(maxWidth: .infinity, alignment: .leading)
                 
@@ -109,7 +109,7 @@ extension CartScreen5 {
                     DSText("for",.subheadline)
                     DSText(itemsCount,.smallTitle)
                     DSText("items",.subheadline)
-                    DSPriceView(price: price, size: .large)
+                    DSPriceView(price: price, size: .largexxxxx)
                 }
             }
         }
@@ -139,7 +139,7 @@ extension CartScreen5 {
                     .dsCornerRadius()
                 DSVStack(alignment: .leading, spacing: .small) {
                     DSText(product.title, .smallTitle, multilineTextAlignment: .leading)
-                    DSPriceView(price: product.price, size: .regularMedium)
+                    DSPriceView(price: product.price, size: .medium)
                 }
             }
             .dsPadding(.regular)

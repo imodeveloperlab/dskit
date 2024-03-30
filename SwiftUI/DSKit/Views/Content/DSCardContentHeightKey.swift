@@ -8,18 +8,18 @@
 import SwiftUI
 
 struct DSCardContentHeightKey: EnvironmentKey {
-    static let defaultValue: DSDimension = .none
+    static let defaultValue: DSSpacingDimension = .none
 }
 
 extension EnvironmentValues {
-    var cardContentHeight: DSDimension {
+    var cardContentHeight: DSSpacingDimension {
         get { self[DSCardContentHeightKey.self] }
         set { self[DSCardContentHeightKey.self] = newValue }
     }
 }
 
 public extension View {
-    func dsCardContentHeight(_ height: DSDimension) -> some View {
+    func dsCardContentHeight(_ height: DSSpacingDimension) -> some View {
         self.environment(\.cardContentHeight, height)
     }
 }

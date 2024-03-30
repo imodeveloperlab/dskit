@@ -15,7 +15,7 @@ struct Items4: View {
     
     var body: some View {
         ScrollView {
-            DSVStack(spacing: .regularMedium) {
+            DSVStack(spacing: .medium) {
                 DSHScroll(data: viewModel.filters, id: \.self) { title in
                     DSText(title, .headlineWithSize(12))
                         .dsPadding(.horizontal, .extraLarge)
@@ -54,7 +54,7 @@ extension Items4 {
                     DSVStack(spacing: .small) {
                         DSText(product.title, .smallTitle)
                         DSText(product.description, .smallSubtitle)
-                        DSPriceView(price: product.price, size: .medium)
+                        DSPriceView(price: product.price, size: .large)
                     }.dsPadding(.regular)
                 }
                 .dsSecondaryBackground()

@@ -9,9 +9,9 @@ import SwiftUI
 
 public struct DSCardStyleModifier: ViewModifier {    
     
-    let padding: DSDimension
+    let padding: DSSpacingDimension
     
-    public init(padding: DSDimension) {
+    public init(padding: DSSpacingDimension) {
         self.padding = padding
     }
     
@@ -24,7 +24,7 @@ public struct DSCardStyleModifier: ViewModifier {
 }
 
 public extension View {
-    func dsCardStyle(padding: DSDimension = .regularMedium) -> some View {
+    func dsCardStyle(padding: DSSpacingDimension = .medium) -> some View {
         return self.modifier(DSCardStyleModifier(padding: padding))
     }
 }

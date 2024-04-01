@@ -49,7 +49,7 @@ extension Items7 {
                 DSVStack {
                     
                     DSVStack(spacing: .zero) {
-                        DSText(product.title, .headlineWithSize(13))
+                        DSText(product.title, .smallTitle)
                         DSText(product.description, .smallSubtitle)
                     }
                     
@@ -58,7 +58,7 @@ extension Items7 {
                         DSText("2.4k Reviews", .caption2)
                     }
                     
-                    DSPriceView(price: product.price, size: .medium)
+                    DSPriceView(price: product.price, size: .smallTitle)
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .dsPadding(.regular)

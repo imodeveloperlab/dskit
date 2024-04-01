@@ -5,8 +5,6 @@
 //  Created by Ivan Borinschi on 12.03.2023.
 //
 
-import DSKit
-
 public extension DSTextType {
 
     static var smallTitle: DSTextType {

@@ -210,7 +210,6 @@
 		60EB99C82B2B750200528039 /* DSTextColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EB99BE2B2B750200528039 /* DSTextColor.swift */; };
 		60EB99CC2B2B755E00528039 /* DSText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EB99CB2B2B755E00528039 /* DSText.swift */; };
 		60EB99CE2B2B75C900528039 /* DSSFSymbolConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EB99CD2B2B75C900528039 /* DSSFSymbolConfig.swift */; };
-		60EB99D32B2B75F800528039 /* DSPrice+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EB99D02B2B75F800528039 /* DSPrice+Random.swift */; };
 		60EB99D42B2B75F800528039 /* DSPriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EB99D12B2B75F800528039 /* DSPriceView.swift */; };
 		60EB99D72B2B767900528039 /* String+Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EB99D62B2B767900528039 /* String+Currency.swift */; };
 		60EB99D92B2B769800528039 /* NSAttributedString+Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EB99D82B2B769800528039 /* NSAttributedString+Badge.swift */; };
@@ -481,7 +480,6 @@
 		60EB99BE2B2B750200528039 /* DSTextColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSTextColor.swift; sourceTree = "<group>"; };
 		60EB99CB2B2B755E00528039 /* DSText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSText.swift; sourceTree = "<group>"; };
 		60EB99CD2B2B75C900528039 /* DSSFSymbolConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSSFSymbolConfig.swift; sourceTree = "<group>"; };
-		60EB99D02B2B75F800528039 /* DSPrice+Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DSPrice+Random.swift"; sourceTree = "<group>"; };
 		60EB99D12B2B75F800528039 /* DSPriceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSPriceView.swift; sourceTree = "<group>"; };
 		60EB99D62B2B767900528039 /* String+Currency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Currency.swift"; sourceTree = "<group>"; };
 		60EB99D82B2B769800528039 /* NSAttributedString+Badge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Badge.swift"; sourceTree = "<group>"; };
@@ -689,7 +687,6 @@
 			children = (
 				60EB99D12B2B75F800528039 /* DSPriceView.swift */,
 				604B4B5C2B90997500EC6CCE /* DSPrice.swift */,
-				60EB99D02B2B75F800528039 /* DSPrice+Random.swift */,
 			);
 			path = DSPrice;
 			sourceTree = "<group>";
@@ -1310,7 +1307,6 @@
 				603D39472BAD70F100305FDE /* DSSectionStyleModifier.swift in Sources */,
 				6009358A2BBAAFD100A1D1E6 /* DSDimension.swift in Sources */,
 				60EB99DB2B2B76C800528039 /* UIImage+SFSymbol.swift in Sources */,
-				60EB99D32B2B75F800528039 /* DSPrice+Random.swift in Sources */,
 				6074DF4A2BA342880006284C /* DSSelectedStyleModifier.swift in Sources */,
 				6006010C2B31CD5C00F2C616 /* DSContentModeModifier.swift in Sources */,
 				600B98962B3C66DC005935D2 /* DSSecondaryBackgroundModifier.swift in Sources */,

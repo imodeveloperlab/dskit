@@ -12,14 +12,8 @@ public enum DSDimension: ExpressibleByFloatLiteral, ExpressibleByIntegerLiteral,
     case regular
     case medium
     case large
-    case mediumLarge
-    case largexxxxx
-    case extraLarge
-    case larger
-    case largest
     case custom(CGFloat)
     case fillUpTheSpace
-    case designSize(CGFloat)
     case none
     case zero
     

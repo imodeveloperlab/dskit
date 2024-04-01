@@ -26,7 +26,7 @@ struct ItemDetails1: View {
                     DSText(viewModel.subtitle, .subheadline)
                 }
                 
-                DSPriceView(price: viewModel.price, size: .largexxxxx)
+                DSPriceView(price: viewModel.price, size: .headline)
                 
                 DSQuantityPicker()
                 

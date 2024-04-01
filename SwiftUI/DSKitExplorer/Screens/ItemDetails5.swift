@@ -58,7 +58,7 @@ struct ItemDetails5: View {
                 DSHStack {
                     DSText("Total", .headline)
                     Spacer()
-                    DSPriceView(price: viewModel.price, size: .mediumLarge)
+                    DSPriceView(price: viewModel.price, size: .headline)
                 }
                 
                 DSButton(title: "Add to cart", style: .borderedLight) { dismiss() }

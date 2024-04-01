@@ -68,7 +68,7 @@ extension CartScreen4 {
                             DSText("Size:", .subheadline)
                             DSText(product.size, .smallTitle)
                         }
-                        DSPriceView(price: product.price, size: .medium)
+                        DSPriceView(price: product.price, size: .smallTitle)
                     }.frame(maxWidth: .infinity, alignment: .leading)
                     
                     DSSFSymbolButton(name: "minus.circle", size: .mediumIcon)
@@ -103,10 +103,10 @@ extension CartScreen4 {
                 DSText("Total",.headline)
                 Spacer()
                 DSHStack(alignment: .firstTextBaseline, spacing: .small) {
-                    DSText("for",.subheadline)
-                    DSText(itemsCount,.smallTitle)
-                    DSText("items",.subheadline)
-                    DSPriceView(price: price, size: .largexxxxx)
+                    DSText("for", .subheadline)
+                    DSText(itemsCount, .smallTitle)
+                    DSText("items", .subheadline)
+                    DSPriceView(price: price, size: .subheadline)
                 }
             }
         }

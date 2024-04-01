@@ -59,7 +59,7 @@ extension HomeScreen2 {
                 DSVStack(spacing: .zero) {
                     DSText(product.title, .smallTitle)
                     DSText(product.description, .smallSubtitle)
-                    DSPriceView(price: product.price, size: .regular, color: .default)
+                    DSPriceView(price: product.price, size: .smallTitle)
                         .dsPadding(.top, .regular)
                 }
             }.dsPadding(.bottom)

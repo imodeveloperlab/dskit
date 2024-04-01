@@ -34,12 +34,6 @@ struct DSWidthModifier_Previews: PreviewProvider {
                     .dsWidth(.large)
                 
                 Color.blue
-                    .dsWidth(.mediumLarge)
-                
-                Color.blue
-                    .dsWidth(.designSize(20))
-                
-                Color.blue
                     .dsWidth(100)
                 
                 Color.blue

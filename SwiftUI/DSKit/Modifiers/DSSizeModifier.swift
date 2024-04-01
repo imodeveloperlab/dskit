@@ -70,12 +70,6 @@ struct DSSizeModifier_Previews: PreviewProvider {
                     .dsSize(.medium)
                 
                 Color.blue
-                    .dsSize(.mediumLarge)
-                
-                Color.blue
-                    .dsSize(.designSize(20))
-                
-                Color.blue
                     .dsSize(100)
                 
                 Color.blue

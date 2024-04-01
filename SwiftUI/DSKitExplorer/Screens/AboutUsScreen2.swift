@@ -51,7 +51,7 @@ struct AboutUsScreen2: View {
                     DSText("Here you will feel the attitude, here you will receive quality, here you will see the atmosphere of an authentic store", .body).frame(maxWidth: .infinity, alignment: .leading)
                 }
                 
-                DSCoverFlow(height: .designSize(28), data: infoImageGallery, id: \.self) { image in
+                DSCoverFlow(height: 300, data: infoImageGallery, id: \.self) { image in
                     DSImageView(url: image).dsCornerRadius()
                 }
                 
@@ -71,7 +71,7 @@ struct AboutUsScreen2: View {
                     ForEach(0..<5) { index in
                         DSHStack(spacing: .medium) {
                             DSImageView(url: URL.profileUrl(index: index), style: .circle)
-                                .dsSize(.designSize(9))
+                                .dsSize(100)
                             
                             DSVStack(spacing: .small) {
                                 DSText(DSFaker().name, .headline)

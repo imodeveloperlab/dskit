@@ -68,7 +68,7 @@ extension Order1 {
                 DSHStack {
                     DSText(total.title, total.bold ? .smallTitle : .smallSubtitle)
                     Spacer()
-                    DSPriceView(price: total.price, size: total.bold ? .large : .medium)
+                    DSPriceView(price: total.price, size: total.bold ? .smallTitle : .smallSubtitle)
                 }.dsHeight(25)
             }
         }
@@ -158,7 +158,7 @@ extension Order1 {
                         DSImageView(sfSymbol: "calendar", size: 12, tint: .text(.subheadline))
                         DSText(shipping.date, .smallSubtitle)
                     }
-                    DSPriceView(price: shipping.price)
+                    DSPriceView(price: shipping.price, size: .smallTitle)
                 }
             }
             .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
@@ -189,7 +189,7 @@ extension Order1 {
                 DSVStack(alignment: .leading, spacing: .small) {
                     DSText(product.title, .smallTitle)
                     DSText(product.subtitle, .smallSubtitle)
-                    DSPriceView(price: product.price, size: .medium)
+                    DSPriceView(price: product.price, size: .smallTitle)
                 }.frame(maxWidth: .infinity, alignment: .leading)
             }
             .onTap { }

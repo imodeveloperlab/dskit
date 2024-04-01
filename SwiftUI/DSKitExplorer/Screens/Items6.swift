@@ -45,14 +45,14 @@ extension Items6 {
                     .dsSecondaryBackground()
                 DSVStack {
                     DSVStack(spacing: .zero) {
-                        DSText(product.title, .headlineWithSize(13))
+                        DSText(product.title, .smallTitle)
                         DSText(product.description, .smallSubtitle)
                     }
                     DSHStack {
                         DSRatingView(rating: 4.5, size: 12)
                         DSText("2.4k Reviews", .caption2)
                     }
-                    DSPriceView(price: product.price, size: .medium)
+                    DSPriceView(price: product.price, size: .smallTitle)
                 }.dsPadding(.regular)
             }.overlay(alignment: .topTrailing, content: {
                 DSImageView(

@@ -75,9 +75,9 @@ extension Items1 {
                 }
                 
                 DSVStack(alignment: .center, spacing: .zero) {
-                    DSText(product.title, .headlineWithSize(13), color: .customColor(.white))
+                    DSText(product.title, .smallTitle, color: .customColor(.white))
                     DSText(product.description, .smallSubtitle, color: .customColor(.white.opacity(0.8)))
-                    DSPriceView(price: product.price, color: .custom(Color.white))
+                    DSPriceView(price: product.price, size: .smallTitle, color: .custom(Color.white))
                 }
                 .dsPadding(.bottom)
             }

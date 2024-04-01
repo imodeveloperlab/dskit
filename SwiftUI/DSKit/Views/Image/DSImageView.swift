@@ -205,10 +205,6 @@ struct DSImageView_Previews: PreviewProvider {
                     DSImageView(sfSymbol: "sun.rain.fill", size: .size(.regular), tint: .custom(.red))
                     DSImageView(sfSymbol: "sun.rain.fill", size: .size(.medium), tint: .custom(.red))
                     DSImageView(sfSymbol: "sun.rain.fill", size: .size(.large), tint: .custom(.red))
-                    DSImageView(sfSymbol: "sun.rain.fill", size: .size(.mediumLarge), tint: .custom(.red))
-                    DSImageView(sfSymbol: "sun.rain.fill", size: .size(.largexxxxx), tint: .custom(.red))
-                    DSImageView(sfSymbol: "sun.rain.fill", size: .size(.larger), tint: .custom(.red))
-                    DSImageView(sfSymbol: "sun.rain.fill", size: .size(.largest), tint: .custom(.red))
                 }
             }
         }

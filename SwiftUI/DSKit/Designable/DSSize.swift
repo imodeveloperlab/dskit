@@ -35,19 +35,10 @@ public struct DSSize: Equatable, ExpressibleByFloatLiteral, ExpressibleByInteger
         DSSize(width: width, height: height)
     }
     
-    public static func designSize(_ number: CGFloat) -> DSSize {
-        DSSize(width: .designSize(number), height: .designSize(number))
-    }
-    
     public static let smaller = DSSize(width: .small, height: .small)
     public static let small = DSSize(width: .regular, height: .regular)
     public static let regular = DSSize(width: .medium, height: .medium)
     public static let unspecified = DSSize(width: .none, height: .none)
     public static let medium = DSSize(width: .large, height: .large)
-    public static let mediumLarge = DSSize(width: .mediumLarge, height: .mediumLarge)
-    public static let large = DSSize(width: .largexxxxx, height: .largexxxxx)
-    public static let extraLarge = DSSize(width: .extraLarge, height: .extraLarge)
-    public static let larger = DSSize(width: .larger, height: .larger)
-    public static let largest = DSSize(width: .largest, height: .largest)
     public static let fillUpTheSpace = DSSize(width: .fillUpTheSpace, height: .fillUpTheSpace)
 }

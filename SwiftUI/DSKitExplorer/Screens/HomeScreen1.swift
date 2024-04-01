@@ -61,8 +61,7 @@ extension HomeScreen1 {
             DSHStack {
                 DSText(title, .bigTitle)
                 Spacer()
-                DSImageView(url: profileUrl, style: .circle, size: .extraLarge)
-                    .dsSize(50)
+                DSImageView(url: profileUrl, style: .circle, size: .size(40))
             }
         }
     }

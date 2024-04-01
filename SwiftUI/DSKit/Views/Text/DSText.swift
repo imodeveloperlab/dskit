@@ -38,12 +38,12 @@ public struct DSText: View {
     var styledText: some View {
         if let color {
             Text(text)
-                .font(Font(type.style(appearance: appearance).font.getFont(from: appearance)))
+                .font(type.style(appearance: appearance).font.getFont(from: appearance))
                 .foregroundStyle(Color(uiColor: color.color(from: appearance)))
                 .multilineTextAlignment(multilineTextAlignment)
         } else {
             Text(text)
-                .font(Font(type.style(appearance: appearance).font.getFont(from: appearance)))
+                .font(type.style(appearance: appearance).font.getFont(from: appearance))
                 .foregroundStyle(Color(uiColor: type.style(appearance: appearance).color.getColor(appearance: appearance, colorGroup: colorGroup)))
                 .multilineTextAlignment(multilineTextAlignment)
         }

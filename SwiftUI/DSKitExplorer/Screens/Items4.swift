@@ -54,7 +54,7 @@ extension Items4 {
                     DSVStack(spacing: .small) {
                         DSText(product.title, .smallTitle)
                         DSText(product.description, .smallSubtitle)
-                        DSPriceView(price: product.price, size: .large)
+                        DSPriceView(price: product.price, size: .smallTitle)
                     }.dsPadding(.regular)
                 }
                 .dsSecondaryBackground()

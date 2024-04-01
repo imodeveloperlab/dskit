@@ -52,7 +52,7 @@ extension CartScreen3 {
                     DSText(product.title, .smallTitle)
                         .frame(maxWidth: .infinity, alignment: .leading)
                     DSText(product.description, .caption2)
-                    DSPriceView(price: product.price, size: .medium)
+                    DSPriceView(price: product.price, size: .smallTitle)
                 }.frame(maxWidth: .infinity, alignment: .leading)
                 
                 DSSFSymbolButton(name: "minus.circle", size: .mediumIcon)
@@ -86,7 +86,7 @@ extension CartScreen3 {
                     DSText("for",.subheadline)
                     DSText(itemsCount,.smallTitle)
                     DSText("items",.subheadline)
-                    DSPriceView(price: price, size: .largexxxxx)
+                    DSPriceView(price: price, size: .headline)
                 }
             }
         }

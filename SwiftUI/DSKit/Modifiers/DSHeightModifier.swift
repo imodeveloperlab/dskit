@@ -34,9 +34,6 @@ struct DSHeightModifier_Previews: PreviewProvider {
                     .dsHeight(.large)
                 
                 Color.blue
-                    .dsHeight(.mediumLarge)
-                
-                Color.blue
                     .dsHeight(100)
                 
                 Color.blue

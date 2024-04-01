@@ -69,7 +69,7 @@ struct ItemDetails4: View {
                 DSHStack {
                     DSText("Total", .headline)
                     Spacer()
-                    DSPriceView(price: viewModel.price, size: .mediumLarge)
+                    DSPriceView(price: viewModel.price, size: .headline)
                 }
                 DSButton(title: "Buy Now") { dismiss() }
                 

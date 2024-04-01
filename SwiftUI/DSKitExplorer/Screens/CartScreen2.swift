@@ -56,20 +56,20 @@ extension CartScreen2 {
                         DSText(product.description, .smallSubtitle)
                         DSRatingView(rating: product.rating, size: 13)
                     }
-                    DSPriceView(price: product.price, size: .medium)
-                    
-                }.frame(maxWidth: .infinity, alignment: .leading)
-                    .overlay(alignment: .bottomTrailing, content: {
-                        DSButton(
-                            title: "Remove",
-                            rightImage: DSImage(sfSymbolName: "trash", size: .smallIcon),
-                            style: .clear,
-                            maxWidth: false,
-                            action: { }
-                        ).dsHeight(.large)
-                    })
-                    .frame(maxWidth: .infinity)
-                    .dsPadding()
+                    DSPriceView(price: product.price, size: .smallTitle)
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .overlay(alignment: .trailing, content: {
+                    DSButton(
+                        title: "Remove",
+                        rightImage: DSImage(sfSymbolName: "trash", size: .smallIcon),
+                        style: .clear,
+                        maxWidth: false,
+                        action: { }
+                    )
+                })
+                .frame(maxWidth: .infinity)
+                .dsPadding()
             }
             .dsSecondaryBackground()
             .dsCornerRadius()
@@ -92,13 +92,13 @@ extension CartScreen2 {
         let price: DSPrice
         var body: some View {
             DSHStack() {
-                DSText("Total",.headline)
+                DSText("Total", .headline)
                 Spacer()
                 DSHStack(alignment: .firstTextBaseline, spacing: .small) {
-                    DSText("for",.subheadline)
-                    DSText(itemsCount,.smallTitle)
-                    DSText("items",.subheadline)
-                    DSPriceView(price: price, size: .largexxxxx)
+                    DSText("for", .subheadline)
+                    DSText(itemsCount, .smallTitle)
+                    DSText("items", .subheadline)
+                    DSPriceView(price: price, size: .headline)
                 }
             }
         }

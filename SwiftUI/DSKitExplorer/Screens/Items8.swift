@@ -56,7 +56,7 @@ extension Items8 {
                         DSRatingView(rating: 4.5, size: 12)
                         DSText("2.4k Reviews", .caption2)
                     }
-                    DSPriceView(price: product.price, size: .medium)
+                    DSPriceView(price: product.price, size: .smallTitle)
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .dsPadding(.regular)

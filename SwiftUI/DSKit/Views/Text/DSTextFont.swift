@@ -27,10 +27,8 @@ public enum DSTextFont: Equatable, Hashable {
     case footnote
     case custom(UIFont)
     
-    public func getFont(from appearance: DSAppearance) -> UIFont {
-        
-        var font = UIFont.systemFont(ofSize: 12)
-        
+    public func getFont(from appearance: DSAppearance) -> Font {
+        var font: UIFont
         switch self {
         case .title1:
             font = appearance.fonts.title1
@@ -63,11 +61,6 @@ public enum DSTextFont: Equatable, Hashable {
         case .custom(let customFont):
             font = customFont
         }
-        
-        return font
-    }
-    
-    public func font(from appearance: DSAppearance) -> Font {
-        return Font(getFont(from: appearance))
+        return Font(font)
     }
 }

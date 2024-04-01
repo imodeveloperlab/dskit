@@ -49,7 +49,7 @@ extension Items3 {
                     DSVStack(alignment: .leading) {
                         DSText(product.title, .smallTitle)
                         DSText(product.description, .caption2)
-                        DSPriceView(price: product.price, size: .large)
+                        DSPriceView(price: product.price, size: .smallTitle)
                     }.frame(maxWidth: .infinity, alignment: .leading)
                 }
                 

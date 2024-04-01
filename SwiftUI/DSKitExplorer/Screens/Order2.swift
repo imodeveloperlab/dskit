@@ -106,7 +106,7 @@ extension Order2 {
                 DSHStack {
                     DSText(total.title, total.bold ? .smallTitle : .smallSubtitle)
                     Spacer()
-                    DSPriceView(price: total.price, size: total.bold ? .large : .medium)
+                    DSPriceView(price: total.price, size: total.bold ? .smallTitle : .smallSubtitle)
                 }.dsHeight(25)
             }
         }
@@ -130,7 +130,7 @@ extension Order2 {
             DSHStack {
                 DSText(code.title, .smallTitle)
                 Spacer()
-                DSPriceView(price: code.price)
+                DSPriceView(price: code.price, size: .smallTitle)
                 DSSFSymbolButton(name: "minus.circle", size: .mediumIcon)
                     .dsPadding(.leading, .regular)
             }.dsHeight(25)

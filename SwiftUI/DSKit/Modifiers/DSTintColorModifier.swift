@@ -1,6 +1,6 @@
 //
 //  DSTintColorModifier.swift
-//  DSKitCore
+//  DSKit
 //
 //  Created by Ivan Borinschi on 19.12.2022.
 //

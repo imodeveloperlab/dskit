@@ -1,6 +1,6 @@
 //
 //  DSTextField.swift
-//  DSKitCore
+//  DSKit
 //
 //  Created by Ivan Borinschi on 28.12.2022.
 //
@@ -72,7 +72,7 @@ public struct DSTextField: View {
             }
         }
         .dsHeight(.custom(appearance.actionElementHeight))
-        .dsPadding(.horizontal, .custom(appearance.size.number(for: .medium) - 1))
+        .dsPadding(.horizontal, .custom(appearance.spacing.value(for: .medium) - 1))
         .dsBackground(.custom(colorGroup.colors(from: appearance).textField.background))
         .dsCornerRadius()
         .overlay(

@@ -9,10 +9,10 @@ import Foundation
 
 public struct DSSize: Equatable, ExpressibleByFloatLiteral, ExpressibleByIntegerLiteral {
     
-    public let width: DSSpacingDimension
-    public let height: DSSpacingDimension
+    public let width: DSDimension
+    public let height: DSDimension
     
-    public init(width: DSSpacingDimension, height: DSSpacingDimension) {
+    public init(width: DSDimension, height: DSDimension) {
         self.width = width
         self.height = height
     }
@@ -27,11 +27,11 @@ public struct DSSize: Equatable, ExpressibleByFloatLiteral, ExpressibleByInteger
         self.height = .custom(CGFloat(value))
     }
     
-    public static func size(_ number: DSSpacingDimension) -> DSSize {
+    public static func size(_ number: DSDimension) -> DSSize {
         DSSize(width: number, height: number)
     }
     
-    public static func size(width: DSSpacingDimension, height: DSSpacingDimension) -> DSSize {
+    public static func size(width: DSDimension, height: DSDimension) -> DSSize {
         DSSize(width: width, height: height)
     }
     

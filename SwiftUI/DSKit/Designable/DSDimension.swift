@@ -1,5 +1,5 @@
 //
-//  DSSpacingDimension.swift
+//  DSDimension.swift
 //  DSKit
 //
 //  Created by Ivan Borinschi on 26.02.2023.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum DSSpacingDimension: ExpressibleByFloatLiteral, ExpressibleByIntegerLiteral, Equatable {
+public enum DSDimension: ExpressibleByFloatLiteral, ExpressibleByIntegerLiteral, Equatable {
     case small
     case regular
     case medium

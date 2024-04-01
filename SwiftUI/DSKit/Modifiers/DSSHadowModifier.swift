@@ -1,6 +1,6 @@
 //
 //  DSShadowModifier.swift
-//  DSKitCore
+//  DSKit
 //
 //  Created by Ivan Borinschi on 28.12.2022.
 //
@@ -10,7 +10,7 @@ import SwiftUI
 public struct DSShadowModifier: ViewModifier {
     
     @Environment(\.appearance) var appearance: DSAppearance
-    let padding: DSSpacingDimension
+    let padding: DSPadding
     
     var color: Color
     var radius: CGFloat
@@ -18,7 +18,7 @@ public struct DSShadowModifier: ViewModifier {
     var yOffset: CGFloat
     
     
-    init(padding: DSSpacingDimension, color: Color = .black, radius: CGFloat = 10, xOffset: CGFloat = 0, yOffset: CGFloat = -5) {
+    init(padding: DSPadding, color: Color = .black, radius: CGFloat = 10, xOffset: CGFloat = 0, yOffset: CGFloat = -5) {
         self.padding = padding
         self.color = color
         self.radius = radius
@@ -44,7 +44,7 @@ public struct DSShadowModifier: ViewModifier {
 }
 
 public extension View {
-    func topShadow(padding: DSSpacingDimension, radius: CGFloat = 10, yOffset: CGFloat = -5) -> some View {
+    func topShadow(padding: DSPadding, radius: CGFloat = 10, yOffset: CGFloat = -5) -> some View {
         self.modifier(DSShadowModifier(padding: padding, radius: radius, yOffset: yOffset))
     }
 }

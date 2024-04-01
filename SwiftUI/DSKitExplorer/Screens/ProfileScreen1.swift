@@ -1,6 +1,6 @@
 //
 //  ProfileScreen1.swift
-//  DSKitCore
+//  DSKit
 //
 //  Created by Ivan Borinschi on 21.12.2022.
 //
@@ -70,7 +70,7 @@ extension ProfileScreen1 {
                 }
             }
             .frame(maxWidth: .infinity)
-            .dsPadding(.vertical, .mediumLarge)
+            .dsPadding(.vertical, .large)
         }
     }
     

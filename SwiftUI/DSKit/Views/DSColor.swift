@@ -1,6 +1,6 @@
 //
 //  DSViewType.swift
-//  DSKitCore
+//  DSKit
 //
 //  Created by Ivan Borinschi on 26.12.2022.
 //

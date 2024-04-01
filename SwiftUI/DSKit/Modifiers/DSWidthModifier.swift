@@ -1,6 +1,6 @@
 //
 //  DSWidthModifier.swift
-//  DSKitCore
+//  DSKit
 //
 //  Created by Ivan Borinschi on 19.12.2022.
 //
@@ -10,16 +10,16 @@ import SwiftUI
 
 public struct DSWidthModifier: ViewModifier {
     
-    let width: DSSpacingDimension
+    let width: DSDimension
     @Environment(\.appearance) var appearance: DSAppearance
     
     public func body(content: Content) -> some View {
-        content.frame(width: appearance.size.number(for: width))
+        content.frame(width: appearance.dimension.value(for: width))
     }
 }
 
 public extension View {
-    func dsWidth(_ width: DSSpacingDimension) -> some View {
+    func dsWidth(_ width: DSDimension) -> some View {
         self.modifier(DSWidthModifier(width: width))
     }
 }

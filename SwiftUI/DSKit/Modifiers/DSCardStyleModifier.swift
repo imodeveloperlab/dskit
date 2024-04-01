@@ -1,6 +1,6 @@
 //
 //  DSCardStyleModifier.swift
-//  DSKitCore
+//  DSKit
 //
 //  Created by Ivan Borinschi on 14.12.2022.
 //
@@ -9,9 +9,9 @@ import SwiftUI
 
 public struct DSCardStyleModifier: ViewModifier {    
     
-    let padding: DSSpacingDimension
+    let padding: DSPadding
     
-    public init(padding: DSSpacingDimension) {
+    public init(padding: DSPadding) {
         self.padding = padding
     }
     
@@ -24,7 +24,7 @@ public struct DSCardStyleModifier: ViewModifier {
 }
 
 public extension View {
-    func dsCardStyle(padding: DSSpacingDimension = .medium) -> some View {
+    func dsCardStyle(padding: DSPadding = .medium) -> some View {
         return self.modifier(DSCardStyleModifier(padding: padding))
     }
 }

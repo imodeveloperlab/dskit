@@ -1,6 +1,6 @@
 //
 //  DSTextFieldValue.swift
-//  DSKitCore
+//  DSKit
 //
 //  Created by Ivan Borinschi on 29.12.2022.
 //

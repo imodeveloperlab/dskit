@@ -1,6 +1,6 @@
 //
 //  CGSize+Hashable.swift
-//  DSKitCore
+//  DSKit
 //
 //  Created by Ivan Borinschi on 20.12.2022.
 //

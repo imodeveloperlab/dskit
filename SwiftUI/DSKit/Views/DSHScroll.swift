@@ -1,6 +1,6 @@
 //
 //  DSHScroll.swift
-//  DSKitCore
+//  DSKit
 //
 //  Created by Ivan Borinschi on 21.12.2022.
 //
@@ -10,17 +10,17 @@ import SwiftUI
 public struct DSHScroll<Data, ID, Content>: View where Data: RandomAccessCollection, ID: Hashable, Content: View{
     
     @Environment(\.appearance) var appearance: DSAppearance
-    @Environment(\.dsScrollableContentMarginKey) var scrollableContentMargin: DSSpacingDimension
-    @Environment(\.dsContentMarginKey) var contentMargin: DSSpacingDimension
+    @Environment(\.dsScrollableContentMarginKey) var scrollableContentMargin: DSSpace
+    @Environment(\.dsContentMarginKey) var contentMargin: DSSpace
     
-    let spacing: DSSpacingDimension
+    let spacing: DSSpace
     
     let data: Data
     let content: (Data.Element) -> Content
     let id: KeyPath<Data.Element, ID>
     
     public init(
-        spacing: DSSpacingDimension = .regular,
+        spacing: DSSpace = .regular,
         data: Data,
         id: KeyPath<Data.Element, ID>,
         @ViewBuilder content: @escaping (Data.Element) -> Content
@@ -37,10 +37,10 @@ public struct DSHScroll<Data, ID, Content>: View where Data: RandomAccessCollect
                 ForEach(data, id: id) { element in
                     self.content(element)
                 }
-            }.dsPadding(.horizontal, .custom(appearance.size.number(for: scrollableContentMargin)))
+            }.dsPadding(.horizontal, .custom(appearance.spacing.value(for: scrollableContentMargin)))
         }
-        .dsPadding(.horizontal, .custom(-appearance.size.number(for: scrollableContentMargin)))
-        .dsPadding(.horizontal, .custom(appearance.size.number(for: contentMargin)))
+        .dsPadding(.horizontal, .custom(-appearance.spacing.value(for: scrollableContentMargin)))
+        .dsPadding(.horizontal, .custom(appearance.spacing.value(for: contentMargin)))
     }
 }
 

@@ -1,6 +1,6 @@
 //
 //  LogInScreen1.swift
-//  DSKitCore
+//  DSKit
 //
 //  Created by Ivan Borinschi on 31.13.3033.
 //

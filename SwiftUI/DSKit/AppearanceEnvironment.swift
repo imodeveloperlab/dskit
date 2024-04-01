@@ -1,6 +1,6 @@
 //
 //  AppearanceEnvironment.swift
-//  DSKitCore
+//  DSKit
 //
 //  Created by Ivan Borinschi on 27.12.2022.
 //

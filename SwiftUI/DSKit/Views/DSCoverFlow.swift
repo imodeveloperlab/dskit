@@ -1,6 +1,6 @@
 //
 //  DSCoverFlow.swift
-//  DSKitCore
+//  DSKit
 //
 //  Created by Ivan Borinschi on 21.12.2022.
 //
@@ -10,8 +10,8 @@ import SwiftUI
 public struct DSCoverFlow<Data, ID, Content>: View where Data: RandomAccessCollection, ID: Hashable, Data.Element: Equatable, Content: View {
     
     @Environment(\.appearance) var appearance: DSAppearance
-    let height: DSSpacingDimension
-    let spacing: DSSpacingDimension
+    let height: DSDimension
+    let spacing: DSSpace
     let showPaginationView: Bool
     
     let data: Data
@@ -21,8 +21,8 @@ public struct DSCoverFlow<Data, ID, Content>: View where Data: RandomAccessColle
     @State private var currentElementID: Data.Element
     
     public init(
-        height: DSSpacingDimension,
-        spacing: DSSpacingDimension = .regular,
+        height: DSDimension,
+        spacing: DSSpace = .regular,
         showPaginationView: Bool = true,
         data: Data,
         id: KeyPath<Data.Element, ID>,
@@ -42,7 +42,7 @@ public struct DSCoverFlow<Data, ID, Content>: View where Data: RandomAccessColle
             GeometryReader { p in
                 DSPaginatedScrollView(
                     pageWidth: p.size.width,
-                    interItemSpacing: appearance.size.number(for: spacing),
+                    interItemSpacing: appearance.spacing.value(for: spacing),
                     data: data,
                     id: id,
                     currentPage: $currentElementID

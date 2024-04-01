@@ -1,6 +1,6 @@
 //
 //  CGFloat+Conveniences.swift
-//  DSKitCore
+//  DSKit
 //
 //  Created by Ivan Borinschi on 09.02.2023.
 //

@@ -1,6 +1,6 @@
 //
 //  Items4.swift
-//  DSKitCore
+//  DSKit
 //
 //  Created by Ivan Borinschi on 21.12.2022.
 //
@@ -18,7 +18,7 @@ struct Items4: View {
             DSVStack(spacing: .medium) {
                 DSHScroll(data: viewModel.filters, id: \.self) { title in
                     DSText(title, .headlineWithSize(12))
-                        .dsPadding(.horizontal, .extraLarge)
+                        .dsPadding(.horizontal, .large)
                         .dsCardStyle()
                         .onTap { self.dismiss() }
                 }

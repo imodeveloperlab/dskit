@@ -1,6 +1,6 @@
 //
 //  DSButtonModifier.swift
-//  DSKitCore
+//  DSKit
 //
 //  Created by Ivan Borinschi on 19.02.2023.
 //

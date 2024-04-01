@@ -1,6 +1,6 @@
 //
 //  DSStackView.swift
-//  DSKitCore
+//  DSKit
 //
 //  Created by Ivan Borinschi on 21.12.2022.
 //
@@ -11,13 +11,13 @@ public struct DSVStack<Content: View>: View {
     
     @Environment(\.appearance) var appearance: DSAppearance
     
-    let spacing: DSSpacingDimension
+    let spacing: DSSpace
     let alignment: HorizontalAlignment
     let content: () -> Content
     
     public init(
         alignment: HorizontalAlignment = .leading,
-        spacing: DSSpacingDimension = .regular,
+        spacing: DSSpace = .regular,
         @ViewBuilder content: @escaping () -> Content
     ) {
         self.content = content
@@ -26,7 +26,7 @@ public struct DSVStack<Content: View>: View {
     }
     
     public var body: some View {
-        VStack(alignment: alignment, spacing: appearance.size.number(for: spacing)) {
+        VStack(alignment: alignment, spacing: appearance.spacing.value(for: spacing)) {
             content()
                 .dsDebuggable(debugColor: Color.mint)
                 .dsResetContentMargins()
@@ -53,36 +53,6 @@ public struct TestableDSVStack: View {
                     Color.green
                     Color.blue
                 }.overlay(alignment: .center, content: { Text("4") })
-                DSVStack(spacing: .large) {
-                    Color.yellow
-                    Color.green
-                    Color.blue
-                }.overlay(alignment: .center, content: { Text("5") })
-                DSVStack(spacing: .mediumLarge) {
-                    Color.yellow
-                    Color.green
-                    Color.blue
-                }.overlay(alignment: .center, content: { Text("6") })
-                DSVStack(spacing: .largexxxxx) {
-                    Color.yellow
-                    Color.green
-                    Color.blue
-                }.overlay(alignment: .center, content: { Text("7") })
-                DSVStack(spacing: .extraLarge) {
-                    Color.yellow
-                    Color.green
-                    Color.blue
-                }.overlay(alignment: .center, content: { Text("8") })
-                DSVStack(spacing: .larger) {
-                    Color.yellow
-                    Color.green
-                    Color.blue
-                }.overlay(alignment: .center, content: { DSText("9") })
-                DSVStack(spacing: .largest) {
-                    Color.yellow
-                    Color.green
-                    Color.blue
-                }.overlay(alignment: .center, content: { Text("10") })
             }
         }
     }

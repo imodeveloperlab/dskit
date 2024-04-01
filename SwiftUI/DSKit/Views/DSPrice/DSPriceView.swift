@@ -15,10 +15,10 @@ public struct DSPriceView: View {
     let regularAmount: String?
     let currency: String
     var discountBadge: String?
-    var size: DSSpacingDimension
+    var size: DSDimension
     var color: DisplayColor
     
-    public init(amount: String, regularAmount: String? = nil, currency: String, discountBadge: String? = nil, size: DSSpacingDimension = .medium, color: DisplayColor = .default) {
+    public init(amount: String, regularAmount: String? = nil, currency: String, discountBadge: String? = nil, size: DSDimension = .medium, color: DisplayColor = .default) {
         self.amount = amount
         self.currency = currency
         self.regularAmount = regularAmount
@@ -27,7 +27,7 @@ public struct DSPriceView: View {
         self.color = color
     }
     
-    public init(price: DSPrice, size: DSSpacingDimension = .medium, color: DisplayColor = .default) {
+    public init(price: DSPrice, size: DSDimension = .medium, color: DisplayColor = .default) {
         self.amount = price.amount
         self.currency = price.currency
         self.regularAmount = price.regularAmount
@@ -92,7 +92,7 @@ public struct DSPriceView: View {
         }
     }
     
-    private func scaledFontSize(for size: DSSpacingDimension) -> CGFloat {
+    private func scaledFontSize(for size: DSDimension) -> CGFloat {
         
         let regularSize: CGFloat = 12
         

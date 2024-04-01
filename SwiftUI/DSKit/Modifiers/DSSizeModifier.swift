@@ -1,6 +1,6 @@
 //
 //  DSSizeModifier.swift
-//  DSKitCore
+//  DSKit
 //
 //  Created by Ivan Borinschi on 19.12.2022.
 //
@@ -32,7 +32,7 @@ public struct DSSizeModifier: ViewModifier {
         return content.frame(width: width, height: height)
     }
     
-    private func calculateDimension(dimension: DSSpacingDimension, totalSize: CGFloat) -> CGFloat? {
+    private func calculateDimension(dimension: DSDimension, totalSize: CGFloat) -> CGFloat? {
         switch dimension {
         case .fillUpTheSpace:
             return totalSize
@@ -41,12 +41,12 @@ public struct DSSizeModifier: ViewModifier {
         }
     }
     
-    private func calculateFixedDimension(dimension: DSSpacingDimension) -> CGFloat? {
+    private func calculateFixedDimension(dimension: DSDimension) -> CGFloat? {
         switch dimension {
         case .none:
             return nil // No size set
         default:
-            return appearance.size.number(for: dimension) // Custom logic for other dimensions
+            return appearance.dimension.value(for: dimension) // Custom logic for other dimensions
         }
     }
 }

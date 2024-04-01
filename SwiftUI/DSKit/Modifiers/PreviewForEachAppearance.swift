@@ -1,6 +1,6 @@
 //
 //  PreviewForEachAppearance.swift
-//  DSKitCore
+//  DSKit
 //
 //  Created by Ivan Borinschi on 20.02.2023.
 //

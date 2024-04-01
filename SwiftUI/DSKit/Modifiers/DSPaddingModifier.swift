@@ -1,6 +1,6 @@
 //
 //  DSPadding.swift
-//  DSKitCore
+//  DSKit
 //
 //  Created by Ivan Borinschi on 14.12.2022.
 //
@@ -11,9 +11,9 @@ public struct DSPaddingModifier: ViewModifier {
     
     @Environment(\.appearance) var appearance: DSAppearance
     let edge: Edge.Set
-    let padding: DSSpacingDimension
+    let padding: DSPadding
     
-    init(edge: Edge.Set, padding: DSSpacingDimension) {
+    init(edge: Edge.Set, padding: DSPadding) {
         self.edge = edge
         self.padding = padding
     }
@@ -28,12 +28,12 @@ public struct DSPaddingModifier: ViewModifier {
     }
     
     func getPadding() -> CGFloat {
-        return appearance.size.number(for: padding)
+        return appearance.padding.value(for: padding)
     }
 }
 
 public extension View {
-    func dsPadding(_ edge: Edge.Set = .all, _ padding: DSSpacingDimension = .medium) -> some View {        
+    func dsPadding(_ edge: Edge.Set = .all, _ padding: DSPadding = .medium) -> some View {
         let modifier = DSPaddingModifier(
             edge: edge,
             padding: padding
@@ -41,7 +41,7 @@ public extension View {
         return self.modifier(modifier)
     }
     
-    func dsPadding(_ padding: DSSpacingDimension = .medium) -> some View {
+    func dsPadding(_ padding: DSPadding = .medium) -> some View {
         let modifier = DSPaddingModifier(
             edge: .all,
             padding: padding

@@ -83,13 +83,13 @@ public struct DSDesignGuideViewModifier: ViewModifier {
     public func body(content: Content) -> some View {
         switch orientation {
         case .horizontal:
-            content.background(DSDesignGuideView(spacing: appearance.size.number(for: .regular), orientation: .horizontal, divider: divider))
+            content.background(DSDesignGuideView(spacing: appearance.spacing.value(for: .regular), orientation: .horizontal, divider: divider))
         case .vertical:
-            content.background(DSDesignGuideView(spacing: appearance.size.number(for: .regular), orientation: .horizontal, divider: divider))
+            content.background(DSDesignGuideView(spacing: appearance.spacing.value(for: .regular), orientation: .horizontal, divider: divider))
         case .both:
             content
-                .background(DSDesignGuideView(spacing: appearance.size.number(for: .regular), orientation: .vertical, divider: divider))
-                .background(DSDesignGuideView(spacing: appearance.size.number(for: .regular), orientation: .horizontal, divider: divider))
+                .background(DSDesignGuideView(spacing: appearance.spacing.value(for: .regular), orientation: .vertical, divider: divider))
+                .background(DSDesignGuideView(spacing: appearance.spacing.value(for: .regular), orientation: .horizontal, divider: divider))
         }
     }
 }

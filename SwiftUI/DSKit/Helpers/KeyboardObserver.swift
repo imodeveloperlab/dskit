@@ -1,6 +1,6 @@
 //
 //  KeyboardObserver.swift
-//  DSKitCore
+//  DSKit
 //
 //  Created by Ivan Borinschi on 08.02.2023.
 //

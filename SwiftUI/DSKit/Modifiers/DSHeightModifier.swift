@@ -1,6 +1,6 @@
 //
 //  DSHeightModifier.swift
-//  DSKitCore
+//  DSKit
 //
 //  Created by Ivan Borinschi on 19.12.2022.
 //
@@ -10,16 +10,16 @@ import SwiftUI
 
 public struct DSHeightModifier: ViewModifier {
     
-    let height: DSSpacingDimension
+    let height: DSDimension
     @Environment(\.appearance) var appearance: DSAppearance
     
     public func body(content: Content) -> some View {
-        content.frame(height: appearance.size.number(for: height))
+        content.frame(height: appearance.dimension.value(for: height))
     }
 }
 
 public extension View {
-    func dsHeight(_ height: DSSpacingDimension) -> some View {
+    func dsHeight(_ height: DSDimension) -> some View {
         self.modifier(DSHeightModifier(height: height))
     }
 }

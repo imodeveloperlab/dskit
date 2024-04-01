@@ -1,6 +1,6 @@
 //
 //  LogInScreen3.swift
-//  DSKitCore
+//  DSKit
 //
 //  Created by Ivan Borinschi on 31.13.3033.
 //
@@ -26,7 +26,7 @@ struct LogInScreen3: View {
                 DSText(
                     "Meet new people from over millions of users. Create posts, find friends and more.", .subheadline,
                     multilineTextAlignment: .center
-                ).dsPadding(.horizontal, .extraLarge)
+                ).dsPadding(.horizontal, .large)
             }
             
            Spacer()

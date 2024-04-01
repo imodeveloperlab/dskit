@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct DSCardVerticalPaddingKey: EnvironmentKey {
-    static let defaultValue: DSSpacingDimension = .medium
+    static let defaultValue: DSSpace = .medium
 }
 
 extension EnvironmentValues {
-    var cardVerticalPadding: DSSpacingDimension {
+    var cardVerticalPadding: DSSpace {
         get { self[DSCardVerticalPaddingKey.self] }
         set { self[DSCardVerticalPaddingKey.self] = newValue }
     }

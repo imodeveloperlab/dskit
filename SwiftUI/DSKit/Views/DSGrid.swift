@@ -1,6 +1,6 @@
 //
 //  DSGrid.swift
-//  DSKitCore
+//  DSKit
 //
 //  Created by Ivan Borinschi on 21.12.2022.
 //
@@ -11,8 +11,8 @@ public struct DSGrid<Data, ID, Content>: View where Data: RandomAccessCollection
     
     @Environment(\.appearance) var appearance: DSAppearance
 
-    let viewHeight: DSSpacingDimension?
-    let spacing: DSSpacingDimension
+    let viewHeight: DSDimension?
+    let spacing: DSSpace
     let numberOfColumns: Int
     
     let data: Data
@@ -20,9 +20,9 @@ public struct DSGrid<Data, ID, Content>: View where Data: RandomAccessCollection
     let id: KeyPath<Data.Element, ID>
     
     public init(
-        viewHeight: DSSpacingDimension? = nil,
+        viewHeight: DSDimension? = nil,
         numberOfColumns: Int = 2,
-        spacing: DSSpacingDimension = .regular,
+        spacing: DSSpace = .regular,
         data: Data,
         id: KeyPath<Data.Element, ID>,
         @ViewBuilder content: @escaping (Data.Element) -> Content
@@ -36,7 +36,7 @@ public struct DSGrid<Data, ID, Content>: View where Data: RandomAccessCollection
     }
         
     var layout: [GridItem] {
-        Array(repeating: GridItem(.flexible(), spacing: appearance.size.number(for: self.spacing)), count: numberOfColumns)
+        Array(repeating: GridItem(.flexible(), spacing: appearance.spacing.value(for: self.spacing)), count: numberOfColumns)
     }
     
     public var body: some View {
@@ -44,7 +44,7 @@ public struct DSGrid<Data, ID, Content>: View where Data: RandomAccessCollection
     }
     
     var gridView: some View {
-        LazyVGrid(columns: layout, spacing: appearance.size.number(for: spacing)) {
+        LazyVGrid(columns: layout, spacing: appearance.spacing.value(for: spacing)) {
             ForEach(data, id: id) { element in
                 if let viewHeight = self.viewHeight {
                     self.content(element).dsHeight(viewHeight)

@@ -10,50 +10,23 @@ import UIKit
 
 public class PeachAppearance: DSAppearance {
     
-    // Appearance title
     public var title: String
-    
     public var darkModeSupport: Bool = false
-    
-    // Brand color
     public var brandColor: UIColor
-    
-    // Primary view colors
     public var primaryView: DSDesignableViewColors
-    
-    // Secondary view colors
     public var secondaryView: DSDesignableViewColors
-    
-    public var size: DSDesignableSize = DSDefaultDesignableSize(spatialSystem: 7)
-    
-    // General view margins
+    public var spacing: DSDesignableSpacing = DSDefaultDesignableSpacing(spatialSystem: 7)
+    public var padding: DSDesignablePadding = DSDefaultDesignablePadding(spatialSystem: 7)
+    public var dimension: DSDesignableDimension = DSDefaultDesignableDimension(spatialSystem: 7)
     public var margins: CGFloat = 15
-    
-    // Margins for grouped content
     public var groupMargins: CGFloat = 10
-    
-    // Inter items spacing
     public var interItemSpacing: CGFloat = 10
-    
-    // Tab bar colors
     public var tabBar: DSDesignableTabbarColor
-    
-    // Navigation bar colors
     public var navigationBar: DSDesignableNavigationBarColor
-    
-    // Currency colors
     public var price: DSDesignablePriceColor
-    
-    // Fonts
     public var fonts = DSDesignableFonts()
-    
-    // Prefer large titles
     public var prefersLargeTitles: Bool = true
-    
-    // Default Action element heights
     public var actionElementHeight: CGFloat = 48
-    
-    // Status bar styles
     public var statusBarStyleForDarkUserInterfaceStyle: UIStatusBarStyle = .darkContent
     public var statusBarStyleForLightUserInterfaceStyle: UIStatusBarStyle = .darkContent
     

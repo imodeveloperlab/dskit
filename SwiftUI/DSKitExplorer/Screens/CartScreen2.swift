@@ -1,6 +1,6 @@
 //
 //  CartScreen2.swift
-//  DSKitCore
+//  DSKit
 //
 //  Created by Ivan Borinschi on 21.12.2022.
 //

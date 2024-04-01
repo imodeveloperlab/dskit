@@ -1,6 +1,6 @@
 //
 //  DSHideKeyboardWhenTappedModifier.swift
-//  DSKitCore
+//  DSKit
 //
 //  Created by Ivan Borinschi on 28.12.2022.
 //

@@ -1,6 +1,6 @@
 //
 //  DSButton.swift
-//  DSKitCore
+//  DSKit
 //
 //  Created by Ivan Borinschi on 28.12.2022.
 //
@@ -27,7 +27,7 @@ public struct DSButton: View {
     var pushContentToSides: Bool = false
     var style: Style = .default
     var maxWidth: Bool
-    var spacing: DSSpacingDimension
+    var spacing: DSSpace
     let action: () -> Void
     
     public init(
@@ -37,7 +37,7 @@ public struct DSButton: View {
         pushContentToSides: Bool = false,
         style: Style = .default,
         maxWidth: Bool = true,
-        spacing: DSSpacingDimension = .regular,
+        spacing: DSSpace = .regular,
         action: @escaping () -> Void
     ) {
         self.title = title
@@ -55,7 +55,7 @@ public struct DSButton: View {
         pushContentToSides: Bool = false,
         style: Style = .default,
         maxWidth: Bool = true,
-        spacing: DSSpacingDimension = .regular,
+        spacing: DSSpace = .regular,
         action: @escaping () -> Void
     ) {
         self.init(
@@ -76,7 +76,7 @@ public struct DSButton: View {
         pushContentToSides: Bool = false,
         style: Style = .default,
         maxWidth: Bool = true,
-        spacing: DSSpacingDimension = .regular,
+        spacing: DSSpace = .regular,
         action: @escaping () -> Void
     ) {
         var leftImage: DSImage?

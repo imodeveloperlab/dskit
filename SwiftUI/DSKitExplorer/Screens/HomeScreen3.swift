@@ -1,6 +1,6 @@
 //
 //  HomeScreen3.swift
-//  DSKitCore
+//  DSKit
 //
 //  Created by Ivan Borinschi on 21.12.2022.
 //
@@ -89,7 +89,7 @@ extension HomeScreen3 {
             DSText(title, .smallTitle)
                 .frame(maxWidth: .infinity, alignment: .center)
                 .dsHeight(35)
-                .dsPadding(.horizontal, .extraLarge)
+                .dsPadding(.horizontal, .large)
                 .dsSecondaryBackground()
                 .dsCornerRadius()
                 .onTap { action() }

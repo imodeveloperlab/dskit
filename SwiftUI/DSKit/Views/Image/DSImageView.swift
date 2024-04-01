@@ -1,6 +1,6 @@
 //
 //  DSImage.swift
-//  DSKitCore
+//  DSKit
 //
 //  Created by Ivan Borinschi on 15.12.2022.
 //

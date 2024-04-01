@@ -9,44 +9,21 @@
 import UIKit
 
 public protocol DSAppearance {
-    
-    /// Appearance title
     var title: String { get set }
-    
-    /// Brand color
     var brandColor: UIColor { get set }
-    
-    /// Primary view colors
     var primaryView: DSDesignableViewColors { get set }
-    
-    /// Secondary view colors
     var secondaryView: DSDesignableViewColors { get set }
-    
-    /// Status bar
     var statusBarStyleForDarkUserInterfaceStyle: UIStatusBarStyle { get set }
     var statusBarStyleForLightUserInterfaceStyle: UIStatusBarStyle { get set }
-    
-    /// Margins and spaces
-    var size: DSDesignableSize { get set }
-    
-    /// Tabbar colors
+    var spacing: DSDesignableSpacing { get set }
+    var padding: DSDesignablePadding { get set }
+    var dimension: DSDesignableDimension { get set }
     var tabBar: DSDesignableTabbarColor { get set }
-    
-    /// Navigation Bar colors
     var navigationBar: DSDesignableNavigationBarColor { get set }
-    
-    /// Currency color and amount color
     var price: DSDesignablePriceColor { get set }
-    
-    /// Fonts
     var fonts: DSDesignableFonts { get set }
-    
-    /// Do we prefer large titles on screens?
     var prefersLargeTitles: Bool { get set }
-    
-    /// Action element height
     var actionElementHeight: CGFloat { get set }
-    
     var darkModeSupport: Bool { get }
 }
 

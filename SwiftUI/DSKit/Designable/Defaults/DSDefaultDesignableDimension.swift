@@ -1,5 +1,5 @@
 //
-//  DSDefaultDesignableSize.swift
+//  DSDefaultDesignableDimension.swift
 //  DSKit
 //
 //  Created by Ivan Borinschi on 26.02.2023.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct DSDefaultDesignableSize: DSDesignableSize {
+public struct DSDefaultDesignableDimension: DSDesignableDimension {
     
     public let spatialSystem: CGFloat
     
@@ -15,7 +15,7 @@ public struct DSDefaultDesignableSize: DSDesignableSize {
         self.spatialSystem = spatialSystem
     }
     
-    public func number(for space: DSSpacingDimension) -> CGFloat {
+    public func value(for space: DSDimension) -> CGFloat {
         switch space {
         case .small:
             spatialSystem.multiply(by: 0.5)

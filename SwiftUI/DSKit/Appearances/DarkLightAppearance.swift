@@ -10,48 +10,22 @@ import UIKit
 
 public class DarkLightAppearance: DSAppearance {
     
-    // Appearance title
     public var title: String
-    
     public var darkModeSupport: Bool = true
-    
-    // Brand color
     public var brandColor: UIColor
-    
-    // Primary view colors
     public var primaryView: DSDesignableViewColors
-    
-    // Secondary view colors
     public var secondaryView: DSDesignableViewColors
-    
-    /// Margins and spaces
-    public var size: DSDesignableSize = DSDefaultDesignableSize(spatialSystem: 6.5)
-    
-    // Tabbar
+    public var spacing: DSDesignableSpacing = DSDefaultDesignableSpacing(spatialSystem: 6.5)
+    public var padding: DSDesignablePadding = DSDefaultDesignablePadding(spatialSystem: 6.5)
+    public var dimension: DSDesignableDimension = DSDefaultDesignableDimension(spatialSystem: 6.5)
     public var tabBar: DSDesignableTabbarColor
-    
-    // Navigation bar
     public var navigationBar: DSDesignableNavigationBarColor
-    
-    // Text field
     public var textField: DSDesignableTextFieldColor
-    
-    // Price
     public var price: DSDesignablePriceColor
-    
-    // Fonts
     public var fonts = DSDesignableFonts()
-    
-    // Large titles
     public var prefersLargeTitles: Bool = true
-    
-    // Button style
     public var buttonStyle: DSButtonStyle = .default
-    
-    // Action element height
     public var actionElementHeight: CGFloat = 48
-    
-    // Status bar
     public var statusBarStyleForDarkUserInterfaceStyle: UIStatusBarStyle = .lightContent
     public var statusBarStyleForLightUserInterfaceStyle: UIStatusBarStyle = .darkContent
     

@@ -1,6 +1,6 @@
 //
 //  LogInScreen2.swift
-//  DSKitCore
+//  DSKit
 //
 //  Created by Ivan Borinschi on 31.13.3033.
 //
@@ -25,7 +25,7 @@ struct LogInScreen2: View {
             DSVStack(alignment: .leading) {
                 DSText("Welcome to\nDSKit", .headlineWithSize(38))
                 DSText("Meet new people with new\nideas and posts.", .subheadline)
-            }.dsPadding(.trailing, .extraLarge)
+            }.dsPadding(.trailing, .large)
             
             Spacer()
             Spacer()

@@ -15,99 +15,66 @@ public struct DSPriceView: View {
     let regularAmount: String?
     let currency: String
     var discountBadge: String?
-    var size: DSTextType
-    var color: DisplayColor
+    var textType: DSTextType
+    var color: Color?
     
-    public init(price: DSPrice, size: DSTextType, color: DisplayColor = .default) {
+    public init(price: DSPrice, size: DSTextType, color: Color? = nil) {
         self.amount = price.amount
         self.currency = price.currency
         self.regularAmount = price.regularAmount
         self.discountBadge = price.discountBadge
-        self.size = size
+        self.textType = size
         self.color = color
     }
     
-    public enum DisplayColor {
-        case `default`
-        case custom(Color)
+    var amountColor: DSColor {
+        if let color {
+            .customColor(color)
+        } else {
+            .priceRegularAmount
+        }
     }
     
     public var body: some View {
-        switch color {
-        case .custom(let customColor):
-            DSHStack(spacing: .small) {
-                
-                DSHStack(spacing: .zero) {
-                    DSText(currency.currencySymbol, size, color: .customColor(customColor))
-                    DSText(amount, size, color: .customColor(customColor))
-                }
-                
-                if let regularAmount = regularAmount {
-                    DSHStack(spacing: .zero) {
-                        DSText(currency.currencySymbol, size, color: .customColor(customColor.opacity(0.5)))
-                        DSText(regularAmount, size, color: .customColor(customColor.opacity(0.5)))
-                    }.strikethrough()
-                }
-                
-                if let discountBadge = discountBadge {
-                    DSText(discountBadge, size, color: .priceBadgeText)
-                        .dsPadding(.horizontal, .small)
-                        .dsPadding(.vertical, .custom(2))
-                        .background(appearance.price.badgeBackground.color)
-                        .dsCornerRadius()
-                        .scaleEffect(CGSize(width: 0.75, height: 0.75))
-                }
+        
+        DSHStack(spacing: .small) {
+            
+            DSHStack(spacing: .zero) {
+                DSText(currency.currencySymbol, textType, color: amountColor)
+                DSText(amount, textType, color: amountColor)
             }
-        default:
-            DSHStack(spacing: .small) {
-                
+            
+            if let regularAmount = regularAmount {
                 DSHStack(spacing: .zero) {
-                    DSText(currency.currencySymbol, size, color: .priceAmount)
-                    DSText(amount, size, color: .priceAmount)
+                    DSText(regularAmount, textType, color: amountColor).opacity(0.5)
                 }
+                .strikethrough()
                 
-                if let regularAmount = regularAmount {
-                    DSHStack(spacing: .zero) {
-                        DSText(currency.currencySymbol, size, color: .priceRegularAmount)
-                        DSText(regularAmount, size, color: .priceRegularAmount)
-                    }.strikethrough()
-                }
-                
-                if let discountBadge = discountBadge {
-                    DSText(discountBadge, size, color: .priceBadgeText)
-                        .dsPadding(.horizontal, .regular)
-                        .dsPadding(.vertical, .custom(2))
-                        .background(appearance.price.badgeBackground.color)
-                        .cornerRadius(4)
-                        .scaleEffect(CGSize(width: 0.75, height: 0.75))
-                }
+            }
+            
+            if let discountBadge = discountBadge {
+                DSText(discountBadge, .fontAndSize(textType.font, textType.size(appearance) * 0.60), color: .priceBadgeText)
+                    .dsPadding(.horizontal, .regular)
+                    .dsPadding(.vertical, .custom(2))
+                    .background(appearance.price.badgeBackground.color)
+                    .cornerRadius(4)
             }
         }
-    }
-    
-    private func priceColor(for color: DisplayColor) -> Color {
-        switch color {
-        case .default:
-            return Color(uiColor: appearance.price.amount)
-        case .custom(let customColor):
-            return customColor
-        }
-    }
-    
-    private func regularPriceColor(for color: DisplayColor) -> Color {
-        return Color(uiColor: appearance.price.regularAmount)
-    }
-    
-    private func badgeColor(for color: DisplayColor) -> Color {
-        return Color(uiColor: appearance.price.badgeBackground)
     }
 }
 
 struct Testable_DSPrice: View {
-    let price = DSPrice(amount: "100", regularAmount: "100", currency: "$", discountBadge: "10% OFF")
+    let price = DSPrice(amount: "100", regularAmount: "250", currency: "$", discountBadge: "10% OFF")
     var body: some View {
+        DSPriceView(price: price, size: .font(.title1))
+        DSPriceView(price: price, size: .font(.title2))
+        DSPriceView(price: price, size: .font(.title3))
         DSPriceView(price: price, size: .font(.headline))
         DSPriceView(price: price, size: .font(.subheadline))
+        DSPriceView(price: price, size: .font(.caption1), color: .green)
+        DSPriceView(price: price, size: .font(.caption2), color: .green)
+        DSPriceView(price: price, size: .font(.footnote))
+        DSPriceView(price: price, size: .fontAndSize(.headline, 20))
     }
 }
 

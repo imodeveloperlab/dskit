@@ -25,4 +25,19 @@ public enum DSTextType: Equatable, Hashable {
             return (font: .fontWithSize(font, size), color: DSTextColor.custom(color))
         }
     }
+    
+    var font: DSTextFont {
+        return switch self {
+        case .font(let font):
+            font
+        case .fontAndSize(let font, _):
+            font
+        case .fontSizeAndColor(let font, _, _):
+            font
+        }
+    }
+    
+    func size(_ appearance: DSAppearance) -> CGFloat {
+        font.getUIFont(from: appearance).pointSize
+    }
 }

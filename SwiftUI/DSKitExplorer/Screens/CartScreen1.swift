@@ -90,9 +90,9 @@ extension CartScreen1 {
                 DSText("Total",.font(.headline))
                 Spacer()
                 DSHStack(alignment: .firstTextBaseline, spacing: .small) {
-                    DSText("for",.font(.subheadline))
-                    DSText(itemsCount,.smallTitle)
-                    DSText("items",.font(.subheadline))
+                    DSText("for", .font(.subheadline))
+                    DSText(itemsCount, .smallTitle)
+                    DSText("items", .font(.subheadline))
                     DSPriceView(price: price, size: .font(.headline))
                 }
             }

@@ -19,7 +19,7 @@ struct NotificationsScreen1: View {
             Spacer()
             
             DSHStack {
-                DSText("Turn on\nnotifications", .headlineWithSize(36))
+                DSText("Turn on\nnotifications", .fontAndSize(.headline, 36))
                 Spacer()
                 DSImageView(sfSymbol: "bell.fill", size: 60, tint: .color(.secondaryViewBackground))
             }
@@ -27,7 +27,7 @@ struct NotificationsScreen1: View {
             DSText("Meet new people, create posts, find friends and more.")
          
             DSHStack {
-                DSText("Notifications", .headline)
+                DSText("Notifications", .font(.headline))
                 Spacer()
                 Toggle("Show welcome message", isOn: $isSwitchOn)
                     .tint(appearance.brandColor.semanticGreenColor.color)
@@ -37,7 +37,7 @@ struct NotificationsScreen1: View {
             .dsSecondaryBackground()
             .dsCornerRadius()
             
-            DSText("Enable notifications to make sure you don't miss out the post from your friends", .caption1)
+            DSText("Enable notifications to make sure you don't miss out the post from your friends", .font(.caption1))
             Spacer()
             
             DSButton(title: "Dismiss") { }

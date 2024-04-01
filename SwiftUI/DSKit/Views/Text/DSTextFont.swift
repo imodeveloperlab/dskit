@@ -9,58 +9,54 @@
 import UIKit
 import SwiftUI
 
-public enum DSTextFont: Equatable, Hashable {
+public indirect enum DSTextFont: Equatable, Hashable {
     
     case largeTitle
     case title1
     case title2
     case title3
     case headline
-    case headlineWithSize(CGFloat)
     case subheadline
-    case subheadlineWithSize(CGFloat)
     case body
-    case bodyWithSize(CGFloat)
     case callout
     case caption1
     case caption2
     case footnote
     case custom(UIFont)
+    case fontWithSize(DSTextFont, CGFloat)
     
     public func getFont(from appearance: DSAppearance) -> Font {
-        var font: UIFont
-        switch self {
+        return Font(getUIFont(from: appearance))
+    }
+    
+    public func getUIFont(from appearance: DSAppearance) -> UIFont {
+        return switch self {
         case .title1:
-            font = appearance.fonts.title1
+            appearance.fonts.title1
         case .title2:
-            font = appearance.fonts.title2
+            appearance.fonts.title2
         case .title3:
-            font = appearance.fonts.title3
+            appearance.fonts.title3
         case .headline:
-            font = appearance.fonts.headline
+            appearance.fonts.headline
         case .subheadline:
-            font = appearance.fonts.subheadline
+            appearance.fonts.subheadline
         case .body:
-            font = appearance.fonts.body
+            appearance.fonts.body
         case .callout:
-            font = appearance.fonts.callout
+            appearance.fonts.callout
         case .caption1:
-            font = appearance.fonts.caption1
+            appearance.fonts.caption1
         case .caption2:
-            font = appearance.fonts.caption2
+            appearance.fonts.caption2
         case .footnote:
-            font = appearance.fonts.footnote
+            appearance.fonts.footnote
         case .largeTitle:
-            font = appearance.fonts.largeTitle
-        case .headlineWithSize(let size):
-            font = appearance.fonts.headline.withSize(size)
-        case .bodyWithSize(let size):
-            font = appearance.fonts.body.withSize(size)
-        case .subheadlineWithSize(let size):
-            font = appearance.fonts.subheadline.withSize(size)
+            appearance.fonts.largeTitle
         case .custom(let customFont):
-            font = customFont
+            customFont
+        case .fontWithSize(let font, let size):
+            font.getUIFont(from: appearance).withSize(size)
         }
-        return Font(font)
     }
 }

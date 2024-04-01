@@ -28,7 +28,7 @@ struct SignUpScreen3: View {
                     
                 DSText("Please enter your mobile number to get\nsms to activate your account")
                 DSTextField.phone(value: viewModel.phone)
-                DSText("You will receive an sms with code, which you should insert in the next step", .caption1)
+                DSText("You will receive an sms with code, which you should insert in the next step", .font(.caption1))
             }
             
             DSButton(title: "Subbmit") { dismiss() }

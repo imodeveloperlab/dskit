@@ -22,11 +22,11 @@ struct ItemDetails2: View {
                 DSVStack(spacing: .medium) {
                     
                     DSVStack(spacing: .zero) {
-                        DSText(viewModel.title, .title2)
-                        DSText(viewModel.subtitle, .subheadline)
+                        DSText(viewModel.title, .font(.title2))
+                        DSText(viewModel.subtitle, .font(.subheadline))
                     }
                     
-                    DSPriceView(price: viewModel.price, size: .headline)
+                    DSPriceView(price: viewModel.price, size: .font(.headline))
                     DSQuantityPicker()
                 }
                 
@@ -52,7 +52,7 @@ struct ItemDetails2: View {
 
                 DSText(
                     viewModel.description,
-                    .callout
+                    .font(.callout)
                 )
             }
         }
@@ -61,7 +61,7 @@ struct ItemDetails2: View {
                 DSButton(title: "Add to cart", rightSFSymbolName: "cart") {
                     dismiss()
                 }
-                DSText(viewModel.priceDisclaimer, .caption2, multilineTextAlignment: .center)
+                DSText(viewModel.priceDisclaimer, .font(.caption2), multilineTextAlignment: .center)
                     .dsPadding(.horizontal)
             }
         }

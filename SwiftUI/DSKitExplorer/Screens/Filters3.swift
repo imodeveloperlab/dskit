@@ -69,7 +69,7 @@ extension Filters3 {
             DSHStack {
                 DSText(title, .smallTitle)
                 Spacer()
-                DSText(option, .subheadlineWithSize(14))
+                DSText(option, .fontAndSize(.subheadline, 14))
                 DSChevronView()
             }.dsCardStyle()
         }
@@ -105,7 +105,7 @@ extension Filters3 {
                 DSText(title, .smallTitle)
                 Spacer()
                 Slider(value: $value, in: 0...100).tint(appearance.brandColor.semanticGreenColor.color)
-                DSText("\(round(value))", .subheadline)
+                DSText("\(round(value))", .font(.subheadline))
                     .dsWidth(40)
             }.dsCardStyle()
         }

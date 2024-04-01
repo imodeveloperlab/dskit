@@ -30,7 +30,7 @@ struct Shipping1: View {
             DSBottomContainer {
                 DSHStack {
                     DSText("Next Step:", .smallTitle)
-                    DSText("Checkout", .subheadlineWithSize(14))
+                    DSText("Checkout", .fontAndSize(.subheadline, 14))
                 }
                 DSButton(
                     title: "Continue",
@@ -54,7 +54,7 @@ extension Shipping1 {
             DSVStack(spacing: .small) {
                 DSText(address.address, .smallTitle)
                 DSHStack(spacing: .small) {
-                    DSImageView(sfSymbol: "phone", size: 12, tint: .text(.subheadline))
+                    DSImageView(sfSymbol: "phone", size: 12, tint: .text(.font(.subheadline)))
                     DSText(address.phone, .smallSubtitle)
                 }
             }

@@ -69,7 +69,7 @@ extension CartScreen5 {
                     }
                     DSHStack {
                         DSImageView(sfSymbol: "star.fill", size: .smallIcon, tint: .customColor(Color.yellow))
-                        DSText("3k Reviews", .caption1)
+                        DSText("3k Reviews", .font(.caption1))
                     }
                     DSPriceView(price: product.price, size: .smallTitle)
                     
@@ -103,13 +103,13 @@ extension CartScreen5 {
         let price: DSPrice
         var body: some View {
             DSHStack() {
-                DSText("Total", .headline)
+                DSText("Total", .font(.headline))
                 Spacer()
                 DSHStack(alignment: .firstTextBaseline, spacing: .small) {
-                    DSText("for", .subheadline)
+                    DSText("for", .font(.subheadline))
                     DSText(itemsCount,.smallTitle)
-                    DSText("items",.subheadline)
-                    DSPriceView(price: price, size: .headline)
+                    DSText("items",.font(.subheadline))
+                    DSPriceView(price: price, size: .font(.headline))
                 }
             }
         }
@@ -120,7 +120,7 @@ extension CartScreen5 {
     struct TagView: View {
         let tag: String
         var body: some View {
-            DSText(tag, .headlineWithSize(9))
+            DSText(tag, .fontAndSize(.headline, 9))
                 .dsPadding(.horizontal, .regular)
                 .dsPadding(.vertical, .small)
                 .dsBackground(.primary)

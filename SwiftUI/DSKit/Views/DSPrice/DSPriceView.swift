@@ -18,15 +18,6 @@ public struct DSPriceView: View {
     var size: DSTextType
     var color: DisplayColor
     
-    public init(amount: String, regularAmount: String? = nil, currency: String, discountBadge: String? = nil, size: DSTextType, color: DisplayColor = .default) {
-        self.amount = amount
-        self.currency = currency
-        self.regularAmount = regularAmount
-        self.discountBadge = discountBadge
-        self.size = size
-        self.color = color
-    }
-    
     public init(price: DSPrice, size: DSTextType, color: DisplayColor = .default) {
         self.amount = price.amount
         self.currency = price.currency
@@ -94,27 +85,6 @@ public struct DSPriceView: View {
         }
     }
     
-    private func scaledFontSize(for size: DSDimension) -> CGFloat {
-        switch size {
-        case .small:
-            return 12
-        case .regular:
-            return 14
-        case .medium:
-            return 18
-        case .large:
-            return 20
-        case .custom(let customSize):
-            return customSize
-        case .zero:
-            return 12
-        case .fillUpTheSpace:
-            return 12
-        case .none:
-            return 12
-        }
-    }
-    
     private func priceColor(for color: DisplayColor) -> Color {
         switch color {
         case .default:
@@ -133,20 +103,21 @@ public struct DSPriceView: View {
     }
 }
 
+struct Testable_DSPrice: View {
+    let price = DSPrice(amount: "100", regularAmount: "100", currency: "$", discountBadge: "10% OFF")
+    var body: some View {
+        DSPriceView(price: price, size: .font(.headline))
+        DSPriceView(price: price, size: .font(.subheadline))
+    }
+}
+
 struct DSPrice_Previews: PreviewProvider {
     static var previews: some View {
-        PreviewForEach { DSPreview {
-            DSPriceView(amount: "1.50", regularAmount: "2.00", currency: "$", discountBadge: "10% OFF", size: .smallTitle)
-                DSPriceView(amount: "1.50", regularAmount: "2.00", currency: "$", discountBadge: "10% OFF", size: .smallTitle)
-                DSPriceView(amount: "1.50", regularAmount: "2.00", currency: "$", discountBadge: "10% OFF", size: .headline)
-                    .dsPadding(.small)
-                    .dsSecondaryBackground()
-                    .dsCornerRadius()
-                DSPriceView(amount: "1.50", regularAmount: "2.00", currency: "$", discountBadge: "10% OFF", size: .subheadline)
-                    .dsPadding(.medium)
-                    .dsSecondaryBackground()
-                    .dsCornerRadius()
+        PreviewForEach { 
+            DSPreview {
+                Testable_DSPrice()
             }
+            //.dsLayoutDebug()
         }
     }
 }

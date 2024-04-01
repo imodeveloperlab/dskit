@@ -22,21 +22,21 @@ struct ItemDetails4: View {
                 }
                 
                 DSVStack(spacing: .zero) {
-                    DSText(viewModel.title, .title2)
-                    DSText(viewModel.subtitle, .subheadline)
+                    DSText(viewModel.title, .font(.title2))
+                    DSText(viewModel.subtitle, .font(.subheadline))
                 }
                 
                 DSHStack(alignment: .center, spacing: .regular) {
-                    DSText("New", .headlineWithSize(12), color: .customColor(Color.white))
+                    DSText("New", .fontAndSize(.headline, 12), color: .customColor(Color.white))
                         .dsPadding(.vertical, .small)
                         .dsPadding(.horizontal, .regular)
                         .dsBackground(.customColor(.green))
                         .dsCornerRadius()
                     DSRatingView(rating: 4.5, size: 16)
-                    DSText("24K Ratings", .callout)
+                    DSText("24K Ratings", .font(.callout))
                 }
                 
-                DSText(viewModel.description, .caption1)
+                DSText(viewModel.description, .font(.caption1))
                     .dsSectionStyle(title: "Description")
                 
                 DSPickerView(
@@ -67,9 +67,9 @@ struct ItemDetails4: View {
         .safeAreaInset(edge: .bottom) {
             DSBottomContainer {
                 DSHStack {
-                    DSText("Total", .headline)
+                    DSText("Total", .font(.headline))
                     Spacer()
-                    DSPriceView(price: viewModel.price, size: .headline)
+                    DSPriceView(price: viewModel.price, size: .font(.headline))
                 }
                 DSButton(title: "Buy Now") { dismiss() }
                 

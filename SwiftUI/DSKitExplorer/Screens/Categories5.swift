@@ -34,7 +34,7 @@ extension Categories5 {
                     DSImageView(url: category.image)
                     DSVStack(alignment: .center, spacing: .zero) {
                         DSText(category.title, .smallTitle)
-                        DSText(category.description, .subheadline)
+                        DSText(category.description, .font(.subheadline))
                     }.dsPadding(.regular)
                 }
                 .dsSecondaryBackground()
@@ -52,7 +52,7 @@ extension Categories5 {
                 }
                 .overlay(alignment: .topLeading) {
                     if let tag = category.tag {
-                        DSText(tag, .headlineWithSize(10), color: .customColor(.white))
+                        DSText(tag, .fontAndSize(.headline, 10), color: .customColor(.white))
                         .dsPadding(.regular)
                         .dsBlurBackground(style: .light)
                         .dsCornerRadius()

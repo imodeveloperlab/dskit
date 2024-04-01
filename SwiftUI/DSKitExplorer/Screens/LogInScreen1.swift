@@ -21,11 +21,11 @@ public struct LogInScreen1: View {
             
             DSVStack(spacing: .medium) {
                 DSVStack(alignment: .leading, spacing: .small) {
-                    DSText("DSKit", .headlineWithSize(38))
+                    DSText("DSKit", .fontAndSize(.headline, 38))
                         .showWhenKeyboardIsDisplayed()
-                    DSText("Welcome to\nDSKit shop", .headlineWithSize(35))
+                    DSText("Welcome to\nDSKit shop", .fontAndSize(.headline, 35))
                         .hideWhenKeyboardIsDisplayed()
-                    DSText("An exciting place for the whole\nfamily to shop", .subheadline)
+                    DSText("An exciting place for the whole\nfamily to shop", .font(.subheadline))
                 }.fixedSize(horizontal: false, vertical: true)
                 
                 DSVStack {

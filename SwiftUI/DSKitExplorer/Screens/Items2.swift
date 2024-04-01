@@ -59,7 +59,7 @@ extension Items2 {
                     )
                 }.overlay(alignment: .topLeading) {
                     if let tag = product.tag {
-                        DSText(tag, .headlineWithSize(9))
+                        DSText(tag, .fontAndSize(.headline, 9))
                             .dsPadding(.small)
                             .dsBackground(.primary)
                             .dsCornerRadius()

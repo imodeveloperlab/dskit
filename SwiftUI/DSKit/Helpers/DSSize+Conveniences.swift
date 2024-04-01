@@ -5,8 +5,6 @@
 //  Created by Ivan Borinschi on 13.03.2023.
 //
 
-import DSKit
-
 public extension DSSize {
     static var smallIcon: DSSize {
         15

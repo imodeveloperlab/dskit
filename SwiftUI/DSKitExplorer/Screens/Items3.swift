@@ -48,7 +48,7 @@ extension Items3 {
                         .dsCornerRadius()
                     DSVStack(alignment: .leading) {
                         DSText(product.title, .smallTitle)
-                        DSText(product.description, .caption2)
+                        DSText(product.description, .font(.caption2))
                         DSPriceView(price: product.price, size: .smallTitle)
                     }.frame(maxWidth: .infinity, alignment: .leading)
                 }

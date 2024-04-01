@@ -17,7 +17,7 @@ struct Items4: View {
         ScrollView {
             DSVStack(spacing: .medium) {
                 DSHScroll(data: viewModel.filters, id: \.self) { title in
-                    DSText(title, .headlineWithSize(12))
+                    DSText(title, .fontAndSize(.headline, 12))
                         .dsPadding(.horizontal, .large)
                         .dsCardStyle()
                         .onTap { self.dismiss() }

@@ -51,7 +51,7 @@ extension CartScreen4 {
                         DSImageView(url: product.image, size: .size(width: 100, height: 100))
                             .overlay(alignment: .bottomLeading) {
                                 if let tag = product.tag {
-                                    DSText(tag, .headlineWithSize(9))
+                                    DSText(tag, .fontAndSize(.headline, 9))
                                         .dsPadding(.small)
                                         .dsBackground(.primary)
                                         .dsCornerRadius()
@@ -63,9 +63,9 @@ extension CartScreen4 {
                     DSVStack(alignment: .leading) {
                         DSText(product.title, .smallTitle)
                         DSHStack {
-                            DSText("Color:", .subheadline)
+                            DSText("Color:", .font(.subheadline))
                             product.color.dsSize(.smallIcon).dsCornerRadius()
-                            DSText("Size:", .subheadline)
+                            DSText("Size:", .font(.subheadline))
                             DSText(product.size, .smallTitle)
                         }
                         DSPriceView(price: product.price, size: .smallTitle)
@@ -100,13 +100,13 @@ extension CartScreen4 {
         let price: DSPrice
         var body: some View {
             DSHStack() {
-                DSText("Total",.headline)
+                DSText("Total",.font(.headline))
                 Spacer()
                 DSHStack(alignment: .firstTextBaseline, spacing: .small) {
-                    DSText("for", .subheadline)
+                    DSText("for", .font(.subheadline))
                     DSText(itemsCount, .smallTitle)
-                    DSText("items", .subheadline)
-                    DSPriceView(price: price, size: .subheadline)
+                    DSText("items", .font(.subheadline))
+                    DSPriceView(price: price, size: .font(.subheadline))
                 }
             }
         }

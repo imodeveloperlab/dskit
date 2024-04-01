@@ -30,8 +30,8 @@
 //                DSVStack {
 //                    DSCard {
 //                        DSHStack {
-//                            DSText("Demo", .headline)
-//                            DSImageView(sfSymbol: "eraser.line.dashed.fill", size: .medium, tint: .text(.headline))
+//                            DSText("Demo", .font(.headline)
+//                            DSImageView(sfSymbol: "eraser.line.dashed.fill", size: .medium, tint: .text(.font(.headline)))
 //                        }
 //                    }
 //                }.dsPadding()

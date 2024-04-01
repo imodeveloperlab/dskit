@@ -19,12 +19,12 @@ struct LogInScreen2: View {
             DSImageView(
                 sfSymbol: "square.3.layers.3d.top.filled",
                 size: 50,
-                tint: .text(.headline)
+                tint: .text(.font(.headline))
             )
             
             DSVStack(alignment: .leading) {
-                DSText("Welcome to\nDSKit", .headlineWithSize(38))
-                DSText("Meet new people with new\nideas and posts.", .subheadline)
+                DSText("Welcome to\nDSKit", .fontAndSize(.headline, 38))
+                DSText("Meet new people with new\nideas and posts.", .font(.subheadline))
             }.dsPadding(.trailing, .large)
             
             Spacer()

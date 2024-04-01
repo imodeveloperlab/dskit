@@ -12,7 +12,7 @@ public struct DSChevronView: View {
     public init() { }
 
     public var body: some View {
-        DSImageView(sfSymbol: "chevron.right", size: .unspecified, tint: .text(.headline))
+        DSImageView(sfSymbol: "chevron.right", size: .unspecified, tint: .text(.font(.headline)))
             .dsHeight(.medium)
             .opacity(0.5)
     }

@@ -54,7 +54,7 @@ extension Items8 {
                     }
                     DSHStack {
                         DSRatingView(rating: 4.5, size: 12)
-                        DSText("2.4k Reviews", .caption2)
+                        DSText("2.4k Reviews", .font(.caption2))
                     }
                     DSPriceView(price: product.price, size: .smallTitle)
                 }
@@ -73,7 +73,7 @@ extension Items8 {
                 DSImageView(
                     sfSymbol: "ellipsis",
                     size: .regular,
-                    tint: .text(.headline)
+                    tint: .text(.font(.headline))
                 )
                 .dsPadding(.medium)
             }

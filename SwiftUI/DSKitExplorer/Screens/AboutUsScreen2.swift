@@ -45,22 +45,24 @@ struct AboutUsScreen2: View {
     
     var infoView: some View {
         ScrollView {
-            DSVStack {
-                DSVStack {
-                    DSText("Best Store in town", .title2).frame(maxWidth: .infinity, alignment: .leading)
-                    DSText("Here you will feel the attitude, here you will receive quality, here you will see the atmosphere of an authentic store", .body).frame(maxWidth: .infinity, alignment: .leading)
-                }
-                
-                DSCoverFlow(height: 300, data: infoImageGallery, id: \.self) { image in
-                    DSImageView(url: image).dsCornerRadius()
-                }
-                
-                DSVStack {
-                    DSText(DSFaker().text, .body).frame(maxWidth: .infinity, alignment: .leading)
-                    DSText(DSFaker().text, .subheadline).frame(maxWidth: .infinity, alignment: .leading)
-                    DSText(DSFaker().text, .body).frame(maxWidth: .infinity, alignment: .leading)
-                }
-            }
+//            DSVStack {
+//                DSVStack {
+//                    DSText("Best Store in town", .font(.title2))
+//                        .frame(maxWidth: .infinity, alignment: .leading)
+//                    DSText("Here you will feel the attitude, here you will receive quality, here you will see the atmosphere of an authentic store", .font(.body))
+//                        .frame(maxWidth: .infinity, alignment: .leading)
+//                }
+//                
+//                DSCoverFlow(height: 300, data: infoImageGallery, id: \.self) { image in
+//                    DSImageView(url: image).dsCornerRadius()
+//                }
+//                
+//                DSVStack {
+//                    DSText(DSFaker().text, .font(.body)).frame(maxWidth: .infinity, alignment: .leading)
+//                    DSText(DSFaker().text, .font(.subheadline)).frame(maxWidth: .infinity, alignment: .leading)
+//                    DSText(DSFaker().text, .font(.body)).frame(maxWidth: .infinity, alignment: .leading)
+//                }
+//            }
         }
     }
     
@@ -74,20 +76,20 @@ struct AboutUsScreen2: View {
                                 .dsSize(100)
                             
                             DSVStack(spacing: .small) {
-                                DSText(DSFaker().name, .headline)
+                                DSText(DSFaker().name, .font(.headline))
                                    .frame(maxWidth: .infinity, alignment: .leading)
                                 DSHStack {
-                                    DSImageView(sfSymbol: "calendar", size: .size(14), tint: .text(.caption1))
-                                    DSText(Date().stringFormatted(dateStyle: .medium, timeStyle: .none), .subheadline)
+                                    DSImageView(sfSymbol: "calendar", size: .size(14), tint: .text(.font(.caption1)))
+                                    DSText(Date().stringFormatted(dateStyle: .medium, timeStyle: .none), .font(.subheadline))
                                     DSHStack(spacing: .small) {
                                         DSImageView(sfSymbol: "star.fill", size: .size(14), tint: .customColor(Color.yellow))
                                         DSImageView(sfSymbol: "star.fill", size: .size(14), tint: .customColor(Color.yellow))
                                         DSImageView(sfSymbol: "star.fill", size: .size(14), tint: .customColor(Color.yellow))
                                         DSImageView(sfSymbol: "star.fill", size: .size(14), tint: .customColor(Color.yellow))
-                                        DSImageView(sfSymbol: "star", size:.size(14), tint: .text(.caption1))
+                                        DSImageView(sfSymbol: "star", size:.size(14), tint: .text(.font(.caption1)))
                                     }
                                 }
-                                DSText(DSFaker().text, .caption1)
+                                DSText(DSFaker().text, .font(.caption1))
                                     .frame(maxWidth: .infinity, alignment: .leading)
                             }
                         }
@@ -116,14 +118,14 @@ struct AboutUsScreen2: View {
                     DSHStack(alignment: .healthSafetyAlignment, spacing: .regular) {
                         
                         DSVStack(spacing: .medium) {
-                            DSImageView(sfSymbol: "info.circle.fill", size: .regular, tint: .text(.headline))
+                            DSImageView(sfSymbol: "info.circle.fill", size: .regular, tint: .text(.font(.headline)))
                                 .alignmentGuide(.healthSafetyAlignment) { d in d[VerticalAlignment.center] }
                         }
                         
                         DSVStack {
-                            DSText("Health and safety", .headline)
+                            DSText("Health and safety", .font(.headline))
                                 .alignmentGuide(.healthSafetyAlignment) { d in d[VerticalAlignment.center] }
-                            DSText("· Mask required\n· Temperature check required\n· Staff wear masks\n· Staff get temperature checks", .subheadlineWithSize(14))
+                            DSText("· Mask required\n· Temperature check required\n· Staff wear masks\n· Staff get temperature checks", .fontAndSize(.subheadline, 14))
                                 .frame(maxWidth: .infinity, alignment: .leading)
                         }
                     }
@@ -164,10 +166,10 @@ struct ContactView: View {
     
     var body: some View {
         DSHStack {
-            DSImageView(sfSymbol: iconName, size: .regular, tint: .text(.headline))
+            DSImageView(sfSymbol: iconName, size: .regular, tint: .text(.font(.headline)))
             DSHStack {
                 DSText(title, .smallTitle)
-                DSText(info, .subheadlineWithSize(14))
+                DSText(info, .fontAndSize(.subheadline, 14))
                     .frame(maxWidth: .infinity, alignment: .leading)
             }
         }.dsCardStyle()

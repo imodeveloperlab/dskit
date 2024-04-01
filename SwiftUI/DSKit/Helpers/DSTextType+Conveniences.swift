@@ -8,14 +8,14 @@
 public extension DSTextType {
 
     static var smallTitle: DSTextType {
-        .headlineWithSize(14)
+        .fontAndSize(.headline, 14)
     }
     
     static var smallSubtitle: DSTextType {
-        .subheadlineWithSize(12)
+        .fontAndSize(.subheadline, 12)
     }
     
     static var bigTitle: DSTextType {
-        .headlineWithSize(30)
+        .fontAndSize(.headline, 30)
     }
 }

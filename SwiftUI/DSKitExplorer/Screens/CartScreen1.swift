@@ -87,13 +87,13 @@ extension CartScreen1 {
         let price: DSPrice
         var body: some View {
             DSHStack() {
-                DSText("Total",.headline)
+                DSText("Total",.font(.headline))
                 Spacer()
                 DSHStack(alignment: .firstTextBaseline, spacing: .small) {
-                    DSText("for",.subheadline)
+                    DSText("for",.font(.subheadline))
                     DSText(itemsCount,.smallTitle)
-                    DSText("items",.subheadline)
-                    DSPriceView(price: price, size: .headline)
+                    DSText("items",.font(.subheadline))
+                    DSPriceView(price: price, size: .font(.headline))
                 }
             }
         }

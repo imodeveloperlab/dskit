@@ -21,10 +21,10 @@ struct LogInScreen3: View {
                 DSImageView(
                     sfSymbol: "square.3.layers.3d.top.filled",
                     size: 50,
-                    tint: .text(.headline)
+                    tint: .text(.font(.headline))
                 )
                 DSText(
-                    "Meet new people from over millions of users. Create posts, find friends and more.", .subheadline,
+                    "Meet new people from over millions of users. Create posts, find friends and more.", .font(.subheadline),
                     multilineTextAlignment: .center
                 ).dsPadding(.horizontal, .large)
             }
@@ -35,7 +35,7 @@ struct LogInScreen3: View {
             
             DSVStack(alignment: .center) {
                 
-                DSText("Log in with social networks", .subheadline)
+                DSText("Log in with social networks", .font(.subheadline))
                 
                 DSHStack {
                     DSButton(
@@ -57,7 +57,7 @@ struct LogInScreen3: View {
                     }
                 }
                 
-                DSText("or sign up with Email", .subheadline)
+                DSText("or sign up with Email", .font(.subheadline))
                 DSButton(
                     title: "Sign Up",
                     rightImage: DSImage(sfSymbolName: "envelope.fill", size: .smallIcon),

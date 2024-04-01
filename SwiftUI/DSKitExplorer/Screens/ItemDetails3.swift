@@ -23,32 +23,32 @@ struct ItemDetails3: View {
                     
                     DSHStack {
                         DSVStack(spacing: .zero) {
-                            DSText(viewModel.title, .title2)
-                            DSText(viewModel.subtitle, .subheadline)
+                            DSText(viewModel.title, .font(.title2))
+                            DSText(viewModel.subtitle, .font(.subheadline))
                         }.frame(maxWidth: .infinity, alignment: .leading)
                     }
                     
                     DSHStack(alignment: .center, spacing: .regular) {
                         DSRatingView(rating: 4.5, size: 16)
-                        DSText("24K Ratings", .callout)
+                        DSText("24K Ratings", .font(.callout))
                     }
                     
                     DSVStack(spacing: .zero) {
                         DSHStack(alignment: .center, spacing: .regular) {
-                            DSImageView(sfSymbol: "circlebadge.fill", size: .small, tint: .text(.caption2))
-                            DSText("Colour Shown: Light Charcoal/Black/Lemon Venom/University Red", .caption2)
+                            DSImageView(sfSymbol: "circlebadge.fill", size: .small, tint: .text(.font(.caption2)))
+                            DSText("Colour Shown: Light Charcoal/Black/Lemon Venom/University Red", .font(.caption2))
                         }
                         DSHStack(alignment: .center, spacing: .regular) {
-                            DSImageView(sfSymbol: "circlebadge.fill", size: .small, tint: .text(.caption2))
-                            DSText("Style: CW6575-001", .caption2)
+                            DSImageView(sfSymbol: "circlebadge.fill", size: .small, tint: .text(.font(.caption2)))
+                            DSText("Style: CW6575-001", .font(.caption2))
                         }
                     }
                     
-                    DSPriceView(price: viewModel.price, size: .headline)
+                    DSPriceView(price: viewModel.price, size: .font(.headline))
                     
                     DSHStack(alignment: .center) {
                         DSImageView(sfSymbol: "info.circle.fill", size: .regular, tint: .customColor(.yellow))
-                        DSText(viewModel.priceDisclaimer, .caption2, multilineTextAlignment: .leading)
+                        DSText(viewModel.priceDisclaimer, .font(.caption2), multilineTextAlignment: .leading)
                     }
                 }
                 
@@ -71,7 +71,7 @@ struct ItemDetails3: View {
                         .dsSecondaryBackground()
                 }.dsSectionStyle(title: "Size")
 
-                DSText(viewModel.description, .caption1)
+                DSText(viewModel.description, .font(.caption1))
             }
         }
         .safeAreaInset(edge: .bottom) {

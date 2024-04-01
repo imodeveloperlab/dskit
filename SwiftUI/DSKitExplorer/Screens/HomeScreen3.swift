@@ -73,7 +73,7 @@ extension HomeScreen3 {
             DSHStack {
                 DSVStack(spacing: .zero) {
                     DSText(title, .bigTitle)
-                    DSText(subtitle, .subheadline)
+                    DSText(subtitle, .font(.subheadline))
                 }
                 Spacer()
                 DSImageView(url: profileImageUrl, style: .circle, size: 50)

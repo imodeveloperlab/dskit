@@ -11,26 +11,22 @@ import SwiftUI
 
 public enum DSTextColor: Equatable, Hashable {
     
-    case largeTitle
-    case title1
-    case title2
-    case title3
-    case headline
-    case subheadline
-    case body
-    case callout
-    case caption1
-    case caption2
-    case footnote
-    case brand
-    case white
-    case black
+    case font(DSTextFont)
     case custom(UIColor)
     
     /// Get text color
     /// - Parameter designableTextColor: DSDesignableTextColor
     /// - Returns: UIColor
     public func getColor(appearance: DSAppearance, colorGroup: DSColorGroup) -> UIColor {
+        switch self {
+        case .font(font: let font):
+            return color(for: font, appearance: appearance, colorGroup: colorGroup)
+        case .custom(let customColor):
+            return customColor
+        }
+    }
+    
+    public func color(for font: DSTextFont, appearance: DSAppearance, colorGroup: DSColorGroup) -> UIColor {
         
         let designableTextColor: DSDesignableTextColor
         
@@ -41,7 +37,7 @@ public enum DSTextColor: Equatable, Hashable {
             designableTextColor = appearance.secondaryView.text
         }
         
-        switch self {
+        switch font {
         case .largeTitle:
             return designableTextColor.largeTitle
         case .title1:
@@ -64,14 +60,10 @@ public enum DSTextColor: Equatable, Hashable {
             return designableTextColor.caption2
         case .footnote:
             return designableTextColor.footnote
-        case .custom(let color):
-            return color
-        case .brand:
-            return appearance.brandColor
-        case .white:
-            return UIColor.white
-        case .black:
+        case .custom(_):
             return UIColor.black
+        case .fontWithSize(let font, _):
+            return color(for: font, appearance: appearance, colorGroup: colorGroup)
         }
     }
     

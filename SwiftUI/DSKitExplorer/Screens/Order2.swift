@@ -75,7 +75,7 @@ extension Order2 {
             DSVStack(alignment: .center) {
                 DSImageView(sfSymbol: card.icon, size: 28, tint: .custom(viewColors.button.background))
                 DSVStack(alignment: .center) {
-                    DSText(card.title, .text(font: .headline, color: .custom(viewColors.button.background)))
+                    DSText(card.title, .font(.headline), color: .custom(viewColors.button.background))
                     DSVStack(alignment: .center, spacing: .small) {
                         DSText(card.subtitle, .smallSubtitle)
                         DSText(card.description, .smallSubtitle)

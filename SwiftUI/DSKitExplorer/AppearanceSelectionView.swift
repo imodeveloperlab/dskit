@@ -25,7 +25,7 @@ struct AppearanceSelectionView: View {
                             DSText("Welcome to", .bigTitle)
                             DSText("DSKit", .bigTitle, color: .brandColor)
                         }
-                        DSText("Please select an appearance to continue", .subheadline)
+                        DSText("Please select an appearance to continue", .font(.subheadline))
                     }.dsPadding(.top)
                     
                     DSGrid(data: appearances, id: \.title) { appearance in

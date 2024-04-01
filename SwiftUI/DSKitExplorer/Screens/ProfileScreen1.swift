@@ -65,7 +65,7 @@ extension ProfileScreen1 {
                     size: 80
                 )
                 DSVStack(alignment: .center) {
-                    DSText(title, .headline)
+                    DSText(title, .font(.headline))
                     DSText(subtitle, .smallSubtitle)
                 }
             }
@@ -86,7 +86,7 @@ extension ProfileScreen1 {
                 DSImageView(
                     sfSymbol: action.icon,
                     size: .smallIcon,
-                    tint: .text(.headline)
+                    tint: .text(.font(.headline))
                 )
                 
                 DSText(action.title, .smallTitle)

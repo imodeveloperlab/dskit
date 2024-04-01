@@ -28,7 +28,7 @@ struct LogInScreen4: View {
                
                 DSVStack(alignment: .center) {
                     DSText("John Doe", .bigTitle)
-                    DSText("john.doe@gmail.com", .subheadline)
+                    DSText("john.doe@gmail.com", .font(.subheadline))
                 }
             }.frame(maxWidth: .infinity)
             

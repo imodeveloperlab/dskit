@@ -150,7 +150,7 @@ public struct DSButton: View {
             }
             
             if !title.isEmpty {
-                DSText(title, .headlineWithSize(15), color: .customColor(titleColor))
+                DSText(title, .fontAndSize(.headline, 15), color: .customColor(titleColor))
                     .dsHeight(.large)
             }
             

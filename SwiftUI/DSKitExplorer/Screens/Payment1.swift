@@ -35,7 +35,7 @@ struct Payment1: View {
             DSBottomContainer {
                 DSHStack {
                     DSText("Next Step:", .smallTitle)
-                    DSText("Shipping address", .subheadlineWithSize(14))
+                    DSText("Shipping address", .fontAndSize(.subheadline, 14))
                 }
                 DSButton(
                     title: "Continue",

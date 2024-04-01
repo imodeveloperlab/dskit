@@ -65,7 +65,7 @@ extension ProfileScreen1 {
                     size: 80
                 )
                 DSVStack(alignment: .center) {
-                    DSText(title, .font(.headline))
+                    DSText(title, .headline)
                     DSText(subtitle, .smallSubtitle)
                 }
             }
@@ -89,7 +89,7 @@ extension ProfileScreen1 {
                     tint: .text(.font(.headline))
                 )
                 
-                DSText(action.title, .smallTitle)
+                DSText(action.title, .smallHeadline)
                 
                 Spacer()
                 

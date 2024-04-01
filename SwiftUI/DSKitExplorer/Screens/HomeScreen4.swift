@@ -54,9 +54,9 @@ extension HomeScreen4 {
             DSVStack(spacing: .zero) {
                 DSImageView(uiImage: UIImage(named: product.image))
                 DSVStack(spacing: .zero) {
-                    DSText(product.title, .smallTitle)
+                    DSText(product.title, .smallHeadline)
                     DSText(product.description, .smallSubtitle)
-                    DSPriceView(price: product.price, size: .smallTitle)
+                    DSPriceView(price: product.price, size: .smallHeadline)
                         .dsPadding(.top, .regular)
                 }.dsPadding()
             }
@@ -80,7 +80,7 @@ extension HomeScreen4 {
                 DSImageView(url: product.imageUrl)
                     .overlay(alignment: .bottomTrailing) {
                         DSVStack(alignment: .trailing, spacing: .zero) {
-                            DSText(product.title, .smallTitle)
+                            DSText(product.title, .smallHeadline)
                             DSText(product.subtitle, .smallSubtitle)
                         }
                         .dsPadding(.regular)
@@ -108,14 +108,14 @@ extension HomeScreen4 {
         var body: some View {
             DSHStack {
                 DSVStack(spacing: .zero) {
-                    DSText(title, .fontAndSize(.headline, 28))
+                    DSText(title, .styleWithSize(.headline, 28))
                     DSHStack(spacing: .small) {
-                        DSText(youHave, .font(.subheadline))
-                        DSText(numberOfItemsInCart, .fontAndSize(.headline, 12), color: .primaryViewBackground)
+                        DSText(youHave, .subheadline)
+                        DSText(numberOfItemsInCart, .styleWithSize(.headline, 12), color: .primaryViewBackground)
                             .dsSize(.medium)
                             .dsBackground(.brandColor)
                             .clipShape(Circle())
-                        DSText(itemsInYourCart, .font(.subheadline))
+                        DSText(itemsInYourCart, .subheadline)
                     }
                 }
                 Spacer()
@@ -137,10 +137,10 @@ extension HomeScreen4 {
             DSHStack {
                 DSText(
                     category.title,
-                    .smallTitle,
+                    .smallHeadline,
                     color: isSelected ? .primaryViewButtonTitle : .none
                 )
-                DSText(category.count, .fontAndSize(.headline, 10))
+                DSText(category.count, .styleWithSize(.headline, 10))
                     .dsSize(20)
                     .dsBackground(isSelected ? .secondaryViewBackground : .primaryViewBackground)
                     .clipShape(Capsule())

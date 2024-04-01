@@ -40,7 +40,7 @@ extension HomeScreen1 {
             DSVStack {
                 DSImageView(url: product.imageUrl, style: .capsule)
                 DSVStack(spacing: .zero) {
-                    DSText(product.title, .smallTitle)
+                    DSText(product.title, .smallHeadline)
                     DSText(product.description, .smallSubtitle)
                 }
             }.dsPadding(.bottom, .regular)
@@ -59,7 +59,7 @@ extension HomeScreen1 {
         let profileUrl: URL?
         var body: some View {
             DSHStack {
-                DSText(title, .bigTitle)
+                DSText(title, .largeHeadline)
                 Spacer()
                 DSImageView(url: profileUrl, style: .circle, size: .size(40))
             }

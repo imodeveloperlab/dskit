@@ -18,13 +18,13 @@ struct Order4: View {
             Spacer()
             DSImageView(sfSymbol: "checkmark.circle.fill", size: 70, tint: .customColor(.green))
                 .dsPadding(.bottom, 30)
-            DSText("It's Ordered", .bigTitle)
-            DSText("Hi John - thanks for your order,\nwe hope you enjoyed shopping\nwith us", .font(.subheadline), multilineTextAlignment: .center)
+            DSText("It's Ordered", .largeHeadline)
+            DSText("Hi John - thanks for your order,\nwe hope you enjoyed shopping\nwith us", .subheadline, multilineTextAlignment: .center)
             Spacer()
             Spacer()
             Spacer()
             DSVStack {
-                DSText("You may also like", .font(.subheadline))
+                DSText("You may also like", .subheadline)
                 DSHScroll(data: viewModel.suggestedProducts, id: \.id) { product in
                     SuggestedProductView(product: product)
                 }
@@ -47,9 +47,9 @@ extension Order4 {
                 DSImageView(url: product.image, size: .size(width: 80, height: 60))
                     .dsCornerRadius()
                 DSVStack(alignment: .leading, spacing: .small) {
-                    DSText(product.title, .fontAndSize(.headline, 12), multilineTextAlignment: .leading)
+                    DSText(product.title, .styleWithSize(.headline, 12), multilineTextAlignment: .leading)
                     DSText(product.subtitle, .smallSubtitle, multilineTextAlignment: .leading)
-                    DSPriceView(price: product.price, size: .smallTitle)
+                    DSPriceView(price: product.price, size: .smallHeadline)
                 }.frame(maxWidth: 160, alignment: .leading)
             }.dsCardStyle(padding: .regular)
         }

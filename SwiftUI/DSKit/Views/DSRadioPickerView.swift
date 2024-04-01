@@ -58,7 +58,7 @@ public struct RadioPickerViewDemo: View {
     
     public var body: some View {
         DSRadioPickerView(data: data, id: \.self, selected: $selected, content: { element, _ in
-            DSText(element, .smallTitle)
+            DSText(element, .smallHeadline)
         })
     }
 }

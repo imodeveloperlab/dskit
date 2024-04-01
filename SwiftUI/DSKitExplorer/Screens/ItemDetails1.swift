@@ -22,11 +22,11 @@ struct ItemDetails1: View {
                 }
                 
                 DSVStack(spacing: .zero) {
-                    DSText(viewModel.title, .font(.title2))
-                    DSText(viewModel.subtitle, .font(.subheadline))
+                    DSText(viewModel.title, .title2)
+                    DSText(viewModel.subtitle, .subheadline)
                 }
                 
-                DSPriceView(price: viewModel.price, size: .font(.headline))
+                DSPriceView(price: viewModel.price, size: .headline)
                 
                 DSQuantityPicker()
                 
@@ -35,7 +35,7 @@ struct ItemDetails1: View {
                     SelectColorView(title: "Color", selection: .yellow, label: "Yellow").onTap { }
                 }
                 
-                DSText(viewModel.description, .font(.caption1))
+                DSText(viewModel.description, .caption1)
             }
         }
         .safeAreaInset(edge: .bottom) {
@@ -43,7 +43,7 @@ struct ItemDetails1: View {
                 DSButton(title: "Add to cart", rightSFSymbolName: "cart.fill") {
                     dismiss()
                 }
-                DSText(viewModel.priceDisclaimer, .font(.caption2), multilineTextAlignment: .center).dsPadding(.horizontal)
+                DSText(viewModel.priceDisclaimer, .caption2, multilineTextAlignment: .center).dsPadding(.horizontal)
             }
         }
         .toolbar {
@@ -66,7 +66,7 @@ extension ItemDetails1 {
         let selection: String
         var body: some View {
             DSHStack {
-                DSText(title, .smallTitle)
+                DSText(title, .smallHeadline)
                 Spacer()
                 DSText(selection, .smallSubtitle)
                 DSChevronView()
@@ -84,7 +84,7 @@ extension ItemDetails1 {
         let label: String
         var body: some View {
             DSHStack {
-                DSText(title, .smallTitle)
+                DSText(title, .smallHeadline)
                 Spacer()
                 DSText(label, .smallSubtitle)
                 selection

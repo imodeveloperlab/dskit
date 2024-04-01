@@ -18,7 +18,7 @@ struct Filters1: View {
             DSVStack {
                 
                 DSRadioPickerView(data: viewModel.sortByOptions, id: \.self, selected: $viewModel.selectedSortByOption) { option, selected in
-                    DSText(option, selected ?  .smallTitle : .fontAndSize(.subheadline, 14))
+                    DSText(option, selected ?  .smallHeadline : .styleWithSize(.subheadline, 14))
                 }.dsSectionStyle(title: "Sort By")
                 
                 DSVStack(spacing: .small) {
@@ -51,9 +51,9 @@ extension Filters1 {
         let option: Data
         var body: some View {
             DSHStack {
-                DSText(option.title, .smallTitle)
+                DSText(option.title, .smallHeadline)
                 Spacer()
-                DSText(option.option, .fontAndSize(.subheadline, 14))
+                DSText(option.option, .styleWithSize(.subheadline, 14))
                 DSChevronView()
             }.dsCardStyle()
         }

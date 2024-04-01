@@ -34,8 +34,8 @@ struct Payment1: View {
         }.safeAreaInset(edge: .bottom) {
             DSBottomContainer {
                 DSHStack {
-                    DSText("Next Step:", .smallTitle)
-                    DSText("Shipping address", .fontAndSize(.subheadline, 14))
+                    DSText("Next Step:", .smallHeadline)
+                    DSText("Shipping address", .styleWithSize(.subheadline, 14))
                 }
                 DSButton(
                     title: "Continue",
@@ -63,7 +63,7 @@ extension Payment1 {
                         size: .size(width: 50, height: 30)
                     ).dsCornerRadius()
                     DSVStack(spacing: .zero) {
-                        DSText("\(method.type) **** \(method.end)", .smallTitle)
+                        DSText("\(method.type) **** \(method.end)", .smallHeadline)
                         DSText("\(method.holder) \(method.expire)", .smallSubtitle)
                     }
                 }.frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)

@@ -22,21 +22,21 @@ struct ItemDetails4: View {
                 }
                 
                 DSVStack(spacing: .zero) {
-                    DSText(viewModel.title, .font(.title2))
-                    DSText(viewModel.subtitle, .font(.subheadline))
+                    DSText(viewModel.title, .title2)
+                    DSText(viewModel.subtitle, .subheadline)
                 }
                 
                 DSHStack(alignment: .center, spacing: .regular) {
-                    DSText("New", .fontAndSize(.headline, 12), color: .customColor(Color.white))
+                    DSText("New", .styleWithSize(.headline, 12), color: .customColor(Color.white))
                         .dsPadding(.vertical, .small)
                         .dsPadding(.horizontal, .regular)
                         .dsBackground(.customColor(.green))
                         .dsCornerRadius()
                     DSRatingView(rating: 4.5, size: 16)
-                    DSText("24K Ratings", .font(.callout))
+                    DSText("24K Ratings", .callout)
                 }
                 
-                DSText(viewModel.description, .font(.caption1))
+                DSText(viewModel.description, .caption1)
                     .dsSectionStyle(title: "Description")
                 
                 DSPickerView(
@@ -44,7 +44,7 @@ struct ItemDetails4: View {
                     id: \.self,
                     selected: $viewModel.selectedSize
                 ) { size in
-                    DSText(size, .smallTitle)
+                    DSText(size, .smallHeadline)
                         .frame(maxWidth: .infinity)
                         .dsSize(40)
                         .dsSecondaryBackground()
@@ -67,9 +67,9 @@ struct ItemDetails4: View {
         .safeAreaInset(edge: .bottom) {
             DSBottomContainer {
                 DSHStack {
-                    DSText("Total", .font(.headline))
+                    DSText("Total", .headline)
                     Spacer()
-                    DSPriceView(price: viewModel.price, size: .font(.headline))
+                    DSPriceView(price: viewModel.price, size: .headline)
                 }
                 DSButton(title: "Buy Now") { dismiss() }
                 
@@ -95,7 +95,7 @@ extension ItemDetails4 {
         
         var body: some View {
             DSHStack {
-                DSText(title, .smallTitle)
+                DSText(title, .smallHeadline)
                 Spacer()
                 DSChevronView()
             }

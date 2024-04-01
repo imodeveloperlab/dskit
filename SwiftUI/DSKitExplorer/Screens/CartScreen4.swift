@@ -51,7 +51,7 @@ extension CartScreen4 {
                         DSImageView(url: product.image, size: .size(width: 100, height: 100))
                             .overlay(alignment: .bottomLeading) {
                                 if let tag = product.tag {
-                                    DSText(tag, .fontAndSize(.headline, 9))
+                                    DSText(tag, .styleWithSize(.headline, 9))
                                         .dsPadding(.small)
                                         .dsBackground(.primary)
                                         .dsCornerRadius()
@@ -61,14 +61,14 @@ extension CartScreen4 {
                     }.dsCornerRadius()
                     
                     DSVStack(alignment: .leading) {
-                        DSText(product.title, .smallTitle)
+                        DSText(product.title, .smallHeadline)
                         DSHStack {
-                            DSText("Color:", .font(.subheadline))
+                            DSText("Color:", .subheadline)
                             product.color.dsSize(.smallIcon).dsCornerRadius()
-                            DSText("Size:", .font(.subheadline))
-                            DSText(product.size, .smallTitle)
+                            DSText("Size:", .subheadline)
+                            DSText(product.size, .smallHeadline)
                         }
-                        DSPriceView(price: product.price, size: .smallTitle)
+                        DSPriceView(price: product.price, size: .smallHeadline)
                     }.frame(maxWidth: .infinity, alignment: .leading)
                     
                     DSSFSymbolButton(name: "minus.circle", size: .mediumIcon)
@@ -100,13 +100,13 @@ extension CartScreen4 {
         let price: DSPrice
         var body: some View {
             DSHStack() {
-                DSText("Total",.font(.headline))
+                DSText("Total",.headline)
                 Spacer()
                 DSHStack(alignment: .firstTextBaseline, spacing: .small) {
-                    DSText("for", .font(.subheadline))
-                    DSText(itemsCount, .smallTitle)
-                    DSText("items", .font(.subheadline))
-                    DSPriceView(price: price, size: .font(.subheadline))
+                    DSText("for", .subheadline)
+                    DSText(itemsCount, .smallHeadline)
+                    DSText("items", .subheadline)
+                    DSPriceView(price: price, size: .subheadline)
                 }
             }
         }

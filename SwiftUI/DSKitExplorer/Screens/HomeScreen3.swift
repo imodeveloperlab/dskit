@@ -46,9 +46,9 @@ extension HomeScreen3 {
             DSVStack(spacing: .zero) {
                 DSImageView(url: product.imageUrl)
                 DSVStack(spacing: .zero) {
-                    DSText(product.title, .smallTitle)
+                    DSText(product.title, .smallHeadline)
                     DSText(product.description, .smallSubtitle)
-                    DSPriceView(price: product.price, size: .smallTitle)
+                    DSPriceView(price: product.price, size: .smallHeadline)
                         .dsPadding(.top, .regular)
                 }.dsPadding()
             }
@@ -72,8 +72,8 @@ extension HomeScreen3 {
         var body: some View {
             DSHStack {
                 DSVStack(spacing: .zero) {
-                    DSText(title, .bigTitle)
-                    DSText(subtitle, .font(.subheadline))
+                    DSText(title, .largeHeadline)
+                    DSText(subtitle, .subheadline)
                 }
                 Spacer()
                 DSImageView(url: profileImageUrl, style: .circle, size: 50)
@@ -86,7 +86,7 @@ extension HomeScreen3 {
         let title: String
         let action: () -> Void
         var body: some View {
-            DSText(title, .smallTitle)
+            DSText(title, .smallHeadline)
                 .frame(maxWidth: .infinity, alignment: .center)
                 .dsHeight(35)
                 .dsPadding(.horizontal, .large)

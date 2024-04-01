@@ -43,7 +43,7 @@ extension Categories1 {
                 
                 DSVStack {
                     DSVStack(spacing: .zero) {
-                        DSText(category.title, .smallTitle)
+                        DSText(category.title, .smallHeadline)
                         DSText(category.description, .smallSubtitle)
                     }
                 }

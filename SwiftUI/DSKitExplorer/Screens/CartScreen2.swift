@@ -51,12 +51,12 @@ extension CartScreen2 {
             DSVStack(spacing: .zero) {
                 DSImageView(url: product.image, size: .size(width: .none, height: 180))
                 DSVStack {
-                    DSText(product.title, .font(.headline))
+                    DSText(product.title, .headline)
                     DSHStack() {
                         DSText(product.description, .smallSubtitle)
                         DSRatingView(rating: product.rating, size: 13)
                     }
-                    DSPriceView(price: product.price, size: .smallTitle)
+                    DSPriceView(price: product.price, size: .smallHeadline)
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .overlay(alignment: .trailing, content: {
@@ -92,13 +92,13 @@ extension CartScreen2 {
         let price: DSPrice
         var body: some View {
             DSHStack() {
-                DSText("Total", .font(.headline))
+                DSText("Total", .headline)
                 Spacer()
                 DSHStack(alignment: .firstTextBaseline, spacing: .small) {
-                    DSText("for", .font(.subheadline))
-                    DSText(itemsCount, .smallTitle)
-                    DSText("items", .font(.subheadline))
-                    DSPriceView(price: price, size: .font(.headline))
+                    DSText("for", .subheadline)
+                    DSText(itemsCount, .smallHeadline)
+                    DSText("items", .subheadline)
+                    DSPriceView(price: price, size: .headline)
                 }
             }
         }

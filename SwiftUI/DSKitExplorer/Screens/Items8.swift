@@ -49,14 +49,14 @@ extension Items8 {
                 
                 DSVStack {
                     DSVStack(spacing: .zero) {
-                        DSText(product.title, .smallTitle)
+                        DSText(product.title, .smallHeadline)
                         DSText(product.description, .smallSubtitle)
                     }
                     DSHStack {
                         DSRatingView(rating: 4.5, size: 12)
-                        DSText("2.4k Reviews", .font(.caption2))
+                        DSText("2.4k Reviews", .caption2)
                     }
-                    DSPriceView(price: product.price, size: .smallTitle)
+                    DSPriceView(price: product.price, size: .smallHeadline)
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .dsPadding(.regular)

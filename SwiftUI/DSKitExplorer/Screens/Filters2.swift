@@ -21,7 +21,7 @@ struct Filters2: View {
                     id: \.self,
                     selected: $viewModel.selectedSortByOption
                 ) { option, selected in
-                    DSText(option, selected ?  .smallTitle : .fontAndSize(.subheadline, 14))
+                    DSText(option, selected ?  .smallHeadline : .styleWithSize(.subheadline, 14))
                 }.dsSectionStyle(title: "Style")
                 
                 DSPickerView(
@@ -37,7 +37,7 @@ struct Filters2: View {
                     id: \.self,
                     selected: $viewModel.selectedSize
                 ) { size in
-                    DSText(size, .smallTitle)
+                    DSText(size, .smallHeadline)
                         .frame(maxWidth: .infinity)
                         .dsSize(40)
                         .dsSecondaryBackground()
@@ -72,9 +72,9 @@ extension Filters2 {
         let option: Data
         var body: some View {
             DSHStack {
-                DSText(option.title, .smallTitle)
+                DSText(option.title, .smallHeadline)
                 Spacer()
-                DSText(option.option, .fontAndSize(.subheadline, 14))
+                DSText(option.option, .styleWithSize(.subheadline, 14))
                 DSChevronView()
             }.dsCardStyle()
         }

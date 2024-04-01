@@ -21,7 +21,7 @@ public struct DSSectionHeaderView: View {
     
     public var body: some View {
         DSHStack {
-            DSText(title, .font(.headline))
+            DSText(title, .headline)
             Spacer()
             DSButton.callToActionLink(title: actionTitle, action: action)
         }.dsHeight(20)

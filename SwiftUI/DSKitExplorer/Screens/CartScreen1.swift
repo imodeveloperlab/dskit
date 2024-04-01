@@ -56,10 +56,10 @@ extension CartScreen1 {
                     .dsCornerRadius()
                 
                 DSVStack(spacing: .small) {
-                    DSText(product.title, .smallTitle)
+                    DSText(product.title, .smallHeadline)
                     DSText(product.description, .smallSubtitle)
                     DSRatingView(rating: product.rating, size: 10)
-                    DSPriceView(price: product.price, size: .smallTitle).dsPadding(.top, .regular)
+                    DSPriceView(price: product.price, size: .smallHeadline).dsPadding(.top, .regular)
                 }.frame(maxWidth: .infinity, alignment: .leading)
                 
                 DSSFSymbolButton(name: "pencil.circle", size: .mediumIcon)
@@ -87,13 +87,13 @@ extension CartScreen1 {
         let price: DSPrice
         var body: some View {
             DSHStack() {
-                DSText("Total",.font(.headline))
+                DSText("Total",.headline)
                 Spacer()
                 DSHStack(alignment: .firstTextBaseline, spacing: .small) {
-                    DSText("for", .font(.subheadline))
-                    DSText(itemsCount, .smallTitle)
-                    DSText("items", .font(.subheadline))
-                    DSPriceView(price: price, size: .font(.headline))
+                    DSText("for", .subheadline)
+                    DSText(itemsCount, .smallHeadline)
+                    DSText("items", .subheadline)
+                    DSPriceView(price: price, size: .headline)
                 }
             }
         }

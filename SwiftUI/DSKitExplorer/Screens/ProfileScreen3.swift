@@ -25,7 +25,7 @@ struct ProfileScreen3: View {
                     
                     DSText(
                         "Changing your password regularly reduces your risk of exposure and avoids a number of dangers.",
-                        .font(.subheadline)
+                        .subheadline
                     ).frame(maxWidth: .infinity, alignment: .leading)
                 }
                 .dsPadding()

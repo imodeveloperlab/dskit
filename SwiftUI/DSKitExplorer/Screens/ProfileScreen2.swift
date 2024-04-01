@@ -54,7 +54,7 @@ extension ProfileScreen2 {
                     size: 80
                 )
                 DSVStack(alignment: .center) {
-                    DSText(title, .font(.headline))
+                    DSText(title, .headline)
                     DSText(subtitle, .smallSubtitle)
                 }
             }

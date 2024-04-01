@@ -31,8 +31,8 @@ struct ItemDetails5: View {
                 DSVStack(spacing: .medium) {
                     DSHStack {
                         DSVStack(spacing: .zero) {
-                            DSText(viewModel.title, .font(.title2))
-                            DSText(viewModel.subtitle, .font(.subheadline))
+                            DSText(viewModel.title, .title2)
+                            DSText(viewModel.subtitle, .subheadline)
                         }.frame(maxWidth: .infinity, alignment: .leading)
                     }
                 }
@@ -42,23 +42,23 @@ struct ItemDetails5: View {
                     data: viewModel.sizes,
                     id: \.self, selected: $viewModel.selectedSize
                 ) { size in
-                    DSText(size, .smallTitle)
+                    DSText(size, .smallHeadline)
                         .frame(maxWidth: .infinity)
                         .dsPadding(.horizontal)
                         .dsHeight(35)
                         .dsSecondaryBackground()
                 }
 
-                DSText(viewModel.description, .font(.caption1))
+                DSText(viewModel.description, .caption1)
             }
         }
         .safeAreaInset(edge: .bottom) {
             DSBottomContainer {
                 
                 DSHStack {
-                    DSText("Total", .font(.headline))
+                    DSText("Total", .headline)
                     Spacer()
-                    DSPriceView(price: viewModel.price, size: .font(.headline))
+                    DSPriceView(price: viewModel.price, size: .headline)
                 }
                 
                 DSButton(title: "Add to cart", style: .borderedLight) { dismiss() }

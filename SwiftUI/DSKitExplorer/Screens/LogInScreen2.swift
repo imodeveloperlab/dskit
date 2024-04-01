@@ -23,8 +23,8 @@ struct LogInScreen2: View {
             )
             
             DSVStack(alignment: .leading) {
-                DSText("Welcome to\nDSKit", .fontAndSize(.headline, 38))
-                DSText("Meet new people with new\nideas and posts.", .font(.subheadline))
+                DSText("Welcome to\nDSKit", .styleWithSize(.headline, 38))
+                DSText("Meet new people with new\nideas and posts.", .subheadline)
             }.dsPadding(.trailing, .large)
             
             Spacer()

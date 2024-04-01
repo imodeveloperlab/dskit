@@ -20,7 +20,7 @@ struct SignUpScreen3: View {
             
             DSVStack(spacing: .medium) {
                 
-                DSText("Start with \nphone number", .bigTitle)
+                DSText("Start with \nphone number", .largeHeadline)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .overlay(alignment: .trailing) {
                         DSImageView(sfSymbol: "phone.fill", size: 60, tint: .color(.secondaryViewBackground))
@@ -28,7 +28,7 @@ struct SignUpScreen3: View {
                     
                 DSText("Please enter your mobile number to get\nsms to activate your account")
                 DSTextField.phone(value: viewModel.phone)
-                DSText("You will receive an sms with code, which you should insert in the next step", .font(.caption1))
+                DSText("You will receive an sms with code, which you should insert in the next step", .caption1)
             }
             
             DSButton(title: "Subbmit") { dismiss() }

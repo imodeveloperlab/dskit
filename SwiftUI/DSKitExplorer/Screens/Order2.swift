@@ -53,7 +53,7 @@ struct Order2: View {
     
     func section<Content: View>(with title: String, @ViewBuilder content: @escaping () -> Content) -> some View {
         DSVStack(spacing: .small) {
-            DSText(title, .smallTitle)
+            DSText(title, .smallHeadline)
             content()
         }
         .dsPadding(.horizontal)
@@ -75,7 +75,7 @@ extension Order2 {
             DSVStack(alignment: .center) {
                 DSImageView(sfSymbol: card.icon, size: 28, tint: .custom(viewColors.button.background))
                 DSVStack(alignment: .center) {
-                    DSText(card.title, .font(.headline), color: .custom(viewColors.button.background))
+                    DSText(card.title, .headline, color: .custom(viewColors.button.background))
                     DSVStack(alignment: .center, spacing: .small) {
                         DSText(card.subtitle, .smallSubtitle)
                         DSText(card.description, .smallSubtitle)
@@ -104,9 +104,9 @@ extension Order2 {
         var body: some View {
             DSGroupedList(data: orderTotals, id: \.id) { total in
                 DSHStack {
-                    DSText(total.title, total.bold ? .smallTitle : .smallSubtitle)
+                    DSText(total.title, total.bold ? .smallHeadline : .smallSubtitle)
                     Spacer()
-                    DSPriceView(price: total.price, size: total.bold ? .smallTitle : .smallSubtitle)
+                    DSPriceView(price: total.price, size: total.bold ? .smallHeadline : .smallSubtitle)
                 }.dsHeight(25)
             }
         }
@@ -128,9 +128,9 @@ extension Order2 {
         
         var body: some View {
             DSHStack {
-                DSText(code.title, .smallTitle)
+                DSText(code.title, .smallHeadline)
                 Spacer()
-                DSPriceView(price: code.price, size: .smallTitle)
+                DSPriceView(price: code.price, size: .smallHeadline)
                 DSSFSymbolButton(name: "minus.circle", size: .mediumIcon)
                     .dsPadding(.leading, .regular)
             }.dsHeight(25)

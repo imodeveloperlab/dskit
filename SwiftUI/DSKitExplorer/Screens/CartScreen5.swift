@@ -60,18 +60,18 @@ extension CartScreen5 {
                 }.dsCornerRadius()
                 
                 DSVStack(alignment: .leading, spacing: .small) {
-                    DSText(product.title, .smallTitle)
+                    DSText(product.title, .smallHeadline)
                     DSHStack {
                         DSText("Color:", .smallSubtitle)
-                        DSText(product.color, .smallTitle)
+                        DSText(product.color, .smallHeadline)
                         DSText("Size:", .smallSubtitle)
-                        DSText(product.size, .smallTitle)
+                        DSText(product.size, .smallHeadline)
                     }
                     DSHStack {
                         DSImageView(sfSymbol: "star.fill", size: .smallIcon, tint: .customColor(Color.yellow))
-                        DSText("3k Reviews", .font(.caption1))
+                        DSText("3k Reviews", .caption1)
                     }
-                    DSPriceView(price: product.price, size: .smallTitle)
+                    DSPriceView(price: product.price, size: .smallHeadline)
                     
                 }.frame(maxWidth: .infinity, alignment: .leading)
                 
@@ -103,13 +103,13 @@ extension CartScreen5 {
         let price: DSPrice
         var body: some View {
             DSHStack() {
-                DSText("Total", .font(.headline))
+                DSText("Total", .headline)
                 Spacer()
                 DSHStack(alignment: .firstTextBaseline, spacing: .small) {
-                    DSText("for", .font(.subheadline))
-                    DSText(itemsCount,.smallTitle)
-                    DSText("items",.font(.subheadline))
-                    DSPriceView(price: price, size: .font(.headline))
+                    DSText("for", .subheadline)
+                    DSText(itemsCount,.smallHeadline)
+                    DSText("items",.subheadline)
+                    DSPriceView(price: price, size: .headline)
                 }
             }
         }
@@ -120,7 +120,7 @@ extension CartScreen5 {
     struct TagView: View {
         let tag: String
         var body: some View {
-            DSText(tag, .fontAndSize(.headline, 9))
+            DSText(tag, .styleWithSize(.headline, 9))
                 .dsPadding(.horizontal, .regular)
                 .dsPadding(.vertical, .small)
                 .dsBackground(.primary)
@@ -138,8 +138,8 @@ extension CartScreen5 {
                 DSImageView(url: product.image, size: .size(width: 60, height: 40))
                     .dsCornerRadius()
                 DSVStack(alignment: .leading, spacing: .small) {
-                    DSText(product.title, .smallTitle, multilineTextAlignment: .leading)
-                    DSPriceView(price: product.price, size: .smallTitle)
+                    DSText(product.title, .smallHeadline, multilineTextAlignment: .leading)
+                    DSPriceView(price: product.price, size: .smallHeadline)
                 }
             }
             .dsPadding(.regular)

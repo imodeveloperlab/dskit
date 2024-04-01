@@ -15,10 +15,10 @@ public struct DSPriceView: View {
     let regularAmount: String?
     let currency: String
     var discountBadge: String?
-    var textType: DSTextType
+    var textType: DSTextStyle
     var color: Color?
     
-    public init(price: DSPrice, size: DSTextType, color: Color? = nil) {
+    public init(price: DSPrice, size: DSTextStyle, color: Color? = nil) {
         self.amount = price.amount
         self.currency = price.currency
         self.regularAmount = price.regularAmount
@@ -53,7 +53,7 @@ public struct DSPriceView: View {
             }
             
             if let discountBadge = discountBadge {
-                DSText(discountBadge, .fontAndSize(textType.font, textType.size(appearance) * 0.60), color: .priceBadgeText)
+                DSText(discountBadge, .styleWithSize(textType.font, textType.size(appearance) * 0.60), color: .priceBadgeText)
                     .dsPadding(.horizontal, .regular)
                     .dsPadding(.vertical, .custom(2))
                     .background(appearance.price.badgeBackground.color)
@@ -66,15 +66,15 @@ public struct DSPriceView: View {
 struct Testable_DSPrice: View {
     let price = DSPrice(amount: "100", regularAmount: "250", currency: "$", discountBadge: "10% OFF")
     var body: some View {
-        DSPriceView(price: price, size: .font(.title1))
-        DSPriceView(price: price, size: .font(.title2))
-        DSPriceView(price: price, size: .font(.title3))
-        DSPriceView(price: price, size: .font(.headline))
-        DSPriceView(price: price, size: .font(.subheadline))
-        DSPriceView(price: price, size: .font(.caption1), color: .green)
-        DSPriceView(price: price, size: .font(.caption2), color: .green)
-        DSPriceView(price: price, size: .font(.footnote))
-        DSPriceView(price: price, size: .fontAndSize(.headline, 20))
+        DSPriceView(price: price, size: .title1)
+        DSPriceView(price: price, size: .title2)
+        DSPriceView(price: price, size: .title3)
+        DSPriceView(price: price, size: .headline)
+        DSPriceView(price: price, size: .subheadline)
+        DSPriceView(price: price, size: .caption1, color: .green)
+        DSPriceView(price: price, size: .caption2, color: .green)
+        DSPriceView(price: price, size: .footnote)
+        DSPriceView(price: price, size: .styleWithSize(.headline, 20))
     }
 }
 

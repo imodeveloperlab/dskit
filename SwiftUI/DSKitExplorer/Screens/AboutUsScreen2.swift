@@ -76,11 +76,11 @@ struct AboutUsScreen2: View {
                                 .dsSize(100)
                             
                             DSVStack(spacing: .small) {
-                                DSText(DSFaker().name, .font(.headline))
+                                DSText(DSFaker().name, .headline)
                                    .frame(maxWidth: .infinity, alignment: .leading)
                                 DSHStack {
                                     DSImageView(sfSymbol: "calendar", size: .size(14), tint: .text(.font(.caption1)))
-                                    DSText(Date().stringFormatted(dateStyle: .medium, timeStyle: .none), .font(.subheadline))
+                                    DSText(Date().stringFormatted(dateStyle: .medium, timeStyle: .none), .subheadline)
                                     DSHStack(spacing: .small) {
                                         DSImageView(sfSymbol: "star.fill", size: .size(14), tint: .customColor(Color.yellow))
                                         DSImageView(sfSymbol: "star.fill", size: .size(14), tint: .customColor(Color.yellow))
@@ -89,7 +89,7 @@ struct AboutUsScreen2: View {
                                         DSImageView(sfSymbol: "star", size:.size(14), tint: .text(.font(.caption1)))
                                     }
                                 }
-                                DSText(DSFaker().text, .font(.caption1))
+                                DSText(DSFaker().text, .caption1)
                                     .frame(maxWidth: .infinity, alignment: .leading)
                             }
                         }
@@ -123,9 +123,9 @@ struct AboutUsScreen2: View {
                         }
                         
                         DSVStack {
-                            DSText("Health and safety", .font(.headline))
+                            DSText("Health and safety", .headline)
                                 .alignmentGuide(.healthSafetyAlignment) { d in d[VerticalAlignment.center] }
-                            DSText("· Mask required\n· Temperature check required\n· Staff wear masks\n· Staff get temperature checks", .fontAndSize(.subheadline, 14))
+                            DSText("· Mask required\n· Temperature check required\n· Staff wear masks\n· Staff get temperature checks", .styleWithSize(.subheadline, 14))
                                 .frame(maxWidth: .infinity, alignment: .leading)
                         }
                     }
@@ -168,8 +168,8 @@ struct ContactView: View {
         DSHStack {
             DSImageView(sfSymbol: iconName, size: .regular, tint: .text(.font(.headline)))
             DSHStack {
-                DSText(title, .smallTitle)
-                DSText(info, .fontAndSize(.subheadline, 14))
+                DSText(title, .smallHeadline)
+                DSText(info, .styleWithSize(.subheadline, 14))
                     .frame(maxWidth: .infinity, alignment: .leading)
             }
         }.dsCardStyle()

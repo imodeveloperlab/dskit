@@ -80,7 +80,7 @@ struct Testable_DSPrice: View {
 
 struct DSPrice_Previews: PreviewProvider {
     static var previews: some View {
-        PreviewForEach { 
+        DSPreviewForEachAppearance { 
             DSPreview {
                 Testable_DSPrice()
             }

@@ -60,7 +60,7 @@ public struct TestableDSHStack: View {
 
 struct DSHStack_Previews: PreviewProvider {
     static var previews: some View {
-        PreviewForEach { TestableDSHStack()
+        DSPreviewForEachAppearance { TestableDSHStack()
         }
     }
 }

@@ -270,7 +270,7 @@ struct Testable_Order1: View {
 
 struct Order1_Previews: PreviewProvider {
     static var previews: some View {
-        PreviewForEach { Testable_Order1() }
+        DSPreviewForEachAppearance { Testable_Order1() }
     }
 }
 

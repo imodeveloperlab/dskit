@@ -169,7 +169,7 @@ struct Testable_Items7: View {
 // MARK: - Preview
 struct Items7_Previews: PreviewProvider {
     static var previews: some View {
-        PreviewForEach { Testable_Items7() }
+        DSPreviewForEachAppearance { Testable_Items7() }
     }
 }
 

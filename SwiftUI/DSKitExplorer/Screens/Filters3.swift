@@ -148,6 +148,6 @@ struct Testable_Filters3: View {
 
 struct Filters3_Previews: PreviewProvider {
     static var previews: some View {
-        PreviewForEach { Testable_Filters3() }
+        DSPreviewForEachAppearance { Testable_Filters3() }
     }
 }

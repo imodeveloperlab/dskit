@@ -39,6 +39,6 @@ struct Testable_Order3: View {
 
 struct Order3_Previews: PreviewProvider {
     static var previews: some View {
-        PreviewForEach { Testable_Order3() }
+        DSPreviewForEachAppearance { Testable_Order3() }
     }
 }

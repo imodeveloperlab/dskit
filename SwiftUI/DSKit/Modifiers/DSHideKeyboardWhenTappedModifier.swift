@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-import SwiftUI
-
 public struct DSHideKeyboardWhenTappedModifier: ViewModifier {
     
     @Environment(\.appearance) var appearance: DSAppearance

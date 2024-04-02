@@ -158,7 +158,7 @@ public struct DSImageView: View {
 
 struct DSImageView_Previews: PreviewProvider {
     static var previews: some View {
-        PreviewForEach { DSPreview {
+        DSPreviewForEachAppearance { DSPreview {
                 
                 DSHStack {
                     DSImageView(

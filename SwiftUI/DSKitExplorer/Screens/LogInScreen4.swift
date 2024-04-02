@@ -60,7 +60,7 @@ struct Testable_LogInScreen4: View {
 
 struct LogInScreen4_Previews: PreviewProvider {
     static var previews: some View {
-        PreviewForEach { Testable_LogInScreen4() }
+        DSPreviewForEachAppearance { Testable_LogInScreen4() }
     }
 }
 

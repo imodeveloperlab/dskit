@@ -104,7 +104,7 @@ struct Testable_Categories5: View {
 
 struct Categories5_Previews: PreviewProvider {
     static var previews: some View {
-        PreviewForEach { Testable_Categories5() }
+        DSPreviewForEachAppearance { Testable_Categories5() }
     }
 }
 

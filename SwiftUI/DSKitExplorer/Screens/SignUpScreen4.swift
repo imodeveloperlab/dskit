@@ -78,6 +78,6 @@ struct Testable_SignUpScreen4: View {
 
 struct SignUpScreen4_Previews: PreviewProvider {
     static var previews: some View {
-        PreviewForEach { Testable_SignUpScreen4() }
+        DSPreviewForEachAppearance { Testable_SignUpScreen4() }
     }
 }

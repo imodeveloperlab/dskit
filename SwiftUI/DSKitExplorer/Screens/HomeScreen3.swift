@@ -161,7 +161,7 @@ struct Testable_HomeScreen3: View {
 
 struct HomeScreen3_Previews: PreviewProvider {
     static var previews: some View {
-        PreviewForEach { HomeScreen3() }
+        DSPreviewForEachAppearance { HomeScreen3() }
     }
 }
 

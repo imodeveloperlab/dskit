@@ -52,7 +52,7 @@ public struct DSText: View {
 
 struct DSText_Previews: PreviewProvider {
     static var previews: some View {
-        PreviewForEach { DSPreview {
+        DSPreviewForEachAppearance { DSPreview {
             DSVStack {
                 DSText("Title 1", .largeTitle)
                 DSText("Title 1", .title1)

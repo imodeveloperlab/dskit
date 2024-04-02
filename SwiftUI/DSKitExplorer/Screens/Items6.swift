@@ -153,7 +153,7 @@ struct Testable_Items6: View {
 
 struct Items6_Previews: PreviewProvider {
     static var previews: some View {
-        PreviewForEach { Testable_Items6() }
+        DSPreviewForEachAppearance { Testable_Items6() }
     }
 }
 

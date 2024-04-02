@@ -1,5 +1,5 @@
 //
-//  PreviewForEachAppearance.swift
+//  DSPreviewForEachAppearance.swift
 //  DSKit
 //
 //  Created by Ivan Borinschi on 20.02.2023.
@@ -9,7 +9,7 @@ import SwiftUI
 
 // A generic structure that provides a way to
 // preview content for different languages and brands.
-public struct PreviewForEach<Content: View>: View {
+public struct DSPreviewForEachAppearance<Content: View>: View {
     
     var content: () -> Content
 

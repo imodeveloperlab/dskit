@@ -98,7 +98,7 @@ public struct PickerViewGrid: View {
 
 struct PickerView_Previews: PreviewProvider {
     static var previews: some View {
-        PreviewForEach { DSPreview {
+        DSPreviewForEachAppearance { DSPreview {
                 DSVStack {
                     PickerViewHorizontal()
                         .dsSectionStyle(title: "Horizontal")

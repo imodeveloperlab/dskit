@@ -57,7 +57,7 @@ struct Testable_NotificationsScreen1: View {
 
 struct NotificationsScreen1_Previews: PreviewProvider {
     static var previews: some View {
-        PreviewForEach { Testable_NotificationsScreen1() }
+        DSPreviewForEachAppearance { Testable_NotificationsScreen1() }
     }
 }
 

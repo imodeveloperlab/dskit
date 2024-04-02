@@ -80,6 +80,6 @@ struct Testable_ProfileScreen3: View {
 
 struct ProfileScreen3_Previews: PreviewProvider {
     static var previews: some View {
-        PreviewForEach { Testable_ProfileScreen3() }
+        DSPreviewForEachAppearance { Testable_ProfileScreen3() }
     }
 }

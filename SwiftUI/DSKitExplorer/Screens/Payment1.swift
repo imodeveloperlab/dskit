@@ -135,6 +135,6 @@ struct Testable_Payment1: View {
 
 struct Payment1_Previews: PreviewProvider {
     static var previews: some View {
-        PreviewForEach { Testable_Payment1() }
+        DSPreviewForEachAppearance { Testable_Payment1() }
     }
 }

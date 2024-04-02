@@ -145,7 +145,7 @@ struct Testable_CartScreen3: View {
 
 struct CartScreen3_Previews: PreviewProvider {
     static var previews: some View {
-        PreviewForEach { Testable_CartScreen3() }
+        DSPreviewForEachAppearance { Testable_CartScreen3() }
     }
 }
 

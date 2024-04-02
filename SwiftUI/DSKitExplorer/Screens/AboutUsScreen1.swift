@@ -58,7 +58,7 @@ struct Testable_AboutUsScreen1: View {
 
 struct AboutUsScreen1_Previews: PreviewProvider {
     static var previews: some View {
-        PreviewForEach { Testable_AboutUsScreen1() }
+        DSPreviewForEachAppearance { Testable_AboutUsScreen1() }
     }
 }
 

@@ -47,7 +47,7 @@ public struct DSHScroll<Data, ID, Content>: View where Data: RandomAccessCollect
 struct DSHScroll_Previews: PreviewProvider {
     static var previews: some View {
         let colors = [Color.red, Color.green, Color.yellow, Color.red, Color.green, Color.yellow]
-        PreviewForEach { DSPreview {
+        DSPreviewForEachAppearance { DSPreview {
                 DSHScroll(spacing: .medium, data: colors, id: \.self) { color in
                     color.dsSize(60)
                 }

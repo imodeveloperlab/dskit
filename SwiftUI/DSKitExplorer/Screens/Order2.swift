@@ -184,6 +184,6 @@ struct Testable_Order2: View {
 
 struct Order2_Previews: PreviewProvider {
     static var previews: some View {
-        PreviewForEach { Testable_Order2() }
+        DSPreviewForEachAppearance { Testable_Order2() }
     }
 }

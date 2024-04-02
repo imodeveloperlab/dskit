@@ -94,6 +94,6 @@ struct Testable_Filters1: View {
 
 struct Filters1_Previews: PreviewProvider {
     static var previews: some View {
-        PreviewForEach { Testable_Filters1() }
+        DSPreviewForEachAppearance { Testable_Filters1() }
     }
 }

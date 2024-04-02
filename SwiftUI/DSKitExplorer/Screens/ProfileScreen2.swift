@@ -101,7 +101,7 @@ struct Testable_ProfileScreen2: View {
 
 struct ProfileScreen2_Previews: PreviewProvider {
     static var previews: some View {
-        PreviewForEach { Testable_ProfileScreen2() }
+        DSPreviewForEachAppearance { Testable_ProfileScreen2() }
     }
 }
 

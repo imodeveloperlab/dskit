@@ -180,7 +180,7 @@ struct Testable_HomeScreen2: View {
 
 struct HomeScreen2_Previews: PreviewProvider {
     static var previews: some View {
-        PreviewForEach { HomeScreen2() }
+        DSPreviewForEachAppearance { HomeScreen2() }
     }
 }
 

@@ -11,8 +11,8 @@ import UIKit
 public protocol DSAppearance {
     var title: String { get set }
     var brandColor: UIColor { get set }
-    var primaryView: DSDesignableViewColors { get set }
-    var secondaryView: DSDesignableViewColors { get set }
+    var primaryView: DSDesignableViewStyle { get set }
+    var secondaryView: DSDesignableViewStyle { get set }
     var statusBarStyleForDarkUserInterfaceStyle: UIStatusBarStyle { get set }
     var statusBarStyleForLightUserInterfaceStyle: UIStatusBarStyle { get set }
     var spacing: DSDesignableSpacing { get set }
@@ -25,6 +25,8 @@ public protocol DSAppearance {
     var prefersLargeTitles: Bool { get set }
     var actionElementHeight: CGFloat { get set }
     var darkModeSupport: Bool { get }
+    
+    func style(for viewStyle: DSViewStyle) -> DSDesignableViewStyle
 }
 
 public extension DSAppearance {

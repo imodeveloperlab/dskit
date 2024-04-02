@@ -20,7 +20,7 @@ struct SignUpScreen4: View {
                 DSText("Enter secure\ncode to verify", .largeHeadline)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .overlay(alignment: .trailing) {
-                        DSImageView(sfSymbol: "checkmark.circle.fill", size: 60, tint: .color(.secondaryViewBackground))
+                        DSImageView(sfSymbol: "checkmark.circle.fill", size: 60, tint: .color(.viewColor(.background, .secondary)))
                     }
                 DSText("Please enter your mobile number to\nget sms to activate your account")
                 DSTextField.password(value: viewModel.code)

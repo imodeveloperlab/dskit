@@ -13,8 +13,8 @@ public final class RetroAppearance: DSAppearance {
     public var title: String
     public var darkModeSupport: Bool = true
     public var brandColor: UIColor
-    public var primaryView: DSDesignableViewColors
-    public var secondaryView: DSDesignableViewColors
+    public var primaryView: DSDesignableViewStyle
+    public var secondaryView: DSDesignableViewStyle
     public var spacing: DSDesignableSpacing = DSDefaultDesignableSpacing(spatialSystem: 7)
     public var padding: DSDesignablePadding = DSDefaultDesignablePadding(spatialSystem: 7)
     public var dimension: DSDesignableDimension = DSDefaultDesignableDimension(spatialSystem: 7)
@@ -56,7 +56,7 @@ public final class RetroAppearance: DSAppearance {
                                                               text: DSDynamicColor.color(light: 0x2A2732, dark: 0xE8E7E6),
                                                               placeHolder: DSDynamicColor.color(light: 0x777777, dark: 0x9699A8))
         
-        primaryView = DSDesignableViewColors(button: DSDesignableButtonColor(background: DSDynamicColor.color(light: 0xFC8F0F, dark: 0xFC8F0F),
+        primaryView = DSDesignableViewStyle(button: DSDesignableButtonColor(background: DSDynamicColor.color(light: 0xFC8F0F, dark: 0xFC8F0F),
                                                                              title: DSDynamicColor.color(light: 0xffffff, dark: 0xffffff)),
                                              text: text,
                                              textField: primaryViewTextField,
@@ -83,7 +83,7 @@ public final class RetroAppearance: DSAppearance {
                                                                 text: secondaryText.headline,
                                                                 placeHolder: secondaryText.subheadline)
         
-        secondaryView = DSDesignableViewColors(button: DSDesignableButtonColor(background: DSDynamicColor.color(light: 0xFC8F0F, dark: 0xFC8F0F),
+        secondaryView = DSDesignableViewStyle(button: DSDesignableButtonColor(background: DSDynamicColor.color(light: 0xFC8F0F, dark: 0xFC8F0F),
                                                                                title: DSDynamicColor.color(light: 0xffffff, dark: 0xffffff)),
                                                text: secondaryText,
                                                textField: secondaryViewTextField,
@@ -112,5 +112,14 @@ public final class RetroAppearance: DSAppearance {
             regularAmount: text.subheadline,
             badgeBackground: self.brandColor
         )
+    }
+    
+    public func style(for viewStyle: DSViewStyle) -> DSDesignableViewStyle {
+        return switch viewStyle {
+        case .screen:
+            primaryView
+        case .secondary:
+            secondaryView
+        }
     }
 }

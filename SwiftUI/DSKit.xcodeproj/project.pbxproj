@@ -31,6 +31,8 @@
 		6009358A2BBAAFD100A1D1E6 /* DSDimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600935892BBAAFD100A1D1E6 /* DSDimension.swift */; };
 		6009358C2BBAB00800A1D1E6 /* DSDesignableDimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6009358B2BBAB00800A1D1E6 /* DSDesignableDimension.swift */; };
 		6009358E2BBAB02800A1D1E6 /* DSDefaultDesignableDimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6009358D2BBAB02800A1D1E6 /* DSDefaultDesignableDimension.swift */; };
+		600935912BBBDB5800A1D1E6 /* DSViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600935902BBBDB5800A1D1E6 /* DSViewStyle.swift */; };
+		600935932BBBDE5300A1D1E6 /* DSViewColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600935922BBBDE5300A1D1E6 /* DSViewColor.swift */; };
 		600A18412BAC85DA00B44917 /* DSAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600A182D2BAC85D900B44917 /* DSAddress.swift */; };
 		600A18422BAC85DA00B44917 /* DSPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600A182E2BAC85D900B44917 /* DSPerson.swift */; };
 		600A18432BAC85DA00B44917 /* URLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600A182F2BAC85D900B44917 /* URLExtension.swift */; };
@@ -189,7 +191,7 @@
 		60EB998C2B2B4D3A00528039 /* DSDesignableTabbarColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EB99832B2B4D3900528039 /* DSDesignableTabbarColor.swift */; };
 		60EB998D2B2B4D3A00528039 /* DSDesignableButtonColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EB99842B2B4D3900528039 /* DSDesignableButtonColor.swift */; };
 		60EB998E2B2B4D3A00528039 /* DSDesignableTextFieldColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EB99852B2B4D3900528039 /* DSDesignableTextFieldColor.swift */; };
-		60EB998F2B2B4D3A00528039 /* DSDesignableViewColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EB99862B2B4D3900528039 /* DSDesignableViewColors.swift */; };
+		60EB998F2B2B4D3A00528039 /* DSDesignableViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EB99862B2B4D3900528039 /* DSDesignableViewStyle.swift */; };
 		60EB99902B2B4D3A00528039 /* DSAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EB99872B2B4D3900528039 /* DSAppearance.swift */; };
 		60EB99912B2B4D3A00528039 /* DSDesignablePriceColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EB99882B2B4D3900528039 /* DSDesignablePriceColor.swift */; };
 		60EB99922B2B4D3A00528039 /* DSDesignableNavigationBarColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EB99892B2B4D3900528039 /* DSDesignableNavigationBarColor.swift */; };
@@ -301,6 +303,8 @@
 		600935892BBAAFD100A1D1E6 /* DSDimension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSDimension.swift; sourceTree = "<group>"; };
 		6009358B2BBAB00800A1D1E6 /* DSDesignableDimension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSDesignableDimension.swift; sourceTree = "<group>"; };
 		6009358D2BBAB02800A1D1E6 /* DSDefaultDesignableDimension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSDefaultDesignableDimension.swift; sourceTree = "<group>"; };
+		600935902BBBDB5800A1D1E6 /* DSViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSViewStyle.swift; sourceTree = "<group>"; };
+		600935922BBBDE5300A1D1E6 /* DSViewColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSViewColor.swift; sourceTree = "<group>"; };
 		600A182D2BAC85D900B44917 /* DSAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSAddress.swift; sourceTree = "<group>"; };
 		600A182E2BAC85D900B44917 /* DSPerson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSPerson.swift; sourceTree = "<group>"; };
 		600A182F2BAC85D900B44917 /* URLExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLExtension.swift; sourceTree = "<group>"; };
@@ -456,7 +460,7 @@
 		60EB99832B2B4D3900528039 /* DSDesignableTabbarColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSDesignableTabbarColor.swift; sourceTree = "<group>"; };
 		60EB99842B2B4D3900528039 /* DSDesignableButtonColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSDesignableButtonColor.swift; sourceTree = "<group>"; };
 		60EB99852B2B4D3900528039 /* DSDesignableTextFieldColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSDesignableTextFieldColor.swift; sourceTree = "<group>"; };
-		60EB99862B2B4D3900528039 /* DSDesignableViewColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSDesignableViewColors.swift; sourceTree = "<group>"; };
+		60EB99862B2B4D3900528039 /* DSDesignableViewStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSDesignableViewStyle.swift; sourceTree = "<group>"; };
 		60EB99872B2B4D3900528039 /* DSAppearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSAppearance.swift; sourceTree = "<group>"; };
 		60EB99882B2B4D3900528039 /* DSDesignablePriceColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSDesignablePriceColor.swift; sourceTree = "<group>"; };
 		60EB99892B2B4D3900528039 /* DSDesignableNavigationBarColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSDesignableNavigationBarColor.swift; sourceTree = "<group>"; };
@@ -781,11 +785,14 @@
 				60EB99832B2B4D3900528039 /* DSDesignableTabbarColor.swift */,
 				60EB998A2B2B4D3900528039 /* DSDesignableTextColor.swift */,
 				60EB99852B2B4D3900528039 /* DSDesignableTextFieldColor.swift */,
-				60EB99862B2B4D3900528039 /* DSDesignableViewColors.swift */,
+				60EB99862B2B4D3900528039 /* DSDesignableViewStyle.swift */,
+				60B7B70E2B3AFCF50050FA38 /* DSColor.swift */,
+				600935922BBBDE5300A1D1E6 /* DSViewColor.swift */,
 				604B4B252B8CC0A600EC6CCE /* DSSpace.swift */,
 				600935892BBAAFD100A1D1E6 /* DSDimension.swift */,
 				600935852BBAAA2800A1D1E6 /* DSPadding.swift */,
 				604B4B232B8CC03400EC6CCE /* DSSize.swift */,
+				600935902BBBDB5800A1D1E6 /* DSViewStyle.swift */,
 				60EB99952B2B4D8900528039 /* Fonts */,
 			);
 			path = Designable;
@@ -904,7 +911,6 @@
 				606FA71D2B971E10003DEA59 /* DSTermsAndConditionsView.swift */,
 				6074DF412BA1E9A80006284C /* DSToolbarSFSymbolButton.swift */,
 				602CE4252B85E53F002B79E2 /* DSPrice */,
-				60B7B70E2B3AFCF50050FA38 /* DSColor.swift */,
 				60C1F78E2B3D66BF0067B21C /* DSButton.swift */,
 				602CE4262B874078002B79E2 /* DSDesignGuideView.swift */,
 				602FE6662B849C1B00E4DDCC /* DSTextField */,
@@ -1226,6 +1232,7 @@
 				60EB99972B2B4D9800528039 /* DSScaledFont.swift in Sources */,
 				60EB998C2B2B4D3A00528039 /* DSDesignableTabbarColor.swift in Sources */,
 				60EB99E12B2B84B200528039 /* NSAttributedString+Size.swift in Sources */,
+				600935932BBBDE5300A1D1E6 /* DSViewColor.swift in Sources */,
 				600E3C192BB6047C00FA33EC /* DSToolbarSFSymbolButton.swift in Sources */,
 				600601BA2B3597A700F2C616 /* DSHStack.swift in Sources */,
 				604AA6402B88E129009EE906 /* DSHeightModifier.swift in Sources */,
@@ -1264,13 +1271,14 @@
 				600E3C142BB6036F00FA33EC /* DSRatingView.swift in Sources */,
 				600E3C102BB5739900FA33EC /* DSScreen.swift in Sources */,
 				600601122B31E02500F2C616 /* DSTintColorModifier.swift in Sources */,
-				60EB998F2B2B4D3A00528039 /* DSDesignableViewColors.swift in Sources */,
+				60EB998F2B2B4D3A00528039 /* DSDesignableViewStyle.swift in Sources */,
 				60EB99DD2B2B77D400528039 /* Int+Cents.swift in Sources */,
 				60C1F7972B3EF5850067B21C /* DSCustomUITextField.swift in Sources */,
 				60EB99C82B2B750200528039 /* DSTextColor.swift in Sources */,
 				604B4B242B8CC03400EC6CCE /* DSSize.swift in Sources */,
 				600E3C1E2BB6051800FA33EC /* DSDivider.swift in Sources */,
 				604B4B452B8E282700EC6CCE /* PeachAppearance.swift in Sources */,
+				600935912BBBDB5800A1D1E6 /* DSViewStyle.swift in Sources */,
 				604B4B532B906EF900EC6CCE /* DSMaxWidthCenteredModifier.swift in Sources */,
 				600F68F72BAB317800ED1C9A /* DSCardStyleModifier.swift in Sources */,
 				600B98902B3C1626005935D2 /* BlackToneAppearance.swift in Sources */,

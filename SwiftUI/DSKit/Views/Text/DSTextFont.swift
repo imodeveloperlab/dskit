@@ -59,4 +59,35 @@ public indirect enum DSTextFont: Equatable, Hashable {
             font.getUIFont(from: appearance).withSize(size)
         }
     }
+    
+    func color(from textColors: DSDesignableTextColor) -> UIColor {
+        return switch self {
+        case .largeTitle:
+            textColors.largeTitle
+        case .title1:
+            textColors.title1
+        case .title2:
+            textColors.title2
+        case .title3:
+            textColors.title3
+        case .headline:
+            textColors.headline
+        case .subheadline:
+            textColors.subheadline
+        case .body:
+            textColors.body
+        case .callout:
+            textColors.callout
+        case .caption1:
+            textColors.caption1
+        case .caption2:
+            textColors.caption2
+        case .footnote:
+            textColors.footnote
+        case .custom(_):
+            UIColor.black
+        case .fontWithSize(let font, _):
+            font.color(from: textColors)
+        }
+    }
 }

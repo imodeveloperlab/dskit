@@ -12,8 +12,8 @@ public class BlackToneAppearance: DSAppearance {
     public var title: String
     public var darkModeSupport: Bool = false
     public var brandColor: UIColor
-    public var primaryView: DSDesignableViewColors
-    public var secondaryView: DSDesignableViewColors
+    public var primaryView: DSDesignableViewStyle
+    public var secondaryView: DSDesignableViewStyle
     public var spacing: DSDesignableSpacing = DSDefaultDesignableSpacing(spatialSystem: 6)
     public var padding: DSDesignablePadding = DSDefaultDesignablePadding(spatialSystem: 6)
     public var dimension: DSDesignableDimension = DSDefaultDesignableDimension(spatialSystem: 6)
@@ -46,7 +46,7 @@ public class BlackToneAppearance: DSAppearance {
                                                               placeHolder: text.subheadline)
         
         // View
-        primaryView = DSDesignableViewColors(button: button,
+        primaryView = DSDesignableViewStyle(button: button,
                                              text: text,
                                              textField: primaryViewTextField,
                                              background: UIColor(0xFFFFFF),
@@ -65,7 +65,7 @@ public class BlackToneAppearance: DSAppearance {
                                                                 text: text.headline,
                                                                 placeHolder: text.subheadline)
         // View
-        secondaryView = DSDesignableViewColors(button: button,
+        secondaryView = DSDesignableViewStyle(button: button,
                                                text: secondaryText,
                                                textField: secondaryViewTextField,
                                                background: UIColor(0xF4F4F4),
@@ -94,5 +94,14 @@ public class BlackToneAppearance: DSAppearance {
                                        regularAmount: UIColor(0x666666),
                                        badgeBackground: UIColor(0xFBB666),
                                        badgeCornerRadius: 6)
+    }
+    
+    public func style(for viewStyle: DSViewStyle) -> DSDesignableViewStyle {
+        return switch viewStyle {
+        case .screen:
+            primaryView
+        case .secondary:
+            secondaryView
+        }
     }
 }

@@ -84,7 +84,7 @@ extension HomeScreen4 {
                             DSText(product.subtitle, .smallSubtitle)
                         }
                         .dsPadding(.regular)
-                        .dsBackground(.secondaryViewBackground)
+                        .dsBackground(.viewColor(.background, .secondary))
                         .dsCornerRadius()
                         .dsPadding(.regular)
                     }
@@ -111,7 +111,7 @@ extension HomeScreen4 {
                     DSText(title, .styleWithSize(.headline, 28))
                     DSHStack(spacing: .small) {
                         DSText(youHave, .subheadline)
-                        DSText(numberOfItemsInCart, .styleWithSize(.headline, 12), color: .primaryViewBackground)
+                        DSText(numberOfItemsInCart, .styleWithSize(.headline, 12), color: .viewColor(.background, .screen))
                             .dsSize(.medium)
                             .dsBackground(.brandColor)
                             .clipShape(Circle())
@@ -138,16 +138,16 @@ extension HomeScreen4 {
                 DSText(
                     category.title,
                     .smallHeadline,
-                    color: isSelected ? .primaryViewButtonTitle : .none
+                    color: isSelected ? .viewColor(.buttonTitle, .screen) : .none
                 )
                 DSText(category.count, .styleWithSize(.headline, 10))
                     .dsSize(20)
-                    .dsBackground(isSelected ? .secondaryViewBackground : .primaryViewBackground)
+                    .dsBackground(isSelected ? .viewColor(.background, .secondary) : .viewColor(.background, .screen))
                     .clipShape(Capsule())
             }
             .dsPadding(.horizontal)
             .dsHeight(35)
-            .dsBackground(isSelected ? .secondaryViewButtonBackground : .secondaryViewBackground)
+            .dsBackground(isSelected ? .viewColor(.buttonBackground, .secondary) : .viewColor(.background, .secondary))
             .dsCornerRadius()
         }
         struct Category: Identifiable {

@@ -46,7 +46,7 @@ public enum DSColorGroup {
 }
 
 public extension DSColorGroup {
-    func colors(from appearance: DSAppearance) -> DSDesignableViewColors {
+    func colors(from appearance: DSAppearance) -> DSDesignableViewStyle {
         switch self {
         case .primary:
             return appearance.primaryView

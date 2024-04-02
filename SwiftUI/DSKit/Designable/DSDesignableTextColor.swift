@@ -91,16 +91,30 @@ public extension DSDesignableTextColor {
     /// - Returns: DSDesignableTextColor
     static func textColors(main: UIColor, secondary: UIColor) -> DSDesignableTextColor {
         
-        return DSDesignableTextColor(largeTitle: main,
-                                     title1: main,
-                                     title2: main,
-                                     title3: main,
-                                     headline: main,
-                                     subheadline: secondary,
-                                     body: main,
-                                     callout: secondary,
-                                     caption1: secondary,
-                                     caption2: secondary,
-                                     footnote: secondary)
+        return DSDesignableTextColor(
+            largeTitle: main,
+            title1: main,
+            title2: main,
+            title3: main,
+            headline: main,
+            subheadline: secondary,
+            body: main,
+            callout: secondary,
+            caption1: secondary,
+            caption2: secondary,
+            footnote: secondary
+        )
+    }
+}
+
+public extension DSDesignableTextColor {
+    
+    func color(for textColor: DSTextColor) -> UIColor {
+        return switch textColor {
+        case .font(let font):
+            font.color(from: self)
+        case .custom(let customColor):
+            customColor
+        }
     }
 }

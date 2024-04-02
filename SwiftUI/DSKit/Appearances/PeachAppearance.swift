@@ -13,8 +13,8 @@ public class PeachAppearance: DSAppearance {
     public var title: String
     public var darkModeSupport: Bool = false
     public var brandColor: UIColor
-    public var primaryView: DSDesignableViewColors
-    public var secondaryView: DSDesignableViewColors
+    public var primaryView: DSDesignableViewStyle
+    public var secondaryView: DSDesignableViewStyle
     public var spacing: DSDesignableSpacing = DSDefaultDesignableSpacing(spatialSystem: 7)
     public var padding: DSDesignablePadding = DSDefaultDesignablePadding(spatialSystem: 7)
     public var dimension: DSDesignableDimension = DSDefaultDesignableDimension(spatialSystem: 7)
@@ -47,7 +47,7 @@ public class PeachAppearance: DSAppearance {
                                                               text: text.headline,
                                                               placeHolder: text.subheadline)
         
-        primaryView = DSDesignableViewColors(button: button,
+        primaryView = DSDesignableViewStyle(button: button,
                                              text: text,
                                              textField: primaryViewTextField,
                                              background: UIColor(0xFFFFFF),
@@ -62,7 +62,7 @@ public class PeachAppearance: DSAppearance {
                                                                 text: text.headline,
                                                                 placeHolder: text.subheadline)
         
-        secondaryView = DSDesignableViewColors(button: secondaryButton,
+        secondaryView = DSDesignableViewStyle(button: secondaryButton,
                                                text: secondaryText,
                                                textField: secondaryViewTextField,
                                                background: UIColor(0xF4F4F4),
@@ -91,5 +91,14 @@ public class PeachAppearance: DSAppearance {
                                        regularAmount: UIColor(0x4A1F0F),
                                        badgeBackground: UIColor(0xFF5A5F),
                                        badgeCornerRadius: 6)
+    }
+    
+    public func style(for viewStyle: DSViewStyle) -> DSDesignableViewStyle {
+        return switch viewStyle {
+        case .screen:
+            primaryView
+        case .secondary:
+            secondaryView
+        }
     }
 }

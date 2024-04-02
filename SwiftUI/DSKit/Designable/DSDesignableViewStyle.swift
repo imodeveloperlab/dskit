@@ -10,7 +10,7 @@ import UIKit
 import SwiftUI
 
 /// View colors
-public struct DSDesignableViewColors: Equatable, Hashable {
+public struct DSDesignableViewStyle: Equatable, Hashable {
     
     /// Init designable view colors
     /// - Parameters:
@@ -51,4 +51,31 @@ public struct DSDesignableViewColors: Equatable, Hashable {
     
     /// View corner radius
     public var cornerRadius: CGFloat
+}
+
+extension DSDesignableViewStyle {
+    
+    func color(for viewColor: DSViewColor) -> UIColor {
+        switch viewColor {
+        case .buttonBackground:
+            button.background
+        case .buttonTitle:
+            button.title
+        case .background:
+            background
+        case .separator:
+            separator
+        case .textFieldBorder:
+            textField.border
+        case .textFieldBackground:
+            textField.background
+        case .textFieldText:
+            textField.text
+        case .textFieldPlaceholder:
+            textField.placeHolder
+        case .text(let textColor):
+            text.color(for: textColor)
+        }
+    }
+    
 }

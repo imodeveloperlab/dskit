@@ -13,8 +13,8 @@ public class DarkLightAppearance: DSAppearance {
     public var title: String
     public var darkModeSupport: Bool = true
     public var brandColor: UIColor
-    public var primaryView: DSDesignableViewColors
-    public var secondaryView: DSDesignableViewColors
+    public var primaryView: DSDesignableViewStyle
+    public var secondaryView: DSDesignableViewStyle
     public var spacing: DSDesignableSpacing = DSDefaultDesignableSpacing(spatialSystem: 6.5)
     public var padding: DSDesignablePadding = DSDefaultDesignablePadding(spatialSystem: 6.5)
     public var dimension: DSDesignableDimension = DSDefaultDesignableDimension(spatialSystem: 6.5)
@@ -71,7 +71,7 @@ public class DarkLightAppearance: DSAppearance {
         let cornerRadius: CGFloat = 10
         
         // View
-        primaryView = DSDesignableViewColors(button: button,
+        primaryView = DSDesignableViewStyle(button: button,
                                              text: text,
                                              textField: primaryViewTextField,
                                              background: background,
@@ -113,7 +113,7 @@ public class DarkLightAppearance: DSAppearance {
         let sCornerRadius: CGFloat = 10
         
         // View
-        secondaryView = DSDesignableViewColors(button: sButton,
+        secondaryView = DSDesignableViewStyle(button: sButton,
                                                text: secondaryText,
                                                textField: secondaryViewTextField,
                                                background: sBackground,
@@ -148,5 +148,14 @@ public class DarkLightAppearance: DSAppearance {
                                        amount: text.headline,
                                        regularAmount: text.subheadline,
                                        badgeBackground: UIColor(0xFF656B))
+    }
+    
+    public func style(for viewStyle: DSViewStyle) -> DSDesignableViewStyle {
+        return switch viewStyle {
+        case .screen:
+            primaryView
+        case .secondary:
+            secondaryView
+        }
     }
 }

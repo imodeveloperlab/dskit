@@ -13,7 +13,7 @@ public protocol DSDesignable {
 }
 
 public extension DSDesignable {
-    var viewColors: DSDesignableViewColors {
+    var viewColors: DSDesignableViewStyle {
         return colorGroup.colors(from: appearance)
     }
     

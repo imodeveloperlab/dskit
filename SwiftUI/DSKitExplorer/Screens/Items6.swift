@@ -58,7 +58,7 @@ extension Items6 {
                 DSImageView(
                     sfSymbol: "heart.fill",
                     size: .regular,
-                    tint: .customColor(product.favourite ? .red : .white)
+                    tint: .color(product.favourite ? .red : .white)
                 )
                 .dsPadding(.regular)
                 .dsBlurBackground(style: .light)

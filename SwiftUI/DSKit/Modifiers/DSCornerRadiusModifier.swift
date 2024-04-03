@@ -11,7 +11,7 @@ import SwiftUI
 public struct DSCornerRadiusModifier: ViewModifier {
     
     @Environment(\.appearance) var appearance: DSAppearance
-    @Environment(\.colorGroup) var colorGroup: DSViewStyle
+    @Environment(\.viewStyle) var viewStyle: DSViewStyle
     
     @Environment(\.parentPadding) var parentPadding: CGFloat
     @Environment(\.parentCornerRadius) var parentCornerRadius: CGFloat
@@ -25,7 +25,7 @@ public struct DSCornerRadiusModifier: ViewModifier {
     
     func resolveCornerRadius() -> CGFloat {
         if parentCornerRadius == 0 {
-            return colorGroup.colors(from: appearance).cornerRadius
+            return viewStyle.colors(from: appearance).cornerRadius
         } else {
             return max(parentCornerRadius - parentPadding, 2)
         }
@@ -49,19 +49,19 @@ struct Testable_DSCornerRadiusModifier: View {
                             DSText("Center")
                         }
                         .dsPadding(4)
-                        .dsBackground(.customColor(.yellow))
+                        .dsBackground(.color(.yellow))
                         .dsCornerRadius()
                     }
                     .dsPadding(3)
-                    .dsBackground(.customColor(.blue))
+                    .dsBackground(.color(.blue))
                     .dsCornerRadius()
                 }
                 .dsPadding(3)
-                .dsBackground(.customColor(.green))
+                .dsBackground(.color(.green))
                 .dsCornerRadius()
             }
             .dsPadding(2)
-            .dsBackground(.customColor(.red))
+            .dsBackground(.color(.red))
             .dsCornerRadius()
         }
         .dsPadding()

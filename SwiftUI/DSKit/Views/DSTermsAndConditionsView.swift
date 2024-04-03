@@ -19,9 +19,9 @@ public struct DSTermsAndConditions: View {
         DSVStack(spacing: .small) {
             DSText(message, .smallSubtitle).frame(maxWidth: .infinity, alignment: .center)
             DSHStack(spacing: .small) {
-                DSText("Terms", .style(.fontWithSize(.headline, 12))).onTap { }
+                DSText("Terms", .textFont(.fontWithSize(.headline, 12))).onTap { }
                 DSText("and", .smallSubtitle)
-                DSText("Privacy", .style(.fontWithSize(.headline, 12))).onTap { }
+                DSText("Privacy", .textFont(.fontWithSize(.headline, 12))).onTap { }
                 DSText("policy", .smallSubtitle)
             }.frame(maxWidth: .infinity, alignment: .center)
         }

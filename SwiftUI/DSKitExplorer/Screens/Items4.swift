@@ -17,7 +17,7 @@ struct Items4: View {
         ScrollView {
             DSVStack(spacing: .medium) {
                 DSHScroll(data: viewModel.filters, id: \.self) { title in
-                    DSText(title, .style(.fontWithSize(.headline, 12)))
+                    DSText(title, .textFont(.fontWithSize(.headline, 12)))
                         .dsPadding(.horizontal, .large)
                         .dsCardStyle()
                         .onTap { self.dismiss() }
@@ -63,7 +63,7 @@ extension Items4 {
                     DSImageView(
                         sfSymbol: "heart.fill",
                         size: .regular,
-                        tint: .customColor(product.favourite ? .red : .gray.opacity(0.5))
+                        tint: .color(product.favourite ? .red : .gray.opacity(0.5))
                     )
                     .dsPadding(.regular)
                     .dsBackground(.primary)

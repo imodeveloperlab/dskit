@@ -10,22 +10,22 @@ import SwiftUI
 public struct DSText: View {
     
     @Environment(\.appearance) var appearance: DSAppearance
-    @Environment(\.colorGroup) var colorGroup: DSViewStyle
+    @Environment(\.viewStyle) var viewStyle: DSViewStyle
     
-    let type: DSTextStyle
+    let textStyle: DSTextStyle
     let text: String
     let multilineTextAlignment: TextAlignment
     
-    public init(_ text: String, _ type: DSTextStyle = .body, multilineTextAlignment: TextAlignment = .leading) {
+    public init(_ text: String, _ textStyle: DSTextStyle = .body, multilineTextAlignment: TextAlignment = .leading) {
         self.text = text
-        self.type = type
+        self.textStyle = textStyle
         self.multilineTextAlignment = multilineTextAlignment
     }
     
     public var body: some View {
         Text(text)
-            .font(type.style(appearance: appearance).font.getFont(from: appearance))
-            .foregroundStyle(Color(uiColor: type.style(appearance: appearance).color.getColor(appearance: appearance, colorGroup: colorGroup)))
+            .font(textStyle.font(for: appearance))
+            .foregroundStyle(textStyle.color(for: appearance, and: viewStyle))
             .multilineTextAlignment(multilineTextAlignment)
             .dsDebuggable(debugColor: Color.orange.opacity(0.3))
     }
@@ -40,9 +40,9 @@ struct DSText_Previews: PreviewProvider {
                 DSText("Title 2", .title2)
                 DSText("Title 3", .title3)
                 DSText("Headline", .headline)
-                DSText("Headline with size 20", .style(.fontWithSize(.headline, 20)))
+                DSText("Headline with size 20", .textFont(.fontWithSize(.headline, 20)))
                 DSText("Subheadline", .subheadline)
-                DSText("Subheadline with size 20", .style(.fontWithSize(.headline, 20)))
+                DSText("Subheadline with size 20", .textFont(.fontWithSize(.headline, 20)))
                 DSText("Body", .body)
                 DSText("Callout", .callout)
                 DSText("Caption 1", .caption1)

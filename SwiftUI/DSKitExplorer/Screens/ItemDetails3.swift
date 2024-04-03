@@ -47,7 +47,7 @@ struct ItemDetails3: View {
                     DSPriceView(price: viewModel.price, size: .headline)
                     
                     DSHStack(alignment: .center) {
-                        DSImageView(sfSymbol: "info.circle.fill", size: .regular, tint: .customColor(.yellow))
+                        DSImageView(sfSymbol: "info.circle.fill", size: .regular, tint: .color(.yellow))
                         DSText(viewModel.priceDisclaimer, .caption2, multilineTextAlignment: .leading)
                     }
                 }

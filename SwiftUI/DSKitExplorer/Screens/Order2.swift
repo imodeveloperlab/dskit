@@ -68,14 +68,14 @@ extension Order2 {
     struct CardView: View, DSDesignable {
         
         @Environment(\.appearance) var appearance: DSAppearance
-        @Environment(\.colorGroup) var colorGroup: DSViewStyle
+        @Environment(\.viewStyle) var viewStyle: DSViewStyle
         
         let card: Data
         var body: some View {
             DSVStack(alignment: .center) {
-                DSImageView(sfSymbol: card.icon, size: 28, tint: .view(.buttonBackground))
+                DSImageView(sfSymbol: card.icon, size: 28, tint: .viewColor(.buttonBackground))
                 DSVStack(alignment: .center) {
-                    DSText(card.title, .styleWithColor(.headline, .view(.buttonBackground)))
+                    DSText(card.title, .textFontWithColor(.headline, .viewColor(.buttonBackground)))
                     DSVStack(alignment: .center, spacing: .small) {
                         DSText(card.subtitle, .smallSubtitle)
                         DSText(card.description, .smallSubtitle)

@@ -55,27 +55,26 @@ public struct DSDesignableViewStyle: Equatable, Hashable {
 
 extension DSDesignableViewStyle {
     
-    func color(for viewColor: DSViewColor, appearance: DSAppearance, style: DSViewStyle) -> UIColor {
+    func color(for viewColor: DSViewColor, appearance: DSAppearance, style: DSViewStyle) -> Color {
         switch viewColor {
         case .buttonBackground:
-            button.background
+            button.background.color
         case .buttonTitle:
-            button.title
+            button.title.color
         case .background:
-            background
+            background.color
         case .separator:
-            separator
+            separator.color
         case .textFieldBorder:
-            textField.border
+            textField.border.color
         case .textFieldBackground:
-            textField.background
+            textField.background.color
         case .textFieldText:
-            textField.text
+            textField.text.color
         case .textFieldPlaceholder:
-            textField.placeHolder
+            textField.placeHolder.color
         case .text(let textColor):
-            textColor.getColor(appearance: appearance, colorGroup: style)            
+            textColor.color(for: appearance, and: style)
         }
     }
-    
 }

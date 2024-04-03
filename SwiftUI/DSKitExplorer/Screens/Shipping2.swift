@@ -27,7 +27,7 @@ struct Shipping2: View {
             DSBottomContainer {
                 DSHStack {
                     DSText("Next Step:", .smallHeadline)
-                    DSText("Order Info", .style(.fontWithSize(.subheadline, 14)))
+                    DSText("Order Info", .textFont(.fontWithSize(.subheadline, 14)))
                 }
                 DSButton(
                     title: "Continue",
@@ -88,10 +88,10 @@ extension Shipping2 {
                     DSPriceView(price: .init(amount: price, currency: "$"), size: .smallHeadline)
                         .dsPadding(.top, .regular)
                 } else {
-                    DSText("Free", .reStyleWithColor(.smallHeadline, .customColor(.white)))
+                    DSText("Free", .reStyleWithColor(.smallHeadline, .color(.white)))
                         .dsPadding(.vertical, .regular)
                         .dsPadding(.horizontal)
-                        .dsBackground(.customColor(.green))
+                        .dsBackground(.color(.green))
                         .dsCornerRadius()
                         .dsPadding(.top, .regular)
                 }

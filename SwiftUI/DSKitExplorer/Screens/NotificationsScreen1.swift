@@ -19,9 +19,9 @@ struct NotificationsScreen1: View {
             Spacer()
             
             DSHStack {
-                DSText("Turn on\nnotifications", .style(.fontWithSize(.headline, 36)))
+                DSText("Turn on\nnotifications", .textFont(.fontWithSize(.headline, 36)))
                 Spacer()
-                DSImageView(sfSymbol: "bell.fill", size: 60, tint: .secondary(.background))
+                DSImageView(sfSymbol: "bell.fill", size: 60, tint: .secondaryView(.background))
             }
             
             DSText("Meet new people, create posts, find friends and more.")

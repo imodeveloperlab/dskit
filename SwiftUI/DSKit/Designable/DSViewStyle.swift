@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct AppearanceColorGroupEnvironment: EnvironmentKey {
+struct AppearanceviewStyleEnvironment: EnvironmentKey {
     static let defaultValue: DSViewStyle = .primary
 }
 
 public extension EnvironmentValues {
-    var colorGroup: DSViewStyle {
-        get { self[AppearanceColorGroupEnvironment.self] }
-        set { self[AppearanceColorGroupEnvironment.self] = newValue }
+    var viewStyle: DSViewStyle {
+        get { self[AppearanceviewStyleEnvironment.self] }
+        set { self[AppearanceviewStyleEnvironment.self] = newValue }
     }
 }
 

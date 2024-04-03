@@ -10,11 +10,11 @@ import SwiftUI
 struct DSColorModifier: ViewModifier {
     
     @Environment(\.appearance) var appearance: DSAppearance
-    @Environment(\.colorGroup) var colorGroup: DSViewStyle
+    @Environment(\.viewStyle) var viewStyle: DSViewStyle
     let tint: DSColor
     func body(content: Content) -> some View {
         content
-            .foregroundColor(tint.styledColorDemo(from: appearance, and: colorGroup).color)
+            .foregroundColor(tint.color(for: appearance, and: viewStyle))
     }
 }
 

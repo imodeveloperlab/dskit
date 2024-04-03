@@ -94,9 +94,9 @@ extension ProfileScreen1 {
                 Spacer()
                 
                 if let badge = action.badge {
-                    DSText(badge, .reStyleWithColor(.smallSubtitle, .secondary(.buttonTitle)))
+                    DSText(badge, .reStyleWithColor(.smallSubtitle, .secondaryView(.buttonTitle)))
                         .dsSize(18)
-                        .dsBackground(.customColor(.red))
+                        .dsBackground(.color(.red))
                         .clipShape(Circle())
                 } else if let option = action.option {
                     DSText(option, .smallSubtitle)

@@ -21,9 +21,9 @@ public struct LogInScreen1: View {
             
             DSVStack(spacing: .medium) {
                 DSVStack(alignment: .leading, spacing: .small) {
-                    DSText("DSKit", .style(.fontWithSize(.headline, 38)))
+                    DSText("DSKit", .textFont(.fontWithSize(.headline, 38)))
                         .showWhenKeyboardIsDisplayed()
-                    DSText("Welcome to\nDSKit shop", .style(.fontWithSize(.headline, 35)))
+                    DSText("Welcome to\nDSKit shop", .textFont(.fontWithSize(.headline, 35)))
                         .hideWhenKeyboardIsDisplayed()
                     DSText("An exciting place for the whole\nfamily to shop", .subheadline)
                 }.fixedSize(horizontal: false, vertical: true)

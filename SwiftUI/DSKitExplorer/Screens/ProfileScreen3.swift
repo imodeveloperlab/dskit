@@ -20,7 +20,7 @@ struct ProfileScreen3: View {
                     DSImageView(
                         sfSymbol: "exclamationmark.shield.fill",
                         size: 50,
-                        tint: .customColor(.yellow)
+                        tint: .color(.yellow)
                     )
                     
                     DSText(

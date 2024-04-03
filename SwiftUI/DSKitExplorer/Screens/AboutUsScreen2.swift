@@ -82,10 +82,10 @@ struct AboutUsScreen2: View {
                                     DSImageView(sfSymbol: "calendar", size: .size(14), tint: .text(.caption1))
                                     DSText(Date().stringFormatted(dateStyle: .medium, timeStyle: .none), .subheadline)
                                     DSHStack(spacing: .small) {
-                                        DSImageView(sfSymbol: "star.fill", size: .size(14), tint: .customColor(Color.yellow))
-                                        DSImageView(sfSymbol: "star.fill", size: .size(14), tint: .customColor(Color.yellow))
-                                        DSImageView(sfSymbol: "star.fill", size: .size(14), tint: .customColor(Color.yellow))
-                                        DSImageView(sfSymbol: "star.fill", size: .size(14), tint: .customColor(Color.yellow))
+                                        DSImageView(sfSymbol: "star.fill", size: .size(14), tint: .color(Color.yellow))
+                                        DSImageView(sfSymbol: "star.fill", size: .size(14), tint: .color(Color.yellow))
+                                        DSImageView(sfSymbol: "star.fill", size: .size(14), tint: .color(Color.yellow))
+                                        DSImageView(sfSymbol: "star.fill", size: .size(14), tint: .color(Color.yellow))
                                         DSImageView(sfSymbol: "star", size:.size(14), tint: .text(.caption1))
                                     }
                                 }
@@ -125,7 +125,7 @@ struct AboutUsScreen2: View {
                         DSVStack {
                             DSText("Health and safety", .headline)
                                 .alignmentGuide(.healthSafetyAlignment) { d in d[VerticalAlignment.center] }
-                            DSText("· Mask required\n· Temperature check required\n· Staff wear masks\n· Staff get temperature checks", .style(.fontWithSize(.subheadline, 14)))
+                            DSText("· Mask required\n· Temperature check required\n· Staff wear masks\n· Staff get temperature checks", .textFont(.fontWithSize(.subheadline, 14)))
                                 .frame(maxWidth: .infinity, alignment: .leading)
                         }
                     }
@@ -169,7 +169,7 @@ struct ContactView: View {
             DSImageView(sfSymbol: iconName, size: .regular, tint: .text(.headline))
             DSHStack {
                 DSText(title, .smallHeadline)
-                DSText(info, .style(.fontWithSize(.subheadline, 14)))
+                DSText(info, .textFont(.fontWithSize(.subheadline, 14)))
                     .frame(maxWidth: .infinity, alignment: .leading)
             }
         }.dsCardStyle()

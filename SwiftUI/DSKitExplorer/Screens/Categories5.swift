@@ -43,7 +43,7 @@ extension Categories5 {
                     DSImageView(
                         sfSymbol: "heart.fill",
                         size: .regular,
-                        tint: .customColor(category.favourite ? .red : .white)
+                        tint: .color(category.favourite ? .red : .white)
                     )
                     .dsPadding(.regular)
                     .dsBlurBackground(style: .light)
@@ -52,7 +52,7 @@ extension Categories5 {
                 }
                 .overlay(alignment: .topLeading) {
                     if let tag = category.tag {
-                        DSText(tag, .styleWithColor(.fontWithSize(.headline, 10), .customColor(.white)))
+                        DSText(tag, .textFontWithColor(.fontWithSize(.headline, 10), .color(.white)))
                         .dsPadding(.regular)
                         .dsBlurBackground(style: .light)
                         .dsCornerRadius()

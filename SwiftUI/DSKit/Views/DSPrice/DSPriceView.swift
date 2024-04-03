@@ -29,7 +29,7 @@ public struct DSPriceView: View {
     
     var amountColor: DSColor {
         if let color {
-            .customColor(color)
+            .color(color)
         } else {
             .priceRegularAmount
         }
@@ -53,7 +53,7 @@ public struct DSPriceView: View {
             }
             
             if let discountBadge = discountBadge {
-                DSText(discountBadge, .styleWithColor(.fontWithSize(textType.font, textType.size(appearance) * 0.72), .priceBadgeText))
+                DSText(discountBadge, .textFontWithColor(.fontWithSize(textType.dsTextFont, textType.size(appearance) * 0.72), .priceBadgeText))
                     .dsPadding(.horizontal, .regular)
                     .dsPadding(.vertical, .custom(2))
                     .background(appearance.price.badgeBackground.color)
@@ -74,7 +74,7 @@ struct Testable_DSPrice: View {
         DSPriceView(price: price, size: .caption1, color: .green)
         DSPriceView(price: price, size: .caption2, color: .green)
         DSPriceView(price: price, size: .footnote)
-        DSPriceView(price: price, size: .style(.fontWithSize(.headline, 20)))
+        DSPriceView(price: price, size: .textFont(.fontWithSize(.headline, 20)))
     }
 }
 

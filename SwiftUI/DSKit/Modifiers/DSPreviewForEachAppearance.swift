@@ -22,7 +22,7 @@ public struct DSPreviewForEachAppearance<Content: View>: View {
             self.content()
                 .onAppear { configuration.appearance.overrideTheSystemAppearance() }
                 .environment(\.appearance, configuration.appearance)
-                .environment(\.colorGroup, .primary)
+                .environment(\.viewStyle, .primary)
                 .previewDisplayName(configuration.title)
         }
     }

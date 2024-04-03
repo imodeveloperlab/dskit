@@ -27,10 +27,10 @@ struct ItemDetails4: View {
                 }
                 
                 DSHStack(alignment: .center, spacing: .regular) {
-                    DSText("New", .styleWithColor(.fontWithSize(.headline, 12), .customColor(Color.white)))
+                    DSText("New", .textFontWithColor(.fontWithSize(.headline, 12), .color(Color.white)))
                         .dsPadding(.vertical, .small)
                         .dsPadding(.horizontal, .regular)
-                        .dsBackground(.customColor(.green))
+                        .dsBackground(.color(.green))
                         .dsCornerRadius()
                     DSRatingView(rating: 4.5, size: 16)
                     DSText("24K Ratings", .callout)

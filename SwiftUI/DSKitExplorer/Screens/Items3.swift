@@ -56,7 +56,7 @@ extension Items3 {
                 DSImageView(
                     sfSymbol: "heart.fill",
                     size: .regular,
-                    tint: .customColor(product.favorite ? .red : .gray.opacity(0.5))
+                    tint: .color(product.favorite ? .red : .gray.opacity(0.5))
                 )
                 .dsPadding(.regular)
                 .dsBackground(.primary)

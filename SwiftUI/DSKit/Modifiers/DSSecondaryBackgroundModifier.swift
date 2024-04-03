@@ -14,7 +14,7 @@ public struct DSSecondaryBackgroundModifier: ViewModifier {
     public func body(content: Content) -> some View {
         content
             .dsBackground(.secondary)
-            .environment(\.colorGroup, .secondary)
+            .environment(\.viewStyle, .secondary)
     }
 }
 

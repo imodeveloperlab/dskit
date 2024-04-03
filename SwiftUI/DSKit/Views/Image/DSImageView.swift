@@ -13,7 +13,7 @@ public struct DSImageView: View {
     static let unitTestMode = ProcessInfo.processInfo.environment["XCTestConfigurationFilePath"] != nil
     
     @Environment(\.appearance) var appearance: DSAppearance
-    @Environment(\.colorGroup) var colorGroup: DSViewStyle
+    @Environment(\.viewStyle) var viewStyle: DSViewStyle
     @StateObject var imageManager = ImageManager()
     let image: DSImage
     @State private var imageLoaded = false
@@ -200,10 +200,10 @@ struct DSImageView_Previews: PreviewProvider {
                 }
                 
                 DSHStack {
-                    DSImageView(sfSymbol: "sun.rain.fill", size: .size(.small), tint: .customColor(.red))
-                    DSImageView(sfSymbol: "sun.rain.fill", size: .size(.regular), tint: .customColor(.red))
-                    DSImageView(sfSymbol: "sun.rain.fill", size: .size(.medium), tint: .customColor(.red))
-                    DSImageView(sfSymbol: "sun.rain.fill", size: .size(.large), tint: .customColor(.red))
+                    DSImageView(sfSymbol: "sun.rain.fill", size: .size(.small), tint: .color(.red))
+                    DSImageView(sfSymbol: "sun.rain.fill", size: .size(.regular), tint: .color(.red))
+                    DSImageView(sfSymbol: "sun.rain.fill", size: .size(.medium), tint: .color(.red))
+                    DSImageView(sfSymbol: "sun.rain.fill", size: .size(.large), tint: .color(.red))
                 }
             }
         }

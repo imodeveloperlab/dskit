@@ -25,20 +25,15 @@ public indirect enum DSTextFont: Equatable, Hashable {
     case custom(UIFont)
     case fontWithSize(DSTextFont, CGFloat)
     
-    public func getFontSize(from appearance: DSAppearance) -> CGFloat {
-        return switch self {
-        case .fontWithSize(_, let size):
-            size
-        default:
-            getUIFont(from: appearance).pointSize
-        }
+    public func pointSize(for appearance: DSAppearance) -> CGFloat {
+        uiFont(for: appearance).pointSize
     }
     
-    public func getFont(from appearance: DSAppearance) -> Font {
-        return Font(getUIFont(from: appearance))
+    public func font(for appearance: DSAppearance) -> Font {
+        return Font(uiFont(for: appearance))
     }
     
-    public func getUIFont(from appearance: DSAppearance) -> UIFont {
+    public func uiFont(for appearance: DSAppearance) -> UIFont {
         return switch self {
         case .title1:
             appearance.fonts.title1
@@ -65,11 +60,11 @@ public indirect enum DSTextFont: Equatable, Hashable {
         case .custom(let customFont):
             customFont
         case .fontWithSize(let font, let size):
-            font.getUIFont(from: appearance).withSize(size)
+            font.uiFont(for: appearance).withSize(size)
         }
     }
     
-    func color(from textColors: DSDesignableTextColor) -> UIColor {
+    func color(for textColors: DSDesignableTextColor) -> UIColor {
         return switch self {
         case .largeTitle:
             textColors.largeTitle
@@ -96,7 +91,7 @@ public indirect enum DSTextFont: Equatable, Hashable {
         case .custom(_):
             UIColor.black
         case .fontWithSize(let font, _):
-            font.color(from: textColors)
+            font.color(for: textColors)
         }
     }
 }

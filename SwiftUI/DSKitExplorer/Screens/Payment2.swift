@@ -52,9 +52,9 @@ extension Payment2 {
                     }
                     .overlay(alignment: .topLeading) {
                         DSVStack(spacing: .small) {
-                            DSText(card.holder, .styleWithColor(.title2, .customColor(.white)))
-                            DSText("\(card.type) **** \(card.end)", .styleWithColor(.headline, .customColor(.white))).opacity(0.9)
-                            DSText(card.expire, .styleWithColor(.subheadline, .customColor(.white))).opacity(0.5)
+                            DSText(card.holder, .textFontWithColor(.title2, .color(.white)))
+                            DSText("\(card.type) **** \(card.end)", .textFontWithColor(.headline, .color(.white))).opacity(0.9)
+                            DSText(card.expire, .textFontWithColor(.subheadline, .color(.white))).opacity(0.5)
                                 
                         }.dsPadding()
                     }

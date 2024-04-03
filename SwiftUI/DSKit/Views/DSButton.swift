@@ -18,7 +18,7 @@ public struct DSButton: View {
     }
     
     @Environment(\.appearance) var appearance: DSAppearance
-    @Environment(\.colorGroup) var colorGroup: DSViewStyle
+    @Environment(\.viewStyle) var viewStyle: DSViewStyle
     
     let title: String
     var leftImage: DSImage? = nil
@@ -125,8 +125,8 @@ public struct DSButton: View {
                     .background(backgroundColor)
                     .dsCornerRadius()
                     .overlay(
-                        RoundedRectangle(cornerRadius: colorGroup.colors(from: appearance).cornerRadius)
-                            .stroke(titleColor.styledColorDemo(from: appearance, and: colorGroup).color, lineWidth: 1)
+                        RoundedRectangle(cornerRadius: viewStyle.colors(from: appearance).cornerRadius)
+                            .stroke(titleColor.color(for: appearance, and: viewStyle), lineWidth: 1)
                     ).padding(1)
             }
         })
@@ -144,7 +144,7 @@ public struct DSButton: View {
             }
             
             if !title.isEmpty {
-                DSText(title, .styleWithColor(.fontWithSize(.headline, 15), titleColor))
+                DSText(title, .textFontWithColor(.fontWithSize(.headline, 15), titleColor))
                     .dsHeight(.large)
             }
             
@@ -163,39 +163,39 @@ public struct DSButton: View {
     var backgroundColor: Color {
         switch style {
         case .light:
-            dsBackgroundColor.styledColorDemo(from: appearance, and: colorGroup).color.opacity(0.1)
+            dsBackgroundColor.color(for: appearance, and: viewStyle).opacity(0.1)
         default:
-            dsBackgroundColor.styledColorDemo(from: appearance, and: colorGroup).color
+            dsBackgroundColor.color(for: appearance, and: viewStyle)
         }
     }
     
     var dsBackgroundColor: DSColor {
         switch style {
         case .default:
-            return .view(.buttonBackground)
+            return .viewColor(.buttonBackground)
         case .light:
-            return .view(.buttonBackground)
+            return .viewColor(.buttonBackground)
         case .custom(color: let color):
-            return .customColor(color)
+            return .color(color)
         case .clear:
-            return .customColor(.clear)
+            return .color(.clear)
         case .borderedLight:
-            return .style(.primary, .buttonTitle)
+            return .viewStyleAndColor(.primary, .buttonTitle)
         }
     }
     
     var titleColor: DSColor {
         switch style {
         case .default:
-            return .view(.buttonTitle)
+            return .viewColor(.buttonTitle)
         case .light:
-            return .view(.buttonBackground)
+            return .viewColor(.buttonBackground)
         case .custom(color: _):
-            return .customColor(.white)
+            return .color(.white)
         case .clear:
-            return .view(.buttonBackground)
+            return .viewColor(.buttonBackground)
         case .borderedLight:
-            return .style(.primary, .buttonBackground)
+            return .viewStyleAndColor(.primary, .buttonBackground)
         }
     }
 }

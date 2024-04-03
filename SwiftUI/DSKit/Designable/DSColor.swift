@@ -11,10 +11,10 @@ import SwiftUI
 public enum DSColor: Equatable, Hashable {
     
     case brandColor
-    case style(DSViewStyle, DSViewColor)
-    case view(DSViewColor)
-    case primary(DSViewColor)
-    case secondary(DSViewColor)
+    case viewStyleAndColor(DSViewStyle, DSViewColor)
+    case viewColor(DSViewColor)
+    case primaryView(DSViewColor)
+    case secondaryView(DSViewColor)
     case text(DSTextFont)
     case navigationBarButton
     case navigationBarText
@@ -28,47 +28,47 @@ public enum DSColor: Equatable, Hashable {
     case priceRegularAmount
     case priceBadgeBackground
     case priceBadgeText
-    case customColor(Color)
+    case color(Color)
     
-    func styledColorDemo(from appearance: DSAppearance, and style: DSViewStyle) -> UIColor {
+    func color(for appearance: DSAppearance, and style: DSViewStyle) -> Color {
         switch self {
         case .brandColor:
-            return appearance.brandColor
-        case .style(let style, let viewColor):
+            return appearance.brandColor.color
+        case .viewStyleAndColor(let style, let viewColor):
             return appearance.style(for: style).color(for: viewColor, appearance: appearance, style: style)
-        case .primary(let viewColor):
+        case .primaryView(let viewColor):
             return appearance.style(for: .primary).color(for: viewColor, appearance: appearance, style: style)
-        case .secondary(let viewColor):
+        case .secondaryView(let viewColor):
             return appearance.style(for: .secondary).color(for: viewColor, appearance: appearance, style: style)
         case .navigationBarButton:
-            return appearance.navigationBar.buttons
+            return appearance.navigationBar.buttons.color
         case .navigationBarText:
-            return appearance.navigationBar.text
+            return appearance.navigationBar.text.color
         case .navigationBarBackground:
-            return appearance.navigationBar.bar
+            return appearance.navigationBar.bar.color
         case .tabBarBarTint:
-            return appearance.tabBar.barTint
+            return appearance.tabBar.barTint.color
         case .tabBarItemTint:
-            return appearance.tabBar.itemTint
+            return appearance.tabBar.itemTint.color
         case .tabBarUnselectedItemTint:
-            return appearance.tabBar.unselectedItemTint
+            return appearance.tabBar.unselectedItemTint.color
         case .tabBarBadge:
-            return appearance.tabBar.badge
+            return appearance.tabBar.badge.color
         case .priceCurrency:
-            return appearance.price.currency
+            return appearance.price.currency.color
         case .priceAmount:
-            return appearance.price.amount
+            return appearance.price.amount.color
         case .priceRegularAmount:
-            return appearance.price.regularAmount
+            return appearance.price.regularAmount.color
         case .priceBadgeBackground:
-            return appearance.price.badgeBackground
+            return appearance.price.badgeBackground.color
         case .priceBadgeText:
-            return appearance.price.badgeText
-        case .customColor(let color):
-            return UIColor(color)
+            return appearance.price.badgeText.color
+        case .color(let color):
+            return color
         case .text(let font):
             return appearance.style(for: style).color(for: .text(.font(font)), appearance: appearance, style: style)
-        case .view(let color):
+        case .viewColor(let color):
             return appearance.style(for: style).color(for: color, appearance: appearance, style: style)
         }
     }

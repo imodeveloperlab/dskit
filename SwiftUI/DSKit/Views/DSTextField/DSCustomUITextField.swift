@@ -10,7 +10,7 @@ import SwiftUI
 struct DSCustomUITextField: UIViewRepresentable {
     
     @Environment(\.appearance) var appearance: DSAppearance
-    @Environment(\.colorGroup) var colorGroup: DSViewStyle
+    @Environment(\.viewStyle) var viewStyle: DSViewStyle
     
     @Binding var text: String
     @Binding var isSecureEntry: Bool
@@ -28,7 +28,7 @@ struct DSCustomUITextField: UIViewRepresentable {
         textField.placeholder = placeholder
         textField.attributedPlaceholder = NSAttributedString(
             string: placeholder,
-            attributes: [NSAttributedString.Key.foregroundColor: colorGroup.colors(from: appearance).textField.placeHolder]
+            attributes: [NSAttributedString.Key.foregroundColor: viewStyle.colors(from: appearance).textField.placeHolder]
         )
         textField.font = appearance.fonts.subheadline
         textField.isSecureTextEntry = isSecureEntry
@@ -36,7 +36,7 @@ struct DSCustomUITextField: UIViewRepresentable {
         textField.textContentType = textContentType
         textField.autocapitalizationType = autocapitalizationType
         textField.delegate = context.coordinator
-        textField.textColor = colorGroup.colors(from: appearance).textField.text
+        textField.textColor = viewStyle.colors(from: appearance).textField.text
         return textField
     }
     

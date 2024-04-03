@@ -16,7 +16,7 @@ struct Order4: View {
     var body: some View {
         DSVStack(alignment: .center) {
             Spacer()
-            DSImageView(sfSymbol: "checkmark.circle.fill", size: 70, tint: .customColor(.green))
+            DSImageView(sfSymbol: "checkmark.circle.fill", size: 70, tint: .color(.green))
                 .dsPadding(.bottom, 30)
             DSText("It's Ordered", .largeHeadline)
             DSText("Hi John - thanks for your order,\nwe hope you enjoyed shopping\nwith us", .subheadline, multilineTextAlignment: .center)
@@ -47,7 +47,7 @@ extension Order4 {
                 DSImageView(url: product.image, size: .size(width: 80, height: 60))
                     .dsCornerRadius()
                 DSVStack(alignment: .leading, spacing: .small) {
-                    DSText(product.title, .style(.fontWithSize(.headline, 12)), multilineTextAlignment: .leading)
+                    DSText(product.title, .textFont(.fontWithSize(.headline, 12)), multilineTextAlignment: .leading)
                     DSText(product.subtitle, .smallSubtitle, multilineTextAlignment: .leading)
                     DSPriceView(price: product.price, size: .smallHeadline)
                 }.frame(maxWidth: 160, alignment: .leading)

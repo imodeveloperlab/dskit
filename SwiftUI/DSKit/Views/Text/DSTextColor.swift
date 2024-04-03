@@ -12,25 +12,26 @@ import SwiftUI
 public indirect enum DSTextColor: Equatable, Hashable {
     
     case font(DSTextFont)
-    case custom(DSColor)
+    case dsColor(DSColor)
     
-    /// Get text color
-    /// - Parameter designableTextColor: DSDesignableTextColor
-    /// - Returns: UIColor
-    public func getColor(appearance: DSAppearance, colorGroup: DSViewStyle) -> UIColor {
+    public func color(for appearance: DSAppearance, and style: DSViewStyle) -> Color {
         switch self {
         case .font(font: let font):
-            return color(for: font, appearance: appearance, colorGroup: colorGroup)
-        case .custom(let customColor):
-            return customColor.styledColorDemo(from: appearance, and: colorGroup)
+            return color(for: font, appearance: appearance, viewStyle: style)
+        case .dsColor(let customColor):
+            return customColor.color(for: appearance, and: style)
         }
     }
     
-    public func color(for font: DSTextFont, appearance: DSAppearance, colorGroup: DSViewStyle) -> UIColor {
+    public func color(for font: DSTextFont, appearance: DSAppearance, viewStyle: DSViewStyle) -> Color {
+        uiColor(for: font, appearance: appearance, viewStyle: viewStyle).color
+    }
+    
+    public func uiColor(for font: DSTextFont, appearance: DSAppearance, viewStyle: DSViewStyle) -> UIColor {
         
         let designableTextColor: DSDesignableTextColor
         
-        switch colorGroup {
+        switch viewStyle {
         case .primary:
             designableTextColor = appearance.primaryView.text
         case .secondary:
@@ -63,11 +64,7 @@ public indirect enum DSTextColor: Equatable, Hashable {
         case .custom(_):
             return UIColor.black
         case .fontWithSize(let font, _):
-            return color(for: font, appearance: appearance, colorGroup: colorGroup)
+            return uiColor(for: font, appearance: appearance, viewStyle: viewStyle)
         }
-    }
-    
-    public func color(appearance: DSAppearance, colorGroup: DSViewStyle) -> Color {
-        Color(uiColor: getColor(appearance: appearance, colorGroup: colorGroup))
     }
 }

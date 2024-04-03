@@ -20,8 +20,8 @@ struct Items5: View {
                     .dsCornerRadius()
                     .overlay(alignment: .center) {
                         DSVStack(alignment: .center) {
-                            DSText("Clothing", .reStyleWithColor(.largeHeadline, .customColor(.black)))
-                            DSText("73.3k items", .reStyleWithColor(.smallHeadline, .customColor(.black)))
+                            DSText("Clothing", .reStyleWithColor(.largeHeadline, .color(.black)))
+                            DSText("73.3k items", .reStyleWithColor(.smallHeadline, .color(.black)))
                         }
                     }
                 DSHScroll(data: viewModel.filters, id: \.self) { title in
@@ -68,7 +68,7 @@ extension Items5 {
                 DSImageView(
                     sfSymbol: "heart.fill",
                     size: .regular,
-                    tint: .customColor(product.favourite ? .red : .white)
+                    tint: .color(product.favourite ? .red : .white)
                 )
                 .dsPadding(.regular)
                 .dsCornerRadius()

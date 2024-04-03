@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DSCardBackgroundColor: EnvironmentKey {
-    static let defaultValue: DSColor = .secondary(.background)
+    static let defaultValue: DSColor = .secondaryView(.background)
 }
 
 extension EnvironmentValues {

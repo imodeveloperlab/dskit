@@ -68,7 +68,7 @@ extension CartScreen5 {
                         DSText(product.size, .smallHeadline)
                     }
                     DSHStack {
-                        DSImageView(sfSymbol: "star.fill", size: .smallIcon, tint: .customColor(Color.yellow))
+                        DSImageView(sfSymbol: "star.fill", size: .smallIcon, tint: .color(Color.yellow))
                         DSText("3k Reviews", .caption1)
                     }
                     DSPriceView(price: product.price, size: .smallHeadline)
@@ -120,7 +120,7 @@ extension CartScreen5 {
     struct TagView: View {
         let tag: String
         var body: some View {
-            DSText(tag, .style(.fontWithSize(.headline, 9)))
+            DSText(tag, .textFont(.fontWithSize(.headline, 9)))
                 .dsPadding(.horizontal, .regular)
                 .dsPadding(.vertical, .small)
                 .dsBackground(.primary)

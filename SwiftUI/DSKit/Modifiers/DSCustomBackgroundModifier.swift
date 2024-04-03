@@ -11,22 +11,22 @@ import SwiftUI
 public struct DSCustomBackgroundModifier: ViewModifier {
     
     @Environment(\.appearance) var appearance: DSAppearance
-    @Environment(\.colorGroup) var colorGroup: DSViewStyle
+    @Environment(\.viewStyle) var viewStyle: DSViewStyle
     
-    let color: DSColor
+    let dsColor: DSColor
     
-    public init(color: DSColor) {
-        self.color = color
+    public init(dsColor: DSColor) {
+        self.dsColor = dsColor
     }
     
     public func body(content: Content) -> some View {
-        content.background(Color(uiColor: color.styledColorDemo(from: appearance, and: colorGroup)))
+        content.background(dsColor.color(for: appearance, and: viewStyle))
     }
 }
 
 public extension View {
-    func dsBackground(_ color: DSColor) -> some View {
-        let modifier = DSCustomBackgroundModifier(color: color)
+    func dsBackground(_ dsColor: DSColor) -> some View {
+        let modifier = DSCustomBackgroundModifier(dsColor: dsColor)
         return self.modifier(modifier)
     }
 }

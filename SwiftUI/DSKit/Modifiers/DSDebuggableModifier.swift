@@ -22,7 +22,7 @@ public extension EnvironmentValues {
 public struct DSDebuggableModifier: ViewModifier {
     
     @Environment(\.appearance) var appearance: DSAppearance
-    @Environment(\.colorGroup) var colorGroup: DSViewStyle
+    @Environment(\.viewStyle) var viewStyle: DSViewStyle
     @Environment(\.debugLayout) var debugLayout: Bool
     
     var debugColor: Color

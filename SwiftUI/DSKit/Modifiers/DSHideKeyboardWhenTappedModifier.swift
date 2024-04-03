@@ -10,12 +10,12 @@ import SwiftUI
 public struct DSHideKeyboardWhenTappedModifier: ViewModifier {
     
     @Environment(\.appearance) var appearance: DSAppearance
-    @Environment(\.colorGroup) var colorGroup: DSViewStyle
+    @Environment(\.viewStyle) var viewStyle: DSViewStyle
 
     public func body(content: Content) -> some View {
         ZStack {
             // Invisible touch layer
-            colorGroup.colors(from: appearance).background.color
+            viewStyle.colors(from: appearance).background.color
                 .onTapGesture {
                     self.dismissKeyboard()
                 }

@@ -9,12 +9,12 @@ import SwiftUI
 
 public protocol DSDesignable {
     var appearance: DSAppearance { get }
-    var colorGroup: DSViewStyle { get }
+    var viewStyle: DSViewStyle { get }
 }
 
 public extension DSDesignable {
     var viewColors: DSDesignableViewStyle {
-        return colorGroup.colors(from: appearance)
+        return viewStyle.colors(from: appearance)
     }
     
     var navigationBarColors: DSDesignableNavigationBarColor {

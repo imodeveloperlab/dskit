@@ -19,7 +19,7 @@ struct SignUpScreen2: View {
             DSImageView(url: profileImage, style: .circle, size: 100)
                 .frame(maxWidth: .infinity, alignment: .center)
                 .overlay {
-                    DSImageView(sfSymbol: "camera.fill", size: .medium, tint: .primary(.buttonBackground))
+                    DSImageView(sfSymbol: "camera.fill", size: .medium, tint: .primaryView(.buttonBackground))
                         .dsPadding(.medium)
                         .dsBlurBackground(style: .systemMaterialLight)
                         .clipShape(Circle())

@@ -15,7 +15,7 @@ struct Order3: View {
     var body: some View {
         DSVStack(alignment: .center) {
             Spacer()
-            DSImageView(sfSymbol: "checkmark.circle.fill", size: 70, tint: .customColor(.green))
+            DSImageView(sfSymbol: "checkmark.circle.fill", size: 70, tint: .color(.green))
                 .dsPadding(.bottom, 30)
             DSText("It's Ordered", .largeHeadline)
             DSText("Hi John - thanks for your order,\nwe hope you enjoyed shopping\nwith us", .subheadline, multilineTextAlignment: .center)

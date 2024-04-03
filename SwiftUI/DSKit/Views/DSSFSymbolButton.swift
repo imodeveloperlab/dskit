@@ -10,7 +10,7 @@ import SwiftUI
 public struct DSSFSymbolButton: View, DSDesignable {
     
     @Environment(\.appearance) public var appearance: DSAppearance
-    @Environment(\.colorGroup) public var colorGroup: DSViewStyle
+    @Environment(\.viewStyle) public var viewStyle: DSViewStyle
     
     let name: String
     let size: DSSize
@@ -24,7 +24,7 @@ public struct DSSFSymbolButton: View, DSDesignable {
         DSImageView(
             sfSymbol: name,
             size: size,
-            tint: .style(colorGroup, .buttonBackground)
+            tint: .viewStyleAndColor(viewStyle, .buttonBackground)
         )
     }
 }

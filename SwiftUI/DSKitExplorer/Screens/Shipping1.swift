@@ -30,7 +30,7 @@ struct Shipping1: View {
             DSBottomContainer {
                 DSHStack {
                     DSText("Next Step:", .smallHeadline)
-                    DSText("Checkout", .style(.fontWithSize(.subheadline, 14)))
+                    DSText("Checkout", .textFont(.fontWithSize(.subheadline, 14)))
                 }
                 DSButton(
                     title: "Continue",

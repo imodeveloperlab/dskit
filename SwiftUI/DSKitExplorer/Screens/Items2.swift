@@ -59,7 +59,7 @@ extension Items2 {
                     )
                 }.overlay(alignment: .topLeading) {
                     if let tag = product.tag {
-                        DSText(tag, .style(.fontWithSize(.headline, 9)))
+                        DSText(tag, .textFont(.fontWithSize(.headline, 9)))
                             .dsPadding(.small)
                             .dsBackground(.primary)
                             .dsCornerRadius()
@@ -69,7 +69,7 @@ extension Items2 {
                     DSImageView(
                         sfSymbol: "heart.fill",
                         size: .regular,
-                        tint: .customColor(product.favorite ? .red : .white)
+                        tint: .color(product.favorite ? .red : .white)
                     )
                     .dsPadding(.regular)
                     .dsBlurBackground(style: .light)
@@ -78,8 +78,8 @@ extension Items2 {
                 }
                 
                 DSVStack(alignment: .center, spacing: .zero) {
-                    DSText(product.title, .reStyleWithColor(.smallHeadline, .customColor(.white)))
-                    DSText(product.description, .reStyleWithColor(.smallSubtitle, .customColor(.white.opacity(0.8))))
+                    DSText(product.title, .reStyleWithColor(.smallHeadline, .color(.white)))
+                    DSText(product.description, .reStyleWithColor(.smallSubtitle, .color(.white.opacity(0.8))))
                     DSPriceView(price: product.price, size: .smallHeadline, color: .white)
                 }
                 .dsPadding(.bottom)

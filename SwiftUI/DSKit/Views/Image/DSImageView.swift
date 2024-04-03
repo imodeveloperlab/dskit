@@ -11,10 +11,9 @@ import SDWebImageSwiftUI
 public struct DSImageView: View {
     
     static let unitTestMode = ProcessInfo.processInfo.environment["XCTestConfigurationFilePath"] != nil
-
     
     @Environment(\.appearance) var appearance: DSAppearance
-    @Environment(\.colorGroup) var colorGroup: DSColorGroup
+    @Environment(\.colorGroup) var colorGroup: DSViewStyle
     @StateObject var imageManager = ImageManager()
     let image: DSImage
     @State private var imageLoaded = false
@@ -28,7 +27,7 @@ public struct DSImageView: View {
     public init(
         sfSymbol: String,
         size: DSSize,
-        tint: DSTintColor = .none
+        tint: DSColor? = nil
     ) {
         self.image = DSImage(
             sfSymbolName: sfSymbol,
@@ -43,7 +42,7 @@ public struct DSImageView: View {
         uiImage: UIImage?,
         displayShape: DSDisplayShape = .none,
         size: DSSize = .fillUpTheSpace,
-        tintColor: DSTintColor = .none,
+        tintColor: DSColor? = nil,
         contentMode: DSContentMode = .scaleAspectFill
     ) {
         self.image = DSImage(
@@ -59,7 +58,7 @@ public struct DSImageView: View {
         uiImageName: String,
         displayShape: DSDisplayShape = .none,
         size: DSSize,
-        tintColor: DSTintColor = .none,
+        tintColor: DSColor? = nil,
         contentMode: DSContentMode = .scaleAspectFill
     ) {
         self.image = DSImage(
@@ -75,7 +74,7 @@ public struct DSImageView: View {
         url: URL?,
         style: DSDisplayShape = .none,
         size: DSSize = .fillUpTheSpace,
-        tintColor: DSTintColor = .none,
+        tintColor: DSColor? = nil,
         contentMode: DSContentMode = .scaleAspectFill
     ) {
         self.image = .init(
@@ -201,10 +200,10 @@ struct DSImageView_Previews: PreviewProvider {
                 }
                 
                 DSHStack {
-                    DSImageView(sfSymbol: "sun.rain.fill", size: .size(.small), tint: .custom(.red))
-                    DSImageView(sfSymbol: "sun.rain.fill", size: .size(.regular), tint: .custom(.red))
-                    DSImageView(sfSymbol: "sun.rain.fill", size: .size(.medium), tint: .custom(.red))
-                    DSImageView(sfSymbol: "sun.rain.fill", size: .size(.large), tint: .custom(.red))
+                    DSImageView(sfSymbol: "sun.rain.fill", size: .size(.small), tint: .customColor(.red))
+                    DSImageView(sfSymbol: "sun.rain.fill", size: .size(.regular), tint: .customColor(.red))
+                    DSImageView(sfSymbol: "sun.rain.fill", size: .size(.medium), tint: .customColor(.red))
+                    DSImageView(sfSymbol: "sun.rain.fill", size: .size(.large), tint: .customColor(.red))
                 }
             }
         }

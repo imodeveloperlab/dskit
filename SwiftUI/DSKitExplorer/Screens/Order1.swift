@@ -120,11 +120,11 @@ extension Order1 {
                 DSText(address.holder, .smallHeadline)
                 DSVStack(spacing: .small) {
                     DSHStack {
-                        DSImageView(sfSymbol: "house", size: 12, tint: .text(.font(.subheadline)))
+                        DSImageView(sfSymbol: "house", size: 12, tint: .text(.subheadline))
                         DSText(address.address, .smallSubtitle)
                     }
                     DSHStack {
-                        DSImageView(sfSymbol: "phone", size: 12, tint: .text(.font(.subheadline)))
+                        DSImageView(sfSymbol: "phone", size: 12, tint: .text(.subheadline))
                         DSText(address.phone, .smallSubtitle)
                     }
                 }
@@ -155,7 +155,7 @@ extension Order1 {
                 DSText(shipping.method, .smallHeadline)
                 DSVStack(spacing: .small) {
                     DSHStack {
-                        DSImageView(sfSymbol: "calendar", size: 12, tint: .text(.font(.subheadline)))
+                        DSImageView(sfSymbol: "calendar", size: 12, tint: .text(.subheadline))
                         DSText(shipping.date, .smallSubtitle)
                     }
                     DSPriceView(price: shipping.price, size: .smallHeadline)

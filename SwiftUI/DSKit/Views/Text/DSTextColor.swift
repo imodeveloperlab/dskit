@@ -9,24 +9,24 @@
 import UIKit
 import SwiftUI
 
-public enum DSTextColor: Equatable, Hashable {
+public indirect enum DSTextColor: Equatable, Hashable {
     
     case font(DSTextFont)
-    case custom(UIColor)
+    case custom(DSColor)
     
     /// Get text color
     /// - Parameter designableTextColor: DSDesignableTextColor
     /// - Returns: UIColor
-    public func getColor(appearance: DSAppearance, colorGroup: DSColorGroup) -> UIColor {
+    public func getColor(appearance: DSAppearance, colorGroup: DSViewStyle) -> UIColor {
         switch self {
         case .font(font: let font):
             return color(for: font, appearance: appearance, colorGroup: colorGroup)
         case .custom(let customColor):
-            return customColor
+            return customColor.styledColorDemo(from: appearance, and: colorGroup)
         }
     }
     
-    public func color(for font: DSTextFont, appearance: DSAppearance, colorGroup: DSColorGroup) -> UIColor {
+    public func color(for font: DSTextFont, appearance: DSAppearance, colorGroup: DSViewStyle) -> UIColor {
         
         let designableTextColor: DSDesignableTextColor
         
@@ -67,7 +67,7 @@ public enum DSTextColor: Equatable, Hashable {
         }
     }
     
-    public func color(appearance: DSAppearance, colorGroup: DSColorGroup) -> Color {
+    public func color(appearance: DSAppearance, colorGroup: DSViewStyle) -> Color {
         Color(uiColor: getColor(appearance: appearance, colorGroup: colorGroup))
     }
 }

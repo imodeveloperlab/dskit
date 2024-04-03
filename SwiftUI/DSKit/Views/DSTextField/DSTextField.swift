@@ -12,7 +12,7 @@ public struct DSTextField: View {
     
     // Environment properties for theming and color customization
     @Environment(\.appearance) private var appearance: DSAppearance
-    @Environment(\.colorGroup) private var colorGroup: DSColorGroup
+    @Environment(\.colorGroup) private var colorGroup: DSViewStyle
     
     // State variables to manage the visibility of secure text entry and editing status
     @State private var isSecureEntryVisible: Bool = false
@@ -40,8 +40,11 @@ public struct DSTextField: View {
     public var body: some View {
         DSHStack {
             if let symbolName = leftSFSymbolName {
-                let tint = hasText ?  colorGroup.colors(from: appearance).textField.text : colorGroup.colors(from: appearance).textField.placeHolder
-                DSImageView(sfSymbol: symbolName, size: 15, tint: .custom(tint))
+                DSImageView(
+                    sfSymbol: symbolName,
+                    size: 15,
+                    tint: hasText ? .style(colorGroup, .textFieldText) : .style(colorGroup, .textFieldPlaceholder)
+                )
             }
             
             // The main text field component
@@ -58,22 +61,19 @@ public struct DSTextField: View {
             // Toggles visibility of the secure text entry (password visibility)
             if isSecureEntry {
                 let sfSymbolName = isSecureEntryVisible ? "eye.slash" : "eye"
-                let tint = colorGroup.colors(from: appearance).textField.text
-                DSImageView(sfSymbol: sfSymbolName, size: 15, tint: .custom(tint))
+                DSImageView(sfSymbol: sfSymbolName, size: 15, tint: .style(colorGroup, .textFieldText))
                     .onTap {
                         isSecureEntryVisible.toggle()
                     }
             } else if isEditing && hasText {
-                // Displays a clear button when the text field is being edited and has text
-                let tint = colorGroup.colors(from: appearance).textField.text
-                DSImageView(sfSymbol: "xmark.circle.fill", size: 15, tint: .custom(tint)).onTapGesture {
+                DSImageView(sfSymbol: "xmark.circle.fill", size: 15, tint: .style(colorGroup, .textFieldText)).onTapGesture {
                     model.text = ""
                 }
             }
         }
         .dsHeight(.custom(appearance.actionElementHeight))
         .dsPadding(.horizontal, .custom(appearance.spacing.value(for: .medium) - 1))
-        .dsBackground(.custom(colorGroup.colors(from: appearance).textField.background))
+        .dsBackground(.style(colorGroup, .textFieldBackground))
         .dsCornerRadius()
         .overlay(
             // Outlines the text field in red if the content is invalid

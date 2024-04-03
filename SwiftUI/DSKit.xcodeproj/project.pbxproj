@@ -57,7 +57,6 @@
 		600B98902B3C1626005935D2 /* BlackToneAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600B988D2B3C1625005935D2 /* BlackToneAppearance.swift */; };
 		600B98912B3C1626005935D2 /* ShopAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600B988E2B3C1625005935D2 /* ShopAppearance.swift */; };
 		600B98922B3C1626005935D2 /* DarkLightAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600B988F2B3C1626005935D2 /* DarkLightAppearance.swift */; };
-		600B98942B3C3FDC005935D2 /* AppearanceEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600B98932B3C3FDC005935D2 /* AppearanceEnvironment.swift */; };
 		600B98962B3C66DC005935D2 /* DSSecondaryBackgroundModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600B98952B3C66DC005935D2 /* DSSecondaryBackgroundModifier.swift */; };
 		600E3C102BB5739900FA33EC /* DSScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600E3C0F2BB5739900FA33EC /* DSScreen.swift */; };
 		600E3C122BB5742800FA33EC /* DSScreenModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600E3C112BB5742800FA33EC /* DSScreenModifier.swift */; };
@@ -328,7 +327,6 @@
 		600B988D2B3C1625005935D2 /* BlackToneAppearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlackToneAppearance.swift; sourceTree = "<group>"; };
 		600B988E2B3C1625005935D2 /* ShopAppearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopAppearance.swift; sourceTree = "<group>"; };
 		600B988F2B3C1626005935D2 /* DarkLightAppearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DarkLightAppearance.swift; sourceTree = "<group>"; };
-		600B98932B3C3FDC005935D2 /* AppearanceEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceEnvironment.swift; sourceTree = "<group>"; };
 		600B98952B3C66DC005935D2 /* DSSecondaryBackgroundModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSSecondaryBackgroundModifier.swift; sourceTree = "<group>"; };
 		600E3C0F2BB5739900FA33EC /* DSScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSScreen.swift; sourceTree = "<group>"; };
 		600E3C112BB5742800FA33EC /* DSScreenModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSScreenModifier.swift; sourceTree = "<group>"; };
@@ -754,7 +752,6 @@
 		60EB993F2B2AFFEF00528039 /* DSKit */ = {
 			isa = PBXGroup;
 			children = (
-				600B98932B3C3FDC005935D2 /* AppearanceEnvironment.swift */,
 				60EB99B22B2B74C300528039 /* Views */,
 				60EB99AF2B2B631800528039 /* Modifiers */,
 				60EB99402B2AFFEF00528039 /* DSKitCore.h */,
@@ -1239,7 +1236,6 @@
 				600E3C1C2BB604D500FA33EC /* DSChevronView.swift in Sources */,
 				60EB999E2B2B4E4700528039 /* DSDynamicColor.swift in Sources */,
 				60EB99CE2B2B75C900528039 /* DSSFSymbolConfig.swift in Sources */,
-				600B98942B3C3FDC005935D2 /* AppearanceEnvironment.swift in Sources */,
 				60C1F79B2B3EF7900067B21C /* DSTextField+Factory.swift in Sources */,
 				60EB99912B2B4D3A00528039 /* DSDesignablePriceColor.swift in Sources */,
 				600E3C182BB6046300FA33EC /* DSSFSymbolButton.swift in Sources */,

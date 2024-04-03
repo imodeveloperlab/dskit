@@ -84,7 +84,7 @@ extension HomeScreen4 {
                             DSText(product.subtitle, .smallSubtitle)
                         }
                         .dsPadding(.regular)
-                        .dsBackground(.viewColor(.background, .secondary))
+                        .dsBackground(.secondary(.background))
                         .dsCornerRadius()
                         .dsPadding(.regular)
                     }
@@ -108,10 +108,10 @@ extension HomeScreen4 {
         var body: some View {
             DSHStack {
                 DSVStack(spacing: .zero) {
-                    DSText(title, .styleWithSize(.headline, 28))
+                    DSText(title, .style(.fontWithSize(.headline, 28)))
                     DSHStack(spacing: .small) {
                         DSText(youHave, .subheadline)
-                        DSText(numberOfItemsInCart, .styleWithSize(.headline, 12), color: .viewColor(.background, .screen))
+                        DSText(numberOfItemsInCart, .styleWithColor(.fontWithSize(.headline, 12), .primary(.background)))
                             .dsSize(.medium)
                             .dsBackground(.brandColor)
                             .clipShape(Circle())
@@ -137,17 +137,16 @@ extension HomeScreen4 {
             DSHStack {
                 DSText(
                     category.title,
-                    .smallHeadline,
-                    color: isSelected ? .viewColor(.buttonTitle, .screen) : .none
+                    isSelected ? .reStyleWithColor(.smallHeadline, .primary(.buttonTitle)) : .smallHeadline
                 )
-                DSText(category.count, .styleWithSize(.headline, 10))
+                DSText(category.count, .style(.fontWithSize(.headline, 10)))
                     .dsSize(20)
-                    .dsBackground(isSelected ? .viewColor(.background, .secondary) : .viewColor(.background, .screen))
+                    .dsBackground(isSelected ? .secondary(.background) : .primary(.background))
                     .clipShape(Capsule())
             }
             .dsPadding(.horizontal)
             .dsHeight(35)
-            .dsBackground(isSelected ? .viewColor(.buttonBackground, .secondary) : .viewColor(.background, .secondary))
+            .dsBackground(isSelected ? .secondary(.buttonBackground) : .secondary(.background))
             .dsCornerRadius()
         }
         struct Category: Identifiable {

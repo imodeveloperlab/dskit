@@ -21,7 +21,7 @@ struct SignUpScreen1: View {
                         title: "Login with Facebook",
                         rightImage: DSImage(uiImageName: "facebook", size: .medium),
                         pushContentToSides: true,
-                        style: .custom(color: UIColor(0x4267B2))
+                        style: .custom(color: Color(uiColor: UIColor(0x4267B2)))  
                     ) { self.dismiss() }
                     
                     DSText("or sign up with Email", .smallSubtitle).frame(maxWidth: .infinity, alignment: .center)

@@ -35,11 +35,11 @@ struct ItemDetails3: View {
                     
                     DSVStack(spacing: .zero) {
                         DSHStack(alignment: .center, spacing: .regular) {
-                            DSImageView(sfSymbol: "circlebadge.fill", size: .small, tint: .text(.font(.caption2)))
+                            DSImageView(sfSymbol: "circlebadge.fill", size: .small, tint: .text(.caption1))
                             DSText("Colour Shown: Light Charcoal/Black/Lemon Venom/University Red", .caption2)
                         }
                         DSHStack(alignment: .center, spacing: .regular) {
-                            DSImageView(sfSymbol: "circlebadge.fill", size: .small, tint: .text(.font(.caption2)))
+                            DSImageView(sfSymbol: "circlebadge.fill", size: .small, tint: .text(.caption2))
                             DSText("Style: CW6575-001", .caption2)
                         }
                     }

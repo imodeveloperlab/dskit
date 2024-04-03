@@ -69,7 +69,7 @@ extension Filters3 {
             DSHStack {
                 DSText(title, .smallHeadline)
                 Spacer()
-                DSText(option, .styleWithSize(.subheadline, 14))
+                DSText(option, .style(.fontWithSize(.subheadline, 14)))
                 DSChevronView()
             }.dsCardStyle()
         }

@@ -55,7 +55,7 @@ public struct DSDesignableViewStyle: Equatable, Hashable {
 
 extension DSDesignableViewStyle {
     
-    func color(for viewColor: DSViewColor) -> UIColor {
+    func color(for viewColor: DSViewColor, appearance: DSAppearance, style: DSViewStyle) -> UIColor {
         switch viewColor {
         case .buttonBackground:
             button.background
@@ -74,7 +74,7 @@ extension DSDesignableViewStyle {
         case .textFieldPlaceholder:
             textField.placeHolder
         case .text(let textColor):
-            text.color(for: textColor)
+            textColor.getColor(appearance: appearance, colorGroup: style)            
         }
     }
     

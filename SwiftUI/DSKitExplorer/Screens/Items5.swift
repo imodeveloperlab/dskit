@@ -20,8 +20,8 @@ struct Items5: View {
                     .dsCornerRadius()
                     .overlay(alignment: .center) {
                         DSVStack(alignment: .center) {
-                            DSText("Clothing", .largeHeadline, color: .customColor(.black))
-                            DSText("73.3k items", .smallHeadline, color: .customColor(.black))
+                            DSText("Clothing", .reStyleWithColor(.largeHeadline, .customColor(.black)))
+                            DSText("73.3k items", .reStyleWithColor(.smallHeadline, .customColor(.black)))
                         }
                     }
                 DSHScroll(data: viewModel.filters, id: \.self) { title in

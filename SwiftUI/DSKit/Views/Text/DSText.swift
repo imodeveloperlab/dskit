@@ -10,43 +10,24 @@ import SwiftUI
 public struct DSText: View {
     
     @Environment(\.appearance) var appearance: DSAppearance
-    @Environment(\.colorGroup) var colorGroup: DSColorGroup
-    @Environment(\.debugLayout) var debugLayout: Bool
+    @Environment(\.colorGroup) var colorGroup: DSViewStyle
     
     let type: DSTextStyle
     let text: String
     let multilineTextAlignment: TextAlignment
-    var color: DSColor?
     
-    public init(_ text: String, _ type: DSTextStyle = .body, multilineTextAlignment: TextAlignment = .leading, color: DSColor? = nil) {
+    public init(_ text: String, _ type: DSTextStyle = .body, multilineTextAlignment: TextAlignment = .leading) {
         self.text = text
         self.type = type
         self.multilineTextAlignment = multilineTextAlignment
-        self.color = color
     }
     
     public var body: some View {
-        if debugLayout {
-            styledText
-                .background(Color.orange.opacity(0.3))
-        } else {
-            styledText
-        }
-    }
-    
-    @ViewBuilder
-    var styledText: some View {
-        if let color {
-            Text(text)
-                .font(type.style(appearance: appearance).font.getFont(from: appearance))
-                .foregroundStyle(Color(uiColor: color.color(from: appearance)))
-                .multilineTextAlignment(multilineTextAlignment)
-        } else {
-            Text(text)
-                .font(type.style(appearance: appearance).font.getFont(from: appearance))
-                .foregroundStyle(Color(uiColor: type.style(appearance: appearance).color.getColor(appearance: appearance, colorGroup: colorGroup)))
-                .multilineTextAlignment(multilineTextAlignment)
-        }
+        Text(text)
+            .font(type.style(appearance: appearance).font.getFont(from: appearance))
+            .foregroundStyle(Color(uiColor: type.style(appearance: appearance).color.getColor(appearance: appearance, colorGroup: colorGroup)))
+            .multilineTextAlignment(multilineTextAlignment)
+            .dsDebuggable(debugColor: Color.orange.opacity(0.3))
     }
 }
 
@@ -59,9 +40,9 @@ struct DSText_Previews: PreviewProvider {
                 DSText("Title 2", .title2)
                 DSText("Title 3", .title3)
                 DSText("Headline", .headline)
-                DSText("Headline with size 20", .styleWithSize(.headline, 20))
+                DSText("Headline with size 20", .style(.fontWithSize(.headline, 20)))
                 DSText("Subheadline", .subheadline)
-                DSText("Subheadline with size 20", .styleWithSize(.headline, 20))
+                DSText("Subheadline with size 20", .style(.fontWithSize(.headline, 20)))
                 DSText("Body", .body)
                 DSText("Callout", .callout)
                 DSText("Caption 1", .caption1)

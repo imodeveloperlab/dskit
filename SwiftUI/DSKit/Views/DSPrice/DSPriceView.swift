@@ -40,20 +40,20 @@ public struct DSPriceView: View {
         DSHStack(spacing: .small) {
             
             DSHStack(spacing: .zero) {
-                DSText(currency.currencySymbol, textType, color: amountColor)
-                DSText(amount, textType, color: amountColor)
+                DSText(currency.currencySymbol, .reStyleWithColor(textType, amountColor))
+                DSText(amount, .reStyleWithColor(textType, amountColor))
             }
             
             if let regularAmount = regularAmount {
                 DSHStack(spacing: .zero) {
-                    DSText(regularAmount, textType, color: amountColor).opacity(0.5)
+                    DSText(regularAmount, .reStyleWithColor(textType, amountColor)).opacity(0.5)
                 }
                 .strikethrough()
                 
             }
             
             if let discountBadge = discountBadge {
-                DSText(discountBadge, .styleWithSize(textType.font, textType.size(appearance) * 0.60), color: .priceBadgeText)
+                DSText(discountBadge, .styleWithColor(.fontWithSize(textType.font, textType.size(appearance) * 0.72), .priceBadgeText))
                     .dsPadding(.horizontal, .regular)
                     .dsPadding(.vertical, .custom(2))
                     .background(appearance.price.badgeBackground.color)
@@ -74,7 +74,7 @@ struct Testable_DSPrice: View {
         DSPriceView(price: price, size: .caption1, color: .green)
         DSPriceView(price: price, size: .caption2, color: .green)
         DSPriceView(price: price, size: .footnote)
-        DSPriceView(price: price, size: .styleWithSize(.headline, 20))
+        DSPriceView(price: price, size: .style(.fontWithSize(.headline, 20)))
     }
 }
 

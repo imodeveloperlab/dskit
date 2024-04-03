@@ -19,11 +19,11 @@ struct LogInScreen2: View {
             DSImageView(
                 sfSymbol: "square.3.layers.3d.top.filled",
                 size: 50,
-                tint: .text(.font(.headline))
+                tint: .text(.headline)
             )
             
             DSVStack(alignment: .leading) {
-                DSText("Welcome to\nDSKit", .styleWithSize(.headline, 38))
+                DSText("Welcome to\nDSKit", .style(.fontWithSize(.headline, 38)))
                 DSText("Meet new people with new\nideas and posts.", .subheadline)
             }.dsPadding(.trailing, .large)
             
@@ -35,7 +35,7 @@ struct LogInScreen2: View {
                 title: "Login with facebook",
                 rightImage: DSImage(uiImageName: "facebook", size: .smallIcon),
                 pushContentToSides: true,
-                style: .custom(color: UIColor(0x4267B2))
+                style: .custom(color: Color(uiColor: UIColor(0x4267B2)))
             ) {
                 self.dismiss()
             }

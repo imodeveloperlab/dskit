@@ -21,7 +21,7 @@ struct LogInScreen3: View {
                 DSImageView(
                     sfSymbol: "square.3.layers.3d.top.filled",
                     size: 50,
-                    tint: .text(.font(.headline))
+                    tint: .text(.headline)
                 )
                 DSText(
                     "Meet new people from over millions of users. Create posts, find friends and more.", .subheadline,
@@ -42,7 +42,7 @@ struct LogInScreen3: View {
                         title: "Facebook",
                         rightImage: DSImage(uiImageName: "facebook", size: .smallIcon),
                         pushContentToSides: true,
-                        style: .custom(color: UIColor(0x4267B2))
+                        style: .custom(color: Color(uiColor: UIColor(0x4267B2)))
                     ) {
                         self.dismiss()
                     }
@@ -51,7 +51,7 @@ struct LogInScreen3: View {
                         title: "Google",
                         rightImage: DSImage(uiImageName: "google", size: .smallIcon),
                         pushContentToSides: true,
-                        style: .custom(color: UIColor(0x4285F4))
+                        style: .custom(color: Color(uiColor: UIColor(0x4285F4)))
                     ) {
                         self.dismiss()
                     }

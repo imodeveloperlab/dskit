@@ -51,7 +51,7 @@ extension CartScreen4 {
                         DSImageView(url: product.image, size: .size(width: 100, height: 100))
                             .overlay(alignment: .bottomLeading) {
                                 if let tag = product.tag {
-                                    DSText(tag, .styleWithSize(.headline, 9))
+                                    DSText(tag, .style(.fontWithSize(.headline, 9)))
                                         .dsPadding(.small)
                                         .dsBackground(.primary)
                                         .dsCornerRadius()

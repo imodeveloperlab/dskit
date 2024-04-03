@@ -12,7 +12,7 @@ public struct DSDivider: View, DSDesignable {
     public init() {}
     
     @Environment(\.appearance) public var appearance: DSAppearance
-    @Environment(\.colorGroup) public var colorGroup: DSColorGroup
+    @Environment(\.colorGroup) public var colorGroup: DSViewStyle
 
     public var body: some View {
         Divider().background(viewColors.separator.color)

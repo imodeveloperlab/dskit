@@ -11,11 +11,11 @@ import SwiftUI
 public struct DSBackgroundModifier: ViewModifier {
     
     @Environment(\.appearance) var appearance: DSAppearance
-    @Environment(\.colorGroup) var colorGroup: DSColorGroup
+    @Environment(\.colorGroup) var colorGroup: DSViewStyle
     
-    let group: DSColorGroup
+    let group: DSViewStyle
     
-    public init(group: DSColorGroup) {
+    public init(group: DSViewStyle) {
         self.group = group
     }
     
@@ -26,7 +26,7 @@ public struct DSBackgroundModifier: ViewModifier {
 }
 
 public extension View {
-    func dsBackground(_ group: DSColorGroup) -> some View {
+    func dsBackground(_ group: DSViewStyle) -> some View {
         let modifier = DSBackgroundModifier(group: group)
         return self.modifier(modifier)
     }

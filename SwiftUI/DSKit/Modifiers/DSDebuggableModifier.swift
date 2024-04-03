@@ -8,10 +8,21 @@
 
 import SwiftUI
 
+struct LayoutEnvironment: EnvironmentKey {
+    static let defaultValue: Bool = false
+}
+
+public extension EnvironmentValues {
+    var debugLayout: Bool {
+        get { self[LayoutEnvironment.self] }
+        set { self[LayoutEnvironment.self] = newValue }
+    }
+}
+
 public struct DSDebuggableModifier: ViewModifier {
     
     @Environment(\.appearance) var appearance: DSAppearance
-    @Environment(\.colorGroup) var colorGroup: DSColorGroup
+    @Environment(\.colorGroup) var colorGroup: DSViewStyle
     @Environment(\.debugLayout) var debugLayout: Bool
     
     var debugColor: Color

@@ -9,7 +9,7 @@ import SwiftUI
 
 public protocol DSDesignable {
     var appearance: DSAppearance { get }
-    var colorGroup: DSColorGroup { get }
+    var colorGroup: DSViewStyle { get }
 }
 
 public extension DSDesignable {

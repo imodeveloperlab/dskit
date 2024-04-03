@@ -98,7 +98,7 @@ public class BlackToneAppearance: DSAppearance {
     
     public func style(for viewStyle: DSViewStyle) -> DSDesignableViewStyle {
         return switch viewStyle {
-        case .screen:
+        case .primary:
             primaryView
         case .secondary:
             secondaryView

@@ -11,7 +11,11 @@ import SwiftUI
 public enum DSColor: Equatable, Hashable {
     
     case brandColor
-    case viewColor(DSViewColor, DSViewStyle)
+    case style(DSViewStyle, DSViewColor)
+    case view(DSViewColor)
+    case primary(DSViewColor)
+    case secondary(DSViewColor)
+    case text(DSTextFont)
     case navigationBarButton
     case navigationBarText
     case navigationBarBackground
@@ -24,15 +28,18 @@ public enum DSColor: Equatable, Hashable {
     case priceRegularAmount
     case priceBadgeBackground
     case priceBadgeText
-    case custom(UIColor)
     case customColor(Color)
     
-    func color(from appearance: DSAppearance) -> UIColor {
+    func styledColorDemo(from appearance: DSAppearance, and style: DSViewStyle) -> UIColor {
         switch self {
         case .brandColor:
             return appearance.brandColor
-        case .viewColor(let viewColor, let style):
-            return appearance.style(for: style).color(for: viewColor)
+        case .style(let style, let viewColor):
+            return appearance.style(for: style).color(for: viewColor, appearance: appearance, style: style)
+        case .primary(let viewColor):
+            return appearance.style(for: .primary).color(for: viewColor, appearance: appearance, style: style)
+        case .secondary(let viewColor):
+            return appearance.style(for: .secondary).color(for: viewColor, appearance: appearance, style: style)
         case .navigationBarButton:
             return appearance.navigationBar.buttons
         case .navigationBarText:
@@ -57,10 +64,12 @@ public enum DSColor: Equatable, Hashable {
             return appearance.price.badgeBackground
         case .priceBadgeText:
             return appearance.price.badgeText
-        case .custom(let color):
-            return color
         case .customColor(let color):
             return UIColor(color)
+        case .text(let font):
+            return appearance.style(for: style).color(for: .text(.font(font)), appearance: appearance, style: style)
+        case .view(let color):
+            return appearance.style(for: style).color(for: color, appearance: appearance, style: style)
         }
     }
 }

@@ -27,7 +27,7 @@ struct ItemDetails4: View {
                 }
                 
                 DSHStack(alignment: .center, spacing: .regular) {
-                    DSText("New", .styleWithSize(.headline, 12), color: .customColor(Color.white))
+                    DSText("New", .styleWithColor(.fontWithSize(.headline, 12), .customColor(Color.white)))
                         .dsPadding(.vertical, .small)
                         .dsPadding(.horizontal, .regular)
                         .dsBackground(.customColor(.green))

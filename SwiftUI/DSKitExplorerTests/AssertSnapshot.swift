@@ -23,7 +23,6 @@ extension XCTestCase {
         let view = UIHostingController(rootView: testView)
         SnapshotTesting.assertSnapshot(
             matching: view, as: .image(on: .iPhoneX),
-            named: named,
             record: record,
             timeout: timeout,
             file: file,

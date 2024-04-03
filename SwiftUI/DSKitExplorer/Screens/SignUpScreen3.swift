@@ -23,7 +23,7 @@ struct SignUpScreen3: View {
                 DSText("Start with \nphone number", .largeHeadline)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .overlay(alignment: .trailing) {
-                        DSImageView(sfSymbol: "phone.fill", size: 60, tint: .color(.viewColor(.background, .secondary)))
+                        DSImageView(sfSymbol: "phone.fill", size: 60, tint: .secondary(.background))
                     }
                     
                 DSText("Please enter your mobile number to get\nsms to activate your account")

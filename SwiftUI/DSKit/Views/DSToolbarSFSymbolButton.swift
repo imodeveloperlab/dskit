@@ -10,7 +10,7 @@ import SwiftUI
 public struct DSToolbarSFSymbolButton: View, DSDesignable {
     
     @Environment(\.appearance) public var appearance: DSAppearance
-    @Environment(\.colorGroup) public var colorGroup: DSColorGroup
+    @Environment(\.colorGroup) public var colorGroup: DSViewStyle
     
     let name: String
     
@@ -22,7 +22,7 @@ public struct DSToolbarSFSymbolButton: View, DSDesignable {
         DSImageView(
             sfSymbol: name,
             size: .mediumIcon,
-            tint: .custom(navigationBarColors.buttons)
+            tint: .navigationBarButton
         )
     }
 }

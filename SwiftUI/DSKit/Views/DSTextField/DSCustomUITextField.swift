@@ -10,7 +10,7 @@ import SwiftUI
 struct DSCustomUITextField: UIViewRepresentable {
     
     @Environment(\.appearance) var appearance: DSAppearance
-    @Environment(\.colorGroup) var colorGroup: DSColorGroup
+    @Environment(\.colorGroup) var colorGroup: DSViewStyle
     
     @Binding var text: String
     @Binding var isSecureEntry: Bool

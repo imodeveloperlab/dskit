@@ -10,7 +10,7 @@ import SwiftUI
 public struct DSSelectedStyleModifier: ViewModifier, DSDesignable {
     
     @Environment(\.appearance) public var appearance: DSAppearance
-    @Environment(\.colorGroup) public var colorGroup: DSColorGroup
+    @Environment(\.colorGroup) public var colorGroup: DSViewStyle
     
     let isSelected: Bool
     

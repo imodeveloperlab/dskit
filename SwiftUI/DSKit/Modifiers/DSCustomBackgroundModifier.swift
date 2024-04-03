@@ -11,7 +11,7 @@ import SwiftUI
 public struct DSCustomBackgroundModifier: ViewModifier {
     
     @Environment(\.appearance) var appearance: DSAppearance
-    @Environment(\.colorGroup) var colorGroup: DSColorGroup
+    @Environment(\.colorGroup) var colorGroup: DSViewStyle
     
     let color: DSColor
     
@@ -20,7 +20,7 @@ public struct DSCustomBackgroundModifier: ViewModifier {
     }
     
     public func body(content: Content) -> some View {
-        content.background(Color(uiColor: color.color(from: appearance)))
+        content.background(Color(uiColor: color.styledColorDemo(from: appearance, and: colorGroup)))
     }
 }
 

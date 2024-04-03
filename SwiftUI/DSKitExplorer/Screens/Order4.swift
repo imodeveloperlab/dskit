@@ -47,7 +47,7 @@ extension Order4 {
                 DSImageView(url: product.image, size: .size(width: 80, height: 60))
                     .dsCornerRadius()
                 DSVStack(alignment: .leading, spacing: .small) {
-                    DSText(product.title, .styleWithSize(.headline, 12), multilineTextAlignment: .leading)
+                    DSText(product.title, .style(.fontWithSize(.headline, 12)), multilineTextAlignment: .leading)
                     DSText(product.subtitle, .smallSubtitle, multilineTextAlignment: .leading)
                     DSPriceView(price: product.price, size: .smallHeadline)
                 }.frame(maxWidth: 160, alignment: .leading)

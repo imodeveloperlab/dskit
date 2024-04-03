@@ -9,20 +9,24 @@
 import UIKit
 import SwiftUI
 
-public enum DSTextStyle: Equatable, Hashable {
+public indirect enum DSTextStyle: Equatable, Hashable {
+    
+    init(style: DSTextStyle, color: DSColor) {
+        self = .styleWithColor(style.font, color)
+    }
     
     case style(DSTextFont)
-    case styleWithSize(DSTextFont, CGFloat)
-    case styleWithSizeAndColor(DSTextFont, CGFloat, UIColor)
+    case styleWithColor(DSTextFont, DSColor)
+    case reStyleWithColor(DSTextStyle, DSColor)
     
     func style(appearance: DSAppearance) -> (font: DSTextFont, color: DSTextColor) {
         switch self {
         case .style(let font):
             return (font: font, color: DSTextColor.font(font))
-        case .styleWithSize(let font, let size):
-            return (font: .fontWithSize(font, size), color: DSTextColor.font(font))
-        case .styleWithSizeAndColor(let font, let size, let color):
-            return (font: .fontWithSize(font, size), color: DSTextColor.custom(color))
+        case .styleWithColor(let font, let color):
+            return (font: font, color: .custom(color))
+        case .reStyleWithColor(let style, let color):
+            return (font: .fontWithSize(style.font, style.font.getFontSize(from: appearance)), color: .custom(color))
         }
     }
     
@@ -30,10 +34,10 @@ public enum DSTextStyle: Equatable, Hashable {
         return switch self {
         case .style(let font):
             font
-        case .styleWithSize(let font, _):
+        case .styleWithColor(let font, _):
             font
-        case .styleWithSizeAndColor(let font, _, _):
-            font
+        case .reStyleWithColor(let style, _):
+            style.font
         }
     }
     
@@ -90,14 +94,14 @@ public extension DSTextStyle {
     }
 
     static var smallHeadline: DSTextStyle {
-        .styleWithSize(.headline, 14)
+        .style(.fontWithSize(.headline, 14))
     }
     
     static var smallSubtitle: DSTextStyle {
-        .styleWithSize(.subheadline, 12)
+        .style(.fontWithSize(.subheadline, 12))
     }
     
     static var largeHeadline: DSTextStyle {
-        .styleWithSize(.headline, 30)
+        .style(.fontWithSize(.headline, 30))
     }
 }

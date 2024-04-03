@@ -86,7 +86,7 @@ extension ProfileScreen1 {
                 DSImageView(
                     sfSymbol: action.icon,
                     size: .smallIcon,
-                    tint: .text(.font(.headline))
+                    tint: .text(.headline)
                 )
                 
                 DSText(action.title, .smallHeadline)
@@ -94,7 +94,7 @@ extension ProfileScreen1 {
                 Spacer()
                 
                 if let badge = action.badge {
-                    DSText(badge, .smallSubtitle, color: .viewColor(.buttonTitle, .secondary))
+                    DSText(badge, .reStyleWithColor(.smallSubtitle, .secondary(.buttonTitle)))
                         .dsSize(18)
                         .dsBackground(.customColor(.red))
                         .clipShape(Circle())

@@ -48,8 +48,8 @@ extension Categories3 {
                     )
                 }
                 DSVStack(alignment: .center, spacing: .zero) {
-                    DSText(category.title, .styleWithSize(.headline, 25), color: .customColor(.white))
-                    DSText(category.description, .subheadline, color: .customColor(.white.opacity(0.8)))
+                    DSText(category.title, .styleWithColor(.fontWithSize(.headline, 25), .customColor(.white)))
+                    DSText(category.description, .styleWithColor(.subheadline, .customColor(.white.opacity(0.8))))
                 }
             }
             .dsSecondaryBackground()

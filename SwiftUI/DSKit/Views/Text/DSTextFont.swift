@@ -25,6 +25,15 @@ public indirect enum DSTextFont: Equatable, Hashable {
     case custom(UIFont)
     case fontWithSize(DSTextFont, CGFloat)
     
+    public func getFontSize(from appearance: DSAppearance) -> CGFloat {
+        return switch self {
+        case .fontWithSize(_, let size):
+            size
+        default:
+            getUIFont(from: appearance).pointSize
+        }
+    }
+    
     public func getFont(from appearance: DSAppearance) -> Font {
         return Font(getUIFont(from: appearance))
     }

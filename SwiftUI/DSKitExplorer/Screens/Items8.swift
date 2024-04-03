@@ -73,7 +73,7 @@ extension Items8 {
                 DSImageView(
                     sfSymbol: "ellipsis",
                     size: .regular,
-                    tint: .text(.font(.headline))
+                    tint: .text(.headline)
                 )
                 .dsPadding(.medium)
             }

@@ -27,7 +27,7 @@ struct Shipping2: View {
             DSBottomContainer {
                 DSHStack {
                     DSText("Next Step:", .smallHeadline)
-                    DSText("Order Info", .styleWithSize(.subheadline, 14))
+                    DSText("Order Info", .style(.fontWithSize(.subheadline, 14)))
                 }
                 DSButton(
                     title: "Continue",
@@ -81,14 +81,14 @@ extension Shipping2 {
             DSText(method.title, .smallHeadline)
             DSVStack(spacing: .small) {
                 DSHStack(spacing: .small) {
-                    DSImageView(sfSymbol: "calendar", size: 12, tint: .text(.font(.subheadline)))
+                    DSImageView(sfSymbol: "calendar", size: 12, tint: .text(.subheadline))
                     DSText(method.description, .smallSubtitle)
                 }
                 if let price = method.price {
                     DSPriceView(price: .init(amount: price, currency: "$"), size: .smallHeadline)
                         .dsPadding(.top, .regular)
                 } else {
-                    DSText("Free", .smallHeadline, color: .customColor(.white))
+                    DSText("Free", .reStyleWithColor(.smallHeadline, .customColor(.white)))
                         .dsPadding(.vertical, .regular)
                         .dsPadding(.horizontal)
                         .dsBackground(.customColor(.green))

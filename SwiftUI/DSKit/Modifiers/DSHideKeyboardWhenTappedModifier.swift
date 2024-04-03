@@ -10,7 +10,7 @@ import SwiftUI
 public struct DSHideKeyboardWhenTappedModifier: ViewModifier {
     
     @Environment(\.appearance) var appearance: DSAppearance
-    @Environment(\.colorGroup) var colorGroup: DSColorGroup
+    @Environment(\.colorGroup) var colorGroup: DSViewStyle
 
     public func body(content: Content) -> some View {
         ZStack {

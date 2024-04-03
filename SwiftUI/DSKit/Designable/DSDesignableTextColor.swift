@@ -109,12 +109,12 @@ public extension DSDesignableTextColor {
 
 public extension DSDesignableTextColor {
     
-    func color(for textColor: DSTextColor) -> UIColor {
-        return switch textColor {
-        case .font(let font):
-            font.color(from: self)
-        case .custom(let customColor):
-            customColor
-        }
-    }
+//    func color(for textColor: DSTextColor) -> UIColor {
+//        return switch textColor {
+//        case .font(let font):
+//            font.color(from: self)
+//        case .custom(let customColor):
+//             UIColor.black // FIXME: --- 
+//        }
+//    }
 }

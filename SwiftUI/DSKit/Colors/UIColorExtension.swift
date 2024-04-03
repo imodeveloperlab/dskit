@@ -263,3 +263,37 @@ public extension UIColor {
         Color(uiColor: self)
     }
 }
+
+extension UIColor {
+    /// Lightens the color by the specified percentage.
+    /// - Parameter percentage: The percentage by which to lighten the color (0 to 1).
+    /// - Returns: A lighter UIColor.
+    func lighter(by percentage: CGFloat) -> UIColor {
+        return adjustBrightness(by: abs(percentage))
+    }
+
+    /// Darkens the color by the specified percentage.
+    /// - Parameter percentage: The percentage by which to darken the color (0 to 1).
+    /// - Returns: A darker UIColor.
+    func darker(by percentage: CGFloat) -> UIColor {
+        return adjustBrightness(by: -abs(percentage))
+    }
+
+    /// Adjusts the brightness of the color.
+    /// - Parameter percentage: The percentage by which to adjust the brightness. Positive to lighten, negative to darken.
+    /// - Returns: An adjusted UIColor.
+    private func adjustBrightness(by percentage: CGFloat) -> UIColor {
+        var hue: CGFloat = 0
+        var saturation: CGFloat = 0
+        var brightness: CGFloat = 0
+        var alpha: CGFloat = 0
+
+        if getHue(&hue, saturation: &saturation, brightness: &brightness, alpha: &alpha) {
+            brightness += percentage * brightness
+            brightness = min(max(brightness, 0), 1) // Ensure within [0, 1] range
+            return UIColor(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha)
+        }
+
+        return self
+    }
+}

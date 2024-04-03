@@ -6,7 +6,19 @@
 //  Copyright © 2021 Borinschi Ivan. All rights reserved.
 //
 
+import SwiftUI
 import UIKit
+
+struct AppearanceEnvironment: EnvironmentKey {
+    static let defaultValue: DSAppearance = DSKitAppearance()
+}
+
+public extension EnvironmentValues {
+    var appearance: DSAppearance {
+        get { self[AppearanceEnvironment.self] }
+        set { self[AppearanceEnvironment.self] = newValue }
+    }
+}
 
 public protocol DSAppearance {
     var title: String { get set }

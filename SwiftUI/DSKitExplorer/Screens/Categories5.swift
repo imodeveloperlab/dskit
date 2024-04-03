@@ -52,7 +52,7 @@ extension Categories5 {
                 }
                 .overlay(alignment: .topLeading) {
                     if let tag = category.tag {
-                        DSText(tag, .styleWithSize(.headline, 10), color: .customColor(.white))
+                        DSText(tag, .styleWithColor(.fontWithSize(.headline, 10), .customColor(.white)))
                         .dsPadding(.regular)
                         .dsBlurBackground(style: .light)
                         .dsCornerRadius()

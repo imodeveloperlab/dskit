@@ -120,7 +120,7 @@ extension CartScreen5 {
     struct TagView: View {
         let tag: String
         var body: some View {
-            DSText(tag, .styleWithSize(.headline, 9))
+            DSText(tag, .style(.fontWithSize(.headline, 9)))
                 .dsPadding(.horizontal, .regular)
                 .dsPadding(.vertical, .small)
                 .dsBackground(.primary)

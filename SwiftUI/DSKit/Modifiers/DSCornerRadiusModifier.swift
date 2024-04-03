@@ -11,7 +11,7 @@ import SwiftUI
 public struct DSCornerRadiusModifier: ViewModifier {
     
     @Environment(\.appearance) var appearance: DSAppearance
-    @Environment(\.colorGroup) var colorGroup: DSColorGroup
+    @Environment(\.colorGroup) var colorGroup: DSViewStyle
     
     @Environment(\.parentPadding) var parentPadding: CGFloat
     @Environment(\.parentCornerRadius) var parentCornerRadius: CGFloat
@@ -49,19 +49,19 @@ struct Testable_DSCornerRadiusModifier: View {
                             DSText("Center")
                         }
                         .dsPadding(4)
-                        .dsBackground(.custom(.yellow))
+                        .dsBackground(.customColor(.yellow))
                         .dsCornerRadius()
                     }
                     .dsPadding(3)
-                    .dsBackground(.custom(.blue))
+                    .dsBackground(.customColor(.blue))
                     .dsCornerRadius()
                 }
                 .dsPadding(3)
-                .dsBackground(.custom(.green))
+                .dsBackground(.customColor(.green))
                 .dsCornerRadius()
             }
             .dsPadding(2)
-            .dsBackground(.custom(.red))
+            .dsBackground(.customColor(.red))
             .dsCornerRadius()
         }
         .dsPadding()

@@ -47,16 +47,15 @@ public extension DSAppearance {
     /// - Parameter style: UIUserInterfaceStyle
     /// - Returns: UIStatusBarStyle
     func statusBarStyle(for style: UIUserInterfaceStyle) -> UIStatusBarStyle {
-        
         switch style {
         case .dark:
-            return statusBarStyleForDarkUserInterfaceStyle
+            statusBarStyleForDarkUserInterfaceStyle
         case .light:
-            return statusBarStyleForLightUserInterfaceStyle
+            statusBarStyleForLightUserInterfaceStyle
         case .unspecified:
-            return statusBarStyleForLightUserInterfaceStyle
+            statusBarStyleForLightUserInterfaceStyle
         @unknown default:
-            return statusBarStyleForLightUserInterfaceStyle
+            statusBarStyleForLightUserInterfaceStyle
         }
     }
 }

@@ -24,7 +24,6 @@ public class DarkLightAppearance: DSAppearance {
     public var price: DSDesignablePriceColor
     public var fonts = DSDesignableFonts()
     public var prefersLargeTitles: Bool = true
-    public var buttonStyle: DSButtonStyle = .default
     public var actionElementHeight: CGFloat = 48
     public var statusBarStyleForDarkUserInterfaceStyle: UIStatusBarStyle = .lightContent
     public var statusBarStyleForLightUserInterfaceStyle: UIStatusBarStyle = .darkContent

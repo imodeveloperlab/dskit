@@ -200,7 +200,6 @@
 		60EB999A2B2B4E1D00528039 /* DSKitAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EB99992B2B4E1D00528039 /* DSKitAppearance.swift */; };
 		60EB999E2B2B4E4700528039 /* DSDynamicColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EB999C2B2B4E4700528039 /* DSDynamicColor.swift */; };
 		60EB999F2B2B4E4700528039 /* DSColorScheme+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EB999D2B2B4E4700528039 /* DSColorScheme+Color.swift */; };
-		60EB99A12B2B4EC900528039 /* DSButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EB99A02B2B4EC900528039 /* DSButtonStyle.swift */; };
 		60EB99A32B2B4EF500528039 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EB99A22B2B4EF500528039 /* UIColorExtension.swift */; };
 		60EB99A52B2B4F2300528039 /* Rescale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EB99A42B2B4F2300528039 /* Rescale.swift */; };
 		60EB99A82B2B4F6600528039 /* ColorSpaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EB99A72B2B4F6600528039 /* ColorSpaces.swift */; };
@@ -468,7 +467,6 @@
 		60EB99992B2B4E1D00528039 /* DSKitAppearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSKitAppearance.swift; sourceTree = "<group>"; };
 		60EB999C2B2B4E4700528039 /* DSDynamicColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSDynamicColor.swift; sourceTree = "<group>"; };
 		60EB999D2B2B4E4700528039 /* DSColorScheme+Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DSColorScheme+Color.swift"; sourceTree = "<group>"; };
-		60EB99A02B2B4EC900528039 /* DSButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSButtonStyle.swift; sourceTree = "<group>"; };
 		60EB99A22B2B4EF500528039 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		60EB99A42B2B4F2300528039 /* Rescale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rescale.swift; sourceTree = "<group>"; };
 		60EB99A72B2B4F6600528039 /* ColorSpaces.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorSpaces.swift; sourceTree = "<group>"; };
@@ -769,7 +767,6 @@
 			isa = PBXGroup;
 			children = (
 				6009358F2BBAB0D000A1D1E6 /* Defaults */,
-				60EB99A02B2B4EC900528039 /* DSButtonStyle.swift */,
 				6074DF452BA30DFA0006284C /* DSDesignable.swift */,
 				60EB99872B2B4D3900528039 /* DSAppearance.swift */,
 				60EB99842B2B4D3900528039 /* DSDesignableButtonColor.swift */,
@@ -1319,7 +1316,6 @@
 				605682632B91C61100228A10 /* DSCard+Padding.swift in Sources */,
 				60C1F7952B3DC62D0067B21C /* DSTextField.swift in Sources */,
 				600742872BB6D89900B7EE75 /* DSCustomBackgroundModifier.swift in Sources */,
-				60EB99A12B2B4EC900528039 /* DSButtonStyle.swift in Sources */,
 				60C5B31C2B7A4D9B00A23D40 /* DSImageView.swift in Sources */,
 				6056827D2B95B8BE00228A10 /* DSParentPaddingKey.swift in Sources */,
 				600E3C132BB602FF00FA33EC /* DSPickerView.swift in Sources */,

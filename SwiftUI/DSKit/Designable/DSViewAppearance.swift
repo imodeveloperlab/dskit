@@ -9,22 +9,25 @@
 import UIKit
 import SwiftUI
 
-/// View colors
-public struct DSDesignableViewStyle: Equatable, Hashable {
+public protocol DSViewAppearanceProtocol {
+    var button: DSButtonAppearanceProtocol { get }
+    var text: DSTextAppearanceProtocol { get }
+    var textField: DSTextFieldAppearanceProtocol { get }
+    var background: UIColor { get }
+    var separator: UIColor { get }
+    var cornerRadius: CGFloat { get }
+}
+
+public struct DSViewAppearance: DSViewAppearanceProtocol {
     
-    /// Init designable view colors
-    /// - Parameters:
-    ///   - button: DSDesignableButtonColor
-    ///   - text: DSDesignableTextColor
-    ///   - background: UIColor
-    ///   - separator: UIColor
-    ///   - cornerRadius: CGFloat
-    public init(button: DSDesignableButtonColor,
-                text: DSDesignableTextColor,
-                textField: DSDesignableTextFieldColor,
-                background: UIColor,
-                separator: UIColor,
-                cornerRadius: CGFloat) {
+    public init(
+        button: DSButtonAppearanceProtocol,
+        text: DSTextAppearanceProtocol,
+        textField: DSTextFieldAppearanceProtocol,
+        background: UIColor,
+        separator: UIColor,
+        cornerRadius: CGFloat
+    ) {
         
         self.button = button
         self.text = text
@@ -34,26 +37,16 @@ public struct DSDesignableViewStyle: Equatable, Hashable {
         self.textField = textField
     }
     
-    /// Any button on, view colors
-    public var button: DSDesignableButtonColor
-    
-    /// Any text on, view colors
-    public var text: DSDesignableTextColor
-    
-    /// Any textfield on, view colors
-    public var textField: DSDesignableTextFieldColor
-    
-    /// View background colors
+    public var button: DSButtonAppearanceProtocol
+    public var text: DSTextAppearanceProtocol
+    public var textField: DSTextFieldAppearanceProtocol
     public var background: UIColor
-    
-    /// View separator colors
     public var separator: UIColor
-    
-    /// View corner radius
     public var cornerRadius: CGFloat
+    
 }
 
-extension DSDesignableViewStyle {
+public extension DSViewAppearanceProtocol {
     
     func color(for viewColor: DSViewColor, appearance: DSAppearance, style: DSViewStyle) -> Color {
         switch viewColor {

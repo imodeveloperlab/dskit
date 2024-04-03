@@ -1,5 +1,5 @@
 //
-//  DSDefaultDesignablePadding.swift
+//  DSDimension.swift
 //  DSKit
 //
 //  Created by Ivan Borinschi on 26.02.2023.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct DSDefaultDesignablePadding: DSDesignablePadding {
+public struct DSDimensionSystem: DSDimensionProtocol {
     
     public let spatialSystem: CGFloat
     
@@ -15,7 +15,7 @@ public struct DSDefaultDesignablePadding: DSDesignablePadding {
         self.spatialSystem = spatialSystem
     }
     
-    public func value(for space: DSPadding) -> CGFloat {
+    public func value(for space: DSDimension) -> CGFloat {
         switch space {
         case .small:
             spatialSystem.multiply(by: 0.5)
@@ -24,9 +24,13 @@ public struct DSDefaultDesignablePadding: DSDesignablePadding {
         case .medium:
             spatialSystem.multiply(by: 2.0)
         case .large:
-            spatialSystem.multiply(by: 3.0)
+            spatialSystem.multiply(by: 4.0)
         case .custom(let number):
             number
+        case .fillUpTheSpace:
+                .infinity
+        case .none:
+                .infinity
         case .zero:
             0
         }

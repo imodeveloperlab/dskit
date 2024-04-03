@@ -1,5 +1,5 @@
 //
-//  DSDesignableNavigationBarColor.swift
+//  DSNavigationBarAppearance.swift
 //  DSKit
 //
 //  Created by Borinschi Ivan on 01.12.2020.
@@ -9,7 +9,7 @@
 import UIKit
 import SwiftUI
 
-public struct DSDesignableNavigationBarColor {
+public struct DSNavigationBarAppearance: DSNavigationBarAppearanceProtocol {
     public init(
         buttons: UIColor,
         text: UIColor,

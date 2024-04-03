@@ -13,17 +13,16 @@ public class DarkLightAppearance: DSAppearance {
     public var title: String
     public var darkModeSupport: Bool = true
     public var brandColor: UIColor
-    public var primaryView: DSDesignableViewStyle
-    public var secondaryView: DSDesignableViewStyle
-    public var spacing: DSDesignableSpacing = DSDefaultDesignableSpacing(spatialSystem: 6.5)
-    public var padding: DSDesignablePadding = DSDefaultDesignablePadding(spatialSystem: 6.5)
-    public var dimension: DSDesignableDimension = DSDefaultDesignableDimension(spatialSystem: 6.5)
-    public var tabBar: DSDesignableTabbarColor
-    public var navigationBar: DSDesignableNavigationBarColor
-    public var textField: DSDesignableTextFieldColor
-    public var price: DSDesignablePriceColor
-    public var fonts = DSDesignableFonts()
-    public var prefersLargeTitles: Bool = true
+    public var primaryView: DSViewAppearanceProtocol
+    public var secondaryView: DSViewAppearanceProtocol
+    public var spacing: DSSpacingProtocol = DSSpacingSystem(spatialSystem: 6.5)
+    public var padding: DPaddingsProtocol = DSPaddingSystem(spatialSystem: 6.5)
+    public var dimension: DSDimensionProtocol = DSDimensionSystem(spatialSystem: 6.5)
+    public var tabBar: DSTabBarAppearanceProtocol
+    public var navigationBar: DSNavigationBarAppearanceProtocol
+    public var textField: DSTextFieldAppearanceProtocol
+    public var price: DSPriceAppearanceProtocol
+    public var fonts: DSFontsProtocol = DSFonts()
     public var actionElementHeight: CGFloat = 48
     public var statusBarStyleForDarkUserInterfaceStyle: UIStatusBarStyle = .lightContent
     public var statusBarStyleForLightUserInterfaceStyle: UIStatusBarStyle = .darkContent
@@ -38,27 +37,33 @@ public class DarkLightAppearance: DSAppearance {
         // MARK: - Primary view
         
         // Text
-        let text = DSDesignableTextColor(largeTitle: DSDynamicColor.color(light: 0x14171a, dark: 0xfefffe),
-                                         title1: DSDynamicColor.color(light: 0x14171a, dark: 0xfefffe),
-                                         title2: DSDynamicColor.color(light: 0x14171a, dark: 0xfefffe),
-                                         title3: DSDynamicColor.color(light: 0x14171a, dark: 0xfefffe),
-                                         headline: DSDynamicColor.color(light: 0x14171a, dark: 0xfefffe),
-                                         subheadline: DSDynamicColor.color(light: 0x5b7083, dark: 0x8899a6),
-                                         body: DSDynamicColor.color(light: 0x14171a, dark: 0xfefffe),
-                                         callout: DSDynamicColor.color(light: 0x5b7083, dark: 0x8899a6),
-                                         caption1: DSDynamicColor.color(light: 0x5b7083, dark: 0x8899a6),
-                                         caption2: DSDynamicColor.color(light: 0x5b7083, dark: 0x8899a6),
-                                         footnote: DSDynamicColor.color(light: 0x5b7083, dark: 0x8899a6))
+        let text = DSTextAppearance(
+            largeTitle: DSDynamicColor.color(light: 0x14171a, dark: 0xfefffe),
+            title1: DSDynamicColor.color(light: 0x14171a, dark: 0xfefffe),
+            title2: DSDynamicColor.color(light: 0x14171a, dark: 0xfefffe),
+            title3: DSDynamicColor.color(light: 0x14171a, dark: 0xfefffe),
+            headline: DSDynamicColor.color(light: 0x14171a, dark: 0xfefffe),
+            subheadline: DSDynamicColor.color(light: 0x5b7083, dark: 0x8899a6),
+            body: DSDynamicColor.color(light: 0x14171a, dark: 0xfefffe),
+            callout: DSDynamicColor.color(light: 0x5b7083, dark: 0x8899a6),
+            caption1: DSDynamicColor.color(light: 0x5b7083, dark: 0x8899a6),
+            caption2: DSDynamicColor.color(light: 0x5b7083, dark: 0x8899a6),
+            footnote: DSDynamicColor.color(light: 0x5b7083, dark: 0x8899a6)
+        )
         
         // Text field
-        let primaryViewTextField = DSDesignableTextFieldColor(border: DSDynamicColor.color(light: 0xf3f4f2, dark: 0x101a24),
-                                                              background: DSDynamicColor.color(light: 0xf3f4f2, dark: 0x101a24),
-                                                              text: DSDynamicColor.color(light: 0x14171a, dark: 0xfefffe),
-                                                              placeHolder: DSDynamicColor.color(light: 0x5b7083, dark: 0x8899a6))
+        let primaryViewTextField = DSTextFieldAppearance(
+            border: DSDynamicColor.color(light: 0xf3f4f2, dark: 0x101a24),
+            background: DSDynamicColor.color(light: 0xf3f4f2, dark: 0x101a24),
+            text: DSDynamicColor.color(light: 0x14171a, dark: 0xfefffe),
+            placeHolder: DSDynamicColor.color(light: 0x5b7083, dark: 0x8899a6)
+        )
         
         // Button
-        let button = DSDesignableButtonColor(background: DSDynamicColor.color(light: 0x1da1f2, dark: 0x1da1f2),
-                                             title: DSDynamicColor.color(light: 0xfefffe, dark: 0xfefffe))
+        let button = DSButtonAppearance(
+            background: DSDynamicColor.color(light: 0x1da1f2, dark: 0x1da1f2),
+            title: DSDynamicColor.color(light: 0xfefffe, dark: 0xfefffe)
+        )
         
         // Background
         let background = DSDynamicColor.color(light: 0xfefffe, dark: 0x15202b)
@@ -70,37 +75,45 @@ public class DarkLightAppearance: DSAppearance {
         let cornerRadius: CGFloat = 10
         
         // View
-        primaryView = DSDesignableViewStyle(button: button,
-                                             text: text,
-                                             textField: primaryViewTextField,
-                                             background: background,
-                                             separator: separator,
-                                             cornerRadius: cornerRadius)
+        primaryView = DSViewAppearance(
+            button: button,
+            text: text,
+            textField: primaryViewTextField,
+            background: background,
+            separator: separator,
+            cornerRadius: cornerRadius
+        )
         
         // MARK: - Secondary view
         
         // Text
-        let secondaryText = DSDesignableTextColor(largeTitle: DSDynamicColor.color(light: 0x14171a, dark: 0xfefffe),
-                                                  title1: DSDynamicColor.color(light: 0x14171a, dark: 0xfefffe),
-                                                  title2: DSDynamicColor.color(light: 0x14171a, dark: 0xfefffe),
-                                                  title3: DSDynamicColor.color(light: 0x14171a, dark: 0xfefffe),
-                                                  headline: DSDynamicColor.color(light: 0x14171a, dark: 0xfefffe),
-                                                  subheadline: DSDynamicColor.color(light: 0x5b7083, dark: 0x8899a6),
-                                                  body: DSDynamicColor.color(light: 0x14171a, dark: 0xfefffe),
-                                                  callout: DSDynamicColor.color(light: 0x5b7083, dark: 0x8899a6),
-                                                  caption1: DSDynamicColor.color(light: 0x5b7083, dark: 0x8899a6),
-                                                  caption2: DSDynamicColor.color(light: 0x5b7083, dark: 0x8899a6),
-                                                  footnote: DSDynamicColor.color(light: 0x5b7083, dark: 0x8899a6))
+        let secondaryText = DSTextAppearance(
+            largeTitle: DSDynamicColor.color(light: 0x14171a, dark: 0xfefffe),
+            title1: DSDynamicColor.color(light: 0x14171a, dark: 0xfefffe),
+            title2: DSDynamicColor.color(light: 0x14171a, dark: 0xfefffe),
+            title3: DSDynamicColor.color(light: 0x14171a, dark: 0xfefffe),
+            headline: DSDynamicColor.color(light: 0x14171a, dark: 0xfefffe),
+            subheadline: DSDynamicColor.color(light: 0x5b7083, dark: 0x8899a6),
+            body: DSDynamicColor.color(light: 0x14171a, dark: 0xfefffe),
+            callout: DSDynamicColor.color(light: 0x5b7083, dark: 0x8899a6),
+            caption1: DSDynamicColor.color(light: 0x5b7083, dark: 0x8899a6),
+            caption2: DSDynamicColor.color(light: 0x5b7083, dark: 0x8899a6),
+            footnote: DSDynamicColor.color(light: 0x5b7083, dark: 0x8899a6)
+        )
         
         // Text field
-        let secondaryViewTextField = DSDesignableTextFieldColor(border: DSDynamicColor.color(light: 0xfefffe, dark: 0x15202b),
-                                                                background: DSDynamicColor.color(light: 0xfefffe, dark: 0x15202b),
-                                                                text: text.headline,
-                                                                placeHolder: text.subheadline)
+        let secondaryViewTextField = DSTextFieldAppearance(
+            border: DSDynamicColor.color(light: 0xfefffe, dark: 0x15202b),
+            background: DSDynamicColor.color(light: 0xfefffe, dark: 0x15202b),
+            text: text.headline,
+            placeHolder: text.subheadline
+        )
         
         // Button
-        let sButton = DSDesignableButtonColor(background: DSDynamicColor.color(light: 0x5b7083, dark: 0x8899a6),
-                                              title: DSDynamicColor.color(light: 0xfefffe, dark: 0xfefffe))
+        let sButton = DSButtonAppearance(
+            background: DSDynamicColor.color(light: 0x5b7083, dark: 0x8899a6),
+            title: DSDynamicColor.color(light: 0xfefffe, dark: 0xfefffe)
+        )
         
         // Background
         let sBackground = DSDynamicColor.color(light: 0xf3f4f2, dark: 0x101a24)
@@ -112,44 +125,54 @@ public class DarkLightAppearance: DSAppearance {
         let sCornerRadius: CGFloat = 10
         
         // View
-        secondaryView = DSDesignableViewStyle(button: sButton,
-                                               text: secondaryText,
-                                               textField: secondaryViewTextField,
-                                               background: sBackground,
-                                               separator: sSeparator,
-                                               cornerRadius: sCornerRadius)
+        secondaryView = DSViewAppearance(
+            button: sButton,
+            text: secondaryText,
+            textField: secondaryViewTextField,
+            background: sBackground,
+            separator: sSeparator,
+            cornerRadius: sCornerRadius
+        )
         
         // MARK: - Tabbar
         
-        tabBar = DSDesignableTabbarColor(barTint: primaryView.background,
-                                         itemTint: primaryView.button.background,
-                                         unselectedItemTint: text.subheadline,
-                                         badge: self.brandColor,
-                                         translucent: false)
+        tabBar = DSTabbarAppearance(
+            barTint: primaryView.background,
+            itemTint: primaryView.button.background,
+            unselectedItemTint: text.subheadline,
+            badge: self.brandColor,
+            translucent: false
+        )
         
         // MARK: - Navigation bar
         
-        navigationBar = DSDesignableNavigationBarColor(buttons: primaryView.button.background,
-                                                       text: text.title1,
-                                                       bar: primaryView.background,
-                                                       translucent: false)
+        navigationBar = DSNavigationBarAppearance(
+            buttons: primaryView.button.background,
+            text: text.title1,
+            bar: primaryView.background,
+            translucent: false
+        )
         
         // MARK: - Textfield
         
-        textField = DSDesignableTextFieldColor(border: primaryView.separator,
-                                               background: secondaryView.background,
-                                               text: secondaryView.text.title1,
-                                               placeHolder: secondaryView.text.subheadline)
+        textField = DSTextFieldAppearance(
+            border: primaryView.separator,
+            background: secondaryView.background,
+            text: secondaryView.text.title1,
+            placeHolder: secondaryView.text.subheadline
+        )
         
         // MARK: - Price
         
-        price = DSDesignablePriceColor(currency: text.headline,
-                                       amount: text.headline,
-                                       regularAmount: text.subheadline,
-                                       badgeBackground: UIColor(0xFF656B))
+        price = DSPriceAppearance(
+            currency: text.headline,
+            amount: text.headline,
+            regularAmount: text.subheadline,
+            badgeBackground: UIColor(0xFF656B)
+        )
     }
     
-    public func style(for viewStyle: DSViewStyle) -> DSDesignableViewStyle {
+    public func style(for viewStyle: DSViewStyle) -> DSViewAppearanceProtocol {
         return switch viewStyle {
         case .primary:
             primaryView

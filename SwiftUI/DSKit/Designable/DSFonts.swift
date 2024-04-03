@@ -8,8 +8,22 @@
 
 import UIKit
 
-/// Designable fonts
-public class DSDesignableFonts {
+public protocol DSFontsProtocol {
+    var body: UIFont { get }
+    var callout: UIFont { get }
+    var caption1: UIFont { get }
+    var caption2: UIFont { get }
+    var footnote: UIFont { get }
+    var headline: UIFont { get }
+    var subheadline: UIFont { get }
+    var largeTitle: UIFont { get }
+    var title1: UIFont { get }
+    var title2: UIFont { get }
+    var title3: UIFont { get }
+}
+
+
+public class DSFonts: DSFontsProtocol {
     
     var fontName: String
     

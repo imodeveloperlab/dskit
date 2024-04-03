@@ -73,7 +73,7 @@ public indirect enum DSTextFont: Equatable, Hashable {
         }
     }
     
-    func color(for textColors: DSDesignableTextColor) -> UIColor {
+    func color(for textColors: DSTextAppearance) -> UIColor {
         return switch self {
         case .largeTitle:
             textColors.largeTitle

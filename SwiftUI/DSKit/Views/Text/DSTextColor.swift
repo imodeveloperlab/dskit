@@ -29,7 +29,7 @@ public indirect enum DSTextColor: Equatable, Hashable {
     
     public func uiColor(for font: DSTextFont, appearance: DSAppearance, viewStyle: DSViewStyle) -> UIColor {
         
-        let designableTextColor: DSDesignableTextColor
+        let designableTextColor: DSTextAppearanceProtocol
         
         switch viewStyle {
         case .primary:

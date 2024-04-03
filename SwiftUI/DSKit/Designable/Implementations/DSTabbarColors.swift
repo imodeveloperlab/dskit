@@ -1,5 +1,5 @@
 //
-//  DSDesignableTabbarColor.swift
+//  DSTabbarAppearance.swift
 //  DSKit
 //
 //  Created by Borinschi Ivan on 01.12.2020.
@@ -8,8 +8,7 @@
 
 import UIKit
 
-/// Tabbar colors
-public struct DSDesignableTabbarColor {
+public struct DSTabbarAppearance: DSTabBarColorsProtocol {
     
     /// Init tabbar colors
     /// - Parameters:
@@ -18,11 +17,13 @@ public struct DSDesignableTabbarColor {
     ///   - unselectedItemTint: UIColor
     ///   - badge: UIColor
     ///   - translucent: Bool
-    public init(barTint: UIColor,
-                itemTint: UIColor,
-                unselectedItemTint: UIColor,
-                badge: UIColor,
-                translucent: Bool = false) {
+    public init(
+        barTint: UIColor,
+        itemTint: UIColor,
+        unselectedItemTint: UIColor,
+        badge: UIColor,
+        translucent: Bool = false
+    ) {
         
         self.barTint = barTint
         self.itemTint = itemTint
@@ -31,18 +32,9 @@ public struct DSDesignableTabbarColor {
         self.translucent = translucent
     }
     
-    /// Bar tint color
     public var barTint: UIColor
-    
-    /// Item tint color
     public var itemTint: UIColor
-    
-    /// Unselected item tint
     public var unselectedItemTint: UIColor
-    
-    /// Badge color
     public var badge: UIColor
-    
-    /// Translucent
     public var translucent: Bool
 }

@@ -13,11 +13,11 @@ public protocol DSDesignable {
 }
 
 public extension DSDesignable {
-    var viewColors: DSDesignableViewStyle {
+    var viewColors: DSViewAppearanceProtocol {
         return viewStyle.colors(from: appearance)
     }
     
-    var navigationBarColors: DSDesignableNavigationBarColor {
+    var navigationBarColors: DSNavigationBarAppearanceProtocol {
         return appearance.navigationBar
     }
 }

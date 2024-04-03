@@ -24,7 +24,7 @@ public enum DSViewStyle: Equatable {
 }
 
 public extension DSViewStyle {
-    func colors(from appearance: DSAppearance) -> DSDesignableViewStyle {
+    func colors(from appearance: DSAppearance) -> DSViewAppearanceProtocol {
         switch self {
         case .primary:
             return appearance.primaryView

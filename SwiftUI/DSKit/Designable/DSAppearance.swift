@@ -23,22 +23,20 @@ public extension EnvironmentValues {
 public protocol DSAppearance {
     var title: String { get set }
     var brandColor: UIColor { get set }
-    var primaryView: DSDesignableViewStyle { get set }
-    var secondaryView: DSDesignableViewStyle { get set }
+    var primaryView: DSViewAppearanceProtocol { get set }
+    var secondaryView: DSViewAppearanceProtocol { get set }
     var statusBarStyleForDarkUserInterfaceStyle: UIStatusBarStyle { get set }
     var statusBarStyleForLightUserInterfaceStyle: UIStatusBarStyle { get set }
-    var spacing: DSDesignableSpacing { get set }
-    var padding: DSDesignablePadding { get set }
-    var dimension: DSDesignableDimension { get set }
-    var tabBar: DSDesignableTabbarColor { get set }
-    var navigationBar: DSDesignableNavigationBarColor { get set }
-    var price: DSDesignablePriceColor { get set }
-    var fonts: DSDesignableFonts { get set }
-    var prefersLargeTitles: Bool { get set }
+    var spacing: DSSpacingProtocol { get set }
+    var padding: DPaddingsProtocol { get set }
+    var dimension: DSDimensionProtocol { get set }
+    var tabBar: DSTabBarAppearanceProtocol { get set }
+    var navigationBar: DSNavigationBarAppearanceProtocol { get set }
+    var price: DSPriceAppearanceProtocol { get set }
+    var fonts: DSFontsProtocol { get set }
     var actionElementHeight: CGFloat { get set }
     var darkModeSupport: Bool { get }
-    
-    func style(for viewStyle: DSViewStyle) -> DSDesignableViewStyle
+    func style(for viewStyle: DSViewStyle) -> DSViewAppearanceProtocol
 }
 
 public extension DSAppearance {

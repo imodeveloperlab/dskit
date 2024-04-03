@@ -8,7 +8,7 @@
 
 import UIKit
 
-public struct DSTextFieldColors: DSTextFieldColorsProtocol {
+public struct DSTextFieldAppearance: DSTextFieldAppearanceProtocol {
     
     public init(
         border: UIColor,

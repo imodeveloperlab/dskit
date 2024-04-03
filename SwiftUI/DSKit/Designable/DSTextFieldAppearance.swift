@@ -8,7 +8,14 @@
 
 import UIKit
 
-public struct DSTextFieldColors: DSTextFieldColorsProtocol {
+public protocol DSTextFieldAppearanceProtocol {
+    var border: UIColor { get set }
+    var background: UIColor { get set }
+    var text: UIColor { get set }
+    var placeHolder: UIColor { get set }
+}
+
+public struct DSTextFieldAppearance: DSTextFieldAppearanceProtocol {
     
     public init(
         border: UIColor,

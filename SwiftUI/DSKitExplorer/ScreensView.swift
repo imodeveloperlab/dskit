@@ -396,7 +396,7 @@ fileprivate struct CustomActionView: View {
     
     var body: some View {
         DSHStack {
-            DSText(title, .smallHeadline)
+            DSText(title).dsTextStyle(.smallHeadline)
             Spacer()
             DSChevronView()
         }.dsCardStyle()

@@ -66,7 +66,8 @@ extension Order1 {
         var body: some View {
             DSGroupedList(data: orderTotals, id: \.id) { total in
                 DSHStack {
-                    DSText(total.title, total.bold ? .smallHeadline : .smallSubtitle)
+                    DSText(total.title)
+                        .dsTextStyle(total.bold ? .smallHeadline : .smallSubtitle)
                     Spacer()
                     DSPriceView(price: total.price, size: total.bold ? .smallHeadline : .smallSubtitle)
                 }.dsHeight(25)
@@ -92,8 +93,8 @@ extension Order1 {
                 DSImageView(uiImageName: method.icon, size: .size(width: 50, height: 30))
                     .dsCornerRadius()
                 DSVStack(spacing: .zero) {
-                    DSText(method.title, .smallHeadline)
-                    DSText(method.subtitle, .smallSubtitle)
+                    DSText(method.title).dsTextStyle(.smallHeadline)
+                    DSText(method.subtitle).dsTextStyle(.smallSubtitle)
                 }
             }
             .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
@@ -117,15 +118,15 @@ extension Order1 {
         
         var body: some View {
             DSVStack(alignment: .leading) {
-                DSText(address.holder, .smallHeadline)
+                DSText(address.holder).dsTextStyle(.smallHeadline)
                 DSVStack(spacing: .small) {
                     DSHStack {
                         DSImageView(sfSymbol: "house", size: 12, tint: .text(.subheadline))
-                        DSText(address.address, .smallSubtitle)
+                        DSText(address.address).dsTextStyle(.smallSubtitle)
                     }
                     DSHStack {
                         DSImageView(sfSymbol: "phone", size: 12, tint: .text(.subheadline))
-                        DSText(address.phone, .smallSubtitle)
+                        DSText(address.phone).dsTextStyle(.smallSubtitle)
                     }
                 }
             }
@@ -152,11 +153,11 @@ extension Order1 {
         
         var body: some View {
             DSVStack(alignment: .leading) {
-                DSText(shipping.method, .smallHeadline)
+                DSText(shipping.method).dsTextStyle(.smallHeadline)
                 DSVStack(spacing: .small) {
                     DSHStack {
                         DSImageView(sfSymbol: "calendar", size: 12, tint: .text(.subheadline))
-                        DSText(shipping.date, .smallSubtitle)
+                        DSText(shipping.date).dsTextStyle(.smallSubtitle)
                     }
                     DSPriceView(price: shipping.price, size: .smallHeadline)
                 }
@@ -187,8 +188,8 @@ extension Order1 {
                     .dsCornerRadius()
                 
                 DSVStack(alignment: .leading, spacing: .small) {
-                    DSText(product.title, .smallHeadline)
-                    DSText(product.subtitle, .smallSubtitle)
+                    DSText(product.title).dsTextStyle(.smallHeadline)
+                    DSText(product.subtitle).dsTextStyle(.smallSubtitle)
                     DSPriceView(price: product.price, size: .smallHeadline)
                 }.frame(maxWidth: .infinity, alignment: .leading)
             }

@@ -23,24 +23,24 @@ struct ItemDetails3: View {
                     
                     DSHStack {
                         DSVStack(spacing: .zero) {
-                            DSText(viewModel.title, .title2)
-                            DSText(viewModel.subtitle, .subheadline)
+                            DSText(viewModel.title).dsTextStyle(.title2)
+                            DSText(viewModel.subtitle).dsTextStyle(.subheadline)
                         }.frame(maxWidth: .infinity, alignment: .leading)
                     }
                     
                     DSHStack(alignment: .center, spacing: .regular) {
                         DSRatingView(rating: 4.5, size: 16)
-                        DSText("24K Ratings", .callout)
+                        DSText("24K Ratings").dsTextStyle(.callout)
                     }
                     
                     DSVStack(spacing: .zero) {
                         DSHStack(alignment: .center, spacing: .regular) {
                             DSImageView(sfSymbol: "circlebadge.fill", size: .small, tint: .text(.caption1))
-                            DSText("Colour Shown: Light Charcoal/Black/Lemon Venom/University Red", .caption2)
+                            DSText("Colour Shown: Light Charcoal/Black/Lemon Venom/University Red").dsTextStyle(.caption2)
                         }
                         DSHStack(alignment: .center, spacing: .regular) {
                             DSImageView(sfSymbol: "circlebadge.fill", size: .small, tint: .text(.caption2))
-                            DSText("Style: CW6575-001", .caption2)
+                            DSText("Style: CW6575-001").dsTextStyle(.caption2)
                         }
                     }
                     
@@ -48,7 +48,7 @@ struct ItemDetails3: View {
                     
                     DSHStack(alignment: .center) {
                         DSImageView(sfSymbol: "info.circle.fill", size: .regular, tint: .color(.yellow))
-                        DSText(viewModel.priceDisclaimer, .caption2, multilineTextAlignment: .leading)
+                        DSText(viewModel.priceDisclaimer, multilineTextAlignment: .leading).dsTextStyle(.caption2)
                     }
                 }
                 
@@ -64,14 +64,14 @@ struct ItemDetails3: View {
                     data: viewModel.sizes,
                     id: \.self, selected: $viewModel.selectedSize
                 ) { size in
-                    DSText(size, .smallHeadline)
+                    DSText(size).dsTextStyle(.smallHeadline)
                         .frame(maxWidth: .infinity)
                         .dsPadding(.horizontal)
                         .dsHeight(35)
                         .dsSecondaryBackground()
                 }.dsSectionStyle(title: "Size")
 
-                DSText(viewModel.description, .caption1)
+                DSText(viewModel.description).dsTextStyle(.caption1)
             }
         }
         .safeAreaInset(edge: .bottom) {
@@ -99,9 +99,9 @@ extension ItemDetails3 {
         @ObservedObject var viewModel: ItemDetails3Model
         var body: some View {
             DSVStack(spacing: .small) {
-                DSText("Size", .smallHeadline).dsPadding(.horizontal)
+                DSText("Size").dsTextStyle(.smallHeadline).dsPadding(.horizontal)
                 DSHScroll(spacing: .small, data: viewModel.sizes, id: \.self) { size in
-                    DSText(size, .smallHeadline)
+                    DSText(size).dsTextStyle(.smallHeadline)
                         .frame(maxWidth: .infinity)
                         .dsPadding(.horizontal)
                         .dsHeight(35)
@@ -122,7 +122,7 @@ extension ItemDetails3 {
         @ObservedObject var viewModel: ItemDetails3Model
         var body: some View {
             DSVStack(spacing: .small) {
-                DSText("Model", .smallHeadline).dsPadding(.horizontal)
+                DSText("Model").dsTextStyle(.smallHeadline).dsPadding(.horizontal)
                 DSHScroll(spacing: .small, data: viewModel.colors, id: \.self) { color in
                     DSImageView(uiImageName: color, size: .size(width: 70, height: 50))
                         .dsSelectedStyle(isSelected: viewModel.selectedColor == color)

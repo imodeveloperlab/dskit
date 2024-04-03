@@ -65,6 +65,12 @@ public indirect enum DSTextColor: Equatable, Hashable {
             return UIColor.black
         case .fontWithSize(let font, _):
             return uiColor(for: font, appearance: appearance, viewStyle: viewStyle)
+        case .smallHeadline:
+            return designableTextColor.headline
+        case .smallSubtitle:
+            return designableTextColor.subheadline
+        case .largeHeadline:
+            return designableTextColor.headline
         }
     }
 }

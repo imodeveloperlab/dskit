@@ -47,8 +47,8 @@ extension Items3 {
                     DSImageView(url: product.image, size: .size(width: 90, height: 120))
                         .dsCornerRadius()
                     DSVStack(alignment: .leading) {
-                        DSText(product.title, .smallHeadline)
-                        DSText(product.description, .caption2)
+                        DSText(product.title).dsTextStyle(.smallHeadline)
+                        DSText(product.description).dsTextStyle(.caption2)
                         DSPriceView(price: product.price, size: .smallHeadline)
                     }.frame(maxWidth: .infinity, alignment: .leading)
                 }

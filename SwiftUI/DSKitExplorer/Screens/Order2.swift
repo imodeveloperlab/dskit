@@ -53,7 +53,7 @@ struct Order2: View {
     
     func section<Content: View>(with title: String, @ViewBuilder content: @escaping () -> Content) -> some View {
         DSVStack(spacing: .small) {
-            DSText(title, .smallHeadline)
+            DSText(title).dsTextStyle(.smallHeadline)
             content()
         }
         .dsPadding(.horizontal)
@@ -75,10 +75,11 @@ extension Order2 {
             DSVStack(alignment: .center) {
                 DSImageView(sfSymbol: card.icon, size: 28, tint: .viewColor(.buttonBackground))
                 DSVStack(alignment: .center) {
-                    DSText(card.title, .textFontWithColor(.headline, .viewColor(.buttonBackground)))
+                    DSText(card.title)
+                        .dsTextStyle(.headline, .viewColor(.buttonBackground))
                     DSVStack(alignment: .center, spacing: .small) {
-                        DSText(card.subtitle, .smallSubtitle)
-                        DSText(card.description, .smallSubtitle)
+                        DSText(card.subtitle).dsTextStyle(.smallSubtitle)
+                        DSText(card.description).dsTextStyle(.smallSubtitle)
                     }
                 }.frame(maxWidth: .infinity, alignment: .center)
             }
@@ -104,7 +105,8 @@ extension Order2 {
         var body: some View {
             DSGroupedList(data: orderTotals, id: \.id) { total in
                 DSHStack {
-                    DSText(total.title, total.bold ? .smallHeadline : .smallSubtitle)
+                    DSText(total.title)
+                        .dsTextStyle(total.bold ? .smallHeadline : .smallSubtitle)
                     Spacer()
                     DSPriceView(price: total.price, size: total.bold ? .smallHeadline : .smallSubtitle)
                 }.dsHeight(25)
@@ -128,7 +130,7 @@ extension Order2 {
         
         var body: some View {
             DSHStack {
-                DSText(code.title, .smallHeadline)
+                DSText(code.title).dsTextStyle(.smallHeadline)
                 Spacer()
                 DSPriceView(price: code.price, size: .smallHeadline)
                 DSSFSymbolButton(name: "minus.circle", size: .mediumIcon)

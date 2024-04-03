@@ -49,13 +49,13 @@ extension Items7 {
                 DSVStack {
                     
                     DSVStack(spacing: .zero) {
-                        DSText(product.title, .smallHeadline)
-                        DSText(product.description, .smallSubtitle)
+                        DSText(product.title).dsTextStyle(.smallHeadline)
+                        DSText(product.description).dsTextStyle(.smallSubtitle)
                     }
                     
                     DSHStack {
                         DSRatingView(rating: 4.5, size: 12)
-                        DSText("2.4k Reviews", .caption2)
+                        DSText("2.4k Reviews").dsTextStyle(.caption2)
                     }
                     
                     DSPriceView(price: product.price, size: .smallHeadline)

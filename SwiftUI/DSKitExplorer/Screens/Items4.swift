@@ -17,7 +17,8 @@ struct Items4: View {
         ScrollView {
             DSVStack(spacing: .medium) {
                 DSHScroll(data: viewModel.filters, id: \.self) { title in
-                    DSText(title, .textFont(.fontWithSize(.headline, 12)))
+                    DSText(title)
+                        .dsTextStyle(.headline, 12)
                         .dsPadding(.horizontal, .large)
                         .dsCardStyle()
                         .onTap { self.dismiss() }
@@ -52,8 +53,8 @@ extension Items4 {
                 DSVStack(spacing: .zero) {
                     DSImageView(url: product.image)
                     DSVStack(spacing: .small) {
-                        DSText(product.title, .smallHeadline)
-                        DSText(product.description, .smallSubtitle)
+                        DSText(product.title).dsTextStyle(.smallHeadline)
+                        DSText(product.description).dsTextStyle(.smallSubtitle)
                         DSPriceView(price: product.price, size: .smallHeadline)
                     }.dsPadding(.regular)
                 }

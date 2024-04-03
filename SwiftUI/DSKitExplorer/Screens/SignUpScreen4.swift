@@ -17,7 +17,7 @@ struct SignUpScreen4: View {
         DSVStack(spacing: .medium) {
             Spacer()
             DSVStack(spacing: .medium) {
-                DSText("Enter secure\ncode to verify", .largeHeadline)
+                DSText("Enter secure\ncode to verify").dsTextStyle(.largeHeadline)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .overlay(alignment: .trailing) {
                         DSImageView(sfSymbol: "checkmark.circle.fill", size: 60, tint: .secondaryView(.background))
@@ -25,7 +25,7 @@ struct SignUpScreen4: View {
                 DSText("Please enter your mobile number to\nget sms to activate your account")
                 DSTextField.password(value: viewModel.code)
                 DSHStack {
-                    DSText("Valid for 45 seconds", .smallSubtitle)
+                    DSText("Valid for 45 seconds").dsTextStyle(.smallSubtitle)
                     Spacer()
                     DSButton(title: "Resend Code", style: .clear, maxWidth: false, action: {
                         dismiss()

@@ -23,10 +23,9 @@ struct ProfileScreen3: View {
                         tint: .color(.yellow)
                     )
                     
-                    DSText(
-                        "Changing your password regularly reduces your risk of exposure and avoids a number of dangers.",
-                        .subheadline
-                    ).frame(maxWidth: .infinity, alignment: .leading)
+                    DSText("Changing your password regularly reduces your risk of exposure and avoids a number of dangers.")
+                        .dsTextStyle(.subheadline)
+                        .frame(maxWidth: .infinity, alignment: .leading)
                 }
                 .dsPadding()
                 .dsSecondaryBackground()

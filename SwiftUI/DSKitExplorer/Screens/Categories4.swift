@@ -32,8 +32,8 @@ extension Categories4 {
             DSVStack(alignment: .center, spacing: .zero) {
                 DSImageView(url: category.image)
                 DSVStack(alignment: .center, spacing: .zero) {
-                    DSText(category.title, .smallHeadline)
-                    DSText(category.description, .subheadline)
+                    DSText(category.title).dsTextStyle(.smallHeadline)
+                    DSText(category.description).dsTextStyle(.subheadline)
                 }.dsPadding(.regular)
             }
             .dsSecondaryBackground()

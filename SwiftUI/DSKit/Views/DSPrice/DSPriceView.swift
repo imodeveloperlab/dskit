@@ -15,15 +15,15 @@ public struct DSPriceView: View {
     let regularAmount: String?
     let currency: String
     var discountBadge: String?
-    var textType: DSTextStyle
+    var textFont: DSTextFont
     var color: Color?
     
-    public init(price: DSPrice, size: DSTextStyle, color: Color? = nil) {
+    public init(price: DSPrice, size: DSTextFont, color: Color? = nil) {
         self.amount = price.amount
         self.currency = price.currency
         self.regularAmount = price.regularAmount
         self.discountBadge = price.discountBadge
-        self.textType = size
+        self.textFont = size
         self.color = color
     }
     
@@ -40,20 +40,24 @@ public struct DSPriceView: View {
         DSHStack(spacing: .small) {
             
             DSHStack(spacing: .zero) {
-                DSText(currency.currencySymbol, .reStyleWithColor(textType, amountColor))
-                DSText(amount, .reStyleWithColor(textType, amountColor))
+                DSText(currency.currencySymbol)
+                    .dsTextStyle(textFont, amountColor)
+                DSText(amount)
+                    .dsTextStyle(textFont, amountColor)
             }
             
             if let regularAmount = regularAmount {
                 DSHStack(spacing: .zero) {
-                    DSText(regularAmount, .reStyleWithColor(textType, amountColor)).opacity(0.5)
+                    DSText(regularAmount)
+                        .dsTextStyle(textFont, amountColor)
+                        .opacity(0.5)
                 }
                 .strikethrough()
-                
             }
             
             if let discountBadge = discountBadge {
-                DSText(discountBadge, .textFontWithColor(.fontWithSize(textType.dsTextFont, textType.size(appearance) * 0.72), .priceBadgeText))
+                DSText(discountBadge)
+                    .dsTextStyle(textFont, textFont.pointSize(for: appearance) * 0.72, .priceBadgeText)
                     .dsPadding(.horizontal, .regular)
                     .dsPadding(.vertical, .custom(2))
                     .background(appearance.price.badgeBackground.color)
@@ -74,7 +78,7 @@ struct Testable_DSPrice: View {
         DSPriceView(price: price, size: .caption1, color: .green)
         DSPriceView(price: price, size: .caption2, color: .green)
         DSPriceView(price: price, size: .footnote)
-        DSPriceView(price: price, size: .textFont(.fontWithSize(.headline, 20)))
+        DSPriceView(price: price, size: .fontWithSize(.headline, 20))
     }
 }
 

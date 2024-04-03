@@ -31,8 +31,8 @@ struct ItemDetails5: View {
                 DSVStack(spacing: .medium) {
                     DSHStack {
                         DSVStack(spacing: .zero) {
-                            DSText(viewModel.title, .title2)
-                            DSText(viewModel.subtitle, .subheadline)
+                            DSText(viewModel.title).dsTextStyle(.title2)
+                            DSText(viewModel.subtitle).dsTextStyle(.subheadline)
                         }.frame(maxWidth: .infinity, alignment: .leading)
                     }
                 }
@@ -42,21 +42,21 @@ struct ItemDetails5: View {
                     data: viewModel.sizes,
                     id: \.self, selected: $viewModel.selectedSize
                 ) { size in
-                    DSText(size, .smallHeadline)
+                    DSText(size).dsTextStyle(.smallHeadline)
                         .frame(maxWidth: .infinity)
                         .dsPadding(.horizontal)
                         .dsHeight(35)
                         .dsSecondaryBackground()
                 }
 
-                DSText(viewModel.description, .caption1)
+                DSText(viewModel.description).dsTextStyle(.caption1)
             }
         }
         .safeAreaInset(edge: .bottom) {
             DSBottomContainer {
                 
                 DSHStack {
-                    DSText("Total", .headline)
+                    DSText("Total").dsTextStyle(.headline)
                     Spacer()
                     DSPriceView(price: viewModel.price, size: .headline)
                 }

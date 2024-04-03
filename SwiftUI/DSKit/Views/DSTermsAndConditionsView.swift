@@ -17,12 +17,18 @@ public struct DSTermsAndConditions: View {
     
     public var body: some View {
         DSVStack(spacing: .small) {
-            DSText(message, .smallSubtitle).frame(maxWidth: .infinity, alignment: .center)
+            DSText(message)
+                .dsTextStyle(.smallSubtitle)
+                .frame(maxWidth: .infinity, alignment: .center)
             DSHStack(spacing: .small) {
-                DSText("Terms", .textFont(.fontWithSize(.headline, 12))).onTap { }
-                DSText("and", .smallSubtitle)
-                DSText("Privacy", .textFont(.fontWithSize(.headline, 12))).onTap { }
-                DSText("policy", .smallSubtitle)
+                DSText("Terms")
+                    .dsTextStyle(.headline, 12)
+                    .onTap { }
+                DSText("and").dsTextStyle(.smallSubtitle)
+                DSText("Privacy")
+                    .dsTextStyle(.headline, 12)
+                    .onTap { }
+                DSText("policy").dsTextStyle(.smallSubtitle)
             }.frame(maxWidth: .infinity, alignment: .center)
         }
     }

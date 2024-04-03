@@ -144,7 +144,7 @@ public struct DSButton: View {
             }
             
             if !title.isEmpty {
-                DSText(title, .textFontWithColor(.fontWithSize(.headline, 15), titleColor))
+                DSText(title).dsTextStyle(.headline, 15, titleColor)
                     .dsHeight(.large)
             }
             

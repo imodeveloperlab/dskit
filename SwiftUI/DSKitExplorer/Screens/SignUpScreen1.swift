@@ -24,7 +24,7 @@ struct SignUpScreen1: View {
                         style: .custom(color: Color(uiColor: UIColor(0x4267B2)))  
                     ) { self.dismiss() }
                     
-                    DSText("or sign up with Email", .smallSubtitle).frame(maxWidth: .infinity, alignment: .center)
+                    DSText("or sign up with Email").dsTextStyle(.smallSubtitle).frame(maxWidth: .infinity, alignment: .center)
                     
                 }.hideWhenKeyboardIsDisplayed()
                 

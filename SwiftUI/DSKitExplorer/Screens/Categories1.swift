@@ -43,8 +43,8 @@ extension Categories1 {
                 
                 DSVStack {
                     DSVStack(spacing: .zero) {
-                        DSText(category.title, .smallHeadline)
-                        DSText(category.description, .smallSubtitle)
+                        DSText(category.title).dsTextStyle(.smallHeadline)
+                        DSText(category.description).dsTextStyle(.smallSubtitle)
                     }
                 }
                 .dsPadding(category.image != nil ? .zero : .medium)

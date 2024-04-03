@@ -33,8 +33,8 @@ extension Categories5 {
                 DSVStack(alignment: .center, spacing: .zero) {
                     DSImageView(url: category.image)
                     DSVStack(alignment: .center, spacing: .zero) {
-                        DSText(category.title, .smallHeadline)
-                        DSText(category.description, .subheadline)
+                        DSText(category.title).dsTextStyle(.smallHeadline)
+                        DSText(category.description).dsTextStyle(.subheadline)
                     }.dsPadding(.regular)
                 }
                 .dsSecondaryBackground()
@@ -52,11 +52,12 @@ extension Categories5 {
                 }
                 .overlay(alignment: .topLeading) {
                     if let tag = category.tag {
-                        DSText(tag, .textFontWithColor(.fontWithSize(.headline, 10), .color(.white)))
-                        .dsPadding(.regular)
-                        .dsBlurBackground(style: .light)
-                        .dsCornerRadius()
-                        .dsPadding(.regular)
+                        DSText(tag)
+                            .dsTextStyle(.headline, 10, Color.white)
+                            .dsPadding(.regular)
+                            .dsBlurBackground(style: .light)
+                            .dsCornerRadius()
+                            .dsPadding(.regular)
                     }
                 }
             }

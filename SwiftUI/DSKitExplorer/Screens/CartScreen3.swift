@@ -49,9 +49,9 @@ extension CartScreen3 {
                 DSImageView(url: product.image, size: .size(width: 90, height: 100))
                     .dsCornerRadius()
                 DSVStack(alignment: .leading) {
-                    DSText(product.title, .smallHeadline)
+                    DSText(product.title).dsTextStyle(.smallHeadline)
                         .frame(maxWidth: .infinity, alignment: .leading)
-                    DSText(product.description, .caption2)
+                    DSText(product.description).dsTextStyle(.caption2)
                     DSPriceView(price: product.price, size: .smallHeadline)
                 }.frame(maxWidth: .infinity, alignment: .leading)
                 
@@ -80,12 +80,12 @@ extension CartScreen3 {
         let price: DSPrice
         var body: some View {
             DSHStack() {
-                DSText("Total",.headline)
+                DSText("Total").dsTextStyle(.headline)
                 Spacer()
                 DSHStack(alignment: .firstTextBaseline, spacing: .small) {
-                    DSText("for",.subheadline)
-                    DSText(itemsCount,.smallHeadline)
-                    DSText("items",.subheadline)
+                    DSText("for").dsTextStyle(.subheadline)
+                    DSText(itemsCount).dsTextStyle(.smallHeadline)
+                    DSText("items").dsTextStyle(.subheadline)
                     DSPriceView(price: price, size: .headline)
                 }
             }

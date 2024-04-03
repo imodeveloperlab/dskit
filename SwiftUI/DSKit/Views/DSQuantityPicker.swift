@@ -19,7 +19,7 @@ public struct DSQuantityPicker: View {
         
         DSHStack(spacing: .zero) {
 
-            DSText("Quantity", .smallHeadline)
+            DSText("Quantity").dsTextStyle(.smallHeadline)
 
             Spacer()
             
@@ -36,7 +36,7 @@ public struct DSQuantityPicker: View {
                         }
                     }
                 DSDivider()
-                DSText("\(quantity)", .body).dsWidth(25)
+                DSText("\(quantity)").dsTextStyle(.body).dsWidth(25)
                 DSDivider()
                 DSSFSymbolButton(name: "plus", size: .smallIcon)
                     .dsPadding(.horizontal, .regular)

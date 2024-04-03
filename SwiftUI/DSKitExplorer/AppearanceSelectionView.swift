@@ -22,10 +22,10 @@ struct AppearanceSelectionView: View {
                     
                     DSVStack(spacing: .zero) {
                         DSHStack(spacing: .small) {
-                            DSText("Welcome to", .largeHeadline)
-                            DSText("DSKit", .reStyleWithColor(.largeHeadline, .brandColor))
+                            DSText("Welcome to").dsTextStyle(.largeHeadline)
+                            DSText("DSKit").dsTextStyle(.largeHeadline, .brandColor)
                         }
-                        DSText("Please select an appearance to continue", .subheadline)
+                        DSText("Please select an appearance to continue").dsTextStyle(.subheadline)
                     }.dsPadding(.top)
                     
                     DSGrid(data: appearances, id: \.title) { appearance in
@@ -49,7 +49,7 @@ fileprivate struct AppearanceView: View {
     
     var body: some View {
         DSVStack {
-            DSText(appearance.title, .smallHeadline)
+            DSText(appearance.title).dsTextStyle(.smallHeadline)
             DSHStack(spacing: .zero) {
                 appearance.primaryView.text.headline.color
                 appearance.primaryView.text.subheadline.color

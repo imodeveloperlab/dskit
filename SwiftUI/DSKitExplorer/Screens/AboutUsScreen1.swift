@@ -19,8 +19,8 @@ struct AboutUsScreen1: View {
         ScrollView {
             DSVStack(spacing: .medium) {
                 DSVStack {
-                    DSText("Our Story", .title2)
-                    DSText("Start working with DSKit that can provide everything you need to generate any interface you need. Dummy text is text that is used in the publishing industry or by web designers to occupy the space which will later be filled with 'real' content.", .body)
+                    DSText("Our Story").dsTextStyle(.title2)
+                    DSText("Start working with DSKit that can provide everything you need to generate any interface you need. Dummy text is text that is used in the publishing industry or by web designers to occupy the space which will later be filled with 'real' content.").dsTextStyle(.body)
                 }
                 
                 DSCoverFlow(height: 250, data: imageGallery, id: \.self) { image in
@@ -30,17 +30,17 @@ struct AboutUsScreen1: View {
                 DSVStack(alignment: .leading) {
                     DSHStack {
                         DSImageView(sfSymbol: "message.fill", size: .medium, tint: .text(.body))
-                        DSText(DSFaker().text, .caption1).frame(maxWidth: .infinity, alignment: .leading)
+                        DSText(DSFaker().text).dsTextStyle(.caption1).frame(maxWidth: .infinity, alignment: .leading)
                     }
                     DSDivider().background(appearance.secondaryView.separator.color)
                     DSHStack {
                         DSImageView(sfSymbol: "shippingbox.fill", size: .medium, tint: .text(.body))
-                        DSText(DSFaker().text, .subheadline).frame(maxWidth: .infinity, alignment: .leading)
+                        DSText(DSFaker().text).dsTextStyle(.subheadline).frame(maxWidth: .infinity, alignment: .leading)
                     }
                     DSDivider().background(appearance.secondaryView.separator.color)
                     DSHStack {
                         DSImageView(sfSymbol: "leaf.arrow.triangle.circlepath", size: .medium, tint: .text(.body))
-                        DSText(DSFaker().text, .footnote).frame(maxWidth: .infinity, alignment: .leading)
+                        DSText(DSFaker().text).dsTextStyle(.footnote).frame(maxWidth: .infinity, alignment: .leading)
                     }
                 }.dsCardStyle()
             }

@@ -20,12 +20,14 @@ struct Items5: View {
                     .dsCornerRadius()
                     .overlay(alignment: .center) {
                         DSVStack(alignment: .center) {
-                            DSText("Clothing", .reStyleWithColor(.largeHeadline, .color(.black)))
-                            DSText("73.3k items", .reStyleWithColor(.smallHeadline, .color(.black)))
+                            DSText("Clothing")
+                                .dsTextStyle(.largeHeadline, Color.black)
+                            DSText("73.3k items")
+                                .dsTextStyle(.smallHeadline, Color.black)
                         }
                     }
                 DSHScroll(data: viewModel.filters, id: \.self) { title in
-                    DSText(title, .smallHeadline)
+                    DSText(title).dsTextStyle(.smallHeadline)
                         .dsPadding(.horizontal)
                         .dsCardStyle()
                         .onTap { self.dismiss() }
@@ -60,8 +62,8 @@ extension Items5 {
                 DSImageView(url: product.image)
                     .dsSecondaryBackground()
                 DSVStack(spacing: .small) {
-                    DSText(product.title, .smallHeadline)
-                    DSText(product.description, .smallSubtitle)
+                    DSText(product.title).dsTextStyle(.smallHeadline)
+                    DSText(product.description).dsTextStyle(.smallSubtitle)
                     DSPriceView(price: product.price, size: .smallHeadline)
                 }.dsPadding()
             }.overlay(alignment: .topTrailing, content: {

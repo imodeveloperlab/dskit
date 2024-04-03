@@ -26,8 +26,9 @@ struct Shipping2: View {
         }.safeAreaInset(edge: .bottom) {
             DSBottomContainer {
                 DSHStack {
-                    DSText("Next Step:", .smallHeadline)
-                    DSText("Order Info", .textFont(.fontWithSize(.subheadline, 14)))
+                    DSText("Next Step:").dsTextStyle(.smallHeadline)
+                    DSText("Order Info")
+                        .dsTextStyle(.subheadline, 14)
                 }
                 DSButton(
                     title: "Continue",
@@ -42,7 +43,7 @@ struct Shipping2: View {
     
     func section<Content: View>(with title: String, @ViewBuilder content: @escaping () -> Content) -> some View {
         DSVStack(spacing: .small) {
-            DSText(title, .smallHeadline)
+            DSText(title).dsTextStyle(.smallHeadline)
             content()
         }
         .dsPadding(.top)
@@ -58,7 +59,8 @@ extension Shipping2 {
         var body: some View {
             DSGroupedList(data: orderTotals, id: \.id) { total in
                 DSHStack {
-                    DSText(total.title, total.bold ? .smallHeadline : .smallSubtitle)
+                    DSText(total.title)
+                        .dsTextStyle(total.bold ? .smallHeadline : .smallSubtitle)
                     Spacer()
                     DSPriceView(price: total.price, size: total.bold ? .smallHeadline : .smallSubtitle)
                 }.dsHeight(25)
@@ -78,17 +80,18 @@ extension Shipping2 {
     struct ShippingMethodView: View {
         let method: Data
         var body: some View {
-            DSText(method.title, .smallHeadline)
+            DSText(method.title).dsTextStyle(.smallHeadline)
             DSVStack(spacing: .small) {
                 DSHStack(spacing: .small) {
                     DSImageView(sfSymbol: "calendar", size: 12, tint: .text(.subheadline))
-                    DSText(method.description, .smallSubtitle)
+                    DSText(method.description).dsTextStyle(.smallSubtitle)
                 }
                 if let price = method.price {
                     DSPriceView(price: .init(amount: price, currency: "$"), size: .smallHeadline)
                         .dsPadding(.top, .regular)
                 } else {
-                    DSText("Free", .reStyleWithColor(.smallHeadline, .color(.white)))
+                    DSText("Free")
+                        .dsTextStyle(.smallHeadline, .white)
                         .dsPadding(.vertical, .regular)
                         .dsPadding(.horizontal)
                         .dsBackground(.color(.green))

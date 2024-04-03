@@ -23,7 +23,7 @@ struct CartScreen5: View {
         }
         .safeAreaInset(edge: .bottom) {
             DSBottomContainer {
-                DSText("You may also like", .smallSubtitle)
+                DSText("You may also like").dsTextStyle(.smallSubtitle)
                 DSHScroll(data: viewModel.suggestedProducts, id: \.id) { product in
                     SuggestedProductView(product: product)
                 }
@@ -60,16 +60,16 @@ extension CartScreen5 {
                 }.dsCornerRadius()
                 
                 DSVStack(alignment: .leading, spacing: .small) {
-                    DSText(product.title, .smallHeadline)
+                    DSText(product.title).dsTextStyle(.smallHeadline)
                     DSHStack {
-                        DSText("Color:", .smallSubtitle)
-                        DSText(product.color, .smallHeadline)
-                        DSText("Size:", .smallSubtitle)
-                        DSText(product.size, .smallHeadline)
+                        DSText("Color:").dsTextStyle(.smallSubtitle)
+                        DSText(product.color).dsTextStyle(.smallHeadline)
+                        DSText("Size:").dsTextStyle(.smallSubtitle)
+                        DSText(product.size).dsTextStyle(.smallHeadline)
                     }
                     DSHStack {
                         DSImageView(sfSymbol: "star.fill", size: .smallIcon, tint: .color(Color.yellow))
-                        DSText("3k Reviews", .caption1)
+                        DSText("3k Reviews").dsTextStyle(.caption1)
                     }
                     DSPriceView(price: product.price, size: .smallHeadline)
                     
@@ -103,12 +103,12 @@ extension CartScreen5 {
         let price: DSPrice
         var body: some View {
             DSHStack() {
-                DSText("Total", .headline)
+                DSText("Total").dsTextStyle(.headline)
                 Spacer()
                 DSHStack(alignment: .firstTextBaseline, spacing: .small) {
-                    DSText("for", .subheadline)
-                    DSText(itemsCount,.smallHeadline)
-                    DSText("items",.subheadline)
+                    DSText("for").dsTextStyle(.subheadline)
+                    DSText(itemsCount).dsTextStyle(.smallHeadline)
+                    DSText("items").dsTextStyle(.subheadline)
                     DSPriceView(price: price, size: .headline)
                 }
             }
@@ -120,7 +120,7 @@ extension CartScreen5 {
     struct TagView: View {
         let tag: String
         var body: some View {
-            DSText(tag, .textFont(.fontWithSize(.headline, 9)))
+            DSText(tag).dsTextStyle(.headline, 9)
                 .dsPadding(.horizontal, .regular)
                 .dsPadding(.vertical, .small)
                 .dsBackground(.primary)
@@ -138,7 +138,8 @@ extension CartScreen5 {
                 DSImageView(url: product.image, size: .size(width: 60, height: 40))
                     .dsCornerRadius()
                 DSVStack(alignment: .leading, spacing: .small) {
-                    DSText(product.title, .smallHeadline, multilineTextAlignment: .leading)
+                    DSText(product.title, multilineTextAlignment: .leading)
+                        .dsTextStyle(.smallHeadline)
                     DSPriceView(price: product.price, size: .smallHeadline)
                 }
             }

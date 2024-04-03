@@ -17,7 +17,7 @@ public struct DSSectionStyleModifier: ViewModifier {
     
     public func body(content: Content) -> some View {
         DSVStack(spacing: .small) {
-            DSText(title, .smallHeadline)
+            DSText(title).dsTextStyle(.smallHeadline)
             content
         }.dsPadding(.top)
     }

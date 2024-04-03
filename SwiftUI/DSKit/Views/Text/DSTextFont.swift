@@ -24,6 +24,9 @@ public indirect enum DSTextFont: Equatable, Hashable {
     case footnote
     case custom(UIFont)
     case fontWithSize(DSTextFont, CGFloat)
+    case smallHeadline
+    case smallSubtitle
+    case largeHeadline
     
     public func pointSize(for appearance: DSAppearance) -> CGFloat {
         uiFont(for: appearance).pointSize
@@ -61,6 +64,12 @@ public indirect enum DSTextFont: Equatable, Hashable {
             customFont
         case .fontWithSize(let font, let size):
             font.uiFont(for: appearance).withSize(size)
+        case .smallHeadline:
+            appearance.fonts.headline.withSize(14)
+        case .smallSubtitle:
+            appearance.fonts.subheadline.withSize(12)
+        case .largeHeadline:
+            appearance.fonts.headline.withSize(30)
         }
     }
     
@@ -92,6 +101,12 @@ public indirect enum DSTextFont: Equatable, Hashable {
             UIColor.black
         case .fontWithSize(let font, _):
             font.color(for: textColors)
+        case .smallHeadline:
+            textColors.headline
+        case .smallSubtitle:
+            textColors.subheadline
+        case .largeHeadline:
+            textColors.headline
         }
     }
 }

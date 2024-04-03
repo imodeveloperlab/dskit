@@ -28,7 +28,7 @@ struct Filters3: View {
                     id: \.self,
                     selected: $viewModel.selectedSize
                 ) { size in
-                    DSText(size, .smallHeadline)
+                    DSText(size).dsTextStyle(.smallHeadline)
                         .frame(maxWidth: .infinity)
                         .dsSize(44)
                         .dsSecondaryBackground()
@@ -67,9 +67,9 @@ extension Filters3 {
         let option: String
         var body: some View {
             DSHStack {
-                DSText(title, .smallHeadline)
+                DSText(title).dsTextStyle(.smallHeadline)
                 Spacer()
-                DSText(option, .textFont(.fontWithSize(.subheadline, 14)))
+                DSText(option).dsTextStyle(.subheadline, 14)
                 DSChevronView()
             }.dsCardStyle()
         }
@@ -84,7 +84,7 @@ extension Filters3 {
 
         var body: some View {
             DSHStack {
-                DSText(title, .smallHeadline)
+                DSText(title).dsTextStyle(.smallHeadline)
                 Spacer()
                 Toggle("Show welcome message", isOn: $isSwitchOn)
                     .tint(appearance.brandColor.semanticGreenColor.color)
@@ -102,10 +102,10 @@ extension Filters3 {
 
         var body: some View {
             DSHStack {
-                DSText(title, .smallHeadline)
+                DSText(title).dsTextStyle(.smallHeadline)
                 Spacer()
                 Slider(value: $value, in: 0...100).tint(appearance.brandColor.semanticGreenColor.color)
-                DSText("\(round(value))", .subheadline)
+                DSText("\(round(value))").dsTextStyle(.subheadline)
                     .dsWidth(40)
             }.dsCardStyle()
         }

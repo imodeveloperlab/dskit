@@ -56,8 +56,8 @@ extension CartScreen1 {
                     .dsCornerRadius()
                 
                 DSVStack(spacing: .small) {
-                    DSText(product.title, .smallHeadline)
-                    DSText(product.description, .smallSubtitle)
+                    DSText(product.title).dsTextStyle(.smallHeadline)
+                    DSText(product.description).dsTextStyle(.smallSubtitle)
                     DSRatingView(rating: product.rating, size: 10)
                     DSPriceView(price: product.price, size: .smallHeadline).dsPadding(.top, .regular)
                 }.frame(maxWidth: .infinity, alignment: .leading)
@@ -87,12 +87,12 @@ extension CartScreen1 {
         let price: DSPrice
         var body: some View {
             DSHStack() {
-                DSText("Total",.headline)
+                DSText("Total").dsTextStyle(.headline)
                 Spacer()
                 DSHStack(alignment: .firstTextBaseline, spacing: .small) {
-                    DSText("for", .subheadline)
-                    DSText(itemsCount, .smallHeadline)
-                    DSText("items", .subheadline)
+                    DSText("for").dsTextStyle(.subheadline)
+                    DSText(itemsCount).dsTextStyle(.smallHeadline)
+                    DSText("items").dsTextStyle(.subheadline)
                     DSPriceView(price: price, size: .headline)
                 }
             }

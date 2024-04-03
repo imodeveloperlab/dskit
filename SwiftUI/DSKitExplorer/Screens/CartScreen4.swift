@@ -51,7 +51,7 @@ extension CartScreen4 {
                         DSImageView(url: product.image, size: .size(width: 100, height: 100))
                             .overlay(alignment: .bottomLeading) {
                                 if let tag = product.tag {
-                                    DSText(tag, .textFont(.fontWithSize(.headline, 9)))
+                                    DSText(tag).dsTextStyle(.headline, 9)
                                         .dsPadding(.small)
                                         .dsBackground(.primary)
                                         .dsCornerRadius()
@@ -61,12 +61,12 @@ extension CartScreen4 {
                     }.dsCornerRadius()
                     
                     DSVStack(alignment: .leading) {
-                        DSText(product.title, .smallHeadline)
+                        DSText(product.title).dsTextStyle(.smallHeadline)
                         DSHStack {
-                            DSText("Color:", .subheadline)
+                            DSText("Color:").dsTextStyle(.subheadline)
                             product.color.dsSize(.smallIcon).dsCornerRadius()
-                            DSText("Size:", .subheadline)
-                            DSText(product.size, .smallHeadline)
+                            DSText("Size:").dsTextStyle(.subheadline)
+                            DSText(product.size).dsTextStyle(.smallHeadline)
                         }
                         DSPriceView(price: product.price, size: .smallHeadline)
                     }.frame(maxWidth: .infinity, alignment: .leading)
@@ -100,12 +100,12 @@ extension CartScreen4 {
         let price: DSPrice
         var body: some View {
             DSHStack() {
-                DSText("Total",.headline)
+                DSText("Total").dsTextStyle(.headline)
                 Spacer()
                 DSHStack(alignment: .firstTextBaseline, spacing: .small) {
-                    DSText("for", .subheadline)
-                    DSText(itemsCount, .smallHeadline)
-                    DSText("items", .subheadline)
+                    DSText("for").dsTextStyle(.subheadline)
+                    DSText(itemsCount).dsTextStyle(.smallHeadline)
+                    DSText("items").dsTextStyle(.subheadline)
                     DSPriceView(price: price, size: .subheadline)
                 }
             }

@@ -22,8 +22,8 @@ struct ItemDetails1: View {
                 }
                 
                 DSVStack(spacing: .zero) {
-                    DSText(viewModel.title, .title2)
-                    DSText(viewModel.subtitle, .subheadline)
+                    DSText(viewModel.title).dsTextStyle(.title2)
+                    DSText(viewModel.subtitle).dsTextStyle(.subheadline)
                 }
                 
                 DSPriceView(price: viewModel.price, size: .headline)
@@ -35,7 +35,7 @@ struct ItemDetails1: View {
                     SelectColorView(title: "Color", selection: .yellow, label: "Yellow").onTap { }
                 }
                 
-                DSText(viewModel.description, .caption1)
+                DSText(viewModel.description).dsTextStyle(.caption1)
             }
         }
         .safeAreaInset(edge: .bottom) {
@@ -43,7 +43,9 @@ struct ItemDetails1: View {
                 DSButton(title: "Add to cart", rightSFSymbolName: "cart.fill") {
                     dismiss()
                 }
-                DSText(viewModel.priceDisclaimer, .caption2, multilineTextAlignment: .center).dsPadding(.horizontal)
+                DSText(viewModel.priceDisclaimer, multilineTextAlignment: .center)
+                    .dsTextStyle(.caption2)
+                    .dsPadding(.horizontal)
             }
         }
         .toolbar {
@@ -66,9 +68,9 @@ extension ItemDetails1 {
         let selection: String
         var body: some View {
             DSHStack {
-                DSText(title, .smallHeadline)
+                DSText(title).dsTextStyle(.smallHeadline)
                 Spacer()
-                DSText(selection, .smallSubtitle)
+                DSText(selection).dsTextStyle(.smallSubtitle)
                 DSChevronView()
             }
             .dsHeight(40)
@@ -84,9 +86,9 @@ extension ItemDetails1 {
         let label: String
         var body: some View {
             DSHStack {
-                DSText(title, .smallHeadline)
+                DSText(title).dsTextStyle(.smallHeadline)
                 Spacer()
-                DSText(label, .smallSubtitle)
+                DSText(label).dsTextStyle(.smallSubtitle)
                 selection
                     .dsSize(20)
                     .dsCornerRadius()

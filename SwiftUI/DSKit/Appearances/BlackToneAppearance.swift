@@ -11,7 +11,6 @@ import UIKit
 public class BlackToneAppearance: DSAppearance {
     
     public var title: String
-    public var darkModeSupport: Bool = false
     public var brandColor: UIColor
     public var primaryView: DSViewAppearanceProtocol
     public var secondaryView: DSViewAppearanceProtocol
@@ -23,8 +22,6 @@ public class BlackToneAppearance: DSAppearance {
     public var price: DSPriceAppearanceProtocol
     public var fonts: DSFontsProtocol = DSFonts()
     public var actionElementHeight: CGFloat = 44
-    public var statusBarStyleForDarkUserInterfaceStyle: UIStatusBarStyle = .darkContent
-    public var statusBarStyleForLightUserInterfaceStyle: UIStatusBarStyle = .darkContent
     
     /// Init system appearance with brand color, or primary color of your app
     /// - Parameter primaryBrandColor: UIColor

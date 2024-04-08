@@ -11,7 +11,6 @@ import UIKit
 public final class RetroAppearance: DSAppearance {
     
     public var title: String
-    public var darkModeSupport: Bool = true
     public var brandColor: UIColor
     public var primaryView: DSViewAppearanceProtocol
     public var secondaryView: DSViewAppearanceProtocol
@@ -26,8 +25,6 @@ public final class RetroAppearance: DSAppearance {
     public var price: DSPriceAppearanceProtocol
     public var fonts: DSFontsProtocol = DSFonts()
     public var actionElementHeight: CGFloat = 45
-    public var statusBarStyleForDarkUserInterfaceStyle: UIStatusBarStyle = .lightContent
-    public var statusBarStyleForLightUserInterfaceStyle: UIStatusBarStyle = .darkContent
     
     /// Init system appearance with brand color, or primary color of your app
     /// - Parameter primaryBrandColor: UIColor

@@ -25,8 +25,6 @@ public protocol DSAppearance {
     var brandColor: UIColor { get set }
     var primaryView: DSViewAppearanceProtocol { get set }
     var secondaryView: DSViewAppearanceProtocol { get set }
-    var statusBarStyleForDarkUserInterfaceStyle: UIStatusBarStyle { get set }
-    var statusBarStyleForLightUserInterfaceStyle: UIStatusBarStyle { get set }
     var spacing: DSSpacingProtocol { get set }
     var padding: DPaddingsProtocol { get set }
     var dimension: DSDimensionProtocol { get set }
@@ -35,27 +33,7 @@ public protocol DSAppearance {
     var price: DSPriceAppearanceProtocol { get set }
     var fonts: DSFontsProtocol { get set }
     var actionElementHeight: CGFloat { get set }
-    var darkModeSupport: Bool { get }
     func style(for viewStyle: DSViewStyle) -> DSViewAppearanceProtocol
-}
-
-public extension DSAppearance {
-    
-    /// Get status bar for user interface style
-    /// - Parameter style: UIUserInterfaceStyle
-    /// - Returns: UIStatusBarStyle
-    func statusBarStyle(for style: UIUserInterfaceStyle) -> UIStatusBarStyle {
-        switch style {
-        case .dark:
-            statusBarStyleForDarkUserInterfaceStyle
-        case .light:
-            statusBarStyleForLightUserInterfaceStyle
-        case .unspecified:
-            statusBarStyleForLightUserInterfaceStyle
-        @unknown default:
-            statusBarStyleForLightUserInterfaceStyle
-        }
-    }
 }
 
 public extension DSAppearance {

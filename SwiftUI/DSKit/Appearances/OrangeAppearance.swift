@@ -11,7 +11,6 @@ import UIKit
 public class OrangeAppearance: DSAppearance {
     
     public var title: String
-    public var darkModeSupport: Bool = false
     public var brandColor: UIColor
     public var primaryView: DSViewAppearanceProtocol
     public var secondaryView: DSViewAppearanceProtocol
@@ -26,8 +25,6 @@ public class OrangeAppearance: DSAppearance {
     public var price: DSPriceAppearanceProtocol
     public var fonts: DSFontsProtocol = DSFonts()
     public var actionElementHeight: CGFloat = 48
-    public var statusBarStyleForDarkUserInterfaceStyle: UIStatusBarStyle = .darkContent
-    public var statusBarStyleForLightUserInterfaceStyle: UIStatusBarStyle = .darkContent
     
     
     public init(brandColor: UIColor? = nil, title: String = "Orange") {

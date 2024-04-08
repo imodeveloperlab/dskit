@@ -11,7 +11,6 @@ import UIKit
 public class DarkLightAppearance: DSAppearance {
     
     public var title: String
-    public var darkModeSupport: Bool = true
     public var brandColor: UIColor
     public var primaryView: DSViewAppearanceProtocol
     public var secondaryView: DSViewAppearanceProtocol
@@ -24,8 +23,6 @@ public class DarkLightAppearance: DSAppearance {
     public var price: DSPriceAppearanceProtocol
     public var fonts: DSFontsProtocol = DSFonts()
     public var actionElementHeight: CGFloat = 48
-    public var statusBarStyleForDarkUserInterfaceStyle: UIStatusBarStyle = .lightContent
-    public var statusBarStyleForLightUserInterfaceStyle: UIStatusBarStyle = .darkContent
     
     /// Init DSKit appearance with specific brand color
     /// - Parameter brandColor: UIColor

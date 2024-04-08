@@ -57,7 +57,7 @@ public struct DSImageView: View {
     public init(
         named: String,
         displayShape: DSDisplayShape = .none,
-        size: DSSize,
+        size: DSSize = .fillUpTheSpace,
         tintColor: DSColor? = nil,
         contentMode: DSContentMode = .scaleAspectFill
     ) {

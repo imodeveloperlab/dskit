@@ -52,7 +52,7 @@ extension HomeScreen4 {
         let product: Product
         var body: some View {
             DSVStack(spacing: .zero) {
-                DSImageView(uiImage: UIImage(named: product.image))
+                DSImageView(named: product.image)
                 DSVStack(spacing: .zero) {
                     DSText(product.title).dsTextStyle(.smallHeadline)
                     DSText(product.description).dsTextStyle(.smallSubtitle)

@@ -18,7 +18,7 @@ public extension DSTextField {
             textContentType: .emailAddress,
             autocapitalizationType: .none,
             validationPattern: "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}",
-            leftSFSymbolName: "envelope.fill",
+            keftSystemName: "envelope.fill",
             validateMinimumLength: 5,
             validateMaximumLength: 250,
             validateEmptyTextField: false
@@ -46,7 +46,7 @@ public extension DSTextField {
             textContentType: .telephoneNumber,
             autocapitalizationType: .none,
             validationPattern: customValidationPattern ?? "^\\s*(?:\\+?(\\d{1,3}))?([-. (]*(\\d{3})[-. )]*)?((\\d{3})[-. ]*(\\d{2,4})(?:[-.x ]*(\\d+))?)\\s*$",
-            leftSFSymbolName: "phone.fill",
+            keftSystemName: "phone.fill",
             validateMinimumLength: 5,
             validateMaximumLength: 35,
             validateEmptyTextField: false
@@ -74,7 +74,7 @@ public extension DSTextField {
             textContentType: .oneTimeCode,
             autocapitalizationType: .none,
             validationPattern: customValidationPattern ?? "^[a-zA-Z0-9]*$",
-            leftSFSymbolName: "lock",
+            keftSystemName: "lock",
             validateMinimumLength: 4,
             validateMaximumLength: 10,
             validateEmptyTextField: false
@@ -102,7 +102,7 @@ public extension DSTextField {
             textContentType: .password,
             autocapitalizationType: .none,
             validationPattern: customValidationPattern ?? "",
-            leftSFSymbolName: "lock.fill",
+            keftSystemName: "lock.fill",
             validateMinimumLength: 8,
             validateMaximumLength: 14,
             validateEmptyTextField: false
@@ -130,7 +130,7 @@ public extension DSTextField {
             textContentType: .newPassword,
             autocapitalizationType: .none,
             validationPattern: customValidationPattern ?? "",
-            leftSFSymbolName: "lock.fill",
+            keftSystemName: "lock.fill",
             validateMinimumLength: 8,
             validateMaximumLength: 14,
             validateEmptyTextField: false
@@ -159,7 +159,7 @@ public extension DSTextField {
             textContentType: .name,
             autocapitalizationType: .words,
             validationPattern: customValidationPattern ?? "^[\\u0600-\\u06FFa-zA-Z\\s\\'\\-]*$",
-            leftSFSymbolName: "person.crop.circle",
+            keftSystemName: "person.crop.circle",
             validateMinimumLength: 3,
             validateMaximumLength: 35,
             validateEmptyTextField: false
@@ -188,7 +188,7 @@ public extension DSTextField {
             textContentType: .givenName,
             autocapitalizationType: .words,
             validationPattern: customValidationPattern ?? "^[\\u0600-\\u06FFa-zA-Z\\s\\'\\-]*$",
-            leftSFSymbolName: "person.crop.circle",
+            keftSystemName: "person.crop.circle",
             validateMinimumLength: 3,
             validateMaximumLength: 35,
             validateEmptyTextField: false
@@ -217,7 +217,7 @@ public extension DSTextField {
             textContentType: .familyName,
             autocapitalizationType: .words,
             validationPattern: customValidationPattern ?? "^[\\u0600-\\u06FFa-zA-Z\\s\\'\\-]*$",
-            leftSFSymbolName: "person.crop.circle",
+            keftSystemName: "person.crop.circle",
             validateMinimumLength: 3,
             validateMaximumLength: 35,
             validateEmptyTextField: false
@@ -245,7 +245,7 @@ public extension DSTextField {
             textContentType: nil, // Adjust if there's a more appropriate content type for numbers
             autocapitalizationType: .none,
             validationPattern: customValidationPattern ?? "^[0-9]*$",
-            leftSFSymbolName: "number.circle",
+            keftSystemName: "number.circle",
             validateMinimumLength: 3,
             validateMaximumLength: 35,
             validateEmptyTextField: false
@@ -273,7 +273,7 @@ public extension DSTextField {
             textContentType: .fullStreetAddress,
             autocapitalizationType: .words,
             validationPattern: customValidationPattern ?? "^[\\u0600-\\u06FFa-zA-Z0-9\\s\\'\\-]*$",
-            leftSFSymbolName: "house",
+            keftSystemName: "house",
             validateMinimumLength: 3,
             validateMaximumLength: 250,
             validateEmptyTextField: false
@@ -298,7 +298,7 @@ public extension DSTextField {
             textContentType: .none, // Adjust as needed
             autocapitalizationType: .sentences,
             validationPattern: "", // No specific validation pattern
-            leftSFSymbolName: "magnifyingglass",
+            keftSystemName: "magnifyingglass",
             validateMinimumLength: 0,
             validateMaximumLength: 200,
             validateEmptyTextField: true // Adjust based on whether empty search is allowed
@@ -326,7 +326,7 @@ public extension DSTextField {
             textContentType: .streetAddressLine1,
             autocapitalizationType: .words,
             validationPattern: customValidationPattern ?? "^[\\u0600-\\u06FFa-zA-Z0-9\\s\\'\\-]*$",
-            leftSFSymbolName: "house",
+            keftSystemName: "house",
             validateMinimumLength: 3,
             validateMaximumLength: 250,
             validateEmptyTextField: false
@@ -354,7 +354,7 @@ public extension DSTextField {
             textContentType: .streetAddressLine2,
             autocapitalizationType: .words,
             validationPattern: customValidationPattern ?? "^[\\u0600-\\u06FFa-zA-Z0-9\\s\\'\\-]*$",
-            leftSFSymbolName: "house",
+            keftSystemName: "house",
             validateMinimumLength: 3,
             validateMaximumLength: 250,
             validateEmptyTextField: false
@@ -382,7 +382,7 @@ public extension DSTextField {
             textContentType: .addressState,
             autocapitalizationType: .words,
             validationPattern: customValidationPattern ?? "^[\\u0600-\\u06FFa-zA-Z0-9\\s\\'\\-]*$",
-            leftSFSymbolName: "network",
+            keftSystemName: "network",
             validateMinimumLength: 3,
             validateMaximumLength: 250,
             validateEmptyTextField: false
@@ -410,7 +410,7 @@ public extension DSTextField {
             textContentType: .addressCity,
             autocapitalizationType: .words,
             validationPattern: customValidationPattern ?? "^[\\u0600-\\u06FFa-zA-Z0-9\\s\\'\\-]*$",
-            leftSFSymbolName: "building.2",
+            keftSystemName: "building.2",
             validateMinimumLength: 3,
             validateMaximumLength: 250,
             validateEmptyTextField: false
@@ -438,7 +438,7 @@ public extension DSTextField {
             textContentType: .addressCityAndState,
             autocapitalizationType: .words,
             validationPattern: customValidationPattern ?? "^[\\u0600-\\u06FFa-zA-Z0-9\\s\\'\\-]*$",
-            leftSFSymbolName: "house",
+            keftSystemName: "house",
             validateMinimumLength: 3,
             validateMaximumLength: 250,
             validateEmptyTextField: false

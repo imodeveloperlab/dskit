@@ -62,7 +62,7 @@ extension CartScreen2 {
                 .overlay(alignment: .trailing, content: {
                     DSButton(
                         title: "Remove",
-                        rightImage: DSImage(sfSymbolName: "trash", size: .smallIcon),
+                        rightSystemName: "trash",
                         style: .clear,
                         maxWidth: false,
                         action: { }

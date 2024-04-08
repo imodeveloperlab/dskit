@@ -14,7 +14,7 @@ public struct DSWidthModifier: ViewModifier {
     @Environment(\.appearance) var appearance: DSAppearance
     
     public func body(content: Content) -> some View {
-        content.frame(width: appearance.dimension.value(for: width))
+        content.frame(width: appearance.dimension.value(for: width, appearance: appearance))
     }
 }
 
@@ -27,12 +27,6 @@ public extension View {
 struct DSWidthModifier_Previews: PreviewProvider {
     static var previews: some View {
         DSPreviewForEachAppearance { DSPreview {
-                Color.blue
-                    .dsWidth(.medium)
-                
-                Color.blue
-                    .dsWidth(.large)
-                
                 Color.blue
                     .dsWidth(100)
                 

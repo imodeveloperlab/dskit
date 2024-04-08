@@ -65,8 +65,8 @@ extension Items1 {
                     }
                 }.overlay(alignment: .topTrailing) {
                     DSImageView(
-                        sfSymbol: "heart.fill",
-                        size: .regular,
+                        systemName: "heart.fill",
+                        size: .font(.subheadline),
                         tint: .color(product.favourite ? .red : .white)
                     )
                     .dsPadding(.regular)

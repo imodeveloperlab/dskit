@@ -7,7 +7,7 @@
 
 public extension DSSize {
     static var smallIcon: DSSize {
-        15
+        16
     }
     
     static var mediumIcon: DSSize {

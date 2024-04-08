@@ -12,8 +12,8 @@ public struct DSChevronView: View {
     public init() { }
 
     public var body: some View {
-        DSImageView(sfSymbol: "chevron.right", size: .unspecified, tint: .secondaryView(.text(.font(.headline))))
-            .dsHeight(.medium)
+        DSImageView(systemName: "chevron.right", size: .unspecified, tint: .secondaryView(.text(.font(.headline))))
+            .dsHeight(14)
             .opacity(0.5)
     }
 }

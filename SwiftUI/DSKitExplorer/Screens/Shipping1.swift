@@ -21,7 +21,7 @@ struct Shipping1: View {
                 }
                 DSButton(
                     title: "Add new address",
-                    rightSFSymbolName: "plus.circle",
+                    rightSystemName: "plus.circle",
                     style: .light, action: { dismiss() }
                 )
             }
@@ -34,7 +34,7 @@ struct Shipping1: View {
                 }
                 DSButton(
                     title: "Continue",
-                    rightSFSymbolName: "arrow.right",
+                    rightSystemName: "arrow.right",
                     pushContentToSides: true,
                     style: .default,
                     action: { }
@@ -54,7 +54,7 @@ extension Shipping1 {
             DSVStack(spacing: .small) {
                 DSText(address.address).dsTextStyle(.smallHeadline)
                 DSHStack(spacing: .small) {
-                    DSImageView(sfSymbol: "phone", size: 12, tint: .text(.subheadline))
+                    DSImageView(systemName: "phone", size: 12, tint: .text(.subheadline))
                     DSText(address.phone).dsTextStyle(.smallSubtitle)
                 }
             }

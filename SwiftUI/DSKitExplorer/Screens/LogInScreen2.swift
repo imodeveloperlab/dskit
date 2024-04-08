@@ -17,7 +17,7 @@ struct LogInScreen2: View {
             Spacer()
             
             DSImageView(
-                sfSymbol: "square.3.layers.3d.top.filled",
+                systemName: "square.3.layers.3d.top.filled",
                 size: 50,
                 tint: .text(.headline)
             )
@@ -35,7 +35,7 @@ struct LogInScreen2: View {
             DSText("Use Facebook to find friends").dsTextStyle(.smallSubtitle)
             DSButton(
                 title: "Login with facebook",
-                rightImage: DSImage(uiImageName: "facebook", size: .smallIcon),
+                rightImageNamed: "facebook",
                 pushContentToSides: true,
                 style: .custom(color: Color(uiColor: UIColor(0x4267B2)))
             ) {

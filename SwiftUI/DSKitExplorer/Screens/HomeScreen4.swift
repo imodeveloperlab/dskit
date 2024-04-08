@@ -114,7 +114,7 @@ extension HomeScreen4 {
                         DSText(youHave).dsTextStyle(.subheadline)
                         DSText(numberOfItemsInCart)
                             .dsTextStyle(.headline, 12, .primaryView(.background))
-                            .dsSize(.medium)
+                            .dsSize(20)
                             .dsBackground(.brandColor)
                             .clipShape(Circle())
                         DSText(itemsInYourCart).dsTextStyle(.subheadline)

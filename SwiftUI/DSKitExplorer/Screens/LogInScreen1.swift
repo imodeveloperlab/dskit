@@ -47,7 +47,7 @@ public struct LogInScreen1: View {
             
             DSButton(
                 title: "Sign Up",
-                rightSFSymbolName: "chevron.right",
+                rightSystemName: "chevron.right",
                 pushContentToSides: true,
                 style: .light
             ) { self.dismiss() }

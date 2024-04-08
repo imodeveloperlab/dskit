@@ -14,7 +14,7 @@ public struct DSHeightModifier: ViewModifier {
     @Environment(\.appearance) var appearance: DSAppearance
     
     public func body(content: Content) -> some View {
-        content.frame(height: appearance.dimension.value(for: height))
+        content.frame(height: appearance.dimension.value(for: height, appearance: appearance))
     }
 }
 
@@ -27,11 +27,6 @@ public extension View {
 struct DSHeightModifier_Previews: PreviewProvider {
     static var previews: some View {
         DSPreviewForEachAppearance { DSPreview {
-                Color.blue
-                    .dsHeight(.medium)
-                
-                Color.blue
-                    .dsHeight(.large)
                 
                 Color.blue
                     .dsHeight(100)

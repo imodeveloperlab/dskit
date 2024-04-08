@@ -29,17 +29,17 @@ struct AboutUsScreen1: View {
                 
                 DSVStack(alignment: .leading) {
                     DSHStack {
-                        DSImageView(sfSymbol: "message.fill", size: .medium, tint: .text(.body))
+                        DSImageView(systemName: "message.fill", size: .font(.headline), tint: .text(.body))
                         DSText(DSFaker().text).dsTextStyle(.caption1).frame(maxWidth: .infinity, alignment: .leading)
                     }
                     DSDivider().background(appearance.secondaryView.separator.color)
                     DSHStack {
-                        DSImageView(sfSymbol: "shippingbox.fill", size: .medium, tint: .text(.body))
+                        DSImageView(systemName: "shippingbox.fill", size: .font(.headline), tint: .text(.body))
                         DSText(DSFaker().text).dsTextStyle(.subheadline).frame(maxWidth: .infinity, alignment: .leading)
                     }
                     DSDivider().background(appearance.secondaryView.separator.color)
                     DSHStack {
-                        DSImageView(sfSymbol: "leaf.arrow.triangle.circlepath", size: .medium, tint: .text(.body))
+                        DSImageView(systemName: "leaf.arrow.triangle.circlepath", size: .font(.headline), tint: .text(.body))
                         DSText(DSFaker().text).dsTextStyle(.footnote).frame(maxWidth: .infinity, alignment: .leading)
                     }
                 }.dsCardStyle()

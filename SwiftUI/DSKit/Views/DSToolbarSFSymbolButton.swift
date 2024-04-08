@@ -20,7 +20,7 @@ public struct DSToolbarSFSymbolButton: View, DSDesignable {
     
     public var body: some View {
         DSImageView(
-            sfSymbol: name,
+            systemName: name,
             size: .mediumIcon,
             tint: .navigationBarButton
         )

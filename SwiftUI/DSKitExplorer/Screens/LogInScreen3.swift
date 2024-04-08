@@ -19,8 +19,8 @@ struct LogInScreen3: View {
             
             DSVStack(alignment: .center, spacing: .medium) {
                 DSImageView(
-                    sfSymbol: "square.3.layers.3d.top.filled",
-                    size: 50,
+                    systemName: "square.3.layers.3d.top.filled",
+                    size: 60,
                     tint: .text(.headline)
                 )
                 DSText(
@@ -28,8 +28,8 @@ struct LogInScreen3: View {
                     multilineTextAlignment: .center
                 )
                 .dsTextStyle(.subheadline)
-                .dsPadding(.horizontal, .large)
-            }
+                .dsWidth(300)
+            }.frame(maxWidth: .infinity)
             
            Spacer()
            Spacer()
@@ -42,7 +42,7 @@ struct LogInScreen3: View {
                 DSHStack {
                     DSButton(
                         title: "Facebook",
-                        rightImage: DSImage(uiImageName: "facebook", size: .smallIcon),
+                        rightImageNamed: "facebook",
                         pushContentToSides: true,
                         style: .custom(color: Color(uiColor: UIColor(0x4267B2)))
                     ) {
@@ -51,7 +51,7 @@ struct LogInScreen3: View {
                     
                     DSButton(
                         title: "Google",
-                        rightImage: DSImage(uiImageName: "google", size: .smallIcon),
+                        rightImageNamed: "google",
                         pushContentToSides: true,
                         style: .custom(color: Color(uiColor: UIColor(0x4285F4)))
                     ) {
@@ -60,12 +60,8 @@ struct LogInScreen3: View {
                 }
                 
                 DSText("or sign up with Email").dsTextStyle(.subheadline)
-                DSButton(
-                    title: "Sign Up",
-                    rightImage: DSImage(sfSymbolName: "envelope.fill", size: .smallIcon),
-                    pushContentToSides: true,
-                    style: .light
-                ) {
+                
+                DSButton(title: "Sign Up", rightSystemName: "envelope.fill", pushContentToSides: true, style: .light) {
                     self.dismiss()
                 }
             

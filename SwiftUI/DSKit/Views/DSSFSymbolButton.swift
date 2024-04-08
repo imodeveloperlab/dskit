@@ -22,7 +22,7 @@ public struct DSSFSymbolButton: View, DSDesignable {
     
     public var body: some View {
         DSImageView(
-            sfSymbol: name,
+            systemName: name,
             size: size,
             tint: .viewStyleAndColor(viewStyle, .buttonBackground)
         )

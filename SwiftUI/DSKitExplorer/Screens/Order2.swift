@@ -29,7 +29,7 @@ struct Order2: View {
                     
                     DSButton(
                         title: "Add Promo Code",
-                        rightImage: DSImage(sfSymbolName: "tag.fill", size: .regular),
+                        rightSystemName: "tag.fill",
                         style: .light
                     ) {}
                 }.dsSectionStyle(title: "Promo Codes")
@@ -42,7 +42,7 @@ struct Order2: View {
             DSBottomContainer {
                 DSButton(
                     title: "Confirm Order",
-                    rightImage: DSImage(sfSymbolName: "checkmark.circle.fill", size: .medium)
+                    rightSystemName: "checkmark.circle.fill"
                 ) {
                     dismiss()
                 }
@@ -73,7 +73,7 @@ extension Order2 {
         let card: Data
         var body: some View {
             DSVStack(alignment: .center) {
-                DSImageView(sfSymbol: card.icon, size: 28, tint: .viewColor(.buttonBackground))
+                DSImageView(systemName: card.icon, size: 28, tint: .viewColor(.buttonBackground))
                 DSVStack(alignment: .center) {
                     DSText(card.title)
                         .dsTextStyle(.headline, .viewColor(.buttonBackground))

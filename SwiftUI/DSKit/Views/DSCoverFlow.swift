@@ -65,7 +65,7 @@ public struct DSCoverFlow<Data, ID, Content>: View where Data: RandomAccessColle
                     .dsSize(7)
                     .opacity(currentElementID == element ? 1 : 0.1)
             }
-        }.dsHeight(.regular)
+        }.dsHeight(7)
     }
 }
 

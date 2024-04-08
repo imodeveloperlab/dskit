@@ -63,16 +63,16 @@ extension Items8 {
                 
             }.overlay(alignment: .topLeading) {
                 DSImageView(
-                    sfSymbol: "heart.fill",
-                    size: .regular,
+                    systemName: "heart.fill",
+                    size: .font(.subheadline),
                     tint: .color(product.favorite ? .red : .white)
                 )
                 .dsPadding(.regular)
             }
             .overlay(alignment: .trailing) {
                 DSImageView(
-                    sfSymbol: "ellipsis",
-                    size: .regular,
+                    systemName: "ellipsis",
+                    size: .font(.subheadline),
                     tint: .text(.headline)
                 )
                 .dsPadding(.medium)

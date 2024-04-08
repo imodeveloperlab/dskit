@@ -35,9 +35,9 @@ public struct DSRadioPickerView<Data, ID, Content>: View where Data: RandomAcces
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .overlay(alignment: .trailing) {
                     if selected == element  {
-                        DSImageView(sfSymbol: "checkmark.circle.fill", size: 17, tint: .color(.green))
+                        DSImageView(systemName: "checkmark.circle.fill", size: 17, tint: .color(.green))
                     } else {
-                        DSImageView(sfSymbol: "circle", size: 17, tint: .text(.subheadline))
+                        DSImageView(systemName: "circle", size: 17, tint: .text(.subheadline))
                             .opacity(0.3)
                     }
                 }

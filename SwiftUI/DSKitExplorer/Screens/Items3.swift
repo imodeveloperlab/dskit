@@ -54,8 +54,8 @@ extension Items3 {
                 }
                 
                 DSImageView(
-                    sfSymbol: "heart.fill",
-                    size: .regular,
+                    systemName: "heart.fill",
+                    size: .font(.subheadline),
                     tint: .color(product.favorite ? .red : .gray.opacity(0.5))
                 )
                 .dsPadding(.regular)

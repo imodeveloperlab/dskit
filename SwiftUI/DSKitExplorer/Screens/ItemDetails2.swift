@@ -47,7 +47,7 @@ struct ItemDetails2: View {
                     id: \.self,
                     selected: $viewModel.selectedColor
                 ) { color in
-                    DSImageView(uiImageName: color, size: .size(width: 80, height: 60))
+                    DSImageView(named: color, size: .size(width: 80, height: 60))
                 }.dsSectionStyle(title: "Model")
 
                 DSText(viewModel.description).dsTextStyle(.callout)
@@ -55,7 +55,7 @@ struct ItemDetails2: View {
         }
         .safeAreaInset(edge: .bottom) {
             DSBottomContainer {
-                DSButton(title: "Add to cart", rightSFSymbolName: "cart") {
+                DSButton(title: "Add to cart", rightSystemName: "cart") {
                     dismiss()
                 }
                 DSText(viewModel.priceDisclaimer, multilineTextAlignment: .center)

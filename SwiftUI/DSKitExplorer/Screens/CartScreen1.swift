@@ -24,7 +24,7 @@ struct CartScreen1: View {
         .safeAreaInset(edge: .bottom) {
             DSBottomContainer {
                 TotalView(itemsCount: "4", price: DSPrice(amount: "1049.00", currency: "$"))
-                DSButton(title: "Continue to payment", rightSFSymbolName: "arrow.right") {
+                DSButton(title: "Continue to payment", rightSystemName: "arrow.right") {
                     dismiss()
                 }
                 DSTermsAndConditions(message: "By pressing on Continue you agree to our")

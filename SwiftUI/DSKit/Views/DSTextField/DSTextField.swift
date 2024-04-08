@@ -32,16 +32,16 @@ public struct DSTextField: View {
     let textContentType: UITextContentType?
     let autocapitalizationType: UITextAutocapitalizationType
     let validationPattern: String
-    let leftSFSymbolName: String?
+    let keftSystemName: String?
     let validateMinimumLength: Int
     let validateMaximumLength: Int
     let validateEmptyTextField: Bool
     
     public var body: some View {
         DSHStack {
-            if let symbolName = leftSFSymbolName {
+            if let symbolName = keftSystemName {
                 DSImageView(
-                    sfSymbol: symbolName,
+                    systemName: symbolName,
                     size: 15,
                     tint: hasText ? .viewStyleAndColor(viewStyle, .textFieldText) : .viewStyleAndColor(viewStyle, .textFieldPlaceholder)
                 )
@@ -60,13 +60,13 @@ public struct DSTextField: View {
             
             // Toggles visibility of the secure text entry (password visibility)
             if isSecureEntry {
-                let sfSymbolName = isSecureEntryVisible ? "eye.slash" : "eye"
-                DSImageView(sfSymbol: sfSymbolName, size: 15, tint: .viewStyleAndColor(viewStyle, .textFieldText))
+                let systemName = isSecureEntryVisible ? "eye.slash" : "eye"
+                DSImageView(systemName: systemName, size: 15, tint: .viewStyleAndColor(viewStyle, .textFieldText))
                     .onTap {
                         isSecureEntryVisible.toggle()
                     }
             } else if isEditing && hasText {
-                DSImageView(sfSymbol: "xmark.circle.fill", size: 15, tint: .viewStyleAndColor(viewStyle, .textFieldText)).onTapGesture {
+                DSImageView(systemName: "xmark.circle.fill", size: 15, tint: .viewStyleAndColor(viewStyle, .textFieldText)).onTapGesture {
                     model.text = ""
                 }
             }

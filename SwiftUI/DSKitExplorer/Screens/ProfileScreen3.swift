@@ -18,7 +18,7 @@ struct ProfileScreen3: View {
             DSVStack(spacing: .medium) {
                 DSHStack(spacing: .medium) {
                     DSImageView(
-                        sfSymbol: "exclamationmark.shield.fill",
+                        systemName: "exclamationmark.shield.fill",
                         size: 50,
                         tint: .color(.yellow)
                     )

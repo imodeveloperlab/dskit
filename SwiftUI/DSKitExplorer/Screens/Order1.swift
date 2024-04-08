@@ -23,7 +23,7 @@ struct Order1: View {
                     }
                     DSButton(
                         title: "Search for more products",
-                        rightSFSymbolName: "magnifyingglass",
+                        rightSystemName: "magnifyingglass",
                         style: .light
                     ) {}
                 }
@@ -47,7 +47,7 @@ struct Order1: View {
             DSBottomContainer {
                 DSButton(
                     title: "Confirm Order",
-                    rightImage: DSImage(sfSymbolName: "checkmark.circle.fill", size: .medium)
+                    rightSystemName: "checkmark.circle.fill"
                 ) {
                     dismiss()
                 }
@@ -90,7 +90,7 @@ extension Order1 {
         
         var body: some View {
             DSHStack(spacing: .medium) {
-                DSImageView(uiImageName: method.icon, size: .size(width: 50, height: 30))
+                DSImageView(named: method.icon, size: .size(width: 50, height: 30))
                     .dsCornerRadius()
                 DSVStack(spacing: .zero) {
                     DSText(method.title).dsTextStyle(.smallHeadline)
@@ -121,11 +121,11 @@ extension Order1 {
                 DSText(address.holder).dsTextStyle(.smallHeadline)
                 DSVStack(spacing: .small) {
                     DSHStack {
-                        DSImageView(sfSymbol: "house", size: 12, tint: .text(.subheadline))
+                        DSImageView(systemName: "house", size: 12, tint: .text(.subheadline))
                         DSText(address.address).dsTextStyle(.smallSubtitle)
                     }
                     DSHStack {
-                        DSImageView(sfSymbol: "phone", size: 12, tint: .text(.subheadline))
+                        DSImageView(systemName: "phone", size: 12, tint: .text(.subheadline))
                         DSText(address.phone).dsTextStyle(.smallSubtitle)
                     }
                 }
@@ -156,7 +156,7 @@ extension Order1 {
                 DSText(shipping.method).dsTextStyle(.smallHeadline)
                 DSVStack(spacing: .small) {
                     DSHStack {
-                        DSImageView(sfSymbol: "calendar", size: 12, tint: .text(.subheadline))
+                        DSImageView(systemName: "calendar", size: 12, tint: .text(.subheadline))
                         DSText(shipping.date).dsTextStyle(.smallSubtitle)
                     }
                     DSPriceView(price: shipping.price, size: .smallHeadline)

@@ -8,10 +8,8 @@
 import Foundation
 
 public enum DSDimension: ExpressibleByFloatLiteral, ExpressibleByIntegerLiteral, Equatable {
-    case small
-    case regular
-    case medium
-    case large
+    
+    case font(DSTextFont)
     case custom(CGFloat)
     case fillUpTheSpace
     case none

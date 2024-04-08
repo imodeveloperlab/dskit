@@ -41,8 +41,8 @@ extension Categories5 {
                 .dsHeight(220)
                 .overlay(alignment: .topTrailing) {
                     DSImageView(
-                        sfSymbol: "heart.fill",
-                        size: .regular,
+                        systemName: "heart.fill",
+                        size: .font(.subheadline),
                         tint: .color(category.favourite ? .red : .white)
                     )
                     .dsPadding(.regular)

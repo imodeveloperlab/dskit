@@ -40,7 +40,7 @@ struct ProfileScreen1: View {
             DSBottomContainer {
                 DSButton(
                     title: "Log out",
-                    rightSFSymbolName: "rectangle.portrait.and.arrow.forward"
+                    rightSystemName: "rectangle.portrait.and.arrow.forward"
                 ) {
                     self.dismiss()
                 }
@@ -84,7 +84,7 @@ extension ProfileScreen1 {
         var body: some View {
             DSHStack {
                 DSImageView(
-                    sfSymbol: action.icon,
+                    systemName: action.icon,
                     size: .smallIcon,
                     tint: .text(.headline)
                 )

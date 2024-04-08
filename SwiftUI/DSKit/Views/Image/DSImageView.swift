@@ -25,12 +25,12 @@ public struct DSImageView: View {
     }
     
     public init(
-        sfSymbol: String,
+        systemName: String,
         size: DSSize,
         tint: DSColor? = nil
     ) {
         self.image = DSImage(
-            sfSymbolName: sfSymbol,
+            systemName: systemName,
             displayShape: .none,
             size: size,
             tintColor: tint,
@@ -55,14 +55,14 @@ public struct DSImageView: View {
     }
     
     public init(
-        uiImageName: String,
+        named: String,
         displayShape: DSDisplayShape = .none,
         size: DSSize,
         tintColor: DSColor? = nil,
         contentMode: DSContentMode = .scaleAspectFill
     ) {
         self.image = DSImage(
-            uiImageName: uiImageName,
+            named: named,
             displayShape: displayShape,
             size: size,
             tintColor: tintColor,
@@ -88,7 +88,7 @@ public struct DSImageView: View {
     
     public var body: some View {
         switch image.content {
-        case .sfSymbol(name: let name):
+        case .system(name: let name):
             Image(systemName: name)
                 .resizable()
                 .setImageTint(tint: image.tintColor)
@@ -200,10 +200,10 @@ struct DSImageView_Previews: PreviewProvider {
                 }
                 
                 DSHStack {
-                    DSImageView(sfSymbol: "sun.rain.fill", size: .size(.small), tint: .color(.red))
-                    DSImageView(sfSymbol: "sun.rain.fill", size: .size(.regular), tint: .color(.red))
-                    DSImageView(sfSymbol: "sun.rain.fill", size: .size(.medium), tint: .color(.red))
-                    DSImageView(sfSymbol: "sun.rain.fill", size: .size(.large), tint: .color(.red))
+                    DSImageView(systemName: "sun.rain.fill", size: .font(.headline), tint: .color(.red))
+                    DSImageView(systemName: "sun.rain.fill", size: .font(.subheadline), tint: .color(.red))
+                    DSImageView(systemName: "sun.rain.fill", size: .font(.caption1), tint: .color(.red))
+                    DSImageView(systemName: "sun.rain.fill", size: .font(.caption2), tint: .color(.red))
                 }
             }
         }

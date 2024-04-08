@@ -31,7 +31,7 @@
 //                    DSCard {
 //                        DSHStack {
 //                            DSText("Demo", .font(.headline)
-//                            DSImageView(sfSymbol: "eraser.line.dashed.fill", size: .medium, tint: .text(.font(.headline)))
+//                            DSImageView(systemName: "eraser.line.dashed.fill", size: .medium, tint: .text(.font(.headline)))
 //                        }
 //                    }
 //                }.dsPadding()

@@ -35,11 +35,11 @@ struct ItemDetails3: View {
                     
                     DSVStack(spacing: .zero) {
                         DSHStack(alignment: .center, spacing: .regular) {
-                            DSImageView(sfSymbol: "circlebadge.fill", size: .small, tint: .text(.caption1))
+                            DSImageView(systemName: "circlebadge.fill", size: 5, tint: .text(.caption1))
                             DSText("Colour Shown: Light Charcoal/Black/Lemon Venom/University Red").dsTextStyle(.caption2)
                         }
                         DSHStack(alignment: .center, spacing: .regular) {
-                            DSImageView(sfSymbol: "circlebadge.fill", size: .small, tint: .text(.caption2))
+                            DSImageView(systemName: "circlebadge.fill", size: 5, tint: .text(.caption2))
                             DSText("Style: CW6575-001").dsTextStyle(.caption2)
                         }
                     }
@@ -47,7 +47,7 @@ struct ItemDetails3: View {
                     DSPriceView(price: viewModel.price, size: .headline)
                     
                     DSHStack(alignment: .center) {
-                        DSImageView(sfSymbol: "info.circle.fill", size: .regular, tint: .color(.yellow))
+                        DSImageView(systemName: "info.circle.fill", size: .font(.caption1), tint: .color(.yellow))
                         DSText(viewModel.priceDisclaimer, multilineTextAlignment: .leading).dsTextStyle(.caption2)
                     }
                 }
@@ -57,7 +57,7 @@ struct ItemDetails3: View {
                     id: \.self,
                     selected: $viewModel.selectedColor
                 ) { color in
-                    DSImageView(uiImageName: color, size: .size(width: 70, height: 50))
+                    DSImageView(named: color, size: .size(width: 70, height: 50))
                 }.dsSectionStyle(title: "Model")
                 
                 DSPickerView(
@@ -124,7 +124,7 @@ extension ItemDetails3 {
             DSVStack(spacing: .small) {
                 DSText("Model").dsTextStyle(.smallHeadline).dsPadding(.horizontal)
                 DSHScroll(spacing: .small, data: viewModel.colors, id: \.self) { color in
-                    DSImageView(uiImageName: color, size: .size(width: 70, height: 50))
+                    DSImageView(named: color, size: .size(width: 70, height: 50))
                         .dsSelectedStyle(isSelected: viewModel.selectedColor == color)
                         .onTap {
                             UIImpactFeedbackGenerator(style: .light).impactOccurred()

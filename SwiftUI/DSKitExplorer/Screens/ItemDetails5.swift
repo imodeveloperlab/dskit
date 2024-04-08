@@ -25,7 +25,7 @@ struct ItemDetails5: View {
                     id: \.self,
                     selected: $viewModel.selectedColor
                 ) { color in
-                    DSImageView(uiImageName: color, size: .size(width: 70, height: 50))
+                    DSImageView(named: color, size: .size(width: 70, height: 50))
                 }
                 
                 DSVStack(spacing: .medium) {

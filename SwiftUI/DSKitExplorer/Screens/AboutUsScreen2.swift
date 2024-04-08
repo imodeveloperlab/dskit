@@ -79,14 +79,14 @@ struct AboutUsScreen2: View {
                                 DSText(DSFaker().name).dsTextStyle(.headline)
                                    .frame(maxWidth: .infinity, alignment: .leading)
                                 DSHStack {
-                                    DSImageView(sfSymbol: "calendar", size: .size(14), tint: .text(.caption1))
+                                    DSImageView(systemName: "calendar", size: .size(14), tint: .text(.caption1))
                                     DSText(Date().stringFormatted(dateStyle: .medium, timeStyle: .none)).dsTextStyle(.subheadline)
                                     DSHStack(spacing: .small) {
-                                        DSImageView(sfSymbol: "star.fill", size: .size(14), tint: .color(Color.yellow))
-                                        DSImageView(sfSymbol: "star.fill", size: .size(14), tint: .color(Color.yellow))
-                                        DSImageView(sfSymbol: "star.fill", size: .size(14), tint: .color(Color.yellow))
-                                        DSImageView(sfSymbol: "star.fill", size: .size(14), tint: .color(Color.yellow))
-                                        DSImageView(sfSymbol: "star", size:.size(14), tint: .text(.caption1))
+                                        DSImageView(systemName: "star.fill", size: .size(14), tint: .color(Color.yellow))
+                                        DSImageView(systemName: "star.fill", size: .size(14), tint: .color(Color.yellow))
+                                        DSImageView(systemName: "star.fill", size: .size(14), tint: .color(Color.yellow))
+                                        DSImageView(systemName: "star.fill", size: .size(14), tint: .color(Color.yellow))
+                                        DSImageView(systemName: "star", size:.size(14), tint: .text(.caption1))
                                     }
                                 }
                                 DSText(DSFaker().text).dsTextStyle(.caption1)
@@ -101,7 +101,7 @@ struct AboutUsScreen2: View {
                 Spacer()
             }
             
-            DSButton(title: "Leave feedback", rightSFSymbolName: "message.fill", action: { })
+            DSButton(title: "Leave feedback", rightSystemName: "message.fill", action: { })
                 .topShadow(padding: .regular)
         }
     }
@@ -118,7 +118,7 @@ struct AboutUsScreen2: View {
                     DSHStack(alignment: .healthSafetyAlignment, spacing: .regular) {
                         
                         DSVStack(spacing: .medium) {
-                            DSImageView(sfSymbol: "info.circle.fill", size: .regular, tint: .text(.headline))
+                            DSImageView(systemName: "info.circle.fill", size: .font(.headline), tint: .text(.headline))
                                 .alignmentGuide(.healthSafetyAlignment) { d in d[VerticalAlignment.center] }
                         }
                         
@@ -140,7 +140,7 @@ struct AboutUsScreen2: View {
                         .dsCornerRadius()
                         .disabled(true)
                     
-                    DSButton(title: "Get directions", rightSFSymbolName: "location.fill", action: { })
+                    DSButton(title: "Get directions", rightSystemName: "location.fill", action: { })
                     
                 }
                 Spacer()
@@ -167,7 +167,7 @@ struct ContactView: View {
     
     var body: some View {
         DSHStack {
-            DSImageView(sfSymbol: iconName, size: .regular, tint: .text(.headline))
+            DSImageView(systemName: iconName, size: .font(.headline), tint: .text(.headline))
             DSHStack {
                 DSText(title).dsTextStyle(.smallHeadline)
                 DSText(info)

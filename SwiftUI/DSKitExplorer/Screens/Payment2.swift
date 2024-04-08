@@ -24,7 +24,7 @@ struct Payment2: View {
             DSBottomContainer {
                 DSButton(
                     title: "Add new credit card",
-                    rightSFSymbolName: "plus.circle",
+                    rightSystemName: "plus.circle",
                     action: { dismiss() }
                 )
             }
@@ -40,11 +40,11 @@ extension Payment2 {
         let card: Data
         var body: some View {
             Group {
-                DSImageView(uiImageName: card.background, size: .unspecified)
+                DSImageView(named: card.background, size: .unspecified)
                     .dsHeight(200)
                     .overlay(alignment: .bottomTrailing) {
                         DSImageView(
-                            uiImageName: card.type.replacingOccurrences(of: " ", with: ""),
+                            named: card.type.replacingOccurrences(of: " ", with: ""),
                             size: .size(width: 50, height: 35)
                         )
                         .dsCornerRadius()

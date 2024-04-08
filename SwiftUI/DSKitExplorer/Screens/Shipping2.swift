@@ -32,7 +32,7 @@ struct Shipping2: View {
                 }
                 DSButton(
                     title: "Continue",
-                    rightSFSymbolName: "arrow.right",
+                    rightSystemName: "arrow.right",
                     pushContentToSides: true,
                     style: .default,
                     action: { }
@@ -83,7 +83,7 @@ extension Shipping2 {
             DSText(method.title).dsTextStyle(.smallHeadline)
             DSVStack(spacing: .small) {
                 DSHStack(spacing: .small) {
-                    DSImageView(sfSymbol: "calendar", size: 12, tint: .text(.subheadline))
+                    DSImageView(systemName: "calendar", size: 12, tint: .text(.subheadline))
                     DSText(method.description).dsTextStyle(.smallSubtitle)
                 }
                 if let price = method.price {

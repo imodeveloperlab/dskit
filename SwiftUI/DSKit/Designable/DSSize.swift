@@ -12,6 +12,11 @@ public struct DSSize: Equatable, ExpressibleByFloatLiteral, ExpressibleByInteger
     public let width: DSDimension
     public let height: DSDimension
     
+    public init(_ textFont: DSTextFont) {
+        self.width = .font(textFont)
+        self.height = .font(textFont)
+    }
+    
     public init(width: DSDimension, height: DSDimension) {
         self.width = width
         self.height = height
@@ -31,14 +36,14 @@ public struct DSSize: Equatable, ExpressibleByFloatLiteral, ExpressibleByInteger
         DSSize(width: number, height: number)
     }
     
+    public static func font(_ textFont: DSTextFont) -> DSSize {
+        DSSize(textFont)
+    }
+    
     public static func size(width: DSDimension, height: DSDimension) -> DSSize {
         DSSize(width: width, height: height)
     }
     
-    public static let smaller = DSSize(width: .small, height: .small)
-    public static let small = DSSize(width: .regular, height: .regular)
-    public static let regular = DSSize(width: .medium, height: .medium)
     public static let unspecified = DSSize(width: .none, height: .none)
-    public static let medium = DSSize(width: .large, height: .large)
     public static let fillUpTheSpace = DSSize(width: .fillUpTheSpace, height: .fillUpTheSpace)
 }

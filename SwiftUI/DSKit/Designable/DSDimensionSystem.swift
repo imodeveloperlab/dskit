@@ -8,7 +8,7 @@
 import Foundation
 
 public protocol DSDimensionProtocol {
-    func value(for: DSDimension) -> CGFloat
+    func value(for: DSDimension, appearance: DSAppearance) -> CGFloat
 }
 
 
@@ -20,16 +20,8 @@ public struct DSDimensionSystem: DSDimensionProtocol {
         self.spatialSystem = spatialSystem
     }
     
-    public func value(for space: DSDimension) -> CGFloat {
-        switch space {
-        case .small:
-            spatialSystem.multiply(by: 0.5)
-        case .regular:
-            spatialSystem.multiply(by: 1.0)
-        case .medium:
-            spatialSystem.multiply(by: 2.0)
-        case .large:
-            spatialSystem.multiply(by: 4.0)
+    public func value(for dimension: DSDimension, appearance: DSAppearance) -> CGFloat {
+        switch dimension {
         case .custom(let number):
             number
         case .fillUpTheSpace:
@@ -38,6 +30,8 @@ public struct DSDimensionSystem: DSDimensionProtocol {
                 .infinity
         case .zero:
             0
+        case .font(let font):
+            font.pointSize(for: appearance)
         }
     }
 }

@@ -51,6 +51,33 @@ public struct DSButton: View {
     
     public init(
         title: String,
+        leftImageNamed: String? = nil,
+        rightImageNamed: String? = nil,
+        pushContentToSides: Bool = false,
+        style: Style = .default,
+        maxWidth: Bool = true,
+        spacing: DSSpace = .regular,
+        action: @escaping () -> Void
+    ) {
+        self.title = title
+        
+        if let leftImageNamed {
+            self.leftImage = DSImage(content: .image(image: UIImage(named: leftImageNamed)), size: .smallIcon)
+        }
+        
+        if let rightImageNamed {
+            self.rightImage = DSImage(content: .image(image: UIImage(named: rightImageNamed)), size: .smallIcon)
+        }
+        
+        self.pushContentToSides = pushContentToSides
+        self.style = style
+        self.maxWidth = maxWidth
+        self.action = action
+        self.spacing = spacing
+    }
+    
+    public init(
+        title: String,
         pushContentToSides: Bool = false,
         style: Style = .default,
         maxWidth: Bool = true,
@@ -70,8 +97,8 @@ public struct DSButton: View {
     
     public init(
         title: String,
-        leftSFSymbolName: String? = nil,
-        rightSFSymbolName: String? = nil,
+        keftSystemName: String? = nil,
+        rightSystemName: String? = nil,
         pushContentToSides: Bool = false,
         style: Style = .default,
         maxWidth: Bool = true,
@@ -79,13 +106,13 @@ public struct DSButton: View {
         action: @escaping () -> Void
     ) {
         var leftImage: DSImage?
-        if let leftSFSymbolName {
-            leftImage = DSImage(content: .sfSymbol(name: leftSFSymbolName), size: .regular)
+        if let keftSystemName {
+            leftImage = DSImage(content: .system(name: keftSystemName), size: .smallIcon)
         }
         
         var rightImage: DSImage?
-        if let rightSFSymbolName {
-            rightImage = DSImage(content: .sfSymbol(name: rightSFSymbolName), size: 15)
+        if let rightSystemName {
+            rightImage = DSImage(content: .system(name: rightSystemName), size: .smallIcon)
         }
         
         self.init(
@@ -137,7 +164,7 @@ public struct DSButton: View {
             if let leftImage {
                 DSImageView(dsImage: leftImage.imageWith(tint: titleColor))
                     .dsSize(leftImage.size)
-                    .font(.system(size: 15, weight: .medium))
+                    .font(.system(size: 25, weight: .semibold))
                 if pushContentToSides {
                     Spacer()
                 }
@@ -145,7 +172,7 @@ public struct DSButton: View {
             
             if !title.isEmpty {
                 DSText(title).dsTextStyle(.headline, 15, titleColor)
-                    .dsHeight(.large)
+                    .dsHeight(.font(.fontWithSize(.headline, 15)))
             }
             
             if let rightImage {
@@ -154,9 +181,10 @@ public struct DSButton: View {
                 }
                 DSImageView(dsImage: rightImage.imageWith(tint: titleColor))
                     .dsSize(rightImage.size)
-                    .font(.system(size: 20, weight: .medium))
+                    .font(.system(size: 25, weight: .semibold))
             }
-        }.dsResetContentMargins()
+        }
+        .dsResetContentMargins()
         .dsHeight(15)
     }
     
@@ -215,12 +243,12 @@ public extension DSButton {
     static func sfSymbol(
         name: String,
         style: Style = .default,
-        size: DSSize = .regular,
+        size: DSSize = DSSize(.fontWithSize(.headline, 15)),
         action: @escaping () -> Void
     ) -> DSButton {
         DSButton(
             title: "",
-            rightImage: DSImage(sfSymbolName: name, size: size),
+            rightImage: DSImage(systemName: name, size: size),
             pushContentToSides: false,
             style: style,
             maxWidth: false,
@@ -238,8 +266,8 @@ struct DSButton_Previews: PreviewProvider {
                     DSVStack {
                         DSButton(title: "Default", maxWidth: false, action: { })
                         DSButton(title: "Light", style: .light, maxWidth: false, action: { })
-                        DSButton(title: "Default", leftSFSymbolName: "message.fill", maxWidth: false, action: { })
-                        DSButton(title: "Light", rightSFSymbolName: "message.fill", style: .light, maxWidth: false, action: { })
+                        DSButton(title: "Default", keftSystemName: "message.fill", maxWidth: false, action: { })
+                        DSButton(title: "Light", rightSystemName: "message.fill", style: .light, maxWidth: false, action: { })
                     }
                     
                     DSVStack(spacing: .small) {
@@ -251,8 +279,8 @@ struct DSButton_Previews: PreviewProvider {
                     .dsCornerRadius()
                     
                     DSVStack {
-                        DSButton(title: "Bordered Light", leftSFSymbolName: "message.fill", style: .borderedLight, action: { })
-                        DSButton(title: "Light", rightSFSymbolName: "message.fill", pushContentToSides: true, style: .light, action: { })
+                        DSButton(title: "Bordered Light", keftSystemName: "message.fill", style: .borderedLight, action: { })
+                        DSButton(title: "Light", rightSystemName: "message.fill", pushContentToSides: true, style: .light, action: { })
                     }
                     
                     DSHStack {

@@ -46,7 +46,7 @@ public struct DSSizeModifier: ViewModifier {
         case .none:
             return nil // No size set
         default:
-            return appearance.dimension.value(for: dimension) // Custom logic for other dimensions
+            return appearance.dimension.value(for: dimension, appearance: appearance) // Custom logic for other dimensions
         }
     }
 }
@@ -63,11 +63,6 @@ public extension View {
 struct DSSizeModifier_Previews: PreviewProvider {
     static var previews: some View {
         DSPreviewForEachAppearance { DSPreview {
-                Color.blue
-                    .dsSize(.regular)
-                
-                Color.blue
-                    .dsSize(.medium)
                 
                 Color.blue
                     .dsSize(100)

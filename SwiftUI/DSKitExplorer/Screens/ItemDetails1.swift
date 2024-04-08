@@ -40,7 +40,7 @@ struct ItemDetails1: View {
         }
         .safeAreaInset(edge: .bottom) {
             DSBottomContainer {
-                DSButton(title: "Add to cart", rightSFSymbolName: "cart.fill") {
+                DSButton(title: "Add to cart", rightSystemName: "cart.fill") {
                     dismiss()
                 }
                 DSText(viewModel.priceDisclaimer, multilineTextAlignment: .center)

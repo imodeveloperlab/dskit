@@ -28,7 +28,7 @@ struct CartScreen5: View {
                     SuggestedProductView(product: product)
                 }
                 TotalView(itemsCount: "4", price: DSPrice(amount: "1049.00", currency: "$"))
-                DSButton(title: "Checkout", rightImage: DSImage(sfSymbolName: "creditcard", size: .medium)) {
+                DSButton(title: "Checkout", rightSystemName: "creditcard") {
                     dismiss()
                 }
                 DSTermsAndConditions(message: "By pressing on Checkout you agree to our")
@@ -68,7 +68,7 @@ extension CartScreen5 {
                         DSText(product.size).dsTextStyle(.smallHeadline)
                     }
                     DSHStack {
-                        DSImageView(sfSymbol: "star.fill", size: .smallIcon, tint: .color(Color.yellow))
+                        DSImageView(systemName: "star.fill", size: .smallIcon, tint: .color(Color.yellow))
                         DSText("3k Reviews").dsTextStyle(.caption1)
                     }
                     DSPriceView(price: product.price, size: .smallHeadline)

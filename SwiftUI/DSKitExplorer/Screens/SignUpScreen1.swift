@@ -19,7 +19,7 @@ struct SignUpScreen1: View {
                 Group {
                     DSButton(
                         title: "Login with Facebook",
-                        rightImage: DSImage(uiImageName: "facebook", size: .medium),
+                        rightImageNamed: "facebook",
                         pushContentToSides: true,
                         style: .custom(color: Color(uiColor: UIColor(0x4267B2)))  
                     ) { self.dismiss() }

@@ -26,7 +26,7 @@ struct Payment1: View {
                 
                 DSButton(
                     title: "Add new credit card",
-                    rightSFSymbolName: "plus.circle",
+                    rightSystemName: "plus.circle",
                     style: .light,
                     action: { dismiss() }
                 )
@@ -40,7 +40,7 @@ struct Payment1: View {
                 }
                 DSButton(
                     title: "Continue",
-                    rightSFSymbolName: "arrow.right",
+                    rightSystemName: "arrow.right",
                     pushContentToSides: true,
                     style: .default,
                     action: { }
@@ -60,7 +60,7 @@ extension Payment1 {
             DSVStack(spacing: .small) {
                 DSHStack(spacing: .medium) {
                     DSImageView(
-                        uiImageName: method.type.replacingOccurrences(of: " ", with: ""),
+                        named: method.type.replacingOccurrences(of: " ", with: ""),
                         size: .size(width: 50, height: 30)
                     ).dsCornerRadius()
                     DSVStack(spacing: .zero) {

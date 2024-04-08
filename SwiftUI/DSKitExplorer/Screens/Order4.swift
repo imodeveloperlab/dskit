@@ -16,7 +16,7 @@ struct Order4: View {
     var body: some View {
         DSVStack(alignment: .center) {
             Spacer()
-            DSImageView(sfSymbol: "checkmark.circle.fill", size: 70, tint: .color(.green))
+            DSImageView(systemName: "checkmark.circle.fill", size: 70, tint: .color(.green))
                 .dsPadding(.bottom, 30)
             DSText("It's Ordered").dsTextStyle(.largeHeadline)
             DSText("Hi John - thanks for your order,\nwe hope you enjoyed shopping\nwith us", multilineTextAlignment: .center)
@@ -30,7 +30,7 @@ struct Order4: View {
                     SuggestedProductView(product: product)
                 }
             }
-            DSButton(title: "Continue Shopping", rightSFSymbolName: "bag.fill", action: {
+            DSButton(title: "Continue Shopping", rightSystemName: "bag.fill", action: {
                 dismiss()
             })
         }.dsScreen()

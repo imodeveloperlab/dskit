@@ -10,7 +10,7 @@ import UIKit
 import SwiftUI
 
 public enum DSImageContentType {
-    case sfSymbol(name: String)
+    case system(name: String)
     case image(image: UIImage?)
     case imageURL(url: URL?)
 }
@@ -38,14 +38,14 @@ public struct DSImage {
     }
     
     public init(
-        sfSymbolName: String,
+        systemName: String,
         displayShape: DSDisplayShape = .none,
         size: DSSize,
         tintColor: DSColor? = nil,
         contentMode: DSContentMode = .scaleAspectFit
     ) {
         self.init(
-            content: .sfSymbol(name: sfSymbolName),
+            content: .system(name: systemName),
             displayShape: displayShape,
             size: size,
             tintColor: tintColor,
@@ -54,14 +54,14 @@ public struct DSImage {
     }
     
     public init(
-        uiImageName: String,
+        named: String,
         displayShape: DSDisplayShape = .none,
         size: DSSize,
         tintColor: DSColor? = nil,
         contentMode: DSContentMode = .scaleAspectFit
     ) {
         self.init(
-            content: .image(image: UIImage(named: uiImageName)),
+            content: .image(image: UIImage(named: named)),
             displayShape: displayShape,
             size: size,
             tintColor: tintColor,

@@ -80,7 +80,7 @@ struct AboutUsScreen2: View {
                                    .frame(maxWidth: .infinity, alignment: .leading)
                                 DSHStack {
                                     DSImageView(systemName: "calendar", size: .size(14), tint: .text(.caption1))
-                                    DSText(Date().stringFormatted(dateStyle: .medium, timeStyle: .none)).dsTextStyle(.subheadline)
+                                    DSText("14.05.2024").dsTextStyle(.subheadline)
                                     DSHStack(spacing: .small) {
                                         DSImageView(systemName: "star.fill", size: .size(14), tint: .color(Color.yellow))
                                         DSImageView(systemName: "star.fill", size: .size(14), tint: .color(Color.yellow))

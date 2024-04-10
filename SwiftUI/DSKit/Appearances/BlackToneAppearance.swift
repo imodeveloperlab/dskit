@@ -11,7 +11,6 @@ import UIKit
 public class BlackToneAppearance: DSAppearance {
     
     public var title: String
-    public var brandColor: UIColor
     public var primaryView: DSViewAppearanceProtocol
     public var secondaryView: DSViewAppearanceProtocol
     public var spacing: DSSpacingProtocol = DSSpacingSystem(spatialSystem: 6)
@@ -28,7 +27,6 @@ public class BlackToneAppearance: DSAppearance {
     public init(brandColor: UIColor? = nil, title: String = "Black") {
         
         self.title = title
-        self.brandColor = brandColor ?? UIColor(0xFBB666)
         
         // MARK: - Primary view
         

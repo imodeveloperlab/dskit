@@ -23,10 +23,10 @@ struct AppearanceSelectionView: View {
                     DSVStack(spacing: .zero) {
                         DSHStack(spacing: .small) {
                             DSText("Welcome to").dsTextStyle(.largeHeadline)
-                            DSText("DSKit").dsTextStyle(.largeHeadline, .brandColor)
+                            DSText("DSKit").dsTextStyle(.largeHeadline, .viewColor(.buttonBackground))
                         }
                         DSText("Please select an appearance to continue").dsTextStyle(.subheadline)
-                    }.dsPadding(.top)
+                    }
                     
                     DSGrid(data: appearances, id: \.title) { appearance in
                         AppearanceView(appearance: appearance).onTap {

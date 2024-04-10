@@ -11,7 +11,6 @@ import UIKit
 public struct DSKitAppearance: DSAppearance {
     
     public var title: String
-    public var brandColor: UIColor
     public var primaryView: DSViewAppearanceProtocol
     public var secondaryView: DSViewAppearanceProtocol
     public var spacing: DSSpacingProtocol = DSSpacingSystem(spatialSystem: 7)
@@ -29,7 +28,6 @@ public struct DSKitAppearance: DSAppearance {
     public init(brandColor: UIColor? = nil) {
         
         self.title = "DSKit"
-        self.brandColor = brandColor ?? DSDynamicColor.color(light: 0x1DA1F2, dark: 0x1DA1F2)
         
         // MARK: - Primary view
         
@@ -137,7 +135,7 @@ public struct DSKitAppearance: DSAppearance {
             barTint: primaryView.background,
             itemTint: primaryView.button.background,
             unselectedItemTint: text.subheadline,
-            badge: self.brandColor,
+            badge: primaryView.button.background,
             translucent: false
         )
         

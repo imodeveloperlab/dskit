@@ -10,7 +10,6 @@ import SwiftUI
 
 public enum DSColor: Equatable, Hashable {
     
-    case brandColor
     case viewStyleAndColor(DSViewStyle, DSViewColor)
     case viewColor(DSViewColor)
     case primaryView(DSViewColor)
@@ -32,8 +31,6 @@ public enum DSColor: Equatable, Hashable {
     
     func color(for appearance: DSAppearance, and style: DSViewStyle) -> Color {
         switch self {
-        case .brandColor:
-            return appearance.brandColor.color
         case .viewStyleAndColor(let style, let viewColor):
             return appearance.style(for: style).color(for: viewColor, appearance: appearance, style: style)
         case .primaryView(let viewColor):

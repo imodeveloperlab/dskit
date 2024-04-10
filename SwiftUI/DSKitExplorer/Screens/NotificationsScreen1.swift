@@ -31,7 +31,7 @@ struct NotificationsScreen1: View {
                 DSText("Notifications").dsTextStyle(.headline)
                 Spacer()
                 Toggle("Show welcome message", isOn: $isSwitchOn)
-                    .tint(appearance.brandColor.semanticGreenColor.color)
+                    .tint(Color.green)
                     .labelsHidden()
             }
             .dsPadding()

@@ -11,7 +11,6 @@ import UIKit
 public final class RetroAppearance: DSAppearance {
     
     public var title: String
-    public var brandColor: UIColor
     public var primaryView: DSViewAppearanceProtocol
     public var secondaryView: DSViewAppearanceProtocol
     public var spacing: DSSpacingProtocol = DSSpacingSystem(spatialSystem: 7)
@@ -31,7 +30,6 @@ public final class RetroAppearance: DSAppearance {
     public init(brandColor: UIColor? = nil, title: String = "Retro") {
         
         self.title = title
-        self.brandColor = brandColor ?? DSDynamicColor.color(light: 0xFF8F00, dark: 0xFF8F00)
         
         // MARK: - Secondary view
         
@@ -109,7 +107,7 @@ public final class RetroAppearance: DSAppearance {
             barTint: primaryView.background,
             itemTint: primaryView.button.background,
             unselectedItemTint: text.subheadline,
-            badge: self.brandColor
+            badge: primaryView.button.background
         )
         
         // MARK: - Navigation Bar
@@ -123,10 +121,10 @@ public final class RetroAppearance: DSAppearance {
         // MARK: - Price
         
         price = DSPriceAppearance(
-            currency: self.brandColor,
-            amount: self.brandColor,
+            currency: primaryView.button.background,
+            amount: primaryView.button.background,
             regularAmount: text.subheadline,
-            badgeBackground: self.brandColor
+            badgeBackground: primaryView.button.background
         )
     }
     

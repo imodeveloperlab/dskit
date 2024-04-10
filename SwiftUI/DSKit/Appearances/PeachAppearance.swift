@@ -11,7 +11,6 @@ import UIKit
 public class PeachAppearance: DSAppearance {
     
     public var title: String
-    public var brandColor: UIColor
     public var primaryView: DSViewAppearanceProtocol
     public var secondaryView: DSViewAppearanceProtocol
     public var spacing: DSSpacingProtocol = DSSpacingSystem(spatialSystem: 7)
@@ -31,7 +30,6 @@ public class PeachAppearance: DSAppearance {
     public init(brandColor: UIColor? = nil, title: String = "Peach") {
         
         self.title = title
-        self.brandColor = brandColor ?? UIColor(0xFF5A5F)
         
         // MARK: - Primary view
         
@@ -95,14 +93,14 @@ public class PeachAppearance: DSAppearance {
             barTint: primaryView.background,
             itemTint: primaryView.button.background,
             unselectedItemTint: secondaryText.subheadline,
-            badge: self.brandColor,
+            badge: primaryView.button.background,
             translucent: true
         )
         
         // MARK: - Navigation Bar
         
         navigationBar = DSNavigationBarAppearance(
-            buttons: self.brandColor,
+            buttons: primaryView.button.background,
             text: text.title1,
             bar: primaryView.background,
             translucent: true

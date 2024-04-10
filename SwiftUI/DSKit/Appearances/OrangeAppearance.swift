@@ -11,7 +11,6 @@ import UIKit
 public class OrangeAppearance: DSAppearance {
     
     public var title: String
-    public var brandColor: UIColor
     public var primaryView: DSViewAppearanceProtocol
     public var secondaryView: DSViewAppearanceProtocol
     public var spacing: DSSpacingProtocol = DSSpacingSystem(spatialSystem: 7)
@@ -30,7 +29,6 @@ public class OrangeAppearance: DSAppearance {
     public init(brandColor: UIColor? = nil, title: String = "Orange") {
         
         self.title = title
-        self.brandColor = brandColor ?? UIColor(0xF26333)
         
         // MARK: - Primary view
         
@@ -94,14 +92,14 @@ public class OrangeAppearance: DSAppearance {
             barTint: primaryView.background,
             itemTint: primaryView.button.background,
             unselectedItemTint: secondaryText.subheadline,
-            badge: self.brandColor,
+            badge: primaryView.button.background,
             translucent: true
         )
         
         // MARK: - Navigation Bar
         
         navigationBar = DSNavigationBarAppearance(
-            buttons: self.brandColor,
+            buttons: primaryView.button.background,
             text: text.title1,
             bar: primaryView.background,
             translucent: true

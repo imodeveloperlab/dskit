@@ -31,19 +31,29 @@ public struct DSSize: Equatable, ExpressibleByFloatLiteral, ExpressibleByInteger
         self.width = .custom(CGFloat(value))
         self.height = .custom(CGFloat(value))
     }
+}
+
+public extension DSSize {
+    static var smallIcon: DSSize {
+        16
+    }
     
-    public static func size(_ number: DSDimension) -> DSSize {
+    static var mediumIcon: DSSize {
+        20
+    }
+    
+    static func size(_ number: DSDimension) -> DSSize {
         DSSize(width: number, height: number)
     }
     
-    public static func font(_ textFont: DSTextFont) -> DSSize {
+    static func font(_ textFont: DSTextFont) -> DSSize {
         DSSize(textFont)
     }
     
-    public static func size(width: DSDimension, height: DSDimension) -> DSSize {
+    static func size(width: DSDimension, height: DSDimension) -> DSSize {
         DSSize(width: width, height: height)
     }
     
-    public static let unspecified = DSSize(width: .none, height: .none)
-    public static let fillUpTheSpace = DSSize(width: .fillUpTheSpace, height: .fillUpTheSpace)
+    static let unspecified = DSSize(width: .none, height: .none)
+    static let fillUpTheSpace = DSSize(width: .fillUpTheSpace, height: .fillUpTheSpace)
 }

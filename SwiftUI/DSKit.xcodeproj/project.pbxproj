@@ -11,7 +11,6 @@
 		6006010E2B31CDC300F2C616 /* DSDisplayShapeModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6006010D2B31CDC300F2C616 /* DSDisplayShapeModifier.swift */; };
 		600601102B31D6A300F2C616 /* DSSizeModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6006010F2B31D6A300F2C616 /* DSSizeModifier.swift */; };
 		600601122B31E02500F2C616 /* DSTintColorModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600601112B31E02500F2C616 /* DSTintColorModifier.swift */; };
-		600601952B33152900F2C616 /* CGSize+Hashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600601942B33152900F2C616 /* CGSize+Hashable.swift */; };
 		600601AE2B34792500F2C616 /* DSCoverFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600601AD2B34792500F2C616 /* DSCoverFlow.swift */; };
 		600601B02B347F0D00F2C616 /* DSGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600601AF2B347F0D00F2C616 /* DSGrid.swift */; };
 		600601BA2B3597A700F2C616 /* DSHStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600601B92B3597A700F2C616 /* DSHStack.swift */; };
@@ -98,7 +97,6 @@
 		60306B7D2B2C535B0020EBFF /* DSImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60306B752B2C535B0020EBFF /* DSImage.swift */; };
 		60306B842B2C5D290020EBFF /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 60306B832B2C5D290020EBFF /* SDWebImageSwiftUI */; };
 		603D39472BAD70F100305FDE /* DSSectionStyleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603D39462BAD70F100305FDE /* DSSectionStyleModifier.swift */; };
-		603D394E2BAD71B300305FDE /* DSSize+Conveniences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603D394C2BAD71B200305FDE /* DSSize+Conveniences.swift */; };
 		604AA6402B88E129009EE906 /* DSHeightModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604AA63F2B88E129009EE906 /* DSHeightModifier.swift */; };
 		604AA6422B88E4E6009EE906 /* DSWidthModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604AA6412B88E4E6009EE906 /* DSWidthModifier.swift */; };
 		604B4B242B8CC03400EC6CCE /* DSSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604B4B232B8CC03400EC6CCE /* DSSize.swift */; };
@@ -113,7 +111,6 @@
 		604B4B392B8DCD8400EC6CCE /* NotificationsScreen1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604B4B382B8DCD8400EC6CCE /* NotificationsScreen1.swift */; };
 		604B4B3B2B8DD71200EC6CCE /* AboutUsScreen1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604B4B3A2B8DD71200EC6CCE /* AboutUsScreen1.swift */; };
 		604B4B3D2B8DDADF00EC6CCE /* AboutUsScreen2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604B4B3C2B8DDADF00EC6CCE /* AboutUsScreen2.swift */; };
-		604B4B3F2B8DDE9000EC6CCE /* Date+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604B4B3E2B8DDE9000EC6CCE /* Date+String.swift */; };
 		604B4B412B8E24AD00EC6CCE /* RetroAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604B4B402B8E24AD00EC6CCE /* RetroAppearance.swift */; };
 		604B4B432B8E269100EC6CCE /* OrangeAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604B4B422B8E269000EC6CCE /* OrangeAppearance.swift */; };
 		604B4B452B8E282700EC6CCE /* PeachAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604B4B442B8E282700EC6CCE /* PeachAppearance.swift */; };
@@ -166,12 +163,12 @@
 		606FA7582B9857B5003DEA59 /* DSDebuggableModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606FA7572B9857B5003DEA59 /* DSDebuggableModifier.swift */; };
 		6074DF462BA30DFA0006284C /* DSDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6074DF452BA30DFA0006284C /* DSDesignable.swift */; };
 		6074DF4A2BA342880006284C /* DSSelectedStyleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6074DF492BA342880006284C /* DSSelectedStyleModifier.swift */; };
-		6080DC5D2B74CC9000255257 /* GeometryProxy+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6080DC5C2B74CC9000255257 /* GeometryProxy+Convenience.swift */; };
 		6080DC612B74D5D200255257 /* KeyboardObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6080DC602B74D5D200255257 /* KeyboardObserver.swift */; };
 		6080DC632B74D62100255257 /* DSKeyboardAwareModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6080DC622B74D62100255257 /* DSKeyboardAwareModifier.swift */; };
 		6080DC652B74EC2F00255257 /* DSHideKeyboardWhenTappedModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6080DC642B74EC2F00255257 /* DSHideKeyboardWhenTappedModifier.swift */; };
 		6080DC742B76243500255257 /* CGFloat+Conveniences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6080DC732B76243500255257 /* CGFloat+Conveniences.swift */; };
 		60B7B70F2B3AFCF50050FA38 /* DSColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B7B70E2B3AFCF50050FA38 /* DSColor.swift */; };
+		60BD5FD12BC6AFFC0071A395 /* UIColor+Conveniences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BD5FD02BC6AFFC0071A395 /* UIColor+Conveniences.swift */; };
 		60C1F78F2B3D66BF0067B21C /* DSButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C1F78E2B3D66BF0067B21C /* DSButton.swift */; };
 		60C1F7912B3D99750067B21C /* DSSHadowModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C1F7902B3D99750067B21C /* DSSHadowModifier.swift */; };
 		60C1F7952B3DC62D0067B21C /* DSTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C1F7942B3DC62D0067B21C /* DSTextField.swift */; };
@@ -196,24 +193,12 @@
 		60EB99972B2B4D9800528039 /* DSScaledFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EB99962B2B4D9800528039 /* DSScaledFont.swift */; };
 		60EB999A2B2B4E1D00528039 /* DSKitAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EB99992B2B4E1D00528039 /* DSKitAppearance.swift */; };
 		60EB999E2B2B4E4700528039 /* DSDynamicColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EB999C2B2B4E4700528039 /* DSDynamicColor.swift */; };
-		60EB999F2B2B4E4700528039 /* DSColorScheme+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EB999D2B2B4E4700528039 /* DSColorScheme+Color.swift */; };
-		60EB99A32B2B4EF500528039 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EB99A22B2B4EF500528039 /* UIColorExtension.swift */; };
 		60EB99A52B2B4F2300528039 /* Rescale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EB99A42B2B4F2300528039 /* Rescale.swift */; };
-		60EB99A82B2B4F6600528039 /* ColorSpaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EB99A72B2B4F6600528039 /* ColorSpaces.swift */; };
 		60EB99C32B2B750200528039 /* DSTextFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EB99B92B2B750100528039 /* DSTextFont.swift */; };
 		60EB99C72B2B750200528039 /* DSTextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EB99BD2B2B750200528039 /* DSTextStyle.swift */; };
 		60EB99C82B2B750200528039 /* DSTextColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EB99BE2B2B750200528039 /* DSTextColor.swift */; };
 		60EB99CC2B2B755E00528039 /* DSText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EB99CB2B2B755E00528039 /* DSText.swift */; };
-		60EB99CE2B2B75C900528039 /* DSSFSymbolConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EB99CD2B2B75C900528039 /* DSSFSymbolConfig.swift */; };
 		60EB99D42B2B75F800528039 /* DSPriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EB99D12B2B75F800528039 /* DSPriceView.swift */; };
-		60EB99D72B2B767900528039 /* String+Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EB99D62B2B767900528039 /* String+Currency.swift */; };
-		60EB99D92B2B769800528039 /* NSAttributedString+Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EB99D82B2B769800528039 /* NSAttributedString+Badge.swift */; };
-		60EB99DB2B2B76C800528039 /* UIImage+SFSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EB99DA2B2B76C800528039 /* UIImage+SFSymbol.swift */; };
-		60EB99DD2B2B77D400528039 /* Int+Cents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EB99DC2B2B77D400528039 /* Int+Cents.swift */; };
-		60EB99DF2B2B847700528039 /* NSNumber+Cents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EB99DE2B2B847700528039 /* NSNumber+Cents.swift */; };
-		60EB99E12B2B84B200528039 /* NSAttributedString+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EB99E02B2B84B100528039 /* NSAttributedString+Size.swift */; };
-		60EB99E32B2B851C00528039 /* String+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EB99E22B2B851C00528039 /* String+Size.swift */; };
-		60EB99F42B2C3A4000528039 /* UIColor+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EB99F32B2C3A4000528039 /* UIColor+String.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -276,7 +261,6 @@
 		6006010D2B31CDC300F2C616 /* DSDisplayShapeModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSDisplayShapeModifier.swift; sourceTree = "<group>"; };
 		6006010F2B31D6A300F2C616 /* DSSizeModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSSizeModifier.swift; sourceTree = "<group>"; };
 		600601112B31E02500F2C616 /* DSTintColorModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSTintColorModifier.swift; sourceTree = "<group>"; };
-		600601942B33152900F2C616 /* CGSize+Hashable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGSize+Hashable.swift"; sourceTree = "<group>"; };
 		600601A72B346EBD00F2C616 /* DSKitFakery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DSKitFakery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		600601AD2B34792500F2C616 /* DSCoverFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSCoverFlow.swift; sourceTree = "<group>"; };
 		600601AF2B347F0D00F2C616 /* DSGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSGrid.swift; sourceTree = "<group>"; };
@@ -352,7 +336,6 @@
 		60306B752B2C535B0020EBFF /* DSImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSImage.swift; sourceTree = "<group>"; };
 		6034EC892BA4896E00B802EB /* DSPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSPickerView.swift; sourceTree = "<group>"; };
 		603D39462BAD70F100305FDE /* DSSectionStyleModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSSectionStyleModifier.swift; sourceTree = "<group>"; };
-		603D394C2BAD71B200305FDE /* DSSize+Conveniences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DSSize+Conveniences.swift"; sourceTree = "<group>"; };
 		604AA63F2B88E129009EE906 /* DSHeightModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSHeightModifier.swift; sourceTree = "<group>"; };
 		604AA6412B88E4E6009EE906 /* DSWidthModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSWidthModifier.swift; sourceTree = "<group>"; };
 		604B4B232B8CC03400EC6CCE /* DSSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSSize.swift; sourceTree = "<group>"; };
@@ -367,7 +350,6 @@
 		604B4B382B8DCD8400EC6CCE /* NotificationsScreen1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsScreen1.swift; sourceTree = "<group>"; };
 		604B4B3A2B8DD71200EC6CCE /* AboutUsScreen1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutUsScreen1.swift; sourceTree = "<group>"; };
 		604B4B3C2B8DDADF00EC6CCE /* AboutUsScreen2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutUsScreen2.swift; sourceTree = "<group>"; };
-		604B4B3E2B8DDE9000EC6CCE /* Date+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+String.swift"; sourceTree = "<group>"; };
 		604B4B402B8E24AD00EC6CCE /* RetroAppearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetroAppearance.swift; sourceTree = "<group>"; };
 		604B4B422B8E269000EC6CCE /* OrangeAppearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrangeAppearance.swift; sourceTree = "<group>"; };
 		604B4B442B8E282700EC6CCE /* PeachAppearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeachAppearance.swift; sourceTree = "<group>"; };
@@ -429,12 +411,12 @@
 		6074DF452BA30DFA0006284C /* DSDesignable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSDesignable.swift; sourceTree = "<group>"; };
 		6074DF472BA323EE0006284C /* DSBottomContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSBottomContainer.swift; sourceTree = "<group>"; };
 		6074DF492BA342880006284C /* DSSelectedStyleModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSSelectedStyleModifier.swift; sourceTree = "<group>"; };
-		6080DC5C2B74CC9000255257 /* GeometryProxy+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GeometryProxy+Convenience.swift"; sourceTree = "<group>"; };
 		6080DC602B74D5D200255257 /* KeyboardObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardObserver.swift; sourceTree = "<group>"; };
 		6080DC622B74D62100255257 /* DSKeyboardAwareModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSKeyboardAwareModifier.swift; sourceTree = "<group>"; };
 		6080DC642B74EC2F00255257 /* DSHideKeyboardWhenTappedModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSHideKeyboardWhenTappedModifier.swift; sourceTree = "<group>"; };
 		6080DC732B76243500255257 /* CGFloat+Conveniences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Conveniences.swift"; sourceTree = "<group>"; };
 		60B7B70E2B3AFCF50050FA38 /* DSColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSColor.swift; sourceTree = "<group>"; };
+		60BD5FD02BC6AFFC0071A395 /* UIColor+Conveniences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Conveniences.swift"; sourceTree = "<group>"; };
 		60C1F78E2B3D66BF0067B21C /* DSButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSButton.swift; sourceTree = "<group>"; };
 		60C1F7902B3D99750067B21C /* DSSHadowModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSSHadowModifier.swift; sourceTree = "<group>"; };
 		60C1F7942B3DC62D0067B21C /* DSTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSTextField.swift; sourceTree = "<group>"; };
@@ -460,24 +442,12 @@
 		60EB99962B2B4D9800528039 /* DSScaledFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSScaledFont.swift; sourceTree = "<group>"; };
 		60EB99992B2B4E1D00528039 /* DSKitAppearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSKitAppearance.swift; sourceTree = "<group>"; };
 		60EB999C2B2B4E4700528039 /* DSDynamicColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSDynamicColor.swift; sourceTree = "<group>"; };
-		60EB999D2B2B4E4700528039 /* DSColorScheme+Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DSColorScheme+Color.swift"; sourceTree = "<group>"; };
-		60EB99A22B2B4EF500528039 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		60EB99A42B2B4F2300528039 /* Rescale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rescale.swift; sourceTree = "<group>"; };
-		60EB99A72B2B4F6600528039 /* ColorSpaces.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorSpaces.swift; sourceTree = "<group>"; };
 		60EB99B92B2B750100528039 /* DSTextFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSTextFont.swift; sourceTree = "<group>"; };
 		60EB99BD2B2B750200528039 /* DSTextStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSTextStyle.swift; sourceTree = "<group>"; };
 		60EB99BE2B2B750200528039 /* DSTextColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSTextColor.swift; sourceTree = "<group>"; };
 		60EB99CB2B2B755E00528039 /* DSText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSText.swift; sourceTree = "<group>"; };
-		60EB99CD2B2B75C900528039 /* DSSFSymbolConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSSFSymbolConfig.swift; sourceTree = "<group>"; };
 		60EB99D12B2B75F800528039 /* DSPriceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSPriceView.swift; sourceTree = "<group>"; };
-		60EB99D62B2B767900528039 /* String+Currency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Currency.swift"; sourceTree = "<group>"; };
-		60EB99D82B2B769800528039 /* NSAttributedString+Badge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Badge.swift"; sourceTree = "<group>"; };
-		60EB99DA2B2B76C800528039 /* UIImage+SFSymbol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+SFSymbol.swift"; sourceTree = "<group>"; };
-		60EB99DC2B2B77D400528039 /* Int+Cents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+Cents.swift"; sourceTree = "<group>"; };
-		60EB99DE2B2B847700528039 /* NSNumber+Cents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSNumber+Cents.swift"; sourceTree = "<group>"; };
-		60EB99E02B2B84B100528039 /* NSAttributedString+Size.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Size.swift"; sourceTree = "<group>"; };
-		60EB99E22B2B851C00528039 /* String+Size.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Size.swift"; sourceTree = "<group>"; };
-		60EB99F32B2C3A4000528039 /* UIColor+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+String.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -738,7 +708,6 @@
 				60EB99AF2B2B631800528039 /* Modifiers */,
 				60EB99402B2AFFEF00528039 /* DSKitCore.h */,
 				60EB99A62B2B4F2500528039 /* Helpers */,
-				60EB999B2B2B4E3300528039 /* Colors */,
 				60EB99982B2B4E1200528039 /* Appearances */,
 				60EB99822B2B4D1F00528039 /* Designable */,
 				60EB997C2B2B018600528039 /* Assets.xcassets */,
@@ -767,6 +736,7 @@
 				600935852BBAAA2800A1D1E6 /* DSPadding.swift */,
 				60EB998B2B2B4D3900528039 /* DSFonts.swift */,
 				60B7B70E2B3AFCF50050FA38 /* DSColor.swift */,
+				60EB999C2B2B4E4700528039 /* DSDynamicColor.swift */,
 				604B4B232B8CC03400EC6CCE /* DSSize.swift */,
 				604B4B252B8CC0A600EC6CCE /* DSSpace.swift */,
 				600935922BBBDE5300A1D1E6 /* DSViewColor.swift */,
@@ -797,36 +767,13 @@
 			path = Appearances;
 			sourceTree = "<group>";
 		};
-		60EB999B2B2B4E3300528039 /* Colors */ = {
-			isa = PBXGroup;
-			children = (
-				60EB99A72B2B4F6600528039 /* ColorSpaces.swift */,
-				60EB999C2B2B4E4700528039 /* DSDynamicColor.swift */,
-				60EB999D2B2B4E4700528039 /* DSColorScheme+Color.swift */,
-				60EB99A22B2B4EF500528039 /* UIColorExtension.swift */,
-			);
-			path = Colors;
-			sourceTree = "<group>";
-		};
 		60EB99A62B2B4F2500528039 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				603D394C2BAD71B200305FDE /* DSSize+Conveniences.swift */,
-				60EB99E22B2B851C00528039 /* String+Size.swift */,
-				60EB99E02B2B84B100528039 /* NSAttributedString+Size.swift */,
-				60EB99DE2B2B847700528039 /* NSNumber+Cents.swift */,
-				60EB99DC2B2B77D400528039 /* Int+Cents.swift */,
-				60EB99DA2B2B76C800528039 /* UIImage+SFSymbol.swift */,
-				60EB99D82B2B769800528039 /* NSAttributedString+Badge.swift */,
-				60EB99D62B2B767900528039 /* String+Currency.swift */,
-				60EB99CD2B2B75C900528039 /* DSSFSymbolConfig.swift */,
+				60BD5FD02BC6AFFC0071A395 /* UIColor+Conveniences.swift */,
 				60EB99A42B2B4F2300528039 /* Rescale.swift */,
-				60EB99F32B2C3A4000528039 /* UIColor+String.swift */,
-				600601942B33152900F2C616 /* CGSize+Hashable.swift */,
-				6080DC5C2B74CC9000255257 /* GeometryProxy+Convenience.swift */,
 				6080DC602B74D5D200255257 /* KeyboardObserver.swift */,
 				6080DC732B76243500255257 /* CGFloat+Conveniences.swift */,
-				604B4B3E2B8DDE9000EC6CCE /* Date+String.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -1208,19 +1155,16 @@
 				602CE4242B85E112002B79E2 /* DSPreview.swift in Sources */,
 				60EB99972B2B4D9800528039 /* DSScaledFont.swift in Sources */,
 				60EB998C2B2B4D3A00528039 /* DSTabbarAppearance.swift in Sources */,
-				60EB99E12B2B84B200528039 /* NSAttributedString+Size.swift in Sources */,
 				600935932BBBDE5300A1D1E6 /* DSViewColor.swift in Sources */,
 				600E3C192BB6047C00FA33EC /* DSToolbarSFSymbolButton.swift in Sources */,
 				600601BA2B3597A700F2C616 /* DSHStack.swift in Sources */,
 				604AA6402B88E129009EE906 /* DSHeightModifier.swift in Sources */,
 				600E3C1C2BB604D500FA33EC /* DSChevronView.swift in Sources */,
 				60EB999E2B2B4E4700528039 /* DSDynamicColor.swift in Sources */,
-				60EB99CE2B2B75C900528039 /* DSSFSymbolConfig.swift in Sources */,
 				60C1F79B2B3EF7900067B21C /* DSTextField+Factory.swift in Sources */,
 				60EB99912B2B4D3A00528039 /* DSPriceAppearance.swift in Sources */,
 				600E3C182BB6046300FA33EC /* DSSFSymbolButton.swift in Sources */,
 				6026D45C2B8494E50062846A /* DSPreviewForEachAppearance.swift in Sources */,
-				60EB99A32B2B4EF500528039 /* UIColorExtension.swift in Sources */,
 				60C1F79D2B3EF81C0067B21C /* DSTextfieldValidator.swift in Sources */,
 				600601AE2B34792500F2C616 /* DSCoverFlow.swift in Sources */,
 				600935862BBAAA2800A1D1E6 /* DSPadding.swift in Sources */,
@@ -1231,22 +1175,20 @@
 				6026D4442B837B9F0062846A /* DSOnTapModifier.swift in Sources */,
 				600601B02B347F0D00F2C616 /* DSGrid.swift in Sources */,
 				604B4B432B8E269100EC6CCE /* OrangeAppearance.swift in Sources */,
+				60BD5FD12BC6AFFC0071A395 /* UIColor+Conveniences.swift in Sources */,
 				60EB99C72B2B750200528039 /* DSTextStyle.swift in Sources */,
 				604B4B262B8CC0A600EC6CCE /* DSSpace.swift in Sources */,
 				60EB99422B2AFFEF00528039 /* DSKitCore.docc in Sources */,
 				600E3C1B2BB604BF00FA33EC /* DSQuantityPicker.swift in Sources */,
-				60EB99D72B2B767900528039 /* String+Currency.swift in Sources */,
 				604B4B5D2B90997500EC6CCE /* DSPrice.swift in Sources */,
 				604B4B332B8DC6E200EC6CCE /* DSCardMaxWidthKey.swift in Sources */,
 				60EB99CC2B2B755E00528039 /* DSText.swift in Sources */,
 				600601102B31D6A300F2C616 /* DSSizeModifier.swift in Sources */,
-				60EB99D92B2B769800528039 /* NSAttributedString+Badge.swift in Sources */,
 				600E3C162BB6041600FA33EC /* DSBottomContainer.swift in Sources */,
 				600E3C142BB6036F00FA33EC /* DSRatingView.swift in Sources */,
 				600E3C102BB5739900FA33EC /* DSScreen.swift in Sources */,
 				600601122B31E02500F2C616 /* DSTintColorModifier.swift in Sources */,
 				60EB998F2B2B4D3A00528039 /* DSViewAppearance.swift in Sources */,
-				60EB99DD2B2B77D400528039 /* Int+Cents.swift in Sources */,
 				60C1F7972B3EF5850067B21C /* DSCustomUITextField.swift in Sources */,
 				60EB99C82B2B750200528039 /* DSTextColor.swift in Sources */,
 				604B4B242B8CC03400EC6CCE /* DSSize.swift in Sources */,
@@ -1257,14 +1199,12 @@
 				600F68F72BAB317800ED1C9A /* DSCardStyleModifier.swift in Sources */,
 				600B98902B3C1626005935D2 /* BlackToneAppearance.swift in Sources */,
 				604B4B2D2B8CC81D00EC6CCE /* DSCardHorizontalPaddingKey.swift in Sources */,
-				600601952B33152900F2C616 /* CGSize+Hashable.swift in Sources */,
 				604B4B372B8DCA2000EC6CCE /* DSCardBackgroundColor.swift in Sources */,
 				60C1F7912B3D99750067B21C /* DSSHadowModifier.swift in Sources */,
 				60306B7D2B2C535B0020EBFF /* DSImage.swift in Sources */,
 				60EB998D2B2B4D3A00528039 /* DSButtonAppearance.swift in Sources */,
 				6006010E2B31CDC300F2C616 /* DSDisplayShapeModifier.swift in Sources */,
 				600601CE2B35D0E300F2C616 /* DSHScroll.swift in Sources */,
-				60EB99DF2B2B847700528039 /* NSNumber+Cents.swift in Sources */,
 				600601D22B35DDAE00F2C616 /* DSBlurBackgroundModifier.swift in Sources */,
 				600E3C1D2BB604FB00FA33EC /* DSTermsAndConditionsView.swift in Sources */,
 				600B98922B3C1626005935D2 /* DarkLightAppearance.swift in Sources */,
@@ -1273,22 +1213,17 @@
 				606FA7582B9857B5003DEA59 /* DSDebuggableModifier.swift in Sources */,
 				60C1F78F2B3D66BF0067B21C /* DSButton.swift in Sources */,
 				6080DC612B74D5D200255257 /* KeyboardObserver.swift in Sources */,
-				60EB99A82B2B4F6600528039 /* ColorSpaces.swift in Sources */,
 				603D39472BAD70F100305FDE /* DSSectionStyleModifier.swift in Sources */,
 				6009358A2BBAAFD100A1D1E6 /* DSDimension.swift in Sources */,
-				60EB99DB2B2B76C800528039 /* UIImage+SFSymbol.swift in Sources */,
 				6074DF4A2BA342880006284C /* DSSelectedStyleModifier.swift in Sources */,
 				6006010C2B31CD5C00F2C616 /* DSContentModeModifier.swift in Sources */,
 				600B98962B3C66DC005935D2 /* DSSecondaryBackgroundModifier.swift in Sources */,
 				600E3C172BB6044800FA33EC /* DSGroupedList.swift in Sources */,
-				60EB99E32B2B851C00528039 /* String+Size.swift in Sources */,
 				600601CA2B35CEC800F2C616 /* DSCornerRadiusModifier.swift in Sources */,
-				60EB999F2B2B4E4700528039 /* DSColorScheme+Color.swift in Sources */,
 				60EB998E2B2B4D3A00528039 /* DSTextFieldAppearance.swift in Sources */,
 				604B4B412B8E24AD00EC6CCE /* RetroAppearance.swift in Sources */,
 				60EB99922B2B4D3A00528039 /* DSNavigationBarAppearance.swift in Sources */,
 				6074DF462BA30DFA0006284C /* DSDesignable.swift in Sources */,
-				6080DC5D2B74CC9000255257 /* GeometryProxy+Convenience.swift in Sources */,
 				604B4B2F2B8CD7EF00EC6CCE /* DSCardContentHeightKey.swift in Sources */,
 				602CE4292B8770E0002B79E2 /* DSDebugLayoutModifier.swift in Sources */,
 				600601BC2B35B0D900F2C616 /* DSVStack.swift in Sources */,
@@ -1304,17 +1239,14 @@
 				60EB99942B2B4D3A00528039 /* DSFonts.swift in Sources */,
 				604B4B312B8CDCDD00EC6CCE /* DSCard.swift in Sources */,
 				600E3C1A2BB6049B00FA33EC /* DSSectionHeaderView.swift in Sources */,
-				603D394E2BAD71B300305FDE /* DSSize+Conveniences.swift in Sources */,
 				60C1F7992B3EF5C40067B21C /* DSTextFieldValue.swift in Sources */,
 				604AA6422B88E4E6009EE906 /* DSWidthModifier.swift in Sources */,
 				600B98912B3C1626005935D2 /* ShopAppearance.swift in Sources */,
 				602CE4272B874078002B79E2 /* DSDesignGuideView.swift in Sources */,
 				60EB999A2B2B4E1D00528039 /* DSKitAppearance.swift in Sources */,
 				60EB99932B2B4D3A00528039 /* DSTextAppearance.swift in Sources */,
-				604B4B3F2B8DDE9000EC6CCE /* Date+String.swift in Sources */,
 				60EB99812B2B49DB00528039 /* DSPaddingModifier.swift in Sources */,
 				60EB99A52B2B4F2300528039 /* Rescale.swift in Sources */,
-				60EB99F42B2C3A4000528039 /* UIColor+String.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

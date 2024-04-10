@@ -22,7 +22,6 @@ public extension EnvironmentValues {
 
 public protocol DSAppearance {
     var title: String { get set }
-    var brandColor: UIColor { get set }
     var primaryView: DSViewAppearanceProtocol { get set }
     var secondaryView: DSViewAppearanceProtocol { get set }
     var spacing: DSSpacingProtocol { get set }

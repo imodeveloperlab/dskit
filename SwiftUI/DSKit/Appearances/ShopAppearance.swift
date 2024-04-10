@@ -11,7 +11,6 @@ import UIKit
 public class ShopAppearance: DSAppearance {
     
     public var title: String
-    public var brandColor: UIColor
     public var primaryView: DSViewAppearanceProtocol
     public var secondaryView: DSViewAppearanceProtocol
     public var spacing: DSSpacingProtocol = DSSpacingSystem(spatialSystem: 7)
@@ -28,7 +27,6 @@ public class ShopAppearance: DSAppearance {
     public init(brandColor: UIColor? = nil, title: String = "Shop") {
         
         self.title = title
-        self.brandColor = brandColor ?? DSDynamicColor.color(light: 0x1DA1F2, dark: 0x1DA1F2)
         
         // MARK: - Primary view
         
@@ -87,7 +85,7 @@ public class ShopAppearance: DSAppearance {
             barTint: primaryView.background,
             itemTint: primaryView.button.background,
             unselectedItemTint: secondaryText.subheadline,
-            badge: self.brandColor,
+            badge: primaryView.button.background,
             translucent: true
         )
         

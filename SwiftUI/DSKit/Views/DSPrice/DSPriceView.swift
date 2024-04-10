@@ -40,7 +40,7 @@ public struct DSPriceView: View {
         DSHStack(spacing: .small) {
             
             DSHStack(spacing: .zero) {
-                DSText(currency.currencySymbol)
+                DSText(currency)
                     .dsTextStyle(textFont, amountColor)
                 DSText(amount)
                     .dsTextStyle(textFont, amountColor)

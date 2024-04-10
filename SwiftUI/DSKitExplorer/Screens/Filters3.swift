@@ -87,7 +87,7 @@ extension Filters3 {
                 DSText(title).dsTextStyle(.smallHeadline)
                 Spacer()
                 Toggle("Show welcome message", isOn: $isSwitchOn)
-                    .tint(appearance.brandColor.semanticGreenColor.color)
+                    .tint(Color.green)
                     .labelsHidden()
             }.dsCardStyle()
         }
@@ -104,7 +104,7 @@ extension Filters3 {
             DSHStack {
                 DSText(title).dsTextStyle(.smallHeadline)
                 Spacer()
-                Slider(value: $value, in: 0...100).tint(appearance.brandColor.semanticGreenColor.color)
+                Slider(value: $value, in: 0...100).tint(Color.green)
                 DSText("\(round(value))").dsTextStyle(.subheadline)
                     .dsWidth(40)
             }.dsCardStyle()

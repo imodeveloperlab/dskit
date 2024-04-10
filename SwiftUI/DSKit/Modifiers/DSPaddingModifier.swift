@@ -7,6 +7,17 @@
 
 import SwiftUI
 
+public struct DSParentPaddingKey: EnvironmentKey {
+    public static let defaultValue: CGFloat = 0
+}
+
+public extension EnvironmentValues {
+    var parentPadding: CGFloat {
+        get { self[DSParentPaddingKey.self] }
+        set { self[DSParentPaddingKey.self] = newValue }
+    }
+}
+
 public struct DSPaddingModifier: ViewModifier {
     
     @Environment(\.appearance) var appearance: DSAppearance
@@ -19,9 +30,7 @@ public struct DSPaddingModifier: ViewModifier {
     }
     
     public func body(content: Content) -> some View {
-        
         let padding = getPadding()
-        
         content
             .padding(edge, padding)
             .environment(\.parentPadding, padding)

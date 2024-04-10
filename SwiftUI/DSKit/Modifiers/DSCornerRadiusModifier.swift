@@ -8,6 +8,17 @@
 
 import SwiftUI
 
+struct DSParentCornerRadiusKey: EnvironmentKey {
+    static let defaultValue: CGFloat = 0
+}
+
+extension EnvironmentValues {
+    var parentCornerRadius: CGFloat {
+        get { self[DSParentCornerRadiusKey.self] }
+        set { self[DSParentCornerRadiusKey.self] = newValue }
+    }
+}
+
 public struct DSCornerRadiusModifier: ViewModifier {
     
     @Environment(\.appearance) var appearance: DSAppearance

@@ -102,12 +102,6 @@
 		604B4B242B8CC03400EC6CCE /* DSSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604B4B232B8CC03400EC6CCE /* DSSize.swift */; };
 		604B4B262B8CC0A600EC6CCE /* DSSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604B4B252B8CC0A600EC6CCE /* DSSpace.swift */; };
 		604B4B282B8CC0C400EC6CCE /* DSSpacingSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604B4B272B8CC0C400EC6CCE /* DSSpacingSystem.swift */; };
-		604B4B2B2B8CC7D600EC6CCE /* DSCardVerticalPaddingKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604B4B2A2B8CC7D600EC6CCE /* DSCardVerticalPaddingKey.swift */; };
-		604B4B2D2B8CC81D00EC6CCE /* DSCardHorizontalPaddingKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604B4B2C2B8CC81D00EC6CCE /* DSCardHorizontalPaddingKey.swift */; };
-		604B4B2F2B8CD7EF00EC6CCE /* DSCardContentHeightKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604B4B2E2B8CD7EF00EC6CCE /* DSCardContentHeightKey.swift */; };
-		604B4B312B8CDCDD00EC6CCE /* DSCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604B4B302B8CDCDD00EC6CCE /* DSCard.swift */; };
-		604B4B332B8DC6E200EC6CCE /* DSCardMaxWidthKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604B4B322B8DC6E200EC6CCE /* DSCardMaxWidthKey.swift */; };
-		604B4B372B8DCA2000EC6CCE /* DSCardBackgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604B4B362B8DCA2000EC6CCE /* DSCardBackgroundColor.swift */; };
 		604B4B392B8DCD8400EC6CCE /* NotificationsScreen1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604B4B382B8DCD8400EC6CCE /* NotificationsScreen1.swift */; };
 		604B4B3B2B8DD71200EC6CCE /* AboutUsScreen1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604B4B3A2B8DD71200EC6CCE /* AboutUsScreen1.swift */; };
 		604B4B3D2B8DDADF00EC6CCE /* AboutUsScreen2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604B4B3C2B8DDADF00EC6CCE /* AboutUsScreen2.swift */; };
@@ -129,7 +123,6 @@
 		604B4B682B90BFE400EC6CCE /* CartScreen4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604B4B672B90BFE400EC6CCE /* CartScreen4.swift */; };
 		604B4B6A2B90C45300EC6CCE /* CartScreen5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604B4B692B90C45300EC6CCE /* CartScreen5.swift */; };
 		604B4B6C2B90D4B900EC6CCE /* ItemDetails1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604B4B6B2B90D4B900EC6CCE /* ItemDetails1.swift */; };
-		605682632B91C61100228A10 /* DSCard+Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605682622B91C61100228A10 /* DSCard+Padding.swift */; };
 		6056826B2B91F4FF00228A10 /* ItemDetails2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6056826A2B91F4FF00228A10 /* ItemDetails2.swift */; };
 		6056826D2B9201E300228A10 /* ItemDetails3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6056826C2B9201E300228A10 /* ItemDetails3.swift */; };
 		6056826F2B920B3D00228A10 /* ItemDetails4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6056826E2B920B3D00228A10 /* ItemDetails4.swift */; };
@@ -139,8 +132,6 @@
 		605682772B921D3900228A10 /* Items3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605682762B921D3900228A10 /* Items3.swift */; };
 		605682792B92202500228A10 /* Items4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605682782B92202500228A10 /* Items4.swift */; };
 		6056827B2B95AF8400228A10 /* Items5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6056827A2B95AF8300228A10 /* Items5.swift */; };
-		6056827D2B95B8BE00228A10 /* DSParentPaddingKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6056827C2B95B8BD00228A10 /* DSParentPaddingKey.swift */; };
-		6056827F2B95B8EB00228A10 /* DSParentCornerRadiusKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6056827E2B95B8EB00228A10 /* DSParentCornerRadiusKey.swift */; };
 		605682812B95F81000228A10 /* Items6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605682802B95F80F00228A10 /* Items6.swift */; };
 		605682832B95F9D100228A10 /* Items7.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605682822B95F9D100228A10 /* Items7.swift */; };
 		605682852B95FBBF00228A10 /* Items8.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605682842B95FBBF00228A10 /* Items8.swift */; };
@@ -341,12 +332,6 @@
 		604B4B232B8CC03400EC6CCE /* DSSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSSize.swift; sourceTree = "<group>"; };
 		604B4B252B8CC0A600EC6CCE /* DSSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSSpace.swift; sourceTree = "<group>"; };
 		604B4B272B8CC0C400EC6CCE /* DSSpacingSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSSpacingSystem.swift; sourceTree = "<group>"; };
-		604B4B2A2B8CC7D600EC6CCE /* DSCardVerticalPaddingKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSCardVerticalPaddingKey.swift; sourceTree = "<group>"; };
-		604B4B2C2B8CC81D00EC6CCE /* DSCardHorizontalPaddingKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSCardHorizontalPaddingKey.swift; sourceTree = "<group>"; };
-		604B4B2E2B8CD7EF00EC6CCE /* DSCardContentHeightKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSCardContentHeightKey.swift; sourceTree = "<group>"; };
-		604B4B302B8CDCDD00EC6CCE /* DSCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSCard.swift; sourceTree = "<group>"; };
-		604B4B322B8DC6E200EC6CCE /* DSCardMaxWidthKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSCardMaxWidthKey.swift; sourceTree = "<group>"; };
-		604B4B362B8DCA2000EC6CCE /* DSCardBackgroundColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSCardBackgroundColor.swift; sourceTree = "<group>"; };
 		604B4B382B8DCD8400EC6CCE /* NotificationsScreen1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsScreen1.swift; sourceTree = "<group>"; };
 		604B4B3A2B8DD71200EC6CCE /* AboutUsScreen1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutUsScreen1.swift; sourceTree = "<group>"; };
 		604B4B3C2B8DDADF00EC6CCE /* AboutUsScreen2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutUsScreen2.swift; sourceTree = "<group>"; };
@@ -370,7 +355,6 @@
 		604B4B672B90BFE400EC6CCE /* CartScreen4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartScreen4.swift; sourceTree = "<group>"; };
 		604B4B692B90C45300EC6CCE /* CartScreen5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartScreen5.swift; sourceTree = "<group>"; };
 		604B4B6B2B90D4B900EC6CCE /* ItemDetails1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetails1.swift; sourceTree = "<group>"; };
-		605682622B91C61100228A10 /* DSCard+Padding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DSCard+Padding.swift"; sourceTree = "<group>"; };
 		6056826A2B91F4FF00228A10 /* ItemDetails2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetails2.swift; sourceTree = "<group>"; };
 		6056826C2B9201E300228A10 /* ItemDetails3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetails3.swift; sourceTree = "<group>"; };
 		6056826E2B920B3D00228A10 /* ItemDetails4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetails4.swift; sourceTree = "<group>"; };
@@ -380,8 +364,6 @@
 		605682762B921D3900228A10 /* Items3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Items3.swift; sourceTree = "<group>"; };
 		605682782B92202500228A10 /* Items4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Items4.swift; sourceTree = "<group>"; };
 		6056827A2B95AF8300228A10 /* Items5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Items5.swift; sourceTree = "<group>"; };
-		6056827C2B95B8BD00228A10 /* DSParentPaddingKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSParentPaddingKey.swift; sourceTree = "<group>"; };
-		6056827E2B95B8EB00228A10 /* DSParentCornerRadiusKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSParentCornerRadiusKey.swift; sourceTree = "<group>"; };
 		605682802B95F80F00228A10 /* Items6.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Items6.swift; sourceTree = "<group>"; };
 		605682822B95F9D100228A10 /* Items7.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Items7.swift; sourceTree = "<group>"; };
 		605682842B95FBBF00228A10 /* Items8.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Items8.swift; sourceTree = "<group>"; };
@@ -660,22 +642,6 @@
 			path = Image;
 			sourceTree = "<group>";
 		};
-		604B4B352B8DC85200EC6CCE /* Content */ = {
-			isa = PBXGroup;
-			children = (
-				604B4B302B8CDCDD00EC6CCE /* DSCard.swift */,
-				605682622B91C61100228A10 /* DSCard+Padding.swift */,
-				604B4B2A2B8CC7D600EC6CCE /* DSCardVerticalPaddingKey.swift */,
-				6056827C2B95B8BD00228A10 /* DSParentPaddingKey.swift */,
-				6056827E2B95B8EB00228A10 /* DSParentCornerRadiusKey.swift */,
-				604B4B2C2B8CC81D00EC6CCE /* DSCardHorizontalPaddingKey.swift */,
-				604B4B2E2B8CD7EF00EC6CCE /* DSCardContentHeightKey.swift */,
-				604B4B322B8DC6E200EC6CCE /* DSCardMaxWidthKey.swift */,
-				604B4B362B8DCA2000EC6CCE /* DSCardBackgroundColor.swift */,
-			);
-			path = Content;
-			sourceTree = "<group>";
-		};
 		60EB99332B2AFFEF00528039 = {
 			isa = PBXGroup;
 			children = (
@@ -812,7 +778,6 @@
 		60EB99B22B2B74C300528039 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				604B4B352B8DC85200EC6CCE /* Content */,
 				60306B6F2B2C53500020EBFF /* Image */,
 				60EB99B42B2B74F700528039 /* Text */,
 				600601AD2B34792500F2C616 /* DSCoverFlow.swift */,
@@ -1181,7 +1146,6 @@
 				60EB99422B2AFFEF00528039 /* DSKitCore.docc in Sources */,
 				600E3C1B2BB604BF00FA33EC /* DSQuantityPicker.swift in Sources */,
 				604B4B5D2B90997500EC6CCE /* DSPrice.swift in Sources */,
-				604B4B332B8DC6E200EC6CCE /* DSCardMaxWidthKey.swift in Sources */,
 				60EB99CC2B2B755E00528039 /* DSText.swift in Sources */,
 				600601102B31D6A300F2C616 /* DSSizeModifier.swift in Sources */,
 				600E3C162BB6041600FA33EC /* DSBottomContainer.swift in Sources */,
@@ -1198,8 +1162,6 @@
 				604B4B532B906EF900EC6CCE /* DSMaxWidthCenteredModifier.swift in Sources */,
 				600F68F72BAB317800ED1C9A /* DSCardStyleModifier.swift in Sources */,
 				600B98902B3C1626005935D2 /* BlackToneAppearance.swift in Sources */,
-				604B4B2D2B8CC81D00EC6CCE /* DSCardHorizontalPaddingKey.swift in Sources */,
-				604B4B372B8DCA2000EC6CCE /* DSCardBackgroundColor.swift in Sources */,
 				60C1F7912B3D99750067B21C /* DSSHadowModifier.swift in Sources */,
 				60306B7D2B2C535B0020EBFF /* DSImage.swift in Sources */,
 				60EB998D2B2B4D3A00528039 /* DSButtonAppearance.swift in Sources */,
@@ -1224,20 +1186,14 @@
 				604B4B412B8E24AD00EC6CCE /* RetroAppearance.swift in Sources */,
 				60EB99922B2B4D3A00528039 /* DSNavigationBarAppearance.swift in Sources */,
 				6074DF462BA30DFA0006284C /* DSDesignable.swift in Sources */,
-				604B4B2F2B8CD7EF00EC6CCE /* DSCardContentHeightKey.swift in Sources */,
 				602CE4292B8770E0002B79E2 /* DSDebugLayoutModifier.swift in Sources */,
 				600601BC2B35B0D900F2C616 /* DSVStack.swift in Sources */,
 				600935882BBAAAE400A1D1E6 /* DSPaddingSystem.swift in Sources */,
-				605682632B91C61100228A10 /* DSCard+Padding.swift in Sources */,
 				60C1F7952B3DC62D0067B21C /* DSTextField.swift in Sources */,
 				600742872BB6D89900B7EE75 /* DSCustomBackgroundModifier.swift in Sources */,
 				60C5B31C2B7A4D9B00A23D40 /* DSImageView.swift in Sources */,
-				6056827D2B95B8BE00228A10 /* DSParentPaddingKey.swift in Sources */,
 				600E3C132BB602FF00FA33EC /* DSPickerView.swift in Sources */,
-				604B4B2B2B8CC7D600EC6CCE /* DSCardVerticalPaddingKey.swift in Sources */,
-				6056827F2B95B8EB00228A10 /* DSParentCornerRadiusKey.swift in Sources */,
 				60EB99942B2B4D3A00528039 /* DSFonts.swift in Sources */,
-				604B4B312B8CDCDD00EC6CCE /* DSCard.swift in Sources */,
 				600E3C1A2BB6049B00FA33EC /* DSSectionHeaderView.swift in Sources */,
 				60C1F7992B3EF5C40067B21C /* DSTextFieldValue.swift in Sources */,
 				604AA6422B88E4E6009EE906 /* DSWidthModifier.swift in Sources */,

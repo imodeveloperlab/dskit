@@ -21,6 +21,7 @@ public struct DSKitAppearance: DSAppearance {
     public var price: DSPriceAppearanceProtocol
     public var fonts: DSFontsProtocol = DSFonts()
     public var actionElementHeight: CGFloat = 48
+    public var screenMargins: CGFloat = 16
     
     /// Init DSKit appearance with specific brand color
     /// - Parameter brandColor: UIColor

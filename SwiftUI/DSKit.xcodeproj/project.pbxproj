@@ -136,6 +136,7 @@
 		605682872B960DB000228A10 /* Categories1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605682862B960DB000228A10 /* Categories1.swift */; };
 		6056828B2B96145C00228A10 /* Categories2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6056828A2B96145C00228A10 /* Categories2.swift */; };
 		6056828D2B96164C00228A10 /* Categories3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6056828C2B96164C00228A10 /* Categories3.swift */; };
+		606B7BB42BC9578400EE7069 /* DSContentMarginsModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606B7BB32BC9578400EE7069 /* DSContentMarginsModifier.swift */; };
 		606FA7182B97071F003DEA59 /* Categories4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606FA7172B97071F003DEA59 /* Categories4.swift */; };
 		606FA71A2B9708A9003DEA59 /* Categories5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606FA7192B9708A9003DEA59 /* Categories5.swift */; };
 		606FA71C2B970E73003DEA59 /* Order1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606FA71B2B970E73003DEA59 /* Order1.swift */; };
@@ -368,6 +369,7 @@
 		6056828A2B96145C00228A10 /* Categories2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Categories2.swift; sourceTree = "<group>"; };
 		6056828C2B96164C00228A10 /* Categories3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Categories3.swift; sourceTree = "<group>"; };
 		605E54192BAC6FF400D2BA27 /* DSRadioPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSRadioPickerView.swift; sourceTree = "<group>"; };
+		606B7BB32BC9578400EE7069 /* DSContentMarginsModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSContentMarginsModifier.swift; sourceTree = "<group>"; };
 		606FA7172B97071F003DEA59 /* Categories4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Categories4.swift; sourceTree = "<group>"; };
 		606FA7192B9708A9003DEA59 /* Categories5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Categories5.swift; sourceTree = "<group>"; };
 		606FA71B2B970E73003DEA59 /* Order1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Order1.swift; sourceTree = "<group>"; };
@@ -745,6 +747,7 @@
 				6074DF492BA342880006284C /* DSSelectedStyleModifier.swift */,
 				600F68F62BAB317800ED1C9A /* DSCardStyleModifier.swift */,
 				600E3C112BB5742800FA33EC /* DSScreenModifier.swift */,
+				606B7BB32BC9578400EE7069 /* DSContentMarginsModifier.swift */,
 				603D39462BAD70F100305FDE /* DSSectionStyleModifier.swift */,
 				6006010B2B31CD5C00F2C616 /* DSContentModeModifier.swift */,
 				604B4B522B906EF900EC6CCE /* DSMaxWidthCenteredModifier.swift */,
@@ -1192,6 +1195,7 @@
 				600B98912B3C1626005935D2 /* ShopAppearance.swift in Sources */,
 				602CE4272B874078002B79E2 /* DSDesignGuideView.swift in Sources */,
 				60EB999A2B2B4E1D00528039 /* DSKitAppearance.swift in Sources */,
+				606B7BB42BC9578400EE7069 /* DSContentMarginsModifier.swift in Sources */,
 				60EB99932B2B4D3A00528039 /* DSTextAppearance.swift in Sources */,
 				60EB99812B2B49DB00528039 /* DSPaddingModifier.swift in Sources */,
 				60EB99A52B2B4F2300528039 /* Rescale.swift in Sources */,

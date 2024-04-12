@@ -31,6 +31,7 @@ public protocol DSAppearance {
     var price: DSPriceAppearanceProtocol { get set }
     var fonts: DSFontsProtocol { get set }
     var actionElementHeight: CGFloat { get set }
+    var screenMargins: CGFloat { get set }
     func style(for viewStyle: DSViewStyle) -> DSViewAppearanceProtocol
 }
 

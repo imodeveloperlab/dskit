@@ -23,7 +23,7 @@ public class OrangeAppearance: DSAppearance {
     public var price: DSPriceAppearanceProtocol
     public var fonts: DSFontsProtocol = DSFonts()
     public var actionElementHeight: CGFloat = 48
-    
+    public var screenMargins: CGFloat = 16
     
     public init(brandColor: UIColor? = nil, title: String = "Orange") {
         

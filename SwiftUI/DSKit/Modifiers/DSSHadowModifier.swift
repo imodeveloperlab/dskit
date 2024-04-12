@@ -25,7 +25,7 @@ public struct DSShadowModifier: ViewModifier {
         self.xOffset = xOffset
         self.yOffset = yOffset
     }
-
+    
     public func body(content: Content) -> some View {
         ZStack(alignment: .top) {
             content
@@ -52,22 +52,22 @@ public extension View {
 struct DSShadowModifier_Previews: PreviewProvider {
     static var previews: some View {
         DSPreviewForEachAppearance { DSPreview {
-                ScrollView {
-                    DSText("Card")
-                        .dsPadding()
-                        .dsSecondaryBackground()
-                        .dsCornerRadius()
-                        .dsPadding()
-                }.safeAreaInset(edge: .bottom) {
-                    DSText("Bottom")
-                        .dsPadding()
-                        .dsSecondaryBackground()
-                        .dsCornerRadius()
-                        .dsPadding(.horizontal)
+            ScrollView {
+                DSText("Card")
+                    .dsPadding()
+                    .dsSecondaryBackground()
+                    .dsCornerRadius()
+                    .dsPadding()
+            }.safeAreaInset(edge: .bottom) {
+                DSText("Bottom")
+                    .dsPadding()
+                    .dsSecondaryBackground()
+                    .dsCornerRadius()
+                    .dsPadding(.horizontal)
                     .dsPadding(.horizontal)
                     .topShadow(padding: .regular)
-                }
             }
+        }
         }
     }
 }

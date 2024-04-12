@@ -10,8 +10,8 @@ import SwiftUI
 public struct DSHScroll<Data, ID, Content>: View where Data: RandomAccessCollection, ID: Hashable, Content: View{
     
     @Environment(\.appearance) var appearance: DSAppearance
-    @Environment(\.dsScrollableContentMarginKey) var scrollableContentMargin: DSSpace
-    @Environment(\.dsContentMarginKey) var contentMargin: DSSpace
+    @Environment(\.dsScrollableContentMarginKey) var scrollableContentMargin: CGFloat
+    @Environment(\.dsContentMarginKey) var contentMargin: CGFloat
     
     let spacing: DSSpace
     
@@ -37,10 +37,10 @@ public struct DSHScroll<Data, ID, Content>: View where Data: RandomAccessCollect
                 ForEach(data, id: id) { element in
                     self.content(element)
                 }
-            }.dsPadding(.horizontal, .custom(appearance.spacing.value(for: scrollableContentMargin)))
+            }.padding(.horizontal, scrollableContentMargin)
         }
-        .dsPadding(.horizontal, .custom(-appearance.spacing.value(for: scrollableContentMargin)))
-        .dsPadding(.horizontal, .custom(appearance.spacing.value(for: contentMargin)))
+        .padding(.horizontal, -scrollableContentMargin)
+        .padding(.horizontal, contentMargin)
     }
 }
 

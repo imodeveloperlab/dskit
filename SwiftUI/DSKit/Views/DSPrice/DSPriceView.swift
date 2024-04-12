@@ -8,9 +8,11 @@
 
 import SwiftUI
 
-public struct DSPriceView: View {
+public struct DSPriceView: View, DSDesignable {
     
-    @Environment(\.appearance) var appearance: DSAppearance
+    @Environment(\.appearance) public var appearance: DSAppearance
+    @Environment(\.viewStyle) public var viewStyle: DSViewStyle
+    
     let amount: String
     let regularAmount: String?
     let currency: String
@@ -47,12 +49,16 @@ public struct DSPriceView: View {
             }
             
             if let regularAmount = regularAmount {
-                DSHStack(spacing: .zero) {
+                ZStack {
                     DSText(regularAmount)
                         .dsTextStyle(textFont, amountColor)
-                        .opacity(0.5)
+                        .overlay(alignment: .center) {
+                            Rectangle()
+                                .frame(height: 1)
+                                .foregroundColor(color(for: amountColor))
+                                .offset(y: 1)
+                        }.opacity(0.5)
                 }
-                .strikethrough()
             }
             
             if let discountBadge = discountBadge {

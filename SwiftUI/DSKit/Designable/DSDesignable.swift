@@ -20,4 +20,8 @@ public extension DSDesignable {
     var navigationBarColors: DSNavigationBarAppearanceProtocol {
         return appearance.navigationBar
     }
+    
+    func color(for colorKey: DSColorKey) -> Color {
+        appearance.color(for: colorKey, viewStyle: viewStyle)
+    }
 }

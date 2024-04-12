@@ -35,6 +35,12 @@ public protocol DSAppearance {
     func style(for viewStyle: DSViewStyle) -> DSViewAppearanceProtocol
 }
 
+extension DSAppearance {
+    func color(for colorKey: DSColorKey, viewStyle: DSViewStyle) -> Color {
+        colorKey.color(for: self, and: viewStyle)
+    }
+}
+
 public extension DSAppearance {
     func overrideTheSystemAppearance() {
         let navigationBarAppearance = UINavigationBarAppearance()

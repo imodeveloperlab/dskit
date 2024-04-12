@@ -568,7 +568,7 @@
 			children = (
 				600742992BB6F66100B7EE75 /* DSKitExplorerTestPlan.xctestplan */,
 				602CE37F2B84EFCD002B79E2 /* DSKitExplorer */,
-				60EB993F2B2AFFEF00528039 /* DSKit */,
+				60EB993F2B2AFFEF00528039 /* Sources */,
 				600E3C3F2BB6C28E00FA33EC /* DSKitTests */,
 				6007428E2BB6F55500B7EE75 /* DSKitExplorerTests */,
 				60EB993E2B2AFFEF00528039 /* Products */,
@@ -587,7 +587,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		60EB993F2B2AFFEF00528039 /* DSKit */ = {
+		60EB993F2B2AFFEF00528039 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				60EB99B22B2B74C300528039 /* Views */,
@@ -599,7 +599,7 @@
 				60EB997C2B2B018600528039 /* Assets.xcassets */,
 				60EB99412B2AFFEF00528039 /* DSKitCore.docc */,
 			);
-			path = DSKit;
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		60EB99822B2B4D1F00528039 /* Designable */ = {

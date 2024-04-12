@@ -193,17 +193,17 @@ final class CartScreen5Model: ObservableObject {
         .init(
             title: "New Balance",
             price: DSPrice(amount: "250", regularAmount: "290", currency: "$"),
-            image: URL.sneakersWhiteOnYellowBg
+            image: sneakersWhiteOnYellowBg
         ),
         .init(
             title: "Big Pony Mesh",
             price: DSPrice(amount: "120", currency: "$"),
-            image: URL.sneakersThreePairs
+            image: sneakersThreePairs
         ),
         .init(
             title: "Mesh Long-Sleev",
             price: DSPrice(amount: "145", currency: "$"),
-            image: URL.sneakersOnWhiteBg
+            image: sneakersOnWhiteBg
         )
     ]
 }
@@ -230,11 +230,11 @@ struct CartScreen5_Previews: PreviewProvider {
 }
 
 // MARK: - Image Links
-
 fileprivate let p1Image = URL(string: "https://images.pexels.com/photos/3885502/pexels-photo-3885502.jpeg?cs=srgb&dl=pexels-gustavo-fring-3885502.jpg&fm=jpg")
-
 fileprivate let p2Image = URL(string: "https://images.pexels.com/photos/374808/pexels-photo-374808.jpeg?cs=srgb&dl=pexels-burst-374808.jpg&fm=jpg")
-
 fileprivate let p3Image = URL(string: "https://images.pexels.com/photos/6140100/pexels-photo-6140100.jpeg?cs=srgb&dl=pexels-furkanfdemir-6140100.jpg&fm=jpg")
-
 fileprivate let p4Image = URL(string: "https://images.pexels.com/photos/1895913/pexels-photo-1895913.png?cs=srgb&dl=pexels-keli-santos-1895913.jpg&fm=jpg")
+
+fileprivate let sneakersWhiteOnYellowBg = URL(string: "https://images.pexels.com/photos/2421374/pexels-photo-2421374.jpeg?cs=srgb&dl=pexels-hoang-loc-2421374.jpg&fm=jpg")
+fileprivate let sneakersThreePairs = URL(string: "https://images.pexels.com/photos/2300334/pexels-photo-2300334.jpeg?cs=srgb&dl=pexels-adrian-dorobantu-2300334.jpg&fm=jpg")
+fileprivate let sneakersOnWhiteBg = URL(string: "https://images.pexels.com/photos/1858404/pexels-photo-1858404.jpeg?cs=srgb&dl=pexels-athena-1858404.jpg&fm=jpg")

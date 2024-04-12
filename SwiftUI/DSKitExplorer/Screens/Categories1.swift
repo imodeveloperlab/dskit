@@ -71,7 +71,7 @@ final class Categories1Model {
         .init(
             title: "Shoes",
             description: "812 items",
-            image: URL.purpleShoes
+            image: purpleShoes
         ),
         .init(
              title: "Shirts",
@@ -80,12 +80,12 @@ final class Categories1Model {
         .init(
              title: "Jeans",
              description: "345 items",
-             image: URL.jeansPairs
+             image: jeansPairs
          ),
         .init(
              title: "Watches",
              description: "20K items",
-             image: URL.watchesOnYellowBg
+             image: watchesOnYellowBg
          ),
         .init(
              title: "Shorts",
@@ -94,7 +94,7 @@ final class Categories1Model {
         .init(
             title: "Track Pants",
             description: "600 items",
-            image: URL.pantsTrack
+            image: pantsTrack
         ),
         .init(
             title: "Jackets",
@@ -103,7 +103,7 @@ final class Categories1Model {
         .init(
             title: "Blazers",
             description: "915 items",
-            image: URL.blazers
+            image: blazers
         ),
         .init(
             title: "Socks",
@@ -131,3 +131,8 @@ struct Categories1_Previews: PreviewProvider {
     }
 }
 
+fileprivate let purpleShoes = URL(string: "https://images.pexels.com/photos/2351858/pexels-photo-2351858.jpeg?cs=srgb&dl=pexels-lorena-mart%C3%ADnez-2351858.jpg&fm=jpg")
+fileprivate let jeansPairs = URL(string: "https://images.pexels.com/photos/4210863/pexels-photo-4210863.jpeg?cs=srgb&dl=pexels-karolina-grabowska-4210863.jpg&fm=jpg")
+fileprivate let watchesOnYellowBg = URL(string: "https://images.pexels.com/photos/277390/pexels-photo-277390.jpeg?cs=srgb&dl=pexels-pixabay-277390.jpg&fm=jpg")
+fileprivate let pantsTrack = URL(string: "https://images.pexels.com/photos/5067705/pexels-photo-5067705.jpeg?cs=srgb&dl=pexels-anna-shvets-5067705.jpg&fm=jpg")
+fileprivate let blazers = URL(string: "https://images.pexels.com/photos/3555456/pexels-photo-3555456.jpeg?cs=srgb&dl=pexels-mikotoraw-3555456.jpg&fm=jpg")

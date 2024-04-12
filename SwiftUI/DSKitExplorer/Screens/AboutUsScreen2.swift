@@ -72,11 +72,11 @@ struct AboutUsScreen2: View {
                 DSVStack {
                     ForEach(0..<5) { index in
                         DSHStack(spacing: .medium) {
-                            DSImageView(url: URL.profileUrl(index: index), style: .circle)
+                            DSImageView(url: nil, style: .circle)
                                 .dsSize(100)
                             
                             DSVStack(spacing: .small) {
-                                DSText(DSFaker().name).dsTextStyle(.headline)
+                                DSText("DSFaker().name").dsTextStyle(.headline)
                                    .frame(maxWidth: .infinity, alignment: .leading)
                                 DSHStack {
                                     DSImageView(systemName: "calendar", size: .size(14), tint: .text(.caption1))
@@ -89,7 +89,7 @@ struct AboutUsScreen2: View {
                                         DSImageView(systemName: "star", size:.size(14), tint: .text(.caption1))
                                     }
                                 }
-                                DSText(DSFaker().text).dsTextStyle(.caption1)
+                                DSText("DSFaker().text").dsTextStyle(.caption1)
                                     .frame(maxWidth: .infinity, alignment: .leading)
                             }
                         }
@@ -111,8 +111,8 @@ struct AboutUsScreen2: View {
         DSVStack(spacing: .zero) {
             ScrollView {
                 DSVStack {
-                    ContactView(iconName: "phone.fill", title: "Phone:", info: DSFaker().phoneNumber)
-                    ContactView(iconName: "map.fill", title: "Address:", info: DSFaker().streetAddress)
+                    ContactView(iconName: "phone.fill", title: "Phone:", info: "DSFaker().phoneNumber")
+                    ContactView(iconName: "map.fill", title: "Address:", info: "DSFaker().streetAddress")
                     ContactView(iconName: "clock.fill", title: "Working Hours:", info: "Open ⋅ Closes 5PM")
                     
                     DSHStack(alignment: .healthSafetyAlignment, spacing: .regular) {

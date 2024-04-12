@@ -104,9 +104,9 @@ final class HomeScreen3Model: ObservableObject {
     var categories = ["Shoes", "Shirts", "Jeans", "Watches", "Accessories"]
     
     var topProducts: [URL?] = [
-        URL.personOnYellowBg,
-        URL.sneakersBlackOnBlueBg,
-        URL.sneakersThreePairs
+        personOnYellowBg,
+        sneakersBlackOnBlueBg,
+        sneakersThreePairs
     ]
     
     var products: [HomeScreen3.ProductView.Product] = [
@@ -174,3 +174,6 @@ fileprivate let sneakersOnBlackBg = URL(string: "https://images.pexels.com/photo
 fileprivate let watchesOnYellowBg = URL(string: "https://images.pexels.com/photos/277390/pexels-photo-277390.jpeg?cs=srgb&dl=pexels-pixabay-277390.jpg&fm=jpg")
 fileprivate let personOnBlueBg = URL(string: "https://images.pexels.com/photos/3769702/pexels-photo-3769702.jpeg?cs=srgb&dl=pexels-andrea-piacquadio-3769702.jpg&fm=jpg")
 fileprivate let tShirtGirlOnYellowBg = URL(string: "https://images.pexels.com/photos/761963/pexels-photo-761963.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")
+fileprivate let personOnYellowBg = URL(string: "https://images.pexels.com/photos/3760770/pexels-photo-3760770.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")
+fileprivate let sneakersBlackOnBlueBg = URL(string: "https://images.pexels.com/photos/1478442/pexels-photo-1478442.jpeg?cs=srgb&dl=pexels-ray-piedra-1478442.jpg&fm=jpg")
+fileprivate let sneakersThreePairs = URL(string: "https://images.pexels.com/photos/2300334/pexels-photo-2300334.jpeg?cs=srgb&dl=pexels-adrian-dorobantu-2300334.jpg&fm=jpg")

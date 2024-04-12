@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 public protocol DSTabBarAppearanceProtocol {
     var barTint: UIColor { get set }
@@ -14,6 +15,28 @@ public protocol DSTabBarAppearanceProtocol {
     var unselectedItemTint: UIColor { get set }
     var badge: UIColor { get set }
     var translucent: Bool { get set }
+}
+
+extension DSTabBarAppearanceProtocol {
+    func color(key: DSTabBarColorKey) -> Color {
+        switch key {
+        case .tint:
+            barTint.color
+        case .itemTint:
+            itemTint.color
+        case .unselectedItemTint:
+            unselectedItemTint.color
+        case .badge:
+            badge.color
+        }
+    }
+}
+
+public enum DSTabBarColorKey {
+    case tint
+    case itemTint
+    case unselectedItemTint
+    case badge
 }
 
 public struct DSTabbarAppearance: DSTabBarAppearanceProtocol {

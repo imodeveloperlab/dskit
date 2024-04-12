@@ -197,7 +197,7 @@ public struct DSButton: View {
         }
     }
     
-    var dsBackgroundColor: DSColor {
+    var dsBackgroundColor: DSColorKey {
         switch style {
         case .default:
             return .viewColor(.buttonAccentColor)
@@ -212,7 +212,7 @@ public struct DSButton: View {
         }
     }
     
-    var titleColor: DSColor {
+    var titleColor: DSColorKey {
         switch style {
         case .default:
             return .viewColor(.buttonSupportColor)

@@ -15,10 +15,10 @@ public struct DSPriceView: View {
     let regularAmount: String?
     let currency: String
     var discountBadge: String?
-    var textFont: DSTextFont
+    var textFont: DSTextFontKey
     var color: Color?
     
-    public init(price: DSPrice, size: DSTextFont, color: Color? = nil) {
+    public init(price: DSPrice, size: DSTextFontKey, color: Color? = nil) {
         self.amount = price.amount
         self.currency = price.currency
         self.regularAmount = price.regularAmount
@@ -27,11 +27,11 @@ public struct DSPriceView: View {
         self.color = color
     }
     
-    var amountColor: DSColor {
+    var amountColor: DSColorKey {
         if let color {
             .color(color)
         } else {
-            .priceRegularAmount
+            .price(.regularAmount)
         }
     }
     
@@ -57,10 +57,10 @@ public struct DSPriceView: View {
             
             if let discountBadge = discountBadge {
                 DSText(discountBadge)
-                    .dsTextStyle(textFont, textFont.pointSize(for: appearance) * 0.72, .priceBadgeText)
+                    .dsTextStyle(textFont, textFont.pointSize(for: appearance) * 0.72, .price(.badgeText))
                     .dsPadding(.horizontal, .regular)
                     .dsPadding(.vertical, .custom(2))
-                    .background(appearance.price.badgeBackground.color)
+                    .dsBackground(.price(.badgeBackground))
                     .cornerRadius(4)
             }
         }

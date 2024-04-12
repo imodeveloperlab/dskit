@@ -43,7 +43,7 @@ public struct DSText: View {
 
 public extension DSText {
     
-    func dsTextStyle(_ textFont: DSTextFont) -> some View {
+    func dsTextStyle(_ textFont: DSTextFontKey) -> some View {
         return self.environment(\.textStyle, DSTextStyle.textFont(textFont))
     }
     
@@ -51,19 +51,19 @@ public extension DSText {
         return self.environment(\.textStyle, textStyle)
     }
     
-    func dsTextStyle(_ textFont: DSTextFont, _ size: CGFloat) -> some View {
+    func dsTextStyle(_ textFont: DSTextFontKey, _ size: CGFloat) -> some View {
         return self.environment(\.textStyle, .textFont(.fontWithSize(textFont, size)))
     }
     
-    func dsTextStyle(_ textFont: DSTextFont, _ size: CGFloat, _ dsColor: DSColor) -> some View {
+    func dsTextStyle(_ textFont: DSTextFontKey, _ size: CGFloat, _ dsColor: DSColorKey) -> some View {
         return self.environment(\.textStyle, .textFontWithColor(.fontWithSize(textFont, size), dsColor))
     }
     
-    func dsTextStyle(_ textFont: DSTextFont, _ size: CGFloat, _ color: Color) -> some View {
+    func dsTextStyle(_ textFont: DSTextFontKey, _ size: CGFloat, _ color: Color) -> some View {
         return self.environment(\.textStyle, .textFontWithColor(.fontWithSize(textFont, size), .color(color)))
     }
     
-    func dsTextStyle(_ textStyle: DSTextStyle, _ dsColor: DSColor) -> some View {
+    func dsTextStyle(_ textStyle: DSTextStyle, _ dsColor: DSColorKey) -> some View {
         return self.environment(\.textStyle, .reStyleWithColor(textStyle, dsColor))
     }
     
@@ -71,11 +71,11 @@ public extension DSText {
         return self.environment(\.textStyle, .reStyleWithColor(textStyle, .color(color)))
     }
     
-    func dsTextStyle(_ textFont: DSTextFont, _ dsColor: DSColor) -> some View {
+    func dsTextStyle(_ textFont: DSTextFontKey, _ dsColor: DSColorKey) -> some View {
         return self.environment(\.textStyle, .textFontWithColor(textFont, dsColor))
     }
     
-    func dsTextStyle(_ textFont: DSTextFont, _ color: Color) -> some View {
+    func dsTextStyle(_ textFont: DSTextFontKey, _ color: Color) -> some View {
         return self.environment(\.textStyle, .textFontWithColor(textFont, .color(color)))
     }
 }

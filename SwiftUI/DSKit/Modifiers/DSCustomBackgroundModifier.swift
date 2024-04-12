@@ -13,9 +13,9 @@ public struct DSCustomBackgroundModifier: ViewModifier {
     @Environment(\.appearance) var appearance: DSAppearance
     @Environment(\.viewStyle) var viewStyle: DSViewStyle
     
-    let dsColor: DSColor
+    let dsColor: DSColorKey
     
-    public init(dsColor: DSColor) {
+    public init(dsColor: DSColorKey) {
         self.dsColor = dsColor
     }
     
@@ -25,7 +25,7 @@ public struct DSCustomBackgroundModifier: ViewModifier {
 }
 
 public extension View {
-    func dsBackground(_ dsColor: DSColor) -> some View {
+    func dsBackground(_ dsColor: DSColorKey) -> some View {
         let modifier = DSCustomBackgroundModifier(dsColor: dsColor)
         return self.modifier(modifier)
     }

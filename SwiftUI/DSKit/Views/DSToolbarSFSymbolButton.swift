@@ -22,7 +22,7 @@ public struct DSToolbarSFSymbolButton: View, DSDesignable {
         DSImageView(
             systemName: name,
             size: .mediumIcon,
-            tint: .navigationBarButton
+            tint: .navBar(.button)
         )
     }
 }

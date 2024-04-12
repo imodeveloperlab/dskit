@@ -27,7 +27,7 @@ public struct DSImageView: View {
     public init(
         systemName: String,
         size: DSSize,
-        tint: DSColor? = nil
+        tint: DSColorKey? = nil
     ) {
         self.image = DSImage(
             systemName: systemName,
@@ -42,7 +42,7 @@ public struct DSImageView: View {
         uiImage: UIImage?,
         displayShape: DSDisplayShape = .none,
         size: DSSize = .fillUpTheSpace,
-        tintColor: DSColor? = nil,
+        tintColor: DSColorKey? = nil,
         contentMode: DSContentMode = .scaleAspectFill
     ) {
         self.image = DSImage(
@@ -58,7 +58,7 @@ public struct DSImageView: View {
         named: String,
         displayShape: DSDisplayShape = .none,
         size: DSSize = .fillUpTheSpace,
-        tintColor: DSColor? = nil,
+        tintColor: DSColorKey? = nil,
         contentMode: DSContentMode = .scaleAspectFill
     ) {
         self.image = DSImage(
@@ -74,7 +74,7 @@ public struct DSImageView: View {
         url: URL?,
         style: DSDisplayShape = .none,
         size: DSSize = .fillUpTheSpace,
-        tintColor: DSColor? = nil,
+        tintColor: DSColorKey? = nil,
         contentMode: DSContentMode = .scaleAspectFill
     ) {
         self.image = .init(

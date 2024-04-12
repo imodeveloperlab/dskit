@@ -11,7 +11,7 @@ struct DSColorModifier: ViewModifier {
     
     @Environment(\.appearance) var appearance: DSAppearance
     @Environment(\.viewStyle) var viewStyle: DSViewStyle
-    let tint: DSColor
+    let tint: DSColorKey
     func body(content: Content) -> some View {
         content
             .foregroundColor(tint.color(for: appearance, and: viewStyle))
@@ -19,13 +19,13 @@ struct DSColorModifier: ViewModifier {
 }
 
 extension View {
-    func setTint(tint: DSColor) -> some View {
+    func setTint(tint: DSColorKey) -> some View {
         self.modifier(DSColorModifier(tint: tint))
     }
 }
 
 extension Image {
-    func setImageTint(tint: DSColor?) -> AnyView {
+    func setImageTint(tint: DSColorKey?) -> AnyView {
         if let tint {
             return AnyView(self
                 .renderingMode(.template)

@@ -35,3 +35,21 @@ public struct DSNavigationBarAppearance: DSNavigationBarAppearanceProtocol {
     public var translucent: Bool
 }
 
+extension DSNavigationBarAppearanceProtocol {
+    func color(key: DSNavigationBarColor) -> Color {
+        switch key {
+        case .button:
+            buttons.color
+        case .text:
+            text.color
+        case .bar:
+            bar.color
+        }
+    }
+}
+
+public enum DSNavigationBarColor {
+    case button
+    case text
+    case bar
+}

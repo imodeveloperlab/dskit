@@ -18,6 +18,43 @@ public protocol DSViewAppearanceProtocol {
     var cornerRadius: CGFloat { get }
 }
 
+public extension DSViewAppearanceProtocol {
+    func color(for viewColor: DSViewColorKey, appearance: DSAppearance, style: DSViewStyle) -> Color {
+        switch viewColor {
+        case .buttonAccentColor:
+            button.accentColor.color
+        case .buttonSupportColor:
+            button.supportColor.color
+        case .background:
+            background.color
+        case .separator:
+            separator.color
+        case .textFieldBorder:
+            textField.border.color
+        case .textFieldBackground:
+            textField.background.color
+        case .textFieldText:
+            textField.text.color
+        case .textFieldPlaceholder:
+            textField.placeHolder.color
+        case .text(let textColor):
+            textColor.color(for: appearance, and: style)
+        }
+    }
+}
+
+public enum DSViewColorKey: Equatable, Hashable {
+    case buttonAccentColor
+    case buttonSupportColor
+    case background
+    case separator
+    case textFieldBorder
+    case textFieldBackground
+    case textFieldText
+    case textFieldPlaceholder
+    case text(DSTextColorKey)
+}
+
 public struct DSViewAppearance: DSViewAppearanceProtocol {
     
     public init(
@@ -45,40 +82,3 @@ public struct DSViewAppearance: DSViewAppearanceProtocol {
     public var cornerRadius: CGFloat
 }
 
-public enum DSViewColor: Equatable, Hashable {
-    case buttonAccentColor
-    case buttonSupportColor
-    case background
-    case separator
-    case textFieldBorder
-    case textFieldBackground
-    case textFieldText
-    case textFieldPlaceholder
-    case text(DSTextColor)
-}
-
-public extension DSViewAppearanceProtocol {
-    
-    func color(for viewColor: DSViewColor, appearance: DSAppearance, style: DSViewStyle) -> Color {
-        switch viewColor {
-        case .buttonAccentColor:
-            button.accentColor.color
-        case .buttonSupportColor:
-            button.supportColor.color
-        case .background:
-            background.color
-        case .separator:
-            separator.color
-        case .textFieldBorder:
-            textField.border.color
-        case .textFieldBackground:
-            textField.background.color
-        case .textFieldText:
-            textField.text.color
-        case .textFieldPlaceholder:
-            textField.placeHolder.color
-        case .text(let textColor):
-            textColor.color(for: appearance, and: style)
-        }
-    }
-}

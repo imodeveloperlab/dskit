@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 public protocol DSPriceAppearanceProtocol {
     var currency: UIColor { get set }
@@ -15,6 +16,31 @@ public protocol DSPriceAppearanceProtocol {
     var badgeBackground: UIColor { get set }
     var badgeText: UIColor { get set }
     var badgeCornerRadius: CGFloat { get set }
+}
+
+public enum DSPriceColorKey {
+    case currency
+    case amount
+    case regularAmount
+    case badgeBackground
+    case badgeText
+}
+
+extension DSPriceAppearanceProtocol {
+    func color(key: DSPriceColorKey) -> Color {
+        switch key {
+        case .currency:
+            currency.color
+        case .amount:
+            amount.color
+        case .regularAmount:
+            regularAmount.color
+        case .badgeBackground:
+            badgeBackground.color
+        case .badgeText:
+            badgeText.color
+        }
+    }
 }
 
 public struct DSPriceAppearance: DSPriceAppearanceProtocol {

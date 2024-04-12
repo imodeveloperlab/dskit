@@ -12,7 +12,7 @@ public struct DSSize: Equatable, ExpressibleByFloatLiteral, ExpressibleByInteger
     public let width: DSDimension
     public let height: DSDimension
     
-    public init(_ textFont: DSTextFont) {
+    public init(_ textFont: DSTextFontKey) {
         self.width = .font(textFont)
         self.height = .font(textFont)
     }
@@ -46,7 +46,7 @@ public extension DSSize {
         DSSize(width: number, height: number)
     }
     
-    static func font(_ textFont: DSTextFont) -> DSSize {
+    static func font(_ textFont: DSTextFontKey) -> DSSize {
         DSSize(textFont)
     }
     

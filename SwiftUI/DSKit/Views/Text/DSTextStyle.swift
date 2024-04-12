@@ -11,14 +11,14 @@ import SwiftUI
 
 public indirect enum DSTextStyle: Equatable, Hashable {
     
-    case textFont(DSTextFont)
-    case textFontWithColor(DSTextFont, DSColor)
-    case reStyleWithColor(DSTextStyle, DSColor)
+    case textFont(DSTextFontKey)
+    case textFontWithColor(DSTextFontKey, DSColorKey)
+    case reStyleWithColor(DSTextStyle, DSColorKey)
     
-    func textStyle(for appearance: DSAppearance) -> (font: DSTextFont, color: DSTextColor) {
+    func textStyle(for appearance: DSAppearance) -> (font: DSTextFontKey, color: DSTextColorKey) {
         switch self {
         case .textFont(let font):
-            return (font: font, color: DSTextColor.font(font))
+            return (font: font, color: DSTextColorKey.font(font))
         case .textFontWithColor(let font, let color):
             return (font: font, color: .dsColor(color))
         case .reStyleWithColor(let textStyle, let color):
@@ -26,7 +26,7 @@ public indirect enum DSTextStyle: Equatable, Hashable {
         }
     }
     
-    var dsTextFont: DSTextFont {
+    var dsTextFont: DSTextFontKey {
         return switch self {
         case .textFont(let font):
             font

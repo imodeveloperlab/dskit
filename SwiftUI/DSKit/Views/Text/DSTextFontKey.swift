@@ -9,7 +9,7 @@
 import UIKit
 import SwiftUI
 
-public indirect enum DSTextFont: Equatable, Hashable {
+public indirect enum DSTextFontKey: Equatable, Hashable {
     
     case largeTitle
     case title1
@@ -23,7 +23,7 @@ public indirect enum DSTextFont: Equatable, Hashable {
     case caption2
     case footnote
     case custom(UIFont)
-    case fontWithSize(DSTextFont, CGFloat)
+    case fontWithSize(DSTextFontKey, CGFloat)
     case smallHeadline
     case smallSubtitle
     case largeHeadline

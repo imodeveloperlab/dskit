@@ -1,5 +1,5 @@
 //
-//  DSTextColor.swift
+//  DSTextColorKey.swift
 //  DSKit
 //
 //  Created by Borinschi Ivan on 21.01.2021.
@@ -9,10 +9,10 @@
 import UIKit
 import SwiftUI
 
-public indirect enum DSTextColor: Equatable, Hashable {
+public indirect enum DSTextColorKey: Equatable, Hashable {
     
-    case font(DSTextFont)
-    case dsColor(DSColor)
+    case font(DSTextFontKey)
+    case dsColor(DSColorKey)
     
     public func color(for appearance: DSAppearance, and style: DSViewStyle) -> Color {
         switch self {
@@ -23,11 +23,11 @@ public indirect enum DSTextColor: Equatable, Hashable {
         }
     }
     
-    public func color(for font: DSTextFont, appearance: DSAppearance, viewStyle: DSViewStyle) -> Color {
+    public func color(for font: DSTextFontKey, appearance: DSAppearance, viewStyle: DSViewStyle) -> Color {
         uiColor(for: font, appearance: appearance, viewStyle: viewStyle).color
     }
     
-    public func uiColor(for font: DSTextFont, appearance: DSAppearance, viewStyle: DSViewStyle) -> UIColor {
+    public func uiColor(for font: DSTextFontKey, appearance: DSAppearance, viewStyle: DSViewStyle) -> UIColor {
         
         let designableTextColor: DSTextAppearanceProtocol
         

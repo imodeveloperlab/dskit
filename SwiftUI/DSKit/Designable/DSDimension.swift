@@ -9,7 +9,7 @@ import Foundation
 
 public enum DSDimension: ExpressibleByFloatLiteral, ExpressibleByIntegerLiteral, Equatable {
     
-    case font(DSTextFont)
+    case font(DSTextFontKey)
     case custom(CGFloat)
     case fillUpTheSpace
     case none

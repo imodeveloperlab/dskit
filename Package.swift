@@ -33,8 +33,10 @@ let package = Package(
         ),
         .target(
             name: "DSKitSwiftUI",
-            dependencies: ["SDWebImageSwiftUI"],
-            path: "SwiftUI/DSKit"
+            dependencies: [
+                .product(name: "SDWebImageSwiftUI", package: "SDWebImageSwiftUI.git")
+            ],
+            path: "SwiftUI/Sources"
         ),
         .target(
             name: "DSKitFakery",

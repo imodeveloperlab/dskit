@@ -53,12 +53,12 @@ fileprivate struct AppearanceView: View {
             DSHStack(spacing: .zero) {
                 appearance.primaryView.text.headline.color
                 appearance.primaryView.text.subheadline.color
-                appearance.primaryView.button.background.color
+                appearance.primaryView.button.accentColor.color
                 appearance.primaryView.background.color
                 appearance.secondaryView.text.headline.color
                 appearance.secondaryView.text.subheadline.color
                 appearance.secondaryView.background.color
-                appearance.secondaryView.button.background.color
+                appearance.secondaryView.button.accentColor.color
             }
             .dsHeight(40)
             .dsCornerRadius()

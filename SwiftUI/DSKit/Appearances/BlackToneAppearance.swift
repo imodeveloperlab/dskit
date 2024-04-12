@@ -36,7 +36,7 @@ public class BlackToneAppearance: DSAppearance {
         )
         
         let button = DSButtonAppearance(
-            background: UIColor(0x222222), title: UIColor(0xffffff)
+            accentColor: UIColor(0x222222), supportColor: UIColor(0xffffff)
         )
         
         // Text field
@@ -85,7 +85,7 @@ public class BlackToneAppearance: DSAppearance {
         
         tabBar = DSTabbarAppearance(
             barTint: primaryView.background,
-            itemTint: primaryView.button.background,
+            itemTint: primaryView.button.accentColor,
             unselectedItemTint: secondaryText.subheadline,
             badge: UIColor.red,
             translucent: true

@@ -51,9 +51,9 @@ public extension DSViewAppearanceProtocol {
     func color(for viewColor: DSViewColor, appearance: DSAppearance, style: DSViewStyle) -> Color {
         switch viewColor {
         case .buttonBackground:
-            button.background.color
+            button.accentColor.color
         case .buttonTitle:
-            button.title.color
+            button.supportColor.color
         case .background:
             background.color
         case .separator:

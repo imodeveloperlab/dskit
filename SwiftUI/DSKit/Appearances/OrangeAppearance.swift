@@ -38,8 +38,8 @@ public class OrangeAppearance: DSAppearance {
         )
         
         let button = DSButtonAppearance(
-            background: UIColor(0xF26333), 
-            title: UIColor(0xffffff)
+            accentColor: UIColor(0xF26333), 
+            supportColor: UIColor(0xffffff)
         )
         
         let primaryViewTextField = DSTextFieldAppearance(
@@ -66,8 +66,8 @@ public class OrangeAppearance: DSAppearance {
         )
         
         let secondaryButton = DSButtonAppearance(
-            background: UIColor(0xF26333),
-            title: UIColor(0xffffff)
+            accentColor: UIColor(0xF26333),
+            supportColor: UIColor(0xffffff)
         )
         
         let secondaryViewTextField = DSTextFieldAppearance(
@@ -90,16 +90,16 @@ public class OrangeAppearance: DSAppearance {
         
         tabBar = DSTabbarAppearance(
             barTint: primaryView.background,
-            itemTint: primaryView.button.background,
+            itemTint: primaryView.button.accentColor,
             unselectedItemTint: secondaryText.subheadline,
-            badge: primaryView.button.background,
+            badge: primaryView.button.accentColor,
             translucent: true
         )
         
         // MARK: - Navigation Bar
         
         navigationBar = DSNavigationBarAppearance(
-            buttons: primaryView.button.background,
+            buttons: primaryView.button.accentColor,
             text: text.title1,
             bar: primaryView.background,
             translucent: true

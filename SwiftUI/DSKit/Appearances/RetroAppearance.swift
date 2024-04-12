@@ -56,8 +56,8 @@ public final class RetroAppearance: DSAppearance {
         
         primaryView = DSViewAppearance(
             button: DSButtonAppearance(
-                background: DSDynamicColor.color(light: 0xFC8F0F, dark: 0xFC8F0F),
-                title: DSDynamicColor.color(light: 0xffffff, dark: 0xffffff)
+                accentColor: DSDynamicColor.color(light: 0xFC8F0F, dark: 0xFC8F0F),
+                supportColor: DSDynamicColor.color(light: 0xffffff, dark: 0xffffff)
             ),
             text: text,
             textField: primaryViewTextField,
@@ -91,8 +91,8 @@ public final class RetroAppearance: DSAppearance {
         
         secondaryView = DSViewAppearance(
             button: DSButtonAppearance(
-                background: DSDynamicColor.color(light: 0xFC8F0F, dark: 0xFC8F0F),
-                title: DSDynamicColor.color(light: 0xffffff, dark: 0xffffff)
+                accentColor: DSDynamicColor.color(light: 0xFC8F0F, dark: 0xFC8F0F),
+                supportColor: DSDynamicColor.color(light: 0xffffff, dark: 0xffffff)
             ),
             text: secondaryText,
             textField: secondaryViewTextField,
@@ -105,15 +105,15 @@ public final class RetroAppearance: DSAppearance {
         
         tabBar = DSTabbarAppearance(
             barTint: primaryView.background,
-            itemTint: primaryView.button.background,
+            itemTint: primaryView.button.accentColor,
             unselectedItemTint: text.subheadline,
-            badge: primaryView.button.background
+            badge: primaryView.button.accentColor
         )
         
         // MARK: - Navigation Bar
         
         navigationBar = DSNavigationBarAppearance(
-            buttons: primaryView.button.background,
+            buttons: primaryView.button.accentColor,
             text: text.title1,
             bar: primaryView.background
         )
@@ -121,10 +121,10 @@ public final class RetroAppearance: DSAppearance {
         // MARK: - Price
         
         price = DSPriceAppearance(
-            currency: primaryView.button.background,
-            amount: primaryView.button.background,
+            currency: primaryView.button.accentColor,
+            amount: primaryView.button.accentColor,
             regularAmount: text.subheadline,
-            badgeBackground: primaryView.button.background
+            badgeBackground: primaryView.button.accentColor
         )
     }
     

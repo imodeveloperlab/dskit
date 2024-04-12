@@ -56,8 +56,8 @@ public struct DSKitAppearance: DSAppearance {
         
         // Button
         let button = DSButtonAppearance(
-            background: DSDynamicColor.color(light: 0x1da1f2, dark: 0x1da1f2),
-            title: DSDynamicColor.color(light: 0xfefffe, dark: 0xfefffe)
+            accentColor: DSDynamicColor.color(light: 0x1da1f2, dark: 0x1da1f2),
+            supportColor: DSDynamicColor.color(light: 0xfefffe, dark: 0xfefffe)
         )
         
         // Background
@@ -106,8 +106,8 @@ public struct DSKitAppearance: DSAppearance {
         
         // Button
         let sButton = DSButtonAppearance(
-            background: DSDynamicColor.color(light: 0x5b7083, dark: 0x8899a6),
-            title: DSDynamicColor.color(light: 0xfefffe, dark: 0xfefffe)
+            accentColor: DSDynamicColor.color(light: 0x5b7083, dark: 0x8899a6),
+            supportColor: DSDynamicColor.color(light: 0xfefffe, dark: 0xfefffe)
         )
         
         // Background
@@ -133,16 +133,16 @@ public struct DSKitAppearance: DSAppearance {
         
         tabBar = DSTabbarAppearance(
             barTint: primaryView.background,
-            itemTint: primaryView.button.background,
+            itemTint: primaryView.button.accentColor,
             unselectedItemTint: text.subheadline,
-            badge: primaryView.button.background,
+            badge: primaryView.button.accentColor,
             translucent: false
         )
         
         // MARK: - Navigation bar
         
         navigationBar = DSNavigationBarAppearance(
-            buttons: primaryView.button.background,
+            buttons: primaryView.button.accentColor,
             text: text.title1,
             bar: primaryView.background,
             translucent: false

@@ -39,13 +39,13 @@ public class PeachAppearance: DSAppearance {
         )
         
         let button = DSButtonAppearance(
-            background: UIColor(0xFF5A5F),
-            title: UIColor(0xffffff)
+            accentColor: UIColor(0xFF5A5F),
+            supportColor: UIColor(0xffffff)
         )
         
         let secondaryButton = DSButtonAppearance(
-            background: UIColor(0xFF5A5F),
-            title: UIColor(0xffffff)
+            accentColor: UIColor(0xFF5A5F),
+            supportColor: UIColor(0xffffff)
         )
         
         let primaryViewTextField = DSTextFieldAppearance(
@@ -91,16 +91,16 @@ public class PeachAppearance: DSAppearance {
         
         tabBar = DSTabbarAppearance(
             barTint: primaryView.background,
-            itemTint: primaryView.button.background,
+            itemTint: primaryView.button.accentColor,
             unselectedItemTint: secondaryText.subheadline,
-            badge: primaryView.button.background,
+            badge: primaryView.button.accentColor,
             translucent: true
         )
         
         // MARK: - Navigation Bar
         
         navigationBar = DSNavigationBarAppearance(
-            buttons: primaryView.button.background,
+            buttons: primaryView.button.accentColor,
             text: text.title1,
             bar: primaryView.background,
             translucent: true

@@ -28,7 +28,7 @@ public struct DSSelectedStyleModifier: ViewModifier, DSDesignable {
             })
             .overlay(alignment: .center, content: {
                 RoundedRectangle(cornerRadius: viewColors.cornerRadius - 1)
-                    .stroke(viewColors.button.background.color, lineWidth: isSelected ? 2 : 0)
+                    .stroke(viewColors.button.accentColor.color, lineWidth: isSelected ? 2 : 0)
                     .padding(1)
             })
             .transition(.opacity)

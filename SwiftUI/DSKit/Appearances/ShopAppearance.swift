@@ -36,8 +36,8 @@ public class ShopAppearance: DSAppearance {
         )
         
         let button = DSButtonAppearance(
-            background: UIColor(0x006EB9),
-            title: UIColor(0xffffff)
+            accentColor: UIColor(0x006EB9),
+            supportColor: UIColor(0xffffff)
         )
         
         let primaryViewTextField = DSTextFieldAppearance(
@@ -83,9 +83,9 @@ public class ShopAppearance: DSAppearance {
         
         tabBar = DSTabbarAppearance(
             barTint: primaryView.background,
-            itemTint: primaryView.button.background,
+            itemTint: primaryView.button.accentColor,
             unselectedItemTint: secondaryText.subheadline,
-            badge: primaryView.button.background,
+            badge: primaryView.button.accentColor,
             translucent: true
         )
         

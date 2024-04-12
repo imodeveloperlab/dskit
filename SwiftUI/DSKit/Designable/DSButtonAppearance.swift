@@ -9,19 +9,19 @@
 import UIKit
 
 public protocol DSButtonAppearanceProtocol {
-    var background: UIColor { get set }
-    var title: UIColor { get set }
+    var accentColor: UIColor { get set }
+    var supportColor: UIColor { get set }
 }
 
 public struct DSButtonAppearance: DSButtonAppearanceProtocol {
     
     public init(
-        background: UIColor, title: UIColor
+        accentColor: UIColor, supportColor: UIColor
     ) {
-        self.background = background
-        self.title = title
+        self.accentColor = accentColor
+        self.supportColor = supportColor
     }
     
-    public var background: UIColor
-    public var title: UIColor
+    public var accentColor: UIColor
+    public var supportColor: UIColor
 }

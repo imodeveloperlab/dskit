@@ -46,7 +46,7 @@ public struct DSSizeModifier: ViewModifier {
         case .none:
             return nil // No size set
         default:
-            return appearance.dimension.value(for: dimension, appearance: appearance) // Custom logic for other dimensions
+            return dimension.value(appearance: appearance)
         }
     }
 }

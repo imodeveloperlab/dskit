@@ -14,7 +14,7 @@ public struct DSWidthModifier: ViewModifier {
     @Environment(\.appearance) var appearance: DSAppearance
     
     public func body(content: Content) -> some View {
-        content.frame(width: appearance.dimension.value(for: width, appearance: appearance))
+        content.frame(width: width.value(appearance: appearance))
     }
 }
 

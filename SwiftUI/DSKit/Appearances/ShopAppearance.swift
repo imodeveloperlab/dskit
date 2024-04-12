@@ -15,7 +15,6 @@ public class ShopAppearance: DSAppearance {
     public var secondaryView: DSViewAppearanceProtocol
     public var spacing: DSSpacingProtocol = DSSpacingSystem(spatialSystem: 7)
     public var padding: DPaddingsProtocol = DSPaddingSystem(spatialSystem: 7)
-    public var dimension: DSDimensionProtocol = DSDimensionSystem(spatialSystem: 7)
     public var tabBar: DSTabBarAppearanceProtocol
     public var navigationBar: DSNavigationBarAppearanceProtocol
     public var price: DSPriceAppearanceProtocol

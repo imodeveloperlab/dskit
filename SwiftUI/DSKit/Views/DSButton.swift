@@ -200,30 +200,30 @@ public struct DSButton: View {
     var dsBackgroundColor: DSColor {
         switch style {
         case .default:
-            return .viewColor(.buttonBackground)
+            return .viewColor(.buttonAccentColor)
         case .light:
-            return .viewColor(.buttonBackground)
+            return .viewColor(.buttonAccentColor)
         case .custom(color: let color):
             return .color(color)
         case .clear:
             return .color(.clear)
         case .borderedLight:
-            return .viewStyleAndColor(.primary, .buttonTitle)
+            return .viewStyleAndColor(.primary, .buttonSupportColor)
         }
     }
     
     var titleColor: DSColor {
         switch style {
         case .default:
-            return .viewColor(.buttonTitle)
+            return .viewColor(.buttonSupportColor)
         case .light:
-            return .viewColor(.buttonBackground)
+            return .viewColor(.buttonAccentColor)
         case .custom(color: _):
             return .color(.white)
         case .clear:
-            return .viewColor(.buttonBackground)
+            return .viewColor(.buttonAccentColor)
         case .borderedLight:
-            return .viewStyleAndColor(.primary, .buttonBackground)
+            return .viewStyleAndColor(.primary, .buttonAccentColor)
         }
     }
 }

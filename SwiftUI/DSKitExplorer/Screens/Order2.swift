@@ -73,10 +73,10 @@ extension Order2 {
         let card: Data
         var body: some View {
             DSVStack(alignment: .center) {
-                DSImageView(systemName: card.icon, size: 28, tint: .viewColor(.buttonBackground))
+                DSImageView(systemName: card.icon, size: 28, tint: .viewColor(.buttonAccentColor))
                 DSVStack(alignment: .center) {
                     DSText(card.title)
-                        .dsTextStyle(.headline, .viewColor(.buttonBackground))
+                        .dsTextStyle(.headline, .viewColor(.buttonAccentColor))
                     DSVStack(alignment: .center, spacing: .small) {
                         DSText(card.subtitle).dsTextStyle(.smallSubtitle)
                         DSText(card.description).dsTextStyle(.smallSubtitle)

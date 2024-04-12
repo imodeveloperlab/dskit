@@ -26,7 +26,6 @@ public protocol DSAppearance {
     var secondaryView: DSViewAppearanceProtocol { get set }
     var spacing: DSSpacingProtocol { get set }
     var padding: DPaddingsProtocol { get set }
-    var dimension: DSDimensionProtocol { get set }
     var tabBar: DSTabBarAppearanceProtocol { get set }
     var navigationBar: DSNavigationBarAppearanceProtocol { get set }
     var price: DSPriceAppearanceProtocol { get set }

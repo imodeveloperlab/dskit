@@ -24,7 +24,7 @@ public struct DSSFSymbolButton: View, DSDesignable {
         DSImageView(
             systemName: name,
             size: size,
-            tint: .viewStyleAndColor(viewStyle, .buttonBackground)
+            tint: .viewStyleAndColor(viewStyle, .buttonAccentColor)
         )
     }
 }

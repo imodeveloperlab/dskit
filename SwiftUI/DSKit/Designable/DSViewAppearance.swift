@@ -43,16 +43,27 @@ public struct DSViewAppearance: DSViewAppearanceProtocol {
     public var background: UIColor
     public var separator: UIColor
     public var cornerRadius: CGFloat
-    
+}
+
+public enum DSViewColor: Equatable, Hashable {
+    case buttonAccentColor
+    case buttonSupportColor
+    case background
+    case separator
+    case textFieldBorder
+    case textFieldBackground
+    case textFieldText
+    case textFieldPlaceholder
+    case text(DSTextColor)
 }
 
 public extension DSViewAppearanceProtocol {
     
     func color(for viewColor: DSViewColor, appearance: DSAppearance, style: DSViewStyle) -> Color {
         switch viewColor {
-        case .buttonBackground:
+        case .buttonAccentColor:
             button.accentColor.color
-        case .buttonTitle:
+        case .buttonSupportColor:
             button.supportColor.color
         case .background:
             background.color

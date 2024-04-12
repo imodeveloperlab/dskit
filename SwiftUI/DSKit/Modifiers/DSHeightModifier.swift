@@ -14,7 +14,7 @@ public struct DSHeightModifier: ViewModifier {
     @Environment(\.appearance) var appearance: DSAppearance
     
     public func body(content: Content) -> some View {
-        content.frame(height: appearance.dimension.value(for: height, appearance: appearance))
+        content.frame(height: height.value(appearance: appearance))
     }
 }
 

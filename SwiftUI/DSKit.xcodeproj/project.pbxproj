@@ -27,9 +27,7 @@
 		600935862BBAAA2800A1D1E6 /* DSPadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600935852BBAAA2800A1D1E6 /* DSPadding.swift */; };
 		600935882BBAAAE400A1D1E6 /* DSPaddingSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600935872BBAAAE400A1D1E6 /* DSPaddingSystem.swift */; };
 		6009358A2BBAAFD100A1D1E6 /* DSDimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600935892BBAAFD100A1D1E6 /* DSDimension.swift */; };
-		6009358E2BBAB02800A1D1E6 /* DSDimensionSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6009358D2BBAB02800A1D1E6 /* DSDimensionSystem.swift */; };
 		600935912BBBDB5800A1D1E6 /* DSViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600935902BBBDB5800A1D1E6 /* DSViewStyle.swift */; };
-		600935932BBBDE5300A1D1E6 /* DSViewColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600935922BBBDE5300A1D1E6 /* DSViewColor.swift */; };
 		600A18412BAC85DA00B44917 /* DSAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600A182D2BAC85D900B44917 /* DSAddress.swift */; };
 		600A18422BAC85DA00B44917 /* DSPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600A182E2BAC85D900B44917 /* DSPerson.swift */; };
 		600A18432BAC85DA00B44917 /* URLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600A182F2BAC85D900B44917 /* URLExtension.swift */; };
@@ -270,9 +268,7 @@
 		600935852BBAAA2800A1D1E6 /* DSPadding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSPadding.swift; sourceTree = "<group>"; };
 		600935872BBAAAE400A1D1E6 /* DSPaddingSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSPaddingSystem.swift; sourceTree = "<group>"; };
 		600935892BBAAFD100A1D1E6 /* DSDimension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSDimension.swift; sourceTree = "<group>"; };
-		6009358D2BBAB02800A1D1E6 /* DSDimensionSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSDimensionSystem.swift; sourceTree = "<group>"; };
 		600935902BBBDB5800A1D1E6 /* DSViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSViewStyle.swift; sourceTree = "<group>"; };
-		600935922BBBDE5300A1D1E6 /* DSViewColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSViewColor.swift; sourceTree = "<group>"; };
 		600A182D2BAC85D900B44917 /* DSAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSAddress.swift; sourceTree = "<group>"; };
 		600A182E2BAC85D900B44917 /* DSPerson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSPerson.swift; sourceTree = "<group>"; };
 		600A182F2BAC85D900B44917 /* URLExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLExtension.swift; sourceTree = "<group>"; };
@@ -695,7 +691,6 @@
 				60EB99842B2B4D3900528039 /* DSButtonAppearance.swift */,
 				60EB99882B2B4D3900528039 /* DSPriceAppearance.swift */,
 				604B4B272B8CC0C400EC6CCE /* DSSpacingSystem.swift */,
-				6009358D2BBAB02800A1D1E6 /* DSDimensionSystem.swift */,
 				600935872BBAAAE400A1D1E6 /* DSPaddingSystem.swift */,
 				600935902BBBDB5800A1D1E6 /* DSViewStyle.swift */,
 				600935892BBAAFD100A1D1E6 /* DSDimension.swift */,
@@ -705,7 +700,6 @@
 				60EB999C2B2B4E4700528039 /* DSDynamicColor.swift */,
 				604B4B232B8CC03400EC6CCE /* DSSize.swift */,
 				604B4B252B8CC0A600EC6CCE /* DSSpace.swift */,
-				600935922BBBDE5300A1D1E6 /* DSViewColor.swift */,
 				60EB99952B2B4D8900528039 /* Fonts */,
 			);
 			path = Designable;
@@ -1120,7 +1114,6 @@
 				602CE4242B85E112002B79E2 /* DSPreview.swift in Sources */,
 				60EB99972B2B4D9800528039 /* DSScaledFont.swift in Sources */,
 				60EB998C2B2B4D3A00528039 /* DSTabbarAppearance.swift in Sources */,
-				600935932BBBDE5300A1D1E6 /* DSViewColor.swift in Sources */,
 				600E3C192BB6047C00FA33EC /* DSToolbarSFSymbolButton.swift in Sources */,
 				600601BA2B3597A700F2C616 /* DSHStack.swift in Sources */,
 				604AA6402B88E129009EE906 /* DSHeightModifier.swift in Sources */,
@@ -1170,7 +1163,6 @@
 				600601D22B35DDAE00F2C616 /* DSBlurBackgroundModifier.swift in Sources */,
 				600E3C1D2BB604FB00FA33EC /* DSTermsAndConditionsView.swift in Sources */,
 				600B98922B3C1626005935D2 /* DarkLightAppearance.swift in Sources */,
-				6009358E2BBAB02800A1D1E6 /* DSDimensionSystem.swift in Sources */,
 				60EB99D42B2B75F800528039 /* DSPriceView.swift in Sources */,
 				606FA7582B9857B5003DEA59 /* DSDebuggableModifier.swift in Sources */,
 				60C1F78F2B3D66BF0067B21C /* DSButton.swift in Sources */,

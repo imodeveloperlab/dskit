@@ -115,7 +115,7 @@ extension HomeScreen4 {
                         DSText(numberOfItemsInCart)
                             .dsTextStyle(.headline, 12, .primaryView(.background))
                             .dsSize(20)
-                            .dsBackground(.viewColor(.buttonBackground))
+                            .dsBackground(.viewColor(.buttonAccentColor))
                             .clipShape(Circle())
                         DSText(itemsInYourCart).dsTextStyle(.subheadline)
                     }
@@ -140,7 +140,7 @@ extension HomeScreen4 {
                 
                 if isSelected {
                     DSText(category.title)
-                        .dsTextStyle(.smallHeadline, .primaryView(.buttonTitle))
+                        .dsTextStyle(.smallHeadline, .primaryView(.buttonSupportColor))
                 } else {
                     DSText(category.title)
                         .dsTextStyle(.smallHeadline)
@@ -154,7 +154,7 @@ extension HomeScreen4 {
             }
             .dsPadding(.horizontal)
             .dsHeight(35)
-            .dsBackground(isSelected ? .secondaryView(.buttonBackground) : .secondaryView(.background))
+            .dsBackground(isSelected ? .secondaryView(.buttonAccentColor) : .secondaryView(.background))
             .dsCornerRadius()
         }
         struct Category: Identifiable {

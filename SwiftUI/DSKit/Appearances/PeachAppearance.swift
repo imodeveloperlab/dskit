@@ -15,7 +15,6 @@ public class PeachAppearance: DSAppearance {
     public var secondaryView: DSViewAppearanceProtocol
     public var spacing: DSSpacingProtocol = DSSpacingSystem(spatialSystem: 7)
     public var padding: DPaddingsProtocol = DSPaddingSystem(spatialSystem: 7)
-    public var dimension: DSDimensionProtocol = DSDimensionSystem(spatialSystem: 7)
     public var margins: CGFloat = 15
     public var groupMargins: CGFloat = 10
     public var interItemSpacing: CGFloat = 10

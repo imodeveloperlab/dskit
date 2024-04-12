@@ -15,7 +15,6 @@ public class DarkLightAppearance: DSAppearance {
     public var secondaryView: DSViewAppearanceProtocol
     public var spacing: DSSpacingProtocol = DSSpacingSystem(spatialSystem: 6.5)
     public var padding: DPaddingsProtocol = DSPaddingSystem(spatialSystem: 6.5)
-    public var dimension: DSDimensionProtocol = DSDimensionSystem(spatialSystem: 6.5)
     public var tabBar: DSTabBarAppearanceProtocol
     public var navigationBar: DSNavigationBarAppearanceProtocol
     public var textField: DSTextFieldAppearanceProtocol

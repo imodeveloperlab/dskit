@@ -23,3 +23,20 @@ public enum DSDimension: ExpressibleByFloatLiteral, ExpressibleByIntegerLiteral,
         self = .custom(CGFloat(value))
     }
 }
+
+extension DSDimension {
+    public func value(appearance: DSAppearance) -> CGFloat {
+        switch self {
+        case .custom(let number):
+            number
+        case .fillUpTheSpace:
+                .infinity
+        case .none:
+                .infinity
+        case .zero:
+            0
+        case .font(let font):
+            font.pointSize(for: appearance)
+        }
+    }
+}

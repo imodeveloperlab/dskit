@@ -15,13 +15,14 @@ public protocol DSButtonAppearanceProtocol {
 
 public struct DSButtonAppearance: DSButtonAppearanceProtocol {
     
+    public var accentColor: UIColor
+    public var supportColor: UIColor
+    
     public init(
-        accentColor: UIColor, supportColor: UIColor
+        accentColor: UIColor,
+        supportColor: UIColor
     ) {
         self.accentColor = accentColor
         self.supportColor = supportColor
     }
-    
-    public var accentColor: UIColor
-    public var supportColor: UIColor
 }

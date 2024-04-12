@@ -15,7 +15,6 @@ public class BlackToneAppearance: DSAppearance {
     public var secondaryView: DSViewAppearanceProtocol
     public var spacing: DSSpacingProtocol = DSSpacingSystem(spatialSystem: 6)
     public var padding: DPaddingsProtocol = DSPaddingSystem(spatialSystem: 6)
-    public var dimension: DSDimensionProtocol = DSDimensionSystem(spatialSystem: 6)
     public var tabBar: DSTabBarAppearanceProtocol
     public var navigationBar: DSNavigationBarAppearanceProtocol
     public var price: DSPriceAppearanceProtocol

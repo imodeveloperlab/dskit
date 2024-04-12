@@ -43,7 +43,7 @@ public struct DSTextField: View {
                 DSImageView(
                     systemName: symbolName,
                     size: 15,
-                    tint: hasText ? .viewStyleAndColor(viewStyle, .textFieldText) : .viewStyleAndColor(viewStyle, .textFieldPlaceholder)
+                    tint: hasText ? .view(.textField(.text)) : .view(.textField(.placeholder))
                 )
             }
             
@@ -61,19 +61,19 @@ public struct DSTextField: View {
             // Toggles visibility of the secure text entry (password visibility)
             if isSecureEntry {
                 let systemName = isSecureEntryVisible ? "eye.slash" : "eye"
-                DSImageView(systemName: systemName, size: 15, tint: .viewStyleAndColor(viewStyle, .textFieldText))
+                DSImageView(systemName: systemName, size: 15, tint: .view(.textField(.text)))
                     .onTap {
                         isSecureEntryVisible.toggle()
                     }
             } else if isEditing && hasText {
-                DSImageView(systemName: "xmark.circle.fill", size: 15, tint: .viewStyleAndColor(viewStyle, .textFieldText)).onTapGesture {
+                DSImageView(systemName: "xmark.circle.fill", size: 15, tint: .view(.textField(.text))).onTapGesture {
                     model.text = ""
                 }
             }
         }
         .dsHeight(.custom(appearance.actionElementHeight))
         .dsPadding(.horizontal, .custom(appearance.spacing.value(for: .medium) - 1))
-        .dsBackground(.viewStyleAndColor(viewStyle, .textFieldBackground))
+        .dsBackground(.viewStyle(viewStyle, .textField(.background)))
         .dsCornerRadius()
         .overlay(
             // Outlines the text field in red if the content is invalid

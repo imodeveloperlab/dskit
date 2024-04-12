@@ -10,10 +10,8 @@ import SwiftUI
 
 public enum DSColorKey: Equatable, Hashable {
     
-    case viewStyleAndColor(DSViewStyle, DSViewColorKey)
-    case viewColor(DSViewColorKey)
-    case primaryView(DSViewColorKey)
-    case secondaryView(DSViewColorKey)
+    case viewStyle(DSViewStyle, DSViewColorKey)
+    case view(DSViewColorKey)
     case text(DSTextFontKey)
     case navBar(DSNavigationBarColor)
     case tabBar(DSTabBarColorKey)
@@ -22,25 +20,20 @@ public enum DSColorKey: Equatable, Hashable {
     
     func color(for appearance: DSAppearance, and style: DSViewStyle) -> Color {
         switch self {
-        case .viewStyleAndColor(let style, let viewColor):
-            return appearance.style(for: style).color(for: viewColor, appearance: appearance, style: style)
-        case .primaryView(let viewColor):
-            return appearance.style(for: .primary).color(for: viewColor, appearance: appearance, style: style)
-        case .secondaryView(let viewColor):
-            return appearance.style(for: .secondary).color(for: viewColor, appearance: appearance, style: style)
-        case .navBar(let key):
-            return appearance.navigationBar.color(key: key)
-        case .tabBar(let key):
-            return appearance.tabBar.color(key: key)
-        case .price(let key):
-            return appearance.price.color(key: key)
+        case .viewStyle(let style, let viewKey):
+            return appearance.style(for: style).color(for: viewKey, appearance: appearance, style: style)
+        case .view(let viewKey):
+            return appearance.style(for: style).color(for: viewKey, appearance: appearance, style: style)
+        case .text(let textKey):
+            return appearance.style(for: style).color(for: .text(.font(textKey)), appearance: appearance, style: style)
+        case .navBar(let navBarKey):
+            return appearance.navigationBar.color(key: navBarKey)
+        case .tabBar(let tabBarKey):
+            return appearance.tabBar.color(key: tabBarKey)
+        case .price(let priceKey):
+            return appearance.price.color(key: priceKey)
         case .color(let color):
             return color
-        case .text(let font):
-            return appearance.style(for: style).color(for: .text(.font(font)), appearance: appearance, style: style)
-        case .viewColor(let color):
-            return appearance.style(for: style).color(for: color, appearance: appearance, style: style)
         }
     }
 }
-

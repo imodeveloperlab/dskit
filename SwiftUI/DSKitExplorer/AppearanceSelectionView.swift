@@ -23,7 +23,7 @@ struct AppearanceSelectionView: View {
                     DSVStack(spacing: .zero) {
                         DSHStack(spacing: .small) {
                             DSText("Welcome to").dsTextStyle(.largeHeadline)
-                            DSText("DSKit").dsTextStyle(.largeHeadline, .viewColor(.buttonAccentColor))
+                            DSText("DSKit").dsTextStyle(.largeHeadline, .view(.button(.accentColor)))
                         }
                         DSText("Please select an appearance to continue").dsTextStyle(.subheadline)
                     }

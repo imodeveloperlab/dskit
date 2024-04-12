@@ -22,7 +22,7 @@ struct NotificationsScreen1: View {
                 DSText("Turn on\nnotifications")
                     .dsTextStyle(.headline, 36)
                 Spacer()
-                DSImageView(systemName: "bell.fill", size: 60, tint: .secondaryView(.background))
+                DSImageView(systemName: "bell.fill", size: 60, tint: .viewStyle(.secondary, .background))
             }
             
             DSText("Meet new people, create posts, find friends and more.")

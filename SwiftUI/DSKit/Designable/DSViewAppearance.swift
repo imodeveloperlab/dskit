@@ -19,39 +19,27 @@ public protocol DSViewAppearanceProtocol {
 }
 
 public extension DSViewAppearanceProtocol {
-    func color(for viewColor: DSViewColorKey, appearance: DSAppearance, style: DSViewStyle) -> Color {
-        switch viewColor {
-        case .buttonAccentColor:
-            button.accentColor.color
-        case .buttonSupportColor:
-            button.supportColor.color
+    func color(for viewKey: DSViewColorKey, appearance: DSAppearance, style: DSViewStyle) -> Color {
+        switch viewKey {
+        case .button(let buttonKey):
+            button.color(key: buttonKey)
         case .background:
             background.color
         case .separator:
             separator.color
-        case .textFieldBorder:
-            textField.border.color
-        case .textFieldBackground:
-            textField.background.color
-        case .textFieldText:
-            textField.text.color
-        case .textFieldPlaceholder:
-            textField.placeHolder.color
-        case .text(let textColor):
-            textColor.color(for: appearance, and: style)
+        case .textField(let textFieldKey):
+            textField.color(key: textFieldKey)
+        case .text(let textKey):
+            textKey.color(for: appearance, and: style)
         }
     }
 }
 
 public enum DSViewColorKey: Equatable, Hashable {
-    case buttonAccentColor
-    case buttonSupportColor
     case background
     case separator
-    case textFieldBorder
-    case textFieldBackground
-    case textFieldText
-    case textFieldPlaceholder
+    case button(DSButtonColorKey)
+    case textField(DSTextFieldColorKey)
     case text(DSTextColorKey)
 }
 

@@ -7,12 +7,35 @@
 //
 
 import UIKit
+import SwiftUI
 
 public protocol DSTextFieldAppearanceProtocol {
     var border: UIColor { get set }
     var background: UIColor { get set }
     var text: UIColor { get set }
     var placeHolder: UIColor { get set }
+}
+
+public extension DSTextFieldAppearanceProtocol {
+    func color(key: DSTextFieldColorKey) -> Color {
+        switch key {
+        case .border:
+            border.color
+        case .background:
+            background.color
+        case .text:
+            text.color
+        case .placeholder:
+            placeHolder.color
+        }
+    }
+}
+
+public enum DSTextFieldColorKey {
+    case border
+    case background
+    case text
+    case placeholder
 }
 
 public struct DSTextFieldAppearance: DSTextFieldAppearanceProtocol {

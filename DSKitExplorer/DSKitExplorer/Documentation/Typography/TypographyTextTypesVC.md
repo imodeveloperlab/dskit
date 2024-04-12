@@ -1,1 +1,0 @@
-In essence, **typography** is the art of arranging letters and text in a way that makes the copy legible, clear, and visually appealing to the reader. **Typography** involves font style, appearance, and structure, which aims to elicit certain emotions and convey specific messages.

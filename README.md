@@ -17,17 +17,21 @@
 
 **DSKit** is a simple **Design System** SDK for iOS 15+ SwiftUI, designed to help developers create simple, consistent and attractive user interfaces with ease. It includes essential view modifiers which ensure that all UI components follow a unified style guide. 
 
+## Components and Layouts
+
+DSKit offers a library of ready-to-use UI components and full-screen layouts that are designed to be easily integrated and customized within your projects. Each component and screen layout is fully adaptable, allowing you to tweak and refine them to perfectly fit the specific needs of your application. This accessibility accelerates the development process, enabling you to implement complex design solutions efficiently while maintaining a high standard of aesthetics and functionality.
+
 <table style="border-collapse: collapse; border: none;">
-    <tr style="border: none;">
-      <td style="border: none;"><a href="DSKitExplorer/Screens/HomeScreen.swift" target="_blank"><img src="Content/Screenshots/HomeScreen1.1_framed.png" class="img-fluid rounded work-image" alt="HomeScreen1.1_framed.png"></a></td>
-      <td style="border: none;"><a href="DSKitExplorer/Screens/HomeScreen.swift" target="_blank"><img src="Content/Screenshots/HomeScreen2.1_framed.png" class="img-fluid rounded work-image" alt="HomeScreen2.1_framed.png"></a></td>
-      <td style="border: none;"><a href="DSKitExplorer/Screens/HomeScreen.swift" target="_blank"><img src="Content/Screenshots/HomeScreen3.1_framed.png" class="img-fluid rounded work-image" alt="HomeScreen3.1_framed.png"></a></td>
-      <td style="border: none;"><a href="DSKitExplorer/Screens/HomeScreen4.swift" target="_blank"><img src="Content/Screenshots/HomeScreen4.1_framed.png" class="img-fluid rounded work-image" alt="HomeScreen4.1_framed.png"></a></td>
-    </tr>
+<tr style="border: none;">
+<td style="border: none;"><a href="DSKitExplorer/Screens/HomeScreen.swift" target="_blank"><img src="Content/Screenshots/HomeScreen3.1_framed.png" class="img-fluid rounded work-image" alt="HomeScreen3.1_framed.png"></a></td>
+<td style="border: none;"><a href="DSKitExplorer/Screens/ItemDetails.swift" target="_blank"><img src="Content/Screenshots/ItemDetails2.1_framed.png" class="img-fluid rounded work-image" alt="ItemDetails2.1_framed.png"></a></td>
+<td style="border: none;"><a href="DSKitExplorer/Screens/CartScreen.swift" target="_blank"><img src="Content/Screenshots/CartScreen5.1_framed.png" class="img-fluid rounded work-image" alt="CartScreen5.1_framed.png"></a></td>
+<td style="border: none;"><a href="DSKitExplorer/Screens/Order.swift" target="_blank"><img src="Content/Screenshots/Order1.1_framed.png" class="img-fluid rounded work-image" alt="Order1.1_framed.png"></a></td>
+<td style="border: none;"><a href="DSKitExplorer/Screens/Order.swift" target="_blank"><img src="Content/Screenshots/Order4.1_framed.png" class="img-fluid rounded work-image" alt="Order4.1_framed.png"></a></td>
+</tr>
 </table>
 
-<p align="center"><b>Note:</b> Click on the image to see the source code, or <a href="ScreensGallery.md" target="_blank"> click here </a>to see all other screens</p>
-
+<p align="center"><b>Note:</b> Click on images to see the source code or <a href="">here</a> to see all available layouts</p>
 
 ## Get started 
 

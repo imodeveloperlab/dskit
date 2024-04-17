@@ -30,8 +30,7 @@ DSKit offers a library of ready-to-use UI components and full-screen layouts tha
 <td style="border: none;"><a href="DSKitExplorer/Screens/Order.swift" target="_blank"><img src="Content/Screenshots/Order4.1_framed.png" class="img-fluid rounded work-image" alt="Order4.1_framed.png"></a></td>
 </tr>
 </table>
-
-<p align="center"><b>Note:</b> Click on images to see the source code or <a href="">here</a> to see all available layouts</p>
+<p align="center"><b>Note:</b> Click on images to see the source code or <a href="ScreensGallery.md">here</a> to see all available layouts</p>
 
 ## Get started 
 

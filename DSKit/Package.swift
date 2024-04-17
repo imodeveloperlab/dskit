@@ -1,11 +1,10 @@
-// swift-tools-version:5.3
-
+// swift-tools-version:5.5
 import PackageDescription
 
 let package = Package(
     name: "DSKit",
     platforms: [
-        .iOS(.v13),
+        .iOS(.v15)
     ],
     products: [
         .library(name: "DSKit", targets: ["DSKit"]),
@@ -20,8 +19,7 @@ let package = Package(
             dependencies: [
                 // Corrected: Refer to the package by its name without the .git suffix
                 .product(name: "SDWebImageSwiftUI", package: "SDWebImageSwiftUI")
-            ],
-            path: "SwiftUI/Sources"
+            ]
         )
     ]
 )

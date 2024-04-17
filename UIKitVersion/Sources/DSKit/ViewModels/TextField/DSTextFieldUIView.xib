@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DSTextFieldUIView" customModule="DSKit">
+            <rect key="frame" x="0.0" y="0.0" width="443" height="97"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="slI-iz-GfW">
+                    <rect key="frame" x="0.0" y="0.0" width="443" height="97"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="lCU-CR-E8Y">
+                            <rect key="frame" x="7" y="1" width="429" height="95"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <action selector="editingBegin:" destination="iN0-l3-epB" eventType="editingDidBegin" id="UQQ-UR-CYs"/>
+                                <action selector="editingChange:" destination="iN0-l3-epB" eventType="editingChanged" id="TRL-7l-8p6"/>
+                                <action selector="editingEnd:" destination="iN0-l3-epB" eventType="editingDidEnd" id="NOH-aQ-r4c"/>
+                                <outlet property="delegate" destination="iN0-l3-epB" id="Siy-Sp-CGW"/>
+                            </connections>
+                        </textField>
+                        <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iP3-Nf-38D">
+                            <rect key="frame" x="384.5" y="0.0" width="51.5" height="97"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cVg-D5-Hh4">
+                                    <rect key="frame" x="-24" y="0.0" width="24" height="97"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="24" id="kc6-vS-Ahf"/>
+                                    </constraints>
+                                </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="wNQ-D5-kZ9">
+                                    <rect key="frame" x="10" y="38.5" width="41.5" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <gestureRecognizers/>
+                            <constraints>
+                                <constraint firstItem="wNQ-D5-kZ9" firstAttribute="leading" secondItem="cVg-D5-Hh4" secondAttribute="trailing" constant="10" id="82s-gP-Inc"/>
+                                <constraint firstItem="cVg-D5-Hh4" firstAttribute="top" secondItem="iP3-Nf-38D" secondAttribute="top" id="TfR-qs-bSL"/>
+                                <constraint firstAttribute="trailing" secondItem="wNQ-D5-kZ9" secondAttribute="trailing" id="WOk-9p-f2m"/>
+                                <constraint firstItem="cVg-D5-Hh4" firstAttribute="leading" secondItem="iP3-Nf-38D" secondAttribute="leading" constant="-24" id="hd6-Ni-TSu"/>
+                                <constraint firstAttribute="bottom" secondItem="cVg-D5-Hh4" secondAttribute="bottom" id="i36-GC-fBz"/>
+                            </constraints>
+                            <connections>
+                                <outletCollection property="gestureRecognizers" destination="E9T-Cu-cGt" appends="YES" id="LJr-FJ-z9R"/>
+                            </connections>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="iP3-Nf-38D" secondAttribute="bottom" id="2Jq-2H-jSI"/>
+                        <constraint firstItem="wNQ-D5-kZ9" firstAttribute="centerY" secondItem="lCU-CR-E8Y" secondAttribute="centerY" id="2NB-oL-FsX"/>
+                        <constraint firstItem="lCU-CR-E8Y" firstAttribute="top" secondItem="slI-iz-GfW" secondAttribute="top" constant="1" id="KMP-qc-I5P"/>
+                        <constraint firstAttribute="bottom" secondItem="lCU-CR-E8Y" secondAttribute="bottom" constant="1" id="SMN-cu-wf8"/>
+                        <constraint firstItem="iP3-Nf-38D" firstAttribute="width" relation="lessThanOrEqual" secondItem="lCU-CR-E8Y" secondAttribute="width" multiplier="0.8" id="af1-UT-0lK"/>
+                        <constraint firstItem="iP3-Nf-38D" firstAttribute="top" secondItem="slI-iz-GfW" secondAttribute="top" id="cX7-5U-kpa"/>
+                        <constraint firstItem="lCU-CR-E8Y" firstAttribute="leading" secondItem="slI-iz-GfW" secondAttribute="leading" constant="7" id="ntS-v2-aRP"/>
+                        <constraint firstAttribute="trailing" secondItem="lCU-CR-E8Y" secondAttribute="trailing" constant="7" id="uyP-k9-M5E"/>
+                        <constraint firstItem="iP3-Nf-38D" firstAttribute="trailing" secondItem="lCU-CR-E8Y" secondAttribute="trailing" id="w9g-Y7-ejy"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="slI-iz-GfW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="0wc-S1-bkh"/>
+                <constraint firstAttribute="bottom" secondItem="slI-iz-GfW" secondAttribute="bottom" id="69j-SO-HCt"/>
+                <constraint firstAttribute="trailing" secondItem="slI-iz-GfW" secondAttribute="trailing" id="XIK-i0-Ys7"/>
+                <constraint firstItem="slI-iz-GfW" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="gA8-3b-vwf"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="messageLabel" destination="wNQ-D5-kZ9" id="6bN-wE-pZI"/>
+                <outlet property="messageLabelContainerView" destination="iP3-Nf-38D" id="kvr-hV-STq"/>
+                <outlet property="messageLabelGradientView" destination="cVg-D5-Hh4" id="6Mw-fw-r8i"/>
+                <outlet property="textField" destination="lCU-CR-E8Y" id="sIF-RR-2ZE"/>
+                <outlet property="textFieldHolder" destination="slI-iz-GfW" id="cUV-U5-u2P"/>
+                <outlet property="textFieldLeftSpace" destination="ntS-v2-aRP" id="5S1-CH-kSp"/>
+            </connections>
+            <point key="canvasLocation" x="-996.37681159420299" y="-137.61160714285714"/>
+        </view>
+        <tapGestureRecognizer id="E9T-Cu-cGt">
+            <connections>
+                <action selector="messageLabelContainerViewTapped:" destination="iN0-l3-epB" id="Xuy-iK-1H2"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

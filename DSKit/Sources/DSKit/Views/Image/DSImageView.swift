@@ -10,7 +10,7 @@ import SDWebImageSwiftUI
 
 public struct DSImageView: View {
     
-    static let unitTestMode = ProcessInfo.processInfo.environment["XCTestConfigurationFilePath"] == nil
+    let unitTestMode = ProcessInfo.processInfo.arguments.contains("TESTMODE")
     
     @Environment(\.appearance) var appearance: DSAppearance
     @Environment(\.viewStyle) var viewStyle: DSViewStyle
@@ -96,7 +96,7 @@ public struct DSImageView: View {
                 .dsSize(image.size)
         case .image(image: let uiImage):
             
-            if DSImageView.unitTestMode {
+            if unitTestMode {
                 Color.gray.opacity(0.1)
                     .dsSize(image.size)
                     .setDisplayShape(shape: image.displayShape)
@@ -140,11 +140,15 @@ public struct DSImageView: View {
                     }
                 }
                 .onAppear {
-                    if DSImageView.unitTestMode {
+                    if unitTestMode {
                         return
                     }
+                
+                    let transformer = SDImageResizingTransformer(
+                        size: CGSize(width: geometry.size.width * 3, height:  geometry.size.height * 3),
+                        scaleMode: .aspectFill
+                    )
                     
-                    let transformer = SDImageResizingTransformer(size: CGSize(width: geometry.size.width * 3, height:  geometry.size.height * 3), scaleMode: .aspectFill)
                     self.imageManager.load(url: url, context: [.imageTransformer: transformer])
                 }
                 .onDisappear {

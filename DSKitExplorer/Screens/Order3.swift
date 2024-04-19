@@ -15,16 +15,21 @@ struct Order3: View {
     var body: some View {
         DSVStack(alignment: .center) {
             Spacer()
-            DSImageView(systemName: "checkmark.circle.fill", size: 70, tint: .color(.green))
-                .dsPadding(.bottom, 30)
-            DSText("It's Ordered").dsTextStyle(.largeHeadline)
-            DSText("Hi John - thanks for your order,\nwe hope you enjoyed shopping\nwith us", multilineTextAlignment: .center)
-                .dsTextStyle(.subheadline)
-            Spacer()
-            Spacer()
-            Spacer()
             DSButton(title: "Continue Shopping", rightSystemName: "bag.fill", action: { dismiss() })
-        }.dsScreen()
+        }
+        .overlay(alignment: .center, content: {
+            DSVStack(alignment: .center) {
+                Spacer()
+                DSImageView(systemName: "checkmark.circle.fill", size: 70, tint: .color(.green))
+                    .dsPadding(.bottom, 30)
+                DSText("It's Ordered").dsTextStyle(.largeHeadline)
+                DSText("Hi John - thanks for your order,\nwe hope you enjoyed shopping\nwith us", multilineTextAlignment: .center)
+                    .dsTextStyle(.subheadline)
+                Spacer()
+                Spacer()
+            }
+        })
+        .dsScreen()
     }
 }
 

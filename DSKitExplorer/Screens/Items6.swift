@@ -143,7 +143,7 @@ struct Testable_Items6: View {
     var body: some View {
         NavigationView {
             Items6()
-                .navigationTitle("Items")
+                .navigationTitle("Products")
                 .navigationBarTitleDisplayMode(.inline)
         }
     }

@@ -15,8 +15,7 @@ struct HomeScreen4: View {
     
     var body: some View {
         ScrollView() {
-            DSVStack(spacing: .medium) {
-                
+            DSVStack {
                 ProfileView(
                     title: "Shoes Shop",
                     youHave: "You have",
@@ -25,7 +24,7 @@ struct HomeScreen4: View {
                     profileImageUrl: profileOnYellowBg
                 )
                 
-                DSCoverFlow(height: 190, data: viewModel.topProducts, id: \.imageUrl) { product in
+                DSCoverFlow(height: 220, data: viewModel.topProducts, id: \.imageUrl) { product in
                     TopProductView(product: product)
                         .onTap { self.dismiss() }
                 }
@@ -249,5 +248,5 @@ struct HomeScreen4_Previews: PreviewProvider {
 
 fileprivate let profileOnYellowBg = URL(string: "https://images.pexels.com/photos/3783525/pexels-photo-3783525.jpeg?cs=srgb&dl=pexels-andrea-piacquadio-3783525.jpg&fm=jpg")
 fileprivate let sneakersOnWhiteBg = URL(string: "https://images.pexels.com/photos/1858404/pexels-photo-1858404.jpeg?cs=srgb&dl=pexels-athena-1858404.jpg&fm=jpg")
-fileprivate let sneakersNeon = URL(string: "https://images.pexels.com/photos/6698232/pexels-photo-6698232.jpeg?cs=srgb&dl=pexels-smith-major-6698232.jpg&fm=jpg")
+fileprivate let sneakersNeon = URL(string: "https://images.unsplash.com/photo-1710643301117-4d738aeb1e69?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
 fileprivate let sneakersWhiteOnYellowBg = URL(string: "https://images.pexels.com/photos/2421374/pexels-photo-2421374.jpeg?cs=srgb&dl=pexels-hoang-loc-2421374.jpg&fm=jpg")

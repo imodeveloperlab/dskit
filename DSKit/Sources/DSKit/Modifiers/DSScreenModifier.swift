@@ -12,8 +12,7 @@ public struct DSScreenModifier: ViewModifier {
     public func body(content: Content) -> some View {
         content
             .dsBackground(.primary)
-            .environment(\.dsContentMarginKey, appearance.screenMargins)
-            .environment(\.dsScrollableContentMarginKey, appearance.screenMargins)
+            .dsContentMargins()
     }
 }
 

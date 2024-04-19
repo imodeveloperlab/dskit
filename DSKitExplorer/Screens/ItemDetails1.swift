@@ -17,7 +17,7 @@ struct ItemDetails1: View {
         ScrollView {
             DSVStack(spacing: .medium) {
                 
-                DSCoverFlow(height: 290, data: viewModel.imageGallery, id: \.self) { imageUrl in
+                DSCoverFlow(height: 250, data: viewModel.imageGallery, id: \.self) { imageUrl in
                     DSImageView(url: imageUrl).dsCornerRadius()
                 }
                 
@@ -73,7 +73,7 @@ extension ItemDetails1 {
                 DSText(selection).dsTextStyle(.smallSubtitle)
                 DSChevronView()
             }
-            .dsHeight(40)
+            .dsHeight(.actionElement)
             .dsPadding(.horizontal)
             .dsSecondaryBackground()
             .dsCornerRadius()
@@ -94,7 +94,7 @@ extension ItemDetails1 {
                     .dsCornerRadius()
                 DSChevronView()
             }
-            .dsHeight(40)
+            .dsHeight(.actionElement)
             .dsPadding(.horizontal)
             .dsSecondaryBackground()
             .dsCornerRadius()
@@ -105,7 +105,7 @@ extension ItemDetails1 {
 // MARK: - Model
 
 final class ItemDetails1Model: ObservableObject {
-    let imageGallery = [p1Image, p3Image, p2Image]
+    let imageGallery = [p3Image, p1Image, p2Image]
     let price = DSPrice(amount: "200.0", regularAmount: "200", currency: "$", discountBadge: "80$ OFF")
     let title = "Women's Running Shoe"
     let subtitle = "Nike Revolution 5"
@@ -119,7 +119,7 @@ struct Testable_ItemDetails1: View {
     var body: some View {
         NavigationView {
             ItemDetails1()
-                .navigationTitle("Details")
+                .navigationTitle("Product Details")
                 .navigationBarTitleDisplayMode(.inline)
         }
     }

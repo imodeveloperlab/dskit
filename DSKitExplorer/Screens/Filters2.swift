@@ -30,7 +30,8 @@ struct Filters2: View {
                     id: \.self,
                     selected: $viewModel.selectedColor
                 ) { color in
-                    Color(uiColor: color).dsSize(40)
+                    Color(uiColor: color)
+                        .dsSize(dimension: .actionElement)
                 }.dsSectionStyle(title: "Color")
                 
                 DSPickerView(
@@ -40,7 +41,7 @@ struct Filters2: View {
                 ) { size in
                     DSText(size).dsTextStyle(.smallHeadline)
                         .frame(maxWidth: .infinity)
-                        .dsSize(40)
+                        .dsSize(dimension: .actionElement)
                         .dsSecondaryBackground()
                 }.dsSectionStyle(title: "Size")
                 

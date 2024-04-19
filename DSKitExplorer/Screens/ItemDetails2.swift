@@ -16,7 +16,7 @@ struct ItemDetails2: View {
     var body: some View {
         ScrollView {
             DSVStack(spacing: .medium) {
-                DSCoverFlow(height: 220, data: viewModel.imageGallery, id: \.self) { imageUrl in
+                DSCoverFlow(height: 250, data: viewModel.imageGallery, id: \.self) { imageUrl in
                     DSImageView(url: imageUrl).dsCornerRadius()
                 }
                 DSVStack(spacing: .medium) {
@@ -38,7 +38,7 @@ struct ItemDetails2: View {
                     DSText(size).dsTextStyle(.smallHeadline)
                         .frame(maxWidth: .infinity)
                         .dsPadding(.horizontal)
-                        .dsHeight(35)
+                        .dsHeight(.actionElement)
                         .dsSecondaryBackground()
                 }.dsSectionStyle(title: "Size")
                 
@@ -81,7 +81,7 @@ final class ItemDetails2Model: ObservableObject {
     @Published var selectedColor: String = "nike_2"
     @Published var colors = ["nike_1", "nike_2", "nike_3", "nike_4", "nike_5", "nike_6"]
     @Published var sizes = ["US 5", "US 5.5", "US 6", "US 6.5", "US 7", "US 7.5", "US 8", "US 8.5", "US 9"]
-    let imageGallery = [p4Image, p1Image, p3Image, p2Image]
+    let imageGallery = [p4Image, p3Image, p1Image, p2Image]
     let title = "Women's Running Shoe"
     let subtitle = "Nike Revolution 5"
     let description = "The Nike Revolution 5 cushions your stride with soft foam to keep you running in comfort. Lightweight knit material wraps your foot in breathable support, while a minimalist design fits in anywhere your day takes you."
@@ -100,7 +100,7 @@ struct Testable_ItemDetails2: View {
     var body: some View {
         NavigationView {
             ItemDetails2()
-                .navigationTitle("Details")
+                .navigationTitle("Product Details")
                 .navigationBarTitleDisplayMode(.inline)
         }
     }

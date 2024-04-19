@@ -1,0 +1,28 @@
+{
+  "configurations" : [
+    {
+      "id" : "53A232E8-FCC2-4CA7-8742-66641C7C0BA2",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "commandLineArgumentEntries" : [
+      {
+        "argument" : "SCREENSHOTSMODE"
+      }
+    ]
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:DSKitExplorer.xcodeproj",
+        "identifier" : "60D469F82BCAF14000A6F7FC",
+        "name" : "DSKitExplorerTests"
+      }
+    }
+  ],
+  "version" : 1
+}

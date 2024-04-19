@@ -151,7 +151,7 @@ extension Order2 {
 final class Order2Model {
 
     let checkoutInfo: [Order2.CardView.Data] = [
-        .init(icon: "cart.fill", title: "Cart", subtitle: "3 items", description: "$167.00"),
+        .init(icon: "cart.fill", title: "My Cart", subtitle: "3 items", description: "$167.00"),
         .init(icon: "mappin.circle.fill", title: "Address", subtitle: "4863 West Virginia", description: "New York, US"),
         .init(icon: "shippingbox.fill", title: "Shipping", subtitle: "Standard Shipping", description: "2 weeks for $0"),
         .init(icon: "creditcard.fill", title: "Payment", subtitle: "MasterCard", description: "**** 8314")
@@ -177,7 +177,7 @@ struct Testable_Order2: View {
     var body: some View {
         NavigationView {
             Order2()
-                .navigationTitle("Order details")
+                .navigationTitle("Order")
         }
     }
 }

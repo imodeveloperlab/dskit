@@ -16,7 +16,7 @@ public struct DSDivider: View, DSDesignable {
 
     public var body: some View {
         Divider().background(viewColors.separator.color)
-            .frame(height: 1)
+            .frame(minWidth: 1, minHeight: 1)
     }
 }
 

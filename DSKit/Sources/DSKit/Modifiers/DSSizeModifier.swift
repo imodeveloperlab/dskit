@@ -58,6 +58,10 @@ public extension View {
     func dsSize(_ size: DSSize) -> some View {
         self.modifier(DSSizeModifier(size: size))
     }
+    
+    func dsSize(dimension: DSDimension) -> some View {
+        self.modifier(DSSizeModifier(size: DSSize(width: dimension, height: dimension)))
+    }
 }
 
 struct DSSizeModifier_Previews: PreviewProvider {

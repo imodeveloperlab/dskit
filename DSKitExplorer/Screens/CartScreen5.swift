@@ -214,7 +214,7 @@ struct Testable_CartScreen5: View {
     var body: some View {
         NavigationView {
             CartScreen5()
-                .navigationTitle("Cart")
+                .navigationTitle("My Cart")
                 .navigationBarTitleDisplayMode(.inline)
         }
     }

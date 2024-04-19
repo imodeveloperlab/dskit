@@ -10,8 +10,11 @@ import SwiftUI
 public struct DSContentMarginModifier: ViewModifier {
     @Environment(\.appearance) var appearance: DSAppearance
     @Environment(\.dsContentMarginKey) var contentMargin: CGFloat
+    let customMargins: CGFloat?
     public func body(content: Content) -> some View {
         content
+            .environment(\.dsContentMarginKey, customMargins ?? appearance.screenMargins)
+            .environment(\.dsScrollableContentMarginKey, customMargins ?? appearance.screenMargins)
             .padding(.horizontal, contentMargin)
     }
 }
@@ -27,29 +30,14 @@ public extension EnvironmentValues {
     }
 }
 
-public struct DSScrollableContentMarginKey: EnvironmentKey {
-    public static let defaultValue: CGFloat = .zero
-}
-
-public extension EnvironmentValues {
-    var dsScrollableContentMarginKey: CGFloat {
-        get { self[DSScrollableContentMarginKey.self] }
-        set { self[DSScrollableContentMarginKey.self] = newValue }
-    }
-}
-
 public extension View {
     
-    func dsContentMargins(margin: CGFloat = .zero) -> some View {
+    func dsContentMargins(margin: CGFloat? = nil) -> some View {
         return self
-            .environment(\.dsContentMarginKey, margin)
-            .environment(\.dsScrollableContentMarginKey, margin)
-            .modifier(DSContentMarginModifier())
+            .modifier(DSContentMarginModifier(customMargins: margin))
     }
     
     func dsResetContentMargins() -> some View {
         return self.environment(\.dsContentMarginKey, .zero)
     }
 }
-
-

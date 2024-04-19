@@ -19,9 +19,9 @@ struct SignUpScreen2: View {
             DSImageView(url: profileImage, style: .circle, size: 100)
                 .frame(maxWidth: .infinity, alignment: .center)
                 .overlay {
-                    DSImageView(systemName: "camera.fill", size: 28, tint: .viewStyle(.primary, .button(.accentColor)))
-                        .dsPadding(.medium)
-                        .dsBlurBackground(style: .systemMaterialLight)
+                    DSImageView(systemName: "camera.fill", size: .smallIcon, tint: .viewStyle(.primary, .button(.accentColor)))
+                        .dsPadding(.regular)
+                        .dsBackground(.secondary)
                         .clipShape(Circle())
                         .onTap { dismiss() }
                         .offset(x: 35, y: 35)

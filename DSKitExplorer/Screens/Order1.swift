@@ -99,7 +99,7 @@ extension Order1 {
             }
             .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
             .overlay(alignment: .trailing, content: {
-                DSButton.sfSymbol(name: "pencil.circle", style: .clear, size: .mediumIcon, action: {})
+                DSButton.sfSymbol(name: "pencil.circle.fill", style: .clear, size: .mediumIcon, action: {})
             }).dsCardStyle()
         }
         
@@ -132,7 +132,7 @@ extension Order1 {
             }
             .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
             .overlay(alignment: .trailing, content: {
-                DSButton.sfSymbol(name: "pencil.circle", style: .clear, size: .mediumIcon, action: {})
+                DSButton.sfSymbol(name: "pencil.circle.fill", style: .clear, size: .mediumIcon, action: {})
             })
         }
         
@@ -164,7 +164,7 @@ extension Order1 {
             }
             .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
             .overlay(alignment: .trailing, content: {
-                DSButton.sfSymbol(name: "pencil.circle", style: .clear, size: .mediumIcon, action: {})
+                DSButton.sfSymbol(name: "pencil.circle.fill", style: .clear, size: .mediumIcon, action: {})
             })
             .onTap { }
         }
@@ -262,7 +262,7 @@ struct Testable_Order1: View {
     var body: some View {
         NavigationView {
             Order1()
-                .navigationTitle("Order details")
+                .navigationTitle("Order")
         }
     }
 }

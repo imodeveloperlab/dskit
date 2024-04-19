@@ -17,7 +17,7 @@ struct ItemDetails4: View {
         ScrollView {
             DSVStack(spacing: .medium) {
 
-                DSCoverFlow(height: 200, data: viewModel.imageGallery, id: \.self) { imageUrl in
+                DSCoverFlow(height: 250, data: viewModel.imageGallery, id: \.self) { imageUrl in
                     DSImageView(url: imageUrl).dsCornerRadius()
                 }
                 
@@ -48,7 +48,7 @@ struct ItemDetails4: View {
                 ) { size in
                     DSText(size).dsTextStyle(.smallHeadline)
                         .frame(maxWidth: .infinity)
-                        .dsSize(40)
+                        .dsSize(dimension: .actionElement)
                         .dsSecondaryBackground()
                 }.dsSectionStyle(title: "Size")
                 
@@ -57,7 +57,8 @@ struct ItemDetails4: View {
                     id: \.self,
                     selected: $viewModel.selectedColor
                 ) { color in
-                    Color(uiColor: color).dsSize(40)
+                    Color(uiColor: color)
+                        .dsSize(dimension: .actionElement)
                 }.dsSectionStyle(title: "Color")
                 
                 DSVStack(spacing: .small) {
@@ -146,7 +147,7 @@ struct Testable_ItemDetails4: View {
     var body: some View {
         NavigationView {
             ItemDetails4()
-                .navigationTitle("Details")
+                .navigationTitle("Product Details")
                 .navigationBarTitleDisplayMode(.inline)
         }
     }

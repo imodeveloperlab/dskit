@@ -154,7 +154,7 @@ struct Testable_Items1: View {
     var body: some View {
         NavigationView {
             Items1()
-                .navigationTitle("Items")
+                .navigationTitle("Products")
                 .navigationBarTitleDisplayMode(.inline)
         }
     }

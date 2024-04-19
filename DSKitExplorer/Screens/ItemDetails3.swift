@@ -16,7 +16,7 @@ struct ItemDetails3: View {
     var body: some View {
         ScrollView {
             DSVStack(spacing: .medium) {
-                DSCoverFlow(height: 260, data: viewModel.imageGallery, id: \.self) { imageUrl in
+                DSCoverFlow(height: 250, data: viewModel.imageGallery, id: \.self) { imageUrl in
                     DSImageView(url: imageUrl).dsCornerRadius()
                 }
                 DSVStack(spacing: .medium) {
@@ -67,7 +67,7 @@ struct ItemDetails3: View {
                     DSText(size).dsTextStyle(.smallHeadline)
                         .frame(maxWidth: .infinity)
                         .dsPadding(.horizontal)
-                        .dsHeight(35)
+                        .dsHeight(.actionElement)
                         .dsSecondaryBackground()
                 }.dsSectionStyle(title: "Size")
 
@@ -162,7 +162,7 @@ struct Testable_ItemDetails3: View {
     var body: some View {
         NavigationView {
             ItemDetails3()
-                .navigationTitle("Details")
+                .navigationTitle("Product Details")
                 .navigationBarTitleDisplayMode(.inline)
         }
     }

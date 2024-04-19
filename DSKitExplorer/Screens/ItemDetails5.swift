@@ -16,7 +16,7 @@ struct ItemDetails5: View {
     var body: some View {
         ScrollView {
             DSVStack(spacing: .medium) {
-                DSCoverFlow(height: 260, showPaginationView: false, data: viewModel.imageGallery, id: \.self) { imageUrl in
+                DSCoverFlow(height: 250, data: viewModel.imageGallery, id: \.self) { imageUrl in
                     DSImageView(url: imageUrl).dsCornerRadius()
                 }
                 
@@ -45,7 +45,7 @@ struct ItemDetails5: View {
                     DSText(size).dsTextStyle(.smallHeadline)
                         .frame(maxWidth: .infinity)
                         .dsPadding(.horizontal)
-                        .dsHeight(35)
+                        .dsHeight(.actionElement)
                         .dsSecondaryBackground()
                 }
 
@@ -103,7 +103,7 @@ struct Testable_ItemDetails5: View {
     var body: some View {
         NavigationView {
             ItemDetails5()
-                .navigationTitle("Details")
+                .navigationTitle("Product Details")
                 .navigationBarTitleDisplayMode(.inline)
         }
     }
@@ -117,6 +117,6 @@ struct ItemDetails5_Previews: PreviewProvider {
     }
 }
 
-fileprivate let p1Image = URL(string: "https://images.pexels.com/photos/5710082/pexels-photo-5710082.jpeg?cs=srgb&dl=pexels-ox-street-5710082.jpg&fm=jpg")
+fileprivate let p1Image = URL(string: "https://images.unsplash.com/photo-1710643301117-4d738aeb1e69?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
 fileprivate let p2Image = URL(string: "https://images.pexels.com/photos/3261069/pexels-photo-3261069.jpeg?cs=srgb&dl=pexels-wallace-chuck-3261069.jpg&fm=jpg")
 fileprivate let p3Image = URL(string: "https://images.pexels.com/photos/1456705/pexels-photo-1456705.jpeg?cs=srgb&dl=pexels-ray-piedra-1456705.jpg&fm=jpg")

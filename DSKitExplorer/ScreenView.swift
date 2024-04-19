@@ -18,27 +18,27 @@ struct ScreenView: View {
         switch screen {
         case .cartScreen1:
             CartScreen1()
-                .navigationTitle("Cart")
+                .navigationTitle("My Cart")
                 .navigationBarTitleDisplayMode(.inline)
                 .environment(\.appearance, appearance)
         case .cartScreen2:
             CartScreen2()
-                .navigationTitle("Cart")
+                .navigationTitle("My Cart")
                 .navigationBarTitleDisplayMode(.inline)
                 .environment(\.appearance, appearance)
         case .cartScreen3:
             CartScreen3()
-                .navigationTitle("Cart")
+                .navigationTitle("My Cart")
                 .navigationBarTitleDisplayMode(.inline)
                 .environment(\.appearance, appearance)
         case .cartScreen4:
             CartScreen4()
-                .navigationTitle("Cart")
+                .navigationTitle("My Cart")
                 .navigationBarTitleDisplayMode(.inline)
                 .environment(\.appearance, appearance)
         case .cartScreen5:
             CartScreen5()
-                .navigationTitle("Cart")
+                .navigationTitle("My Cart")
                 .navigationBarTitleDisplayMode(.inline)
                 .environment(\.appearance, appearance)
         case .signUpScreen1:
@@ -117,67 +117,67 @@ struct ScreenView: View {
                 .environment(\.appearance, appearance)
         case .itemDetails1:
             ItemDetails1()
-                .navigationTitle("Details")
+                .navigationTitle("Product Details")
                 .navigationBarTitleDisplayMode(.inline)
                 .environment(\.appearance, appearance)
         case .itemDetails2:
             ItemDetails2()
-                .navigationTitle("Details")
+                .navigationTitle("Product Details")
                 .navigationBarTitleDisplayMode(.inline)
                 .environment(\.appearance, appearance)
         case .itemDetails3:
             ItemDetails3()
-                .navigationTitle("Details")
+                .navigationTitle("Product Details")
                 .navigationBarTitleDisplayMode(.inline)
                 .environment(\.appearance, appearance)
         case .itemDetails4:
             ItemDetails4()
-                .navigationTitle("Details")
+                .navigationTitle("Product Details")
                 .navigationBarTitleDisplayMode(.inline)
                 .environment(\.appearance, appearance)
         case .itemDetails5:
             ItemDetails5()
-                .navigationTitle("Details")
+                .navigationTitle("Product Details")
                 .navigationBarTitleDisplayMode(.inline)
                 .environment(\.appearance, appearance)
         case .items1:
             Items1()
-                .navigationTitle("Items")
+                .navigationTitle("Products")
                 .navigationBarTitleDisplayMode(.inline)
                 .environment(\.appearance, appearance)
         case .items2:
             Items2()
-                .navigationTitle("Items")
+                .navigationTitle("Products")
                 .navigationBarTitleDisplayMode(.inline)
                 .environment(\.appearance, appearance)
         case .items3:
             Items3()
-                .navigationTitle("Items")
+                .navigationTitle("Products")
                 .navigationBarTitleDisplayMode(.inline)
                 .environment(\.appearance, appearance)
         case .items4:
             Items4()
-                .navigationTitle("Items")
+                .navigationTitle("Products")
                 .navigationBarTitleDisplayMode(.inline)
                 .environment(\.appearance, appearance)
         case .items5:
             Items5()
-                .navigationTitle("Items")
+                .navigationTitle("Products")
                 .navigationBarTitleDisplayMode(.inline)
                 .environment(\.appearance, appearance)
         case .items6:
             Items6()
-                .navigationTitle("Items")
+                .navigationTitle("Products")
                 .navigationBarTitleDisplayMode(.inline)
                 .environment(\.appearance, appearance)
         case .items7:
             Items7()
-                .navigationTitle("Items")
+                .navigationTitle("Products")
                 .navigationBarTitleDisplayMode(.inline)
                 .environment(\.appearance, appearance)
         case .items8:
             Items8()
-                .navigationTitle("Items")
+                .navigationTitle("Products")
                 .navigationBarTitleDisplayMode(.inline)
                 .environment(\.appearance, appearance)
         case .categories1:

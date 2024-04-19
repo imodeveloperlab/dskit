@@ -29,7 +29,7 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <TestPlans>
          <TestPlanReference
-            reference = "container:../DSKitExplorer.xctestplan"
+            reference = "container:DSKitExplorerTests/DSKitExplorer.xctestplan"
             default = "YES">
          </TestPlanReference>
       </TestPlans>

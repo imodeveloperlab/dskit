@@ -16,8 +16,8 @@ struct HomeScreen1: View {
     var body: some View {
         ScrollView() {
             DSVStack {
-                ProfileView(title: "Your Shop", profileUrl: profile)
-                DSCoverFlow(height: 200, data: viewModel.topProducts, id: \.self) { imageUrl in
+                ProfileView(title: "Your Shop", subtitle: "The best experience", profileUrl: profile)
+                DSCoverFlow(height: 220, data: viewModel.topProducts, id: \.self) { imageUrl in
                     DSImageView(url: imageUrl, style: .capsule).onTap { self.dismiss() }
                 }
                 DSVStack {
@@ -56,12 +56,16 @@ extension HomeScreen1 {
     // MARK: - Profile View
     struct ProfileView: View {
         let title: String
+        let subtitle: String
         let profileUrl: URL?
         var body: some View {
             DSHStack {
-                DSText(title).dsTextStyle(.largeHeadline)
+                DSVStack(spacing: .zero) {
+                    DSText(title).dsTextStyle(.largeHeadline)
+                    DSText(subtitle).dsTextStyle(.subheadline)
+                }
                 Spacer()
-                DSImageView(url: profileUrl, style: .circle, size: .size(40))
+                DSImageView(url: profileUrl, style: .circle, size: .size(50))
             }
         }
     }

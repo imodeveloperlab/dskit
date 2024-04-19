@@ -20,6 +20,7 @@ extension XCTestCase {
         line: UInt = #line
     ) {
         SnapshotTesting.diffTool = "open"
+        let screenShotMode = ProcessInfo.processInfo.arguments.contains("SCREENSHOTSMODE")
         isRecording = true
         UIView.setAnimationsEnabled(false)
         let view = UIHostingController(rootView: testView)
@@ -32,7 +33,8 @@ extension XCTestCase {
         
         SnapshotTesting.assertSnapshot(
             matching: view,
-            as: .wait(for: 2, on: .image(on: .iPhone13Pro)),
+            as: .wait(for: screenShotMode ? 3 : 0.1 , on: .image(on: .iPhone13Pro)),
+            named: screenShotMode ? "screenshot" : "snapshot",
             record: record,
             timeout: timeout,
             file: file,

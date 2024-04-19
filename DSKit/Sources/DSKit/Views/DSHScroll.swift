@@ -37,7 +37,8 @@ public struct DSHScroll<Data, ID, Content>: View where Data: RandomAccessCollect
                 ForEach(data, id: id) { element in
                     self.content(element)
                 }
-            }.padding(.horizontal, scrollableContentMargin)
+            }
+            .padding(.horizontal, scrollableContentMargin)
         }
         .padding(.horizontal, -scrollableContentMargin)
         .padding(.horizontal, contentMargin)

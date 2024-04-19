@@ -1,20 +1,19 @@
 {
   "configurations" : [
     {
-      "id" : "9D00EACC-C55A-494E-B9FF-D8B46DFDEF52",
-      "name" : "Test Scheme Action",
+      "id" : "97B6D2DA-54BB-434B-BF17-91A14BB6720D",
+      "name" : "Configuration 1",
       "options" : {
 
       }
     }
   ],
   "defaultOptions" : {
-    "mainThreadCheckerEnabled" : false,
-    "targetForVariableExpansion" : {
-      "containerPath" : "container:DSKitExplorer.xcodeproj",
-      "identifier" : "60D4696D2BCAF07F00A6F7FC",
-      "name" : "DSKitExplorer"
-    }
+    "commandLineArgumentEntries" : [
+      {
+        "argument" : "TESTMODE"
+      }
+    ]
   },
   "testTargets" : [
     {

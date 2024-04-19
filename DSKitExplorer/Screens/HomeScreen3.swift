@@ -15,10 +15,10 @@ struct HomeScreen3: View {
     
     var body: some View {
         ScrollView() {
-            DSVStack(spacing: .medium) {
+            DSVStack {
                 ProfileView(title: "Jane Doe", subtitle: "4 Items in cart", profileImageUrl: profileOnRedBg)
                 
-                DSCoverFlow(height: 200, data: viewModel.topProducts, id: \.self) { imageUrl in
+                DSCoverFlow(height: 220, data: viewModel.topProducts, id: \.self) { imageUrl in
                     DSImageView(url: imageUrl, style: .capsule).onTap { self.dismiss() }
                 }
                 

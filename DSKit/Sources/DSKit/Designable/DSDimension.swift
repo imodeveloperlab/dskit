@@ -12,6 +12,7 @@ public enum DSDimension: ExpressibleByFloatLiteral, ExpressibleByIntegerLiteral,
     case font(DSTextFontKey)
     case custom(CGFloat)
     case fillUpTheSpace
+    case actionElement
     case none
     case zero
     
@@ -37,6 +38,8 @@ extension DSDimension {
             0
         case .font(let font):
             font.pointSize(for: appearance)
+        case .actionElement:
+            40
         }
     }
 }

@@ -31,6 +31,19 @@ DSKit offers a library of ready-to-use UI components and full-screen layouts tha
 </table>
 <p align="center"><b>Note:</b> Click on images to see the source code or <a href="ScreensGallery.md">here</a> to see all available layouts</p>
 
+## Appearances
+
+DSKit includes a selection of ready-to-use appearances that support both light and dark modes, suitable for immediate integration into your projects. These appearances are fully customizable, allowing you to tweak and modify them according to your specific requirements. This flexibility ensures that you can maintain consistency across different themes while adapting to user preferences.
+<table>
+<tr>
+<td><a href="DSKitExplorer/Screens/ItemDetails3.swift"><img src="Content/Screenshots/ItemDetails3.BlackTone_screenshot_framed.png"></a></td>
+<td><a href="DSKitExplorer/Screens/ItemDetails3.swift"><img src="Content/Screenshots/ItemDetails3.Orange_screenshot_framed.png"></a></td>
+<td><a href="DSKitExplorer/Screens/ItemDetails3.swift"><img src="Content/Screenshots/ItemDetails3.Retro_screenshot_framed.png"></a></td>
+<td><a href="DSKitExplorer/Screens/ItemDetails3.swift"><img src="Content/Screenshots/ItemDetails3.DSKit_screenshot_framed.png"></a></td>
+</tr>
+</table>
+<p align="center"><b>Note:</b> Click on images to see the source code or <a href="ScreensGallery.md">here</a> to see all available layouts</p>
+
 ## Play and Prototype
 
 DSKit features an **DSKitExplorer** app where you can experiment and prototype your screen designs. Choose from a variety of pre-built layouts to modify and expand as needed. Easily toggle between light and dark modes to see your designs in different settings. This interactive platform is the simplest way to familiarize yourself with DSKit's components, understand their functionality, and learn how to effectively apply them in your projects.

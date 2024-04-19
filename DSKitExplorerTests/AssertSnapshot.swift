@@ -9,6 +9,7 @@ import SwiftUI
 import XCTest
 import SnapshotTesting
 import UIKit
+import DSKit
 
 extension XCTestCase {
     func assertSnapshot(
@@ -19,30 +20,75 @@ extension XCTestCase {
         file: StaticString = #file,
         line: UInt = #line
     ) {
-        SnapshotTesting.diffTool = "open"
         let screenShotMode = ProcessInfo.processInfo.arguments.contains("SCREENSHOTSMODE")
-        isRecording = true
-        UIView.setAnimationsEnabled(false)
-        let view = UIHostingController(rootView: testView)
-        view.overrideUserInterfaceStyle = .light
+
         
-        guard let window = UIApplication.shared.windows.first(where: { $0.isKeyWindow }) else {
-            fatalError("A key window is required for UI operations")
+        if screenShotMode {
+            
+            SnapshotTesting.diffTool = "open"
+            isRecording = true
+            
+            for appearance in appearances {
+                
+                let testView = testView.environment(\.appearance, appearance.appearance)
+                
+                UIView.setAnimationsEnabled(false)
+                let view = UIHostingController(rootView: testView)
+                view.overrideUserInterfaceStyle = .light
+                
+                guard let window = UIApplication.shared.windows.first(where: { $0.isKeyWindow }) else {
+                    fatalError("A key window is required for UI operations")
+                }
+                window.rootViewController = view
+                
+                SnapshotTesting.assertSnapshot(
+                    matching: view,
+                    as: .wait(for: screenShotMode ? 3 : 0.1 , on: .image(on: .iPhone13Pro)),
+                    named: screenShotMode ? "\(appearance.title)_screenshot" : "snapshot",
+                    record: record,
+                    timeout: timeout,
+                    file: file,
+                    testName: named,
+                    line: line
+                )
+            }
+        } else {
+            
+            SnapshotTesting.diffTool = "open"
+            let screenShotMode = ProcessInfo.processInfo.arguments.contains("SCREENSHOTSMODE")
+            isRecording = false
+            UIView.setAnimationsEnabled(false)
+            let view = UIHostingController(rootView: testView)
+            view.overrideUserInterfaceStyle = .light
+            
+            guard let window = UIApplication.shared.windows.first(where: { $0.isKeyWindow }) else {
+                fatalError("A key window is required for UI operations")
+            }
+            window.rootViewController = view
+            
+            SnapshotTesting.assertSnapshot(
+                matching: view,
+                as: .wait(for: screenShotMode ? 3 : 0.1 , on: .image(on: .iPhone13Pro)),
+                named: screenShotMode ? "screenshot" : "snapshot",
+                record: record,
+                timeout: timeout,
+                file: file,
+                testName: named,
+                line: line
+            )
         }
-        window.rootViewController = view
-        
-        SnapshotTesting.assertSnapshot(
-            matching: view,
-            as: .wait(for: screenShotMode ? 3 : 0.1 , on: .image(on: .iPhone13Pro)),
-            named: screenShotMode ? "screenshot" : "snapshot",
-            record: record,
-            timeout: timeout,
-            file: file,
-            testName: named,
-            line: line
-        )
     }
 }
+
+fileprivate let appearances: [(title: String, appearance: DSAppearance)] = [
+    ("BlackTone", BlackToneAppearance()),
+    ("DarkLight", DarkLightAppearance()),
+    ("Shop", ShopAppearance()),
+    ("DSKit", DSKitAppearance()),
+    ("Retro", RetroAppearance()),
+    ("Orange", OrangeAppearance()),
+    ("Peach", PeachAppearance())
+]
 
 extension ViewImageConfig {
     public static func iPhone15Pro(_ orientation: Orientation) -> ViewImageConfig {

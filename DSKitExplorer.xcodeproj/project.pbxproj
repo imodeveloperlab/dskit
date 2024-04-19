@@ -104,6 +104,8 @@
 		604EEE2B2BD24797009E3278 /* DSScrollableContentMarginsModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604EEE2A2BD24797009E3278 /* DSScrollableContentMarginsModifier.swift */; };
 		608350B22BCC565F002E4F47 /* ScreenKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608350B12BCC565F002E4F47 /* ScreenKey.swift */; };
 		608350B52BCC5892002E4F47 /* ScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608350B42BCC5892002E4F47 /* ScreenView.swift */; };
+		6092FE5C2BD2AC600016CB4A /* DSKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 604EED482BD23BE9009E3278 /* DSKit.framework */; };
+		6092FE5D2BD2AC600016CB4A /* DSKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 604EED482BD23BE9009E3278 /* DSKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		60D469BB2BCAF0DC00A6F7FC /* AppearanceSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D4697F2BCAF0D800A6F7FC /* AppearanceSelectionView.swift */; };
 		60D469BC2BCAF0DC00A6F7FC /* DSKitExplorerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D469802BCAF0D800A6F7FC /* DSKitExplorerApp.swift */; };
 		60D469BD2BCAF0DC00A6F7FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60D469812BCAF0DA00A6F7FC /* Assets.xcassets */; };
@@ -178,6 +180,13 @@
 			remoteGlobalIDString = 604EED472BD23BE9009E3278;
 			remoteInfo = DSKit;
 		};
+		6092FE5E2BD2AC600016CB4A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 60D469662BCAF07F00A6F7FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 604EED472BD23BE9009E3278;
+			remoteInfo = DSKit;
+		};
 		60D469FD2BCAF14000A6F7FC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 60D469662BCAF07F00A6F7FC /* Project object */;
@@ -202,6 +211,17 @@
 			dstSubfolderSpec = 10;
 			files = (
 				604EED4F2BD23BE9009E3278 /* DSKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6092FE602BD2AC600016CB4A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6092FE5D2BD2AC600016CB4A /* DSKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -394,6 +414,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6092FE5C2BD2AC600016CB4A /* DSKit.framework in Frameworks */,
 				60D46A112BCAF1C000A6F7FC /* SnapshotTesting in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -782,11 +803,13 @@
 				60D469F52BCAF14000A6F7FC /* Sources */,
 				60D469F62BCAF14000A6F7FC /* Frameworks */,
 				60D469F72BCAF14000A6F7FC /* Resources */,
+				6092FE602BD2AC600016CB4A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				60D469FE2BCAF14000A6F7FC /* PBXTargetDependency */,
+				6092FE5F2BD2AC600016CB4A /* PBXTargetDependency */,
 			);
 			name = DSKitExplorerTests;
 			packageProductDependencies = (
@@ -1095,6 +1118,11 @@
 			isa = PBXTargetDependency;
 			target = 604EED472BD23BE9009E3278 /* DSKit */;
 			targetProxy = 604EED4C2BD23BE9009E3278 /* PBXContainerItemProxy */;
+		};
+		6092FE5F2BD2AC600016CB4A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 604EED472BD23BE9009E3278 /* DSKit */;
+			targetProxy = 6092FE5E2BD2AC600016CB4A /* PBXContainerItemProxy */;
 		};
 		60D469FE2BCAF14000A6F7FC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;

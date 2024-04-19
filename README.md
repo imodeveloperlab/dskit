@@ -23,10 +23,10 @@ DSKit offers a library of ready-to-use UI components and full-screen layouts tha
 
 <table>
 <tr>
-<td><a href="DSKitExplorer/Screens/HomeScreen.swift"><img src="Content/Screenshots/HomeScreen3.screenshot_framed.png"></a></td>
-<td><a href="DSKitExplorer/Screens/ItemDetails.swift"><img src="Content/Screenshots/ItemDetails2.screenshot_framed.png"></a></td>
-<td><a href="DSKitExplorer/Screens/Order.swift"><img src="Content/Screenshots/Order1.screenshot_framed.png"></a></td>
-<td><a href="DSKitExplorer/Screens/Order.swift"><img src="Content/Screenshots/Order4.screenshot_framed.png"></a></td>
+<td><a href="DSKitExplorer/Screens/HomeScreen3.swift"><img src="Content/Screenshots/HomeScreen3.screenshot_framed.png"></a></td>
+<td><a href="DSKitExplorer/Screens/ItemDetails2.swift"><img src="Content/Screenshots/ItemDetails2.screenshot_framed.png"></a></td>
+<td><a href="DSKitExplorer/Screens/Order1.swift"><img src="Content/Screenshots/Order1.screenshot_framed.png"></a></td>
+<td><a href="DSKitExplorer/Screens/Order4.swift"><img src="Content/Screenshots/Order4.screenshot_framed.png"></a></td>
 </tr>
 </table>
 <p align="center"><b>Note:</b> Click on images to see the source code or <a href="ScreensGallery.md">here</a> to see all available layouts</p>

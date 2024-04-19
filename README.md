@@ -35,7 +35,7 @@ DSKit offers a library of ready-to-use UI components and full-screen layouts tha
 
 DSKit features an **DSKitExplorer** app where you can experiment and prototype your screen designs. Choose from a variety of pre-built layouts to modify and expand as needed. Easily toggle between light and dark modes to see your designs in different settings. This interactive platform is the simplest way to familiarize yourself with DSKit's components, understand their functionality, and learn how to effectively apply them in your projects.
 
-![PlayAndPrototype](/Users/ivanborinschi/Work/dskit/Content/Images/PlayAndPrototype.png)
+![PlayAndPrototype](Content/Images/PlayAndPrototype.png)
 
 ## Get started 
 

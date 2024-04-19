@@ -15,7 +15,7 @@
 
 # What is DSKit?
 
-**DSKit** is a simple **Design System** SDK for iOS 15+ SwiftUI, designed to help developers create simple, consistent and attractive user interfaces with ease. It includes essential view modifiers which ensure that all UI components follow a unified style guide. 
+DSKit is a simple **Design System** SDK for **iOS 15+ SwiftUI**, designed to help developers create simple, consistent and attractive user interfaces with ease. It includes essential view modifiers which ensure that all UI components follow a unified style guide. 
 
 ## Components and Layouts
 
@@ -30,6 +30,12 @@ DSKit offers a library of ready-to-use UI components and full-screen layouts tha
 </tr>
 </table>
 <p align="center"><b>Note:</b> Click on images to see the source code or <a href="ScreensGallery.md">here</a> to see all available layouts</p>
+
+## Play and Prototype
+
+DSKit features an **DSKitExplorer** app where you can experiment and prototype your screen designs. Choose from a variety of pre-built layouts to modify and expand as needed. Easily toggle between light and dark modes to see your designs in different settings. This interactive platform is the simplest way to familiarize yourself with DSKit's components, understand their functionality, and learn how to effectively apply them in your projects.
+
+![PlayAndPrototype](/Users/ivanborinschi/Work/dskit/Content/Images/PlayAndPrototype.png)
 
 ## Get started 
 

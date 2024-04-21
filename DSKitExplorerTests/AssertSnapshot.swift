@@ -28,30 +28,34 @@ extension XCTestCase {
             SnapshotTesting.diffTool = "open"
             isRecording = true
             
-            for appearance in appearances {
-                
-                let testView = testView.environment(\.appearance, appearance.appearance)
-                
-                UIView.setAnimationsEnabled(false)
-                let view = UIHostingController(rootView: testView)
-                view.overrideUserInterfaceStyle = .light
-                
-                guard let window = UIApplication.shared.windows.first(where: { $0.isKeyWindow }) else {
-                    fatalError("A key window is required for UI operations")
+            for colorScheme in colorSchemes {
+                for appearance in appearances {
+                    
+                    let testView = testView
+                        .environment(\.appearance, appearance.appearance)
+                        .environment(\.colorScheme, colorScheme)
+                    
+                    UIView.setAnimationsEnabled(false)
+                    let view = UIHostingController(rootView: testView)
+                    
+                    guard let window = UIApplication.shared.windows.first(where: { $0.isKeyWindow }) else {
+                        fatalError("A key window is required for UI operations")
+                    }
+                    window.rootViewController = view
+                    
+                    SnapshotTesting.assertSnapshot(
+                        matching: view,
+                        as: .wait(for: screenShotMode ? 0.5 : 0.1 , on: .image(on: .iPhone13Pro)),
+                        named: screenShotMode ? "\(appearance.title)_\(colorScheme)_screenshot" : "snapshot",
+                        record: record,
+                        timeout: timeout,
+                        file: file,
+                        testName: named,
+                        line: line
+                    )
                 }
-                window.rootViewController = view
-                
-                SnapshotTesting.assertSnapshot(
-                    matching: view,
-                    as: .wait(for: screenShotMode ? 3 : 0.1 , on: .image(on: .iPhone13Pro)),
-                    named: screenShotMode ? "\(appearance.title)_screenshot" : "snapshot",
-                    record: record,
-                    timeout: timeout,
-                    file: file,
-                    testName: named,
-                    line: line
-                )
             }
+            
         } else {
             
             SnapshotTesting.diffTool = "open"
@@ -81,14 +85,16 @@ extension XCTestCase {
 }
 
 fileprivate let appearances: [(title: String, appearance: DSAppearance)] = [
-    ("BlackTone", BlackToneAppearance()),
-    ("DarkLight", DarkLightAppearance()),
+    ("Black", BlackToneAppearance()),
+    ("Dark", DarkLightAppearance()),
     ("Shop", ShopAppearance()),
     ("DSKit", DSKitAppearance()),
     ("Retro", RetroAppearance()),
     ("Orange", OrangeAppearance()),
     ("Peach", PeachAppearance())
 ]
+
+fileprivate let colorSchemes: [ColorScheme] = [.light, .dark]
 
 extension ViewImageConfig {
     public static func iPhone15Pro(_ orientation: Orientation) -> ViewImageConfig {

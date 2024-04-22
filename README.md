@@ -48,7 +48,7 @@ DSKit offers a library of ready-to-use UI components and full-screen layouts tha
 </td>
 </tr>
 </table>
-<p align="center"><b>Note:</b> Click on images to see the source code or <a href="ScreensGallery.md">here</a> to see all available layouts</p>
+<p align="center"><b>Note:</b> Click on images to see the source code or <a href="Content/ScreensGallery_dskit_light.md">here</a> to see all available layouts</p>
 
 ## Appearances
 
@@ -77,7 +77,7 @@ DSKit includes a selection of ready-to-use appearances that support both light a
 </td>
 </tr>
 </table>
-<p align="center"><b>Note:</b> Click on images to see the source code or <a href="ScreensGallery.md">here</a> to see all available layouts</p>
+<p align="center"><b>Note:</b> Click on images to see the source code or <a href="Content/ScreensGallery_dskit_light.md">here</a> to see all available layouts</p>
 
 ## Play and Prototype
 

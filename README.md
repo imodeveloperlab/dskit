@@ -3,8 +3,7 @@
 <p align="center">
     <img src="Content/Images/Logo.png" width="100" max-width="100%" alt="DSKit"/>
 </p>
-<h3 align="center">Design System Kit</h3>
-
+<h1 align="center">Design System Kit</h1>
 <p align="center">
     <img src="https://img.shields.io/badge/iOS-15+-brightgreen.svg?style=flat" alt="iOS"/>
     <img src="https://img.shields.io/badge/SwiftUI-3.0-brightgreen.svg"/>
@@ -13,14 +12,11 @@
     </a>
 </p>
 
-
-
-
-# What is DSKit?
+### What is DSKit?
 
 DSKit is a simple **Design System Kit**  for **iOS 15+ SwiftUI**, designed to help developers create simple, consistent and attractive user interfaces with ease. It includes essential view modifiers which ensure that all UI components follow a unified style guide. 
 
-## Components and Layouts
+### Components and Layouts
 
 DSKit offers a library of ready-to-use UI components and full-screen layouts that are designed to be easily integrated and customized within your projects. Each component and screen layout is fully adaptable, allowing you to tweak and refine them to perfectly fit the specific needs of your application. This accessibility accelerates the development process, enabling you to implement complex design solutions efficiently while maintaining a high standard of aesthetics and functionality.
 
@@ -50,7 +46,7 @@ DSKit offers a library of ready-to-use UI components and full-screen layouts tha
 </table>
 <p align="center"><b>Note:</b> Click on images to see the source code or <a href="Content/ScreensGallery_dskit_light.md">here</a> to see all available layouts</p>
 
-## Appearances
+### Appearances
 
 DSKit includes a selection of ready-to-use appearances that support both light and dark modes, suitable for immediate integration into your projects. These appearances are fully customizable, allowing you to tweak and modify them according to your specific requirements. This flexibility ensures that you can maintain consistency across different themes while adapting to user preferences.
 <table>
@@ -79,7 +75,7 @@ DSKit includes a selection of ready-to-use appearances that support both light a
 </table>
 <p align="center"><b>Note:</b> Click on images to see the source code or <a href="Content/ScreensGallery_dskit_light.md">here</a> to see all available layouts</p>
 
-## Play and Prototype
+### Play and Prototype
 
 DSKit features an **DSKitExplorer** app where you can experiment and prototype your screen designs. Choose from a variety of pre-built layouts to modify and expand as needed. Easily toggle between light and dark modes to see your designs in different settings. This interactive platform is the simplest way to familiarize yourself with DSKit's components, understand their functionality, and learn how to effectively apply them in your projects.
 

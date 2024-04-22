@@ -1,8 +1,10 @@
 
 
 <p align="center">
-    <img src="Content/Images/Logo.png" width="528" max-width="100%" alt="DSKit"/>
+    <img src="Content/Images/Logo.png" width="100" max-width="100%" alt="DSKit"/>
 </p>
+<h3 align="center">Design System Kit</h3>
+
 <p align="center">
     <img src="https://img.shields.io/badge/iOS-15+-brightgreen.svg?style=flat" alt="iOS"/>
     <img src="https://img.shields.io/badge/SwiftUI-3.0-brightgreen.svg"/>
@@ -13,9 +15,10 @@
 
 
 
+
 # What is DSKit?
 
-DSKit is a simple **Design System** SDK for **iOS 15+ SwiftUI**, designed to help developers create simple, consistent and attractive user interfaces with ease. It includes essential view modifiers which ensure that all UI components follow a unified style guide. 
+DSKit is a simple **Design System Kit**  for **iOS 15+ SwiftUI**, designed to help developers create simple, consistent and attractive user interfaces with ease. It includes essential view modifiers which ensure that all UI components follow a unified style guide. 
 
 ## Components and Layouts
 
@@ -23,10 +26,26 @@ DSKit offers a library of ready-to-use UI components and full-screen layouts tha
 
 <table>
 <tr>
-<td><a href="DSKitExplorer/Screens/HomeScreen3.swift"><img src="Content/Screenshots/HomeScreen3.screenshot_framed.png"></a></td>
-<td><a href="DSKitExplorer/Screens/ItemDetails2.swift"><img src="Content/Screenshots/ItemDetails2.screenshot_framed.png"></a></td>
-<td><a href="DSKitExplorer/Screens/Order1.swift"><img src="Content/Screenshots/Order1.screenshot_framed.png"></a></td>
-<td><a href="DSKitExplorer/Screens/Order4.swift"><img src="Content/Screenshots/Order4.screenshot_framed.png"></a></td>
+<td>
+<a href="DSKitExplorer/Screens/HomeScreen3.swift">
+<img src="Content/Screenshots/HomeScreen3.DSKit_light_screenshot_framed.png">
+</a>
+</td>
+<td>
+<a href="DSKitExplorer/Screens/ItemDetails2.swift">
+<img src="Content/Screenshots/ItemDetails2.DSKit_light_screenshot_framed.png">
+</a>
+</td>
+<td>
+<a href="DSKitExplorer/Screens/Order1.swift">
+<img src="Content/Screenshots/Order1.DSKit_light_screenshot_framed.png">
+</a>
+</td>
+<td>
+<a href="DSKitExplorer/Screens/Order4.swift">
+<img src="Content/Screenshots/Order4.DSKit_light_screenshot_framed.png">
+</a>
+</td>
 </tr>
 </table>
 <p align="center"><b>Note:</b> Click on images to see the source code or <a href="ScreensGallery.md">here</a> to see all available layouts</p>
@@ -36,10 +55,26 @@ DSKit offers a library of ready-to-use UI components and full-screen layouts tha
 DSKit includes a selection of ready-to-use appearances that support both light and dark modes, suitable for immediate integration into your projects. These appearances are fully customizable, allowing you to tweak and modify them according to your specific requirements. This flexibility ensures that you can maintain consistency across different themes while adapting to user preferences.
 <table>
 <tr>
-<td><a href="DSKitExplorer/Screens/ItemDetails3.swift"><img src="Content/Screenshots/ItemDetails3.BlackTone_screenshot_framed.png"></a></td>
-<td><a href="DSKitExplorer/Screens/ItemDetails3.swift"><img src="Content/Screenshots/ItemDetails3.Orange_screenshot_framed.png"></a></td>
-<td><a href="DSKitExplorer/Screens/ItemDetails3.swift"><img src="Content/Screenshots/ItemDetails3.Retro_screenshot_framed.png"></a></td>
-<td><a href="DSKitExplorer/Screens/ItemDetails3.swift"><img src="Content/Screenshots/ItemDetails3.DSKit_screenshot_framed.png"></a></td>
+<td>
+  <a href="DSKitExplorer/Screens/ItemDetails3.swift">
+    <img src="Content/Screenshots/ItemDetails3.DSKit_light_screenshot_framed.png">
+  </a>
+  </td>
+<td>
+  <a href="DSKitExplorer/Screens/ItemDetails3.swift">
+  <img src="Content/Screenshots/ItemDetails3.Retro_light_screenshot_framed.png">
+  </a>
+  </td>
+<td>
+<a href="DSKitExplorer/Screens/ItemDetails3.swift">
+<img src="Content/Screenshots/ItemDetails3.Peach_light_screenshot_framed.png">
+</a>
+</td>
+<td>
+<a href="DSKitExplorer/Screens/ItemDetails3.swift">
+<img src="Content/Screenshots/ItemDetails3.Orange_light_screenshot_framed.png">
+</a>
+</td>
 </tr>
 </table>
 <p align="center"><b>Note:</b> Click on images to see the source code or <a href="ScreensGallery.md">here</a> to see all available layouts</p>

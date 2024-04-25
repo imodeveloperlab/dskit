@@ -1,5 +1,5 @@
 //
-//  ShopAppearance.swift
+//  BlueAppearance.swift
 //  DSKit
 //
 //  Created by Borinschi Ivan on 30.11.2020.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class ShopAppearance: DSAppearance {
+public class BlueAppearance: DSAppearance {
     
     public var title: String
     public var primaryView: DSViewAppearanceProtocol
@@ -19,7 +19,7 @@ public class ShopAppearance: DSAppearance {
     public var navigationBar: DSNavigationBarAppearanceProtocol
     public var price: DSPriceAppearanceProtocol
     public var fonts: DSFontsProtocol = DSFonts()
-    public var actionElementHeight: CGFloat = 48
+    public var actionElementHeight: CGFloat = 44
     public var screenMargins: CGFloat = 16
     
     /// Init system appearance with brand color, or primary color of your app
@@ -31,18 +31,17 @@ public class ShopAppearance: DSAppearance {
         // MARK: - Primary view
         
         let text = DSTextAppearance.textColors(
-            main: UIColor(0x484848),
-            secondary: UIColor(0x767676)
+            main: .dynamic(light: 0x484848, dark: 0xE0E0E0),
+            secondary: .dynamic(light: 0x767676, dark: 0xA0A0A0)
         )
         
         let button = DSButtonAppearance(
-            accentColor: UIColor(0x006EB9),
-            supportColor: UIColor(0xffffff)
+            accentColor: .dynamic(light: 0x006EB9, dark: 0x006EB8),
+            supportColor: .dynamic(light: 0xffffff, dark: 0xffffff)
         )
         
         let primaryViewTextField = DSTextFieldAppearance(
-            border: UIColor(0xF4F4F4),
-            background: UIColor(0xF4F4F4),
+            background: .dynamic(light: 0xF4F4F4, dark: 0x181825),
             text: text.headline,
             placeHolder: text.subheadline
         )
@@ -51,21 +50,20 @@ public class ShopAppearance: DSAppearance {
             button: button,
             text: text,
             textField: primaryViewTextField,
-            background: UIColor(0xFFFFFF),
-            separator: UIColor(0xD5C5B2),
+            background: .dynamic(light: 0xFFFFFF, dark: 0x1E1E2E),
+            separator: .dynamic(light: 0xD5C5B2, dark: 0x364A5D),
             cornerRadius: 10
         )
         
         // MARK: - Secondary view
         
         let secondaryText = DSTextAppearance.textColors(
-            main: UIColor(0x222222),
-            secondary: UIColor(0x717171)
+            main: .dynamic(light: 0x222222, dark: 0xDDDDDD),
+            secondary: .dynamic(light: 0x717171, dark: 0x999999)
         )
         
         let secondaryViewTextField = DSTextFieldAppearance(
-            border: UIColor(0xFFFFFF),
-            background: UIColor(0xFFFFFF),
+            background: .dynamic(light: 0xFFFFFF, dark: 0x1E1E2E),
             text: text.headline,
             placeHolder: text.subheadline
         )
@@ -74,8 +72,8 @@ public class ShopAppearance: DSAppearance {
             button: button,
             text: secondaryText,
             textField: secondaryViewTextField,
-            background: UIColor(0xF4F4F4),
-            separator: UIColor(0xEBEBEB),
+            background: .dynamic(light: 0xF4F4F4, dark: 0x181825),
+            separator: .dynamic(light: 0xEBEBEB, dark: 0xEBEBEB),
             cornerRadius: 10
         )
         
@@ -92,7 +90,7 @@ public class ShopAppearance: DSAppearance {
         // MARK: - Navigation Bar
         
         navigationBar = DSNavigationBarAppearance(
-            buttons: UIColor(0x3C4856),
+            buttons: .dynamic(light: 0x3C4856, dark: 0x006EB9),
             text: text.title1,
             bar: primaryView.background,
             translucent: true
@@ -101,10 +99,8 @@ public class ShopAppearance: DSAppearance {
         // MARK: - Price
         
         price = DSPriceAppearance(
-            currency: UIColor(0x1DA1F2),
-            amount: UIColor(0x1DA1F2),
-            regularAmount: UIColor(0xA0ACBD),
-            badgeBackground: UIColor(0x3C4856),
+            regularAmount: .dynamic(light: 0xA0ACBD, dark: 0xBCCADC),
+            badgeBackground: .dynamic(light: 0x316CAF, dark: 0x4C5866),
             badgeCornerRadius: 6
         )
     }
@@ -118,3 +114,4 @@ public class ShopAppearance: DSAppearance {
         }
     }
 }
+

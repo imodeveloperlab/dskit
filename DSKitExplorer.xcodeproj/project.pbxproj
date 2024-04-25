@@ -60,13 +60,11 @@
 		604EEDF52BD23E1B009E3278 /* DSTextFieldAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604EED952BD23E1A009E3278 /* DSTextFieldAppearance.swift */; };
 		604EEDF62BD23E1B009E3278 /* DSViewAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604EED962BD23E1A009E3278 /* DSViewAppearance.swift */; };
 		604EEDF72BD23E1B009E3278 /* DSViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604EED972BD23E1A009E3278 /* DSViewStyle.swift */; };
-		604EEDF82BD23E1B009E3278 /* BlackToneAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604EED992BD23E1A009E3278 /* BlackToneAppearance.swift */; };
-		604EEDF92BD23E1B009E3278 /* DarkLightAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604EED9A2BD23E1A009E3278 /* DarkLightAppearance.swift */; };
+		604EEDF82BD23E1B009E3278 /* DarkAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604EED992BD23E1A009E3278 /* DarkAppearance.swift */; };
 		604EEDFA2BD23E1B009E3278 /* DSKitAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604EED9B2BD23E1A009E3278 /* DSKitAppearance.swift */; };
-		604EEDFB2BD23E1B009E3278 /* OrangeAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604EED9C2BD23E1A009E3278 /* OrangeAppearance.swift */; };
 		604EEDFC2BD23E1B009E3278 /* PeachAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604EED9D2BD23E1A009E3278 /* PeachAppearance.swift */; };
 		604EEDFD2BD23E1B009E3278 /* RetroAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604EED9E2BD23E1A009E3278 /* RetroAppearance.swift */; };
-		604EEDFE2BD23E1B009E3278 /* ShopAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604EED9F2BD23E1A009E3278 /* ShopAppearance.swift */; };
+		604EEDFE2BD23E1B009E3278 /* BlueAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604EED9F2BD23E1A009E3278 /* BlueAppearance.swift */; };
 		604EEDFF2BD23E1B009E3278 /* DSCustomUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604EEDA12BD23E1A009E3278 /* DSCustomUITextField.swift */; };
 		604EEE002BD23E1B009E3278 /* DSTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604EEDA22BD23E1A009E3278 /* DSTextField.swift */; };
 		604EEE012BD23E1B009E3278 /* DSTextField+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604EEDA32BD23E1A009E3278 /* DSTextField+Factory.swift */; };
@@ -281,13 +279,11 @@
 		604EED952BD23E1A009E3278 /* DSTextFieldAppearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSTextFieldAppearance.swift; sourceTree = "<group>"; };
 		604EED962BD23E1A009E3278 /* DSViewAppearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSViewAppearance.swift; sourceTree = "<group>"; };
 		604EED972BD23E1A009E3278 /* DSViewStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSViewStyle.swift; sourceTree = "<group>"; };
-		604EED992BD23E1A009E3278 /* BlackToneAppearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlackToneAppearance.swift; sourceTree = "<group>"; };
-		604EED9A2BD23E1A009E3278 /* DarkLightAppearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DarkLightAppearance.swift; sourceTree = "<group>"; };
+		604EED992BD23E1A009E3278 /* DarkAppearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DarkAppearance.swift; sourceTree = "<group>"; };
 		604EED9B2BD23E1A009E3278 /* DSKitAppearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSKitAppearance.swift; sourceTree = "<group>"; };
-		604EED9C2BD23E1A009E3278 /* OrangeAppearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrangeAppearance.swift; sourceTree = "<group>"; };
 		604EED9D2BD23E1A009E3278 /* PeachAppearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeachAppearance.swift; sourceTree = "<group>"; };
 		604EED9E2BD23E1A009E3278 /* RetroAppearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetroAppearance.swift; sourceTree = "<group>"; };
-		604EED9F2BD23E1A009E3278 /* ShopAppearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopAppearance.swift; sourceTree = "<group>"; };
+		604EED9F2BD23E1A009E3278 /* BlueAppearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlueAppearance.swift; sourceTree = "<group>"; };
 		604EEDA12BD23E1A009E3278 /* DSCustomUITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSCustomUITextField.swift; sourceTree = "<group>"; };
 		604EEDA22BD23E1A009E3278 /* DSTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSTextField.swift; sourceTree = "<group>"; };
 		604EEDA32BD23E1A009E3278 /* DSTextField+Factory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DSTextField+Factory.swift"; sourceTree = "<group>"; };
@@ -529,13 +525,11 @@
 		604EEDA02BD23E1A009E3278 /* Appearances */ = {
 			isa = PBXGroup;
 			children = (
-				604EED992BD23E1A009E3278 /* BlackToneAppearance.swift */,
-				604EED9A2BD23E1A009E3278 /* DarkLightAppearance.swift */,
 				604EED9B2BD23E1A009E3278 /* DSKitAppearance.swift */,
-				604EED9C2BD23E1A009E3278 /* OrangeAppearance.swift */,
+				604EED9F2BD23E1A009E3278 /* BlueAppearance.swift */,
+				604EED992BD23E1A009E3278 /* DarkAppearance.swift */,
 				604EED9D2BD23E1A009E3278 /* PeachAppearance.swift */,
 				604EED9E2BD23E1A009E3278 /* RetroAppearance.swift */,
-				604EED9F2BD23E1A009E3278 /* ShopAppearance.swift */,
 			);
 			name = Appearances;
 			path = Sources/DSKit/Appearances;
@@ -940,8 +934,7 @@
 				604EEDD32BD23E1B009E3278 /* DSMaxWidthCenteredModifier.swift in Sources */,
 				604EEDDA2BD23E1B009E3278 /* DSSelectedStyleModifier.swift in Sources */,
 				604EEDF52BD23E1B009E3278 /* DSTextFieldAppearance.swift in Sources */,
-				604EEDFE2BD23E1B009E3278 /* ShopAppearance.swift in Sources */,
-				604EEDFB2BD23E1B009E3278 /* OrangeAppearance.swift in Sources */,
+				604EEDFE2BD23E1B009E3278 /* BlueAppearance.swift in Sources */,
 				604EEE192BD23E1B009E3278 /* DSRatingView.swift in Sources */,
 				604EEDC72BD23E1B009E3278 /* DSBlurBackgroundModifier.swift in Sources */,
 				604EEE062BD23E1B009E3278 /* DSText.swift in Sources */,
@@ -1012,13 +1005,12 @@
 				604EEDE12BD23E1B009E3278 /* Rescale.swift in Sources */,
 				604EEE032BD23E1B009E3278 /* DSTextFieldValue.swift in Sources */,
 				604EEDC82BD23E1B009E3278 /* DSCardStyleModifier.swift in Sources */,
-				604EEDF82BD23E1B009E3278 /* BlackToneAppearance.swift in Sources */,
+				604EEDF82BD23E1B009E3278 /* DarkAppearance.swift in Sources */,
 				604EEDEE2BD23E1B009E3278 /* DSPaddingSystem.swift in Sources */,
 				604EEDC92BD23E1B009E3278 /* DSContentMarginsModifier.swift in Sources */,
 				604EEDDF2BD23E1B009E3278 /* CGFloat+Conveniences.swift in Sources */,
 				604EEDFD2BD23E1B009E3278 /* RetroAppearance.swift in Sources */,
 				604EEDE42BD23E1B009E3278 /* DSAppearance.swift in Sources */,
-				604EEDF92BD23E1B009E3278 /* DarkLightAppearance.swift in Sources */,
 				604EEE1F2BD23E1C009E3278 /* DSVStack.swift in Sources */,
 				604EEDD52BD23E1B009E3278 /* DSPaddingModifier.swift in Sources */,
 			);

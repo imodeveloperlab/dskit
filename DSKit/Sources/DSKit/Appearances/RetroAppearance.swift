@@ -34,70 +34,68 @@ public final class RetroAppearance: DSAppearance {
         // MARK: - Secondary view
         
         let text = DSTextAppearance(
-            largeTitle: DSDynamicColor.color(light: 0x2B2834, dark: 0xE8E7E6),
-            title1: DSDynamicColor.color(light: 0x2B2834, dark: 0xE8E7E6),
-            title2: DSDynamicColor.color(light: 0x2B2834, dark: 0xE8E7E6),
-            title3: DSDynamicColor.color(light: 0x2B2834, dark: 0xE8E7E6),
-            headline: DSDynamicColor.color(light: 0x2B2834, dark: 0xE8E7E6),
-            subheadline: DSDynamicColor.color(light: 0x4E4A57, dark: 0x9699A8),
-            body: DSDynamicColor.color(light: 0x2B2834, dark: 0xE8E7E6),
-            callout: DSDynamicColor.color(light: 0x4E4A57, dark: 0x9699A8),
-            caption1: DSDynamicColor.color(light: 0x4E4A57, dark: 0x9699A8),
-            caption2: DSDynamicColor.color(light: 0x4E4A57, dark: 0x9699A8),
-            footnote: DSDynamicColor.color(light: 0x4E4A57, dark: 0x9699A8)
+            largeTitle: .dynamic(light: 0x2B2834, dark: 0xE8E7E6),
+            title1: .dynamic(light: 0x2B2834, dark: 0xE8E7E6),
+            title2: .dynamic(light: 0x2B2834, dark: 0xE8E7E6),
+            title3: .dynamic(light: 0x2B2834, dark: 0xE8E7E6),
+            headline: .dynamic(light: 0x2B2834, dark: 0xE8E7E6),
+            subheadline: .dynamic(light: 0x4E4A57, dark: 0x9699A8),
+            body: .dynamic(light: 0x2B2834, dark: 0xE8E7E6),
+            callout: .dynamic(light: 0x4E4A57, dark: 0x9699A8),
+            caption1: .dynamic(light: 0x4E4A57, dark: 0x9699A8),
+            caption2: .dynamic(light: 0x4E4A57, dark: 0x9699A8),
+            footnote: .dynamic(light: 0x4E4A57, dark: 0x9699A8)
         )
         
         let primaryViewTextField = DSTextFieldAppearance(
-            border: DSDynamicColor.color(light: 0xF4F2EA, dark: 0x4E4A57),
-            background: DSDynamicColor.color(light: 0xF4F2EA, dark: 0x4E4A57),
-            text: DSDynamicColor.color(light: 0x2A2732, dark: 0xE8E7E6),
-            placeHolder: DSDynamicColor.color(light: 0x777777, dark: 0x9699A8)
+            background: .dynamic(light: 0xF4F2EA, dark: 0x4E4A57),
+            text: .dynamic(light: 0x2A2732, dark: 0xE8E7E6),
+            placeHolder: .dynamic(light: 0x777777, dark: 0x9699A8)
         )
         
         primaryView = DSViewAppearance(
             button: DSButtonAppearance(
-                accentColor: DSDynamicColor.color(light: 0xFC8F0F, dark: 0xFC8F0F),
-                supportColor: DSDynamicColor.color(light: 0xffffff, dark: 0xffffff)
+                accentColor: .dynamic(light: 0xFC8F0F, dark: 0xFC8F0F),
+                supportColor: .dynamic(light: 0xffffff, dark: 0xffffff)
             ),
             text: text,
             textField: primaryViewTextField,
-            background: DSDynamicColor.color(light: 0xFFFCF8, dark: 0x383443),
-            separator: DSDynamicColor.color(light: 0xFBEFE0, dark: 0x464154),
+            background: .dynamic(light: 0xFFFCF8, dark: 0x383443),
+            separator: .dynamic(light: 0xFBEFE0, dark: 0x464154),
             cornerRadius: 13
         )
         
         // MARK: - Secondary view
         
         let secondaryText = DSTextAppearance(
-            largeTitle: DSDynamicColor.color(light: 0x2A2732, dark: 0xE8E7E6),
-            title1: DSDynamicColor.color(light: 0x2A2732, dark: 0xE8E7E6),
-            title2: DSDynamicColor.color(light: 0x2A2732, dark: 0xE8E7E6),
-            title3: DSDynamicColor.color(light: 0x2A2732, dark: 0xE8E7E6),
-            headline: DSDynamicColor.color(light: 0x000000, dark: 0xE8E7E6),
-            subheadline: DSDynamicColor.color(light: 0x555555, dark: 0x999DB1),
-            body: DSDynamicColor.color(light: 0x2A2732, dark: 0xE8E7E6),
-            callout: DSDynamicColor.color(light: 0x595465, dark: 0x999DB1),
-            caption1: DSDynamicColor.color(light: 0x595465, dark: 0x999DB1),
-            caption2: DSDynamicColor.color(light: 0x595465, dark: 0x999DB1),
-            footnote: DSDynamicColor.color(light: 0x595465, dark: 0x999DB1)
+            largeTitle: .dynamic(light: 0x2A2732, dark: 0xE8E7E6),
+            title1: .dynamic(light: 0x2A2732, dark: 0xE8E7E6),
+            title2: .dynamic(light: 0x2A2732, dark: 0xE8E7E6),
+            title3: .dynamic(light: 0x2A2732, dark: 0xE8E7E6),
+            headline: .dynamic(light: 0x000000, dark: 0xE8E7E6),
+            subheadline: .dynamic(light: 0x555555, dark: 0x999DB1),
+            body: .dynamic(light: 0x2A2732, dark: 0xE8E7E6),
+            callout: .dynamic(light: 0x595465, dark: 0x999DB1),
+            caption1: .dynamic(light: 0x595465, dark: 0x999DB1),
+            caption2: .dynamic(light: 0x595465, dark: 0x999DB1),
+            footnote: .dynamic(light: 0x595465, dark: 0x999DB1)
         )
         
         let secondaryViewTextField = DSTextFieldAppearance(
-            border: DSDynamicColor.color(light: 0xffffff, dark: 0x383443),
-            background: DSDynamicColor.color(light: 0xffffff, dark: 0x383443),
+            background: .dynamic(light: 0xffffff, dark: 0x383443),
             text: secondaryText.headline,
             placeHolder: secondaryText.subheadline
         )
         
         secondaryView = DSViewAppearance(
             button: DSButtonAppearance(
-                accentColor: DSDynamicColor.color(light: 0xFC8F0F, dark: 0xFC8F0F),
-                supportColor: DSDynamicColor.color(light: 0xffffff, dark: 0xffffff)
+                accentColor: .dynamic(light: 0xFC8F0F, dark: 0xFC8F0F),
+                supportColor: .dynamic(light: 0xffffff, dark: 0xffffff)
             ),
             text: secondaryText,
             textField: secondaryViewTextField,
-            background: DSDynamicColor.color(light: 0xF4F2EA, dark: 0x4E4A57),
-            separator: DSDynamicColor.color(light: 0xDFDCD3, dark: 0xFFFCF8),
+            background: .dynamic(light: 0xF4F2EA, dark: 0x4E4A57),
+            separator: .dynamic(light: 0xDFDCD3, dark: 0xFFFCF8),
             cornerRadius: 13
         )
         
@@ -121,8 +119,6 @@ public final class RetroAppearance: DSAppearance {
         // MARK: - Price
         
         price = DSPriceAppearance(
-            currency: primaryView.button.accentColor,
-            amount: primaryView.button.accentColor,
             regularAmount: text.subheadline,
             badgeBackground: primaryView.button.accentColor
         )

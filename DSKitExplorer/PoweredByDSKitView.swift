@@ -13,7 +13,7 @@ struct PoweredByDSKitView: View {
         DSVStack(spacing: .small) {
             DSHStack(spacing: .small) {
                 DSText("Powered by").dsTextStyle(.smallSubtitle)
-                DSImageView(systemName: "square.stack.3d.down.right.fill", size: .smallIcon, tint: .color(.blue))
+                DSImageView(systemName: "square.stack.3d.down.right.fill", size: .smallIcon, tint: .view(.button(.accentColor)))
                 DSText("DSKit").dsTextStyle(.smallSubtitle)
             }.frame(maxWidth: .infinity, alignment: .center)
             DSHStack(spacing: .small) {

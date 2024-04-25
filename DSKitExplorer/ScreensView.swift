@@ -31,14 +31,13 @@ struct ScreensView: View {
                     }
                 }
             }
-            .dsScreen()
             .navigationTitle(appearance.title)
-            .toolbar {
-                // Placement in a Navigation Bar
-                ToolbarItem(placement: .navigationBarTrailing) { // Use `.navigationBarTrailing` for a right-side button
-                    DSButton(title: "Change", style: .clear, action: { dismiss() })
+            .safeAreaInset(edge: .bottom) {
+                DSBottomContainer {
+                    DSButton(title: "Change Appearance", action: { dismiss() })
                 }
             }
+            .dsScreen()
         }
         .environment(\.appearance, appearance)
         .accentColor(appearance.navigationBar.buttons.color)

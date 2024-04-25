@@ -33,3 +33,20 @@ public class DSDynamicColor {
         return color(light: UIColor(light), dark: UIColor(dark))
     }
 }
+
+extension UIColor {
+    static func dynamic(light: UIColor, dark: UIColor) -> UIColor {
+        return UIColor { traitCollection -> UIColor in
+            switch traitCollection.userInterfaceStyle {
+            case .dark:
+                return dark
+            default:
+                return light
+            }
+        }
+    }
+    
+    static func dynamic(light: Int, dark: Int) -> UIColor {
+        dynamic(light: UIColor(light), dark: UIColor(dark))
+    }
+}

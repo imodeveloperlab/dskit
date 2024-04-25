@@ -17,23 +17,23 @@ struct AppearanceSelectionView: View {
     
     var body: some View {
         DSVStack {
-            ScrollView {
-                DSVStack {
-                    
-                    DSVStack(spacing: .zero) {
-                        DSHStack(spacing: .small) {
-                            DSText("Welcome to").dsTextStyle(.largeHeadline)
-                            DSText("DSKit").dsTextStyle(.largeHeadline, .view(.button(.accentColor)))
-                        }
-                        DSText("Please select an appearance to continue").dsTextStyle(.subheadline)
+            DSVStack {
+                DSVStack(spacing: .zero) {
+                    DSHStack(spacing: .small) {
+                        DSText("Welcome to").dsTextStyle(.largeHeadline)
+                        DSText("DSKit").dsTextStyle(.largeHeadline, .view(.button(.accentColor)))
                     }
-                    
-                    DSGrid(data: appearances, id: \.title) { appearance in
-                        AppearanceView(appearance: appearance).onTap {
-                            self.selectedAppearance = IdentifiableDesignable(appearance: appearance)
-                        }
+                    DSText("Please select an appearance to continue").dsTextStyle(.subheadline)
+                }
+                .dsPadding(.top)
+                
+                DSGrid(numberOfColumns: 1, data: appearances, id: \.title) { appearance in
+                    AppearanceView(appearance: appearance).onTap {
+                        self.selectedAppearance = IdentifiableDesignable(appearance: appearance)
                     }
                 }
+                
+                Spacer()
             }
             .fullScreenCover(item: $selectedAppearance) { identifiableDesignable in
                 ScreensView(appearance: identifiableDesignable.appearance)
@@ -49,7 +49,7 @@ fileprivate struct AppearanceView: View {
     
     var body: some View {
         DSVStack {
-            DSText(appearance.title).dsTextStyle(.smallHeadline)
+            DSText(appearance.title).dsTextStyle(.headline)
             DSHStack(spacing: .zero) {
                 appearance.primaryView.text.headline.color
                 appearance.primaryView.text.subheadline.color
@@ -63,7 +63,7 @@ fileprivate struct AppearanceView: View {
             .dsHeight(40)
             .dsCornerRadius()
         }
-        .dsPadding(.regular)
+        .dsPadding()
         .dsSecondaryBackground()
         .dsCornerRadius()
     }
@@ -79,12 +79,10 @@ struct IdentifiableDesignable: Identifiable {
 }
 
 fileprivate let appearances: [DSAppearance] = [
-    BlackToneAppearance(),
-    DarkLightAppearance(),
-    ShopAppearance(),
     DSKitAppearance(),
+    DarkAppearance(),
+    BlueAppearance(),
     RetroAppearance(),
-    OrangeAppearance(),
     PeachAppearance()
 ]
 

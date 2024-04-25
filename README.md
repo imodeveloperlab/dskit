@@ -37,6 +37,8 @@ DSKit offers a library of ready-to-use UI components and full-screen layouts tha
 </table>
 <p align="center"><a href="https://github.com/imodeveloperlab/dskit/wiki/Appearances">View all available layouts<a/></p>
 
+
+
 ### Appearances
 
 DSKit includes a selection of ready-to-use appearances that support both light and dark modes, suitable for immediate integration into your projects. These appearances are fully customizable, allowing you to tweak and modify them according to your specific requirements. This flexibility ensures that you can maintain consistency across different themes while adapting to user preferences. 
@@ -57,6 +59,7 @@ DSKit includes a selection of ready-to-use appearances that support both light a
 <p align="center"><a href="https://github.com/imodeveloperlab/dskit/wiki/Appearances">View all available appearances<a/></p>
 
 
+
 ### Play and Prototype
 
 DSKit features an **DSKitExplorer** app where you can experiment and prototype your screen designs. Choose from a variety of pre-built layouts to modify and expand as needed. Easily toggle between light and dark modes to see your designs in different settings. This interactive platform is the simplest way to familiarize yourself with DSKit's components, understand their functionality, and learn how to effectively apply them in your projects.
@@ -67,7 +70,7 @@ DSKit features an **DSKitExplorer** app where you can experiment and prototype y
 
 ## Quick Start
 
-To get started with DSKit, a design system toolkit for SwiftUI applications, you can integrate it into your projects using Swift Package Manager (SPM), which is Apple’s dependency manager for Swift projects. Below is a step-by-step guide on how to add DSKit to your project and begin using it to enhance your UI development.
+To get started with DSKit, a design system toolkit for SwiftUI applications, you can integrate it into your projects using Swift Package Manager (SPM)
 
 ### Step 1: Adding DSKit via Swift Package Manager (SPM)
 To add DSKit to your project, follow these steps:
@@ -76,7 +79,7 @@ To add DSKit to your project, follow these steps:
 
 2. **Add the package dependency**:
    - Go to `File` > `Swift Packages` > `Add Package Dependency...`
-   - Enter the repository URL for DSKit (you'll need to obtain this from the DSKit GitHub repository or the provider).
+   - Enter the repository URL `git@github.com:imodeveloperlab/dskit.git`.
    - Select the version of the package you wish to add. You can choose a specific release or the latest commit.
    - Xcode will download the package and ask which of your project's targets to add it to. Select the target where you want to use DSKit.
 

@@ -54,7 +54,7 @@ DSKit includes a selection of ready-to-use appearances that support both light a
 </td>
 </tr>
 </table>
-<p align="center"><a href="wiki/Appearances#retro">View all available appearances<a/></p>
+<p align="center"><a href="https://github.com/imodeveloperlab/dskit/wiki/Appearances">View all available appearances<a/></p>
 
 
 ### Play and Prototype
@@ -113,22 +113,6 @@ In this example, `DSVStack`, `DSText`, and various modifiers like `dsPadding()` 
 
 ### Step 4: Customizing DSKit
 DSKit is designed to be flexible and can be customized to fit the specific needs of your project. You can modify existing components or add new ones in accordance with your design guidelines.
-
-
-
-## Idea
-
-The idea revolves around the design problem for mobile applications, in the company I worked for, there has always been the design problem, namely that designers make beautiful interfaces, only that they are not practical, difficult to implement.
-
-In the business segment, small business, not all the time, there are enough resources, time and knowledge to generate content exclusively for mobile applications, pictures, illustrations, icons and perfect texts. The design that looks perfect at first, become problematic, the real content does not fit, the images are not so perfect, the buttons are not in place, and so on.
-
-This is the first reason, I started working on DSKit, it is a tool, with the help of which it is possible to quickly create new interfaces, in which the typography, spaces, colors will be consistent in all the application screens.
-
-The second reason is that there are a lot of applications, for online appointments, shopping, delivery, that work, but have an ugly design (in my opinion), and all because the business does not have the resources to hire a company or a designer to develop a special design. for their business.
-
-Unlike Material Design, Flutter and other, design systems, that are overwhelmingly complicated, DSKit should be focused on fast delivery, with the most useful and simple components, and a lot of code examples, for different use cases.
-
-DSKit will not, (and should not) cover everything, but if it fits the business requirements it should deliver flawless functionality. It should be the easiest way to make simple iOS applications and business white labels with a great, clean design and pixel-perfect UI.
 
 
 

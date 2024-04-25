@@ -39,7 +39,7 @@ DSKit offers a library of ready-to-use UI components and full-screen layouts tha
 </td>
 </tr>
 </table>
-<p align="center"><b>Note:</b> Click on images to see the source code or <a href="Content/ScreensGallery_dskit_light.md">here</a> to see all available layouts</p>
+<p align="center"><b>Note:</b> Click on images to see the source code or <a href="Content/ScreensGallery_DSKit_light.md">here</a> to see all available layouts</p>
 
 ### Appearances
 
@@ -48,22 +48,22 @@ DSKit includes a selection of ready-to-use appearances that support both light a
 <tr>
 <td>
   <a href="DSKitExplorer/Screens/ItemDetails3.swift">
-    <img src="Content/Screenshots/ItemDetails3.Black_light_screenshot_framed.png">
+    <img src="Content/Screenshots/ItemDetails3.Dark_light_screenshot_framed.png">
   </a>
   </td>
 <td>
 <a href="DSKitExplorer/Screens/ItemDetails3.swift">
-<img src="Content/Screenshots/ItemDetails3.Retro_light_screenshot_framed.png">
+<img src="Content/Screenshots/ItemDetails3.Peach_light_screenshot_framed.png">
 </a>
 </td>
 <td>
 <a href="DSKitExplorer/Screens/ItemDetails3.swift">
-<img src="Content/Screenshots/ItemDetails3.Retro_dark_screenshot_framed.png">
+<img src="Content/Screenshots/ItemDetails3.Blue_light_screenshot_framed.png">
 </a>
 </td>
 </tr>
 </table>
-<p align="center"><b>Note:</b> Click on images to see the source code or <a href="Content/ScreensGallery_dskit_light.md">here</a> to see all available layouts</p>
+<p align="center"><b>Note:</b> Click on images to see the source code or <a href="Content/ScreensGallery_DSKit_light.md">here</a> to see all available layouts</p>
 
 ### Play and Prototype
 

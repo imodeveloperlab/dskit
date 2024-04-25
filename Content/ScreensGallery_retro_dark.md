@@ -1,6 +1,6 @@
 <p align='center'><a href="ScreensGallery_Retro_light.md">Switch to light mode</a></p>
 <p align='center'>Appearances:
-<a href="ScreensGallery_Black_dark.md">Black</a> | <a href="ScreensGallery_DSKit_dark.md">DSKit</a> | <a href="ScreensGallery_Dark_dark.md">Dark</a> | <a href="ScreensGallery_Orange_dark.md">Orange</a> | <a href="ScreensGallery_Peach_dark.md">Peach</a> | <a href="ScreensGallery_Shop_dark.md">Shop</a>
+<a href="ScreensGallery_Blue_dark.md">Blue</a> | <a href="ScreensGallery_DSKit_dark.md">DSKit</a> | <a href="ScreensGallery_Dark_dark.md">Dark</a> | <a href="ScreensGallery_Peach_dark.md">Peach</a>
 </p>
 <p align='center'><b>Note:</b> Click on screens image to open the source code.</p>
 <table>

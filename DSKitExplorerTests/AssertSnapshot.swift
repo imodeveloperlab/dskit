@@ -44,7 +44,7 @@ extension XCTestCase {
                     
                     SnapshotTesting.assertSnapshot(
                         matching: view,
-                        as: .wait(for: screenShotMode ? 0.5 : 0.1 , on: .image(on: .iPhone13Pro)),
+                        as: .wait(for: 5.0 , on: .image(on: .iPhone13Pro)),
                         named: screenShotMode ? "\(appearance.title)_\(colorScheme)_screenshot" : "snapshot",
                         record: record,
                         timeout: timeout,

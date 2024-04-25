@@ -39,7 +39,8 @@ DSKit offers a library of ready-to-use UI components and full-screen layouts tha
 
 ### Appearances
 
-DSKit includes a selection of ready-to-use appearances that support both light and dark modes, suitable for immediate integration into your projects. These appearances are fully customizable, allowing you to tweak and modify them according to your specific requirements. This flexibility ensures that you can maintain consistency across different themes while adapting to user preferences.
+DSKit includes a selection of ready-to-use appearances that support both light and dark modes, suitable for immediate integration into your projects. These appearances are fully customizable, allowing you to tweak and modify them according to your specific requirements. This flexibility ensures that you can maintain consistency across different themes while adapting to user preferences. 
+
 <table>
 <tr>
 <td>
@@ -53,7 +54,7 @@ DSKit includes a selection of ready-to-use appearances that support both light a
 </td>
 </tr>
 </table>
-
+<p align="center"><a href="wiki/Appearances#retro">View all available appearances<a/></p>
 
 
 ### Play and Prototype

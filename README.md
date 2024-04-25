@@ -1,9 +1,8 @@
 
 
 <p align="center">
-    <img src="Content/Images/Logo.png" width="100" max-width="100%" alt="DSKit"/>
+    <img src="Content/Images/Logo.png" width="150" max-width="100%" alt="DSKit"/>
 </p>
-<h1 align="center">Design System Kit</h1>
 <p align="center">
     <img src="https://img.shields.io/badge/iOS-15+-brightgreen.svg?style=flat" alt="iOS"/>
     <img src="https://img.shields.io/badge/SwiftUI-3.0-brightgreen.svg"/>
@@ -11,6 +10,7 @@
         <img src="https://img.shields.io/badge/spm-compatible-brightgreen.svg?style=flat" alt="Swift Package Manager"/>
     </a>
 </p>
+
 
 ### What is DSKit?
 

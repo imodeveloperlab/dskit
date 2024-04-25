@@ -27,7 +27,7 @@ struct AppearanceSelectionView: View {
                 }
                 .dsPadding(.top)
                 
-                DSGrid(numberOfColumns: 1, data: appearances, id: \.title) { appearance in
+                DSGrid(numberOfColumns: 2, data: appearances, id: \.title) { appearance in
                     AppearanceView(appearance: appearance).onTap {
                         self.selectedAppearance = IdentifiableDesignable(appearance: appearance)
                     }
@@ -60,7 +60,7 @@ fileprivate struct AppearanceView: View {
                 appearance.secondaryView.background.color
                 appearance.secondaryView.button.accentColor.color
             }
-            .dsHeight(40)
+            .dsHeight(20)
             .dsCornerRadius()
         }
         .dsPadding()

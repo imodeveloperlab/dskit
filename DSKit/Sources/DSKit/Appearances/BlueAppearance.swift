@@ -24,7 +24,7 @@ public class BlueAppearance: DSAppearance {
     
     /// Init system appearance with brand color, or primary color of your app
     /// - Parameter primaryBrandColor: UIColor
-    public init(brandColor: UIColor? = nil, title: String = "Shop") {
+    public init(brandColor: UIColor? = nil, title: String = "Blue") {
         
         self.title = title
         

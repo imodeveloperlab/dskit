@@ -24,7 +24,7 @@ public class DarkAppearance: DSAppearance {
     
     /// Init system appearance with brand color, or primary color of your app
     /// - Parameter primaryBrandColor: UIColor
-    public init(brandColor: UIColor? = nil, title: String = "Black") {
+    public init(brandColor: UIColor? = nil, title: String = "Dark") {
         
         self.title = title
         

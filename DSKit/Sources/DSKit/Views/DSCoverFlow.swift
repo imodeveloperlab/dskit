@@ -48,8 +48,6 @@ public struct DSCoverFlow<Data, ID, Content>: View where Data: RandomAccessColle
                     currentPage: $currentElementID
                 ) { element in
                     content(element)
-                }.onAppear {
-                    print("ccc \(p.size.width)")
                 }
             }
             if showPaginationView {

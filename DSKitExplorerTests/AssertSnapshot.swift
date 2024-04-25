@@ -21,7 +21,6 @@ extension XCTestCase {
         line: UInt = #line
     ) {
         let screenShotMode = ProcessInfo.processInfo.arguments.contains("SCREENSHOTSMODE")
-
         
         if screenShotMode {
             
@@ -85,12 +84,10 @@ extension XCTestCase {
 }
 
 fileprivate let appearances: [(title: String, appearance: DSAppearance)] = [
-    ("Black", BlackToneAppearance()),
-    ("Dark", DarkLightAppearance()),
-    ("Shop", ShopAppearance()),
     ("DSKit", DSKitAppearance()),
+    ("Blue", BlueAppearance()),
+    ("Dark", DarkAppearance()),
     ("Retro", RetroAppearance()),
-    ("Orange", OrangeAppearance()),
     ("Peach", PeachAppearance())
 ]
 

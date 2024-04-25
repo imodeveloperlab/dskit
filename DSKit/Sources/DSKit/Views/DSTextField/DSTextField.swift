@@ -157,7 +157,7 @@ struct DSTextFieldViewPreview: View {
                     }
                 }
             }
-        }.dsPadding()
+        }
     }
 }
 

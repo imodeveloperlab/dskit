@@ -1,5 +1,5 @@
 //
-//  OrangeAppearance.swift
+//  DarkAppearance.swift
 //  DSKit
 //
 //  Created by Borinschi Ivan on 30.11.2020.
@@ -8,81 +8,78 @@
 
 import UIKit
 
-public class OrangeAppearance: DSAppearance {
+public class DarkAppearance: DSAppearance {
     
     public var title: String
     public var primaryView: DSViewAppearanceProtocol
     public var secondaryView: DSViewAppearanceProtocol
-    public var spacing: DSSpacingProtocol = DSSpacingSystem(spatialSystem: 7)
-    public var padding: DPaddingsProtocol = DSPaddingSystem(spatialSystem: 7)
-    public var margins: CGFloat = 15
-    public var groupMargins: CGFloat = 11
-    public var interItemSpacing: CGFloat = 10
+    public var spacing: DSSpacingProtocol = DSSpacingSystem(spatialSystem: 6)
+    public var padding: DPaddingsProtocol = DSPaddingSystem(spatialSystem: 6)
     public var tabBar: DSTabBarAppearanceProtocol
     public var navigationBar: DSNavigationBarAppearanceProtocol
     public var price: DSPriceAppearanceProtocol
     public var fonts: DSFontsProtocol = DSFonts()
-    public var actionElementHeight: CGFloat = 48
+    public var actionElementHeight: CGFloat = 44
     public var screenMargins: CGFloat = 16
     
-    public init(brandColor: UIColor? = nil, title: String = "Orange") {
+    /// Init system appearance with brand color, or primary color of your app
+    /// - Parameter primaryBrandColor: UIColor
+    public init(brandColor: UIColor? = nil, title: String = "Black") {
         
         self.title = title
         
         // MARK: - Primary view
         
+        // Text colors
         let text = DSTextAppearance.textColors(
-            main: UIColor(0x353D50),
-            secondary: UIColor(0x5B6170)
+            main: .dynamic(light: 0x484848, dark: 0xE0E0E0),
+            secondary: .dynamic(light: 0x767676, dark: 0xA0A0A0)
         )
         
         let button = DSButtonAppearance(
-            accentColor: UIColor(0xF26333), 
-            supportColor: UIColor(0xffffff)
+            accentColor: .dynamic(light: 0x222222, dark: 0xDDDDDD),
+            supportColor: .dynamic(light: 0xffffff, dark: 0x333333)
         )
         
+        // Text field
         let primaryViewTextField = DSTextFieldAppearance(
-            border: UIColor(0xF6F7F8),
-            background: UIColor(0xF6F7F8),
-            text: text.headline,
-            placeHolder: UIColor(0xA6AAB3)
-        )
-        
-        primaryView = DSViewAppearance(
-            button: button,
-            text: text,
-            textField: primaryViewTextField,
-            background: UIColor(0xffffff),
-            separator: UIColor(0xF6F7F8),
-            cornerRadius: 8
-        )
-        
-        // MARK: - Secondary view
-        
-        let secondaryText = DSTextAppearance.textColors(
-            main: UIColor(0x040C22),
-            secondary: UIColor(0x5B6170)
-        )
-        
-        let secondaryButton = DSButtonAppearance(
-            accentColor: UIColor(0xF26333),
-            supportColor: UIColor(0xffffff)
-        )
-        
-        let secondaryViewTextField = DSTextFieldAppearance(
-            border: UIColor(0xffffff),
-            background: UIColor(0xffffff),
+            background: .dynamic(light: 0xF4F4F4, dark: 0x333333),
             text: text.headline,
             placeHolder: text.subheadline
         )
         
+        // View
+        primaryView = DSViewAppearance(
+            button: button,
+            text: text,
+            textField: primaryViewTextField,
+            background: .dynamic(light: 0xFFFFFF, dark: 0x202020),
+            separator: .dynamic(light: 0xD5C5B2, dark: 0x8D7A66),
+            cornerRadius: 2
+        )
+        
+        // MARK: - Secondary view
+        
+        // Text
+        let secondaryText = DSTextAppearance.textColors(
+            main: .dynamic(light: 0x222222, dark: 0xDDDDDD),
+            secondary: .dynamic(light: 0x717171, dark: 0x999999)
+        )
+        
+        // Text field
+        let secondaryViewTextField = DSTextFieldAppearance(
+            background: .dynamic(light: 0xFFFFFF, dark: 0x202020),
+            text: text.headline,
+            placeHolder: text.subheadline
+        )
+        // View
         secondaryView = DSViewAppearance(
-            button: secondaryButton,
+            button: button,
             text: secondaryText,
             textField: secondaryViewTextField,
-            background: UIColor(0xF6F7F8),
-            separator: UIColor(0xffffff),
-            cornerRadius: 8
+            background: .dynamic(light: 0xF4F4F4, dark: 0x2D2D2D),
+            separator: .dynamic(light: 0xEBEBEB, dark: 0x555555),
+            cornerRadius: 2
         )
         
         // MARK: - Tabbar
@@ -91,14 +88,14 @@ public class OrangeAppearance: DSAppearance {
             barTint: primaryView.background,
             itemTint: primaryView.button.accentColor,
             unselectedItemTint: secondaryText.subheadline,
-            badge: primaryView.button.accentColor,
+            badge: UIColor.red,
             translucent: true
         )
         
-        // MARK: - Navigation Bar
+        // MARK: - Navigation bar
         
         navigationBar = DSNavigationBarAppearance(
-            buttons: primaryView.button.accentColor,
+            buttons: .dynamic(light: 0x666666, dark: 0xAAAAAA),
             text: text.title1,
             bar: primaryView.background,
             translucent: true
@@ -107,11 +104,9 @@ public class OrangeAppearance: DSAppearance {
         // MARK: - Price
         
         price = DSPriceAppearance(
-            currency: UIColor(0xF26333),
-            amount: UIColor(0xF26333),
-            regularAmount: UIColor(0x5B6170),
-            badgeBackground: UIColor(0xFE4850),
-            badgeCornerRadius: 5
+            regularAmount: .dynamic(light: 0x666666, dark: 0xBBBBBB),
+            badgeBackground: .dynamic(light: 0xFBB666, dark: 0xDA9350),
+            badgeCornerRadius: 6
         )
     }
     

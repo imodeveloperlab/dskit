@@ -16,6 +16,8 @@
 
 DSKit is a simple **Design System Kit**  for **iOS 15+ SwiftUI**, designed to help developers create simple, consistent and attractive user interfaces with ease. It includes essential view modifiers which ensure that all UI components follow a unified style guide. 
 
+
+
 ### Components and Layouts
 
 DSKit offers a library of ready-to-use UI components and full-screen layouts that are designed to be easily integrated and customized within your projects. Each component and screen layout is fully adaptable, allowing you to tweak and refine them to perfectly fit the specific needs of your application. This accessibility accelerates the development process, enabling you to implement complex design solutions efficiently while maintaining a high standard of aesthetics and functionality.
@@ -34,6 +36,7 @@ DSKit offers a library of ready-to-use UI components and full-screen layouts tha
 </tr>
 </table>
 
+
 ### Appearances
 
 DSKit includes a selection of ready-to-use appearances that support both light and dark modes, suitable for immediate integration into your projects. These appearances are fully customizable, allowing you to tweak and modify them according to your specific requirements. This flexibility ensures that you can maintain consistency across different themes while adapting to user preferences.
@@ -50,13 +53,16 @@ DSKit includes a selection of ready-to-use appearances that support both light a
 </td>
 </tr>
 </table>
-<p align="center"><b>Note:</b> Click on images to see the source code or <a href="Content/ScreensGallery_DSKit_light.md">here</a> to see all available layouts</p>
+
+
 
 ### Play and Prototype
 
 DSKit features an **DSKitExplorer** app where you can experiment and prototype your screen designs. Choose from a variety of pre-built layouts to modify and expand as needed. Easily toggle between light and dark modes to see your designs in different settings. This interactive platform is the simplest way to familiarize yourself with DSKit's components, understand their functionality, and learn how to effectively apply them in your projects.
 
 ![PlayAndPrototype](Content/Images/PlayAndPrototype.png)
+
+
 
 ## Get started 
 
@@ -108,6 +114,7 @@ In this example, `DSVStack`, `DSText`, and various modifiers like `dsPadding()` 
 DSKit is designed to be flexible and can be customized to fit the specific needs of your project. You can modify existing components or add new ones in accordance with your design guidelines.
 
 
+
 ## Idea
 
 The idea revolves around the design problem for mobile applications, in the company I worked for, there has always been the design problem, namely that designers make beautiful interfaces, only that they are not practical, difficult to implement.
@@ -121,6 +128,7 @@ The second reason is that there are a lot of applications, for online appointmen
 Unlike Material Design, Flutter and other, design systems, that are overwhelmingly complicated, DSKit should be focused on fast delivery, with the most useful and simple components, and a lot of code examples, for different use cases.
 
 DSKit will not, (and should not) cover everything, but if it fits the business requirements it should deliver flawless functionality. It should be the easiest way to make simple iOS applications and business white labels with a great, clean design and pixel-perfect UI.
+
 
 
 ## Contributions and support

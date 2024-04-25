@@ -35,7 +35,7 @@ DSKit offers a library of ready-to-use UI components and full-screen layouts tha
 </td>
 </tr>
 </table>
-
+<p align="center"><a href="https://github.com/imodeveloperlab/dskit/wiki/Appearances">View all available layouts<a/></p>
 
 ### Appearances
 
@@ -65,7 +65,7 @@ DSKit features an **DSKitExplorer** app where you can experiment and prototype y
 
 
 
-## Get started 
+## Quick Start
 
 To get started with DSKit, a design system toolkit for SwiftUI applications, you can integrate it into your projects using Swift Package Manager (SPM), which is Apple’s dependency manager for Swift projects. Below is a step-by-step guide on how to add DSKit to your project and begin using it to enhance your UI development.
 
@@ -111,8 +111,7 @@ struct ContentView: View {
 
 In this example, `DSVStack`, `DSText`, and various modifiers like `dsPadding()` and `dsBackground()` are used. These components and modifiers are part of DSKit and help apply consistent styling and spacing as defined in your design system.
 
-### Step 4: Customizing DSKit
-DSKit is designed to be flexible and can be customized to fit the specific needs of your project. You can modify existing components or add new ones in accordance with your design guidelines.
+<p align="center"><a href="https://github.com/imodeveloperlab/dskit/wiki/Home">Read more about how DSKit works<a/></p>
 
 
 

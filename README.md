@@ -60,17 +60,11 @@ DSKit includes a selection of ready-to-use appearances that support both light a
 
 
 
-### Play and Prototype
-
-DSKit features an **DSKitExplorer** app where you can experiment and prototype your screen designs. Choose from a variety of pre-built layouts to modify and expand as needed. Easily toggle between light and dark modes to see your designs in different settings. This interactive platform is the simplest way to familiarize yourself with DSKit's components, understand their functionality, and learn how to effectively apply them in your projects.
-
-![PlayAndPrototype](Content/Images/PlayAndPrototype.png)
-
-
-
 ## Documentation
 
 The most effective way to familiarize yourself with DSKit and its capabilities is by utilizing the **DSKit Explorer app**. To begin, clone the repository and launch the **DSKit Explorer app**. Within the app, you'll have access to all available screens, which you can open in preview mode. This feature allows you to interactively switch between different appearances and make modifications to the screens according to your preferences.
+
+![PlayAndPrototype](Content/Images/PlayAndPrototype.png)
 
 Using the **DSKit Explorer** provides a practical demonstration of how DSKit's components and modifiers integrate to create efficient and cohesive UIs with minimal coding effort. It serves as an excellent visual and interactive guide to understanding the simplicity and power of DSKit in streamlining screen development.
 

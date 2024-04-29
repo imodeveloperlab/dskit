@@ -16,7 +16,9 @@
 
 DSKit is a simple **Design System Kit**  for **iOS 15+ SwiftUI**, designed to help developers create simple, consistent and attractive user interfaces with ease. It includes essential view modifiers which ensure that all UI components follow a unified style guide. 
 
+### UIKit Version
 
+If you're looking for the UIKit version of DSKit, you can find it within the same repository under the subfolder named `UIKitVersion`. For more details on the UIKit implementation and its features, please refer to the [UIKit Version documentation](UIKItVersion) provided in the repository.
 
 ### Components and Layouts
 

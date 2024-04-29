@@ -7,6 +7,23 @@
 
 import SwiftUI
 
+/*
+## DSHScroll
+
+`DSHScroll` is a SwiftUI component designed to display a horizontally scrollable view within the DSKit framework. It is ideal for presenting a collection of elements, such as images or cards, in a seamless, scrollable format that extends horizontally.
+
+#### Initialization:
+Initializes a `DSHScroll` with parameters that control layout and behavior.
+- Parameters:
+- `spacing`: Specifies the space between each item within the scroll view.
+- `data`: The collection of data items.
+- `id`: KeyPath to the unique identifier for each data item.
+- `content`: Closure returning a `Content` view for each item in the collection.
+
+#### Usage:
+`DSHScroll` is particularly useful in scenarios where users need to browse through a series of items without navigating away from the current view context, such as in a media gallery or a horizontal list of options.
+*/
+
 public struct DSHScroll<Data, ID, Content>: View where Data: RandomAccessCollection, ID: Hashable, Content: View{
     
     @Environment(\.appearance) var appearance: DSAppearance
@@ -45,15 +62,28 @@ public struct DSHScroll<Data, ID, Content>: View where Data: RandomAccessCollect
     }
 }
 
-struct DSHScroll_Previews: PreviewProvider {
-    static var previews: some View {
-        let colors = [Color.red, Color.green, Color.yellow, Color.red, Color.green, Color.yellow]
-        DSPreviewForEachAppearance { DSPreview {
-                DSHScroll(spacing: .medium, data: colors, id: \.self) { color in
-                    color.dsSize(60)
-                }
-            }.dsContentMargins(margin: 100)
+struct Testable_DSHScroll: View {
+    let colors = [
+        Color.red,
+        Color.green,
+        Color.yellow,
+        Color.red,
+        Color.green,
+        Color.yellow
+    ]
+    var body: some View {
+        DSHScroll(spacing: .medium, data: colors, id: \.self) { color in
+            color.dsSize(60)
         }
     }
 }
 
+struct DSHScroll_Previews: PreviewProvider {
+    static var previews: some View {
+        DSPreviewForEachAppearance {
+            DSPreview {
+                Testable_DSHScroll()
+            }
+        }
+    }
+}

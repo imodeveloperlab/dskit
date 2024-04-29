@@ -7,6 +7,30 @@
 
 import SwiftUI
 
+/*
+## DSCoverFlow
+
+`DSCoverFlow` is a SwiftUI component that creates a customizable, paginated scroll view. It is designed to display a sequence of views, such as images or cards, in a horizontal scrollable layout. This component is useful for creating cover flow or carousel-like interfaces.
+
+#### Properties:
+- `height`: The height of the cover flow view.
+- `spacing`: Spacing between each item in the scroll view.
+- `showPaginationView`: A Boolean value that indicates whether pagination indicators should be shown.
+- `data`: The collection of data that the cover flow will iterate over.
+- `content`: A closure that takes a data element and returns a SwiftUI view.
+- `id`: A key path to the unique identifier property of each data element.
+
+#### Initialization:
+Initializes `DSCoverFlow` with specific layout and behavioral settings.
+- Parameters:
+- `height`: `DSDimension` specifying the height of the cover flow.
+- `spacing`: `DSSpace` specifying the spacing between items.
+- `showPaginationView`: Boolean indicating whether to show pagination dots.
+- `data`: The collection of data items to display.
+- `id`: KeyPath to the unique identifier for each data item.
+- `content`: Closure that returns a `Content` view for each data item.
+*/
+
 public struct DSCoverFlow<Data, ID, Content>: View where Data: RandomAccessCollection, ID: Hashable, Data.Element: Equatable, Content: View {
     
     @Environment(\.appearance) var appearance: DSAppearance
@@ -66,19 +90,6 @@ public struct DSCoverFlow<Data, ID, Content>: View where Data: RandomAccessColle
                     .opacity(currentElementID == element ? 1 : 0.1)
             }
         }.dsHeight(7)
-    }
-}
-
-struct DSCoverFlow_Previews: PreviewProvider {
-    static var previews: some View {
-        let colors = [Color.red, Color.green, Color.yellow]
-        DSPreviewForEachAppearance { DSPreview {
-                DSCoverFlow(height: 200, spacing: .medium, data: colors, id: \.self) { color in
-                    color
-                }
-                .dsLayoutGuideLines(divider: 1)
-            }.dsScreen()
-        }
     }
 }
 
@@ -207,5 +218,32 @@ fileprivate struct DSPaginatedScrollView<Data, ID, Content>: UIViewRepresentable
                 self.parent.currentPage = self.parent.data[index]
             }
         }
+    }
+}
+
+struct Testable_DSCoverFlow: View {
+    
+    let colors = [
+        UIColor(0x006A7A),
+        UIColor(0x28527a),
+        UIColor(0xfbeeac)
+    ]
+    
+    var body: some View {
+        DSCoverFlow(
+            height: 200,
+            data: colors,
+            id: \.self,
+            content: { uiColor in
+            uiColor.color
+        })
+    }
+}
+
+struct DSCoverFlow_Previews: PreviewProvider {
+    static var previews: some View {
+        DSPreviewForEachAppearance {
+            Testable_DSCoverFlow()
+        }.dsScreen()
     }
 }

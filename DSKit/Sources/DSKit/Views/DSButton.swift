@@ -7,6 +7,40 @@
 
 import SwiftUI
 
+/*
+## DSButton
+
+`DSButton` is a highly customizable button component in the DSKit framework, designed to accommodate various styles and use cases within the application. It supports several predefined styles as well as custom configurations, making it versatile for different interface needs.
+
+#### Styles:
+`DSButton` offers multiple styles to cater to different UI requirements:
+- `default`: Standard button style.
+- `light`: A lighter version of the button, typically for less emphasis.
+- `borderedLight`: A light button with a border.
+- `custom(color: Color)`: Allows for a custom color to be specified.
+- `clear`: A button style without a background.
+
+#### Initializers:
+Multiple initializers allow for various configurations of the button, supporting images, custom spacing, and push-to-sides behavior:
+- Parameters:
+- `title`: The text to be displayed on the button.
+- `leftImage`: Optional image to show on the left side of the text.
+- `rightImage`: Optional image to show on the right side of the text.
+- `pushContentToSides`: If true, pushes the content to the sides of the button.
+- `style`: The style of the button, from the predefined styles or custom.
+- `maxWidth`: A boolean to determine if the button should expand to the maximum available width.
+- `spacing`: The spacing to use within the button, particularly between the icon and text.
+- `action`: The closure executed when the button is tapped.
+
+#### Customization:
+Extensions on `DSButton` provide convenient static methods to create commonly used button configurations:
+- `callToActionLink`: Creates a button styled as a call-to-action link.
+- `sfSymbol`: Creates a button with an SF Symbol icon, ideal for toolbar or icon-only buttons.
+ 
+#### Usage:
+`DSButton` can be used in various parts of the application where user interaction is required. It is capable of handling both text and icons, and can be styled dynamically according to the design requirements.
+*/
+
 public struct DSButton: View {
     
     public enum Style {
@@ -257,40 +291,59 @@ public extension DSButton {
     }
 }
 
+struct Testable_DSButton: View {
+    var body: some View {
+        DSVStack {
+            DSVStack(spacing: .small) {
+                DSButton(
+                    title: "Default",
+                    action: { }
+                )
+                DSButton(
+                    title: "Light",
+                    style: .light, action: { }
+                )
+            }
+            .dsPadding(.medium)
+            .dsSecondaryBackground()
+            .dsCornerRadius()
+            
+            DSVStack {
+                DSButton(title: "Default", action: { })
+                DSButton(
+                    title: "Light",
+                    rightSystemName: "message.fill",
+                    style: .light,
+                    action: { }
+                )
+                DSButton(
+                    title: "Bordered Light",
+                    keftSystemName: "message.fill",
+                    style: .borderedLight,
+                    action: { }
+                )
+                DSButton(
+                    title: "Light",
+                    rightSystemName: "message.fill",
+                    pushContentToSides: true,
+                    style: .light,
+                    action: { }
+                )
+                DSButton(
+                    title: "Regular",
+                    style: .clear,
+                    action: { }
+                )
+            }
+        }
+    }
+}
+
 struct DSButton_Previews: PreviewProvider {
-    
     static var previews: some View {
-        DSPreviewForEachAppearance { DSPreview {
-                DSVStack {
-                    
-                    DSVStack {
-                        DSButton(title: "Default", maxWidth: false, action: { })
-                        DSButton(title: "Light", style: .light, maxWidth: false, action: { })
-                        DSButton(title: "Default", keftSystemName: "message.fill", maxWidth: false, action: { })
-                        DSButton(title: "Light", rightSystemName: "message.fill", style: .light, maxWidth: false, action: { })
-                    }
-                    
-                    DSVStack(spacing: .small) {
-                        DSButton(title: "Default", action: { })
-                        DSButton(title: "Light", style: .light, action: { })
-                    }
-                    .dsPadding(.small)
-                    .dsSecondaryBackground()
-                    .dsCornerRadius()
-                    
-                    DSVStack {
-                        DSButton(title: "Bordered Light", keftSystemName: "message.fill", style: .borderedLight, action: { })
-                        DSButton(title: "Light", rightSystemName: "message.fill", pushContentToSides: true, style: .light, action: { })
-                    }
-                    
-                    DSHStack {
-                        DSVStack {
-                            DSButton(title: "Regular", style: .clear, action: { })
-                            DSButton.callToActionLink(title: "Call to action", action: {})
-                            DSButton.sfSymbol(name: "cart", action: {})
-                        }
-                    }
-                }
+        DSPreviewForEachAppearance { 
+            DSPreview {
+                Testable_DSButton()
             }
         }
     }

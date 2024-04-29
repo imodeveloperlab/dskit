@@ -7,6 +7,29 @@
 
 import SwiftUI
 
+/*
+## DSPickerView
+
+`DSPickerView` is a versatile SwiftUI component within the DSKit framework, designed to present selectable content in various styles such as a horizontal scroll or a grid. It offers a dynamic way to select items from a collection, adapting to different content layouts based on user preferences or UI requirements.
+
+#### Styles:
+The `Style` enum defines how the items are presented:
+- `horizontalScroll`: Items are displayed in a horizontally scrolling list.
+- `grid(columns: Int)`: Items are arranged in a grid with a specified number of columns.
+
+#### Initialization:
+Initializes a `DSPickerView` with customization options for layout and interaction.
+- Parameters:
+- `style`: The visual layout style of the picker.
+- `data`: The collection of data items.
+- `id`: KeyPath to the unique identifier for each data item.
+- `selected`: A `Binding` to the currently selected data element.
+- `content`: Closure that generates a view for each item.
+
+#### Usage:
+`DSPickerView` is ideal for applications requiring user selection from a set of options displayed either in a line or a matrix.
+*/
+
 public struct DSPickerView<Data, ID, Content>: View where Data: RandomAccessCollection, Data.Element: Equatable, ID: Hashable, Content: View {
     
     let style: DSPickerView.Style
@@ -68,43 +91,46 @@ public struct DSPickerView<Data, ID, Content>: View where Data: RandomAccessColl
     }
 }
 
-public struct PickerViewHorizontal: View {
+struct Testable_DSPickerView: View {
     
-    let data = ["A","B","C","D","E"]
-    @State var selected = "A"
+    let letters = ["A","B","C","D","E"]
+    @State var selectedLetter = "A"
     
-    public var body: some View {
-        DSPickerView(data: data, id: \.self, selected: $selected, content: { element in
-            DSText(element)
-                .dsSize(20)
-                .dsCardStyle()
-        })
-    }
-}
-
-public struct PickerViewGrid: View {
+    let numbers = ["1","2","3","4","5","6","7","8","9"]
+    @State var selectedNumber = "2"
     
-    let data = ["1","2","3","4","5","6","7","8","9"]
-    @State var selected = "2"
-    
-    public var body: some View {
-        DSPickerView(style: .grid(columns: 5), data: data, id: \.self, selected: $selected, content: { element in
-            DSText(element)
-                .frame(maxWidth: .infinity)
-                .dsCardStyle()
-        })
-    }
-}
-
-struct PickerView_Previews: PreviewProvider {
-    static var previews: some View {
-        DSPreviewForEachAppearance { DSPreview {
-                DSVStack {
-                    PickerViewHorizontal()
-                        .dsSectionStyle(title: "Horizontal")
-                    PickerViewGrid()
-                        .dsSectionStyle(title: "Grid")
+    var body: some View {
+        DSVStack {
+            DSPickerView(
+                data: letters,
+                id: \.self,
+                selected: $selectedLetter,
+                content: { element in
+                    DSText(element)
+                        .dsSize(20)
+                        .dsCardStyle()
                 }
+            ).dsSectionStyle(title: "Letters")
+            
+            DSPickerView(
+                style: .grid(columns: 5),
+                data: numbers, id: \.self,
+                selected: $selectedNumber,
+                content: { element in
+                    DSText(element)
+                        .frame(maxWidth: .infinity)
+                        .dsCardStyle()
+                }
+            ).dsSectionStyle(title: "Numbers")
+        }
+    }
+}
+
+struct DSPickerView_Previews: PreviewProvider {
+    static var previews: some View {
+        DSPreviewForEachAppearance {
+            DSPreview {
+                Testable_DSPickerView()
             }
         }
     }

@@ -8,19 +8,21 @@
 
 import SwiftUI
 
-public struct DSPrice {
-    let amount: String
-    let regularAmount: String?
-    let currency: String
-    var discountBadge: String?
-    
-    public init(amount: String, regularAmount: String? = nil, currency: String, discountBadge: String? = nil) {
-        self.amount = amount
-        self.regularAmount = regularAmount
-        self.currency = currency
-        self.discountBadge = discountBadge
-    }
-}
+/*
+## DSPriceView
+
+`DSPriceView` is a customizable view component designed to display price information effectively, accommodating various styles and states such as discounts. It adheres to the design system, responding dynamically to appearance and style settings.
+
+#### Initializer:
+Initializes a `DSPriceView` with a given `DSPrice` model, text font key for style, and an optional color.
+- Parameters:
+- `price`: `DSPrice` struct containing amount, currency, and optional regular amount and discount badge.
+- `size`: `DSTextFontKey` indicating the text size and style.
+- `color`: Optional `Color` for the price text, defaults to nil.
+ 
+#### Usage:
+The `DSPriceView` can display a standard price, a regular (crossed-out) price when a discount is applicable, and an optional discount badge.
+*/
 
 public struct DSPriceView: View, DSDesignable {
     
@@ -87,8 +89,27 @@ public struct DSPriceView: View, DSDesignable {
     }
 }
 
-struct Testable_DSPrice: View {
-    let price = DSPrice(amount: "100", regularAmount: "250", currency: "$", discountBadge: "10% OFF")
+public struct DSPrice {
+    let amount: String
+    let regularAmount: String?
+    let currency: String
+    var discountBadge: String?
+    
+    public init(amount: String, regularAmount: String? = nil, currency: String, discountBadge: String? = nil) {
+        self.amount = amount
+        self.regularAmount = regularAmount
+        self.currency = currency
+        self.discountBadge = discountBadge
+    }
+}
+
+struct Testable_DSPriceView: View {
+    let price = DSPrice(
+        amount: "100",
+        regularAmount: "250",
+        currency: "$",
+        discountBadge: "10% OFF"
+    )
     var body: some View {
         DSPriceView(price: price, size: .title1)
         DSPriceView(price: price, size: .title2)
@@ -104,9 +125,9 @@ struct Testable_DSPrice: View {
 
 struct DSPrice_Previews: PreviewProvider {
     static var previews: some View {
-        DSPreviewForEachAppearance { 
+        DSPreviewForEachAppearance {
             DSPreview {
-                Testable_DSPrice()
+                Testable_DSPriceView()
             }
         }
     }

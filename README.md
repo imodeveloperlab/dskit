@@ -35,7 +35,7 @@ DSKit offers a library of ready-to-use UI components and full-screen layouts tha
 </td>
 </tr>
 </table>
-<p align="center"><a href="https://github.com/imodeveloperlab/dskit/wiki/Appearances">View all available layouts<a/></p>
+<p align="center"><a href="Content/Layout-in-DSKit.md">Learn more about layout in DSKit<a/></p>
 
 
 

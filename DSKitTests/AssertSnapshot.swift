@@ -19,7 +19,11 @@ extension XCTestCase {
         line: UInt = #line
     ) {
         SnapshotTesting.diffTool = "open"
-        isRecording = false
+        isRecording = true
+        let testView = testView
+                        .frame(width: 400)
+                        .padding(20)
+        
         let view: UIView = UIHostingController(rootView: testView.fixedSize(horizontal: true, vertical: true)).view
         SnapshotTesting.assertSnapshot(
             matching: view,

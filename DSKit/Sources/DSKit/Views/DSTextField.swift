@@ -8,6 +8,21 @@
 import SwiftUI
 import UIKit
 
+/*
+## DSTextField
+
+`DSTextField` is a customizable SwiftUI component within the DSKit framework designed to handle user input, integrating essential functionalities such as security, validation, and appearance customization. It supports text input, secure entry for passwords, and validation based on various criteria.
+
+#### Initialization:
+Initializes a `DSTextField` with various options for handling different types of input and validation.
+- Parameters:
+- `name`: The name of the SF Symbol to display within the text field.
+- `size`: The size of the symbol icon within the text field.
+
+#### Usage:
+`DSTextField` is suitable for forms, login screens, and any interface where user input is required. The secure entry option and input validation make it particularly useful for handling sensitive information.
+*/
+
 public struct DSTextField: View {
     
     // Environment properties for theming and color customization
@@ -124,29 +139,27 @@ public struct DSTextField: View {
     }
 }
 
-struct DSTextFieldViewPreview: View {
+struct Testable_DSTextField: View {
     
+    @State private var name = DSTextFieldValue()
     @State private var email = DSTextFieldValue()
     @State private var phone = DSTextFieldValue()
     @State private var password = DSTextFieldValue()
+    @State private var repeatPassword = DSTextFieldValue()
     
     var body: some View {
         ScrollView {
             DSVStack {
                 DSVStack {
-                    DSTextField.email(value: email)
+                    DSTextField.name(value: name)
                     DSTextField.phone(value: phone)
-                    DSTextField.password(value: password)
+                    DSTextField.email(value: email)
                 }
                 .dsPadding()
                 .dsSecondaryBackground()
                 .dsCornerRadius()
                 
-                DSVStack {
-                    DSTextField.email(value: email)
-                    DSTextField.phone(value: phone)
-                    DSTextField.password(value: password)
-                }
+                DSTextField.password(value: password)
                 
                 DSButton(title: "Subbmit") {
                     for element in [email, password, phone] {
@@ -162,10 +175,10 @@ struct DSTextFieldViewPreview: View {
 }
 
 struct DSTextField_Previews: PreviewProvider {
-    
     static var previews: some View {
-        DSPreviewForEachAppearance { DSPreview {
-                DSTextFieldViewPreview()
+        DSPreviewForEachAppearance {
+            DSPreview {
+                Testable_DSTextField()
             }
         }
     }

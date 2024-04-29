@@ -7,6 +7,25 @@
 
 import SwiftUI
 
+/*
+ ## DSGrid
+
+`DSGrid` is a flexible and customizable grid component within the DSKit framework, designed to display collections of data in a grid layout. It is adaptable to various content types and layouts, making it an essential tool for creating responsive and aesthetically pleasing UIs.
+
+#### Initialization:
+Initializes `DSGrid` with customizable settings for layout and data handling.
+- Parameters:
+- `viewHeight`: Optional height for each item, allowing for uniform or dynamic row heights.
+- `numberOfColumns`: The number of columns in the grid, defaulting to 2.
+- `spacing`: Spacing between grid items, with a default setting.
+- `data`: The collection of data items to display.
+- `id`: KeyPath to the unique identifier for each data item.
+- `content`: Closure that returns a `Content` view for each data item.
+
+#### Usage:
+`DSGrid` can be used in various applications, from displaying photos in a gallery to creating a product list in an e-commerce app.
+*/
+
 public struct DSGrid<Data, ID, Content>: View where Data: RandomAccessCollection, ID: Hashable, Content: View {
     
     @Environment(\.appearance) var appearance: DSAppearance
@@ -56,15 +75,26 @@ public struct DSGrid<Data, ID, Content>: View where Data: RandomAccessCollection
     }
 }
 
+struct Testable_DSGrid: View {
+    let colors = [Color.red, Color.green, Color.yellow, Color.purple, Color.red]
+    var body: some View {
+        DSGrid(
+            viewHeight: 50,
+            numberOfColumns: 3,
+            data: colors,
+            id: \.self,
+            content: { color in
+                color
+            }
+        )
+    }
+}
+
 struct DSGrid_Previews: PreviewProvider {
     static var previews: some View {
-        let colors = [Color.red, Color.green, Color.yellow, Color.purple, Color.red]
-        DSPreviewForEachAppearance { DSPreview {
-                DSVStack {
-                    DSGrid(viewHeight: 50, numberOfColumns: 3, spacing: .regular, data: 0...4, id: \.self) { element in
-                        colors[element]
-                    }
-                }.dsContentMargins(margin: 100)
+        DSPreviewForEachAppearance {
+            DSPreview {
+                Testable_DSGrid()
             }
         }
     }

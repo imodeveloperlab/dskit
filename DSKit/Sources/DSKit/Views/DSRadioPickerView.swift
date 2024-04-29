@@ -7,6 +7,26 @@
 
 import SwiftUI
 
+/*
+## DSRadioPickerView
+
+`DSRadioPickerView` is a SwiftUI component designed to offer a customizable radio button selection interface within the DSKit framework. It allows users to select a single option from a list of available options, making it ideal for forms, surveys, and settings.
+
+#### Initialization:
+Initializes a `DSRadioPickerView` with data and custom content rendering options.
+- Parameters:
+- `data`: The collection of data items.
+- `id`: KeyPath to the unique identifier for each data item.
+- `selected`: A `Binding` to the currently selected data element.
+- `content`: Closure that generates a view for each item, provided with selection status.
+
+#### Interaction:
+- Tapping an item updates the selection state, accompanied by haptic feedback to enhance user interaction.
+
+#### Usage:
+`DSRadioPickerView` is suitable for scenarios where users need to make a single selection from multiple options, such as choosing a color, selecting a configuration option, or setting preferences.
+*/
+
 public struct DSRadioPickerView<Data, ID, Content>: View where Data: RandomAccessCollection, Data.Element: Equatable, ID: Hashable, Content: View {
     
     let data: Data
@@ -51,27 +71,22 @@ public struct DSRadioPickerView<Data, ID, Content>: View where Data: RandomAcces
     }
 }
 
-public struct RadioPickerViewDemo: View {
-    
+struct Testable_DSRadioPickerView: View {
     let data = ["Red","Orange","Purple","Green","Blue"]
     @State var selected = "Purple"
-    
-    public var body: some View {
+    var body: some View {
         DSRadioPickerView(data: data, id: \.self, selected: $selected, content: { element, _ in
             DSText(element).dsTextStyle(.smallHeadline)
         })
     }
 }
 
-struct RadioPickerView_Previews: PreviewProvider {
+struct DSRadioPickerView_Previews: PreviewProvider {
     static var previews: some View {
-        DSPreviewForEachAppearance { DSPreview {
-                DSVStack {
-                    RadioPickerViewDemo()
-                }
+        DSPreviewForEachAppearance {
+            DSPreview {
+                Testable_DSRadioPickerView()
             }
         }
     }
 }
-
-

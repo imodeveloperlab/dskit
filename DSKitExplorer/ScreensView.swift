@@ -9,7 +9,6 @@ import SwiftUI
 import DSKit
 
 struct ScreensView: View {
-    
     let appearance: DSAppearance
     @Environment(\.dismiss) var dismiss
     
@@ -43,7 +42,6 @@ struct ScreensView: View {
         .accentColor(appearance.navigationBar.buttons.color)
     }
 }
-
 
 fileprivate struct CustomActionView: View {
     

@@ -56,22 +56,6 @@ final class DSKitTests: XCTestCase {
         assertSnapshot(for: Testable_DSHScroll(), named: "DSHScroll")
     }
     
-    func testDSHStack() throws {
-        assertSnapshot(for: Testable_DSHStack(), named: "DSHStack")
-    }
-    
-    func testDSPickerView() throws {
-        assertSnapshot(for: Testable_DSPickerView(), named: "DSPickerView")
-    }
-    
-    func testDSQuantityPicker() throws {
-        assertSnapshot(for: Testable_DSQuantityPicker(), named: "DSQuantityPicker")
-    }
-    
-    func testDSRadioPickerView() throws {
-        assertSnapshot(for: Testable_DSRadioPickerView(), named: "DSRadioPickerView")
-    }
-    
     func testDSRatingView() throws {
         assertSnapshot(for: Testable_DSRatingView(), named: "DSRatingView")
     }
@@ -106,5 +90,21 @@ final class DSKitTests: XCTestCase {
     
     func testDSVStack() throws {
         assertSnapshot(for: Testable_DSVStack(), named: "DSVStack")
+    }
+    
+    func testDSHStack() throws {
+        assertSnapshot(for: Testable_DSHStack(), named: "DSHStack")
+    }
+    
+    func testDSPickerView() throws {
+        assertSnapshot(for: Testable_DSPickerView(), named: "DSPickerView")
+    }
+    
+    func testDSQuantityPicker() throws {
+        assertSnapshot(for: Testable_DSQuantityPicker(), named: "DSQuantityPicker")
+    }
+    
+    func testDSRadioPickerView() throws {
+        assertSnapshot(for: Testable_DSRadioPickerView(), named: "DSRadioPickerView")
     }
 }

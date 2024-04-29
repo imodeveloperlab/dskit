@@ -21,9 +21,7 @@ The `DSChevronView` is initialized without any parameters, defaulting to a prede
 */
 
 public struct DSChevronView: View {
-    
     public init() { }
-
     public var body: some View {
         DSImageView(systemName: "chevron.right", size: .unspecified, tint: .viewStyle(.secondary, .text(.font(.headline))))
             .dsHeight(14)

@@ -22,9 +22,7 @@ Initializes a `DSBottomContainer` with a view builder closure that defines its c
 */
 
 public struct DSBottomContainer<Content: View>: View {
-    
     let content: () -> Content
-    
     public init(
         @ViewBuilder content: @escaping () -> Content
     ) {
@@ -62,4 +60,3 @@ struct DSBottomContainer_Previews: PreviewProvider {
         }
     }
 }
-

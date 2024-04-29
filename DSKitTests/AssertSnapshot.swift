@@ -19,7 +19,7 @@ extension XCTestCase {
         line: UInt = #line
     ) {
         SnapshotTesting.diffTool = "open"
-        isRecording = true
+        isRecording = false
         let testView = testView
                         .frame(width: 400)
                         .padding(20)

@@ -30,6 +30,7 @@ for f in "${files[@]}"; do
     fi
 done
 
+
 # Process each file
 for file in "${sorted_files[@]}"; do
     output_file="$OUTPUT_MARKDOWN_FILE"
@@ -52,5 +53,6 @@ for file in "${sorted_files[@]}"; do
     echo "<table><tr><td><img src=\"../DSKitTests/__Snapshots__/DSKitTests/${filename}.1.png\" width=\"35%\"/></td></tr><table/>" >> "$output_file"
     echo "\n" >> "$output_file"  # Add another separator for readability
 done
+
 
 echo "Extraction complete. Content written to $OUTPUT_MARKDOWN_FILE"

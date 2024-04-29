@@ -35,7 +35,7 @@ DSKit offers a library of ready-to-use UI components and full-screen layouts tha
 </td>
 </tr>
 </table>
-<p align="center"><a href="Content/Layout-in-DSKit.md">Learn more about layout in DSKit<a/> or see <a href="Content/Layout-in-DSKit.md">all available Views</a></p>
+<p align="center"><a href="Content/Layout-in-DSKit.md">Learn more about layout in DSKit<a/> or see <a href="Content/Views.md">all available Views</a></p>
 
 
 
@@ -114,9 +114,11 @@ struct ContentView: View {
 
 In this example, `DSVStack`, `DSText`, and various modifiers like `dsPadding()` and `dsBackground()` are used. These components and modifiers are part of DSKit and help apply consistent styling and spacing as defined in your design system.
 
-<p align="center"><a href="https://github.com/imodeveloperlab/dskit/wiki/Home">Read more about how DSKit works<a/></p>
+## Documentation
 
-
+- [Layout](Content/Layout-in-DSKit.md)
+- [Views / Components](Content/Views.md)
+- [Appearance](Content/Appearance-in-DSKit.md)
 
 ## Contributions and support
 

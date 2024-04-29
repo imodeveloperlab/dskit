@@ -56,7 +56,7 @@ DSKit includes a selection of ready-to-use appearances that support both light a
 </td>
 </tr>
 </table>
-<p align="center"><a href="https://github.com/imodeveloperlab/dskit/wiki/Appearances">View all available appearances<a/></p>
+<p align="center"><a href="Content/Appearance-in-DSKit.md">Read more about appearance and customization<a/></p>
 
 
 

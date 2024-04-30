@@ -18,7 +18,7 @@
 
 
 > [!WARNING]
-> Support for the **UIKit** version of DSKit is discontinued as the focus shifts increasingly towards SwiftUI, which offers easier development and maintenance. For more information or to migrate, please visit the <a href="https://github.com/imodeveloperlab/dskit-swiftui">**SwiftUI** version.
+> Support for the **UIKit** version of DSKit is discontinued as the focus shifts increasingly towards **SwiftUI**, which offers easier development and maintenance. For more information or to migrate, please visit the <a href="https://github.com/imodeveloperlab/dskit-swiftui">**SwiftUI** version.
 
 Welcome to **DSKit** a Design System for iOS 13+ is an iOS SDK written in Swift with a collection of reusable components, guided by clear standards, that can be assembled to build any number of applications.
 
@@ -78,7 +78,7 @@ To get started using DSKit you can download this git repo and build and explore 
 ### Installation
 
 > [!WARNING]
-> Support for the **UIKit** version of DSKit is discontinued as the focus shifts increasingly towards SwiftUI, which offers easier development and maintenance. For more information or to migrate, please visit the <a href="https://github.com/imodeveloperlab/dskit-swiftui">**SwiftUI** version.
+> Support for the **UIKit** version of DSKit is discontinued as the focus shifts increasingly towards **SwiftUI**, which offers easier development and maintenance. For more information or to migrate, please visit the <a href="https://github.com/imodeveloperlab/dskit-swiftui">**SwiftUI** version.
 
 DSKit is distributed using the [Swift Package Manager](https://swift.org/package-manager). 
 

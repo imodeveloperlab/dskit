@@ -17,6 +17,9 @@
 </p>
 
 
+> [!WARNING]
+> Support for the UIKit version of DSKit is discontinued as the focus shifts increasingly towards SwiftUI, which offers easier development and maintenance. For more information or to migrate, please visit the <a href="../">SwiftUI version of DSKit
+
 Welcome to **DSKit** a Design System for iOS 13+ is an iOS SDK written in Swift with a collection of reusable components, guided by clear standards, that can be assembled to build any number of applications.
 
 

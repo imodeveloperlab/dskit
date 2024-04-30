@@ -95,3 +95,6 @@ Dependencies/
 # https://github.com/johnno1962/injectionforxcode
 
 iOSInjectionProject/
+DSKit.doccarchive/
+docs/
+node_modules/

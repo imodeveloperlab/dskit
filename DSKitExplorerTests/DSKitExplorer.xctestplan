@@ -1,0 +1,36 @@
+{
+  "configurations" : [
+    {
+      "id" : "97B6D2DA-54BB-434B-BF17-91A14BB6720D",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "commandLineArgumentEntries" : [
+      {
+        "argument" : "TESTMODE"
+      }
+    ],
+    "mainThreadCheckerEnabled" : false
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:DSKitExplorer.xcodeproj",
+        "identifier" : "60D469F82BCAF14000A6F7FC",
+        "name" : "DSKitExplorerTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:DSKitExplorer.xcodeproj",
+        "identifier" : "60D46A052BCAF16600A6F7FC",
+        "name" : "DSKitTests"
+      }
+    }
+  ],
+  "version" : 1
+}

@@ -1,2 +1,0 @@
-If built-in text field validation is not enough for your project requirements you can easily add custom validation to any text field in your form.
-Using **handleValidation** closure you are in control, if you implement **handleValidation** closure, all built-in validations will not affect the validation, you are in control for minimum or the maximum number of characters and other validation patterns.

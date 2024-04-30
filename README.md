@@ -1,128 +1,212 @@
 
 
+
 <p align="center">
-    <img src="Content/Images/Logo.png" width="150" max-width="100%" alt="DSKit"/>
+    <img src="Content/Images/Logo.png" width="528" max-width="100%" alt="DSKit"/>
 </p>
+
+
 <p align="center">
-    <img src="https://img.shields.io/badge/iOS-15+-brightgreen.svg?style=flat" alt="iOS"/>
-    <img src="https://img.shields.io/badge/SwiftUI-3.0-brightgreen.svg"/>
+    <img src="https://img.shields.io/badge/Swift-5.5-brightgreen.svg" />
     <a href="https://swift.org/package-manager">
-        <img src="https://img.shields.io/badge/spm-compatible-brightgreen.svg?style=flat" alt="Swift Package Manager"/>
+        <img src="https://img.shields.io/badge/spm-compatible-brightgreen.svg?style=flat" alt="Swift Package Manager" />
     </a>
+    <img src="https://img.shields.io/badge/iOS-13+-brightgreen.svg?style=flat" alt="iOS"/>
+    <img src="https://circleci.com/gh/imodeveloperlab/dskit/tree/main.svg?style=shield" alt="iOS"/>
+    <img src="https://img.shields.io/github/issues/imodeveloperlab/dskit"/>
 </p>
 
 
-### What is DSKit?
+> [!WARNING]
+> Support for the UIKit version of DSKit is discontinued as the focus shifts increasingly towards SwiftUI, which offers easier development and maintenance. For more information or to migrate, please visit the <a href="../">SwiftUI version of DSKit
 
-DSKit is a simple **Design System Kit**  for **iOS 15+ SwiftUI**, designed to help developers create simple, consistent and attractive user interfaces with ease. It includes essential view modifiers which ensure that all UI components follow a unified style guide. 
-
-> [!Note]
-> If you're looking for the UIKit version of DSKit, you can find it within the same repository under the subfolder named **UIKitVersion**. For more details on the UIKit implementation and its features, please refer to the [UIKit Version documentation](UIKitVersion) provided in the repository.
-
-### Components and Layouts
-
-DSKit offers a library of ready-to-use UI components and full-screen layouts that are designed to be easily integrated and customized within your projects. Each component and screen layout is fully adaptable, allowing you to tweak and refine them to perfectly fit the specific needs of your application. This accessibility accelerates the development process, enabling you to implement complex design solutions efficiently while maintaining a high standard of aesthetics and functionality.
-
-<table>
-<tr>
-<td>
-<img src="Content/Screenshots/HomeScreen3.DSKit_light_screenshot_framed.png">
-</td>
-<td>
-<img src="Content/Screenshots/ItemDetails2.DSKit_light_screenshot_framed.png">
-</td>
-<td>
-<img src="Content/Screenshots/Order1.DSKit_light_screenshot_framed.png">
-</td>
-</tr>
-</table>
-<p align="center"><a href="Content/Layout-in-DSKit.md">Learn more about layout in DSKit<a/> or see <a href="Content/Views.md">all available Views</a></p>
+Welcome to **DSKit** a Design System for iOS 13+ is an iOS SDK written in Swift with a collection of reusable components, guided by clear standards, that can be assembled to build any number of applications.
 
 
+# Why DSKit?
 
-### Appearances
-
-DSKit includes a selection of ready-to-use appearances that support both light and dark modes, suitable for immediate integration into your projects. These appearances are fully customizable, allowing you to tweak and modify them according to your specific requirements. This flexibility ensures that you can maintain consistency across different themes while adapting to user preferences. 
-
-<table>
-<tr>
-<td>
-<img src="Content/Screenshots/ItemDetails3.Dark_light_screenshot_framed.png">
-</td>
-<td>
-<img src="Content/Screenshots/ItemDetails3.Peach_light_screenshot_framed.png">
-</td>
-<td>
-<img src="Content/Screenshots/ItemDetails3.Blue_light_screenshot_framed.png">
-</td>
-</tr>
-</table>
-<p align="center"><a href="Content/Appearance-in-DSKit.md">Read more about appearance and customization<a/></p>
+<p align="center">
+    <img src="Content/Images/ListGridGallery.png" max-width="100%" alt="DSKit"/>
+</p>
 
 
+We can find a lot of design systems that can help you build any app you want. The problem is that they all are overwhelmingly complicated; this means there is a big learning curve from starting a new project to delivering it to the store.
 
-## Documentation
+DSKit is trying to do everithing simplier, it will not cover everything, but if it fits your needs it will deliver flawless functionality. It’s the easiest way to make simple iOS Applications and business white labels with great design and Pixel Perfect UI.
 
-The most effective way to familiarize yourself with DSKit and its capabilities is by utilizing the **DSKit Explorer app**. To begin, clone the repository and launch the **DSKit Explorer app**. Within the app, you'll have access to all available screens, which you can open in preview mode. This feature allows you to interactively switch between different appearances and make modifications to the screens according to your preferences.
+#### All you have to do is:
 
-![PlayAndPrototype](Content/Images/PlayAndPrototype.png)
+* Chose your components
+* Define the application flow
+* Define colors, spacings, fonts, and further you don't care about spaces, layout, dimensions, etc.
+* DSKit will take care of the rest.
 
->  [!NOTE]
->  Using the **DSKit Explorer** provides a practical demonstration of how DSKit's components and modifiers integrate to create efficient and cohesive UIs with minimal coding effort. It serves as an excellent visual and interactive guide to understanding the simplicity and power of DSKit in streamlining screen development.
+## DSKit Features
 
-To dive deeper into specific features and functionalities, continue to the sections below. These segments offer detailed insights into the individual elements of DSKit, helping you leverage its full potential in your projects.
+* **Complex layouts easy**: Using DSKit, list, grid, and gallery sections you can achieve almost any layout you need for your apps.
+* **Themes**: DSKit contains a collection of ready-to-use themes you can choose from for your next app.
+* **App gallery**: You can start your next app by exploring the DSKit demo applications, where you can look at the code and copy-paste the desired implementation.
+* **Component**: A collection of simple view models will help you to quickly create new screens.
+* **Light / Dark mode support**: Easy to implement Light / Dark mode themes for a great viewing experience in low-light environments.
 
-- [Layout](Content/Layout-in-DSKit.md)
-- [Views / Components](Content/Views.md)
-- [Appearance](Content/Appearance-in-DSKit.md)
+**Documentation:**
+We put a lot of effort into making the simplest API for your next apps and documenting all the aspects of DSKit API.
 
+## Ducumentation
 
+DSKit provides the easiest way to design, build complex and pixel-perfect user interfaces.
 
-## Quick Start
+Working with DSKit, you will work with three base layout sections List, Grids, and Galleries, each section will manage and display your view models.
 
-To get started with DSKit, a design system toolkit for SwiftUI applications, you can integrate it into your projects using Swift Package Manager (SPM)
+* [Code Example](https://dskit.app/home-code-example)
+* [Documentation](https://dskit.app/components)
+* [Layout](https://dskit.app/layout)
+* [Appearance](https://dskit.app/appearance)
+* [Custom View Model](https://github.com/imodeveloperlab/dskit/blob/main/Content/CustomViewModels.md)
 
-### Step 1: Adding DSKit via Swift Package Manager (SPM)
-To add DSKit to your project, follow these steps:
+## Get Started !
 
-1. **Open your Xcode project**: Launch Xcode and open the project where you want to include DSKit.
+To get started using DSKit you can download this git repo and build and explore the **DSKit Explorer app**, which will show all available components and guide you on how to get DSKit in your project.
 
-2. **Add the package dependency**:
-   - Go to `File` > `Swift Packages` > `Add Package Dependency...`
-   - Enter the repository URL `git@github.com:imodeveloperlab/dskit.git`.
-   - Select the version of the package you wish to add. You can choose a specific release or the latest commit.
-   - Xcode will download the package and ask which of your project's targets to add it to. Select the target where you want to use DSKit.
+<p align="center">
+    <img src="Content/Images/Project.png" max-width="100%" alt="DSKit"/>
+</p>
 
-### Step 2: Importing DSKit
-Once DSKit is added to your project, you can start using it by importing the package at the top of your Swift files where you want to use the design system components:
+### Installation
+
+DSKit is distributed using the [Swift Package Manager](https://swift.org/package-manager). 
+
+To use DSKit within an iOS, then use Xcode’s `File > Add Packages...` menu command to add it to your project.
+
+Then import DSKit wherever you’d like to use it:
 
 ```swift
 import DSKit
 ```
 
-### Step 3: Using DSKit in Your Screens
-To integrate DSKit components and modifiers into your SwiftUI views, simply use them like any other SwiftUI component or modifier. Here’s an example of how you might use DSKit:
+Extend your view controller from DSViewController 
+
+```swift 
+open class ViewController: DSViewController {
+```
+
+and here you have a small exaple of using DSKit
 
 ```swift
-import SwiftUI
-import DSKit
+open override func viewDidLoad() {    
+    super.viewDidLoad()
 
-struct ContentView: View {
-    var body: some View {
-        DSVStack {
-            DSText("Welcome to DSKit")
-                .dsPadding()
-                .dsBackground(.primary)
-            DSText("Design with ease")
-                .dsPadding()
-                .dsBackground(.secondary)
-        }
-        .dsPadding()
+    let texts = ["Hello", "World", "To", "DSKit"]
+
+    let viewModels = texts.map { (text) -> DSViewModel in
+        DSTextVM(.body, text: text)
     }
+
+    show(content: viewModels.list())
 }
 ```
 
-In this example, `DSVStack`, `DSText`, and various modifiers like `dsPadding()` and `dsBackground()` are used. These components and modifiers are part of DSKit and help apply consistent styling and spacing as defined in your design system.
+For more information on how to use the Swift Package Manager, check out [this article](https://www.swiftbysundell.com/articles/managing-dependencies-using-the-swift-package-manager), or [its official documentation](https://swift.org/package-manager).
+
+### Live coding demo
+
+<p align="center">
+   <a href="https://www.youtube.com/watch?v=EeZZqMMsjNw"> <img src="Content/Images/LiveCoding.png" max-width="100%" alt="DSKit"/></a>
+</p>
+
+## Demo Projects
+
+To get you started Design System Kit provides app demonstration code where you can see all the possibilities. You can even use this ready-made code for your next project.
+
+### Shopify App Template
+App template for Shopify Store
+[GitHub Project](https://github.com/imodeveloperlab/Shopify)
+<table>
+  <tr>
+    <td><img src="https://d33wubrfki0l68.cloudfront.net/603ffd90688eae7f4858fab286665cf4e3a8aa0b/0ef14/images/demo/shopify/shopify-1.png"/></td>
+    <td><img src="https://d33wubrfki0l68.cloudfront.net/971485223b6132c52606ff82e7a102dae6a197fb/00bb0/images/demo/shopify/shopify-2.png"/></td>
+    <td><img src="https://d33wubrfki0l68.cloudfront.net/bdb6c4d4e0e508aa9f4886d373dc701f453dcf27/26a28/images/demo/shopify/shopify-5.png"/></td>
+    <td><img src="https://d33wubrfki0l68.cloudfront.net/3174789f714fcdb788215c87fceb2c47061a936e/9d18b/images/demo/shopify/shopify-9.png"/></td>
+  </tr>   
+</table>
+
+
+### RSS-Feed App Template
+App template for RSS Feeds
+[GitHub Project](https://github.com/imodeveloperlab/RSS-Feed)
+<table>
+  <tr>
+    <td><img src="https://github.com/imodeveloperlab/RSS-Feed/blob/main/Content/Images/2.png"/></td>
+    <td><img src="https://github.com/imodeveloperlab/RSS-Feed/blob/main/Content/Images/6.png"/></td>
+    <td><img src="https://github.com/imodeveloperlab/RSS-Feed/blob/main/Content/Images/3.png"/></td>
+    <td><img src="https://github.com/imodeveloperlab/RSS-Feed/blob/main/Content/Images/5.png"/></td>  
+  </tr>   
+</table>
+
+### E-commerce
+Over 60 UI/UX Interfaces for E-Commerce Apps
+[GitHub Project](https://github.com/imodeveloperlab/E-commerce) | [View more](https://dskit.app/demo-ecommerce)
+<table>
+    <tr>
+      <td><img src="https://d33wubrfki0l68.cloudfront.net/7fc5a774ae091677f957c45ae14fc2aae34c1523/21740/images/demo/ecommerce/ecommerce-design20.png" class="img-fluid rounded work-image" alt="barber-shop, ui, ux, ios design, design system, apple"></td>
+      <td><img src="https://d33wubrfki0l68.cloudfront.net/9ae63d9147c4c91fd773f66864eb1a6d221f2ffa/98067/images/demo/ecommerce/ecommerce-design21.png" class="img-fluid rounded work-image" alt="barber-shop, ui, ux, ios design, design system, apple"></td> 
+      <td><img src="https://d33wubrfki0l68.cloudfront.net/611e902665cf10dc26fa0a2c7288f9cadc3df09d/9de90/images/demo/ecommerce/ecommerce-design43.png" class="img-fluid rounded work-image" alt="barber-shop, ui, ux, ios design, design system, apple"></td>
+      <td><img src="https://d33wubrfki0l68.cloudfront.net/a37f93e66cb180ab1c0bd8beb15d37e43ecf4aac/a31b1/images/demo/ecommerce/ecommerce-design60.png" class="img-fluid rounded work-image" alt="barber-shop, ui, ux, ios design, design system, apple"></td>
+    </tr>
+</table>
+
+### Food Delivery
+Over 30 UI/UX Interfaces for Food Delivery
+[GitHub Project](https://github.com/imodeveloperlab/Food-Delivery) | [View more](https://dskit.app/demo-food-delivery)
+<table>
+    <tr>
+      <td><img src="https://d33wubrfki0l68.cloudfront.net/2af56f1ce489897f343a01168040dab7ad4c3096/0831f/images/demo/fooddelivery/food-delivery16.png" class="img-fluid rounded work-image" alt="barber-shop, ui, ux, ios design, design system, apple"></td>
+      <td><img src="https://d33wubrfki0l68.cloudfront.net/0d5ef3aa6963fb876e285e45a3b80486bc413418/72d3f/images/demo/fooddelivery/food-delivery19.png" class="img-fluid rounded work-image" alt="barber-shop, ui, ux, ios design, design system, apple"></td> 
+      <td><img src="https://d33wubrfki0l68.cloudfront.net/88f5af944b0abfe957cec095f80ea20761899553/77718/images/demo/fooddelivery/food-delivery21.png" class="img-fluid rounded work-image" alt="barber-shop, ui, ux, ios design, design system, apple"></td>
+      <td><img src="https://d33wubrfki0l68.cloudfront.net/1dfddb72887272fd743dc39d103c66e2c976d79b/aac5b/images/demo/fooddelivery/food-delivery23.png" class="img-fluid rounded work-image" alt="barber-shop, ui, ux, ios design, design system, apple"></td>
+    </tr>
+</table>
+
+### Flowers Store
+Over 15 UI/UX Interfaces for Flowers Store Apps
+[GitHub Project](https://github.com/imodeveloperlab/Flower-Store) | [View more](https://dskit.app/demo-flowersstore)
+<table>
+    <tr>
+      <td><img src="https://d33wubrfki0l68.cloudfront.net/9b5cd1a44eaff6bc864cb9914672b48825a3e817/e030a/images/demo/flowersstore/flowers-store-design15.png" class="img-fluid rounded work-image" alt="barber-shop, ui, ux, ios design, design system, apple"></td>
+      <td><img src="https://d33wubrfki0l68.cloudfront.net/f03a3b3b8d268a4d4629a49ce93c771ec824201d/b3add/images/demo/flowersstore/flowers-store-design1.png" class="img-fluid rounded work-image" alt="barber-shop, ui, ux, ios design, design system, apple"></td> 
+      <td><img src="https://d33wubrfki0l68.cloudfront.net/052dac15e878e5e3660df5f3541d0fd8d8dd557a/99352/images/demo/flowersstore/flowers-store-design17.png" class="img-fluid rounded work-image" alt="barber-shop, ui, ux, ios design, design system, apple"></td>
+      <td><img src="https://d33wubrfki0l68.cloudfront.net/81186fcb4b245c84aec41b52aaa758bc4880e53e/e8865/images/demo/flowersstore/flowers-store-design12.png" class="img-fluid rounded work-image" alt="barber-shop, ui, ux, ios design, design system, apple"></td>
+    </tr>
+</table>
+
+### Barbershop
+Over 20 UI/UX Interfaces for Barbershop Apps
+[GitHub Project](https://github.com/imodeveloperlab/Barbershop) | [View more](https://dskit.app/demo-barbershop)
+<table>
+    <tr>
+      <td><img src="https://d33wubrfki0l68.cloudfront.net/972da119cefb9fdb17e4fa3bb0dc420e6e44eede/6eef7/images/demo/barbershop-dark/barbershop-ios-design1.png" class="img-fluid rounded work-image" alt="barber-shop, ui, ux, ios design, design system, apple"></td>
+      <td><img src="https://d33wubrfki0l68.cloudfront.net/bba9483eab087362cb3307dfcfd38b5ee5ba5008/dce76/images/demo/barbershop-dark/barbershop-ios-design2.png" class="img-fluid rounded work-image" alt="barber-shop, ui, ux, ios design, design system, apple"></td> 
+      <td><img src="https://d33wubrfki0l68.cloudfront.net/314ac3a92fd54847d1abf980d3c5a6d94c755732/7191d/images/demo/barbershop-dark/barbershop-ios-design3.png" class="img-fluid rounded work-image" alt="barber-shop, ui, ux, ios design, design system, apple"></td>
+      <td><img src="https://d33wubrfki0l68.cloudfront.net/215b9a3676ddf905127c91f4073748c6640a253a/a7781/images/demo/barbershop-dark/barbershop-ios-design4.png" class="img-fluid rounded work-image" alt="barber-shop, ui, ux, ios design, design system, apple"></td>
+    </tr>
+</table>
+
+
+
+## Idea
+
+The idea revolves around the design problem for mobile applications, in the company I worked for, there has always been the design problem, namely that designers make beautiful interfaces, only that they are not practical, difficult to implement.
+
+In the business segment, small business, not all the time, there are enough resources, time and knowledge to generate content exclusively for mobile applications, pictures, illustrations, icons and perfect texts. The design that looks perfect at first, become problematic, the real content does not fit, the images are not so perfect, the buttons are not in place, and so on.
+
+This is the first reason, I started working on DSKit, it is a tool, with the help of which it is possible to quickly create new interfaces, in which the typography, spaces, colors will be consistent in all the application screens.
+
+The second reason is that there are a lot of applications, for online appointments, shopping, delivery, that work, but have an ugly design (in my opinion), and all because the business does not have the resources to hire a company or a designer to develop a special design. for their business.
+
+Unlike Material Design, Flutter and other, design systems, that are overwhelmingly complicated, DSKit should be focused on fast delivery, with the most useful and simple components, and a lot of code examples, for different use cases.
+
+DSKit will not, (and should not) cover everything, but if it fits the business requirements it should deliver flawless functionality. It should be the easiest way to make simple iOS applications and business white labels with a great, clean design and pixel-perfect UI.
+
 
 ## Contributions and support
 
